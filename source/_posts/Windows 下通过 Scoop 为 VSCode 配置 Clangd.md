@@ -1,7 +1,8 @@
 ---
+categories: 编程
 tags: [ Vscode, Windows, Scoop, Clangd, gcc, LLVM, Clang ]
 date: 2022-05-12 19:07:05
-updated: 2022-05-20 19:13:20
+updated: 2022-05-20 19:44:33
 title: Windows 下通过 Scoop 为 VSCode 配置 Clangd
 ---
 
