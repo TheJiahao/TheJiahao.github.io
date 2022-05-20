@@ -102,14 +102,14 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: false
+  enable: true
   autoExpand: true
   clientID: "e97d33131bb7e4ac0018"
   clientSecret: "effef4f53e7b0067690f1f28281a35ede012b1c7"
   repo: "TheJiahao.github.io"
   owner: "TheJiahao"
   admin: ["TheJiahao"]
-  id: location.pathname
+  id: uid
   labels: ["Gitalk"]
   language: cn
   createIssueManually: false
@@ -130,7 +130,7 @@ valine:
   avatarForce: false
   meta: ["nick", "mail"]
   requiredFields: []
-  admin: "TriDiamond"
+  admin: "TheJiahao"
   recentComment: true
 
 # Enable Busuanzi statistic plugin
