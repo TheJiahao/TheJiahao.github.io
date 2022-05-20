@@ -1,3 +1,4 @@
+--- #! ---------------------------------------------------------------
 #! ---------------------------------------------------------------
 #! Aurora Theme for Hexo
 #! ---------------------------------------------------------------
@@ -7,23 +8,22 @@
 #! ---------------------------------------------------------------
 #! Site Configs
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
-#! ---------------------------------------------------------------
 site:
   subtitle: Jiahao 的博客
   author: Jiahao
-  nick: ''
-  description:
-  link: '/'
-  language: en
+  nick: ""
+  description: 编程新手
+  link: "/"
+  language: cn
   multi_language: true
   logo: https://img-blog.csdnimg.cn/20210313122054101.png
   avatar: https://img-blog.csdnimg.cn/20210313122054101.png
   beian:
-    number: ''
-    link: ''
+    number: ""
+    link: ""
   police_beian:
-    number: ''
-    link: ''
+    number: ""
+    link: ""
 
 #! ---------------------------------------------------------------
 #! Authors Configs
@@ -57,9 +57,9 @@ theme:
   profile_shape: diamond # support `circle`, `diamond`, `rounded`
   feature: true
   gradient:
-    color_1: '#24c6dc'
-    color_2: '#5433ff'
-    color_3: '#ff0099'
+    color_1: "#24c6dc"
+    color_2: "#5433ff"
+    color_3: "#ff0099"
 
 #! ---------------------------------------------------------------
 #! Social Configs
@@ -90,9 +90,9 @@ socials:
 site_meta:
   cdn: en
   favicon:
-  description: ''
-  keywords: ''
-  author: ''
+  description: ""
+  keywords: ""
+  author: ""
 
 #! ---------------------------------------------------------------
 #! Plugins
@@ -101,18 +101,18 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: true
+  enable: false
   autoExpand: true
-  clientID: ''
-  clientSecret: ''
-  repo: 'dev-blog-comments'
-  owner: 'TriDiamond'
-  admin: ['TriDiamond']
-  id: uid
+  clientID: ""
+  clientSecret: ""
+  repo: ""
+  owner: ""
+  admin: [""]
+  id:
   language: en
   distractionFreeMode: true
   recentComment: true
-  proxy: ''
+  proxy: ""
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
@@ -120,14 +120,14 @@ valine:
   enable: false
   app_id:
   app_key:
-  avatar: ''
+  avatar: ""
   placeholder: Leave your thoughts behind~
   visitor: true
   lang: en
   avatarForce: false
-  meta: ['nick', 'mail']
+  meta: ["nick", "mail"]
   requiredFields: []
-  admin: 'TriDiamond'
+  admin: "TriDiamond"
   recentComment: true
 
 # Enable Busuanzi statistic plugin
