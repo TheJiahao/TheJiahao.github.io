@@ -104,13 +104,15 @@ site_meta:
 gitalk:
   enable: false
   autoExpand: true
-  clientID: ""
-  clientSecret: ""
-  repo: ""
-  owner: ""
-  admin: [""]
-  id:
-  language: en
+  clientID: "e97d33131bb7e4ac0018"
+  clientSecret: "effef4f53e7b0067690f1f28281a35ede012b1c7"
+  repo: "TheJiahao.github.io"
+  owner: "TheJiahao"
+  admin: ["TheJiahao"]
+  id: location.pathname
+  labels: ["Gitalk"]
+  language: cn
+  createIssueManually: false
   distractionFreeMode: true
   recentComment: true
   proxy: ""
