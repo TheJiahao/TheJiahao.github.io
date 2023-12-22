@@ -17,7 +17,7 @@ site:
   language: zh-CN
   multi_language: true
   logo: https://img-blog.csdnimg.cn/20210313122054101.png
-  avatar: https://img-blog.csdnimg.cn/20210313122054101.png
+  avatar: /source/images/avatar.jpg
   beian:
     number: ""
     link: ""
