@@ -111,7 +111,7 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: true
+  enable: false
   autoExpand: true
   clientID: "e97d33131bb7e4ac0018"
   clientSecret: "effef4f53e7b0067690f1f28281a35ede012b1c7"
@@ -141,6 +141,21 @@ valine:
   requiredFields: []
   admin: "TheJiahao"
   recentComment: true
+
+# Waline comment plugin
+# see https://waline.js.org/guide/get-started/
+waline:
+  enable: true
+  recentComment: true
+  reaction: false
+  login: false
+  meta: ["nick", "mail"]
+  requiredMeta: ["nick"]
+  commentSorting: "latest"
+  wordLimit: 0
+  imageUploader: false
+  pageSize: 10
+  serverURL: "https://waline-jiahao.vercel.app/" # 填写服务端地址
 
 # Enable Busuanzi statistic plugin
 # see http://ibruce.info/2015/04/04/busuanzi/
