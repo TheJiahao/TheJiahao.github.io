@@ -173,6 +173,6 @@ injects:
 #! ---------------------------------------------------------------
 shiki:
   enable: true
-  theme:
+  theme: one-dark-pro
   externalTheme:
   backgroundColor: '#1a1a1a'
