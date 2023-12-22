@@ -1,29 +1,37 @@
---- #! ---------------------------------------------------------------
 #! ---------------------------------------------------------------
 #! Aurora Theme for Hexo
 #! ---------------------------------------------------------------
-#! Designed & Coded By TriDiamond
+#! Designed & Coded By Benny Guo
 #! ---------------------------------------------------------------
 
 #! ---------------------------------------------------------------
 #! Site Configs
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
+#! ---------------------------------------------------------------
 site:
   subtitle: Jiahao 的博客
   author: Jiahao
   nick: ""
-  description: 
+  description:
   link: "/"
   language: zh-CN
   multi_language: true
   logo: https://img-blog.csdnimg.cn/20210313122054101.png
-  avatar: /source/images/avatar.jpg
+  avatar: https://imgur.com/a/fLS8gIP
   beian:
     number: ""
     link: ""
   police_beian:
     number: ""
     link: ""
+  # Start date of the blog YYY-MM-DD
+  # 博客开始运行日期
+  started_date: 2022-05-12
+  # Path unique identifier (文章 URL 唯一标识)
+  # uid: use unique ID
+  # slug: use generated slug base on title
+  # (Default is 'slug')
+  pathSlug: "slug"
 
 #! ---------------------------------------------------------------
 #! Authors Configs
@@ -47,6 +55,7 @@ menu:
   About: false
   Tags: true
   Archives: true
+  Friends: false
 
 #! ---------------------------------------------------------------
 #! Theme Config
@@ -167,6 +176,19 @@ aurora_bot:
 injects:
   scripts:
   css:
+
+#! ---------------------------------------------------------------
+#! Footer links
+#! ---------------------------------------------------------------
+footer_links:
+  - title: # main title
+    links:
+      - title: # link title
+        url: # URL link
+      - title: # link title
+        url: # URL link
+      - title: Friends # link of friends mode / 友链模式
+        mode: "links"
 
 #! ---------------------------------------------------------------
 #! Highlighter Shiki
