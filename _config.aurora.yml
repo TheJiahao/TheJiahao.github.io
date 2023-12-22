@@ -145,7 +145,7 @@ valine:
 # Waline comment plugin
 # see https://waline.js.org/guide/get-started/
 waline:
-  enable: true
+  enable: false
   recentComment: true
   reaction: false
   login: false
