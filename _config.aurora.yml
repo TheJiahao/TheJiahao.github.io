@@ -12,9 +12,9 @@ site:
   subtitle: Jiahao 的博客
   author: Jiahao
   nick: ""
-  description: 编程新手
+  description: 
   link: "/"
-  language: cn
+  language: zh-CN
   multi_language: true
   logo: https://img-blog.csdnimg.cn/20210313122054101.png
   avatar: https://img-blog.csdnimg.cn/20210313122054101.png
@@ -147,7 +147,7 @@ copy_protection:
     cn: 本文来自于
     en: Article is from
   license:
-    cn: 博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议
+    cn: 博客内容遵循 署名 - 非商业性使用 - 相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议
     en: This content is shared under the CC BY-NC-SA 4.0 protocol (Non-Commercial)
 
 #! ---------------------------------------------------------------
@@ -167,3 +167,12 @@ aurora_bot:
 injects:
   scripts:
   css:
+
+#! ---------------------------------------------------------------
+#! Highlighter Shiki
+#! ---------------------------------------------------------------
+shiki:
+  enable: true
+  theme:
+  externalTheme:
+  backgroundColor: '#1a1a1a'
