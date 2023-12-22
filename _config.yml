@@ -107,9 +107,3 @@ deploy:
   type: git
   repository: git@github.com:TheJiahao/TheJiahao.github.io.git
   branch: main
-
-backup:
-    type: git
-    theme: aurora
-    repository:
-      github: git@github.com:TheJiahao/Jiahao-Blog.git,main
