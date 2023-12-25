@@ -1,10 +1,10 @@
 ---
 categories: 编程
 tags:
-    - Vscode
+    - VSCode
     - Windows
     - Scoop
-    - Clangd
+    - clangd
     - gcc
     - LLVM
     - Clang
