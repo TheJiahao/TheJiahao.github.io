@@ -12,7 +12,7 @@ site:
   subtitle: Jiahao 的博客
   author: Jiahao
   nick: ""
-  description:
+  description: "计算机系学生"
   link: "/"
   language: zh-CN
   multi_language: true
@@ -62,7 +62,7 @@ menu:
 #! @docs https://aurora.tridiamond.tech/guide/theme.html
 #! ---------------------------------------------------------------
 theme:
-  dark_mode: true
+  dark_mode: auto
   profile_shape: circle # support `circle`, `diamond`, `rounded`
   feature: true
   gradient:
@@ -202,8 +202,6 @@ footer_links:
         url: # URL link
       - title: # link title
         url: # URL link
-      - title: Friends # link of friends mode / 友链模式
-        mode: "links"
 
 #! ---------------------------------------------------------------
 #! Highlighter Shiki
