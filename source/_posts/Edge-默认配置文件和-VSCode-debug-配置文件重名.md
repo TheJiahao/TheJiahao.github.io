@@ -1,0 +1,20 @@
+---
+title: Edge 默认配置文件和 VSCode JavaScript Debugger 的 Edge 配置文件重名
+date: 2023-12-25 09:30:20
+tags:
+---
+
+## 问题
+
+从任务栏新建的 Edge 窗口使用的是其他配置文件。
+![从任务栏中新建 Edge 窗口](/source/images/edge_create_new_window.png)
+![新窗口使用](/source/images/edge_new_window.png)
+
+## 原因
+
+任务栏上的 Edge 启动参数 `--profile-directory=Default` 中的配置文件和 VSCode JavaScript Debugger 调试用的 Edge 配置文件 `%APPDATA%\Code\User\workspaceStorage\...\ms-vscode.js-debug\.profile\Default` 重名。
+
+## 解决方式
+
+1. 将 `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default` 中的 Default 配置文件改名，例如 `Profile 1`
+2. 将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 `--profile-directory="Profile 1"`
