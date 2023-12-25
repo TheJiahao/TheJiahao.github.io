@@ -92,6 +92,8 @@ cover:
 site_footer:
   layout: [social, license]
   social:
+    - icon: fas fa-rss
+      url: atom.xml
     - icon: fab fa-github
       url: https://github.com/TheJiahao
 
