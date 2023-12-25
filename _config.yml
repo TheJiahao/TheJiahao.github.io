@@ -4,9 +4,9 @@
 
 # Site
 title: Jiahao 的博客
-subtitle: ""
-description: ""
-keywords:
+subtitle:
+description: Jiahao 的博客
+keywords: 编程, VSCode, JavaScript, C++
 author: Jiahao Li
 language:
   - cn
