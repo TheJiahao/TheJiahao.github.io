@@ -1,3 +1,3 @@
 [submodule "TheJiahao.github.io"]
-	path = .deplot_git
+	path = .deploy_git
 	url = git@github.com:TheJiahao/TheJiahao.github.io.git
