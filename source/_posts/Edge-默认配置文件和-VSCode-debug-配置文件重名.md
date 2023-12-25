@@ -7,8 +7,8 @@ tags:
 ## 问题
 
 从任务栏新建的 Edge 窗口使用的是其他配置文件。
-![从任务栏中新建 Edge 窗口](/images/edge_create_new_window.png)
-![新窗口使用](/images/edge_new_window.png)
+![从任务栏中新建 Edge 窗口](edge_create_new_window.png)
+![新窗口使用不同配置文件](edge_new_window.png)
 
 ## 原因
 
