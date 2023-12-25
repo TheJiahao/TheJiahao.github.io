@@ -106,3 +106,4 @@ deploy:
 # 自动生成 sitemap
 sitemap:
   path: sitemap.xml
+  rel: true
