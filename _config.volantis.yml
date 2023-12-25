@@ -88,6 +88,7 @@ cover:
     home: true
     archive: false
     others: false
+  background:
 
 site_footer:
   layout: [social, license]
