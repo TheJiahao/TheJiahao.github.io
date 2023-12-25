@@ -16,7 +16,7 @@ timezone: "Europe/Helsinki"
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://thejiahao.github.io/
-permalink: /post/:title.html
+permalink: /posts/:title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
