@@ -25,12 +25,12 @@ site_footer:
 navbar:
   visiable: auto # always, auto
   logo: # choose [img] or [icon + title]
-    img: volantis-static/media/org.volantis/blog/Logo-NavBar@3x.png # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
+    img: #volantis-static/media/org.volantis/blog/Logo-NavBar@3x.png # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
     icon:
-    title:
+    title: Jiahao 的博客
   menu:
-    - name: 博客
-      icon: fa-solid fa-rss
+    - name: 首页
+      icon: fa-solid fa-house
       url: /
     - name: 分类
       icon: fa-solid fa-folder-open
