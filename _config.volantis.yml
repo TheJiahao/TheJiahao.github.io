@@ -39,7 +39,7 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: /images/avatar.jpg
+      avatar: https://avatars.githubusercontent.com/u/42709836
       shape: circle # circle, rectangle
       url: /about/
       title: Jiahao Li
