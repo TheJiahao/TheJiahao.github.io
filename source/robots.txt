@@ -5,7 +5,8 @@ User-agent: *
 Allow: /posts/
 Allow: /images/
 
-Disallow: /static/
-Disallow: /api/
+Disallow: /js/
+Disallow: /css/
 Disallow: /tags/
+Disallow: /categories/
 Disallow: /archives/
