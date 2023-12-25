@@ -2,6 +2,10 @@
 title: Edge 默认配置文件和 VSCode JavaScript Debugger 的 Edge 配置文件重名
 date: 2023-12-25 09:30:20
 tags:
+    - VSCode
+    - Edge
+    - JavaScript Debugger
+    - Windows
 ---
 
 ## 问题
@@ -18,3 +22,5 @@ tags:
 
 1. 将 `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default` 中的 Default 配置文件改名，例如 `Profile 1`
 2. 将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 `--profile-directory="Profile 1"`
+    ![查看任务栏快捷方式的属性](edge_shortcut_properties.png)
+    ![修改启动参数](edge_shortcut_change_properties.png)
