@@ -1,3 +1,7 @@
+seo:
+  use_tags_as_keywords: true # front-matter 缺少关键词时使用文章标签
+  use_excerpt_as_description: true # front-matter 缺少描述时使用文章摘要
+
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
   visiable: auto # always, auto
