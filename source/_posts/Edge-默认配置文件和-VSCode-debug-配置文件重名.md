@@ -1,11 +1,12 @@
 ---
 title: Edge 默认配置文件和 VSCode JavaScript Debugger 的 Edge 配置文件重名
-date: 2023-12-25 09:30:20
 tags:
-    - VSCode
-    - Edge
-    - JavaScript Debugger
-    - Windows
+  - VSCode
+  - Edge
+  - JavaScript Debugger
+  - Windows
+abbrlink: '313e717'
+date: 2023-12-25 09:30:20
 ---
 
 ## 问题

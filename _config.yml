@@ -16,7 +16,7 @@ timezone: "Europe/Helsinki"
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://thejiahao.github.io/
-permalink: /posts/:title.html
+permalink: posts/:abbrlink.html/
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
@@ -110,3 +110,8 @@ deploy:
 sitemap:
   path: sitemap.xml
   rel: true
+
+# 文章永久链接
+abbrlink:
+  alg: crc32 # support crc16(default) and crc32
+  rep: hex
