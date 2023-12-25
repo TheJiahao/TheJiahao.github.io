@@ -1,8 +1,11 @@
+Sitemap: https://thejiahao.github.io/sitemap.xml
+Sitemap: http://thejiahao.github.io/sitemap.xml
+
 User-agent: *
-Allow: /
+Allow: /posts/
+Allow: /images/
 
 Disallow: /static/
 Disallow: /api/
-
-Sitemap: https://thejiahao.github.io/sitemap.xml
-Sitemap: http://thejiahao.github.io/sitemap.xml
+Disallow: /tags/
+Disallow: /archives/
