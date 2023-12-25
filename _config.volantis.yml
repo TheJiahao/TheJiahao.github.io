@@ -19,12 +19,7 @@ cover:
   features: # 注释以隐藏默认封面功能
 
 site_footer:
-  layout: [social, license]
-  social:
-    - icon: fas fa-rss
-      url: atom.xml
-    - icon: fab fa-github
-      url: https://github.com/TheJiahao
+  layout: [license]
 
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
@@ -69,7 +64,11 @@ sidebar:
       title: Jiahao Li
       subtitle:
       jinrishici: false # Poetry Today. You can set a string, and it will be displayed when loading fails.
-      social: true
+      social:
+      - icon: fas fa-rss
+        url: atom.xml
+      - icon: fab fa-github
+        url: https://github.com/TheJiahao
 
     # toc widget (valid only in articles)
     toc:
