@@ -65,10 +65,10 @@ sidebar:
       subtitle:
       jinrishici: false # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
-      - icon: fas fa-rss
-        url: atom.xml
-      - icon: fab fa-github
-        url: https://github.com/TheJiahao
+        - icon: fas fa-rss
+          url: atom.xml
+        - icon: fab fa-github
+          url: https://github.com/TheJiahao
 
     # toc widget (valid only in articles)
     toc:
