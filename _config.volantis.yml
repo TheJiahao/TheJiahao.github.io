@@ -89,6 +89,12 @@ cover:
     archive: false
     others: false
 
+site_footer:
+  layout: [social, license]
+  social:
+    - icon: fab fa-github
+      url: https://github.com/TheJiahao
+
 plugins:
   darkmode:
     enable: true
