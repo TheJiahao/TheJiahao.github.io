@@ -49,7 +49,10 @@ marked:
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
+  auto_detect: false
+  line_number: true
+  wrap: true
 prismjs:
   enable: false
 
