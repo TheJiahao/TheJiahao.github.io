@@ -15,7 +15,7 @@ cover:
     archive: false
     others: false
   background:
-  search:
+  search: 搜索
   features: # 注释以隐藏默认封面功能
 
 site_footer:
@@ -44,7 +44,7 @@ navbar:
     - name: 暗黑模式
       icon: fas fa-moon
       toggle: darkmode
-  search: 搜索... # Search bar placeholder
+  search: 搜索 # Search bar placeholder
 
 # 侧边栏
 sidebar:
