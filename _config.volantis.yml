@@ -2,6 +2,30 @@ seo:
   use_tags_as_keywords: true # front-matter 缺少关键词时使用文章标签
   use_excerpt_as_description: true # front-matter 缺少描述时使用文章摘要
 
+plugins:
+  darkmode:
+    enable: true
+
+cover:
+  title: Jiahao 的博客
+  height_scheme: half # full, half
+  layout_scheme: search # search (搜索), dock (坞), featured (精选), focus (焦点)
+  display:
+    home: true
+    archive: false
+    others: false
+  background:
+  search:
+  features: # 注释以隐藏默认封面功能
+
+site_footer:
+  layout: [social, license]
+  social:
+    - icon: fas fa-rss
+      url: atom.xml
+    - icon: fab fa-github
+      url: https://github.com/TheJiahao
+
 # 注意事项：建议规范全站路径 URL 最后带一个 "/" 例如 "about/"
 navbar:
   visiable: auto # always, auto
@@ -143,27 +167,3 @@ article:
       tags:
         icon: fas fa-hashtag
       # 分享
-
-cover:
-  title: Jiahao 的博客
-  height_scheme: half # full, half
-  layout_scheme: search # search (搜索), dock (坞), featured (精选), focus (焦点)
-  display:
-    home: true
-    archive: false
-    others: false
-  background:
-  search: 
-  features: # 注释以隐藏默认封面功能
-
-site_footer:
-  layout: [social, license]
-  social:
-    - icon: fas fa-rss
-      url: atom.xml
-    - icon: fab fa-github
-      url: https://github.com/TheJiahao
-
-plugins:
-  darkmode:
-    enable: true
