@@ -27,6 +27,14 @@ navbar:
       toggle: darkmode
   search: 搜索... # Search bar placeholder
 
+cover:
+  height_scheme: half # full, half
+  scheme: focus # search (搜索), dock (坞), featured (精选), focus (焦点)
+  display:
+    home: true
+    archive: false
+    others: false
+
 plugins:
   darkmode:
     enable: true
