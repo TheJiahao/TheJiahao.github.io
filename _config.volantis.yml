@@ -19,5 +19,11 @@ navbar:
     - name: 归档
       icon: fa-solid fa-archive
       url: archives/
+    - name: 暗黑模式
+      icon: fas fa-moon
+      toggle: darkmode
   search: 搜索... # Search bar placeholder
-############################### Navigation Bar ############################### > end
+
+plugins:
+  darkmode:
+    enable: true
