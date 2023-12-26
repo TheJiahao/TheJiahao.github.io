@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  autocorrect-node:
-    specifier: ^2.9.0
-    version: 2.9.0
   hexo:
     specifier: ^6.3.0
     version: 6.3.0
@@ -53,6 +50,11 @@ dependencies:
   hexo-theme-volantis:
     specifier: ^5.8.0
     version: 5.8.0
+
+devDependencies:
+  autocorrect-node:
+    specifier: ^2.9.0
+    version: 2.9.0
 
 packages:
 
@@ -129,7 +131,7 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /autocorrect-node-darwin-x64@2.9.0:
@@ -138,7 +140,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /autocorrect-node-linux-x64-gnu@2.9.0:
@@ -147,7 +149,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /autocorrect-node-linux-x64-musl@2.9.0:
@@ -156,7 +158,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /autocorrect-node-win32-x64-msvc@2.9.0:
@@ -165,7 +167,7 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
+    dev: true
     optional: true
 
   /autocorrect-node@2.9.0:
@@ -178,7 +180,7 @@ packages:
       autocorrect-node-linux-x64-gnu: 2.9.0
       autocorrect-node-linux-x64-musl: 2.9.0
       autocorrect-node-win32-x64-msvc: 2.9.0
-    dev: false
+    dev: true
 
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
