@@ -4,4 +4,4 @@ public/**
 .deploy_git/**
 *.html
 *.json
-.github\workflows
+.github/workflows
