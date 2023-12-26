@@ -167,6 +167,28 @@ article:
         icon: fas fa-hashtag
       # 分享
 
+comments:
+  service: giscus
+  # giscus
+  # https://giscus.app
+  # https://github.com/laymonage/giscus
+  giscus:
+    # 以下配置按照 YML 格式增删填写即可
+    repo: TheJiahao/TheJiahao.github.io
+    repo-id: MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY=
+    category: General
+    category-id: DIC_kwDOEb6W1s4Cb_e4
+    mapping: "pathname"
+    reactions-enabled: "1"
+    emit-metadata: "0"
+    lang: "zh-CN"
+    input-position: top
+    loading: lazy
+    # 以上配置按照 YML 格式增删填写即可
+    theme:
+      light: "light" # https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css
+      dark: "dark" # https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css
+
 color_scheme:
   # ------------
   # 通用颜色
@@ -266,25 +288,3 @@ color_scheme:
     copyright_bkg: "#21252b"
     # 夜间图片亮度
     brightness: 70%
-
-comments:
-  service: giscus
-  # giscus
-  # https://giscus.app
-  # https://github.com/laymonage/giscus
-  giscus:
-    # 以下配置按照 YML 格式增删填写即可
-    repo: TheJiahao/TheJiahao.github.io
-    repo-id: MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY=
-    category: General
-    category-id: DIC_kwDOEb6W1s4Cb_e4
-    mapping: "pathname"
-    reactions-enabled: "1"
-    emit-metadata: "0"
-    lang: "zh-CN"
-    input-position: top
-    loading: lazy
-    # 以上配置按照 YML 格式增删填写即可
-    theme:
-      light: "light" # https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css
-      dark: "dark" # https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css
