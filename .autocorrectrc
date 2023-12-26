@@ -12,7 +12,7 @@ fileTypes:
   # "rb": ruby
   # "Rakefile": ruby
   # "*.js": javascript
-  # ".mdx": markdown
+  ".mdx": markdown
 spellcheck:
   words:
     # Please do not add a general English word (eg. apple, python) here.
