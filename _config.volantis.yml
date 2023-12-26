@@ -288,3 +288,7 @@ color_scheme:
     copyright_bkg: "#21252b"
     # 夜间图片亮度
     brightness: 70%
+
+custom_css:
+  navbar:
+    effect: [shadow, floatable] # [shadow, floatable, blur]
