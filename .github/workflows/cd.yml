@@ -24,3 +24,4 @@ jobs:
           external_repository: TheJiahao/TheJiahao.github.io
           publish_branch: main # default: gh-pages
           publish_dir: ./public
+          commit_message: Update website
