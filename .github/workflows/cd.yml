@@ -15,7 +15,7 @@ jobs:
         uses: ./setup-action
       
       - name: Generate website
-        run: pnpm run buil
+        run: pnpm run build
   
   Deploy:
     runs-on: ubuntu-latest
