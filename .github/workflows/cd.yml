@@ -5,14 +5,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  Deploy:
+  Build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up
         uses: ./setup-action
+      
+      - name: Generate website
+        run: pnpm run buil
+  
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: Build
 
+    steps:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
