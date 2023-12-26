@@ -101,8 +101,8 @@ sidebar:
       min_font: 14
       max_font: 24
       color: true
-      start_color: "#999"
-      end_color: "#555"
+      start_color: "#145A92"
+      end_color: "#A22C10"
 
 # 文章布局
 article:
