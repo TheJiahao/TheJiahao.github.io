@@ -1,23 +1,23 @@
 name: CI
 on:
-    push:
-        branches: main
-    workflow_dispatch:
+  push:
+    branches: main
+  workflow_dispatch:
 
 jobs:
-    Format:
-        runs-on: ubuntu-latest
+  Format:
+    runs-on: ubuntu-latest
 
-        permissions:
-            contents: write
+    permissions:
+      contents: write
 
-        steps:
-            - uses: actions/checkout@v4
-            - name: Set up
-              uses: ./setup-action
-            - name: Format code
-              run: pnpm run format
-            - name: Commit and push changes
-              uses: stefanzweifel/git-auto-commit-action@v5
-              with:
-                  commit_message: Format code
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up
+        uses: ./setup-action
+      - name: Format code
+        run: pnpm run format
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Format code
