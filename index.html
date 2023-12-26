@@ -1792,7 +1792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1703577594271),
+    lastupdate: new Date(1703583817673),
     sidebar: {
       for_page: ["blogger","category","tagcloud"],
       for_post: ["toc"],
@@ -2522,16 +2522,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/posts/313e717.html/"  itemprop="url">
-        Edge 默认配置文件和 VSCode JavaScript Debugger 的 Edge 配置文件重名
+        解决任务栏新建的 Edge 窗口使用不同配置文件的问题
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        问题从任务栏新建的 Edge 窗口使用的是其他配置文件。
-原因任务栏上的 Edge 启动参数 --profile-directory=Default 中的配置文件和 VSCode JavaScript Debugger 调试用的 Edge 配置文件 %APPDATA%\Code\User\workspaceStorage\...\ms-vscode.js-debug\.profile\Def...
-      
+      <p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用是调试用配置文件。
+本文提供了一种解决方式。</p>
     
   </div>
   
@@ -2584,16 +2582,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        准备工作安装 Scoop
-1Invoke-WebRequest get.scoop.sh | Invoke-Expression
-
-安装 Clangd安装 Winlibs 编译的 MinGW + Clang + clangd
-1scoop install mingw-winlibs
-
-VScode 安装 clangd 扩展。
-为什么通过 Scoop 安装？通过 Scoop 安装 clangd...
-      
+      <p>使用 Scoop 安装 <a target="_blank" rel="noopener" href="https://clangd.llvm.org/">clangd</a> 可以自动配置环境变量和避免 VSCode 找不到 <code>#include</code>。</p>
     
   </div>
   
