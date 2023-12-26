@@ -38,4 +38,10 @@ references:
     scoop install mingw-winlibs
     ```
 
-1. VScode 安装 [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) 扩展。
+1. VSCode 安装 [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) 扩展。
+
+{% link
+clangd - Visual Studio Marketplace
+::https://marketplace.visualstudio.com/itemsitemName=llvm-vs-code-extensions.vscode-clangd
+::https://llvm-vs-code-extensions.gallerycdn.vsassets.io/extensions/llvm-vs-code-extensions/vscode-clangd/0.1.26/1703134180510/Microsoft.VisualStudio.Services.Icons.Default
+%}
