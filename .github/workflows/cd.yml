@@ -8,13 +8,15 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up
         uses: ./setup-action
 
-      - name: Deploy to GitHub Pages
-        run: pnpm run deploy
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: TheJiahao/TheJiahao.github.io
+          publish_branch: main # default: gh-pages
+          publish_dir: ./public
