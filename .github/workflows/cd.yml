@@ -18,7 +18,7 @@ jobs:
         run: pnpm run build
 
       - name: Copy Pages deployment workflow
-        run: cp ./.github/workflows/deploy.yml ./public/.github/workflows
+        run: cp ./.github/workflows/deploy.yml ./public/.github/workflows/deploy.yml
 
       - name: Deploy to public repository
         uses: peaceiris/actions-gh-pages@v3
