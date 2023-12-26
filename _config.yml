@@ -148,6 +148,6 @@ markdown:
     separator: "-"
   images:
     lazyload: false
-    prepend_root: false
-    post_asset: false
+    prepend_root: true
+    post_asset: true
   inline: false # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
