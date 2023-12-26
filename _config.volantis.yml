@@ -172,57 +172,57 @@ color_scheme:
   # 通用颜色
   common:
     # 主题色
-    theme: "#3dd9b6"
+    theme: "#1B6252"
     # 链接色
-    link: "#2092ec"
+    link: "#145A92"
     # 按钮色
-    button: "#44D7B6"
+    button: "#1B6252"
     # 鼠标放到交互元素上时的色
-    hover: "#ff5722"
+    hover: "#983906"
     # 主题色块内部的文字颜色
-    inner: "#fff"
+    inner: "#FFFFFF"
     # 选中区域文字的背景颜色
-    selection: "alpha(#2196f3, 0.2)"
+    selection: "alpha(#145A92, 0.2)"
   # ------------
   # 亮色主题（默认）
   light:
     # 网站背景色
-    site_bg: "#f4f4f4"
+    site_bg: "#F4F4F4"
     # 网站背景上的文字
     site_inner: "#222222"
     # 网站页脚文字
-    site_footer: "#666"
+    site_footer: "#666666"
 
     # 卡片背景色
-    card: "#fff"
+    card: "#FFFFFF"
     # 卡片上的普通文字
-    text: "#444"
+    text: "#444444"
 
     # 区块和代码块背景色
     block: "#f6f6f6"
     # 代码块高亮时的背景色
     codeblock: "#FFF7EA"
     # 行内代码颜色
-    inlinecode: "#c74f00"
+    inlinecode: "#983906"
 
     # 文章部分
-    h1: "#3a3a3a"
+    h1: "#353535"
     h2: "#3a3a3a"
-    h3: "#333"
-    h4: "#444"
-    h5: "#555"
-    h6: "#666"
-    p: "#444"
+    h3: "#333333"
+    h4: "#444444"
+    h5: "#505050"
+    h6: "#545454"
+    p: "#444444"
 
     # 列表文字
-    list: "#666"
+    list: "#545454"
     # 列表 hover 时的文字
-    list_hl: "mix($color-theme, #000, 80)"
+    list_hl: "mix($color-theme, #000000, 80)"
     # 辅助性文字
-    meta: "#888"
+    meta: "#444444"
 
     # 版权卡片背景色
-    copyright_bkg: "#f5f5f5"
+    copyright_bkg: "#F5F5F5"
   # ------------
   # 暗色主题
   # https://www.maijisheji.com/2094.html
