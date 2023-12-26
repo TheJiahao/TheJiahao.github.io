@@ -9,6 +9,7 @@ tags:
   - LLVM
   - Clang
 title: Windows 下通过 Scoop 为 VSCode 配置 clangd
+thumbnail: https://clangd.llvm.org/logo.svg
 abbrlink: 645e20ca
 date: 2022-05-12 00:00:00
 updated: 2023-12-26
