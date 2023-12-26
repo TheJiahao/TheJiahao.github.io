@@ -1,0 +1,37 @@
+name: CI
+on:
+    push:
+        branches: main
+    workflow_dispatch:
+
+jobs:
+    Lint:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up
+              uses: ./setup-action
+            - name: Run AutoCorrect
+              uses: huacnlee/autocorrect-action@main
+              with:
+                  use_npm: true
+
+    Format:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: write
+
+        steps:
+            - uses: actions/checkout@v4
+            - name: Set up
+              uses: ./setup-action
+            - name: Format code
+              uses: huacnlee/autocorrect-action@main
+              with:
+                  use_npm: true
+            - name: Commit and push changes
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: Format code
