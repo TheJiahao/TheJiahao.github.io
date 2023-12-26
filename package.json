@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "build": "hexo clean && hexo generate",
-    "server": "hexo clean && hexo generate && hexo server",
+    "server": "pnpm run build && hexo server",
     "deploy": "hexo clean && hexo deploy",
-    "format": "autocorrect --fix && prettier --write ."
+    "format": "autocorrect --fix & prettier --write ."
   },
   "hexo": {
     "version": "7.0.0"
