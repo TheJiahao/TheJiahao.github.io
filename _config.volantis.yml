@@ -247,7 +247,7 @@ color_scheme:
     # 行内代码颜色
     inlinecode: "#D56D28"
 
-    # 文章部分 高强度文本的不透明度应为87％ 中等重点文字适用于60％
+    # 文章部分高强度文本的不透明度应为 87％ 中等重点文字适用于 60％
     h1: "#FFFFFFde" #  Dark Grey 8
     h2: "#FFFFFFde"
     h3: "#FFFFFF99" #  Dark Grey 7
