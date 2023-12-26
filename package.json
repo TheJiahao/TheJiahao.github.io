@@ -5,12 +5,14 @@
   "scripts": {
     "build": "hexo clean && hexo generate",
     "server": "hexo clean && hexo generate && hexo server",
-    "deploy": "hexo clean && hexo deploy"
+    "deploy": "hexo clean && hexo deploy",
+    "format": "autocorrect --fix"
   },
   "hexo": {
     "version": "6.3.0"
   },
   "dependencies": {
+    "autocorrect-node": "^2.9.0",
     "hexo": "^6.3.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-deployer-git": "^4.0.0",
