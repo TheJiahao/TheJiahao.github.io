@@ -273,7 +273,7 @@ comments:
   # https://giscus.app
   # https://github.com/laymonage/giscus
   giscus:
-    # 以下配置按照 yml 格式增删填写即可
+    # 以下配置按照 YML 格式增删填写即可
     repo: TheJiahao/TheJiahao.github.io
     repo-id: MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY=
     category: General
@@ -284,7 +284,7 @@ comments:
     lang: "zh-CN"
     input-position: top
     loading: lazy
-    # 以上配置按照 yml 格式增删填写即可
+    # 以上配置按照 YML 格式增删填写即可
     theme:
       light: "light" # https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/light.css
       dark: "dark" # https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@master/css/giscus/dark.css
