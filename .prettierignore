@@ -1,0 +1,6 @@
+**/node_modules/**
+public/**
+*.md
+.deploy_git/**
+*.html
+*.json

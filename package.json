@@ -6,7 +6,7 @@
     "build": "hexo clean && hexo generate",
     "server": "hexo clean && hexo generate && hexo server",
     "deploy": "hexo clean && hexo deploy",
-    "format": "autocorrect --fix"
+    "format": "autocorrect --fix && prettier --write ."
   },
   "hexo": {
     "version": "7.0.0"
@@ -29,6 +29,7 @@
     "hexo-theme-volantis": "^5.8.0"
   },
   "devDependencies": {
-    "autocorrect-node": "^2.9.0"
+    "autocorrect-node": "^2.9.0",
+    "prettier": "^3.1.1"
   }
 }
