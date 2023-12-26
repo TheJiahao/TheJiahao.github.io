@@ -121,7 +121,7 @@ nofollow:
 ## 压缩静态文件
 minify:
   preview: true ## 本地预览时是否压缩
-  exclude: ['*.min.*']
+  exclude: ["*.min.*"]
   js:
     enable: true
     sourceMap:
