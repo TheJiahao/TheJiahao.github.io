@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Build:
+  Deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,22 +14,10 @@ jobs:
       - name: Set up
         uses: ./setup-action
 
-      - name: Generate website
+      - name: Generate static assets
         run: pnpm run build
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./public
-
-  Deploy:
-    runs-on: ubuntu-latest
-    needs: Build
-    environment:
-      name: github-pages
-
-    steps:
-      - name: Deploy
+      - name: Deploy to public repository
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
