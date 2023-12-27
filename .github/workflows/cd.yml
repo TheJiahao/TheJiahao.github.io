@@ -50,8 +50,5 @@ jobs:
       - name: Generate static assets
         run: pnpm run build
 
-      - name: Save Google API key to JSON file
-        run: printf "%s\n" $GOOGLE_API_KEY > $GITHUB_WORKSPACE/google_api_key.json
-
       - name: Submit URLs to search engines
         run: pnpm hexo deploy
