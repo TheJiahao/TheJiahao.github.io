@@ -51,4 +51,4 @@ jobs:
         run: pnpm run build
 
       - name: Submit URLs to search engines
-        run: hexo deploy
+        run: pnpm hexo deploy
