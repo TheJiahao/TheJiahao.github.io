@@ -123,12 +123,16 @@ hexo_submit_urls_to_search_engine:
   submit_condition: count # 链接被提交的条件，可选值：count | period 现仅支持 count
   count: 10 # 提交最新的 10 个链接
   period: 900 # 提交修改时间在 900 秒内的链接
-  google: 0 # 是否向 Google 提交，可选值：1 | 0（0：否；1：是）
+  google: 1 # 是否向 Google 提交，可选值：1 | 0（0：否；1：是）
   bing: 1 # 是否向 Bing 提交，可选值：1 | 0（0：否；1：是）
   baidu: 0 # 是否向 Baidu 提交，可选值：1 | 0（0：否；1：是）
   txt_path: submit_urls.txt # 文本文档名，需要推送的链接会保存在此文本文档里
   bing_host: https://thejiahao.github.io/ # 在 Bing 站长平台中注册的域名
   bing_token: 0 # 请注意这是您的秘钥，所以请不要把它直接发布在公众仓库里！
+  google_host: https://thejiahao.github.io/ # 在 Google 站长平台中注册的域名
+  google_key_file: google_api_key.json # 存放 Google key 的 JSON 文件，放于网站根目录（与 hexo _config.yml 文件位置相同），请不要把 JSON 文件内容直接发布在公众仓库里！
+  google_proxy: 0 # 向谷歌提交网址所使用的系统 HTTP 代理，填 0 不使用
+
 ## 压缩静态文件
 minify:
   preview: true ## 本地预览时是否压缩
