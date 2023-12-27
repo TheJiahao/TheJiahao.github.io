@@ -51,7 +51,7 @@ jobs:
         run: pnpm run build
 
       - name: Save Google API key to JSON file
-        run: printf "%s" "${{ secrets.GOOGLE_INDEXING_API_JSON }}" > "$GITHUB_WORKSPACE/public/google_api_key.json"
+        run: printf "%s" "${{ secrets.GOOGLE_INDEXING_API_JSON }}" > "$GITHUB_WORKSPACE/google_api_key.json"
 
       - name: Submit URLs to search engines
         run: pnpm hexo deploy
