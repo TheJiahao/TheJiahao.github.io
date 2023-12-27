@@ -194,18 +194,12 @@ feed:
   icon: https://gravatar.com/avatar/8677945a0220e9aebdcad9b77205b7eff9efe49c713f25ea2c98d2544195275c?s=256
 
 # Markdown 渲染
-markdown:
-  preset: default
-  render:
-    html: true
-    xhtmlOut: false
-    langPrefix: "language-"
-    breaks: false
-    linkify: true
-    typographer: true
-    quotes: "“”‘’"
-  images:
-    lazyload: true
-    prepend_root: true
-    post_asset: true
-  inline: false # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
+markdown_it_plus:
+  highlight: false
+  html: true
+  xhtmlOut: true
+  langPrefix: "language-"
+  breaks: false
+  linkify: true
+  typographer: true
+  quotes: “”‘’
