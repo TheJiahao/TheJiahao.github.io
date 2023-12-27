@@ -6,6 +6,9 @@ on:
     types: completed
   workflow_dispatch:
 
+env:
+  - BING_TOKEN: ${{ secrets.BING_TOKEN }}
+
 jobs:
   Deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }} || ${{ github.event.workflow_dispatch }} != ''
@@ -32,3 +35,20 @@ jobs:
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
           commit_message: Deploy
+
+  Submit_url_to_search_engines:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up
+        uses: ./setup-action
+        with:
+          pnpm_args: -P
+
+      - name: Generate static assets
+        run: pnpm run build
+
+      - name: Submit URLs to search engines
+        run: hexo deploy
