@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  - BING_TOKEN: ${{ secrets.BING_TOKEN }}
+  BING_TOKEN: ${{ secrets.BING_TOKEN }}
 
 jobs:
   Deploy:
