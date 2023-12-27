@@ -6,9 +6,6 @@ on:
     types: completed
   workflow_dispatch:
 
-env:
-  BING_TOKEN: ${{ secrets.BING_TOKEN }}
-
 jobs:
   Deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }} || ${{ github.event.workflow_dispatch }} != ''
@@ -38,6 +35,9 @@ jobs:
 
   Submit_url_to_search_engines:
     runs-on: ubuntu-latest
+    env:
+      BING_TOKEN: ${{ secrets.BING_TOKEN }}
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_INDEXING_API_JSON }}
 
     steps:
       - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
         run: pnpm run build
 
       - name: Save Google API key to JSON file
-        run: printf "%s" "${{ secrets.GOOGLE_INDEXING_API_JSON }}" > "$GITHUB_WORKSPACE/google_api_key.json"
+        run: printf "%s\n" $GOOGLE_API_KEY > $GITHUB_WORKSPACE/google_api_key.json
 
       - name: Submit URLs to search engines
         run: pnpm hexo deploy
