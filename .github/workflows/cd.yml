@@ -16,6 +16,8 @@ jobs:
 
       - name: Set up
         uses: ./setup-action
+        with:
+          pnpm_args: -P
 
       - name: Generate static assets
         run: pnpm run build
