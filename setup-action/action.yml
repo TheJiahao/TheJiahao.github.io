@@ -4,7 +4,7 @@ inputs:
   pnpm_args:
     description: Arguments for pnpm
     required: false
-    default: ''
+    default: -D
 
 runs:
   using: "composite"
