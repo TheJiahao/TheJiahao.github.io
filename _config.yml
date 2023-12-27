@@ -42,7 +42,7 @@ external_link:
   exclude: ""
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -204,7 +204,7 @@ markdown:
     typographer: true
     quotes: "“”‘’"
   images:
-    lazyload: false
+    lazyload: true
     prepend_root: true
     post_asset: true
   inline: false # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
