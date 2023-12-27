@@ -18,12 +18,12 @@
   
   <entry>
     <title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title>
-    <link href="https://thejiahao.github.io/posts/313e717.html/"/>
-    <id>https://thejiahao.github.io/posts/313e717.html/</id>
+    <link href="https://thejiahao.github.io/posts/313e717"/>
+    <id>https://thejiahao.github.io/posts/313e717</id>
     <published>2023-12-25T07:30:20.000Z</published>
     <updated>2023-12-25T22:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用是调试用配置文件。本文提供了一种解决方式。</p><span id="more"></span><h2 id="问题">问题</h2><p>从任务栏新建的 Edge 窗口使用的是其他配置文件。<img src="/posts/313e717.html/edge_create_new_window.png" class="lazyload" data-srcset="/posts/313e717.html/edge_create_new_window.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></p><p><img src="/posts/313e717.html/edge_new_window.png" class="lazyload" data-srcset="/posts/313e717.html/edge_new_window.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></p><h2 id="原因">原因</h2><p>任务栏上的 Edge 启动参数 <code>--profile-directory=Default</code> 中的配置文件和 VSCode JavaScript Debugger 调试用的 Edge 配置文件 <code>%APPDATA%\Code\User\workspaceStorage\...\ms-vscode.js-debug\.profile\Default</code> 重名。</p><h2 id="解决方式">解决方式</h2><ol><li>将 <code>%LOCALAPPDATA%\Microsoft\Edge\User Data\Default</code> 中的 Default 配置文件改名，例如 <code>Profile 1</code></li><li>将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 <code>--profile-directory=&quot;Profile 1&quot;</code><img src="/posts/313e717.html/edge_shortcut_properties.png" class="lazyload" data-srcset="/posts/313e717.html/edge_shortcut_properties.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><img src="/posts/313e717.html/edge_shortcut_change_properties.png" class="lazyload" data-srcset="/posts/313e717.html/edge_shortcut_change_properties.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用是调试用配置文件。本文提供了一种解决方式。</p><span id="more"></span><h2 id="问题">问题</h2><p>从任务栏新建的 Edge 窗口使用的是其他配置文件。<img src="/posts/313e717/edge_create_new_window.png" class="lazyload" data-srcset="/posts/313e717/edge_create_new_window.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></p><p><img src="/posts/313e717/edge_new_window.png" class="lazyload" data-srcset="/posts/313e717/edge_new_window.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></p><h2 id="原因">原因</h2><p>任务栏上的 Edge 启动参数 <code>--profile-directory=Default</code> 中的配置文件和 VSCode JavaScript Debugger 调试用的 Edge 配置文件 <code>%APPDATA%\Code\User\workspaceStorage\...\ms-vscode.js-debug\.profile\Default</code> 重名。</p><h2 id="解决方式">解决方式</h2><ol><li>将 <code>%LOCALAPPDATA%\Microsoft\Edge\User Data\Default</code> 中的 Default 配置文件改名，例如 <code>Profile 1</code></li><li>将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 <code>--profile-directory=&quot;Profile 1&quot;</code><img src="/posts/313e717/edge_shortcut_properties.png" class="lazyload" data-srcset="/posts/313e717/edge_shortcut_properties.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><img src="/posts/313e717/edge_shortcut_change_properties.png" class="lazyload" data-srcset="/posts/313e717/edge_shortcut_change_properties.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></li></ol>]]></content>
     
     
     <summary type="html">&lt;p&gt;VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用是调试用配置文件。
@@ -44,8 +44,8 @@
   
   <entry>
     <title>Windows 下通过 Scoop 为 VSCode 配置 clangd</title>
-    <link href="https://thejiahao.github.io/posts/645e20ca.html/"/>
-    <id>https://thejiahao.github.io/posts/645e20ca.html/</id>
+    <link href="https://thejiahao.github.io/posts/645e20ca"/>
+    <id>https://thejiahao.github.io/posts/645e20ca</id>
     <published>2022-05-11T21:00:00.000Z</published>
     <updated>2023-12-25T22:00:00.000Z</updated>
     
