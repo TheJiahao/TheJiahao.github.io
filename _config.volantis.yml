@@ -66,7 +66,7 @@ sidebar:
     blogger:
       class: blogger
       display: [desktop, mobile] # [desktop, mobile]
-      avatar: https://avatars.githubusercontent.com/u/42709836
+      avatar: https://gravatar.com/avatar/8677945a0220e9aebdcad9b77205b7eff9efe49c713f25ea2c98d2544195275c?s=256
       shape: circle # circle, rectangle
       url: /about/
       title: Jiahao Li
@@ -154,7 +154,7 @@ article:
     meta_library:
       # 默认文章作者（可在 front-matter 中覆盖）
       author:
-        avatar: https://avatars.githubusercontent.com/u/42709836
+        avatar: https://gravatar.com/avatar/8677945a0220e9aebdcad9b77205b7eff9efe49c713f25ea2c98d2544195275c?s=256
         name: Jiahao
         url: /
       # 文章创建日期

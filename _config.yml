@@ -191,7 +191,7 @@ feed:
   enable: true
   type: atom
   path: atom.xml
-  icon: https://avatars.githubusercontent.com/u/42709836
+  icon: https://gravatar.com/avatar/8677945a0220e9aebdcad9b77205b7eff9efe49c713f25ea2c98d2544195275c?s=256
 
 # Markdown 渲染
 markdown:
