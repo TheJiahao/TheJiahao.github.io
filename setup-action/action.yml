@@ -1,5 +1,10 @@
 name: Set up
 description: Set up Node and pnpm
+inputs:
+  pnpm_args:
+    description: Arguments for pnpm
+    required: false
+    default: ''
 
 runs:
   using: "composite"
@@ -34,5 +39,5 @@ runs:
           ${{ runner.os }}-pnpm-store-
 
     - name: Install dependencies
-      run: pnpm install
+      run: pnpm install ${{ inputs.pnpm_args }}
       shell: bash
