@@ -8,7 +8,7 @@ subtitle:
 description: Jiahao 的博客
 keywords: 编程, VSCode, JavaScript, C++
 author: Jiahao Li
-favicon: https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/favicon-32x32.png
+favicon: https://gcore.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico
 language:
   - zh-CN
 timezone: "Europe/Helsinki"
@@ -116,7 +116,7 @@ abbrlink:
 nofollow:
   enable: true
   field: site
-  exclude:
+  exclude: giscus.app
 
 ## 压缩静态文件
 minify:
