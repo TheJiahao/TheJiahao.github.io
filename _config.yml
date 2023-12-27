@@ -136,7 +136,7 @@ hexo_submit_urls_to_search_engine:
 
 ## 压缩静态文件
 minify:
-  preview: true ## 本地预览时是否压缩
+  preview: false ## 本地预览时是否压缩
   exclude: ["*.min.*"]
   js:
     enable: true
