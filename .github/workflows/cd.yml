@@ -50,8 +50,12 @@ jobs:
       - name: Generate static assets
         run: pnpm run build
 
-      - name: Save Google API key to JSON file
-        run: echo "${{ secrets.GOOGLE_INDEXING_API_JSON }}" > $GITHUB_WORKSPACE/google_api_key.json
-
+      - name: Save Google API key to JSON file        
+        uses: SpicyPizza/create-envfile@v2.0.2
+        with:
+          envkey_SECRET_KEY: ${{ secrets.GOOGLE_INDEXING_API_JSON }}
+          directory: $GITHUB_WORKSPACE
+          file_name: google_api_key.json
+  
       - name: Submit URLs to search engines
         run: pnpm hexo deploy
