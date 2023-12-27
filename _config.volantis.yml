@@ -5,6 +5,14 @@ seo:
 plugins:
   darkmode:
     enable: true
+  # 代码高亮
+  code_highlight: highlightjs # highlightjs or prismjs
+  # highlight.js
+  highlightjs:
+    copy_code: true
+    # 如果开启 js, hexo.config.highlight.enable 需要设置为 false
+    js: # https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js # Please set hexo.config.highlight.enable = false !!!
+    css: https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/atom-one-dark.min.css
 
 cover:
   title: Jiahao 的博客
