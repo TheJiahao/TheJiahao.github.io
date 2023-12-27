@@ -7,10 +7,10 @@ tags:
   - Windows
 abbrlink: '313e717'
 date: 2023-12-25 09:30:20
-updated: 2023-12-26
+updated: 2023-12-27 15:02
 ---
 
-VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用是调试用配置文件。
+VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
 本文提供了一种解决方式。
 
 <!-- more -->
