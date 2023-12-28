@@ -107,6 +107,8 @@ deploy:
 sitemap:
   path: sitemap.xml
   rel: true
+  tags: false
+  categories: false
 
 # 文章永久链接
 abbrlink:
