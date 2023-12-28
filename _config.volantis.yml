@@ -76,7 +76,7 @@ sidebar:
       shape: circle # circle, rectangle
       url: /about/
       title: Jiahao Li
-      subtitle:
+      subtitle: 一个普通的计算机系学生
       jinrishici: false # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
         - icon: fas fa-rss
