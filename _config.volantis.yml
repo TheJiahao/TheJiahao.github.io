@@ -1,6 +1,12 @@
 seo:
   use_tags_as_keywords: true # front-matter 缺少关键词时使用文章标签
   use_excerpt_as_description: true # front-matter 缺少描述时使用文章摘要
+  robots:
+    home_first_page: index, follow
+    home_other_pages: noindex, follow
+    archive: noindex, follow
+    category: noindex, follow
+    tag: noindex, follow
 
 plugins:
   darkmode:

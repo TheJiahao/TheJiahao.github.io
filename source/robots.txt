@@ -7,6 +7,3 @@ Allow: /images/
 
 Disallow: /js/
 Disallow: /css/
-Disallow: /tags/
-Disallow: /categories/
-Disallow: /archives/
