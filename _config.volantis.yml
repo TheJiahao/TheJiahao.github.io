@@ -306,3 +306,5 @@ color_scheme:
 custom_css:
   navbar:
     effect: [shadow, floatable] # [shadow, floatable, blur]
+  body:
+    effect: [shadow, floatable]
