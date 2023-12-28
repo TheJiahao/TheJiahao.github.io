@@ -8,7 +8,7 @@ subtitle:
 description: Jiahao 的博客
 keywords: 编程, VSCode, JavaScript, C++
 author: Jiahao Li
-favicon: https://gcore.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico
+favicon: https://raw.githubusercontent.com/microsoft/fluentui-emoji/14053d26005b9afe3ce0e020862ed5ab2335f989/assets/Thinking%20face/Flat/thinking_face_flat.svg
 language:
   - zh-CN
 timezone: "Europe/Helsinki"
