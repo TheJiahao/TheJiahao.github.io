@@ -7,6 +7,9 @@ tags:
   - Windows
 abbrlink: '313e717'
 headimg: /img/解决任务栏新建的-Edge-窗口使用不同配置文件的问题/edge_create_new_window.png
+plugins:
+  - katex
+
 date: 2023-12-25 09:30:20
 updated: 2023-12-27 15:02
 ---
@@ -27,6 +30,10 @@ VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默�
 ## 原因
 
 任务栏上的 Edge 启动参数 `--profile-directory=Default` 中的配置文件和 VSCode JavaScript Debugger 调试用的 Edge 配置文件 `%APPDATA%\Code\User\workspaceStorage\...\ms-vscode.js-debug\.profile\Default` 重名。
+
+$$
+\Large\mathop{F}\limits ^{\rightarrow}=G\left(\iiint\limits_Ω\frac{(x-x_0)f(x,y,z)}{r^3}dv,\iiint\limits_Ω\frac{(y-y_0)f(x,y,z)}{r^3}dv,\iiint\limits_Ω\frac{(z-z_0)f(x,y,z)}{r^3}dv\right)
+$$
 
 ## 解决方式
 
