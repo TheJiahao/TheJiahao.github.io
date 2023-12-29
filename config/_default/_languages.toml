@@ -1,6 +1,13 @@
 # Rename this file to languages.toml to enable multilingual support
+[zh-cn]
+    enable = true
+    languageName = "中文 (简体)"
+    languagedirection = "ltr"
+    title = "Jiahao 的博客"
+
 [en]
-languageName = "English"
-languagedirection = "ltr"
-title = "Example Site"
-weight = 1
+    enable = false
+    languageName = "English"
+    languagedirection = "ltr"
+    title = "Jiahao's blog"
+    weight = 2
