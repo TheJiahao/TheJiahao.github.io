@@ -69,7 +69,7 @@ favicon = "/favicon.ico"
 ## Comments
 [comments]
     enabled = true
-    provider = "disqus"
+    provider = "giscus"
 
     [comments.disqusjs]
         shortname = ""
@@ -120,11 +120,11 @@ favicon = "/favicon.ico"
     siteName = ""
 
 [comments.giscus]
-    repo = ""
-    repoID = ""
-    category = ""
-    categoryID = ""
-    mapping = ""
+    repo = "TheJiahao/TheJiahao.github.io"
+    repoID = "MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY="
+    category = "General"
+    categoryID = "DIC_kwDOEb6W1s4Cb_e4"
+    mapping = "pathname"
     lightTheme = ""
     darkTheme = ""
     reactionsEnabled = 1
