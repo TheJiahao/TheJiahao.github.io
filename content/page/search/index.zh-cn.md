@@ -2,6 +2,7 @@
 title: "搜索"
 slug: "search"
 layout: "search"
+sitemapExclude: true
 outputs:
     - html
     - json

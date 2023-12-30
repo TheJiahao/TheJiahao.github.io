@@ -1,6 +1,7 @@
 ---
 title: "Search"
 slug: "search"
+sitemapExclude: true
 layout: "search"
 outputs:
     - html
