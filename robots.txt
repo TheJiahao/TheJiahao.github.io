@@ -6,3 +6,4 @@ User-agent: *
 Disallow: /scss/
 Disallow: /ts/
 Disallow: /404.html
+Disallow: /tags/
