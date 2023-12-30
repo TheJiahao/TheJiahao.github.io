@@ -4,7 +4,7 @@ layout: "about"
 slug: "about"
 menu:
     main:
-        weight: -1
+        weight: 100
         params: 
             icon: user
 ---

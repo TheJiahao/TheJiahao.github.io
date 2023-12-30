@@ -4,7 +4,7 @@ layout: "archives"
 slug: "archives"
 menu:
     main:
-        weight: 2
+        weight: 20
         params: 
             icon: archives
 ---
