@@ -13,3 +13,15 @@ hasCJKLanguage = false
 
 # Change it to your Disqus shortname before using
 # disqusShortname = "hugo-theme-stack"
+
+[outputs]
+    home = ["html", "rss"]
+    page = ["html"]
+    section = ["html", "rss"]
+    taxonomy = ["html"]
+    term = ["html"]
+
+[outputFormats.RSS]
+    mediatype = "application/rss"
+    baseName = "atom"
+    notAlternative = true
