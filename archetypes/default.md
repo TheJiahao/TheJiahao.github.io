@@ -1,5 +1,10 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
-date: {{ .Date }}
+tags:
 draft: true
+
+slug: "{{ now.UnixNano | crypto.FNV32a }}"
+
+date: {{ .Date }}
+lastmod: {{ .Date }}
 ---
