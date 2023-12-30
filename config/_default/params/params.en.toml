@@ -1,0 +1,5 @@
+[sidebar]
+    subtitle = "A CS student"
+
+[article.license]
+    default = "Licensed under CC BY-NC-SA 4.0"
