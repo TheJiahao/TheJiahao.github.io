@@ -3,5 +3,6 @@ Sitemap: http://thejiahao.github.io/sitemap.xml
 
 User-agent: *
 
-Disallow: /js/
-Disallow: /css/
+Disallow: /scss/
+Disallow: /ts/
+Disallow: /404.html
