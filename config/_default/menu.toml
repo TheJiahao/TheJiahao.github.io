@@ -14,3 +14,11 @@
 
     [social.params]
         icon = "brand-github"
+
+[[social]]
+    identifier = "RSS"
+    name = "RSS"
+    url = "/atom.xml"
+
+    [social.params]
+    icon = "rss"
