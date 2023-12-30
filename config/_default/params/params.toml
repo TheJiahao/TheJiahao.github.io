@@ -7,6 +7,10 @@ favicon = "/favicon.ico"
 [footer]
     since = 2020
 
+[dateFormat]
+    published = "2006-01-02"
+    lastUpdated = "2006-01-02"
+
 [sidebar]
     emoji = "🤔"
 
