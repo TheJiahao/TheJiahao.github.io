@@ -11,8 +11,8 @@ tags:
 title: Windows 下通过 Scoop 为 VSCode 配置 clangd
 thumbnail: https://clangd.llvm.org/logo.svg
 slug: 645e20ca
-date: 2022-05-12 00:00:00
-updated: 2023-12-26
+date: 2022-05-12T00:00:00+02:00
+lastmod: 2023-12-26T00:00:00+02:00
 
 references:
   - title: 如何配置 vscode clangd
