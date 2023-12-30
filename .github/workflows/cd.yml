@@ -1,53 +1,52 @@
 name: CD
 on:
   workflow_run:
-    workflows: CI
+    workflows: [CI]
     branches: main
-    types: completed
+    types: [completed]
   workflow_dispatch:
 
 jobs:
   Deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }} || ${{ github.event.workflow_dispatch }} != ''
     runs-on: ubuntu-latest
     environment: gh-pages
 
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} || ${{ github.event.workflow_dispatch }} != ''
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - name: Set up
-        uses: ./setup-action
-
-      - name: Generate static assets
-        run: pnpm run build
-
-      - name: Deploy to public repository
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Cache Hugo resources
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-hugo-resources
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: TheJiahao/TheJiahao.github.io
-          publish_branch: main # default: gh-pages
-          publish_dir: ./public
-          user_name: github-actions[bot]
-          user_email: github-actions[bot]@users.noreply.github.com
-          commit_message: Deploy
+          path: resources
+          key: ${{ env.cache-name }}
 
-  Submit_url_to_search_engines:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }} || ${{ github.event.workflow_dispatch }} != ''
-    runs-on: ubuntu-latest
-    environment: gh-pages
-    env:
-      BING_TOKEN: ${{ secrets.BING_TOKEN }}
-      GOOGLE_API_KEY: ${{ secrets.GOOGLE_INDEXING_API_JSON }}
+      - uses: actions/setup-go@v4
+        with:
+          go-version: "^1.17.0"
+      - run: go version
 
-    steps:
-      - uses: actions/checkout@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
 
-      - name: Set up
-        uses: ./setup-action
+      - name: Build
+        run: hugo --minify --gc
 
-      - name: Generate static assets
-        run: pnpm run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: TheJiahao/TheJiahao.github.io
+          branch: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          folder: public
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
 
-      - name: Submit URLs to search engines
-        run: pnpm hexo deploy
+          clean: true
+          single-commit: false
