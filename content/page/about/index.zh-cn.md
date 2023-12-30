@@ -1,0 +1,12 @@
+---
+title: "关于"
+layout: "about"
+slug: "about"
+menu:
+    main:
+        weight: -1
+        params: 
+            icon: user
+---
+
+一个普通的计算机系学生。
