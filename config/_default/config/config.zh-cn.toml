@@ -1,4 +1,6 @@
 languageCode = "zh-cn"
+languageName = "中文 (简体)"
+languagedirection = "ltr"
 title = "Jiahao 的博客"
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
