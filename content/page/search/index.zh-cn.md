@@ -3,6 +3,7 @@ title: "搜索"
 slug: "search"
 layout: "search"
 sitemapExclude: true
+noindex: true
 outputs:
     - html
     - json

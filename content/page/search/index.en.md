@@ -2,6 +2,7 @@
 title: "Search"
 slug: "search"
 sitemapExclude: true
+noindex: true
 layout: "search"
 outputs:
     - html
