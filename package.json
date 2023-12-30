@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo clean && hexo generate",
-    "server": "pnpm run build && hexo server",
     "format": "autocorrect --fix & prettier --write ."
   },
   "hexo": {
