@@ -8,3 +8,11 @@
     overflow-y: auto;
 }
 
+// 选中公式时复制全部
+.katex{
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all
+}
+
