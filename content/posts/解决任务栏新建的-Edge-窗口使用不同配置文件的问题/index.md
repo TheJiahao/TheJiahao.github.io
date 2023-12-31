@@ -32,5 +32,7 @@ VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默�
 
 1. 将 `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default` 中的 Default 配置文件改名，例如 `Profile 1`
 2. 将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 `--profile-directory="Profile 1"`
+
     ![查看任务栏快捷方式的属性](edge_shortcut_properties.webp)
+
     ![修改启动参数](edge_shortcut_change_properties.webp)
