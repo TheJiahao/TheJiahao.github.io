@@ -1,3 +1,10 @@
 /*
     You can add your own custom styles here.
 */
+
+// 公式太长时显示滚动条
+.katex-block{
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
