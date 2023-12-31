@@ -2,6 +2,7 @@
 title: "搜索"
 slug: "search"
 layout: "search"
+hidden: true
 sitemapExclude: true
 noindex: true
 outputs:

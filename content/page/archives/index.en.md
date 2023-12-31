@@ -2,6 +2,7 @@
 title: "Archives"
 layout: "archives"
 slug: "archives"
+hidden: true
 sitemapExclude: true
 noindex: true
 menu:

@@ -1,9 +1,10 @@
 ---
 title: "Search"
 slug: "search"
+layout: "search"
+hidden: true
 sitemapExclude: true
 noindex: true
-layout: "search"
 outputs:
     - html
     - json
