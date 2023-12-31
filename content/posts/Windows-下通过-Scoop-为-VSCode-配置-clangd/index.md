@@ -14,10 +14,13 @@ slug: 645e20ca
 date: 2022-05-12T00:00:00+02:00
 lastmod: 2023-12-26T00:00:00+02:00
 
-references:
+links:
+  - title: clangd - Visual Studio Marketplace
+    website: https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd
+    image: https://llvm-vs-code-extensions.gallerycdn.vsassets.io/extensions/llvm-vs-code-extensions/vscode-clangd/0.1.26/1703134180510/Microsoft.VisualStudio.Services.Icons.Default
   - title: 如何配置 vscode clangd
-    url: https://zhuanlan.zhihu.com/p/508819503
-
+    website: https://zhuanlan.zhihu.com/p/508819503
+    image: https://www.zhihu.com/favicon.ico
 ---
 
 使用 Scoop 安装 [clangd](https://clangd.llvm.org/) 可以自动配置环境变量和避免 VSCode 找不到 `#include`。
@@ -39,9 +42,3 @@ references:
     ```
 
 1. VSCode 安装 [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) 扩展。
-
-{% link
-clangd - Visual Studio Marketplace
-::https://marketplace.visualstudio.com/itemsitemName=llvm-vs-code-extensions.vscode-clangd
-::https://llvm-vs-code-extensions.gallerycdn.vsassets.io/extensions/llvm-vs-code-extensions/vscode-clangd/0.1.26/1703134180510/Microsoft.VisualStudio.Services.Icons.Default
-%}
