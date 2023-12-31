@@ -23,13 +23,15 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 *   Global font family
 */
 :root {
-    --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Droid Sans", "Helvetica Neue";
-    --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback",
+    --zh-font-family: "PingFang SC", "HarmonyOS Sans SC", "Hiragino Sans GB",
         "Microsoft YaHei";
+    --emoji-font-family: "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
 
     --base-font-family: "Lato", var(--sys-font-family), var(--zh-font-family),
-        sans-serif;
+        var(--zh-font-family), sans, var(--emoji-font-family);
     --code-font-family: Menlo, Monaco, Consolas, "Courier New",
         var(--zh-font-family), monospace;
 }
