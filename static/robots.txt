@@ -5,3 +5,4 @@ User-agent: *
 
 Disallow: /scss/
 Disallow: /ts/
+Disallow: *.json
