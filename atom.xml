@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 25 Dec 2023 09:30:20 +0200</lastBuildDate><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/313e717/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/313e717/</guid><description>&lt;p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 25 Dec 2023 09:30:20 +0200</lastBuildDate><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/313e717/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/313e717/</guid><description>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_create_new_window.webp" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
 本文提供了一种解决方式。&lt;/p>
 &lt;!-- more -->
 &lt;h2 id="问题">问题&lt;/h2>
@@ -82,9 +82,4 @@ data-flex-basis="155px"
 &lt;p>VSCode 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
 >clangd&lt;/a> 扩展。&lt;/p>
 &lt;/li>
-&lt;/ol>
-&lt;p>{% link
-clangd - Visual Studio Marketplace
-::https://marketplace.visualstudio.com/itemsitemName=llvm-vs-code-extensions.vscode-clangd
-::https://llvm-vs-code-extensions.gallerycdn.vsassets.io/extensions/llvm-vs-code-extensions/vscode-clangd/0.1.26/1703134180510/Microsoft.VisualStudio.Services.Icons.Default
-%}&lt;/p></description></item><item><title>关于</title><link>https://thejiahao.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://thejiahao.github.io/about/</guid><description>&lt;p>一个普通的计算机系学生。&lt;/p></description></item><item><title>归档</title><link>https://thejiahao.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://thejiahao.github.io/archives/</guid><description/></item><item><title>搜索</title><link>https://thejiahao.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://thejiahao.github.io/search/</guid><description/></item></channel></rss>
+&lt;/ol></description></item></channel></rss>
