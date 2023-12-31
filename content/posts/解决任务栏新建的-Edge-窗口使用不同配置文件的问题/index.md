@@ -6,7 +6,7 @@ tags:
   - JavaScript Debugger
   - Windows
 slug: 313e717
-headimg: /img/解决任务栏新建的-Edge-窗口使用不同配置文件的问题/edge_create_new_window.webp
+image: edge_create_new_window.webp
 date: 2023-12-25T09:30:20+02:00
 lastmod: 2023-12-27T15:02:00+02:00
 ---
