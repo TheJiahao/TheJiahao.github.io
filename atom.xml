@@ -57,8 +57,6 @@ data-flex-basis="155px"
 >clangd&lt;/a> 可以自动配置环境变量和避免 VSCode 找不到 &lt;code>#include&lt;/code>。&lt;/p>
 &lt;!-- more -->
 &lt;h2 id="安装方式">安装方式&lt;/h2>
-&lt;ol>
-&lt;li>
 &lt;p>安装 &lt;a class="link" href="https://scoop.sh/" target="_blank" rel="noopener"
 >Scoop&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -69,9 +67,7 @@ data-flex-basis="155px"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Invoke-WebRequest get.scoop.sh &lt;span class="p">|&lt;/span> Invoke-Expression
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>安装 &lt;a class="link" href="https://winlibs.com/" target="_blank" rel="noopener"
+&lt;/div>&lt;p>安装 &lt;a class="link" href="https://winlibs.com/" target="_blank" rel="noopener"
 >Winlibs&lt;/a> 编译的 MinGW + Clang + clangd&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -81,9 +77,5 @@ data-flex-basis="155px"
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">scoop install mingw-winlibs
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>VSCode 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
->clangd&lt;/a> 扩展。&lt;/p>
-&lt;/li>
-&lt;/ol></description></item></channel></rss>
+&lt;/div>&lt;p>VSCode 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
+>clangd&lt;/a> 扩展。&lt;/p></description></item></channel></rss>
