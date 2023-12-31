@@ -50,3 +50,4 @@ jobs:
 
           clean: true
           single-commit: false
+          commit-message: "deploy: "
