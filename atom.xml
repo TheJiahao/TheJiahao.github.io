@@ -6,7 +6,7 @@
 &lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_create_new_window.webp"
 width="359"
 height="324"
-srcset="https://thejiahao.github.io/posts/313e717/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_480x0_resize_q75_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/313e717/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="从任务栏中新建 Edge 窗口"
 class="gallery-image"
@@ -16,7 +16,7 @@ data-flex-basis="265px"
 &lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_new_window.webp"
 width="1052"
 height="954"
-srcset="https://thejiahao.github.io/posts/313e717/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_480x0_resize_q75_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/313e717/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="新窗口使用不同配置文件"
 class="gallery-image"
@@ -27,28 +27,32 @@ data-flex-basis="264px"
 &lt;p>任务栏上的 Edge 启动参数 &lt;code>--profile-directory=Default&lt;/code> 中的配置文件和 VSCode JavaScript Debugger 调试用的 Edge 配置文件 &lt;code>%APPDATA%\Code\User\workspaceStorage\...\ms-vscode.js-debug\.profile\Default&lt;/code> 重名。&lt;/p>
 &lt;h2 id="解决方式">解决方式&lt;/h2>
 &lt;ol>
-&lt;li>将 &lt;code>%LOCALAPPDATA%\Microsoft\Edge\User Data\Default&lt;/code> 中的 Default 配置文件改名，例如 &lt;code>Profile 1&lt;/code>&lt;/li>
-&lt;li>将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 &lt;code>--profile-directory=&amp;quot;Profile 1&amp;quot;&lt;/code>
-&lt;img src="https://thejiahao.github.io/posts/313e717/edge_shortcut_properties.webp"
+&lt;li>
+&lt;p>将 &lt;code>%LOCALAPPDATA%\Microsoft\Edge\User Data\Default&lt;/code> 中的 Default 配置文件改名，例如 &lt;code>Profile 1&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 &lt;code>--profile-directory=&amp;quot;Profile 1&amp;quot;&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_shortcut_properties.webp"
 width="381"
 height="308"
-srcset="https://thejiahao.github.io/posts/313e717/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_480x0_resize_q75_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/313e717/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="查看任务栏快捷方式的属性"
 class="gallery-image"
 data-flex-grow="123"
 data-flex-basis="296px"
->
-&lt;img src="https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties.webp"
+>&lt;/p>
+&lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties.webp"
 width="421"
 height="651"
-srcset="https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_480x0_resize_q75_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_1024x0_resize_q75_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="修改启动参数"
 class="gallery-image"
 data-flex-grow="64"
 data-flex-basis="155px"
->&lt;/li>
+>&lt;/p>
+&lt;/li>
 &lt;/ol></description></item><item><title>Windows 下通过 Scoop 为 VSCode 配置 clangd</title><link>https://thejiahao.github.io/posts/645e20ca/</link><pubDate>Thu, 12 May 2022 00:00:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/645e20ca/</guid><description>&lt;p>使用 Scoop 安装 &lt;a class="link" href="https://clangd.llvm.org/" target="_blank" rel="noopener"
 >clangd&lt;/a> 可以自动配置环境变量和避免 VSCode 找不到 &lt;code>#include&lt;/code>。&lt;/p>
 &lt;!-- more -->
