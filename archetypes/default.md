@@ -5,6 +5,7 @@ lastmod: {{ .Date }}
 slug: "{{ now.UnixNano | crypto.FNV32a }}"
 
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
+categories:
 tags:
 description:
 image:
