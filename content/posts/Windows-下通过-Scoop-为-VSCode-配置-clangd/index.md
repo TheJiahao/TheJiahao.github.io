@@ -1,4 +1,10 @@
 ---
+date: 2022-05-12T00:00:00+02:00
+lastmod: 2023-12-31T21:59:00+02:00
+
+slug: 645e20ca
+
+title: Windows 下通过 Scoop 为 VSCode 配置 clangd
 categories: 编程
 tags:
   - VSCode
@@ -8,11 +14,14 @@ tags:
   - gcc
   - LLVM
   - Clang
-title: Windows 下通过 Scoop 为 VSCode 配置 clangd
-thumbnail: https://clangd.llvm.org/logo.svg
-slug: 645e20ca
-date: 2022-05-12T00:00:00+02:00
-lastmod: 2023-12-31T21:59:00+02:00
+description:
+image:
+license:
+
+hidden: false
+math:
+comments: true
+draft: false
 
 links:
   - title: clangd - Visual Studio Marketplace
