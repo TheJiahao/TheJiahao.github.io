@@ -12,12 +12,12 @@ title: Windows 下通过 Scoop 为 VSCode 配置 clangd
 thumbnail: https://clangd.llvm.org/logo.svg
 slug: 645e20ca
 date: 2022-05-12T00:00:00+02:00
-lastmod: 2023-12-31T08:50:00+02:00
+lastmod: 2023-12-31T21:59:00+02:00
 
 links:
   - title: clangd - Visual Studio Marketplace
     website: https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd
-    image: https://llvm-vs-code-extensions.gallerycdn.vsassets.io/extensions/llvm-vs-code-extensions/vscode-clangd/0.1.26/1703134180510/Microsoft.VisualStudio.Services.Icons.Default
+    image: https://clangd.llvm.org/logo.svg
   - title: 如何配置 vscode clangd
     website: https://zhuanlan.zhihu.com/p/508819503
     image: https://www.zhihu.com/favicon.ico
@@ -29,16 +29,16 @@ links:
 
 ## 安装方式
 
-1. 安装 [Scoop](https://scoop.sh/)
+安装 [Scoop](https://scoop.sh/)
 
-    ```shell
-    Invoke-WebRequest get.scoop.sh | Invoke-Expression
-    ```
+```shell
+Invoke-WebRequest get.scoop.sh | Invoke-Expression
+```
 
-1. 安装 [Winlibs](https://winlibs.com/) 编译的 MinGW + Clang + clangd
+安装 [Winlibs](https://winlibs.com/) 编译的 MinGW + Clang + clangd
 
-    ```shell
-    scoop install mingw-winlibs
-    ```
+```shell
+scoop install mingw-winlibs
+```
 
-1. VSCode 安装 [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) 扩展。
+VSCode 安装 [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) 扩展。
