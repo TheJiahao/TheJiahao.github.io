@@ -20,6 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Swap Go Version
+        run: sed -i -e 's/1.21.1/1.23/g' go.mod
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
