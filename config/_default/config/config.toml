@@ -17,7 +17,7 @@ hasCJKLanguage = false
 [outputs]
     home = ["html", "rss"]
     page = ["html"]
-    section = ["html", "rss"]
+    section = ["html"]
     taxonomy = ["html"]
     term = ["html"]
 
