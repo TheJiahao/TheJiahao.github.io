@@ -4,6 +4,7 @@ mainSections = ["posts"]
 rssFullContent = true
 favicon = "/favicon.ico"
 taxonomiesExcludedFromSitemap = ["tags", "categories"]
+pagesEcludedFromIndex = ["section", "term", "taxonomy"]
 
 [footer]
     since = 2020
