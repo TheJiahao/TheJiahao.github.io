@@ -3,6 +3,7 @@ title: "About"
 layout: "about"
 slug: "about"
 hidden: true
+comments: false
 menu:
     main:
         weight: 100
