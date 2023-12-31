@@ -25,3 +25,7 @@ hasCJKLanguage = false
     mediatype = "application/rss"
     baseName = "atom"
     notAlternative = true
+
+[imaging]
+    quality = 100
+    hint = "picture"
