@@ -62,7 +62,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --scrollbar-track: var(--body-background);
 
     &[data-scheme="dark"] {
-        --body-background: #1f1f1f;
+        --body-background: #161618;
         --accent-color: #84c5e6;
         --accent-color-darker: #60b5df;
         --accent-color-text: #000000;
@@ -103,7 +103,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 
     &[data-scheme="dark"] {
-        --card-background: #262626;
+        --card-background: #1b1b1f;
         --card-background-selected: rgba(255, 255, 255, 0.16);
         --card-text-color-main: rgba(255, 255, 255, 0.9);
         --card-text-color-secondary: rgba(255, 255, 255, 0.7);
@@ -134,8 +134,8 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --kbd-border-color: #dadada;
 
     &[data-scheme="dark"] {
-        --code-background-color: #272822;
-        --code-text-color: rgba(255, 255, 255, 0.9);
+        --code-background-color: #272a2f;
+        --code-text-color: #2eb172;
 
         --table-border-color: #717171;
         --tr-even-background-color: #545454;
