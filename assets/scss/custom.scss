@@ -30,8 +30,9 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --emoji-font-family: "Apple Color Emoji", "Segoe UI Emoji",
         "Segoe UI Symbol";
 
-    --base-font-family: "Helvetica Neue", var(--sys-font-family), var(--zh-font-family),
-        var(--zh-font-family), sans-serif, var(--emoji-font-family);
+    --base-font-family: "Helvetica Neue", var(--sys-font-family),
+        var(--zh-font-family), var(--zh-font-family), sans-serif,
+        var(--emoji-font-family);
     --code-font-family: "JetBrains Mono", Menlo, Monaco, Consolas, "Courier New",
         var(--zh-font-family), monospace;
 }
