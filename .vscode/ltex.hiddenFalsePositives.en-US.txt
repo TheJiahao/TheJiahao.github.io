@@ -1,0 +1,3 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QZim 配置 ^zim_installation\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q接着在 \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q 目录下\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QF-Sy-H，语法高亮\\E$"}
