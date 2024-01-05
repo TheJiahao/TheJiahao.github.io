@@ -1,5 +1,7 @@
 {
     "markdown.copyFiles.destination": {
         "/source/_posts/*": "../img/${documentBaseName}/${fileName}"
-    }
+    },
+    "ltex.statusBarItem": false,
+    "ltex.language": "zh-CN"
 }
