@@ -30,7 +30,7 @@ draft: false
 
 笔者偏好将配置整理到不同文件并在 `.zshrc` 中 `include`，而 Zim 的自动安装脚本会在 `.zshrc` 添加一大段内容，所以选择手动安装。
 
-创建 `init_zim.zsh` 用于存放 Zim 配置，并添加以下内容（源自 Zim 官网的 [安装说明](https://zimfw.sh/docs/install/)）
+创建 `init_zim.zsh` 用于存放 Zim 配置，并添加以下内容[^zim_installation]
 
 ```zsh
 zstyle ':zim:zmodule' use 'degit'
@@ -160,5 +160,7 @@ appendWindowsPath = false
 
 这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
 如果需要在 WSL 中运行 Windows 下程序，可以根据微软的 [文档](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 将路径以 WSL 下的格式添加到 Zsh 的 `PATH` 环境变量。
+
+[^zim_installation]: Installation, https://zimfw.sh/docs/install/
 
 [^github_wsl_syntax_highlight]: syntax highlighting is super slow in WSL2, https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603
