@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 05 Jan 2024 21:09:00 +0200</lastBuildDate><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/1345558699/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/1345558699/</guid><description>&lt;img src="https://zimfw.github.io/images/zimfw-banner@2.jpg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimhttpszimfwsh">安装 &lt;a class="link" href="https://zimfw.sh/" target="_blank" rel="noopener"
 >Zim&lt;/a>&lt;/h2>
 &lt;p>笔者偏好将配置整理到不同文件并在 &lt;code>.zshrc&lt;/code> 中 &lt;code>include&lt;/code>，而 Zim 的自动安装脚本会在 &lt;code>.zshrc&lt;/code> 添加一大段内容，所以选择手动安装。&lt;/p>
-&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容（源自 Zim 官网的 &lt;a class="link" href="https://zimfw.sh/docs/install/" target="_blank" rel="noopener"
->安装说明&lt;/a>）&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;span class="lnt">15
-&lt;/span>&lt;span class="lnt">16
-&lt;/span>&lt;span class="lnt">17
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span class="s1">&amp;#39;degit&amp;#39;&lt;/span>
+&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span class="s1">&amp;#39;degit&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ZIM_HOME&lt;/span>&lt;span class="o">=&lt;/span>~/.zim
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -41,33 +19,15 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 加载插件&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">ZIM_HOME&lt;/span>&lt;span class="si">}&lt;/span>/init.zsh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>文件的第一行配置了 &lt;a class="link" href="https://github.com/Rich-Harris/degit" target="_blank" rel="noopener"
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件的第一行配置了 &lt;a class="link" href="https://github.com/Rich-Harris/degit" target="_blank" rel="noopener"
 >degit&lt;/a> 来安装插件。
 degit 只下载 Git 仓库的最新版本，所以比直接使用 &lt;code>git clone&lt;/code> 下载整个仓库历史快。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span class="s1">&amp;#39;degit&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>接着在 &lt;code>.zshrc&lt;/code> 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 &lt;code>~/.config/zsh&lt;/code> 目录下&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> ~/.config/zsh/init_zim.zsh
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">zstyle &lt;span class="s1">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span class="s1">&amp;#39;degit&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接着在 &lt;code>.zshrc&lt;/code> 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 &lt;code>~/.config/zsh&lt;/code> 目录下&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> ~/.config/zsh/init_zim.zsh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ...&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="安装插件">安装插件&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装插件">安装插件&lt;/h2>
 &lt;p>Zim 的插件需要在 &lt;code>~/.zimrc&lt;/code> 中配置。
 添加插件的基本命令为 &lt;code>zmodule 插件&lt;/code>（内置插件）或者 &lt;code>zmodule 作者/仓库&lt;/code>，如果插件在子目录下则为&lt;code>zmodule 作者/仓库 --root 插件相对路径&lt;/code>。
 具体用法可以参考 &lt;a class="link" href="https://github.com/zimfw/zimfw?tab=readme-ov-file#zmodule" target="_blank" rel="noopener"
@@ -107,24 +67,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >completion&lt;/a>，自动补全相关设置&lt;/li>
 &lt;/ul>
 &lt;p>&lt;code>.zimrc&lt;/code> 内容如下&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">zmodule z-shell/F-Sy-H
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">zmodule z-shell/F-Sy-H
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zmodule zsh-users/zsh-history-substring-search
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zmodule zsh-users/zsh-autosuggestions
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zmodule sorin-ionescu/prezto --root modules/history --no-submodules
@@ -137,30 +80,10 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zmodule zsh-users/zsh-completions --fpath src
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">zmodule completion
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>安装太多插件可能会拖慢 Zsh 速度，所以推荐读者只安装必要的插件。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装太多插件可能会拖慢 Zsh 速度，所以推荐读者只安装必要的插件。&lt;/p>
 &lt;h2 id="插件设置">插件设置&lt;/h2>
 &lt;p>在 &lt;code>init_zim.zsh&lt;/code> 最后添加插件设置&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
-&lt;/span>&lt;span class="lnt"> 2
-&lt;/span>&lt;span class="lnt"> 3
-&lt;/span>&lt;span class="lnt"> 4
-&lt;/span>&lt;span class="lnt"> 5
-&lt;/span>&lt;span class="lnt"> 6
-&lt;/span>&lt;span class="lnt"> 7
-&lt;/span>&lt;span class="lnt"> 8
-&lt;/span>&lt;span class="lnt"> 9
-&lt;/span>&lt;span class="lnt">10
-&lt;/span>&lt;span class="lnt">11
-&lt;/span>&lt;span class="lnt">12
-&lt;/span>&lt;span class="lnt">13
-&lt;/span>&lt;span class="lnt">14
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ...&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># ...&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> &lt;span class="si">${&lt;/span>&lt;span class="nv">ZIM_HOME&lt;/span>&lt;span class="si">}&lt;/span>/init.zsh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 加载后才能设置这些插件&lt;/span>
@@ -174,26 +97,14 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 配置上下方向键搜索命令历史&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bindkey &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$terminfo&lt;/span>&lt;span class="s2">[kcuu1]&amp;#34;&lt;/span> history-substring-search-up
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bindkey &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$terminfo&lt;/span>&lt;span class="s2">[kcud1]&amp;#34;&lt;/span> history-substring-search-down
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="测速">测速&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测速">测速&lt;/h2>
 &lt;p>配置好后使用 &lt;a class="link" href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener"
 >hyperfine&lt;/a> 测试 Zsh 启动速度。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">&amp;gt; hyperfine --warmup &lt;span class="m">3&lt;/span> &lt;span class="s2">&amp;#34;zsh -l -i -c exit&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-zsh" data-lang="zsh">&lt;span class="line">&lt;span class="cl">&amp;gt; hyperfine --warmup &lt;span class="m">3&lt;/span> &lt;span class="s2">&amp;#34;zsh -l -i -c exit&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Benchmark 1: zsh -l -i -c &lt;span class="nb">exit&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Time &lt;span class="o">(&lt;/span>mean ± σ&lt;span class="o">)&lt;/span>: 30.3 ms ± 1.0 ms &lt;span class="o">[&lt;/span>User: 14.5 ms, System: 5.9 ms&lt;span class="o">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Range &lt;span class="o">(&lt;/span>min … max&lt;span class="o">)&lt;/span>: 28.1 ms … 32.9 ms &lt;span class="m">85&lt;/span> runs
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>hyperfine&lt;/code> 的参数 &lt;code>--warmup 3&lt;/code> 用于在测速前运行几遍命令以避免冷启动影响结果。&lt;/li>
 &lt;li>Zsh 的参数 &lt;code>-l&lt;/code> 和 &lt;code>-i&lt;/code> 用于模拟用户启动 Zsh，具体可参考 &lt;a class="link" href="https://zsh.sourceforge.io/Guide/zshguide02.html" target="_blank" rel="noopener"
 >文档&lt;/a>。&lt;/li>
@@ -201,26 +112,22 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/ul>
 &lt;p>可以看出，Zim 还是比较快的。&lt;/p>
 &lt;h2 id="解决-wsl-下语法高亮的延迟">解决 WSL 下语法高亮的延迟&lt;/h2>
-&lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">interop&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">interop&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">appendWindowsPath&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">false&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
 如果需要在 WSL 中运行 Windows 下程序，可以根据微软的 &lt;a class="link" href="https://learn.microsoft.com/zh-cn/windows/wsl/filesystems" target="_blank" rel="noopener"
 >文档&lt;/a> 将路径以 WSL 下的格式添加到 Zsh 的 &lt;code>PATH&lt;/code> 环境变量。&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1">
+&lt;p>Installation, &lt;a class="link" href="https://zimfw.sh/docs/install/" target="_blank" rel="noopener"
+>https://zimfw.sh/docs/install/&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
 &lt;p>syntax highlighting is super slow in WSL2, &lt;a class="link" href="https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603" target="_blank" rel="noopener"
->https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+>https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/313e717/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/313e717/</guid><description>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_create_new_window.webp" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
@@ -282,23 +189,9 @@ data-flex-basis="155px"
 &lt;h2 id="安装方式">安装方式&lt;/h2>
 &lt;p>安装 &lt;a class="link" href="https://scoop.sh/" target="_blank" rel="noopener"
 >Scoop&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Invoke-WebRequest get.scoop.sh &lt;span class="p">|&lt;/span> Invoke-Expression
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>安装 &lt;a class="link" href="https://winlibs.com/" target="_blank" rel="noopener"
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">Invoke-WebRequest get.scoop.sh &lt;span class="p">|&lt;/span> Invoke-Expression
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装 &lt;a class="link" href="https://winlibs.com/" target="_blank" rel="noopener"
 >Winlibs&lt;/a> 编译的 MinGW + Clang + clangd&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">scoop install mingw-winlibs
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>VSCode 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">scoop install mingw-winlibs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>VSCode 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
 >clangd&lt;/a> 扩展。&lt;/p></description></item></channel></rss>
