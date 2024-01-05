@@ -5,7 +5,7 @@ lastmod: 2023-12-31T21:59:00+02:00
 slug: 645e20ca
 
 title: Windows 下通过 Scoop 为 VSCode 配置 clangd
-categories: 编程
+categories: 工具
 tags:
   - VSCode
   - Windows
