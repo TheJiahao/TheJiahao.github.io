@@ -4,3 +4,4 @@ public/**
 *.html
 *.json
 .github/workflows
+pnpm-lock.yaml
