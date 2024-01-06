@@ -28,7 +28,7 @@ draft: false
 
 ## 安装 [Zim](https://zimfw.sh/)
 
-笔者偏好将配置整理到不同文件并在 `.zshrc` 中 `include`，而 Zim 的自动安装脚本会在 `.zshrc` 添加一大段内容，所以选择手动安装。
+笔者偏好将配置整理到不同文件并在 `.zshrc` 中 `source`，而 Zim 的自动安装脚本会在 `.zshrc` 添加一大段内容，所以选择手动安装。
 
 创建 `init_zim.zsh` 用于存放 Zim 配置，并添加以下内容[^zim_installation]
 
