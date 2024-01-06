@@ -1,6 +1,6 @@
 ---
 date: 2023-12-25T09:30:20+02:00
-lastmod: 2023-12-31T09:07:00+02:00
+lastmod: 2023-01-06T12:11:00+02:00
 
 slug: 313e717
 
@@ -12,7 +12,7 @@ tags:
   - JavaScript Debugger
   - Windows
 description: VSCode 内置的 JavaScript Debugger 导致任务栏新建的 Edge 窗口使用不同配置文件。本文为此提供了一种解决方式。
-image: edge_create_new_window.webp
+image: edge_logo.svg
 license:
 
 hidden: false
