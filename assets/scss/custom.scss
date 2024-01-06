@@ -161,3 +161,11 @@ $defaultTagColors: #1b1b1f, #1b1b1f, #ffffff, #1b1b1f, #ffffff;
 .link {
     text-decoration: underline;
 }
+
+.article-content .highlight {
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    max-width: 100%;
+    margin: 0;
+}
