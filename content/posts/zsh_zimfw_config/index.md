@@ -159,7 +159,7 @@ appendWindowsPath = false
 ```
 
 这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
-如果需要在 WSL 中运行 Windows 下程序，可以根据微软的 [文档](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 将路径以 WSL 下的格式添加到 Zsh 的 `PATH` 环境变量。
+如果需要在 WSL 中运行 Windows 中的程序，可以根据微软的 [文档](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 将路径以 WSL 下的格式添加到 Zsh 的 `PATH` 环境变量。
 
 [^zim_installation]: Installation, https://zimfw.sh/docs/install/
 
