@@ -117,7 +117,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="p">[&lt;/span>&lt;span class="nx">interop&lt;/span>&lt;span class="p">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">appendWindowsPath&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="kc">false&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
-如果需要在 WSL 中运行 Windows 下程序，可以根据微软的 &lt;a class="link" href="https://learn.microsoft.com/zh-cn/windows/wsl/filesystems" target="_blank" rel="noopener"
+如果需要在 WSL 中运行 Windows 中的程序，可以根据微软的 &lt;a class="link" href="https://learn.microsoft.com/zh-cn/windows/wsl/filesystems" target="_blank" rel="noopener"
 >文档&lt;/a> 将路径以 WSL 下的格式添加到 Zsh 的 &lt;code>PATH&lt;/code> 环境变量。&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
