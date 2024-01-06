@@ -30,7 +30,7 @@ links:
     description: C/C++ completion, navigation, and insights
   - title: 如何配置 vscode clangd
     website: https://zhuanlan.zhihu.com/p/508819503
-    image: https://www.zhihu.com/favicon.ico
+    image: https://www.google.com/s2/favicons?domain=zhihu.com&sz=128
 ---
 
 使用 Scoop 安装 [clangd](https://clangd.llvm.org/) 可以自动配置环境变量和避免 VSCode 找不到 `#include`。
