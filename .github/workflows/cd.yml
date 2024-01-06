@@ -50,3 +50,5 @@ jobs:
 
           single-commit: false
           clean: true
+          clean-exclude: |
+            .github
