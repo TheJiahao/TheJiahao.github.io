@@ -58,9 +58,9 @@ pagesEcludedFromIndex = ["section", "term", "taxonomy"]
     card = "summary_large_image"
 
 [defaultImage.opengraph]
-    enabled = false
+    enabled = true
     local = false
-    src = ""
+    src = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/14053d26005b9afe3ce0e020862ed5ab2335f989/assets/Thinking%20face/Flat/thinking_face_flat.svg"
 
 [colorScheme]
     toggle = true
