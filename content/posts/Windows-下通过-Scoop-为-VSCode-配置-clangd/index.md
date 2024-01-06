@@ -1,6 +1,6 @@
 ---
 date: 2022-05-12T00:00:00+02:00
-lastmod: 2023-12-31T21:59:00+02:00
+lastmod: 2023-01-06T11:39:00+02:00
 
 slug: 645e20ca
 
@@ -15,7 +15,7 @@ tags:
   - LLVM
   - Clang
 description:
-image:
+image: https://repository-images.githubusercontent.com/257710112/84be0900-849d-11ea-855a-6b304dddf63a
 license:
 
 hidden: false
@@ -26,7 +26,7 @@ draft: false
 links:
   - title: clangd - Visual Studio Marketplace
     website: https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd
-    image: https://clangd.llvm.org/logo.svg
+    image: https://raw.githubusercontent.com/clangd/vscode-clangd/eca1e05a39c4e987dca6247d825dfbe92fd5996f/icon.png
   - title: 如何配置 vscode clangd
     website: https://zhuanlan.zhihu.com/p/508819503
     image: https://www.zhihu.com/favicon.ico
