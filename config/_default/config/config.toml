@@ -11,6 +11,8 @@ disableLanguages = ["en"]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage = false
 
+googleAnalytics = "G-6QM185HRTR"
+
 # Change it to your Disqus shortname before using
 # disqusShortname = "hugo-theme-stack"
 
