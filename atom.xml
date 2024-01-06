@@ -60,7 +60,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found" target="_blank" rel="noopener"
 >command-not-found&lt;/a>，输入不存在的命令时提示安装命令&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo" target="_blank" rel="noopener"
->sudo&lt;/a>，双击 &lt;kbd>esd&lt;/kbd> 时在命令前添加 &lt;code>sudo&lt;/code>&lt;/li>
+>sudo&lt;/a>，双击 &lt;kbd>esc&lt;/kbd> 时在命令前添加 &lt;code>sudo&lt;/code>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener"
 >zsh-completions&lt;/a>，外部命令的自动补全&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zimfw/completion" target="_blank" rel="noopener"
