@@ -33,7 +33,8 @@ degit 只下载 Git 仓库的最新版本，所以比直接使用 &lt;code>git c
 具体用法可以参考 &lt;a class="link" href="https://github.com/zimfw/zimfw?tab=readme-ov-file#zmodule" target="_blank" rel="noopener"
 >文档&lt;/a>。
 Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.sh/docs/modules/" target="_blank" rel="noopener"
->列表&lt;/a>。&lt;/p>
+>列表&lt;/a>，第三方插件可以参考 &lt;a class="link" href="https://github.com/unixorn/awesome-zsh-plugins" target="_blank" rel="noopener"
+>awesome-zsh-plugins&lt;/a>。&lt;/p>
 &lt;h2 id="推荐插件">推荐插件&lt;/h2>
 &lt;p>笔者推荐以下插件&lt;/p>
 &lt;ul>
