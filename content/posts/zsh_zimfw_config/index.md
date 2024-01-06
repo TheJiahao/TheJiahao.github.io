@@ -72,7 +72,7 @@ source ~/.config/zsh/init_zim.zsh
 Zim 的插件需要在 `~/.zimrc` 中配置。
 添加插件的基本命令为 `zmodule 插件`（内置插件）或者 `zmodule 作者/仓库`，如果插件在子目录下则为`zmodule 作者/仓库 --root 插件相对路径`。
 具体用法可以参考 [文档](https://github.com/zimfw/zimfw?tab=readme-ov-file#zmodule)。
-Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/)。
+Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/)，第三方插件可以参考 [awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins)。
 
 ## 推荐插件
 
