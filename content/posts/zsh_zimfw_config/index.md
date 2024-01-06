@@ -87,7 +87,7 @@ Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/
 - [utility](https://github.com/zimfw/utility)，命令缩写以及为 `ls`、`grep` 和 `less` 命令输出上色
 - [input](https://github.com/zimfw/input)，配置按键，例如 <kbd>home</kbd> 键移动到当前行的开头
 - [command-not-found](https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found)，输入不存在的命令时提示安装命令
-- [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)，双击 <kbd>esd</kbd> 时在命令前添加 `sudo`
+- [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)，双击 <kbd>esc</kbd> 时在命令前添加 `sudo`
 - [zsh-completions](https://github.com/zsh-users/zsh-completions)，外部命令的自动补全
 - [completion](https://github.com/zimfw/completion)，自动补全相关设置
 
