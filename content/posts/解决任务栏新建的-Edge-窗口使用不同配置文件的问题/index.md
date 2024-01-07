@@ -11,7 +11,7 @@ tags:
   - Edge
   - JavaScript Debugger
   - Windows
-description: VSCode 内置的 JavaScript Debugger 导致任务栏新建的 Edge 窗口使用不同配置文件。本文为此提供了一种解决方式。
+description:
 image: edge_logo.svg
 license:
 
