@@ -26,7 +26,7 @@ comments: true
 draft: false
 ---
 
-## 安装 [Zim](https://zimfw.sh/)
+## 安装 Zim
 
 笔者偏好将配置整理到不同文件并在 `.zshrc` 中 `source`，而 Zim 的自动安装脚本会在 `.zshrc` 添加一大段内容，所以选择手动安装。
 
