@@ -1,8 +1,5 @@
 Sitemap: https://thejiahao.github.io/sitemap.xml
-Sitemap: http://thejiahao.github.io/sitemap.xml
 
 User-agent: *
 
-Disallow: /scss/
-Disallow: /ts/
 Disallow: *.json
