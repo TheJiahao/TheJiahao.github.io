@@ -161,8 +161,8 @@ appendWindowsPath = false
 这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
 如果需要在 WSL 中运行 Windows 中的程序，可以根据微软的 [文档](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 将路径以 WSL 下的格式添加到 Zsh 的 `PATH` 环境变量。
 
+[^cover]: 封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并以 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布，调整过背景颜色和图标位置
+
 [^zim_installation]: Installation, https://zimfw.sh/docs/install/
 
 [^github_wsl_syntax_highlight]: syntax highlighting is super slow in WSL2, https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603
-
-[^cover]: 封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并遵循 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/)，调整过背景颜色和图标位置
