@@ -1,7 +1,6 @@
 **/node_modules/**
 public/**
 *.md
-*.html
 *.json
 .github/workflows
 pnpm-lock.yaml

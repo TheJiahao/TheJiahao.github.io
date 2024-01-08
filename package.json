@@ -8,9 +8,9 @@
   "hexo": {
     "version": "7.0.0"
   },
-  "dependencies": {},
   "devDependencies": {
     "autocorrect-node": "^2.9.0",
-    "prettier": "^3.1.1"
+    "prettier": "^3.1.1",
+    "prettier-plugin-go-template": "^0.0.15"
   }
 }
