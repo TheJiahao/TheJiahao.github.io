@@ -110,7 +110,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >文档&lt;/a>。&lt;/li>
 &lt;li>&lt;code>-c&lt;/code> 用于执行 &lt;code>exit&lt;/code> 命令以结束 Zsh。&lt;/li>
 &lt;/ul>
-&lt;p>可以看出，Zim 还是比较快的。&lt;/p>
+&lt;p>注意到，Zim 还是比较快的。&lt;/p>
 &lt;h2 id="解决-wsl-下语法高亮的延迟">解决 WSL 下语法高亮的延迟&lt;/h2>
 &lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#e06c75">interop&lt;/span>]
