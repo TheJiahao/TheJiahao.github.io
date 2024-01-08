@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 05 Jan 2024 21:09:00 +0200</lastBuildDate><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/1345558699/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/1345558699/</guid><description>&lt;img src="https://zimfw.github.io/images/zimfw-banner@2.jpg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zim">安装 Zim&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 05 Jan 2024 21:09:00 +0200</lastBuildDate><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/1345558699/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/1345558699/</guid><description>&lt;img src="https://thejiahao.github.io/posts/1345558699/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimcover">安装 Zim&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
 &lt;p>笔者偏好将配置整理到不同文件并在 &lt;code>.zshrc&lt;/code> 中 &lt;code>source&lt;/code>，而 Zim 的自动安装脚本会在 &lt;code>.zshrc&lt;/code> 添加一大段内容，所以选择手动安装。&lt;/p>
-&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#56b6c2">=&lt;/span>~/.zim
@@ -112,7 +112,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/ul>
 &lt;p>可以看出，Zim 还是比较快的。&lt;/p>
 &lt;h2 id="解决-wsl-下语法高亮的延迟">解决 WSL 下语法高亮的延迟&lt;/h2>
-&lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>。&lt;/p>
+&lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#e06c75">interop&lt;/span>]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">appendWindowsPath&lt;/span> = &lt;span style="color:#e5c07b">false&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
@@ -122,12 +122,17 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1">
-&lt;p>Installation, &lt;a class="link" href="https://zimfw.sh/docs/install/" target="_blank" rel="noopener"
->https://zimfw.sh/docs/install/&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>封面中的 &lt;a class="link" href="https://zimfw.sh" target="_blank" rel="noopener"
+>Logo&lt;/a> 由 Derek Mohr 创作，并遵循 &lt;a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener"
+>CC BY NC SA 4.0 协议&lt;/a>，调整过背景颜色和图标位置&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:2">
+&lt;p>Installation, &lt;a class="link" href="https://zimfw.sh/docs/install/" target="_blank" rel="noopener"
+>https://zimfw.sh/docs/install/&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
 &lt;p>syntax highlighting is super slow in WSL2, &lt;a class="link" href="https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603" target="_blank" rel="noopener"
->https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+>https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/313e717/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/313e717/</guid><description>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_logo.svg" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
