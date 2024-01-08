@@ -147,7 +147,7 @@ Benchmark 1: zsh -l -i -c exit
 - Zsh 的参数 `-l` 和 `-i` 用于模拟用户启动 Zsh，具体可参考 [文档](https://zsh.sourceforge.io/Guide/zshguide02.html)。
 - `-c` 用于执行 `exit` 命令以结束 Zsh。
 
-可以看出，Zim 还是比较快的。
+注意到，Zim 还是比较快的。
 
 ## 解决 WSL 下语法高亮的延迟
 
