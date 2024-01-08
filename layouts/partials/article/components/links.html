@@ -14,10 +14,14 @@
                         {{ end }}
                     </footer>
                 </div>
-        
+
                 {{ with $link.image }}
                     <div class="article-image">
-                        <img src="{{ . }}" title={{ $link.title }} loading="lazy">
+                        <img
+                            src="{{ . }}"
+                            title="{{ $link.title }}"
+                            loading="lazy"
+                        />
                     </div>
                 {{ end }}
             </a>

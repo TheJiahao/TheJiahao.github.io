@@ -1,18 +1,13 @@
 {
     "tabWidth": 4,
-    "plugins": [
-        "prettier-plugin-go-template"
-    ],
+    "plugins": ["prettier-plugin-go-template"],
     "overrides": [
         {
-            "files": [
-                "*.html",
-                "*.css"
-            ],
+            "files": ["*.html", "*.css"],
             "options": {
                 "parser": "go-template",
                 "singleQuote": false
             }
         }
-    ],
+    ]
 }
