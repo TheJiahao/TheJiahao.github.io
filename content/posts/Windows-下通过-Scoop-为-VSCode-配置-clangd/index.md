@@ -1,6 +1,6 @@
 ---
 date: 2022-05-12T00:00:00+02:00
-lastmod: 2023-01-06T11:39:00+02:00
+lastmod: 2023-01-09T17:14:00+02:00
 
 slug: 645e20ca
 
@@ -41,13 +41,13 @@ links:
 
 安装 [Scoop](https://scoop.sh/)
 
-```shell
+```powershell
 Invoke-WebRequest get.scoop.sh | Invoke-Expression
 ```
 
 安装 [Winlibs](https://winlibs.com/) 编译的 MinGW + Clang + clangd
 
-```shell
+```powershell
 scoop install mingw-winlibs
 ```
 
