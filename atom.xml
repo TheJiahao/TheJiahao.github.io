@@ -194,9 +194,9 @@ data-flex-basis="155px"
 &lt;h2 id="安装方式">安装方式&lt;/h2>
 &lt;p>安装 &lt;a class="link" href="https://scoop.sh/" target="_blank" rel="noopener"
 >Scoop&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>Invoke-WebRequest get.scoop.sh | Invoke-Expression
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">Invoke-WebRequest&lt;/span> &lt;span style="color:#e06c75">get&lt;/span>.&lt;span style="color:#e06c75">scoop&lt;/span>.&lt;span style="color:#e06c75">sh&lt;/span> | &lt;span style="color:#e5c07b">Invoke-Expression&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装 &lt;a class="link" href="https://winlibs.com/" target="_blank" rel="noopener"
 >Winlibs&lt;/a> 编译的 MinGW + Clang + clangd&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>scoop install mingw-winlibs
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">scoop&lt;/span> &lt;span style="color:#e06c75">install&lt;/span> &lt;span style="color:#e5c07b">mingw-winlibs&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>VSCode 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
 >clangd&lt;/a> 扩展。&lt;/p></description></item></channel></rss>
