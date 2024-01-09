@@ -131,8 +131,8 @@ pagesEcludedFromIndex = ["section", "term", "taxonomy"]
     category = "General"
     categoryID = "DIC_kwDOEb6W1s4Cb_e4"
     mapping = "pathname"
-    lightTheme = ""
-    darkTheme = ""
+    lightTheme = "light_tritanopia"
+    darkTheme = "dark_tritanopia"
     reactionsEnabled = 1
     emitMetadata = 0
 
