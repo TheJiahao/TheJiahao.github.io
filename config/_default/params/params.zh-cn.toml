@@ -6,3 +6,6 @@ customText = ""
 
 [article.license]
     default = '内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0 协议</a>'
+
+[comments.giscus]
+    lang = "zh-CN"
