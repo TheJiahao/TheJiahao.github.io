@@ -80,7 +80,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule zsh-users/zsh-completions --fpath src
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule completion
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装太多插件可能会拖慢 Zsh 速度，所以推荐读者只安装必要的插件。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装太多插件可能会拖慢 Zsh 速度，所以建议读者只安装必要的插件。&lt;/p>
 &lt;h2 id="插件设置">插件设置&lt;/h2>
 &lt;p>在 &lt;code>init_zim.zsh&lt;/code> 最后添加插件设置&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
