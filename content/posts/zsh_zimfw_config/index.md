@@ -109,7 +109,7 @@ zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
 ```
 
-安装太多插件可能会拖慢 Zsh 速度，所以推荐读者只安装必要的插件。
+安装太多插件可能会拖慢 Zsh 速度，所以建议读者只安装必要的插件。
 
 ## 插件设置
 
