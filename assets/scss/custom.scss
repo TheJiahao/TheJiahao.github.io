@@ -170,3 +170,21 @@ $defaultTagColors: #1b1b1f, #1b1b1f, #ffffff, #1b1b1f, #ffffff;
     max-width: 100%;
     margin: 0;
 }
+
+[data-scheme="dark"] {
+    #dark-mode-toggle {
+        .dark-mode {
+            display: none;
+        }
+
+        .light-mode {
+            display: unset;
+        }
+    }
+}
+
+#dark-mode-toggle {
+    .light-mode {
+        display: none;
+    }
+}
