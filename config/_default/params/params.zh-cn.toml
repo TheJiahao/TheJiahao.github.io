@@ -1,11 +1,11 @@
 [footer]
-  customText = ""
+    customText = ""
 
 [sidebar]
-  subtitle = "一个普通的计算机系学生"
+    subtitle = "一个普通的计算机系学生"
 
 [article.license]
-  default = '内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0 协议</a>'
+    default = '内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0 协议</a>'
 
 [comments.giscus]
-  lang = "zh-CN"
+    lang = "zh-CN"

@@ -8,17 +8,17 @@
 #newtab = true
 
 [[social]]
-  identifier = "github"
-  name = "GitHub"
-  url = "https://github.com/TheJiahao"
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/TheJiahao"
 
-  [social.params]
-    icon = "brand-github"
+    [social.params]
+        icon = "brand-github"
 
 [[social]]
-  identifier = "RSS"
-  name = "RSS"
-  url = "/atom.xml"
+    identifier = "RSS"
+    name = "RSS"
+    url = "/atom.xml"
 
-  [social.params]
-    icon = "rss"
+    [social.params]
+        icon = "rss"

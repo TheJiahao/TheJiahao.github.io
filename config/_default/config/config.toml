@@ -17,17 +17,17 @@ googleAnalytics = "G-6QM185HRTR"
 # disqusShortname = "hugo-theme-stack"
 
 [outputs]
-  home = ["html", "rss"]
-  page = ["html"]
-  section = ["html"]
-  taxonomy = ["html"]
-  term = ["html"]
+    home = ["html", "rss"]
+    page = ["html"]
+    section = ["html"]
+    taxonomy = ["html"]
+    term = ["html"]
 
 [outputFormats.RSS]
-  mediatype = "application/rss"
-  baseName = "atom"
-  notAlternative = true
+    mediatype = "application/rss"
+    baseName = "atom"
+    notAlternative = true
 
 [imaging]
-  quality = 100
-  hint = "picture"
+    quality = 100
+    hint = "picture"
