@@ -6,6 +6,7 @@ on:
 
 jobs:
   check-and-submit:
+    if: github.repository == 'TheJiahao/TheJiahao.github.io'
     runs-on: ubuntu-latest
     environment: github-pages
     steps:
@@ -15,7 +16,7 @@ jobs:
       - name: Submit URLs to IndexNow
         uses: bojieyang/indexnow-action@v1
         with:
-          sitemap-location: https://thejiahao.github.io/sitemap.xml
+          sitemap-location: https://thejiahao.github.io/zh-cn/sitemap.xml
           key: ${{ secrets.INDEXNOW_KEY }}
           key-location: https://thejiahao.github.io/${{ secrets.INDEXNOW_KEY }}.txt
           failure-strategy: error
