@@ -6,7 +6,6 @@ on:
 
 jobs:
   check-and-submit:
-    if: github.repository == 'TheJiahao/TheJiahao.github.io'
     runs-on: ubuntu-latest
     environment: github-pages
     steps:
