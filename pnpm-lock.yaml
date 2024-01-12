@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@taplo/cli':
+    specifier: ^0.5.2
+    version: 0.5.2
   autocorrect-node:
     specifier: ^2.9.0
     version: 2.9.0
@@ -16,6 +19,11 @@ devDependencies:
     version: 0.0.15(prettier@3.1.1)
 
 packages:
+
+  /@taplo/cli@0.5.2:
+    resolution: {integrity: sha512-6Sg10lt0fV9aHHWPycz4gzIsUodZihu68zAFZGWq0UDq+Gif2KMrAvNwjMbe+ZUKbnTJjvqJZcPvE4+UEyanAQ==}
+    hasBin: true
+    dev: true
 
   /autocorrect-node-darwin-arm64@2.9.0:
     resolution: {integrity: sha512-lNG5RvydyBWUToJ5dDgGCu1Mmi6uxJsErGNokyiLj0tP0HXsI7Ed+MPnVd2QLWDrSfTIaGr4JyJ0KjVe0TyznA==}

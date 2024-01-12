@@ -1,0 +1,7 @@
+include = ["**/*.toml"]
+
+[formatting]
+    align_entries = false
+    column_width = 80
+    indent_entries = true
+    indent_tables = true

@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format": "autocorrect --fix & prettier --write ."
+    "format": "autocorrect --fix & prettier --write . && taplo format"
   },
   "hexo": {
     "version": "7.0.0"
   },
   "devDependencies": {
+    "@taplo/cli": "^0.5.2",
     "autocorrect-node": "^2.9.0",
     "prettier": "^3.1.1",
     "prettier-plugin-go-template": "^0.0.15"
