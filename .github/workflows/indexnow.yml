@@ -12,6 +12,7 @@ jobs:
       - name: indexnow-action
         uses: bojieyang/indexnow-action@v1
         with:
-          sitemap-location: "https://thejiahao.github.io/zh-cn/sitemap.xml"
+          sitemap-location: https://thejiahao.github.io/zh-cn/sitemap.xml
           key: ${{ secrets.INDEXNOW_KEY }}
           key-location: https://thejiahao.github.io/${{ secrets.INDEXNOW_KEY }}.txt
+          failure-strategy: error
