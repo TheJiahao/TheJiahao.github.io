@@ -7,142 +7,142 @@ taxonomiesExcludedFromSitemap = ["tags", "categories"]
 pagesEcludedFromIndex = ["section", "term", "taxonomy"]
 
 [footer]
-    since = 2020
+  since = 2020
 
 [dateFormat]
-    published = "2006-01-02"
-    lastUpdated = "2006-01-02"
+  published = "2006-01-02"
+  lastUpdated = "2006-01-02"
 
 [sidebar]
-    emoji = "🤔"
+  emoji = "🤔"
 
-    [sidebar.avatar]
-        enabled = true
-        local = false
-        src = "https://gravatar.com/avatar/8677945a0220e9aebdcad9b77205b7eff9efe49c713f25ea2c98d2544195275c?s=128"
+  [sidebar.avatar]
+    enabled = true
+    local = false
+    src = "https://gravatar.com/avatar/8677945a0220e9aebdcad9b77205b7eff9efe49c713f25ea2c98d2544195275c?s=128"
 
 [article]
-    math = false
-    readingTime = false
+  math = false
+  readingTime = false
 
-    [article.license]
-        enabled = true
+  [article.license]
+    enabled = true
 
 ## Widgets
 [[widgets.homepage]]
-    type = "search"
+  type = "search"
 
 [[widgets.homepage]]
-    type = "archives"
+  type = "archives"
 
-    [widgets.homepage.params]
-        limit = 5
-
-[[widgets.homepage]]
-    type = "categories"
-
-    [widgets.homepage.params]
-        limit = 10
+  [widgets.homepage.params]
+    limit = 5
 
 [[widgets.homepage]]
-    type = "tag-cloud"
+  type = "categories"
 
-    [widgets.homepage.params]
-        limit = 10
+  [widgets.homepage.params]
+    limit = 10
+
+[[widgets.homepage]]
+  type = "tag-cloud"
+
+  [widgets.homepage.params]
+    limit = 10
 
 [[widgets.page]]
-    type = "toc"
+  type = "toc"
 
 [opengraph.twitter]
-    site = ""
-    card = "summary_large_image"
+  site = ""
+  card = "summary_large_image"
 
 [defaultImage.opengraph]
-    enabled = true
-    local = false
-    src = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/14053d26005b9afe3ce0e020862ed5ab2335f989/assets/Thinking%20face/Flat/thinking_face_flat.svg"
+  enabled = true
+  local = false
+  src = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/14053d26005b9afe3ce0e020862ed5ab2335f989/assets/Thinking%20face/Flat/thinking_face_flat.svg"
 
 [colorScheme]
-    toggle = true
-    default = "auto"
+  toggle = true
+  default = "auto"
 
 [imageProcessing.cover]
-    enabled = true
+  enabled = true
 
 [imageProcessing.content]
-    enabled = true
+  enabled = true
 
 ## Comments
 [comments]
-    enabled = true
-    provider = "giscus"
+  enabled = true
+  provider = "giscus"
 
-    [comments.disqusjs]
-        shortname = ""
-        apiUrl = ""
-        apiKey = ""
-        admin = ""
-        adminLabel = ""
+  [comments.disqusjs]
+    shortname = ""
+    apiUrl = ""
+    apiKey = ""
+    admin = ""
+    adminLabel = ""
 
-    [comments.utterances]
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
+  [comments.utterances]
+    repo = ""
+    issueTerm = "pathname"
+    label = ""
 
-    [comments.remark42]
-        host = ""
-        site = ""
-        locale = ""
+  [comments.remark42]
+    host = ""
+    site = ""
+    locale = ""
 
-    [comments.vssue]
-        platform = ""
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-        autoCreateIssue = false
+  [comments.vssue]
+    platform = ""
+    owner = ""
+    repo = ""
+    clientId = ""
+    clientSecret = ""
+    autoCreateIssue = false
 
-    [comments.waline]
-        serverURL = ""
-        lang = ""
-        visitor = ""
-        avatar = ""
-        emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
-        requiredMeta = ["name", "email", "url"]
-        placeholder = ""
+  [comments.waline]
+    serverURL = ""
+    lang = ""
+    visitor = ""
+    avatar = ""
+    emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
+    requiredMeta = ["name", "email", "url"]
+    placeholder = ""
 
-        [comments.waline.locale]
-            admin = "Admin"
+    [comments.waline.locale]
+      admin = "Admin"
 
 [comments.twikoo]
-    envId = ""
-    region = ""
-    path = ""
-    lang = ""
+  envId = ""
+  region = ""
+  path = ""
+  lang = ""
 
 [comments.cactus]
-    defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
-    serverName = "cactus.chat"
-    siteName = ""
+  defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
+  serverName = "cactus.chat"
+  siteName = ""
 
 [comments.giscus]
-    repo = "TheJiahao/TheJiahao.github.io"
-    repoID = "MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY="
-    category = "General"
-    categoryID = "DIC_kwDOEb6W1s4Cb_e4"
-    mapping = "pathname"
-    lightTheme = "light_tritanopia"
-    darkTheme = "dark_tritanopia"
-    reactionsEnabled = 1
-    emitMetadata = 0
+  repo = "TheJiahao/TheJiahao.github.io"
+  repoID = "MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY="
+  category = "General"
+  categoryID = "DIC_kwDOEb6W1s4Cb_e4"
+  mapping = "pathname"
+  lightTheme = "light_tritanopia"
+  darkTheme = "dark_tritanopia"
+  reactionsEnabled = 1
+  emitMetadata = 0
 
 [comments.gitalk]
-    owner = ""
-    admin = ""
-    repo = ""
-    clientID = ""
-    clientSecret = ""
+  owner = ""
+  admin = ""
+  repo = ""
+  clientID = ""
+  clientSecret = ""
 
 [comments.cusdis]
-    host = ""
-    id = ""
+  host = ""
+  id = ""
