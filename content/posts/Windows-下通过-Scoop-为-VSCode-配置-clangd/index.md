@@ -3,8 +3,6 @@ date: 2022-05-12T00:00:00+02:00
 lastmod: 2023-01-09T17:14:00+02:00
 
 slug: 645e20ca
-aliases:
-  - /posts/645e20ca.html
 
 title: Windows 下通过 Scoop 为 VSCode 配置 clangd
 categories: 工具
