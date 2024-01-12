@@ -8,6 +8,12 @@
                 "parser": "go-template",
                 "singleQuote": false
             }
+        },
+        {
+            "files": ["*.yml"],
+            "options": {
+                "tabWidth": 2
+            }
         }
     ]
 }
