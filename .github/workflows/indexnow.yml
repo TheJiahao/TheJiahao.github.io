@@ -1,5 +1,8 @@
-name: Submit URLs to IndexNow
-on: workflow_dispatch
+name: IndexNow
+on: 
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
 jobs:
   check-and-submit:
@@ -9,7 +12,7 @@ jobs:
       - name: Setup IndexNow
         run: echo ${{ secrets.INDEXNOW_KEY }} > ${{ secrets.INDEXNOW_KEY }}.txt
 
-      - name: indexnow-action
+      - name: Submit URLs to IndexNow
         uses: bojieyang/indexnow-action@v1
         with:
           sitemap-location: https://thejiahao.github.io/zh-cn/sitemap.xml
