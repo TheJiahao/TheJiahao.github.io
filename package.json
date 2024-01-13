@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format": "autocorrect --fix & prettier --write . && taplo format"
+    "format": "markdownlint --fix . && autocorrect --fix && prettier --write . && taplo format"
   },
   "devDependencies": {
     "@taplo/cli": "^0.5.2",
     "autocorrect-node": "^2.9.0",
+    "markdownlint-cli": "^0.38.0",
     "prettier": "^3.1.1",
     "prettier-plugin-go-template": "^0.0.15"
   }
