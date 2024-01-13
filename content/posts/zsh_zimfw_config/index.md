@@ -1,6 +1,6 @@
 ---
 date: 2024-01-05T21:09:00+02:00
-lastmod: 2024-01-13T11:37:00+02:00
+lastmod: 2024-01-13T11:47:00+02:00
 
 slug: 1345558699
 
@@ -149,6 +149,13 @@ Benchmark 1: zsh -l -i -c exit
 
 注意到，Zim 还是比较快的。
 
+## 更新 Zim 和插件
+
+在终端中输入命令 `zimfw help` 就可以看到所有 Zim 提供的命令。
+
+- `zimfw upgrade`，更新 Zim
+- `zimfw update`，更新所有插件
+
 ## 解决 WSL 下语法高亮的延迟
 
 在 `/etc/wsl.conf` 中添加以下内容以取消加载 Windows 的 `PATH` 环境变量[^github_wsl_syntax_highlight]。
@@ -161,7 +168,7 @@ appendWindowsPath = false
 这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
 如果需要在 WSL 中运行 Windows 中的程序，可以根据微软的 [文档](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 将路径以 WSL 下的格式添加到 Zsh 的 `PATH` 环境变量。
 
-[^cover]: 封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并以 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布，调整过背景颜色和图标位置
+[^cover]: 封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并以 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布，修改了背景颜色和图标位置
 
 [^zim_installation]: Installation, https://zimfw.sh/docs/install/
 
