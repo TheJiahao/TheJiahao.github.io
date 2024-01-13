@@ -16,3 +16,4 @@ jobs:
           key: ${{ secrets.INDEXNOW_KEY }}
           key-location: https://thejiahao.github.io/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
           failure-strategy: error
+          endpoint: api.indexnow.org
