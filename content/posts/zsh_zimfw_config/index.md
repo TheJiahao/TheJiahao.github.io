@@ -1,10 +1,10 @@
 ---
 date: 2024-01-05T21:09:00+02:00
-lastmod: 2024-01-11T16:19:00+02:00
+lastmod: 2024-01-13T11:37:00+02:00
 
-slug: "1345558699"
+slug: 1345558699
 
-title: "使用 Zim 配置称手且快速的 Zsh"
+title: 使用 Zim 配置称手且快速的 Zsh
 categories: 工具
 tags:
   - Zim
