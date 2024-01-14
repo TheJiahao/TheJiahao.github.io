@@ -1,6 +1,6 @@
 ---
 date: 2024-01-05T21:09:00+02:00
-lastmod: 2024-01-13T11:47:00+02:00
+lastmod: 2024-01-14T16:58:00+02:00
 
 slug: 1345558699
 
@@ -32,7 +32,7 @@ draft: false
 
 创建 `init_zim.zsh` 用于存放 Zim 配置，并添加以下内容[^zim_installation]
 
-```zsh
+```shell
 zstyle ':zim:zmodule' use 'degit'
 
 ZIM_HOME=~/.zim
@@ -55,13 +55,13 @@ source ${ZIM_HOME}/init.zsh
 文件的第一行配置了 [degit](https://github.com/Rich-Harris/degit) 来安装插件。
 degit 只下载 Git 仓库的最新版本，所以比直接使用 `git clone` 下载整个仓库历史快。
 
-```zsh
+```shell
 zstyle ':zim:zmodule' use 'degit'
 ```
 
 接着在 `.zshrc` 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 `~/.config/zsh` 目录下
 
-```zsh
+```shell
 source ~/.config/zsh/init_zim.zsh
 
 # ...
@@ -93,7 +93,7 @@ Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/
 
 `.zimrc` 内容如下
 
-```zsh
+```shell
 zmodule z-shell/F-Sy-H
 zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-autosuggestions
@@ -115,7 +115,7 @@ zmodule completion
 
 在 `init_zim.zsh` 最后添加插件设置
 
-```zsh
+```shell
 # ...
 source ${ZIM_HOME}/init.zsh
 
@@ -136,7 +136,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 配置好后使用 [hyperfine](https://github.com/sharkdp/hyperfine) 测试 Zsh 启动速度。
 
-```zsh
+```console
 > hyperfine --warmup 3 "zsh -l -i -c exit"
 Benchmark 1: zsh -l -i -c exit
   Time (mean ± σ):      30.3 ms ±   1.0 ms    [User: 14.5 ms, System: 5.9 ms]
