@@ -16,6 +16,11 @@
     -ms-user-select: all;
 }
 
+// 滚动条
+::-webkit-scrollbar-thumb {
+    border-radius: var(--card-border-radius);
+}
+
 $defaultTagBackgrounds: #8ea885, #df7988, #0177b8, #ffb900, #6b69d6;
 $defaultTagColors: #1b1b1f, #1b1b1f, #ffffff, #1b1b1f, #ffffff;
 
