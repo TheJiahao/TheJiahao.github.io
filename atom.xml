@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 05 Jan 2024 21:09:00 +0200</lastBuildDate><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/1345558699/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/1345558699/</guid><description>&lt;img src="https://thejiahao.github.io/posts/1345558699/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimcover">安装 Zim&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
 &lt;p>笔者偏好将配置整理到不同文件并在 &lt;code>.zshrc&lt;/code> 中 &lt;code>source&lt;/code>，而 Zim 的自动安装脚本会在 &lt;code>.zshrc&lt;/code> 添加一大段内容，所以选择手动安装。&lt;/p>
 &lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#56b6c2">=&lt;/span>~/.zim
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -21,9 +21,9 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件的第一行配置了 &lt;a class="link" href="https://github.com/Rich-Harris/degit" target="_blank" rel="noopener"
 >degit&lt;/a> 来安装插件。
 degit 只下载 Git 仓库的最新版本，所以比直接使用 &lt;code>git clone&lt;/code> 下载整个仓库历史快。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接着在 &lt;code>.zshrc&lt;/code> 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 &lt;code>~/.config/zsh&lt;/code> 目录下&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> ~/.config/zsh/init_zim.zsh
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> ~/.config/zsh/init_zim.zsh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装插件">安装插件&lt;/h2>
@@ -67,7 +67,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >completion&lt;/a>，自动补全相关设置&lt;/li>
 &lt;/ul>
 &lt;p>&lt;code>.zimrc&lt;/code> 内容如下&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>zmodule z-shell/F-Sy-H
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zmodule z-shell/F-Sy-H
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule zsh-users/zsh-history-substring-search
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule zsh-users/zsh-autosuggestions
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule sorin-ionescu/prezto --root modules/history --no-submodules
@@ -83,7 +83,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装太多插件可能会拖慢 Zsh 速度，所以建议读者只安装必要的插件。&lt;/p>
 &lt;h2 id="插件设置">插件设置&lt;/h2>
 &lt;p>在 &lt;code>init_zim.zsh&lt;/code> 最后添加插件设置&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> &lt;span style="color:#98c379">${&lt;/span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#98c379">}&lt;/span>/init.zsh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># 加载后才能设置这些插件&lt;/span>
@@ -100,10 +100,10 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测速">测速&lt;/h2>
 &lt;p>配置好后使用 &lt;a class="link" href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener"
 >hyperfine&lt;/a> 测试 Zsh 启动速度。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-zsh" data-lang="zsh">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;zsh -l -i -c exit&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: zsh -l -i -c &lt;span style="color:#e5c07b">exit&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time &lt;span style="color:#56b6c2">(&lt;/span>mean ± σ&lt;span style="color:#56b6c2">)&lt;/span>: 30.3 ms ± 1.0 ms &lt;span style="color:#56b6c2">[&lt;/span>User: 14.5 ms, System: 5.9 ms&lt;span style="color:#56b6c2">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range &lt;span style="color:#56b6c2">(&lt;/span>min … max&lt;span style="color:#56b6c2">)&lt;/span>: 28.1 ms … 32.9 ms &lt;span style="color:#d19a66">85&lt;/span> runs
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;zsh -l -i -c exit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: zsh -l -i -c exit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 30.3 ms ± 1.0 ms [User: 14.5 ms, System: 5.9 ms]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range (min … max): 28.1 ms … 32.9 ms 85 runs
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>hyperfine&lt;/code> 的参数 &lt;code>--warmup 3&lt;/code> 用于在测速前运行几遍命令以避免冷启动影响结果。&lt;/li>
 &lt;li>Zsh 的参数 &lt;code>-l&lt;/code> 和 &lt;code>-i&lt;/code> 用于模拟用户启动 Zsh，具体可参考 &lt;a class="link" href="https://zsh.sourceforge.io/Guide/zshguide02.html" target="_blank" rel="noopener"
