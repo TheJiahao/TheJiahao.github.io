@@ -167,13 +167,19 @@ $defaultTagColors: #1b1b1f, #1b1b1f, #ffffff, #1b1b1f, #ffffff;
     text-decoration: underline;
 }
 
-.article-content .highlight {
-    background-color: #282c34;
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--shadow-l1);
-    max-width: 100%;
-    margin: 0;
+.article-content {
+    .highlight {
+        background-color: #282c34;
+        padding: var(--card-padding);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        max-width: 100%;
+        margin: 0;
+
+        .copyCodeButton {
+            opacity: 0.5;
+        }
+    }
 }
 
 [data-scheme="dark"] {
