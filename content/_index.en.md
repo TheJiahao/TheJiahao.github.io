@@ -1,4 +1,5 @@
 ---
+description: Personal blog, might contain content about configuring tools, technology, math, etc. Updated irregularly.
 menu:
     main:
         name: Home
