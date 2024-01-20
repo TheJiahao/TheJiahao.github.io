@@ -1,5 +1,3 @@
-# Change baseurl before deploy
-baseurl = "https://thejiahao.github.io/"
 googleAnalytics = "G-6QM185HRTR"
 
 [minify]
