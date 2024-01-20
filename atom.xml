@@ -62,7 +62,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;li>&lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo" target="_blank" rel="noopener"
 >sudo&lt;/a>，双击 &lt;kbd>esc&lt;/kbd> 时在命令前添加 &lt;code>sudo&lt;/code>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener"
->zsh-completions&lt;/a>，外部命令的自动补全&lt;/li>
+>zsh-completions&lt;/a>，许多命令的自动补全&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zimfw/completion" target="_blank" rel="noopener"
 >completion&lt;/a>，自动补全相关设置&lt;/li>
 &lt;/ul>
