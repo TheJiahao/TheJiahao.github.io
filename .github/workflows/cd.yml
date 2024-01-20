@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Deploy:
+  Build:
     runs-on: ubuntu-latest
     environment: gh-pages
 
@@ -41,6 +41,24 @@ jobs:
 
       - name: Build
         run: hugo --minify --gc
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-artifact
+          path: public
+
+  Deploy:
+    runs-on: ubuntu-latest
+    environment: gh-pages
+
+    needs: Build
+
+    steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-artifact
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
