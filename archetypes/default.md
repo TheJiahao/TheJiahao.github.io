@@ -1,6 +1,5 @@
 ---
 date: {{ .Date }}
-lastmod: {{ .Date }}
 
 slug: "{{ now.UnixNano | crypto.FNV32a }}"
 
