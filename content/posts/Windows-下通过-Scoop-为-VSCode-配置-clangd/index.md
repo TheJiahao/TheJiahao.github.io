@@ -33,6 +33,7 @@ links:
 ---
 
 使用 Scoop 安装 [clangd](https://clangd.llvm.org/) 可以自动配置环境变量和避免 VSCode 找不到 `#include`。
+本文介绍了通过 Scoop 安装 clangd 的方法。
 
 <!--more-->
 
