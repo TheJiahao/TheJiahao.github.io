@@ -1,5 +1,3 @@
-# Change baseurl before deploy
-baseurl = "https://thejiahao.github.io/"
 paginate = 5
 
 # Theme i18n support
