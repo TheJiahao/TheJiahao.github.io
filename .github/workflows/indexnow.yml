@@ -10,9 +10,9 @@ jobs:
     environment: github-pages
     steps:
       - name: Submit URLs to IndexNow
-        uses: bojieyang/indexnow-action@v1
+        uses: bojieyang/indexnow-action@v2
         with:
-          sitemap-location: https://thejiahao.github.io/zh-cn/sitemap.xml
+          sitemap-location: https://thejiahao.github.io/sitemap.xml
           key: ${{ secrets.INDEXNOW_KEY }}
           key-location: https://thejiahao.github.io/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
           failure-strategy: error
