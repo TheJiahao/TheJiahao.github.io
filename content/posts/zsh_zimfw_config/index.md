@@ -82,13 +82,13 @@ Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/
 - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)，使用方向键搜索命令历史记录
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)，在终端显示命令建议
 - [history](https://github.com/sorin-ionescu/prezto/tree/master/modules/history)，命令历史相关设置，比直接使用 `setopt` 方便和快速
-- [termtitle](https://github.com/zimfw/termtitle)，设置终端标题，例如设置为当前路径
-- [utility](https://github.com/zimfw/utility)，命令缩写以及为 `ls`、`grep` 和 `less` 命令输出上色
-- [input](https://github.com/zimfw/input)，配置按键，例如 <kbd>home</kbd> 键移动到当前行的开头
 - [command-not-found](https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found)，输入不存在的命令时提示安装命令
 - [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)，双击 <kbd>esc</kbd> 时在命令前添加 `sudo`
-- [zsh-completions](https://github.com/zsh-users/zsh-completions)，许多命令的自动补全
 - [completion](https://github.com/zimfw/completion)，自动补全相关设置
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)，许多外部命令的自动补全
+- [input](https://github.com/zimfw/input)，配置按键，例如 <kbd>home</kbd> 键移动到当前行的开头
+- [utility](https://github.com/zimfw/utility)，命令缩写以及为 `ls`、`grep` 和 `less` 命令输出上色
+- [termtitle](https://github.com/zimfw/termtitle)，设置终端标题，例如设置为当前路径
 
 `.zimrc` 内容如下
 
@@ -165,7 +165,7 @@ appendWindowsPath = false
 ```
 
 这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
-如果需要在 WSL 中运行 Windows 中的程序，可以根据微软的 [文档](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 将路径以 WSL 下的格式添加到 Zsh 的 `PATH` 环境变量。
+如果需要在 WSL 中运行 Windows 中的程序，可以将路径以 WSL 下的 [格式](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 添加到 Zsh 的 `PATH` 环境变量。
 
 [^cover]: 封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并以 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布，修改了背景颜色和图标位置
 
