@@ -51,20 +51,20 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >zsh-autosuggestions&lt;/a>，在终端显示命令建议&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/history" target="_blank" rel="noopener"
 >history&lt;/a>，命令历史相关设置，比直接使用 &lt;code>setopt&lt;/code> 方便和快速&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/termtitle" target="_blank" rel="noopener"
->termtitle&lt;/a>，设置终端标题，例如设置为当前路径&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/utility" target="_blank" rel="noopener"
->utility&lt;/a>，命令缩写以及为 &lt;code>ls&lt;/code>、&lt;code>grep&lt;/code> 和 &lt;code>less&lt;/code> 命令输出上色&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/input" target="_blank" rel="noopener"
->input&lt;/a>，配置按键，例如 &lt;kbd>home&lt;/kbd> 键移动到当前行的开头&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found" target="_blank" rel="noopener"
 >command-not-found&lt;/a>，输入不存在的命令时提示安装命令&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo" target="_blank" rel="noopener"
 >sudo&lt;/a>，双击 &lt;kbd>esc&lt;/kbd> 时在命令前添加 &lt;code>sudo&lt;/code>&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener"
->zsh-completions&lt;/a>，许多命令的自动补全&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zimfw/completion" target="_blank" rel="noopener"
 >completion&lt;/a>，自动补全相关设置&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener"
+>zsh-completions&lt;/a>，许多外部命令的自动补全&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/input" target="_blank" rel="noopener"
+>input&lt;/a>，配置按键，例如 &lt;kbd>home&lt;/kbd> 键移动到当前行的开头&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/utility" target="_blank" rel="noopener"
+>utility&lt;/a>，命令缩写以及为 &lt;code>ls&lt;/code>、&lt;code>grep&lt;/code> 和 &lt;code>less&lt;/code> 命令输出上色&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/termtitle" target="_blank" rel="noopener"
+>termtitle&lt;/a>，设置终端标题，例如设置为当前路径&lt;/li>
 &lt;/ul>
 &lt;p>&lt;code>.zimrc&lt;/code> 内容如下&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zmodule z-shell/F-Sy-H
@@ -122,8 +122,8 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#e06c75">interop&lt;/span>]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">appendWindowsPath&lt;/span> = &lt;span style="color:#e5c07b">false&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
-如果需要在 WSL 中运行 Windows 中的程序，可以根据微软的 &lt;a class="link" href="https://learn.microsoft.com/zh-cn/windows/wsl/filesystems" target="_blank" rel="noopener"
->文档&lt;/a> 将路径以 WSL 下的格式添加到 Zsh 的 &lt;code>PATH&lt;/code> 环境变量。&lt;/p>
+如果需要在 WSL 中运行 Windows 中的程序，可以将路径以 WSL 下的 &lt;a class="link" href="https://learn.microsoft.com/zh-cn/windows/wsl/filesystems" target="_blank" rel="noopener"
+>格式&lt;/a> 添加到 Zsh 的 &lt;code>PATH&lt;/code> 环境变量。&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
 &lt;hr>
 &lt;ol>
