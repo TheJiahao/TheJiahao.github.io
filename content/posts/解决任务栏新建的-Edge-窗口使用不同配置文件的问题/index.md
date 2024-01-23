@@ -2,6 +2,8 @@
 date: 2023-12-25T09:30:20+02:00
 
 slug: 313e717
+aliases:
+  - 313e717.html
 
 title: 解决任务栏新建的 Edge 窗口使用不同配置文件的问题
 categories:
