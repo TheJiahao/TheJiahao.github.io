@@ -2,5 +2,4 @@ Sitemap: https://thejiahao.github.io/sitemap.xml
 
 User-agent: *
 
-Disallow: *.json
 Disallow: /IndexNow-*
