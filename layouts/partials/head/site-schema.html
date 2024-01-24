@@ -11,10 +11,10 @@
         "@type": "Person",
         "name": "{{ .Name }}"
     },
-    {{- end -}}
-    {{ if .Site.Params.description -}}
-    "description": "{{ .Site.Params.description }}",
     {{- end }}
+    {{ with .Params.Description -}}
+    "description": "{{ . }}",
+    {{- end -}}
     {{ with .Site.Params.image -}}
     "image": "{{ .url | absURL }}",
     {{- end }}
