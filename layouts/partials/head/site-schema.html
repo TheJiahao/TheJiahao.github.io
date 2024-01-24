@@ -60,7 +60,7 @@
         "width": {{ .Site.Params.image.width }},
         "height": {{ .Site.Params.image.height }}
     },
-    {{- end }}
+    {{- end -}}
     "genre": "{{ .Type }}",
     {{ with (or .Params.Keywords .Params.Tags) -}}
     "keywords": "{{ delimit . ", " }}",
@@ -76,7 +76,7 @@
     {{ with $license -}}
     "license": "{{ . }}",
     {{- end }}
-    {{- with (or .Params.Author .Site.Params.Author.Name) -}}
+    {{ with (or .Params.Author .Site.Params.Author.Name) -}}
     "author": {
         "@type": "Person",
         "name": "{{ . }}"
