@@ -5,7 +5,7 @@
     subtitle = "A CS student"
 
 [article.license]
-    default = 'Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0</a>'
+    default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"
 
 [comments.giscus]
     lang = "en"
