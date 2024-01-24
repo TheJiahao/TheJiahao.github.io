@@ -6,12 +6,12 @@
     "@context": "http://schema.org",
     "@type": "WebSite",
     "url": "{{ .Site.BaseURL }}",
-    {{ if .Site.Author.name -}}
+    {{ with .Site.Params.Author -}}
     "author": {
         "@type": "Person",
-        "name": "{{ .Site.Author.name }}"
+        "name": "{{ .Name }}"
     },
-    {{- end }}
+    {{- end -}}
     {{ if .Site.Params.description -}}
     "description": "{{ .Site.Params.description }}",
     {{- end }}
