@@ -6,6 +6,9 @@ favicon = "/favicon.ico"
 taxonomiesExcludedFromSitemap = ["tags", "categories"]
 pagesEcludedFromIndex = ["section", "term", "taxonomy"]
 
+[author]
+    name = "Jiahao Li"
+
 [footer]
     since = 2020
 
