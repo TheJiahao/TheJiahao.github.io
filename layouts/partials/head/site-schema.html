@@ -1,3 +1,5 @@
+{{ $license := default .Site.Params.article.license.default .Params.License | markdownify }}
+
 {{ if .IsHome -}}
 <script type="application/ld+json">
 {
@@ -18,8 +20,8 @@
     {{- end }}
     {{ with .Site.Params.logo -}}
     "thumbnailUrl": "{{ .url | absURL }}",
-    {{- end }}
-    {{ with .Site.Copyright -}}
+    {{- end -}}
+    {{- with $license -}}
     "license": "{{ . }}",
     {{- end }}
     "name": "{{ .Site.Title }}"
@@ -71,7 +73,7 @@
     {{ with .Lastmod -}}
     "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
     {{- end }}
-    {{ with .Params.License -}}
+    {{ with $license -}}
     "license": "{{ . }}",
     {{- end }}
     {{- with (or .Params.Author .Site.Params.Author.Name) -}}
