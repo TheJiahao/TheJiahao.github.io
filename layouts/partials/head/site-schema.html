@@ -1,17 +1,21 @@
 {{ $license := default .Site.Params.article.license.default .Params.License | markdownify }}
 
-{{ if .IsHome -}}
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
+    {{ with (or .Params.Author .Site.Params.Author.Name) -}}
+        "author": {
+            "@type": "Person",
+            "name": "{{ . }}"
+        },
+    {{- end }}
+    {{ with $license -}}
+        "license": "{{ . }}",
+    {{- end }}
+
+{{- if .IsHome -}}
     "@type": "WebSite",
     "url": "{{ .Site.BaseURL }}",
-    {{ with .Site.Params.Author -}}
-    "author": {
-        "@type": "Person",
-        "name": "{{ .Name }}"
-    },
-    {{- end }}
     {{ with .Params.Description -}}
     "description": "{{ . }}",
     {{- end -}}
@@ -21,9 +25,6 @@
     {{ with .Site.Params.logo -}}
     "thumbnailUrl": "{{ .url | absURL }}",
     {{- end -}}
-    {{- with $license -}}
-    "license": "{{ . }}",
-    {{- end }}
     "name": "{{ .Site.Title }}",
     "potentialAction": {
         "@type": "SearchAction",
@@ -33,12 +34,7 @@
         },
         "query-input": "required name=search_term_string"
     }
-}
-</script>
-{{- else if .IsPage -}}
-<script type="application/ld+json">
-{
-    "@context": "http://schema.org",
+{{- else if .IsPage }}
     "@type": "BlogPosting",
     "headline": "{{ .Title }}",
     "mainEntityOfPage": {
@@ -61,18 +57,9 @@
     {{ with .Lastmod -}}
     "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
     {{- end }}
-    {{ with $license -}}
-    "license": "{{ . }}",
-    {{- end }}
-    {{ with (or .Params.Author .Site.Params.Author.Name) -}}
-    "author": {
-        "@type": "Person",
-        "name": "{{ . }}"
-    },
-    {{- end -}}
     {{- with (or .Description .Summary) }}
     "description": "{{ . }}"
     {{- end -}}
-    }
-</script>
 {{- end }}
+}
+</script>
