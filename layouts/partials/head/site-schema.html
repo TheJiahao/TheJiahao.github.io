@@ -45,21 +45,10 @@
         "@type": "WebPage",
         "@id": "{{ .Permalink }}"
     },
-    {{ if ge (.Param "image.width") 696 -}}
-    "image": {
-        "@type": "ImageObject",
-        "url": "{{ .Param "image.url" | absURL }}",
-        "width": {{ .Param "image.width" }},
-        "height": {{ .Param "image.height" }}
-    },
-    {{- else if ge .Site.Params.image.width 696 -}}
-    "image": {
-        "@type": "ImageObject",
-        "url": "{{ .Site.Params.image.url | absURL }}",
-        "width": {{ .Site.Params.image.width }},
-        "height": {{ .Site.Params.image.height }}
-    },
-    {{- end -}}
+    {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
+    {{ with $image.permalink }}
+    "image": {{ . }},
+    {{- end }}
     "genre": "{{ .Type }}",
     {{ with (or .Params.Keywords .Params.Tags) -}}
     "keywords": "{{ delimit . ", " }}",
