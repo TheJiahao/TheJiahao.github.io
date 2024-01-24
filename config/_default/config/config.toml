@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://thejiahao.github.io/"
+baseURL = "https://thejiahao.github.io/"
 paginate = 5
 enableGitInfo = true
 
