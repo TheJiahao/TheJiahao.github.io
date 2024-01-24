@@ -1,0 +1,90 @@
+{{ if .IsHome -}}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "{{ .Site.BaseURL }}",
+    {{ if .Site.Author.name -}}
+    "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Author.name }}"
+    },
+    {{- end }}
+    {{ if .Site.Params.description -}}
+    "description": "{{ .Site.Params.description }}",
+    {{- end }}
+    {{ with .Site.Params.image -}}
+    "image": "{{ .url | absURL }}",
+    {{- end }}
+    {{ with .Site.Params.logo -}}
+    "thumbnailUrl": "{{ .url | absURL }}",
+    {{- end }}
+    {{ with .Site.Copyright -}}
+    "license": "{{ . }}",
+    {{- end }}
+    "name": "{{ .Site.Title }}"
+
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://thejiahao.github.io/search/?keyword={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+    }
+}
+</script>
+{{- else if .IsPage -}}
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ .Title }}",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+    },
+    {{ if ge (.Param "image.width") 696 -}}
+    "image": {
+        "@type": "ImageObject",
+        "url": "{{ .Param "image.url" | absURL }}",
+        "width": {{ .Param "image.width" }},
+        "height": {{ .Param "image.height" }}
+    },
+    {{- else if ge .Site.Params.image.width 696 -}}
+    "image": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.Params.image.url | absURL }}",
+        "width": {{ .Site.Params.image.width }},
+        "height": {{ .Site.Params.image.height }}
+    },
+    {{- end }}
+    "genre": "{{ .Type }}",
+    {{ with (or .Params.Keywords .Params.Tags) -}}
+    "keywords": "{{ delimit . ", " }}",
+    {{- end }}
+    "wordcount": {{ .WordCount }},
+    "url": "{{ .Permalink }}",
+    {{- with .Date -}}
+    "datePublished": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+    {{- end }}
+    {{ with .Lastmod -}}
+    "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+    {{- end }}
+    {{ with .Params.License -}}
+    "license": "{{ . }}",
+    {{- end }}
+    {{- with (or .Params.Author .Site.Params.Author.Name) -}}
+    "author": {
+        "@type": "Person",
+        "name": "{{ . }}"
+    },
+    {{- end -}}
+    {{ if .Description -}}
+    "description": "{{ .Description }}"
+    {{- else -}}
+    "description": "{{ .Summary }}"
+    {{- end}}
+    }
+</script>
+{{- end }}
