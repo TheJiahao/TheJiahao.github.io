@@ -82,11 +82,9 @@
         "name": "{{ . }}"
     },
     {{- end -}}
-    {{ if .Description -}}
-    "description": "{{ .Description }}"
-    {{- else -}}
-    "description": "{{ .Summary }}"
-    {{- end}}
+    {{- with (or .Description .Summary) }}
+    "description": "{{ . }}"
+    {{- end -}}
     }
 </script>
 {{- end }}
