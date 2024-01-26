@@ -2,20 +2,17 @@
 {{ $title := default .Site.Title .Title }}
 {{ $url := default .Site.BaseURL .Permalink }}
 {{ $description := default .Summary .Description }}
+{{ $author := default .Site.Params.Author.Name .Params.Author }}
 
 <script type="application/ld+json">
 {
     "name": "{{ $title }}",
     "@context": "http://schema.org",
-    {{ with (or .Params.Author .Site.Params.Author.Name) -}}
-        "author": {
-            "@type": "Person",
-            "name": "{{ . }}"
-        },
-    {{- end }}
-    {{ with $license -}}
-        "license": "{{ . }}",
-    {{- end }}
+    "author": {
+        "@type": "Person",
+        "name": "{{ $author }}"
+    },
+    "license": "{{ $license }}",
     "url": "{{ $url }}",
     {{ with $description -}}
     "description": "{{ . }}",
