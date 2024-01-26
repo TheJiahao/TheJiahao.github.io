@@ -1,7 +1,9 @@
 {{ $license := default .Site.Params.article.license.default .Params.License | markdownify }}
+{{ $title := default .Site.Title .Title }}
 
 <script type="application/ld+json">
 {
+    "name": "{{ $title }}",
     "@context": "http://schema.org",
     {{ with (or .Params.Author .Site.Params.Author.Name) -}}
         "author": {
@@ -25,7 +27,6 @@
     {{ with .Site.Params.logo -}}
     "thumbnailUrl": "{{ .url | absURL }}",
     {{- end -}}
-    "name": "{{ .Site.Title }}",
     "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -36,7 +37,7 @@
     }
 {{- else if .IsPage }}
     "@type": "BlogPosting",
-    "headline": "{{ .Title }}",
+    "headline": "{{ $title }}",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "{{ .Permalink }}"
