@@ -48,7 +48,7 @@
         "sameAs": [
         {{- range $k, $_ := .Site.Menus.social -}}
             {{ if $k }},{{ end }}
-            {{ .URL -}}
+            {{ .URL | absURL -}}
         {{ end }}
         ]
     },
