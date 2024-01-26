@@ -38,6 +38,13 @@
         "query-input": "required name=search_term_string"
     }
 {{- else if .IsPage }}
+    {{- if eq .Params.Layout "about" }}
+    "@type": "ProfilePage",
+    "mainEntity": {
+        "@type": "Person",
+        "name": "{{ $author }}"
+    },
+    {{ else -}}
     "@type": "BlogPosting",
     "headline": "{{ $title }}",
     "mainEntityOfPage": {
@@ -52,12 +59,13 @@
     "keywords": "{{ delimit . ", " }}",
     {{- end }}
     "wordcount": {{ .WordCount }},
+    {{- end }}
     {{- with .Date -}}
     "datePublished": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
     {{- end }}
     {{ with .Lastmod -}}
     "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
-    {{- end }}
+    {{ end -}}
 {{- end }}
 }
 </script>
