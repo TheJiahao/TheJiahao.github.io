@@ -9,27 +9,27 @@
 
 <script type="application/ld+json">
 {
-    "name": "{{ $title }}",
+    "name": {{ $title }},
     "@context": "http://schema.org",
     "author": {
         "@type": "Person",
-        "name": "{{ $author }}"
+        "name": {{ $author }}
     },
     "copyrightHolder": {
         "@type": "Person",
-        "name": "{{ $author }}"
+        "name": {{ $author }}
     },
-    "license": "{{ $license }}",
-    "url": "{{ $url }}",
+    "license": {{ $license }},
+    "url": {{ $url }},
     {{ with $description -}}
-    "description": "{{ . }}",
+    "description": {{ . }},
     {{- end -}}
 {{- if .IsHome }}
     "@type": "WebSite",
     {{ with .Site.Params.image -}}
-    "image": "{{ .url | absURL }}",
+    "image": {{ .url | absURL }},
     {{- end }}
-    "thumbnailUrl": "{{ $avatar }}",
+    "thumbnailUrl": {{ $avatar }},
     "potentialAction": {
         "@type": "SearchAction",
         "name": "Internal search",
@@ -44,7 +44,7 @@
     "@type": "ProfilePage",
     "mainEntity": {
         "@type": "Person",
-        "name": "{{ $author }}",
+        "name": {{ $author }},
         "sameAs": [
             {{- range $k, $_ := .Site.Menus.social -}}
             {{ if $k }},{{ end }}
@@ -52,29 +52,29 @@
             {{ end }}
         ]
     },
-    "image": "{{ $avatar }}",
+    "image": {{ $avatar }},
     {{ else -}}
     "@type": "BlogPosting",
-    "headline": "{{ $title }}",
+    "headline": {{ $title }},
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ $url }}"
+        "@id": {{ $url }}
     },
         {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
         {{- with $image.permalink }}
     "image": {{ . }},
         {{ end -}}
         {{- with (or .Params.Keywords .Params.Tags) }}
-    "keywords": "{{ delimit . ", " }}",
+    "keywords": {{ delimit . ", " }},
         {{ end -}}
     "wordcount": {{ .WordCount }},
     {{ end -}}
 
     {{- with .Date }}
-    "datePublished": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+    "datePublished": {{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }},
     {{ end -}}
     {{- with .Lastmod }}
-    "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}"
+    "dateModified": {{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}
     {{ end -}}
 {{- end }}
 }
