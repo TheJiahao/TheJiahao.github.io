@@ -21,7 +21,7 @@
     {{ with $description -}}
     "description": "{{ . }}",
     {{- end -}}
-{{- if .IsHome -}}
+{{- if .IsHome }}
     "@type": "WebSite",
     {{ with .Site.Params.image -}}
     "image": "{{ .url | absURL }}",
