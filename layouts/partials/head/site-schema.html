@@ -1,5 +1,6 @@
 {{ $license := default .Site.Params.article.license.default .Params.License | markdownify }}
 {{ $title := default .Site.Title .Title }}
+{{ $url := default .Site.BaseURL .Permalink }}
 
 <script type="application/ld+json">
 {
@@ -14,10 +15,9 @@
     {{ with $license -}}
         "license": "{{ . }}",
     {{- end }}
-
+    "url": "{{ $url }}",
 {{- if .IsHome -}}
     "@type": "WebSite",
-    "url": "{{ .Site.BaseURL }}",
     {{ with .Params.Description -}}
     "description": "{{ . }}",
     {{- end -}}
@@ -40,7 +40,7 @@
     "headline": "{{ $title }}",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ .Permalink }}"
+        "@id": "{{ $url }}"
     },
     {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{ with $image.permalink }}
@@ -51,7 +51,6 @@
     "keywords": "{{ delimit . ", " }}",
     {{- end }}
     "wordcount": {{ .WordCount }},
-    "url": "{{ .Permalink }}",
     {{- with .Date -}}
     "datePublished": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
     {{- end }}
