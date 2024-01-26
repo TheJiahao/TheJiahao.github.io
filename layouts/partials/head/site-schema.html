@@ -46,7 +46,6 @@
     {{ with $image.permalink }}
     "image": {{ . }},
     {{- end }}
-    "genre": "{{ .Type }}",
     {{ with (or .Params.Keywords .Params.Tags) -}}
     "keywords": "{{ delimit . ", " }}",
     {{- end }}
