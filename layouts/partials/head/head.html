@@ -3,8 +3,7 @@
 
 {{- $description := partialCached "data/description" . .RelPermalink -}}
 <meta name="description" content="{{ $description }}" />
-
-{{ with (or .Params.Keywords .Params.Tags) }}
+{{ with .Params.Keywords }}
     <meta name="keywords" content="{{ delimit . ", " }}" />
 {{ end }}
 
