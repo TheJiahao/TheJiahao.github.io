@@ -44,7 +44,13 @@
     "@type": "ProfilePage",
     "mainEntity": {
         "@type": "Person",
-        "name": "{{ $author }}"
+        "name": "{{ $author }}",
+        "sameAs": [
+            {{- range $k, $_ := .Site.Menus.social -}}
+            {{ if $k }},{{ end }}
+            {{ .URL -}}
+            {{ end }}
+        ]
     },
     "image": "{{ $avatar }}",
     {{ else -}}
