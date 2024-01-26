@@ -35,7 +35,7 @@
         "name": "Internal search",
         "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://thejiahao.github.io/search/?keyword={search_term_string}"
+            "urlTemplate": {{ printf "%ssearch/?keyword={search_term_string}" .Site.BaseURL}}
         },
         "query-input": "required name=search_term_string"
     }
