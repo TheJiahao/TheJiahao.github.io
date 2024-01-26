@@ -1,7 +1,7 @@
 {{ $license := default .Site.Params.article.license.default .Params.License | markdownify }}
 {{ $title := default .Site.Title .Title }}
 {{ $url := default .Site.BaseURL .Permalink }}
-{{ $description := default .Summary .Description }}
+{{- $description := partialCached "data/description" . .RelPermalink -}}
 {{ $author := default .Site.Params.Author.Name .Params.Author }}
 
 <script type="application/ld+json">
