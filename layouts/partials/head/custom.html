@@ -1,5 +1,5 @@
-{{ if (or .Params.noindex (in .Site.Params.pagesEcludedFromIndex .Kind)) }}
-    <meta name="robots" content="noindex" />
-{{ end }}
+{{- if (or .Params.noindex (in .Site.Params.pagesEcludedFromIndex .Kind)) }}
+<meta name="robots" content="noindex" />
+{{ end -}}
 
-{{ partial "head/site-schema.html" . }}
+{{- partial "head/site-schema.html" . -}}

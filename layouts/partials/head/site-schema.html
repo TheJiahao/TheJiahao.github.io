@@ -1,8 +1,8 @@
-{{ $license := default .Site.Params.article.license.default .Params.License | markdownify }}
-{{ $title := default .Site.Title .Title }}
-{{ $url := default .Site.BaseURL .Permalink }}
+{{- $license := default .Site.Params.article.license.default .Params.License | markdownify -}}
+{{- $title := default .Site.Title .Title -}}
+{{- $url := default .Site.BaseURL .Permalink -}}
 {{- $description := partialCached "data/description" . .RelPermalink -}}
-{{ $author := default .Site.Params.Author.Name .Params.Author }}
+{{- $author := default .Site.Params.Author.Name .Params.Author -}}
 
 <script type="application/ld+json">
 {
