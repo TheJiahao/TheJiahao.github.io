@@ -1,6 +1,7 @@
 {{ $license := default .Site.Params.article.license.default .Params.License | markdownify }}
 {{ $title := default .Site.Title .Title }}
 {{ $url := default .Site.BaseURL .Permalink }}
+{{ $description := default .Summary .Description }}
 
 <script type="application/ld+json">
 {
@@ -16,11 +17,11 @@
         "license": "{{ . }}",
     {{- end }}
     "url": "{{ $url }}",
-{{- if .IsHome -}}
-    "@type": "WebSite",
-    {{ with .Params.Description -}}
+    {{ with $description -}}
     "description": "{{ . }}",
     {{- end -}}
+{{- if .IsHome -}}
+    "@type": "WebSite",
     {{ with .Site.Params.image -}}
     "image": "{{ .url | absURL }}",
     {{- end }}
@@ -56,9 +57,6 @@
     {{ with .Lastmod -}}
     "dateModified": "{{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
     {{- end }}
-    {{- with (or .Description .Summary) }}
-    "description": "{{ . }}"
-    {{- end -}}
 {{- end }}
 }
 </script>
