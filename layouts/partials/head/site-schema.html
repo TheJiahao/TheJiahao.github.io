@@ -46,10 +46,10 @@
         "@type": "Person",
         "name": {{ $author }},
         "sameAs": [
-            {{- range $k, $_ := .Site.Menus.social -}}
+        {{- range $k, $_ := .Site.Menus.social -}}
             {{ if $k }},{{ end }}
             {{ .URL -}}
-            {{ end }}
+        {{ end }}
         ]
     },
     "image": {{ $avatar }},
