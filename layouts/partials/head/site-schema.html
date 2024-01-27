@@ -25,11 +25,7 @@
     "description": {{ . }},
     {{ end -}}
     "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }},
-{{- if .IsHome }}
-    {{- with .Site.Params.image }}
-    "image": {{ .url | absURL }},
-    {{ end -}}
-    "@type": "WebSite",
+{{- if or .IsHome (eq .Params.Layout "search") }}
     "potentialAction": {
         "@type": "SearchAction",
         "name": "Internal search",
@@ -38,7 +34,13 @@
             "urlTemplate": {{ absLangURL "search/?keyword={search_term_string}"}}
         },
         "query-input": "required name=search_term_string"
-    }
+    },
+{{ end -}}
+{{- if .IsHome }}
+    {{- with .Site.Params.image }}
+    "image": {{ .url | absURL }},
+    {{ end -}}
+    "@type": "WebSite"
 {{- else if eq .Params.Layout "about" }}
     "image": {{ $avatar }},
     "@type": "ProfilePage",
@@ -52,6 +54,8 @@
         {{ end }}
         ]
     }
+{{- else if eq .Params.Layout "search" }}
+    "@type": "SearchResultsPage"
 {{- else if .IsPage }}
     {{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{- with $articleImage.permalink }}
