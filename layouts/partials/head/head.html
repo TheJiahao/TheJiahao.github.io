@@ -25,7 +25,8 @@
 {{- end -}}
 
 {{ with .Site.Params.favicon }}
-    <link rel="shortcut icon" href="{{ . }}" />
+    <link rel="icon" href="{{ . }}" />
+    <link rel="mask-icon" href="{{ . }}" color="white" />
 {{ end }}
 
 {{- template "_internal/google_analytics.html" . -}}
