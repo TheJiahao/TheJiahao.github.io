@@ -39,8 +39,7 @@
         },
         "query-input": "required name=search_term_string"
     }
-{{- else if .IsPage }}
-    {{- if eq .Params.Layout "about" }}
+{{- else if eq .Params.Layout "about" -}}
     "@type": "ProfilePage",
     "mainEntity": {
         "@type": "Person",
@@ -52,20 +51,18 @@
         {{ end }}
         ]
     },
-    "image": {{ $avatar }},
-    {{ else -}}
+    "image": {{ $avatar }}
+{{- else if .IsPage }}
     "@type": "BlogPosting",
     "headline": {{ $title }},
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": {{ $url }}
     },
-        {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
-        {{- with $image.permalink }}
-    "image": {{ . }}
-        {{ end -}}
+    {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
+    {{- with $image.permalink }}
+    "image": {{ . }},
     {{ end -}}
-
     {{- with .Date }}
     "datePublished": {{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }},
     {{ end -}}
