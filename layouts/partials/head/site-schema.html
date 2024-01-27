@@ -1,6 +1,5 @@
 {{- $license := default .Site.Params.article.license.default .Params.License | markdownify -}}
 {{- $title := default .Site.Title .Title -}}
-{{- $url := default .Site.BaseURL .Permalink -}}
 {{- $description := partialCached "data/description" . .RelPermalink -}}
 {{- $author := default .Site.Params.Author.Name .Params.Author -}}
 
@@ -21,7 +20,7 @@
         "name": {{ $author }}
     },
     "license": {{ $license }},
-    "url": {{ $url }},
+    "url": {{ .Permalink }},
     {{- with $description }}
     "description": {{ . }},
     {{ end -}}
@@ -61,7 +60,7 @@
     "@type": "BlogPosting",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": {{ $url }}
+        "@id": {{ .Permalink }}
     },
     {{- with .Date }}
     "datePublished": {{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }},
