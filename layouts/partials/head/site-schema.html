@@ -53,14 +53,14 @@
     },
     "image": {{ $avatar }}
 {{- else if .IsPage }}
+    {{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     "@type": "BlogPosting",
     "headline": {{ $title }},
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": {{ $url }}
     },
-    {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
-    {{- with $image.permalink }}
+    {{- with $articleImage.permalink }}
     "image": {{ . }},
     {{ end -}}
     {{- with .Date -}}
