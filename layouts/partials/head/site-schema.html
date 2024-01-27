@@ -65,9 +65,8 @@
     "image": {{ . }},
         {{ end -}}
         {{- with (or .Params.Keywords .Params.Tags) }}
-    "keywords": {{ delimit . ", " }},
+    "keywords": {{ delimit . ", " }}
         {{ end -}}
-    "wordcount": {{ .WordCount }},
     {{ end -}}
 
     {{- with .Date }}
