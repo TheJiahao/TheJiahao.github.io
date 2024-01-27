@@ -6,6 +6,9 @@
 {{- $avatar := .Site.Params.Sidebar.Avatar -}}
 {{- $avatar := cond $avatar.local $avatar $avatar.src -}}
 
+{{- $isAbout := eq .Params.Layout "about" -}}
+{{- $isSearch := eq .Params.Layout "search" -}}
+
 <script type="application/ld+json">
 {
     "name": {{ $title }},
@@ -25,7 +28,7 @@
     "description": {{ . }},
     {{ end -}}
     "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }},
-{{- if or .IsHome (eq .Params.Layout "search") }}
+{{- if or .IsHome $isSearch }}
     "potentialAction": {
         "@type": "SearchAction",
         "name": "Internal search",
@@ -41,7 +44,7 @@
     "image": {{ .url | absURL }},
     {{ end -}}
     "@type": "WebSite"
-{{- else if eq .Params.Layout "about" }}
+{{- else if $isAbout }}
     "image": {{ $avatar }},
     "@type": "ProfilePage",
     "mainEntity": {
@@ -54,7 +57,7 @@
         {{ end }}
         ]
     }
-{{- else if eq .Params.Layout "search" }}
+{{- else if $isSearch }}
     "@type": "SearchResultsPage"
 {{- else if .IsPage }}
     {{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
