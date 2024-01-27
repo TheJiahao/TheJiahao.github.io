@@ -62,10 +62,7 @@
     },
         {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
         {{- with $image.permalink }}
-    "image": {{ . }},
-        {{ end -}}
-        {{- with (or .Params.Keywords .Params.Tags) }}
-    "keywords": {{ delimit . ", " }}
+    "image": {{ . }}
         {{ end -}}
     {{ end -}}
 
