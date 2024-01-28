@@ -16,7 +16,7 @@
                     <h2 class="section-description">{{ . }}</h2>
                 {{ end }}
             </div>
-    
+
             {{- $image := partialCached "helper/image" (dict "Context" . "Type" "section") .RelPermalink "section" -}}
             {{ if $image.exists }}
                 <div class="section-image">
@@ -24,18 +24,21 @@
                         {{- $Permalink := $image.resource.RelPermalink -}}
                         {{- $Width := $image.resource.Width -}}
                         {{- $Height := $image.resource.Height -}}
-    
+
                         {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
                             {{- $thumbnail := $image.resource.Fill "120x120" -}}
                             {{- $Permalink = $thumbnail.RelPermalink -}}
                             {{- $Width = $thumbnail.Width -}}
                             {{- $Height = $thumbnail.Height -}}
                         {{- end -}}
-                        
-                        <img src="{{ $Permalink }}" 
+
+
+                        <img
+                            src="{{ $Permalink }}"
                             width="{{ $Width }}"
-                            height="{{ $Height }}" 
-                            loading="lazy">
+                            height="{{ $Height }}"
+                            loading="lazy"
+                        />
                     {{ else }}
                         <img src="{{ $image.permalink }}" loading="lazy" />
                     {{ end }}
@@ -46,7 +49,7 @@
 
     {{- $subsections := .Sections -}}
     {{- $pages := .Pages | complement $subsections -}}
-    
+
     {{- if eq (len $pages) 0 -}}
         {{/* If there are no normal pages, display subsections in list style, with pagination */}}
         {{/* This happens with taxonomies like categories or tags */}}
@@ -56,7 +59,9 @@
 
     {{- with $subsections -}}
         <aside>
-            <h2 class="section-title">{{ T "list.subsection" (len $subsections) }}</h2>
+            <h2 class="section-title">
+                {{ T "list.subsection" (len $subsections) }}
+            </h2>
             <div class="subsection-list">
                 <div class="article-list--tile">
                     {{ range . }}
@@ -66,7 +71,7 @@
             </div>
         </aside>
     {{- end -}}
-    
+
     {{/* List only pages that are not a subsection */}}
     {{ $paginator := .Paginate $pages }}
     <section class="article-list--compact">
