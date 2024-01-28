@@ -78,7 +78,7 @@
                     >
                         {{ $icon := default "link" .Params.Icon }}
                         {{ with $icon }}
-                            {{ partial "helper/icon" . }}
+                            {{ partialCached "helper/icon" . . }}
                         {{ end }}
                     </a>
                 </li>
@@ -101,7 +101,7 @@
                         {{ warnf "Menu item [%s] is using [pre] field to set icon, please use [params.icon] instead.\nMore information: https://docs.stack.jimmycai.com/configuration/custom-menu.html" .URL }}
                     {{ end }}
                     {{ with $icon }}
-                        {{ partial "helper/icon" . }}
+                        {{ partialCached "helper/icon" . . }}
                     {{ end }}
                     <span>{{- .Name -}}</span>
                 </a>
@@ -113,7 +113,7 @@
             {{- $currentLanguageCode := .Language.Lang -}}
             {{ with .Site.Home.AllTranslations }}
                 <li id="i18n-switch">
-                    {{ partial "helper/icon" "language" }}
+                    {{ partialCached "helper/icon" "language" "language" }}
                     <select
                         name="language"
                         title="language"
@@ -135,8 +135,8 @@
 
             {{ if (default false .Site.Params.colorScheme.toggle) }}
                 <li id="dark-mode-toggle">
-                    {{ partial "helper/icon" "moon-filled" }}
-                    {{ partial "helper/icon" "sun-filled" }}
+                    {{ partialCached "helper/icon" "moon-filled" "dark-icon" }}
+                    {{ partialCached "helper/icon" "sun-filled" "light-icon" }}
                     <span class="dark-mode">{{ T "darkMode" }}</span>
                     <span class="light-mode">{{ T "lightMode" }}</span>
                 </li>
