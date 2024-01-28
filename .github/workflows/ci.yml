@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up
-        uses: ./setup-action
+        uses: ./.github/workflows/setup-action
 
       - name: Format code
         run: pnpm run format
