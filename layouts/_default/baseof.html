@@ -25,7 +25,7 @@
             {{ end }}"
         >
             {{- block "left-sidebar" . -}}
-                {{ partialCached "sidebar/left.html" . }}
+                {{ partial "sidebar/left.html" . }}
             {{- end -}}
             {{- block "right-sidebar" . -}}{{ end }}
             <main class="main full-width">
