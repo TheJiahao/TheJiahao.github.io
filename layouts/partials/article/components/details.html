@@ -37,7 +37,7 @@
         <footer class="article-time">
             {{ if $showDate }}
                 <div>
-                    {{ partial "helper/icon" "date" }}
+                    {{ partialCached "helper/icon" "date" "date" }}
                     <time class="article-time--published">
                         {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
                     </time>
@@ -46,7 +46,7 @@
 
             {{ if $showReadingTime }}
                 <div>
-                    {{ partial "helper/icon" "clock" }}
+                    {{ partialCached "helper/icon" "clock" "clock" }}
                     <time class="article-time--reading">
                         {{ T "article.readingTime" .ReadingTime }}
                     </time>
@@ -57,7 +57,7 @@
 
     {{ if .IsTranslated }}
         <footer class="article-translations">
-            {{ partial "helper/icon" "language" }}
+            {{ partialCached "helper/icon" "language" "language" }}
             <div>
                 {{ range .Translations }}
                     <a href="{{ .Permalink }}" class="link"
