@@ -11,6 +11,7 @@ jobs:
 
     steps:
       - name: Build Changelog
+        id: github_release
         uses: mikepenz/release-changelog-builder-action@v4
         with:
           commitMode: true
@@ -32,4 +33,4 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v0.1.15
         with:
-          body: ${{steps.github_release.outputs.changelog}}
+          body: ${{ steps.github_release.outputs.changelog }}
