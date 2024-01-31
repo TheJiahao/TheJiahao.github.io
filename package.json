@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format": "markdownlint --fix . && autocorrect --fix && prettier --write . && taplo format"
+    "format": "markdownlint --fix . && autocorrect --fix && prettier --write . && taplo format",
+    "measure": "hugo --templateMetrics --templateMetricsHints",
+    "measure:nocache": "hugo --templateMetrics --templateMetricsHints --ignoreCache"
   },
   "devDependencies": {
     "@taplo/cli": "^0.5.2",
