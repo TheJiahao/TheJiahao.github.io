@@ -164,7 +164,8 @@ $defaultTagColors: #1b1b1f, #1b1b1f, #ffffff, #1b1b1f, #ffffff;
 }
 
 .link {
-    text-decoration: underline;
+    text-decoration: underline 2px;
+    text-underline-offset: 0.25em;
 }
 
 .article-content {
