@@ -1,0 +1,17 @@
+[data-scheme="dark"] {
+    #dark-mode-toggle {
+        .dark-mode {
+            display: none;
+        }
+
+        .light-mode {
+            display: unset;
+        }
+    }
+}
+
+#dark-mode-toggle {
+    .light-mode {
+        display: none;
+    }
+}

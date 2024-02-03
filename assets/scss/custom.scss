@@ -3,6 +3,7 @@
 */
 
 @use "math.scss";
+@import "theme_toggle.scss";
 
 // 滚动条
 ::-webkit-scrollbar-thumb {
@@ -168,23 +169,5 @@ $defaultTagColors: #1b1b1f, #1b1b1f, #ffffff, #1b1b1f, #ffffff;
         .copyCodeButton {
             opacity: 0.5;
         }
-    }
-}
-
-[data-scheme="dark"] {
-    #dark-mode-toggle {
-        .dark-mode {
-            display: none;
-        }
-
-        .light-mode {
-            display: unset;
-        }
-    }
-}
-
-#dark-mode-toggle {
-    .light-mode {
-        display: none;
     }
 }
