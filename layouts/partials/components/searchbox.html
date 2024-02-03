@@ -1,6 +1,11 @@
 <p>
     <label for="keyword">{{ T "search.title" }}</label>
-    <input name="keyword" id="keyword" required placeholder="{{ T `search.placeholder` }}" />
+    <input
+        name="keyword"
+        id="keyword"
+        required
+        placeholder="{{ T `search.placeholder` }}"
+    />
 
     <button type="button" title="{{ T `search.title` }}">
         {{ partial "helper/icon" "search" }}
