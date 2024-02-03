@@ -2,19 +2,7 @@
     You can add your own custom styles here.
 */
 
-// 公式太长时显示滚动条
-.katex-block {
-    overflow-x: auto;
-    overflow-y: auto;
-}
-
-// 选中公式时复制全部
-.katex {
-    user-select: all;
-    -webkit-user-select: all;
-    -moz-user-select: all;
-    -ms-user-select: all;
-}
+@use "math.scss";
 
 // 滚动条
 ::-webkit-scrollbar-thumb {

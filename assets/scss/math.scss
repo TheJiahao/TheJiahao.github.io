@@ -1,0 +1,13 @@
+// 公式太长时显示滚动条
+.katex-block {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+// 选中公式时复制全部
+.katex {
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+}
