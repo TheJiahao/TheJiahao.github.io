@@ -1,4 +1,2 @@
-googleAnalytics = "G-6QM185HRTR"
-
 [minify]
     minifyOutput = true
