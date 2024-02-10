@@ -15,11 +15,11 @@ devDependencies:
     specifier: ^0.38.0
     version: 0.38.0
   prettier:
-    specifier: ^3.1.1
-    version: 3.1.1
+    specifier: ^3.2.5
+    version: 3.2.5
   prettier-plugin-go-template:
     specifier: ^0.0.15
-    version: 0.0.15(prettier@3.1.1)
+    version: 0.0.15(prettier@3.2.5)
 
 packages:
 
@@ -335,18 +335,18 @@ packages:
       minipass: 7.0.4
     dev: true
 
-  /prettier-plugin-go-template@0.0.15(prettier@3.1.1):
+  /prettier-plugin-go-template@0.0.15(prettier@3.2.5):
     resolution: {integrity: sha512-WqU92E1NokWYNZ9mLE6ijoRg6LtIGdLMePt2C7UBDjXeDH9okcRI3zRqtnWR4s5AloiqyvZ66jNBAa9tmRY5EQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
-      prettier: 3.1.1
+      prettier: 3.2.5
       ulid: 2.3.0
     dev: true
 
-  /prettier@3.1.1:
-    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true

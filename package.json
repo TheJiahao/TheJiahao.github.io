@@ -8,10 +8,10 @@
     "measure:nocache": "hugo --templateMetrics --templateMetricsHints --ignoreCache"
   },
   "devDependencies": {
-    "@taplo/cli": "^0.5.2",
+    "@taplo/cli": "^0.7.0",
     "autocorrect-node": "^2.9.0",
-    "markdownlint-cli": "^0.38.0",
-    "prettier": "^3.1.1",
+    "markdownlint-cli": "^0.39.0",
+    "prettier": "^3.2.5",
     "prettier-plugin-go-template": "^0.0.15"
   }
 }
