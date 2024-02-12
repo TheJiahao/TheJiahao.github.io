@@ -195,7 +195,7 @@ data-flex-grow="64"
 data-flex-basis="155px"
 >&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Windows 下通过 Scoop 为 VSCode 配置 clangd</title><link>https://thejiahao.github.io/posts/645e20ca/</link><pubDate>Thu, 12 May 2022 00:00:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/645e20ca/</guid><description>&lt;img src="https://repository-images.githubusercontent.com/257710112/84be0900-849d-11ea-855a-6b304dddf63a" alt="Featured image of post Windows 下通过 Scoop 为 VSCode 配置 clangd" />&lt;p>使用 Scoop 安装 &lt;a class="link" href="https://clangd.llvm.org/" target="_blank" rel="noopener"
+&lt;/ol></description></item><item><title>Windows 下通过 Scoop 为 VSCode 配置 clangd</title><link>https://thejiahao.github.io/posts/645e20ca/</link><pubDate>Thu, 12 May 2022 00:00:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/645e20ca/</guid><description>&lt;img src="https://thejiahao.github.io/posts/645e20ca/clangd_logo.svg" alt="Featured image of post Windows 下通过 Scoop 为 VSCode 配置 clangd" />&lt;p>使用 Scoop 安装 &lt;a class="link" href="https://clangd.llvm.org/" target="_blank" rel="noopener"
 >clangd&lt;/a> 可以自动配置环境变量和避免 VSCode 找不到 &lt;code>#include&lt;/code>。
 本文介绍了通过 Scoop 安装 clangd 的方法。&lt;/p>
 &lt;h2 id="安装方式">安装方式&lt;/h2>
