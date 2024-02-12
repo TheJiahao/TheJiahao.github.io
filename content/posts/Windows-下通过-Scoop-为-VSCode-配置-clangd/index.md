@@ -14,7 +14,7 @@ tags:
   - LLVM
   - Clang
 description:
-image: https://repository-images.githubusercontent.com/257710112/84be0900-849d-11ea-855a-6b304dddf63a
+image: clangd_logo.svg
 license:
 
 hidden: false
