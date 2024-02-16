@@ -99,7 +99,9 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bindkey &lt;span style="color:#98c379">&amp;#34;&lt;/span>&lt;span style="color:#e06c75">$terminfo&lt;/span>&lt;span style="color:#98c379">[kcud1]&amp;#34;&lt;/span> history-substring-search-down
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测速">测速&lt;/h2>
 &lt;p>配置好后使用 &lt;a class="link" href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener"
->hyperfine&lt;/a> 测试 Zsh 启动速度。&lt;/p>
+>hyperfine&lt;/a> 测试 Zsh 启动速度。
+测试环境为 WSL Ubuntu。&lt;/p>
+&lt;h3 id="启用-zim">启用 Zim&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;zsh -l -i -c exit&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: zsh -l -i -c exit
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 30.3 ms ± 1.0 ms [User: 14.5 ms, System: 5.9 ms]
@@ -110,12 +112,17 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >文档&lt;/a>。&lt;/li>
 &lt;li>&lt;code>-c&lt;/code> 用于执行 &lt;code>exit&lt;/code> 命令以结束 Zsh。&lt;/li>
 &lt;/ul>
-&lt;p>注意到，Zim 还是比较快的。&lt;/p>
+&lt;h3 id="禁用-zim不读取-zshrc">禁用 Zim（不读取 &lt;code>.zshrc&lt;/code>）&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;zsh --no-rcs -l -i -c exit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: zsh --no-rcs -l -i -c exit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 6.8 ms ± 0.9 ms [User: 1.1 ms, System: 0.1 ms]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range (min … max): 5.1 ms … 12.0 ms 244 runs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>注意到，Zim 还是比较快的，仅增加了约 20 毫秒的延迟。&lt;/p>
 &lt;h2 id="更新-zim-和插件">更新 Zim 和插件&lt;/h2>
 &lt;p>在终端中输入命令 &lt;code>zimfw help&lt;/code> 就可以看到所有 Zim 提供的命令。&lt;/p>
 &lt;ul>
-&lt;li>&lt;code>zimfw upgrade&lt;/code>，更新 Zim&lt;/li>
-&lt;li>&lt;code>zimfw update&lt;/code>，更新所有插件&lt;/li>
+&lt;li>&lt;code>zimfw upgrade&lt;/code>：更新 Zim&lt;/li>
+&lt;li>&lt;code>zimfw update&lt;/code>：更新所有插件&lt;/li>
 &lt;/ul>
 &lt;h2 id="解决-wsl-下语法高亮的延迟">解决 WSL 下语法高亮的延迟&lt;/h2>
 &lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>。&lt;/p>
