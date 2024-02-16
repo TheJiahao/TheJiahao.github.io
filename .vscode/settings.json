@@ -3,5 +3,8 @@
         "/source/_posts/*": "../img/${documentBaseName}/${fileName}"
     },
     "ltex.statusBarItem": false,
-    "ltex.language": "zh-CN"
+    "ltex.language": "zh-CN",
+    "conventionalCommits.scopes": [
+        "post"
+    ]
 }

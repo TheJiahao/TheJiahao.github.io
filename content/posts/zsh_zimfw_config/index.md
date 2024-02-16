@@ -134,6 +134,9 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 ## 测速
 
 配置好后使用 [hyperfine](https://github.com/sharkdp/hyperfine) 测试 Zsh 启动速度。
+测试环境为 WSL Ubuntu。
+
+### 启用 Zim
 
 ```console
 > hyperfine --warmup 3 "zsh -l -i -c exit"
@@ -146,14 +149,23 @@ Benchmark 1: zsh -l -i -c exit
 - Zsh 的参数 `-l` 和 `-i` 用于模拟用户启动 Zsh，具体可参考 [文档](https://zsh.sourceforge.io/Guide/zshguide02.html)。
 - `-c` 用于执行 `exit` 命令以结束 Zsh。
 
-注意到，Zim 还是比较快的。
+### 禁用 Zim（不读取 `.zshrc`）
+
+```console
+> hyperfine --warmup 3 "zsh --no-rcs -l -i -c exit"
+Benchmark 1: zsh --no-rcs -l -i -c exit
+  Time (mean ± σ):       6.8 ms ±   0.9 ms    [User: 1.1 ms, System: 0.1 ms]
+  Range (min … max):     5.1 ms …  12.0 ms    244 runs
+```
+
+注意到，Zim 还是比较快的，仅增加了约 20 毫秒的延迟。
 
 ## 更新 Zim 和插件
 
 在终端中输入命令 `zimfw help` 就可以看到所有 Zim 提供的命令。
 
-- `zimfw upgrade`，更新 Zim
-- `zimfw update`，更新所有插件
+- `zimfw upgrade`：更新 Zim
+- `zimfw update`：更新所有插件
 
 ## 解决 WSL 下语法高亮的延迟
 
