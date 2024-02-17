@@ -148,24 +148,24 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/313e717/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/313e717/</guid><description>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_logo.svg" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
+&lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/810811296/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/810811296/</guid><description>&lt;img src="https://thejiahao.github.io/posts/810811296/edge_logo.svg" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
 本文为此提供了一种解决方式。&lt;/p>
 &lt;h2 id="问题">问题&lt;/h2>
 &lt;p>从任务栏新建的 Edge 窗口使用的是其他配置文件。&lt;/p>
-&lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_create_new_window.webp"
+&lt;p>&lt;img src="https://thejiahao.github.io/posts/810811296/edge_create_new_window.webp"
 width="359"
 height="324"
-srcset="https://thejiahao.github.io/posts/313e717/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_1024x0_resize_q100_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/810811296/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/810811296/edge_create_new_window_hu971af96d7773065ac1d80896ce0cb931_86222_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="从任务栏中新建 Edge 窗口"
 class="gallery-image"
 data-flex-grow="110"
 data-flex-basis="265px"
 >&lt;/p>
-&lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_new_window.webp"
+&lt;p>&lt;img src="https://thejiahao.github.io/posts/810811296/edge_new_window.webp"
 width="1052"
 height="954"
-srcset="https://thejiahao.github.io/posts/313e717/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_1024x0_resize_q100_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/810811296/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/810811296/edge_new_window_huef2a939589bca9099b378e0b146fcb69_313266_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="新窗口使用不同配置文件"
 class="gallery-image"
@@ -181,20 +181,20 @@ data-flex-basis="264px"
 &lt;/li>
 &lt;li>
 &lt;p>将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 &lt;code>--profile-directory=&amp;quot;Profile 1&amp;quot;&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_shortcut_properties.webp"
+&lt;p>&lt;img src="https://thejiahao.github.io/posts/810811296/edge_shortcut_properties.webp"
 width="381"
 height="308"
-srcset="https://thejiahao.github.io/posts/313e717/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_1024x0_resize_q100_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/810811296/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/810811296/edge_shortcut_properties_hu7f263829790cd6c56f8ff7e168ceada5_92564_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="查看任务栏快捷方式的属性"
 class="gallery-image"
 data-flex-grow="123"
 data-flex-basis="296px"
 >&lt;/p>
-&lt;p>&lt;img src="https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties.webp"
+&lt;p>&lt;img src="https://thejiahao.github.io/posts/810811296/edge_shortcut_change_properties.webp"
 width="421"
 height="651"
-srcset="https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/313e717/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_1024x0_resize_q100_h2_box_2.webp 1024w"
+srcset="https://thejiahao.github.io/posts/810811296/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_480x0_resize_q100_h2_box_2.webp 480w, https://thejiahao.github.io/posts/810811296/edge_shortcut_change_properties_hu470d8fe5aab7b8341741b51ec7fece85_15084_1024x0_resize_q100_h2_box_2.webp 1024w"
 loading="lazy"
 alt="修改启动参数"
 class="gallery-image"
