@@ -12,7 +12,7 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - uses: pnpm/action-setup@v2
+    - uses: pnpm/action-setup@v3
       name: Install pnpm
       with:
         version: latest
