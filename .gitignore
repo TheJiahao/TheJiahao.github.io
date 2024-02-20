@@ -6,6 +6,7 @@ node_modules/
 public/
 _multiconfig.yml
 resources
+.yarn
 
 # Generated files by hugo
 /public/

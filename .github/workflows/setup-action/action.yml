@@ -12,18 +12,12 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - uses: pnpm/action-setup@v3
-      name: Install pnpm
-      with:
-        version: latest
-        run_install: false
-
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
         node-version: lts/*
-        cache: pnpm
+        cache: yarn
 
     - name: Install dependencies
-      run: pnpm install ${{ inputs.pnpm_args }}
+      run: yarn install ${{ inputs.pnpm_args }} --immutable
       shell: bash
