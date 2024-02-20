@@ -18,5 +18,6 @@
     "prettier-plugin-go-template@0.0.15": {
       "unplugged": true
     }
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
