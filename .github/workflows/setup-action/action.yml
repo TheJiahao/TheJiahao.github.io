@@ -12,15 +12,15 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Enable corepack
+      run: corepack enable
+      shell: bash
+
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
         node-version: lts/*
         cache: yarn
-
-    - name: Enable corepack
-      run: corepack enable
-      shell: bash
 
     - name: Install dependencies
       run: yarn install ${{ inputs.pnpm_args }} --immutable
