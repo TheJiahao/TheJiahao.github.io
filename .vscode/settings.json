@@ -1,10 +1,15 @@
 {
-    "markdown.copyFiles.destination": {
-        "/source/_posts/*": "../img/${documentBaseName}/${fileName}"
-    },
-    "ltex.statusBarItem": false,
-    "ltex.language": "zh-CN",
-    "conventionalCommits.scopes": [
-        "post"
-    ]
+  "markdown.copyFiles.destination": {
+    "/source/_posts/*": "../img/${documentBaseName}/${fileName}"
+  },
+  "ltex.statusBarItem": false,
+  "ltex.language": "zh-CN",
+  "conventionalCommits.scopes": [
+    "post"
+  ],
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs"
 }
