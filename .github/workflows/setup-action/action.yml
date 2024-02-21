@@ -1,8 +1,8 @@
 name: Set up
-description: Set up Node and pnpm
+description: Set up Node and Yarn
 inputs:
-  pnpm_args:
-    description: Arguments for pnpm
+  yarn_args:
+    description: Arguments for Yarn
     required: false
     default: ""
 
@@ -23,5 +23,5 @@ runs:
         cache: yarn
 
     - name: Install dependencies
-      run: yarn install ${{ inputs.pnpm_args }} --immutable
+      run: yarn install ${{ inputs.yarn_args }} --immutable
       shell: bash
