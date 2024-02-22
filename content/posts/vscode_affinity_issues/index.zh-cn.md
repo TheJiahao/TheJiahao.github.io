@@ -6,7 +6,7 @@ slug: 54972536
 title: Visual Studio Code extensions.experimental.affinity 兼容性问题
 categories:
 tags:
-    - VSCode
+    - VS Code
     - Markdown
     - Git
 description:

@@ -3,10 +3,10 @@ date: 2022-05-12T00:00:00+02:00
 
 slug: 645e20ca
 
-title: Windows 下通过 Scoop 为 VSCode 配置 clangd
+title: Windows 下通过 Scoop 为 VS Code 配置 clangd
 categories: 工具
 tags:
-  - VSCode
+  - VS Code
   - Windows
   - Scoop
   - clangd
@@ -32,7 +32,7 @@ links:
     image: https://www.google.com/s2/favicons?domain=zhihu.com&sz=128
 ---
 
-使用 Scoop 安装 [clangd](https://clangd.llvm.org/) 可以自动配置环境变量和避免 VSCode 找不到 `#include`。
+使用 Scoop 安装 [clangd](https://clangd.llvm.org/) 可以自动配置环境变量和避免 Visual Studio Code 找不到 `#include`。
 本文介绍了通过 Scoop 安装 clangd 的方法。
 
 <!--more-->
@@ -51,4 +51,4 @@ Invoke-WebRequest get.scoop.sh | Invoke-Expression
 scoop install mingw-winlibs
 ```
 
-VSCode 安装 [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) 扩展。
+VS Code 安装 [clangd](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd) 扩展。

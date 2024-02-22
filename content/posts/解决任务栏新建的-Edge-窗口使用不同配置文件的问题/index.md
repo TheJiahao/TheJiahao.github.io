@@ -9,7 +9,7 @@ aliases:
 title: 解决任务栏新建的 Edge 窗口使用不同配置文件的问题
 categories:
 tags:
-  - VSCode
+  - VS Code
   - Edge
   - JavaScript Debugger
   - Windows
@@ -23,7 +23,7 @@ comments: true
 draft: false
 ---
 
-VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
+Visual Studio Code 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
 本文为此提供了一种解决方式。
 
 <!--more-->
