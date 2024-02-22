@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/1345558699/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/1345558699/</guid><description>&lt;img src="https://thejiahao.github.io/posts/1345558699/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimcover">安装 Zim&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>Visual Studio Code extensions.experimental.affinity 兼容性问题</title><link>https://thejiahao.github.io/posts/54972536/</link><pubDate>Thu, 22 Feb 2024 19:43:26 +0200</pubDate><guid>https://thejiahao.github.io/posts/54972536/</guid><description>&lt;img src="https://thejiahao.github.io/posts/54972536/vscode_logo.svg" alt="Featured image of post Visual Studio Code extensions.experimental.affinity 兼容性问题" />&lt;p>本文汇总了 Visual Studio Code 实验性设置 &lt;code>extensions.experimental.affinity&lt;/code> 的兼容性问题。&lt;/p>
+&lt;h2 id="vscodemarkdown-language-features">&lt;code>vscode.markdown-language-features&lt;/code>&lt;/h2>
+&lt;ul>
+&lt;li>Markdown Footnotes 无法显示脚注&lt;/li>
+&lt;li>Markdown 预览中颜色主题失效&lt;/li>
+&lt;/ul>
+&lt;h2 id="vscodegit-和-vscodegit-base">&lt;code>vscode.git&lt;/code> 和 &lt;code>vscode.git-base&lt;/code>&lt;/h2>
+&lt;ul>
+&lt;li>GitLens Add Co-authors 和 Issue/PR 补全失效&lt;/li>
+&lt;li>Convetional Commits 找不到 Git：&lt;code>Extension vscode.git not found!&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="biernermarkdown-mermaid">&lt;code>bierner.markdown-mermaid&lt;/code>&lt;/h2>
+&lt;ul>
+&lt;li>Mermaid 图表有时不显示&lt;/li>
+&lt;/ul></description></item><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/1345558699/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/1345558699/</guid><description>&lt;img src="https://thejiahao.github.io/posts/1345558699/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimcover">安装 Zim&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h2>
 &lt;p>笔者偏好将配置整理到不同文件并在 &lt;code>.zshrc&lt;/code> 中 &lt;code>source&lt;/code>，而 Zim 的自动安装脚本会在 &lt;code>.zshrc&lt;/code> 添加一大段内容，所以选择手动安装。&lt;/p>
 &lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
@@ -148,7 +162,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/810811296/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/810811296/</guid><description>&lt;img src="https://thejiahao.github.io/posts/810811296/edge_logo.svg" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>VSCode 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
+&lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/810811296/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/810811296/</guid><description>&lt;img src="https://thejiahao.github.io/posts/810811296/edge_logo.svg" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>Visual Studio Code 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
 本文为此提供了一种解决方式。&lt;/p>
 &lt;h2 id="问题">问题&lt;/h2>
 &lt;p>从任务栏新建的 Edge 窗口使用的是其他配置文件。&lt;/p>
@@ -202,8 +216,8 @@ data-flex-grow="64"
 data-flex-basis="155px"
 >&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Windows 下通过 Scoop 为 VSCode 配置 clangd</title><link>https://thejiahao.github.io/posts/645e20ca/</link><pubDate>Thu, 12 May 2022 00:00:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/645e20ca/</guid><description>&lt;img src="https://thejiahao.github.io/posts/645e20ca/clangd_logo.svg" alt="Featured image of post Windows 下通过 Scoop 为 VSCode 配置 clangd" />&lt;p>使用 Scoop 安装 &lt;a class="link" href="https://clangd.llvm.org/" target="_blank" rel="noopener"
->clangd&lt;/a> 可以自动配置环境变量和避免 VSCode 找不到 &lt;code>#include&lt;/code>。
+&lt;/ol></description></item><item><title>Windows 下通过 Scoop 为 VS Code 配置 clangd</title><link>https://thejiahao.github.io/posts/645e20ca/</link><pubDate>Thu, 12 May 2022 00:00:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/645e20ca/</guid><description>&lt;img src="https://thejiahao.github.io/posts/645e20ca/clangd_logo.svg" alt="Featured image of post Windows 下通过 Scoop 为 VS Code 配置 clangd" />&lt;p>使用 Scoop 安装 &lt;a class="link" href="https://clangd.llvm.org/" target="_blank" rel="noopener"
+>clangd&lt;/a> 可以自动配置环境变量和避免 Visual Studio Code 找不到 &lt;code>#include&lt;/code>。
 本文介绍了通过 Scoop 安装 clangd 的方法。&lt;/p>
 &lt;h2 id="安装方式">安装方式&lt;/h2>
 &lt;p>安装 &lt;a class="link" href="https://scoop.sh/" target="_blank" rel="noopener"
@@ -212,5 +226,5 @@ data-flex-basis="155px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装 &lt;a class="link" href="https://winlibs.com/" target="_blank" rel="noopener"
 >Winlibs&lt;/a> 编译的 MinGW + Clang + clangd&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">scoop&lt;/span> &lt;span style="color:#e06c75">install&lt;/span> &lt;span style="color:#e5c07b">mingw-winlibs&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>VSCode 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>VS Code 安装 &lt;a class="link" href="https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd" target="_blank" rel="noopener"
 >clangd&lt;/a> 扩展。&lt;/p></description></item></channel></rss>
