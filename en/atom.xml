@@ -4,7 +4,7 @@
 &lt;li>Markdown Footnotes not working&lt;/li>
 &lt;li>Color themes not working in Markdown Preview&lt;/li>
 &lt;/ul>
-&lt;h2 id="vscodegit-和-vscodegit-base">&lt;code>vscode.git&lt;/code> 和 &lt;code>vscode.git-base&lt;/code>&lt;/h2>
+&lt;h2 id="vscodegit-and-vscodegit-base">&lt;code>vscode.git&lt;/code> and &lt;code>vscode.git-base&lt;/code>&lt;/h2>
 &lt;ul>
 &lt;li>GitLens Add Co-authors and Issue/PR completion not working&lt;/li>
 &lt;li>Convetional Commits: &lt;code>Extension vscode.git not found!&lt;/code>&lt;/li>
