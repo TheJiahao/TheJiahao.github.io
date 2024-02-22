@@ -15,5 +15,8 @@ jobs:
   cd:
     name: CD
     needs: ci
+    concurrency:
+      group: cd
+      cancel-in-progress: true
 
     uses: ./.github/workflows/cd.yml
