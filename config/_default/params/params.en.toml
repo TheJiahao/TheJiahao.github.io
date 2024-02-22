@@ -4,7 +4,7 @@ description = "Personal blog, might contain content about configuring tools, tec
     customText = ""
 
 [sidebar]
-    subtitle = "A CS student"
+    subtitle = "A Computer science student"
 
 [article.license]
     default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)"

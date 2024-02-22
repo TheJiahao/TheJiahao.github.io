@@ -11,4 +11,4 @@ menu:
             icon: user
 ---
 
-A CS student.
+A Computer science student.
