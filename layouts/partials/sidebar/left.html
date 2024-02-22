@@ -69,7 +69,7 @@
             {{ range . }}
                 <li>
                     <a
-                        href="{{ .URL }}"
+                        href={{ urls.RelLangURL .URL }}
                         {{ if eq (default true .Params.newTab) true }}
                             target="_blank"
                         {{ end }}
