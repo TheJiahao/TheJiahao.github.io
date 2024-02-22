@@ -23,7 +23,7 @@ hasCJKLanguage = false
     term = ["html"]
 
 [outputFormats.RSS]
-    mediatype = "application/rss"
+    mediatype = "application/rss+xml"
     baseName = "atom"
     notAlternative = true
 
