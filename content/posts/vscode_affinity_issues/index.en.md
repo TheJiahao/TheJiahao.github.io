@@ -27,7 +27,7 @@ A collection of compatibility issues of experimental setting `extensions.experim
 - Markdown Footnotes not working
 - Color themes not working in Markdown Preview
 
-## `vscode.git` 和 `vscode.git-base`
+## `vscode.git` and `vscode.git-base`
 
 - GitLens Add Co-authors and Issue/PR completion not working
 - Convetional Commits: `Extension vscode.git not found!`
