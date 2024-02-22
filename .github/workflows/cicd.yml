@@ -1,0 +1,17 @@
+name: CI/CD
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ci:
+    name: CI
+    permissions:
+      contents: write
+
+    uses: ./.github/workflows/ci.yml
+
+  cd:
+    name: CD
+    uses: ./.github/workflows/cd.yml
