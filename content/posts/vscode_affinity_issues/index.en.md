@@ -29,7 +29,8 @@ A collection of compatibility issues of experimental setting `extensions.experim
 
 ## `vscode.git` and `vscode.git-base`
 
-- GitLens Add Co-authors and Issue/PR completion not working
+- GitLens Add Co-authors not working
+- GitHub Pull Requests issue/PR completion not working
 - Convetional Commits: `Extension vscode.git not found!`
 
 ## `bierner.markdown-mermaid`

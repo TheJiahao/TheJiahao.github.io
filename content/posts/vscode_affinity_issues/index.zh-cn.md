@@ -29,7 +29,8 @@ draft: false
 
 ## `vscode.git` 和 `vscode.git-base`
 
-- GitLens Add Co-authors 和 Issue/PR 补全失效
+- GitLens Add Co-authors 补全失效
+- GitHub Pull Requests issue/PR 补全失效
 - Convetional Commits 找不到 Git：`Extension vscode.git not found!`
 
 ## `bierner.markdown-mermaid`
