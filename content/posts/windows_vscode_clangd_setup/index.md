@@ -10,7 +10,7 @@ tags:
   - Windows
   - Scoop
   - clangd
-  - gcc
+  - GCC
   - LLVM
   - Clang
 description:
