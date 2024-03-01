@@ -6,7 +6,8 @@
 &lt;/ul>
 &lt;h2 id="vscodegit-and-vscodegit-base">&lt;code>vscode.git&lt;/code> and &lt;code>vscode.git-base&lt;/code>&lt;/h2>
 &lt;ul>
-&lt;li>GitLens Add Co-authors and Issue/PR completion not working&lt;/li>
+&lt;li>GitLens Add Co-authors not working&lt;/li>
+&lt;li>GitHub Pull Requests issue/PR completion not working&lt;/li>
 &lt;li>Convetional Commits: &lt;code>Extension vscode.git not found!&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="biernermarkdown-mermaid">&lt;code>bierner.markdown-mermaid&lt;/code>&lt;/h2>

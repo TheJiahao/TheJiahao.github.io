@@ -6,7 +6,8 @@
 &lt;/ul>
 &lt;h2 id="vscodegit-和-vscodegit-base">&lt;code>vscode.git&lt;/code> 和 &lt;code>vscode.git-base&lt;/code>&lt;/h2>
 &lt;ul>
-&lt;li>GitLens Add Co-authors 和 Issue/PR 补全失效&lt;/li>
+&lt;li>GitLens Add Co-authors 补全失效&lt;/li>
+&lt;li>GitHub Pull Requests issue/PR 补全失效&lt;/li>
 &lt;li>Convetional Commits 找不到 Git：&lt;code>Extension vscode.git not found!&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="biernermarkdown-mermaid">&lt;code>bierner.markdown-mermaid&lt;/code>&lt;/h2>
