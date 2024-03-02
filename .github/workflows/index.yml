@@ -1,0 +1,21 @@
+name: Index
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    name: Submit URLs to IndexNow
+    runs-on: ubuntu-latest
+    environment: gh-pages
+
+    steps:
+      - name: Submit URLs to IndexNow
+        uses: bojieyang/indexnow-action@v2
+        with:
+          sitemap-location: ${{ vars.SITE_URL }}/sitemap.xml
+          key: ${{ secrets.INDEXNOW_KEY }}
+          key-location: ${{ vars.SITE_URL }}/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
+          failure-strategy: error
+          endpoint: api.indexnow.org
