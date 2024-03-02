@@ -19,3 +19,14 @@ jobs:
           key-location: ${{ vars.SITE_URL }}/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
           failure-strategy: error
           endpoint: api.indexnow.org
+
+  google-indexing:
+    name: Submit URLs to Google
+    runs-on: ubuntu-latest
+    environment: gh-pages
+
+    steps:
+      - uses: robingenz/google-indexing-action@main
+        with:
+          siteUrl: ${{ vars.SITE_URL }}
+          gcpServiceAccountKey: ${{ secrets.GOOGLE_INDEXING_API_KEY }}
