@@ -22,6 +22,10 @@ jobs:
   google-indexing:
     name: Submit URLs to Google
     runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ VARS.SITE_URL }}
+      GIS_CLIENT_EMAIL: ${{ secrets.GIS_CLIENT_EMAIL }}
+      GIS_PRIVATE_KEY: ${{ secrets.GIS_PRIVATE_KEY }}
 
     steps:
       - uses: actions/checkout@v4
