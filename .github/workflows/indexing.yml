@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: robingenz/google-indexing-action@main
-        with:
-          siteUrl: ${{ vars.SITE_URL }}
-          gcpServiceAccountKey: ${{ secrets.GOOGLE_INDEXING_API_KEY }}
+      - name: Set up
+        uses: ./.github/workflows/setup-action
+
+      - run: yarn run index
