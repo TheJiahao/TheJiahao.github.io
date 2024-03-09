@@ -1,25 +1,25 @@
 {
-  "name": "jiahao-blog",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "format": "markdownlint --fix . && autocorrect --fix && prettier --write . && taplo format",
-    "measure": "hugo --templateMetrics --templateMetricsHints",
-    "measure:nocache": "hugo --templateMetrics --templateMetricsHints --ignoreCache",
-    "index": "gis $SITE_URL"
-  },
-  "devDependencies": {
-    "@taplo/cli": "^0.7.0",
-    "autocorrect-node": "^2.9.0",
-    "markdownlint-cli": "^0.39.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-go-template": "^0.0.15",
-    "google-indexing-script": "^0.0.2"
-  },
-  "dependenciesMeta": {
-    "prettier-plugin-go-template@0.0.15": {
-      "unplugged": true
-    }
-  },
-  "packageManager": "yarn@4.1.0"
+    "name": "jiahao-blog",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "format": "markdownlint --fix . && autocorrect --fix && prettier --write . && taplo format",
+        "measure": "hugo --templateMetrics --templateMetricsHints",
+        "measure:nocache": "hugo --templateMetrics --templateMetricsHints --ignoreCache",
+        "index": "gis $SITE_URL"
+    },
+    "devDependencies": {
+        "@taplo/cli": "^0.7.0",
+        "autocorrect-node": "^2.9.0",
+        "google-indexing-script": "^0.0.2",
+        "markdownlint-cli": "^0.39.0",
+        "prettier": "^3.2.5",
+        "prettier-plugin-go-template": "^0.0.15"
+    },
+    "dependenciesMeta": {
+        "prettier-plugin-go-template@0.0.15": {
+            "unplugged": true
+        }
+    },
+    "packageManager": "yarn@4.1.0"
 }
