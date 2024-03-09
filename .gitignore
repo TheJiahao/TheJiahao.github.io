@@ -5,6 +5,7 @@ db.json
 public/
 _multiconfig.yml
 resources
+.cache
 
 # Yarn and Node
 node_modules/
