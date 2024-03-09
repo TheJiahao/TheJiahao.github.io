@@ -1,6 +1,9 @@
+# Node
 node_modules/**
+pnpm-lock.yaml
+.yarn/**
+
 public/**
 *.md
-*.json
+db.json
 .github/workflows
-pnpm-lock.yaml
