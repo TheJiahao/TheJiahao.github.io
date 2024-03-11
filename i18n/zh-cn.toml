@@ -1,5 +1,2 @@
 [lightMode]
     other = "亮色模式"
-
-[footer.builtWith]
-    other = "网站由 {{ .Generator }} 生成"
