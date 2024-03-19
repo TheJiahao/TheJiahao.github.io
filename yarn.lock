@@ -531,16 +531,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"google-indexing-script@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "google-indexing-script@npm:0.0.2"
+"google-indexing-script@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "google-indexing-script@npm:0.0.5"
   dependencies:
     googleapis: "npm:131.0.0"
     sitemapper: "npm:3.2.8"
   bin:
     gis: dist/bin.js
     google-indexing-script: dist/bin.js
-  checksum: 10c0/417f61a61101470ca6da219f33fde6bd362afd6636635c83c6fce84d6e39b4d922e6ad144c41c54eac2ca5c3bef1db8baca37f501e7d2dadda11da306902b06f
+  checksum: 10c0/21666a5b4df9ecabe98f2580dac6e19e76871952de734f775a8a9284d8a6c52e6fe32c32f47c76ec2f5a4e10100b372b66871bb7e85873a6de2935be975a0080
   languageName: node
   linkType: hard
 
@@ -726,7 +726,7 @@ __metadata:
   dependencies:
     "@taplo/cli": "npm:^0.7.0"
     autocorrect-node: "npm:^2.9.0"
-    google-indexing-script: "npm:^0.0.2"
+    google-indexing-script: "npm:^0.0.5"
     markdownlint-cli: "npm:^0.39.0"
     prettier: "npm:^3.2.5"
     prettier-plugin-go-template: "npm:^0.0.15"

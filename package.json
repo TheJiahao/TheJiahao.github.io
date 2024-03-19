@@ -11,7 +11,7 @@
     "devDependencies": {
         "@taplo/cli": "^0.7.0",
         "autocorrect-node": "^2.9.0",
-        "google-indexing-script": "^0.0.2",
+        "google-indexing-script": "^0.0.5",
         "markdownlint-cli": "^0.39.0",
         "prettier": "^3.2.5",
         "prettier-plugin-go-template": "^0.0.15"
