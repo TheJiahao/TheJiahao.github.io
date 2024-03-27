@@ -33,4 +33,5 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
-      - run: yarn run index
+      - name: Submit URLs to Google
+        run: yarn run index
