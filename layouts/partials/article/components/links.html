@@ -16,9 +16,13 @@
                 </div>
 
                 {{ with $link.image }}
+                    {{ $permalink := . }}
+                    {{ with ($.Resources.GetMatch (printf "%s" (. | safeURL))) }}
+                        {{ $permalink = .RelPermalink }}
+                    {{ end }}
                     <div class="article-image">
                         <img
-                            src="{{ . }}"
+                            src="{{ $permalink }}"
                             title="{{ $link.title }}"
                             loading="lazy"
                         />
