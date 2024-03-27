@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao's blog</title><link>https://thejiahao.github.io/en/</link><description>Recent content on Jiahao's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://thejiahao.github.io/en/atom.xml" rel="self" type="application/rss+xml"/><item><title>Visual Studio Code extensions.experimental.affinity compatibility issues</title><link>https://thejiahao.github.io/en/posts/54972536/</link><pubDate>Thu, 22 Feb 2024 19:43:26 +0200</pubDate><guid>https://thejiahao.github.io/en/posts/54972536/</guid><description>&lt;img src="https://thejiahao.github.io/posts/54972536/vscode_logo.svg" alt="Featured image of post Visual Studio Code extensions.experimental.affinity compatibility issues" />&lt;p>A collection of compatibility issues of experimental setting &lt;code>extensions.experimental.affinity&lt;/code> in Visual Studio Code.&lt;/p>
-&lt;h2 id="vscodemarkdown-language-features">&lt;code>vscode.markdown-language-features&lt;/code>&lt;/h2>
-&lt;ul>
+&lt;h2 id="vscodemarkdown-language-features">
+&lt;a href="#vscodemarkdown-language-features">#&lt;/a>
+&lt;code>vscode.markdown-language-features&lt;/code>
+&lt;/h2>&lt;ul>
 &lt;li>Markdown Footnotes not working&lt;/li>
 &lt;li>Color themes not working in Markdown Preview&lt;/li>
 &lt;/ul>
-&lt;h2 id="vscodegit-and-vscodegit-base">&lt;code>vscode.git&lt;/code> and &lt;code>vscode.git-base&lt;/code>&lt;/h2>
-&lt;ul>
+&lt;h2 id="vscodegit-and-vscodegit-base">
+&lt;a href="#vscodegit-and-vscodegit-base">#&lt;/a>
+&lt;code>vscode.git&lt;/code> and &lt;code>vscode.git-base&lt;/code>
+&lt;/h2>&lt;ul>
 &lt;li>GitLens Add Co-authors not working&lt;/li>
 &lt;li>GitHub Pull Requests issue/PR completion not working&lt;/li>
 &lt;li>Convetional Commits: &lt;code>Extension vscode.git not found!&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;h2 id="biernermarkdown-mermaid">&lt;code>bierner.markdown-mermaid&lt;/code>&lt;/h2>
-&lt;ul>
+&lt;h2 id="biernermarkdown-mermaid">
+&lt;a href="#biernermarkdown-mermaid">#&lt;/a>
+&lt;code>bierner.markdown-mermaid&lt;/code>
+&lt;/h2>&lt;ul>
 &lt;li>Mermaid Charts sometimes not rendering&lt;/li>
 &lt;/ul></description></item></channel></rss>
