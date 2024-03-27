@@ -113,7 +113,7 @@
                 {{ if ( compare.Gt .Site.Home.AllTranslations.Len 1 ) }}
                     {{ with .Site.Home.AllTranslations }}
                         <li id="i18n-switch">
-                            {{ partialCached "helper/icon" "world" "language" }}
+                            {{ partialCached "helper/icon" "language" "language" }}
                             <select
                                 name="language"
                                 title="language"
