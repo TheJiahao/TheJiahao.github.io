@@ -62,8 +62,12 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;h2 id="推荐插件">
 &lt;a href="#%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6">#&lt;/a>
 推荐插件
-&lt;/h2>&lt;p>笔者推荐以下插件&lt;/p>
-&lt;ul>
+&lt;/h2>&lt;h3 id="必要">
+&lt;a href="#%e5%bf%85%e8%a6%81">#&lt;/a>
+必要
+&lt;/h3>&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/input" target="_blank" rel="noopener"
+>input&lt;/a>，配置按键，例如 &lt;kbd>home&lt;/kbd> 键移动到当前行的开头&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/z-shell/F-Sy-H" target="_blank" rel="noopener"
 >F-Sy-H&lt;/a>，语法高亮
 &lt;ul>
@@ -72,10 +76,17 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >zsh-syntax-highlighting&lt;/a>，区别不大&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-history-substring-search" target="_blank" rel="noopener"
->zsh-history-substring-search&lt;/a>，使用方向键搜索命令历史记录&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener"
 >zsh-autosuggestions&lt;/a>，在终端显示命令建议&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener"
+>zsh-completions&lt;/a>，许多外部命令的自动补全&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-history-substring-search" target="_blank" rel="noopener"
+>zsh-history-substring-search&lt;/a>，使用方向键搜索命令历史记录&lt;/li>
+&lt;/ul>
+&lt;h3 id="可选">
+&lt;a href="#%e5%8f%af%e9%80%89">#&lt;/a>
+可选
+&lt;/h3>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/history" target="_blank" rel="noopener"
 >history&lt;/a>，命令历史相关设置，比直接使用 &lt;code>setopt&lt;/code> 方便和快速&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found" target="_blank" rel="noopener"
@@ -84,10 +95,6 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >sudo&lt;/a>，双击 &lt;kbd>esc&lt;/kbd> 时在命令前添加 &lt;code>sudo&lt;/code>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zimfw/completion" target="_blank" rel="noopener"
 >completion&lt;/a>，自动补全相关设置&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener"
->zsh-completions&lt;/a>，许多外部命令的自动补全&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/input" target="_blank" rel="noopener"
->input&lt;/a>，配置按键，例如 &lt;kbd>home&lt;/kbd> 键移动到当前行的开头&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zimfw/utility" target="_blank" rel="noopener"
 >utility&lt;/a>，命令缩写以及为 &lt;code>ls&lt;/code>、&lt;code>grep&lt;/code> 和 &lt;code>less&lt;/code> 命令输出上色&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/zimfw/termtitle" target="_blank" rel="noopener"
@@ -131,7 +138,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 测速
 &lt;/h2>&lt;p>配置好后使用 &lt;a class="link" href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener"
 >hyperfine&lt;/a> 测试 Zsh 启动速度。
-测试环境为 WSL Ubuntu。&lt;/p>
+测试环境为 WSL Ubuntu 22.04 LTS。&lt;/p>
 &lt;h3 id="启用-zim">
 &lt;a href="#%e5%90%af%e7%94%a8-zim">#&lt;/a>
 启用 Zim
@@ -152,11 +159,11 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: zsh --no-rcs -l -i -c exit
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 6.8 ms ± 0.9 ms [User: 1.1 ms, System: 0.1 ms]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range (min … max): 5.1 ms … 12.0 ms 244 runs
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>注意到，Zim 还是比较快的，仅增加了约 20 毫秒的延迟。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>注意到，Zim 还是比较快的，仅增加了约 20 毫秒的启动时间。&lt;/p>
 &lt;h2 id="更新-zim-和插件">
 &lt;a href="#%e6%9b%b4%e6%96%b0-zim-%e5%92%8c%e6%8f%92%e4%bb%b6">#&lt;/a>
 更新 Zim 和插件
-&lt;/h2>&lt;p>在终端中输入命令 &lt;code>zimfw help&lt;/code> 就可以看到所有 Zim 提供的命令。&lt;/p>
+&lt;/h2>&lt;p>在终端中输入命令 &lt;code>zimfw help&lt;/code> 就可以看到所有 Zim 提供的命令，其中常用的：&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>zimfw upgrade&lt;/code>：更新 Zim&lt;/li>
 &lt;li>&lt;code>zimfw update&lt;/code>：更新所有插件&lt;/li>
