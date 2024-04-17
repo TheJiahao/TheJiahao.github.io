@@ -75,18 +75,21 @@ Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/
 
 ## 推荐插件
 
-笔者推荐以下插件
+### 必要
 
+- [input](https://github.com/zimfw/input)，配置按键，例如 <kbd>home</kbd> 键移动到当前行的开头
 - [F-Sy-H](https://github.com/z-shell/F-Sy-H)，语法高亮
   - 也可以选择 [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) 或 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)，区别不大
-- [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)，使用方向键搜索命令历史记录
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)，在终端显示命令建议
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)，许多外部命令的自动补全
+- [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)，使用方向键搜索命令历史记录
+
+### 可选
+
 - [history](https://github.com/sorin-ionescu/prezto/tree/master/modules/history)，命令历史相关设置，比直接使用 `setopt` 方便和快速
 - [command-not-found](https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found)，输入不存在的命令时提示安装命令
 - [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)，双击 <kbd>esc</kbd> 时在命令前添加 `sudo`
 - [completion](https://github.com/zimfw/completion)，自动补全相关设置
-- [zsh-completions](https://github.com/zsh-users/zsh-completions)，许多外部命令的自动补全
-- [input](https://github.com/zimfw/input)，配置按键，例如 <kbd>home</kbd> 键移动到当前行的开头
 - [utility](https://github.com/zimfw/utility)，命令缩写以及为 `ls`、`grep` 和 `less` 命令输出上色
 - [termtitle](https://github.com/zimfw/termtitle)，设置终端标题，例如设置为当前路径
 
@@ -134,7 +137,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 ## 测速
 
 配置好后使用 [hyperfine](https://github.com/sharkdp/hyperfine) 测试 Zsh 启动速度。
-测试环境为 WSL Ubuntu。
+测试环境为 WSL Ubuntu 22.04 LTS。
 
 ### 启用 Zim
 
@@ -158,11 +161,11 @@ Benchmark 1: zsh --no-rcs -l -i -c exit
   Range (min … max):     5.1 ms …  12.0 ms    244 runs
 ```
 
-注意到，Zim 还是比较快的，仅增加了约 20 毫秒的延迟。
+注意到，Zim 还是比较快的，仅增加了约 20 毫秒的启动时间。
 
 ## 更新 Zim 和插件
 
-在终端中输入命令 `zimfw help` 就可以看到所有 Zim 提供的命令。
+在终端中输入命令 `zimfw help` 就可以看到所有 Zim 提供的命令，其中常用的：
 
 - `zimfw upgrade`：更新 Zim
 - `zimfw update`：更新所有插件
