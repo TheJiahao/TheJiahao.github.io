@@ -1,7 +1,7 @@
 ---
 title: 工具
 description: 这里收录了各种工具的配置
-image:
+image: hammer_and_wrench.svg
 
 # Badge style
 style:
