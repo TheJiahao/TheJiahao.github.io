@@ -1,8 +1,9 @@
 ---
 date: 2023-12-25T09:30:20+02:00
 
-slug: 810811296
-aliases: 
+slug: edge-window-different-profile-issue
+aliases:
+  - 810811296
   - 313e717
   - 313e717.html
 

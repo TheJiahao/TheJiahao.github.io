@@ -1,7 +1,9 @@
 ---
 date: 2024-02-22T19:43:26+02:00
 
-slug: 54972536
+slug: vscode-affinity-issues
+aliases:
+    - 54972536
 
 title: Visual Studio Code extensions.experimental.affinity compatibility issues
 categories:

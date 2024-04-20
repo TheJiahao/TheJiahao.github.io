@@ -1,7 +1,9 @@
 ---
 date: 2024-01-05T21:09:00+02:00
 
-slug: 1345558699
+slug: zsh-zim-setup
+aliases:
+  - 1345558699
 
 title: 使用 Zim 配置称手且快速的 Zsh
 categories: 工具

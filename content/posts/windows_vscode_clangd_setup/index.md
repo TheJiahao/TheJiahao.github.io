@@ -1,7 +1,9 @@
 ---
 date: 2022-05-12T00:00:00+02:00
 
-slug: 645e20ca
+slug: windows-vscode-clangd-setup
+aliases:
+  - 645e20ca
 
 title: Windows 下通过 Scoop 为 VS Code 配置 clangd
 categories: 工具
