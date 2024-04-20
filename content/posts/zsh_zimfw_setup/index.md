@@ -3,21 +3,21 @@ date: 2024-01-05T21:09:00+02:00
 
 slug: zsh-zim-setup
 aliases:
-  - 1345558699
+    - 1345558699
 
 title: 使用 Zim 配置称手且快速的 Zsh
 categories: 工具
 tags:
-  - Zim
-  - Zsh
-  - Linux
-  - MacOS
-  - Unix
-  - Shell
-  - 终端
+    - Zim
+    - Zsh
+    - Linux
+    - MacOS
+    - Unix
+    - Shell
+    - 终端
 description: >-
-  Zim 是 Zsh 的插件管理器，其主要特点为极快的速度。
-  本文介绍了如何配置 Zim 以及推荐了几款笔者使用的 Zsh 插件。
+    Zim 是 Zsh 的插件管理器，其主要特点为极快的速度。
+    本文介绍了如何配置 Zim 以及推荐了几款笔者使用的 Zsh 插件。
 image: zimfw_logo.svg
 license:
 

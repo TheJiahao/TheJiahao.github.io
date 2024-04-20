@@ -3,7 +3,7 @@ date: {{ .Date }}
 
 slug: {{ .File.ContentBaseName }}
 
-title: "{{ replace .File.ContentBaseName "-" " " | title }}"
+title: {{ replace .File.ContentBaseName "-" " " | title }}
 categories:
 tags:
 description:
