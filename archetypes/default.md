@@ -1,7 +1,7 @@
 ---
 date: {{ .Date }}
 
-slug: "{{ now.UnixNano | crypto.FNV32a }}"
+slug: {{ .File.ContentBaseName }}
 
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 categories:
