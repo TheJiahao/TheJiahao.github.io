@@ -26,7 +26,6 @@ pagesEcludedFromIndex = ["section", "term", "taxonomy"]
 
 [article]
     math = false
-    readingTime = false
 
     [article.license]
         enabled = true
