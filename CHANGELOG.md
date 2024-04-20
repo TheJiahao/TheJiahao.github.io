@@ -2,7 +2,6 @@
 
 ## [2.5.0](https://github.com/TheJiahao/blog/compare/v2.4.0...v2.5.0) (2024-04-20)
 
-
 ### Features
 
 * **categories:** Add icon for category 工具 ([a8d03c8](https://github.com/TheJiahao/blog/commit/a8d03c8a2bb70928bba429080130ba536b1628bb))
@@ -12,7 +11,6 @@
 * **theme:** Enable automatic color scheme switch ([984dbcb](https://github.com/TheJiahao/blog/commit/984dbcb8878ce27c1f981c9a248153769f9dbaa3))
 * Update KaTex@v0.16.9 ([36e0f36](https://github.com/TheJiahao/blog/commit/36e0f3626d0a96527968ef52a110055fd85d7274))
 * **url:** Use directory name as default slug ([4f28901](https://github.com/TheJiahao/blog/commit/4f28901b1aed38b59cffda089d49138a3e99c65e))
-
 
 ### Bug Fixes
 
