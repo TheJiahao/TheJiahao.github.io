@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>Visual Studio Code extensions.experimental.affinity 兼容性问题</title><link>https://thejiahao.github.io/posts/vscode-affinity-issues/</link><pubDate>Thu, 22 Feb 2024 19:43:26 +0200</pubDate><guid>https://thejiahao.github.io/posts/vscode-affinity-issues/</guid><description>&lt;img src="https://thejiahao.github.io/posts/vscode-affinity-issues/vscode_logo.svg" alt="Featured image of post Visual Studio Code extensions.experimental.affinity 兼容性问题" />&lt;p>本文汇总了 Visual Studio Code 实验性设置 &lt;code>extensions.experimental.affinity&lt;/code> 的兼容性问题。&lt;/p>
-&lt;h2 id="vscodemarkdown-language-features">
-&lt;a href="#vscodemarkdown-language-features">#&lt;/a>
-&lt;code>vscode.markdown-language-features&lt;/code>
+&lt;h2 id="vscodemarkdown-language-features">&lt;a href="#vscodemarkdown-language-features" class="header-anchor">&lt;/a>&lt;code>vscode.markdown-language-features&lt;/code>
 &lt;/h2>&lt;ul>
 &lt;li>Markdown Footnotes 无法显示脚注&lt;/li>
 &lt;li>Markdown 预览中颜色主题失效&lt;/li>
 &lt;/ul>
-&lt;h2 id="vscodegit-和-vscodegit-base">
-&lt;a href="#vscodegit-%e5%92%8c-vscodegit-base">#&lt;/a>
-&lt;code>vscode.git&lt;/code> 和 &lt;code>vscode.git-base&lt;/code>
+&lt;h2 id="vscodegit-和-vscodegit-base">&lt;a href="#vscodegit-%e5%92%8c-vscodegit-base" class="header-anchor">&lt;/a>&lt;code>vscode.git&lt;/code> 和 &lt;code>vscode.git-base&lt;/code>
 &lt;/h2>&lt;ul>
 &lt;li>GitLens Add Co-authors 补全失效&lt;/li>
 &lt;li>GitHub Pull Requests issue/PR 补全失效&lt;/li>
 &lt;li>Convetional Commits 找不到 Git：&lt;code>Extension vscode.git not found!&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;h2 id="biernermarkdown-mermaid">
-&lt;a href="#biernermarkdown-mermaid">#&lt;/a>
-&lt;code>bierner.markdown-mermaid&lt;/code>
+&lt;h2 id="biernermarkdown-mermaid">&lt;a href="#biernermarkdown-mermaid" class="header-anchor">&lt;/a>&lt;code>bierner.markdown-mermaid&lt;/code>
 &lt;/h2>&lt;ul>
 &lt;li>Mermaid 图表有时不显示&lt;/li>
-&lt;/ul></description></item><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/zsh-zim-setup/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/zsh-zim-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/zsh-zim-setup/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimcover">
-&lt;a href="#%e5%ae%89%e8%a3%85-zimcover">#&lt;/a>
-安装 Zim&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
+&lt;/ul></description></item><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/zsh-zim-setup/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/zsh-zim-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/zsh-zim-setup/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimcover">&lt;a href="#%e5%ae%89%e8%a3%85-zimcover" class="header-anchor">&lt;/a>安装 Zim&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
 &lt;/h2>&lt;p>笔者偏好将配置整理到不同文件并在 &lt;code>.zshrc&lt;/code> 中 &lt;code>source&lt;/code>，而 Zim 的自动安装脚本会在 &lt;code>.zshrc&lt;/code> 添加一大段内容，所以选择手动安装。&lt;/p>
 &lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
@@ -49,9 +41,7 @@ degit 只下载 Git 仓库的最新版本，所以比直接使用 &lt;code>git c
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> ~/.config/zsh/init_zim.zsh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装插件">
-&lt;a href="#%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6">#&lt;/a>
-安装插件
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装插件">&lt;a href="#%e5%ae%89%e8%a3%85%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>安装插件
 &lt;/h2>&lt;p>Zim 的插件需要在 &lt;code>~/.zimrc&lt;/code> 中配置。
 添加插件的基本命令为 &lt;code>zmodule 插件&lt;/code>（内置插件）或者 &lt;code>zmodule 作者/仓库&lt;/code>，如果插件在子目录下则为&lt;code>zmodule 作者/仓库 --root 插件相对路径&lt;/code>。
 具体用法可以参考 &lt;a class="link" href="https://github.com/zimfw/zimfw?tab=readme-ov-file#zmodule" target="_blank" rel="noopener"
@@ -59,12 +49,8 @@ degit 只下载 Git 仓库的最新版本，所以比直接使用 &lt;code>git c
 Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.sh/docs/modules/" target="_blank" rel="noopener"
 >列表&lt;/a>，第三方插件可以参考 &lt;a class="link" href="https://github.com/unixorn/awesome-zsh-plugins" target="_blank" rel="noopener"
 >awesome-zsh-plugins&lt;/a>。&lt;/p>
-&lt;h2 id="推荐插件">
-&lt;a href="#%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6">#&lt;/a>
-推荐插件
-&lt;/h2>&lt;h3 id="必要">
-&lt;a href="#%e5%bf%85%e8%a6%81">#&lt;/a>
-必要
+&lt;h2 id="推荐插件">&lt;a href="#%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>推荐插件
+&lt;/h2>&lt;h3 id="必要">&lt;a href="#%e5%bf%85%e8%a6%81" class="header-anchor">&lt;/a>必要
 &lt;/h3>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/zimfw/input" target="_blank" rel="noopener"
 >input&lt;/a>，配置按键，例如 &lt;kbd>home&lt;/kbd> 键移动到当前行的开头&lt;/li>
@@ -83,9 +69,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-history-substring-search" target="_blank" rel="noopener"
 >zsh-history-substring-search&lt;/a>，使用方向键搜索命令历史记录&lt;/li>
 &lt;/ul>
-&lt;h3 id="可选">
-&lt;a href="#%e5%8f%af%e9%80%89">#&lt;/a>
-可选
+&lt;h3 id="可选">&lt;a href="#%e5%8f%af%e9%80%89" class="header-anchor">&lt;/a>可选
 &lt;/h3>&lt;ul>
 &lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/history" target="_blank" rel="noopener"
 >history&lt;/a>，命令历史相关设置，比直接使用 &lt;code>setopt&lt;/code> 方便和快速&lt;/li>
@@ -115,9 +99,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule zsh-users/zsh-completions --fpath src
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule completion
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装太多插件可能会拖慢 Zsh 速度，所以建议读者只安装必要的插件。&lt;/p>
-&lt;h2 id="插件设置">
-&lt;a href="#%e6%8f%92%e4%bb%b6%e8%ae%be%e7%bd%ae">#&lt;/a>
-插件设置
+&lt;h2 id="插件设置">&lt;a href="#%e6%8f%92%e4%bb%b6%e8%ae%be%e7%bd%ae" class="header-anchor">&lt;/a>插件设置
 &lt;/h2>&lt;p>在 &lt;code>init_zim.zsh&lt;/code> 最后添加插件设置&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> &lt;span style="color:#98c379">${&lt;/span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#98c379">}&lt;/span>/init.zsh
@@ -133,15 +115,11 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># 配置上下方向键搜索命令历史&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bindkey &lt;span style="color:#98c379">&amp;#34;&lt;/span>&lt;span style="color:#e06c75">$terminfo&lt;/span>&lt;span style="color:#98c379">[kcuu1]&amp;#34;&lt;/span> history-substring-search-up
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bindkey &lt;span style="color:#98c379">&amp;#34;&lt;/span>&lt;span style="color:#e06c75">$terminfo&lt;/span>&lt;span style="color:#98c379">[kcud1]&amp;#34;&lt;/span> history-substring-search-down
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测速">
-&lt;a href="#%e6%b5%8b%e9%80%9f">#&lt;/a>
-测速
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测速">&lt;a href="#%e6%b5%8b%e9%80%9f" class="header-anchor">&lt;/a>测速
 &lt;/h2>&lt;p>配置好后使用 &lt;a class="link" href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener"
 >hyperfine&lt;/a> 测试 Zsh 启动速度。
 测试环境为 WSL Ubuntu 22.04 LTS。&lt;/p>
-&lt;h3 id="启用-zim">
-&lt;a href="#%e5%90%af%e7%94%a8-zim">#&lt;/a>
-启用 Zim
+&lt;h3 id="启用-zim">&lt;a href="#%e5%90%af%e7%94%a8-zim" class="header-anchor">&lt;/a>启用 Zim
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;zsh -l -i -c exit&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: zsh -l -i -c exit
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 30.3 ms ± 1.0 ms [User: 14.5 ms, System: 5.9 ms]
@@ -152,25 +130,19 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 >文档&lt;/a>。&lt;/li>
 &lt;li>&lt;code>-c&lt;/code> 用于执行 &lt;code>exit&lt;/code> 命令以结束 Zsh。&lt;/li>
 &lt;/ul>
-&lt;h3 id="禁用-zim不读取-zshrc">
-&lt;a href="#%e7%a6%81%e7%94%a8-zim%e4%b8%8d%e8%af%bb%e5%8f%96-zshrc">#&lt;/a>
-禁用 Zim（不读取 &lt;code>.zshrc&lt;/code>）
+&lt;h3 id="禁用-zim不读取-zshrc">&lt;a href="#%e7%a6%81%e7%94%a8-zim%e4%b8%8d%e8%af%bb%e5%8f%96-zshrc" class="header-anchor">&lt;/a>禁用 Zim（不读取 &lt;code>.zshrc&lt;/code>）
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;zsh --no-rcs -l -i -c exit&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: zsh --no-rcs -l -i -c exit
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 6.8 ms ± 0.9 ms [User: 1.1 ms, System: 0.1 ms]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range (min … max): 5.1 ms … 12.0 ms 244 runs
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>注意到，Zim 还是比较快的，仅增加了约 20 毫秒的启动时间。&lt;/p>
-&lt;h2 id="更新-zim-和插件">
-&lt;a href="#%e6%9b%b4%e6%96%b0-zim-%e5%92%8c%e6%8f%92%e4%bb%b6">#&lt;/a>
-更新 Zim 和插件
+&lt;h2 id="更新-zim-和插件">&lt;a href="#%e6%9b%b4%e6%96%b0-zim-%e5%92%8c%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>更新 Zim 和插件
 &lt;/h2>&lt;p>在终端中输入命令 &lt;code>zimfw help&lt;/code> 就可以看到所有 Zim 提供的命令，其中常用的：&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>zimfw upgrade&lt;/code>：更新 Zim&lt;/li>
 &lt;li>&lt;code>zimfw update&lt;/code>：更新所有插件&lt;/li>
 &lt;/ul>
-&lt;h2 id="解决-wsl-下语法高亮的延迟">
-&lt;a href="#%e8%a7%a3%e5%86%b3-wsl-%e4%b8%8b%e8%af%ad%e6%b3%95%e9%ab%98%e4%ba%ae%e7%9a%84%e5%bb%b6%e8%bf%9f">#&lt;/a>
-解决 WSL 下语法高亮的延迟
+&lt;h2 id="解决-wsl-下语法高亮的延迟">&lt;a href="#%e8%a7%a3%e5%86%b3-wsl-%e4%b8%8b%e8%af%ad%e6%b3%95%e9%ab%98%e4%ba%ae%e7%9a%84%e5%bb%b6%e8%bf%9f" class="header-anchor">&lt;/a>解决 WSL 下语法高亮的延迟
 &lt;/h2>&lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#e06c75">interop&lt;/span>]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">appendWindowsPath&lt;/span> = &lt;span style="color:#e5c07b">false&lt;/span>
@@ -196,9 +168,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/ol>
 &lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/edge-window-different-profile-issue/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/edge-window-different-profile-issue/</guid><description>&lt;img src="https://thejiahao.github.io/posts/edge-window-different-profile-issue/edge_logo.svg" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>Visual Studio Code 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
 本文为此提供了一种解决方式。&lt;/p>
-&lt;h2 id="问题">
-&lt;a href="#%e9%97%ae%e9%a2%98">#&lt;/a>
-问题
+&lt;h2 id="问题">&lt;a href="#%e9%97%ae%e9%a2%98" class="header-anchor">&lt;/a>问题
 &lt;/h2>&lt;p>从任务栏新建的 Edge 窗口使用的是其他配置文件。&lt;/p>
 &lt;p>&lt;img src="https://thejiahao.github.io/posts/edge-window-different-profile-issue/edge_create_new_window.webp"
 width="359"
@@ -220,13 +190,9 @@ class="gallery-image"
 data-flex-grow="110"
 data-flex-basis="264px"
 >&lt;/p>
-&lt;h2 id="原因">
-&lt;a href="#%e5%8e%9f%e5%9b%a0">#&lt;/a>
-原因
+&lt;h2 id="原因">&lt;a href="#%e5%8e%9f%e5%9b%a0" class="header-anchor">&lt;/a>原因
 &lt;/h2>&lt;p>任务栏上的 Edge 启动参数 &lt;code>--profile-directory=Default&lt;/code> 中的配置文件和 VSCode JavaScript Debugger 调试用的 Edge 配置文件 &lt;code>%APPDATA%\Code\User\workspaceStorage\...\ms-vscode.js-debug\.profile\Default&lt;/code> 重名。&lt;/p>
-&lt;h2 id="解决方式">
-&lt;a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e5%bc%8f">#&lt;/a>
-解决方式
+&lt;h2 id="解决方式">&lt;a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e5%bc%8f" class="header-anchor">&lt;/a>解决方式
 &lt;/h2>&lt;ol>
 &lt;li>
 &lt;p>将 &lt;code>%LOCALAPPDATA%\Microsoft\Edge\User Data\Default&lt;/code> 中的 Default 配置文件改名，例如 &lt;code>Profile 1&lt;/code>&lt;/p>
@@ -257,9 +223,7 @@ data-flex-basis="155px"
 &lt;/ol></description></item><item><title>Windows 下通过 Scoop 为 VS Code 配置 clangd</title><link>https://thejiahao.github.io/posts/windows-vscode-clangd-setup/</link><pubDate>Thu, 12 May 2022 00:00:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/windows-vscode-clangd-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/windows-vscode-clangd-setup/clangd_logo.svg" alt="Featured image of post Windows 下通过 Scoop 为 VS Code 配置 clangd" />&lt;p>使用 Scoop 安装 &lt;a class="link" href="https://clangd.llvm.org/" target="_blank" rel="noopener"
 >clangd&lt;/a> 可以自动配置环境变量和避免 Visual Studio Code 找不到 &lt;code>#include&lt;/code>。
 本文介绍了通过 Scoop 安装 clangd 的方法。&lt;/p>
-&lt;h2 id="安装方式">
-&lt;a href="#%e5%ae%89%e8%a3%85%e6%96%b9%e5%bc%8f">#&lt;/a>
-安装方式
+&lt;h2 id="安装方式">&lt;a href="#%e5%ae%89%e8%a3%85%e6%96%b9%e5%bc%8f" class="header-anchor">&lt;/a>安装方式
 &lt;/h2>&lt;p>安装 &lt;a class="link" href="https://scoop.sh/" target="_blank" rel="noopener"
 >Scoop&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">Invoke-WebRequest&lt;/span> &lt;span style="color:#e06c75">get&lt;/span>.&lt;span style="color:#e06c75">scoop&lt;/span>.&lt;span style="color:#e06c75">sh&lt;/span> | &lt;span style="color:#e5c07b">Invoke-Expression&lt;/span>
