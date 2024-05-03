@@ -16,14 +16,6 @@
         icon = "brand-github"
 
 [[social]]
-    identifier = "gravatar"
-    name = "Gravatar"
-    url = "https://gravatar.com/thejiahao"
-
-    [social.params]
-        icon = "brand-gravatar"
-
-[[social]]
     identifier = "RSS"
     name = "RSS"
     url = "/atom.xml"
