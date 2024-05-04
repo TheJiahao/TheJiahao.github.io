@@ -1,7 +1,7 @@
 $env.ARGC_COMPLETIONS_ROOT = 'C:\Users\Jiahao\repositories\argc-completions'
 $env.ARGC_COMPLETIONS_PATH = ($env.ARGC_COMPLETIONS_ROOT + '\completions')
 $env.Path = ($env.Path | prepend ($env.ARGC_COMPLETIONS_ROOT + '\bin'))
-argc --argc-completions nushell | save -f 'C:\Users\Jiahao\repositories\argc-completions\tmp\argc-completions.nu'
+#argc --argc-completions nushell | save -f 'C:\Users\Jiahao\repositories\argc-completions\tmp\argc-completions.nu'
 source 'C:\Users\Jiahao\repositories\argc-completions\tmp\argc-completions.nu'
 
 use ~/.config/nushell/completions/git-completions.nu *
