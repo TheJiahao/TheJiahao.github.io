@@ -70,16 +70,13 @@ Type "winget show Nushell.Nushell" Enter
 Type "clear" Enter
 Show
 
-Type@200ms "git sta"
-Tab
-Sleep 1s
+Type "git sta" Tab@1s
 Enter@200ms 2
 
-Sleep 1s
+Sleep 3s
 
-Type "winget sh" Tab
-Sleep 1s
+Type "winget sh" Tab@1s
+Type "Nushell" Right@1s
 Enter
-Type "Nushell" Right
-Enter
-Sleep 1s
+
+Sleep 3s
