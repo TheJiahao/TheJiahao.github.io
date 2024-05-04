@@ -63,20 +63,25 @@ Set Shell "nu"
 Set FontSize 32
 Set Width 1200
 Set Height 800
+Set TypingSpeed 100ms
 
 Hide
-Type "git status" Enter
+Type "nu --no-history" Enter
 Type "winget show Nushell.Nushell" Enter
 Type "clear" Enter
+Sleep 2s
 Show
 
-Type "git sta" Tab@1s
-Enter@200ms 2
+Type "git sta" Tab@500ms
+Enter@500ms 2
 
-Sleep 3s
+Sleep 2s
 
 Type "winget sh" Tab@1s
 Type "Nushell" Right@1s
 Enter
 
-Sleep 3s
+Sleep 2s
+
+Hide
+Type exit Enter
