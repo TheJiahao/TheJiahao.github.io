@@ -31,6 +31,35 @@ build:
 本文中使用 Scoop 的部分也可以用其他包管理器替代。
 配置部分除了 Windows 特有的 `%APPDATA%` 和 `%USERPROFILE%` 环境变量以外也适用于其他平台。
 
+## 功能展示
+
+### 语法高亮 + 自动补全
+
+![语法高亮和自动补全展示](img/nushell_completion.gif)
+
+### Nushell 管道
+
+```console
+> ls | select name type size | where size > 1KB
+╭────┬─────────────────────┬──────┬──────────╮
+│  # │        name         │ type │   size   │
+├────┼─────────────────────┼──────┼──────────┤
+│  0 │ .github             │ dir  │   4.1 KB │
+│  1 │ CODE_OF_CONDUCT.md  │ file │   3.4 KB │
+│  2 │ CONTRIBUTING.md     │ file │  11.4 KB │
+│  3 │ Cargo.lock          │ file │ 168.3 KB │
+│  4 │ Cargo.toml          │ file │   9.1 KB │
+│  5 │ LICENSE             │ file │   1.1 KB │
+│  6 │ README.md           │ file │  12.2 KB │
+│  7 │ crates              │ dir  │  12.3 KB │
+│  8 │ rust-toolchain.toml │ file │   1.1 KB │
+│  9 │ scripts             │ dir  │   4.1 KB │
+│ 10 │ src                 │ dir  │   4.1 KB │
+│ 11 │ tests               │ dir  │   4.1 KB │
+│ 12 │ toolkit.nu          │ file │  17.6 KB │
+╰────┴─────────────────────┴──────┴──────────╯
+```
+
 ## 安装 Nushell
 
 安装 Nushell：
@@ -137,6 +166,28 @@ use ~/.config/nushell/completions/git-completions.nu *
 $env.config.completions.external.max_results = 20
 ```
 
+#### Argc 1.17.0 补全失效的临时解决办法
+
+Argc 1.17.0 版本生成的 `argc-completions.nu` 文件有问题，导致补全失效。
+该问题已在 [PR#325](https://github.com/sigoden/argc/pull/325) 中修复，但作者还没发布新版本。
+
+手动将 Argc-completions 中的 `argc --argc-completions nushell ...` 注释掉，并将 `argc-completions/tmp/argc-completions.nu` 替换为以下内容即可临时解决问题：
+
+```nu
+def _argc_completer [args: list<string>] {
+    argc --argc-compgen nushell "" ...$args
+        | split row "\n"
+        | each { |line| $line | split column "\t" value description }
+        | flatten 
+}
+
+let external_completer = {|spans| 
+    _argc_completer $spans
+}
+$env.config.completions.external.enable = true
+$env.config.completions.external.completer = $external_completer
+```
+
 ### 其他配置
 
 以下为笔者的其他配置：
@@ -175,31 +226,6 @@ Benchmark 1: pwsh -NoProfile -l -i -c exit
 ```
 
 注意到，Nushell 启动速度比 PowerShell 7 快了一个数量级。
-
-## Nushell 功能展示
-
-### 管道
-
-```console
-> ls | select name type size | where size > 1KB
-╭────┬─────────────────────┬──────┬──────────╮
-│  # │        name         │ type │   size   │
-├────┼─────────────────────┼──────┼──────────┤
-│  0 │ .github             │ dir  │   4.1 KB │
-│  1 │ CODE_OF_CONDUCT.md  │ file │   3.4 KB │
-│  2 │ CONTRIBUTING.md     │ file │  11.4 KB │
-│  3 │ Cargo.lock          │ file │ 168.3 KB │
-│  4 │ Cargo.toml          │ file │   9.1 KB │
-│  5 │ LICENSE             │ file │   1.1 KB │
-│  6 │ README.md           │ file │  12.2 KB │
-│  7 │ crates              │ dir  │  12.3 KB │
-│  8 │ rust-toolchain.toml │ file │   1.1 KB │
-│  9 │ scripts             │ dir  │   4.1 KB │
-│ 10 │ src                 │ dir  │   4.1 KB │
-│ 11 │ tests               │ dir  │   4.1 KB │
-│ 12 │ toolkit.nu          │ file │  17.6 KB │
-╰────┴─────────────────────┴──────┴──────────╯
-```
 
 [^nushell_config]: Configuration | Nushell, https://www.nushell.sh/book/configuration.html
 [^syntax_highlight_performance]: add shape ExternalResolved to show found externals via syntax highlighting in the repl, https://github.com/nushell/nushell/pull/11135
