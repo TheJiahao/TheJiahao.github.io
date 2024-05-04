@@ -13,7 +13,8 @@ tags:
     - 终端
     - Windows 终端
 description: >-
-    Nushell 是一款跨平台的 Shell，其主要特点为结构化数据和较快的速度。
+    Nushell 是一款跨平台的 shell，其支持 Linux、macOS、BSD 和 Windows，
+    其主要特点为结构化数据和较快的速度。
     本文介绍了如何配置 Nushell。
 image:
 license:
@@ -21,7 +22,10 @@ license:
 hidden: false
 math:
 comments: true
-draft: true
+draft: false
+
+build:
+    publishResources: false
 ---
 
 本文中使用 Scoop 的部分也可以用 WinGet 替代。
