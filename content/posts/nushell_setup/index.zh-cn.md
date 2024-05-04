@@ -11,7 +11,6 @@ tags:
     - PowerShell
     - Shell
     - 终端
-    - Windows 终端
 description: >-
     Nushell 是一款跨平台的 shell，其支持 Linux、macOS、BSD 和 Windows，
     主要特点为结构化数据和较快的速度。
