@@ -22,13 +22,14 @@ license:
 hidden: false
 math:
 comments: true
-draft: false
+draft: true
 
 build:
     publishResources: false
 ---
 
-本文中使用 Scoop 的部分也可以用 WinGet 替代。
+本文中使用 Scoop 的部分也可以用其他包管理器替代。
+配置部分除了 Windows 特有的 `%APPDATA%` 和 `%USERPROFILE%` 环境变量以外也适用于其他平台。
 
 ## 安装 Nushell
 
