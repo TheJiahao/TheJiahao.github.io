@@ -55,7 +55,7 @@
 #   Hide                            Hide the subsequent commands from the output
 #   Show                            Show the subsequent commands in the output
 
-Output nushell_completion.gif
+Output nushell_completion.webm
 
 Require git
 

@@ -35,7 +35,7 @@ build:
 
 ### 语法高亮 + 自动补全
 
-![语法高亮和自动补全展示，使用 vhs 生成](img/nushell_completion.gif)
+{{< video src="img/nushell_completion.webm" autoplay="true" >}}
 
 ### Nushell 管道
 
