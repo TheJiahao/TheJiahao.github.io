@@ -22,7 +22,7 @@ license:
 hidden: false
 math:
 comments: true
-draft: true
+draft: false
 
 build:
     publishResources: false
@@ -93,7 +93,7 @@ $env.config = {
 }
 ```
 
-Nushell 的[默认配置文件](https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/sample_config/default_config.nu)可以从官方仓库中找到，其更新的比[官方文档](https://www.nushell.sh/book/configuration.html)及时。
+Nushell 的默认配置文件可以从 [GitHub 仓库](https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/sample_config/default_config.nu) 中找到，其更新的比 [官方文档](https://www.nushell.sh/book/configuration.html) 及时。
 
 ### 语法高亮
 
