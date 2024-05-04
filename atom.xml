@@ -42,8 +42,7 @@ instead.
 Nushell 的配置文件路径可通过 &lt;code>$nu.config-path&lt;/code> 确定：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; &lt;span style="color:#e06c75">$nu&lt;/span>.config-path
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>C:\Users\&amp;lt;user&amp;gt;\.config\nushell\config.nu
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nushell 的配置保存在 &lt;code>$env.config&lt;/code> &lt;a class="link" href="https://www.nushell.sh/zh-CN/book/types_of_data.html#%E8%AE%B0%E5%BD%95" target="_blank" rel="noopener"
->记录&lt;/a>中。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nushell 的配置保存在 &lt;code>$env.config&lt;/code> 变量中。
 启动时，Nushell 会加载 &lt;code>config.nu&lt;/code> 配置文件，所以可以在其中修改 &lt;code>$env.config&lt;/code>。
 例如，以下设置可以隐藏 Nushell 启动时的欢迎文本：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.show_banner &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#e5c07b">false&lt;/span>
@@ -138,7 +137,7 @@ Nushell 的配置文件路径可通过 &lt;code>$nu.config-path&lt;/code> 确定
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: nu -l -i -c exit
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 46.2 ms ± 1.5 ms [User: 13.4 ms, System: 8.9 ms]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range (min … max): 43.4 ms … 51.2 ms 42 runs
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参数与&lt;a class="link" href="https://thejiahao.github.io/posts/zsh-zim-setup/" >Zim 配置文章&lt;/a>中一致。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参数与 &lt;a class="link" href="https://thejiahao.github.io/posts/zsh-zim-setup/" >Zim 配置文章&lt;/a> 中一致。&lt;/p>
 &lt;h3 id="powershell-742不读取配置">&lt;a href="#powershell-742%e4%b8%8d%e8%af%bb%e5%8f%96%e9%85%8d%e7%bd%ae" class="header-anchor">&lt;/a>PowerShell 7.4.2（不读取配置）
 &lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;pwsh -NoProfile -l -i -c exit&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: pwsh -NoProfile -l -i -c exit
