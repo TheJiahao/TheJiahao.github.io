@@ -48,16 +48,23 @@ Nushell 的配置文件路径可通过 `$nu.config-path` 确定：
 C:\Users\<user>\.config\nushell\config.nu
 ```
 
-Nushell 的配置可通过 `config.nu` 文件中的 `$env.config` 设置。
-例如，以下设置可以隐藏 Nushell 启动时的欢迎文本。
+Nushell 的配置保存在 `$env.config` [记录](https://www.nushell.sh/zh-CN/book/types_of_data.html#%E8%AE%B0%E5%BD%95)中。
+启动时，Nushell 会加载 `config.nu` 配置文件，所以可以在其中修改 `$env.config`。
+例如，以下设置可以隐藏 Nushell 启动时的欢迎文本：
 
 ```sh
+$env.config.show_banner = false
+```
+
+为避免覆盖之前的配置，笔者推荐单独给 `$env.config` 中的每一项赋值，而不是重新给 `$env.config` 赋值：
+
+```nu
 $env.config = {
     show_banner: false
 }
 ```
 
-Nushell 的默认配置可以参考官方仓库中的[默认配置文件](https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/sample_config/default_config.nu)，其更新的比[官方文档](https://www.nushell.sh/book/configuration.html)及时。
+Nushell 的[默认配置文件](https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/sample_config/default_config.nu)可以从官方仓库中找到，其更新的比[官方文档](https://www.nushell.sh/book/configuration.html)及时。
 
 ### 语法高亮
 
@@ -65,9 +72,8 @@ Nushell 的默认配置可以参考官方仓库中的[默认配置文件](https:
 `$PATH` 环境变量中路径很多时，语法高亮可能有明显延迟 [^syntax_highlight_performance]。
 
 ```sh
-$env.config = {
-    highlight_resolved_externals: true
-    color_config: {
+$env.config.highlight_resolved_externals = true
+$env.config.color_config = {
         shape_external_resolved: green
         shape_internalcall: green
         shape_external: white
@@ -76,7 +82,6 @@ $env.config = {
         shape_string: white
         shape_directory: purple_underline
         shape_filepath: purple_underline
-    }
 }
 ```
 
@@ -129,13 +134,7 @@ use ~/.config/nushell/completions/git-completions.nu *
 如果自动补全很慢，可以在 `$nu.config-path` 中限制补全结果数量，例如限制为 20（默认为 100）。
 
 ```sh
-$env.config = {
-    completions: {
-        external: {
-            max_results: 20
-        }
-    }
-}
+$env.config.completions.external.max_results = 20
 ```
 
 ### 其他配置
@@ -143,19 +142,12 @@ $env.config = {
 以下为笔者的其他配置：
 
 ```sh
-$env.config = {
-    show_banner: false # 隐藏欢迎文本
-    shell_integration: true # VS Code 集成
-    history: {
-        max_size: 10000
-        sync_on_enter: true # 输入命令后立刻保存历史记录
-        file_format: "sqlite" # 将历史记录保存到数据库，而不是 txt 文件
-    }
-    filesize: {
-        metric: true # 公制单位 1 KB = 1000 B、1 MB = 1e6 B 等
-        format: "auto" # 自动决定单位，B、KB、MB 等
-    }
-}
+$env.config.show_banner = false # 隐藏欢迎文本
+$env.config.shell_integration = true # VS Code 集成
+$env.config.filesize.metric = true # 使用公制单位 1 KB = 1000 B、1 MB = 1e6 B 等
+
+$env.config.history.max_size = 10000
+$env.config.history.file_format = "sqlite" # 将历史记录保存到数据库，而不是 txt 文件
 ```
 
 ## 测速
