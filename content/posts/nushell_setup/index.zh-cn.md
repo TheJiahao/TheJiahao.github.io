@@ -77,7 +77,7 @@ Nushell 的配置文件路径可通过 `$nu.config-path` 确定：
 C:\Users\<user>\.config\nushell\config.nu
 ```
 
-Nushell 的配置保存在 `$env.config` [记录](https://www.nushell.sh/zh-CN/book/types_of_data.html#%E8%AE%B0%E5%BD%95)中。
+Nushell 的配置保存在 `$env.config` 变量中。
 启动时，Nushell 会加载 `config.nu` 配置文件，所以可以在其中修改 `$env.config`。
 例如，以下设置可以隐藏 Nushell 启动时的欢迎文本：
 
@@ -214,7 +214,7 @@ Benchmark 1: nu -l -i -c exit
   Range (min … max):    43.4 ms …  51.2 ms    42 runs
 ```
 
-参数与[Zim 配置文章]({{< relref "/posts/zsh_zim_setup/index.md" >}})中一致。
+参数与 [Zim 配置文章]({{< relref "/posts/zsh_zim_setup/index.md" >}}) 中一致。
 
 ### PowerShell 7.4.2（不读取配置）
 
