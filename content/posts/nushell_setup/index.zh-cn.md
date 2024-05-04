@@ -3,7 +3,7 @@ date: 2024-05-04T09:34:35+03:00
 
 slug: nushell-setup
 
-title: Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全等
+title: Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全和性能
 categories: 工具
 tags:
     - Windows
@@ -15,7 +15,7 @@ tags:
 description: >-
     Nushell 是一款跨平台的 shell，其支持 Linux、macOS、BSD 和 Windows，
     主要特点为结构化数据和较快的速度。
-    本文介绍了如何配置 Nushell。
+    本文介绍了如何配置 Nushell 的语法高亮和自动补全。
 image: img/nushell_logo.svg
 license:
 
