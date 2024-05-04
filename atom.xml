@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>Visual Studio Code extensions.experimental.affinity 兼容性问题</title><link>https://thejiahao.github.io/posts/vscode-affinity-issues/</link><pubDate>Thu, 22 Feb 2024 19:43:26 +0200</pubDate><guid>https://thejiahao.github.io/posts/vscode-affinity-issues/</guid><description>&lt;img src="https://thejiahao.github.io/posts/vscode-affinity-issues/vscode_logo.svg" alt="Featured image of post Visual Studio Code extensions.experimental.affinity 兼容性问题" />&lt;p>本文汇总了 Visual Studio Code 实验性设置 &lt;code>extensions.experimental.affinity&lt;/code> 的兼容性问题。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全和性能</title><link>https://thejiahao.github.io/posts/nushell-setup/</link><pubDate>Sat, 04 May 2024 09:34:35 +0300</pubDate><guid>https://thejiahao.github.io/posts/nushell-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/nushell-setup/img/nushell_logo.svg" alt="Featured image of post Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全和性能" />&lt;p>本文中使用 Scoop 的部分也可以用其他包管理器替代。
+配置部分除了 Windows 特有的 &lt;code>%APPDATA%&lt;/code> 和 &lt;code>%USERPROFILE%&lt;/code> 环境变量以外也适用于其他平台。&lt;/p>
+&lt;h2 id="功能展示">&lt;a href="#%e5%8a%9f%e8%83%bd%e5%b1%95%e7%a4%ba" class="header-anchor">&lt;/a>功能展示
+&lt;/h2>&lt;h3 id="语法高亮--自动补全">&lt;a href="#%e8%af%ad%e6%b3%95%e9%ab%98%e4%ba%ae--%e8%87%aa%e5%8a%a8%e8%a1%a5%e5%85%a8" class="header-anchor">&lt;/a>语法高亮 + 自动补全
+&lt;/h3>&lt;div class="video-wrapper">
+&lt;video
+controls
+src="img/nushell_completion.webm"
+autoplay
+>
+&lt;p>
+Your browser doesn't support HTML5 video. Here is a
+&lt;a href="img/nushell_completion.webm">link to the video&lt;/a> instead.
+&lt;/p>
+&lt;/video>
+&lt;/div>
+&lt;h3 id="nushell-管道">&lt;a href="#nushell-%e7%ae%a1%e9%81%93" class="header-anchor">&lt;/a>Nushell 管道
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; ls | &lt;span style="color:#c678dd">select&lt;/span> name &lt;span style="color:#e5c07b">type&lt;/span> size | where size &amp;gt; 1KB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>╭────┬─────────────────────┬──────┬──────────╮
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ # │ name │ type │ size │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>├────┼─────────────────────┼──────┼──────────┤
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 0 │ .github │ dir │ 4.1 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 1 │ CODE_OF_CONDUCT.md │ file │ 3.4 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 2 │ CONTRIBUTING.md │ file │ 11.4 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 3 │ Cargo.lock │ file │ 168.3 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 4 │ Cargo.toml │ file │ 9.1 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 5 │ LICENSE │ file │ 1.1 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 6 │ README.md │ file │ 12.2 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 7 │ crates │ dir │ 12.3 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 8 │ rust-toolchain.toml │ file │ 1.1 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 9 │ scripts │ dir │ 4.1 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 10 │ src │ dir │ 4.1 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 11 │ tests │ dir │ 4.1 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 12 │ toolkit.nu │ file │ 17.6 KB │
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>╰────┴─────────────────────┴──────┴──────────╯
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装-nushell">&lt;a href="#%e5%ae%89%e8%a3%85-nushell" class="header-anchor">&lt;/a>安装 Nushell
+&lt;/h2>&lt;p>安装 Nushell：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>scoop install nu
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nushell 的默认配置文件目录为 &lt;code>%APPDATA%/nushell&lt;/code>，但可通过设置环境变量 &lt;code>XDG_CONFIG_HOME&lt;/code> 来改变 &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。
+笔者偏好将配置文件集中到 &lt;code>~/.config&lt;/code> 并通过 Git 管理，所以将 &lt;code>XDG_CONFIG_HOME&lt;/code> 设置为 &lt;code>%USERPROFILE%/.config&lt;/code>。
+Nushell 的配置文件路径可通过 &lt;code>$nu.config-path&lt;/code> 确定：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; &lt;span style="color:#e06c75">$nu&lt;/span>.config-path
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>C:\Users\&amp;lt;user&amp;gt;\.config\nushell\config.nu
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nushell 的配置保存在 &lt;code>$env.config&lt;/code> &lt;a class="link" href="https://www.nushell.sh/zh-CN/book/types_of_data.html#%E8%AE%B0%E5%BD%95" target="_blank" rel="noopener"
+>记录&lt;/a>中。
+启动时，Nushell 会加载 &lt;code>config.nu&lt;/code> 配置文件，所以可以在其中修改 &lt;code>$env.config&lt;/code>。
+例如，以下设置可以隐藏 Nushell 启动时的欢迎文本：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.show_banner &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#e5c07b">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>为避免覆盖之前的配置，笔者推荐单独给 &lt;code>$env.config&lt;/code> 中的每一项赋值，而不是重新给 &lt;code>$env.config&lt;/code> 赋值：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>$env.config = {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> show_banner: false
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nushell 的默认配置文件可以从 &lt;a class="link" href="https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/sample_config/default_config.nu" target="_blank" rel="noopener"
+>GitHub 仓库&lt;/a> 中找到，其更新的比 &lt;a class="link" href="https://www.nushell.sh/book/configuration.html" target="_blank" rel="noopener"
+>官方文档&lt;/a> 及时。&lt;/p>
+&lt;h3 id="语法高亮">&lt;a href="#%e8%af%ad%e6%b3%95%e9%ab%98%e4%ba%ae" class="header-anchor">&lt;/a>语法高亮
+&lt;/h3>&lt;p>以下设置可以高亮外部命令，颜色仿照 Zsh 的语法高亮插件 &lt;a class="link" href="https://github.com/z-shell/F-Sy-H" target="_blank" rel="noopener"
+>F-Sy-H&lt;/a> 的默认配置。
+&lt;code>$PATH&lt;/code> 环境变量中路径很多时，语法高亮可能有明显延迟 &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.highlight_resolved_externals &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#e5c07b">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.color_config &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#56b6c2">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shape_external_resolved: green
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shape_internalcall: green
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shape_external: white
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shape_externalarg: white
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shape_string: white
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shape_directory: purple_underline
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> shape_filepath: purple_underline
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#56b6c2">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="自动补全">&lt;a href="#%e8%87%aa%e5%8a%a8%e8%a1%a5%e5%85%a8" class="header-anchor">&lt;/a>自动补全
+&lt;/h3>&lt;p>许多命令的自动补全都可以用 &lt;a class="link" href="https://github.com/sigoden/argc-completions" target="_blank" rel="noopener"
+>Argc-completions&lt;/a> 实现，其支持多种 shell 和 &lt;a class="link" href="https://github.com/sigoden/argc-completions/blob/main/MANIFEST.md" target="_blank" rel="noopener"
+>上千种命令&lt;/a>。&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>安装 Git 并重启终端&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>scoop install git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>克隆 Git 仓库，笔者偏好将 Git 仓库集中至 &lt;code>~/repositories&lt;/code> 目录中&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>git clone https://github.com/sigoden/argc-completions.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>进入 argc-completions 目录&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">cd&lt;/span> argc-completions
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>安装依赖&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>bash ./scripts/download-tools.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>将以下命令生成的配置（用```围起来的部分）复制到 &lt;code>$nu.config-path&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>bash ./scripts/setup-shell.sh nushell
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;p>由于 Argc-completions 的 Git 补全非常慢，笔者推荐使用 &lt;a class="link" href="https://github.com/nushell/nu_scripts" target="_blank" rel="noopener"
+>nu_scripts&lt;/a> 仓库中的 &lt;a class="link" href="https://github.com/nushell/nu_scripts/blob/main/custom-completions/git/git-completions.nu" target="_blank" rel="noopener"
+>Git 补全脚本&lt;/a>。&lt;/p>
+&lt;p>下载 Git 补全脚本并保存到任意路径，例如 &lt;code>~/.config/nushell/completions/git-completions.nu&lt;/code> 并在 &lt;code>config.nu&lt;/code> 中 Argc-completions 配置之后添加以下命令以导入 Git 补全：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span># Argc-completions 配置...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>use ~/.config/nushell/completions/git-completions.nu *
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>以上配置必须在 Argc-completions 之后，不然无法取代 Argc-completions 的 Git 补全。&lt;/p>
+&lt;p>如果自动补全很慢，可以在 &lt;code>$nu.config-path&lt;/code> 中限制补全结果数量，例如限制为 20（默认为 100）。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.completions.external.max_results &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#d19a66">20&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="argc-1170-补全失效的临时解决办法">&lt;a href="#argc-1170-%e8%a1%a5%e5%85%a8%e5%a4%b1%e6%95%88%e7%9a%84%e4%b8%b4%e6%97%b6%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95" class="header-anchor">&lt;/a>Argc 1.17.0 补全失效的临时解决办法
+&lt;/h4>&lt;p>Argc 1.17.0 版本生成的 &lt;code>argc-completions.nu&lt;/code> 文件有问题，导致补全失效。
+该问题已在 &lt;a class="link" href="https://github.com/sigoden/argc/pull/325" target="_blank" rel="noopener"
+>PR#325&lt;/a> 中修复，但作者还没发布新版本。&lt;/p>
+&lt;p>手动将 Argc-completions 中的 &lt;code>argc --argc-completions nushell ...&lt;/code> 注释掉，并将 &lt;code>argc-completions/tmp/argc-completions.nu&lt;/code> 替换为以下内容即可临时解决问题：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>def _argc_completer [args: list&amp;lt;string&amp;gt;] {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> argc --argc-compgen nushell &amp;#34;&amp;#34; ...$args
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> | split row &amp;#34;\n&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> | each { |line| $line | split column &amp;#34;\t&amp;#34; value description }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> | flatten
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>let external_completer = {|spans|
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> _argc_completer $spans
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$env.config.completions.external.enable = true
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$env.config.completions.external.completer = $external_completer
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="其他配置">&lt;a href="#%e5%85%b6%e4%bb%96%e9%85%8d%e7%bd%ae" class="header-anchor">&lt;/a>其他配置
+&lt;/h3>&lt;p>以下为笔者的其他配置：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.show_banner &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#e5c07b">false&lt;/span> &lt;span style="color:#7f848e"># 隐藏欢迎文本&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.shell_integration &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#e5c07b">true&lt;/span> &lt;span style="color:#7f848e"># VS Code 集成&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.filesize.metric &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#e5c07b">true&lt;/span> &lt;span style="color:#7f848e"># 使用公制单位 1 KB = 1000 B、1 MB = 1e6 B 等&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.history.max_size &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#d19a66">10000&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">$env&lt;/span>.config.history.file_format &lt;span style="color:#56b6c2">=&lt;/span> &lt;span style="color:#98c379">&amp;#34;sqlite&amp;#34;&lt;/span> &lt;span style="color:#7f848e"># 将历史记录保存到数据库，而不是 txt 文件&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="测速">&lt;a href="#%e6%b5%8b%e9%80%9f" class="header-anchor">&lt;/a>测速
+&lt;/h2>&lt;p>配置好后依然使用 &lt;a class="link" href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener"
+>hyperfine&lt;/a> 测速，测试环境为 Windows 11 23H2。&lt;/p>
+&lt;h3 id="nushell">&lt;a href="#nushell" class="header-anchor">&lt;/a>Nushell
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;nu -l -i -c exit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: nu -l -i -c exit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 46.2 ms ± 1.5 ms [User: 13.4 ms, System: 8.9 ms]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range (min … max): 43.4 ms … 51.2 ms 42 runs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>参数与&lt;a class="link" href="https://thejiahao.github.io/posts/zsh-zim-setup/" >Zim 配置文章&lt;/a>中一致。&lt;/p>
+&lt;h3 id="powershell-742不读取配置">&lt;a href="#powershell-742%e4%b8%8d%e8%af%bb%e5%8f%96%e9%85%8d%e7%bd%ae" class="header-anchor">&lt;/a>PowerShell 7.4.2（不读取配置）
+&lt;/h3>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&amp;gt; hyperfine --warmup &lt;span style="color:#d19a66">3&lt;/span> &lt;span style="color:#98c379">&amp;#34;pwsh -NoProfile -l -i -c exit&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Benchmark 1: pwsh -NoProfile -l -i -c exit
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Time (mean ± σ): 190.0 ms ± 2.3 ms [User: 2.7 ms, System: 2.5 ms]
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Range (min … max): 187.2 ms … 195.1 ms 14 runs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>注意到，Nushell 启动速度比 PowerShell 7 快了一个数量级。&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Configuration | Nushell, &lt;a class="link" href="https://www.nushell.sh/book/configuration.html" target="_blank" rel="noopener"
+>https://www.nushell.sh/book/configuration.html&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>add shape ExternalResolved to show found externals via syntax highlighting in the repl, &lt;a class="link" href="https://github.com/nushell/nushell/pull/11135" target="_blank" rel="noopener"
+>https://github.com/nushell/nushell/pull/11135&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Visual Studio Code extensions.experimental.affinity 兼容性问题</title><link>https://thejiahao.github.io/posts/vscode-affinity-issues/</link><pubDate>Thu, 22 Feb 2024 19:43:26 +0200</pubDate><guid>https://thejiahao.github.io/posts/vscode-affinity-issues/</guid><description>&lt;img src="https://thejiahao.github.io/posts/vscode-affinity-issues/vscode_logo.svg" alt="Featured image of post Visual Studio Code extensions.experimental.affinity 兼容性问题" />&lt;p>本文汇总了 Visual Studio Code 实验性设置 &lt;code>extensions.experimental.affinity&lt;/code> 的兼容性问题。&lt;/p>
 &lt;h2 id="vscodemarkdown-language-features">&lt;a href="#vscodemarkdown-language-features" class="header-anchor">&lt;/a>&lt;code>vscode.markdown-language-features&lt;/code>
 &lt;/h2>&lt;ul>
 &lt;li>Markdown Footnotes 无法显示脚注&lt;/li>
