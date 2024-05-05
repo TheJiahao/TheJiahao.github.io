@@ -19,7 +19,9 @@ description: >-
     Zim 是 Zsh 的插件管理器，其主要特点为极快的速度。
     本文介绍了如何配置 Zim 以及推荐了几款笔者使用的 Zsh 插件。
 image: zimfw_logo.svg
-license:
+license: >-
+    内容遵循 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)。
+    封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并以 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布，修改了背景颜色和图标位置。
 
 hidden: false
 math:
@@ -27,7 +29,7 @@ comments: true
 draft: false
 ---
 
-## 安装 Zim[^cover]
+## 安装 Zim
 
 笔者偏好将配置整理到不同文件并在 `.zshrc` 中 `source`，而 Zim 的自动安装脚本会在 `.zshrc` 添加一大段内容，所以选择手动安装。
 
@@ -183,8 +185,6 @@ appendWindowsPath = false
 
 这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
 如果需要在 WSL 中运行 Windows 中的程序，可以将路径以 WSL 下的 [格式](https://learn.microsoft.com/zh-cn/windows/wsl/filesystems) 添加到 Zsh 的 `PATH` 环境变量。
-
-[^cover]: 封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并以 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布，修改了背景颜色和图标位置
 
 [^zim_installation]: Installation, https://zimfw.sh/docs/install/
 
