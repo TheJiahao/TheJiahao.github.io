@@ -7,3 +7,4 @@ public/**
 *.md
 db.json
 .github/workflows
+.zhlintrc
