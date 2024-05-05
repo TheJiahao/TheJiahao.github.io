@@ -72,7 +72,7 @@ build:
 
 ## 安装 Nushell
 
-安装 Nushell：
+安装 [Nushell](https://www.nushell.sh/zh-CN/)：
 
 ```sh
 scoop install nu
