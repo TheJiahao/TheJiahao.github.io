@@ -12,7 +12,7 @@ tags:
     - Markdown
     - Git
 description:
-image: vscode_logo.svg
+image: img/vscode_logo.svg
 license:
 
 hidden: false

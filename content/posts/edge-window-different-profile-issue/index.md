@@ -15,7 +15,7 @@ tags:
     - JavaScript Debugger
     - Windows
 description:
-image: edge_logo.svg
+image: img/edge_logo.svg
 license:
 
 hidden: false
@@ -33,9 +33,9 @@ Visual Studio Code 内置的 JavaScript Debugger 调试用的 Edge 配置文件�
 
 从任务栏新建的 Edge 窗口使用的是其他配置文件。
 
-![从任务栏中新建 Edge 窗口](edge_create_new_window.webp)
+![从任务栏中新建 Edge 窗口](img/edge_create_new_window.webp)
 
-![新窗口使用不同配置文件](edge_new_window.webp)
+![新窗口使用不同配置文件](img/edge_new_window.webp)
 
 ## 原因
 
@@ -46,6 +46,6 @@ Visual Studio Code 内置的 JavaScript Debugger 调试用的 Edge 配置文件�
 1. 将 `%LOCALAPPDATA%\Microsoft\Edge\User Data\Default` 中的 Default 配置文件改名，例如 `Profile 1`
 2. 将任务栏中快捷方式的启动参数改为新配置文件的名称，例如 `--profile-directory="Profile 1"`
 
-    ![查看任务栏快捷方式的属性](edge_shortcut_properties.webp)
+    ![查看任务栏快捷方式的属性](img/edge_shortcut_properties.webp)
 
-    ![修改启动参数](edge_shortcut_change_properties.webp)
+    ![修改启动参数](img/edge_shortcut_change_properties.webp)
