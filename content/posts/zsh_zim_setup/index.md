@@ -23,6 +23,12 @@ license: >-
     内容遵循 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)。
     封面中的 [Logo](https://zimfw.sh) 由 Derek Mohr 创作，并以 [CC BY NC SA 4.0 协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 发布，修改了背景颜色和图标位置。
 
+links:
+    - title: Zim
+      description: Modular, customizable, and blazing fast Zsh framework
+      website: https://zimfw.sh/
+      image: https://zimfw.sh/images/favicons/apple-touch-icon.png
+
 hidden: false
 math:
 comments: true
