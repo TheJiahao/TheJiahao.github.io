@@ -2,8 +2,12 @@
 title: "关于"
 layout: "about"
 slug: "about"
+
 hidden: true
 comments: false
+readingTime: false
+license: false
+
 menu:
     main:
         weight: 100
