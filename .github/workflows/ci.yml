@@ -16,11 +16,11 @@ jobs:
               uses: ./.github/workflows/setup-action
 
             - name: Format code
-              run: bun run format
+              run: pnpm run format
 
             - name: Commit and push changes
               uses: EndBug/add-and-commit@v9
               with:
                   author_name: github-actions[bot]
                   author_email: github-ations[bot]@users.noreply.github.com
-                  message: "style: Formatc code"
+                  message: "style: Format code"
