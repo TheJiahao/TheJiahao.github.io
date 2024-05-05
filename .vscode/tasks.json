@@ -15,6 +15,13 @@
             "problemMatcher": []
         },
         {
+            "label": "Server (production)",
+            "type": "shell",
+            "command": "hugo server --environment production",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
             "label": "Build",
             "type": "shell",
             "command": "hugo --environment production",
