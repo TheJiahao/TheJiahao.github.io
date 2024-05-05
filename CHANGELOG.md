@@ -1,5 +1,37 @@
 # Changelog
 
+## [2.6.0](https://github.com/TheJiahao/blog/compare/v2.5.0...v2.6.0) (2024-05-05)
+
+
+### Features
+
+* **accessibility:** Add alt for link images ([bb408a0](https://github.com/TheJiahao/blog/commit/bb408a02907124d429331b3541ee07f59171172e))
+* Add link to Zim homepage in zsh-zim-setup ([c8108a8](https://github.com/TheJiahao/blog/commit/c8108a8f098ce7a3cb8b7a52bfb032f1aa1cfc8e))
+* Hide reading time and license in about page ([cd044fb](https://github.com/TheJiahao/blog/commit/cd044fbef3920b545036f4e759a211375179d93b))
+* **nushell-setup:** Add completion.tape ([38d5435](https://github.com/TheJiahao/blog/commit/38d5435cc6e9ae29676fb0096293d400ab541f22))
+* **post:** Add initial Nushell config post ([9e7d807](https://github.com/TheJiahao/blog/commit/9e7d8072f52d0bed17917c54b1badd6d0c3c6573))
+* **post:** Add nushell feature preview GIF and argc workaround ([32835ae](https://github.com/TheJiahao/blog/commit/32835aed2a0080fdc5c03f65b8b458044daae215))
+* **post:** Add nushell sample config ([aefb5ce](https://github.com/TheJiahao/blog/commit/aefb5ce775fceec07bbb133574fcfe87a3348930))
+* **post:** Mark nushell-setup not draft ([599ca3c](https://github.com/TheJiahao/blog/commit/599ca3ca2cbf01173d4efef7b92cf7da9c884889))
+* **sidebar:** Add link to gravatar profile ([f105b8f](https://github.com/TheJiahao/blog/commit/f105b8f6e86427820393412069c5988a009892fe))
+
+
+### Bug Fixes
+
+* **ci:** Change prettierrc.mjs to .prettierrc ([930b724](https://github.com/TheJiahao/blog/commit/930b724c8f421a5278a637d007837f997afd0a38))
+* **ci:** Run bun instead of yarn ([b903072](https://github.com/TheJiahao/blog/commit/b903072af512e87de6a8aa9e71162bf4ef236b4a))
+* Ignore .zhlintrc from Prettier ([9c923f2](https://github.com/TheJiahao/blog/commit/9c923f23e834a3340418c17b331549cd878aa693))
+* Ignore node_modules from markdownlint ([4203c67](https://github.com/TheJiahao/blog/commit/4203c679df5255acfb366486070f26709308ab8c))
+* **post:** Nushell demovideo not published ([8022127](https://github.com/TheJiahao/blog/commit/8022127f8f71124985c4ec2459608d3cbbf30bd7))
+* **post:** Replace nushell GIF with WebM video ([83bc53c](https://github.com/TheJiahao/blog/commit/83bc53c8aafecf1290bd8bf83e983da1c809d646))
+* **post:** Update Nushell config format ([2230ad4](https://github.com/TheJiahao/blog/commit/2230ad464f63f5531004475e42d5f9e7f8809879))
+
+
+### Performance Improvements
+
+* **avatar:** Serve avatar as webp ([2c30235](https://github.com/TheJiahao/blog/commit/2c3023555d23ec0e2ffa54da490dfc888611d86b))
+* Preconnect to JSDelivr ([704ff8d](https://github.com/TheJiahao/blog/commit/704ff8d8c2709f4bbe9b6ae91318fc4d234ca939))
+
 ## [2.5.0](https://github.com/TheJiahao/blog/compare/v2.4.0...v2.5.0) (2024-04-20)
 
 ### Features
