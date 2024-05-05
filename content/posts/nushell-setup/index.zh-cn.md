@@ -229,7 +229,7 @@ Benchmark 1: nu -l -i -c exit
   Range (min … max):    43.4 ms …  51.2 ms    42 runs
 ```
 
-参数与 [Zim 配置文章]({{< relref "/posts/zsh_zim_setup/index.md" >}}) 中一致。
+参数与 [Zim 配置文章]({{< relref "/posts/zsh-zim-setup" >}}) 中一致。
 
 ### PowerShell 7.4.2（不读取配置）
 
