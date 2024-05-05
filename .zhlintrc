@@ -1,5 +1,4 @@
 {
-  "preset": "default",
-  "rules": {
-  }
+    "preset": "default",
+    "rules": {},
 }
