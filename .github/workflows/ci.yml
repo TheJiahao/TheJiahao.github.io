@@ -1,26 +1,26 @@
 name: CI
 on:
-  workflow_call:
+    workflow_call:
 
 jobs:
-  Format:
-    runs-on: ubuntu-latest
+    Format:
+        runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
+        permissions:
+            contents: write
 
-    steps:
-      - uses: actions/checkout@v4
+        steps:
+            - uses: actions/checkout@v4
 
-      - name: Set up
-        uses: ./.github/workflows/setup-action
+            - name: Set up
+              uses: ./.github/workflows/setup-action
 
-      - name: Format code
-        run: bun run format
+            - name: Format code
+              run: bun run format
 
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions[bot]
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: "style: Format code"
+            - name: Commit and push changes
+              uses: EndBug/add-and-commit@v9
+              with:
+                  author_name: github-actions[bot]
+                  author_email: github-ations[bot]@users.noreply.github.com
+                  message: "style: Formatc code"

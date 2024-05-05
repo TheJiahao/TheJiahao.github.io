@@ -1,37 +1,37 @@
 name: Indexing
 on:
-  schedule:
-    - cron: "0 1 * * *"
-  workflow_dispatch:
+    schedule:
+        - cron: "0 1 * * *"
+    workflow_dispatch:
 
 jobs:
-  indexnow:
-    name: Submit URLs to IndexNow
-    runs-on: ubuntu-latest
+    indexnow:
+        name: Submit URLs to IndexNow
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Submit URLs to IndexNow
-        uses: bojieyang/indexnow-action@v2
-        with:
-          sitemap-location: ${{ vars.SITE_URL }}/sitemap.xml
-          key: ${{ secrets.INDEXNOW_KEY }}
-          key-location: ${{ vars.SITE_URL }}/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
-          failure-strategy: error
-          endpoint: api.indexnow.org
+        steps:
+            - name: Submit URLs to IndexNow
+              uses: bojieyang/indexnow-action@v2
+              with:
+                  sitemap-location: ${{ vars.SITE_URL }}/sitemap.xml
+                  key: ${{ secrets.INDEXNOW_KEY }}
+                  key-location: ${{ vars.SITE_URL }}/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
+                  failure-strategy: error
+                  endpoint: api.indexnow.org
 
-  google-indexing:
-    name: Submit URLs to Google
-    runs-on: ubuntu-latest
-    env:
-      SITE_URL: ${{ VARS.SITE_URL }}
-      GIS_CLIENT_EMAIL: ${{ secrets.GIS_CLIENT_EMAIL }}
-      GIS_PRIVATE_KEY: ${{ secrets.GIS_PRIVATE_KEY }}
+    google-indexing:
+        name: Submit URLs to Google
+        runs-on: ubuntu-latest
+        env:
+            SITE_URL: ${{ VARS.SITE_URL }}
+            GIS_CLIENT_EMAIL: ${{ secrets.GIS_CLIENT_EMAIL }}
+            GIS_PRIVATE_KEY: ${{ secrets.GIS_PRIVATE_KEY }}
 
-    steps:
-      - uses: actions/checkout@v4
+        steps:
+            - uses: actions/checkout@v4
 
-      - name: Set up
-        uses: ./.github/workflows/setup-action
+            - name: Set up
+              uses: ./.github/workflows/setup-action
 
-      - name: Submit URLs to Google
-        run: bun run index
+            - name: Submit URLs to Google
+              run: bun run index
