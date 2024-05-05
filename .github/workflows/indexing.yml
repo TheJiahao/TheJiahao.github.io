@@ -34,4 +34,4 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Submit URLs to Google
-        run: yarn run index
+        run: bun run index

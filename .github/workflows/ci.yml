@@ -16,7 +16,7 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Format code
-        run: yarn run format
+        run: bun run format
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
