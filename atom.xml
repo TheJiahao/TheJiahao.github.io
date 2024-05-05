@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全和性能</title><link>https://thejiahao.github.io/posts/nushell-setup/</link><pubDate>Sat, 04 May 2024 09:34:35 +0300</pubDate><guid>https://thejiahao.github.io/posts/nushell-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/nushell-setup/img/nushell_logo.svg" alt="Featured image of post Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全和性能" />&lt;p>本文中使用 Scoop 的部分也可以用其他包管理器替代。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jiahao 的博客</title><link>https://thejiahao.github.io/</link><description>Recent content on Jiahao 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://thejiahao.github.io/atom.xml" rel="self" type="application/rss+xml"/><item><title>Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全和性能</title><link>https://thejiahao.github.io/posts/nushell-setup/</link><pubDate>Sat, 04 May 2024 09:34:35 +0300</pubDate><guid>https://thejiahao.github.io/posts/nushell-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/nushell-setup/img/nushell_logo_cover.svg" alt="Featured image of post Windows 下使用 Nushell 替代 PowerShell⸺语法高亮、自动补全和性能" />&lt;p>本文中使用 Scoop 的部分也可以用其他包管理器替代。
 配置部分除了 Windows 特有的 &lt;code>%APPDATA%&lt;/code> 和 &lt;code>%USERPROFILE%&lt;/code> 环境变量以外也适用于其他平台。&lt;/p>
 &lt;h2 id="功能展示">&lt;a href="#%e5%8a%9f%e8%83%bd%e5%b1%95%e7%a4%ba" class="header-anchor">&lt;/a>功能展示
 &lt;/h2>&lt;h3 id="语法高亮--自动补全">&lt;a href="#%e8%af%ad%e6%b3%95%e9%ab%98%e4%ba%ae--%e8%87%aa%e5%8a%a8%e8%a1%a5%e5%85%a8" class="header-anchor">&lt;/a>语法高亮 + 自动补全
@@ -35,7 +35,8 @@ instead.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>│ 12 │ toolkit.nu │ file │ 17.6 KB │
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>╰────┴─────────────────────┴──────┴──────────╯
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装-nushell">&lt;a href="#%e5%ae%89%e8%a3%85-nushell" class="header-anchor">&lt;/a>安装 Nushell
-&lt;/h2>&lt;p>安装 Nushell：&lt;/p>
+&lt;/h2>&lt;p>安装 &lt;a class="link" href="https://www.nushell.sh/zh-CN/" target="_blank" rel="noopener"
+>Nushell&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>scoop install nu
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nushell 的默认配置文件目录为 &lt;code>%APPDATA%/nushell&lt;/code>，但可通过设置环境变量 &lt;code>XDG_CONFIG_HOME&lt;/code> 来改变 &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>。
 笔者偏好将配置文件集中到 &lt;code>~/.config&lt;/code> 并通过 Git 管理，所以将 &lt;code>XDG_CONFIG_HOME&lt;/code> 设置为 &lt;code>%USERPROFILE%/.config&lt;/code>。
@@ -171,9 +172,9 @@ Nushell 的配置文件路径可通过 &lt;code>$nu.config-path&lt;/code> 确定
 &lt;h2 id="biernermarkdown-mermaid">&lt;a href="#biernermarkdown-mermaid" class="header-anchor">&lt;/a>&lt;code>bierner.markdown-mermaid&lt;/code>
 &lt;/h2>&lt;ul>
 &lt;li>Mermaid 图表有时不显示&lt;/li>
-&lt;/ul></description></item><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/zsh-zim-setup/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/zsh-zim-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/zsh-zim-setup/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zimcover">&lt;a href="#%e5%ae%89%e8%a3%85-zimcover" class="header-anchor">&lt;/a>安装 Zim&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
+&lt;/ul></description></item><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/zsh-zim-setup/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/zsh-zim-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/zsh-zim-setup/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zim">&lt;a href="#%e5%ae%89%e8%a3%85-zim" class="header-anchor">&lt;/a>安装 Zim
 &lt;/h2>&lt;p>笔者偏好将配置整理到不同文件并在 &lt;code>.zshrc&lt;/code> 中 &lt;code>source&lt;/code>，而 Zim 的自动安装脚本会在 &lt;code>.zshrc&lt;/code> 添加一大段内容，所以选择手动安装。&lt;/p>
-&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#56b6c2">=&lt;/span>~/.zim
@@ -301,7 +302,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;li>&lt;code>zimfw update&lt;/code>：更新所有插件&lt;/li>
 &lt;/ul>
 &lt;h2 id="解决-wsl-下语法高亮的延迟">&lt;a href="#%e8%a7%a3%e5%86%b3-wsl-%e4%b8%8b%e8%af%ad%e6%b3%95%e9%ab%98%e4%ba%ae%e7%9a%84%e5%bb%b6%e8%bf%9f" class="header-anchor">&lt;/a>解决 WSL 下语法高亮的延迟
-&lt;/h2>&lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>。&lt;/p>
+&lt;/h2>&lt;p>在 &lt;code>/etc/wsl.conf&lt;/code> 中添加以下内容以取消加载 Windows 的 &lt;code>PATH&lt;/code> 环境变量&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#e06c75">interop&lt;/span>]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">appendWindowsPath&lt;/span> = &lt;span style="color:#e5c07b">false&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这同时也会导致 WSL 下无法直接运行 Windows 中的程序。
@@ -311,17 +312,12 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;hr>
 &lt;ol>
 &lt;li id="fn:1">
-&lt;p>封面中的 &lt;a class="link" href="https://zimfw.sh" target="_blank" rel="noopener"
->Logo&lt;/a> 由 Derek Mohr 创作，并以 &lt;a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener"
->CC BY NC SA 4.0 协议&lt;/a> 发布，修改了背景颜色和图标位置&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;p>Installation, &lt;a class="link" href="https://zimfw.sh/docs/install/" target="_blank" rel="noopener"
+>https://zimfw.sh/docs/install/&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li id="fn:2">
-&lt;p>Installation, &lt;a class="link" href="https://zimfw.sh/docs/install/" target="_blank" rel="noopener"
->https://zimfw.sh/docs/install/&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3">
 &lt;p>syntax highlighting is super slow in WSL2, &lt;a class="link" href="https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603" target="_blank" rel="noopener"
->https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+>https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;/div></description></item><item><title>解决任务栏新建的 Edge 窗口使用不同配置文件的问题</title><link>https://thejiahao.github.io/posts/edge-window-different-profile-issue/</link><pubDate>Mon, 25 Dec 2023 09:30:20 +0200</pubDate><guid>https://thejiahao.github.io/posts/edge-window-different-profile-issue/</guid><description>&lt;img src="https://thejiahao.github.io/posts/edge-window-different-profile-issue/edge_logo.svg" alt="Featured image of post 解决任务栏新建的 Edge 窗口使用不同配置文件的问题" />&lt;p>Visual Studio Code 内置的 JavaScript Debugger 调试用的 Edge 配置文件和 Edge 默认的配置文件冲突导致任务栏新建的 Edge 窗口使用的是调试用配置文件。
