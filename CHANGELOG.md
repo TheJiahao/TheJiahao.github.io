@@ -2,7 +2,6 @@
 
 ## [2.6.0](https://github.com/TheJiahao/blog/compare/v2.5.0...v2.6.0) (2024-05-05)
 
-
 ### Features
 
 * **accessibility:** Add alt for link images ([bb408a0](https://github.com/TheJiahao/blog/commit/bb408a02907124d429331b3541ee07f59171172e))
@@ -15,7 +14,6 @@
 * **post:** Mark nushell-setup not draft ([599ca3c](https://github.com/TheJiahao/blog/commit/599ca3ca2cbf01173d4efef7b92cf7da9c884889))
 * **sidebar:** Add link to gravatar profile ([f105b8f](https://github.com/TheJiahao/blog/commit/f105b8f6e86427820393412069c5988a009892fe))
 
-
 ### Bug Fixes
 
 * **ci:** Change prettierrc.mjs to .prettierrc ([930b724](https://github.com/TheJiahao/blog/commit/930b724c8f421a5278a637d007837f997afd0a38))
@@ -25,7 +23,6 @@
 * **post:** Nushell demovideo not published ([8022127](https://github.com/TheJiahao/blog/commit/8022127f8f71124985c4ec2459608d3cbbf30bd7))
 * **post:** Replace nushell GIF with WebM video ([83bc53c](https://github.com/TheJiahao/blog/commit/83bc53c8aafecf1290bd8bf83e983da1c809d646))
 * **post:** Update Nushell config format ([2230ad4](https://github.com/TheJiahao/blog/commit/2230ad464f63f5531004475e42d5f9e7f8809879))
-
 
 ### Performance Improvements
 
