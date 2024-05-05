@@ -2,6 +2,7 @@
 {{- $video_file := (.Page.Resources.GetMatch (printf "%s" $video_src)) -}}
 {{- $controls := .Get "controls" | default "true" -}}
 
+
 <div class="video-wrapper">
     <video
         src="{{- $video_file.RelPermalink -}}"
@@ -10,7 +11,9 @@
         {{ with .Get "autoplay" }}autoplay{{ end }}
         {{ with .Get "loop" }}loop{{ end }}
         {{ with .Get "muted" }}muted{{ end }}
-        {{ with .Get "disablepictureinpicture" }}disablepictureinpicture{{ end }}
+        {{ with .Get "disablepictureinpicture" }}
+            disablepictureinpicture
+        {{ end }}
 
     >
         <p>
