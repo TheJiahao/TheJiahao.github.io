@@ -15,7 +15,7 @@ description: >-
     Nushell 是一款跨平台的 shell，其支持 Linux、macOS、BSD 和 Windows，
     主要特点为结构化数据和较快的速度。
     本文介绍了如何配置 Nushell 的语法高亮和自动补全。
-image: img/nushell_logo.svg
+image: img/nushell_logo_cover.svg
 license:
 
 hidden: false
