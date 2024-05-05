@@ -1,24 +1,15 @@
 name: Set up
-description: Set up Node and Yarn
+description: Set up Bun
 inputs:
-  yarn_args:
-    description: Arguments for Yarn
+  args:
     required: false
     default: ""
 
 runs:
   using: "composite"
   steps:
-    - name: Enable corepack
-      run: corepack enable
-      shell: bash
-
-    - name: Install Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-        cache: yarn
+    - uses: oven-sh/setup-bun@v1
 
     - name: Install dependencies
-      run: yarn install ${{ inputs.yarn_args }} --immutable
+      run: bun install --frozen-lockfile ${{ inputs.args }}
       shell: bash
