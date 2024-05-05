@@ -45,7 +45,7 @@ build:
 
 ### 语法高亮 + 自动补全
 
-{{< video src="img/nushell_completion.webm" autoplay="true" >}}
+{{< video src="img/nushell_completion.webm" autoplay="true" loop="true" controls="false" disablepictureinpicture="true" >}}
 
 ### Nushell 管道
 
