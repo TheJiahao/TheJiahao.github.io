@@ -176,6 +176,11 @@ use ~/.config/nushell/completions/git-completions.nu *
 $env.config.completions.external.max_results = 20
 ```
 
+#### 使用方法
+
+默认配置下按输入命令后 <kbd>Tab</kbd> 即可生成补全，然后用方向键选择，最后按 <kbd>Enter</kbd> 就可以完成补全。
+此外，如果已经当前命令和历史记录里的命令匹配，则可以按 <kbd>→</kbd> 从历史记录补全。
+
 #### Argc 1.17.0 补全失效的临时解决办法
 
 Argc 1.17.0 版本生成的 `argc-completions.nu` 文件有问题，导致补全失效。
