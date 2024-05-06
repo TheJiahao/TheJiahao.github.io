@@ -14,13 +14,19 @@ tags:
 description: >-
     Starship 是跨 shell 的主题管理器，其支持 Zsh、Nushell、PowerShell 等。
     本文介绍了如何配置 Starship，并分享了笔者使用的主题。
-image:
+image: img/starship_logo.svg
 license:
 
 hidden: false
 math:
 comments: true
 draft: true
+
+links:
+    - title: Starship
+      description: 轻量、迅速、客制化的高颜值终端！
+      website: https://starship.rs/zh-CN/
+      image: https://raw.githubusercontent.com/starship/starship/2eb5e7e73451a8113b32fdbeca8e0c684b776e05/media/icon.svg
 ---
 
 ## 安装 Starship
