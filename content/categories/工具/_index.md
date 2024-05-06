@@ -1,6 +1,6 @@
 ---
 title: 工具
-description: 工欲善其事，必先利其器。这里收录了各种工具的配置
+description: 工欲善其事，必先利其器。这里收录了各种工具的配置。
 image: hammer_and_wrench.svg
 
 # Badge style
