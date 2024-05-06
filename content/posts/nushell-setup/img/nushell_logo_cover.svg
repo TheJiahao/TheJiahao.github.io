@@ -23,20 +23,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 -->
 
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -25 100 150">
-    <filter id="shadows">
-        <feDropShadow stdDeviation="2" flood-opacity="0.5" />
-    </filter>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -25 100 150"
+    style="filter: drop-shadow(0px 0px 5px black)">
+    <rect width="100" height="100" fill="#000000" rx="15" />
 
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" filter="url(#shadows)">
-        <rect width="100" height="100" fill="#000000" rx="15" />
-
-        <path d="M 0 0 H 4 V 4 Q 8 -0.5 13.5 -0.5 Q 20.5 -0.5 21.5 6.5 V 29 H 17 V 8 C 17 0 4.5 4 4.5 9 V 29 H 0 Z"
-            fill="#4E9A06" transform="translate(6.5,36.5)" />
-        <path
-            d="M 0 0 H 4 V 21 C 4 23.5 5.25 25.75 9.25 25.75 C 13.75 25.75 17.5 21.5 17.5 21 V 0 H 21 V 28 H 17.5 V 24 C 15.25 26 13.25 28.75 8.25 28.75 C 3.75 28.75 0 27 0 21.5 Z"
-            fill="#4E9A06" transform="translate(39.25,37)" />
-        <path d="M 0 0 L 20.5 13 V 17 L 0.25 29.75 L -1.5 27 L 17.25 15 L -2 3 Z" fill="#FFFFFF"
-            transform="translate(73.25,33)" />
-    </svg>
+    <path d="M 0 0 H 4 V 4 Q 8 -0.5 13.5 -0.5 Q 20.5 -0.5 21.5 6.5 V 29 H 17 V 8 C 17 0 4.5 4 4.5 9 V 29 H 0 Z"
+        fill="#4E9A06" transform="translate(6.5,36.5)" />
+    <path
+        d="M 0 0 H 4 V 21 C 4 23.5 5.25 25.75 9.25 25.75 C 13.75 25.75 17.5 21.5 17.5 21 V 0 H 21 V 28 H 17.5 V 24 C 15.25 26 13.25 28.75 8.25 28.75 C 3.75 28.75 0 27 0 21.5 Z"
+        fill="#4E9A06" transform="translate(39.25,37)" />
+    <path d="M 0 0 L 20.5 13 V 17 L 0.25 29.75 L -1.5 27 L 17.25 15 L -2 3 Z" fill="#FFFFFF"
+        transform="translate(73.25,33)" />
 </svg>

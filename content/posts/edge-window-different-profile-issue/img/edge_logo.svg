@@ -1,5 +1,5 @@
 <svg viewBox="0 -38.4 256 332.8" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns:xlink="http://www.w3.org/1999/xlink" style="filter: drop-shadow(1px 1px 3px hsl(212, 79%, 15%)">
     <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="58.7043" x2="236.9865" y1="177.0202"
         y2="177.0202">
         <stop offset="0" stop-color="#0c59a4" />
