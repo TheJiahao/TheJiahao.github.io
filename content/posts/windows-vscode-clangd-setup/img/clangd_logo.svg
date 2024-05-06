@@ -2,7 +2,14 @@
 <svg xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-   version="1.1" viewBox="0 -6.8194359 54.916668 81.833230" style="filter: drop-shadow(0 0 3px hsl(213, 78%, 15%))">
+   version="1.1" viewBox="0 -6.8194359 54.916668 81.833230">
+   <style>
+      :root {
+         background: linear-gradient(-45deg, hsl(213, 78%, 24%), hsl(141, 90%, 35%));
+         filter: drop-shadow(5px 5px 3vh rgba(0, 0, 0, 0.7))
+      }
+   </style>
+
    <defs id="defs2">
       <linearGradient id="linearGradient6203">
          <stop style="stop-color:#f0f8a0;stop-opacity:1" offset="0" id="stop6201" />
