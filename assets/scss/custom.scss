@@ -3,6 +3,7 @@
 */
 
 @use "math.scss";
+@import "code_block.scss";
 @import "font.scss";
 @import "colors.scss";
 @import "image.scss";
@@ -17,19 +18,4 @@
 .link {
     text-decoration: underline 2px;
     text-underline-offset: 0.25em;
-}
-
-.article-content {
-    .highlight {
-        background-color: #282c34;
-        padding: var(--card-padding);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        max-width: 100%;
-        margin: 0;
-
-        .copyCodeButton {
-            opacity: 0.5;
-        }
-    }
 }
