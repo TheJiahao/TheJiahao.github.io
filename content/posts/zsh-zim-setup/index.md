@@ -61,7 +61,7 @@ fi
 source ${ZIM_HOME}/init.zsh
 ```
 
-文件的第一行配置了 {{< link "degit" "https://github.com/Rich-Harris/degit >}} 来安装插件。
+文件的第一行配置了 {{< link "degit" "https://github.com/Rich-Harris/degit" >}} 来安装插件。
 degit 只下载 Git 仓库的最新版本，所以比直接使用 `git clone` 下载整个仓库历史快。
 
 接着在 `.zshrc` 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 `~/.config/zsh` 目录下：
