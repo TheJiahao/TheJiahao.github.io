@@ -39,7 +39,7 @@ draft: false
 
 笔者偏好将配置整理到不同文件并在 `.zshrc` 中 `source`，而 Zim 的自动安装脚本会在 `.zshrc` 添加一大段内容，所以选择手动安装。
 
-创建 `init_zim.zsh` 用于存放 Zim 配置，并添加以下内容[^zim_installation]
+创建 `init_zim.zsh` 用于存放 Zim 配置，并添加以下内容[^zim_installation]：
 
 ```shell
 zstyle ':zim:zmodule' use 'degit'
@@ -64,11 +64,7 @@ source ${ZIM_HOME}/init.zsh
 文件的第一行配置了 {{< link "degit" "https://github.com/Rich-Harris/degit >}} 来安装插件。
 degit 只下载 Git 仓库的最新版本，所以比直接使用 `git clone` 下载整个仓库历史快。
 
-```shell
-zstyle ':zim:zmodule' use 'degit'
-```
-
-接着在 `.zshrc` 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 `~/.config/zsh` 目录下
+接着在 `.zshrc` 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 `~/.config/zsh` 目录下：
 
 ```shell
 source ~/.config/zsh/init_zim.zsh
@@ -103,7 +99,7 @@ Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/
 - {{< link "utility" "https://github.com/zimfw/utility" >}}，命令缩写以及为 `ls`、`grep` 和 `less` 命令输出上色
 - {{< link "termtitle" "https://github.com/zimfw/termtitle" >}}，设置终端标题，例如设置为当前路径
 
-`.zimrc` 内容如下
+`.zimrc` 内容如下：
 
 ```shell
 zmodule z-shell/F-Sy-H
@@ -125,7 +121,7 @@ zmodule completion
 
 ## 插件设置
 
-在 `init_zim.zsh` 最后添加插件设置
+在 `init_zim.zsh` 最后添加插件设置：
 
 ```shell
 # ...
