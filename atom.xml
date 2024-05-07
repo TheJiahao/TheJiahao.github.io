@@ -178,7 +178,7 @@ Nushell 的配置文件路径可通过 &lt;code>$nu.config-path&lt;/code> 确定
 &lt;li>Mermaid 图表有时不显示&lt;/li>
 &lt;/ul></description></item><item><title>使用 Zim 配置称手且快速的 Zsh</title><link>https://thejiahao.github.io/posts/zsh-zim-setup/</link><pubDate>Fri, 05 Jan 2024 21:09:00 +0200</pubDate><guid>https://thejiahao.github.io/posts/zsh-zim-setup/</guid><description>&lt;img src="https://thejiahao.github.io/posts/zsh-zim-setup/img/zimfw_logo.svg" alt="Featured image of post 使用 Zim 配置称手且快速的 Zsh" />&lt;h2 id="安装-zim">&lt;a href="#%e5%ae%89%e8%a3%85-zim" class="header-anchor">&lt;/a>安装 Zim
 &lt;/h2>&lt;p>笔者偏好将配置整理到不同文件并在 &lt;code>.zshrc&lt;/code> 中 &lt;code>source&lt;/code>，而 Zim 的自动安装脚本会在 &lt;code>.zshrc&lt;/code> 添加一大段内容，所以选择手动安装。&lt;/p>
-&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
+&lt;p>创建 &lt;code>init_zim.zsh&lt;/code> 用于存放 Zim 配置，并添加以下内容&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#56b6c2">=&lt;/span>~/.zim
@@ -196,11 +196,12 @@ Nushell 的配置文件路径可通过 &lt;code>$nu.config-path&lt;/code> 确定
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># 加载插件&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> &lt;span style="color:#98c379">${&lt;/span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#98c379">}&lt;/span>/init.zsh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件的第一行配置了 &lt;a class="link" href="https://github.com/Rich-Harris/degit" target="_blank" rel="noopener"
->degit&lt;/a> 来安装插件。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件的第一行配置了 &lt;a class="link" href="https://github.com/Rich-Harris/degit" rel="nofollow noopener" target="_blank"
+>degit&lt;/a
+>
+来安装插件。
 degit 只下载 Git 仓库的最新版本，所以比直接使用 &lt;code>git clone&lt;/code> 下载整个仓库历史快。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zstyle &lt;span style="color:#98c379">&amp;#39;:zim:zmodule&amp;#39;&lt;/span> use &lt;span style="color:#98c379">&amp;#39;degit&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>接着在 &lt;code>.zshrc&lt;/code> 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 &lt;code>~/.config/zsh&lt;/code> 目录下&lt;/p>
+&lt;p>接着在 &lt;code>.zshrc&lt;/code> 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 &lt;code>~/.config/zsh&lt;/code> 目录下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> ~/.config/zsh/init_zim.zsh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
@@ -215,39 +216,65 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;h2 id="推荐插件">&lt;a href="#%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6" class="header-anchor">&lt;/a>推荐插件
 &lt;/h2>&lt;h3 id="必要">&lt;a href="#%e5%bf%85%e8%a6%81" class="header-anchor">&lt;/a>必要
 &lt;/h3>&lt;ul>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/input" target="_blank" rel="noopener"
->input&lt;/a>，配置按键，例如 &lt;kbd>home&lt;/kbd> 键移动到当前行的开头&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/z-shell/F-Sy-H" target="_blank" rel="noopener"
->F-Sy-H&lt;/a>，语法高亮
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/input" rel="nofollow noopener" target="_blank"
+>input&lt;/a
+>
+，配置按键，例如 &lt;kbd>home&lt;/kbd> 键移动到当前行的开头&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/z-shell/F-Sy-H" rel="nofollow noopener" target="_blank"
+>F-Sy-H&lt;/a
+>
+，语法高亮
 &lt;ul>
-&lt;li>也可以选择 &lt;a class="link" href="https://github.com/zdharma-continuum/fast-syntax-highlighting" target="_blank" rel="noopener"
->fast-syntax-highlighting&lt;/a> 或 &lt;a class="link" href="https://github.com/zsh-users/zsh-syntax-highlighting" target="_blank" rel="noopener"
->zsh-syntax-highlighting&lt;/a>，区别不大&lt;/li>
+&lt;li>也可以选择 &lt;a class="link" href="https://github.com/zdharma-continuum/fast-syntax-highlighting" rel="nofollow noopener" target="_blank"
+>fast-syntax-highlighting&lt;/a
+>
+或 &lt;a class="link" href="https://github.com/zsh-users/zsh-syntax-highlighting" rel="nofollow noopener" target="_blank"
+>zsh-syntax-highlighting&lt;/a
+>
+，区别不大&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener"
->zsh-autosuggestions&lt;/a>，在终端显示命令建议&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="noopener"
->zsh-completions&lt;/a>，许多外部命令的自动补全&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-history-substring-search" target="_blank" rel="noopener"
->zsh-history-substring-search&lt;/a>，使用方向键搜索命令历史记录&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-autosuggestions" rel="nofollow noopener" target="_blank"
+>zsh-autosuggestions&lt;/a
+>
+，在终端显示命令建议&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-completions" rel="nofollow noopener" target="_blank"
+>zsh-completions&lt;/a
+>
+，许多外部命令的自动补全&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zsh-users/zsh-history-substring-search" rel="nofollow noopener" target="_blank"
+>zsh-history-substring-search&lt;/a
+>
+，使用方向键搜索命令历史记录&lt;/li>
 &lt;/ul>
 &lt;h3 id="可选">&lt;a href="#%e5%8f%af%e9%80%89" class="header-anchor">&lt;/a>可选
 &lt;/h3>&lt;ul>
-&lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/history" target="_blank" rel="noopener"
->history&lt;/a>，命令历史相关设置，比直接使用 &lt;code>setopt&lt;/code> 方便和快速&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found" target="_blank" rel="noopener"
->command-not-found&lt;/a>，输入不存在的命令时提示安装命令&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo" target="_blank" rel="noopener"
->sudo&lt;/a>，双击 &lt;kbd>esc&lt;/kbd> 时在命令前添加 &lt;code>sudo&lt;/code>&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/completion" target="_blank" rel="noopener"
->completion&lt;/a>，自动补全相关设置&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/utility" target="_blank" rel="noopener"
->utility&lt;/a>，命令缩写以及为 &lt;code>ls&lt;/code>、&lt;code>grep&lt;/code> 和 &lt;code>less&lt;/code> 命令输出上色&lt;/li>
-&lt;li>&lt;a class="link" href="https://github.com/zimfw/termtitle" target="_blank" rel="noopener"
->termtitle&lt;/a>，设置终端标题，例如设置为当前路径&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/history" rel="nofollow noopener" target="_blank"
+>history&lt;/a
+>
+，命令历史相关设置，比直接使用 &lt;code>setopt&lt;/code> 方便和快速&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found" rel="nofollow noopener" target="_blank"
+>command-not-found&lt;/a
+>
+，输入不存在的命令时提示安装命令&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo" rel="nofollow noopener" target="_blank"
+>sudo&lt;/a
+>
+，双击 &lt;kbd>esc&lt;/kbd> 时在命令前添加 &lt;code>sudo&lt;/code>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/completion" rel="nofollow noopener" target="_blank"
+>completion&lt;/a
+>
+，自动补全相关设置&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/utility" rel="nofollow noopener" target="_blank"
+>utility&lt;/a
+>
+，命令缩写以及为 &lt;code>ls&lt;/code>、&lt;code>grep&lt;/code> 和 &lt;code>less&lt;/code> 命令输出上色&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/zimfw/termtitle" rel="nofollow noopener" target="_blank"
+>termtitle&lt;/a
+>
+，设置终端标题，例如设置为当前路径&lt;/li>
 &lt;/ul>
-&lt;p>&lt;code>.zimrc&lt;/code> 内容如下&lt;/p>
+&lt;p>&lt;code>.zimrc&lt;/code> 内容如下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>zmodule z-shell/F-Sy-H
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule zsh-users/zsh-history-substring-search
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule zsh-users/zsh-autosuggestions
@@ -263,7 +290,7 @@ Zim 内置插件可以参考官网上的 &lt;a class="link" href="https://zimfw.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>zmodule completion
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>安装太多插件可能会拖慢 Zsh 速度，所以建议读者只安装必要的插件。&lt;/p>
 &lt;h2 id="插件设置">&lt;a href="#%e6%8f%92%e4%bb%b6%e8%ae%be%e7%bd%ae" class="header-anchor">&lt;/a>插件设置
-&lt;/h2>&lt;p>在 &lt;code>init_zim.zsh&lt;/code> 最后添加插件设置&lt;/p>
+&lt;/h2>&lt;p>在 &lt;code>init_zim.zsh&lt;/code> 最后添加插件设置：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#abb2bf;background-color:#282c34;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#7f848e"># ...&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e5c07b">source&lt;/span> &lt;span style="color:#98c379">${&lt;/span>&lt;span style="color:#e06c75">ZIM_HOME&lt;/span>&lt;span style="color:#98c379">}&lt;/span>/init.zsh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
