@@ -1,4 +1,6 @@
 {{- $text := .Get "text" | default (.Get 0) -}}
 {{- $link := .Get "link" | default (.Get 1) -}}
 {{- $rel := .Get "rel" | default "nofollow" -}}
-<a class="link" href="{{ $link }}" rel="{{ $rel }} noopener" target="_blank">{{ $text }}</a>
+<a class="link" href="{{ $link }}" rel="{{ $rel }} noopener" target="_blank"
+    >{{ $text }}</a
+>
