@@ -22,7 +22,7 @@ pagesEcludedFromIndex = ["section", "term", "taxonomy"]
     [sidebar.avatar]
         enabled = true
         local = false
-        src = "https://gravatar.webp.se/avatar/8677945a0220e9aebdcad9b77205b7eff9efe49c713f25ea2c98d2544195275c?s=128"
+        src = "/avatar.svg"
 
 [article]
     math = false
