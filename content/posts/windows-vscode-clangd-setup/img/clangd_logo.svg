@@ -6,11 +6,13 @@
    <style>
       :root {
          background: linear-gradient(-45deg, hsl(213, 78%, 24%), hsl(141, 90%, 35%));
-         filter: drop-shadow(5px 5px 3vh rgba(0, 0, 0, 0.7))
       }
    </style>
 
    <defs id="defs2">
+      <filter id="shadow">
+         <feDropShadow dx="3" dy="3" stdDeviation="0.7" flood-color="rgb(0,0,0)" flood-opacity="0.5" />
+      </filter>
       <linearGradient id="linearGradient6203">
          <stop style="stop-color:#f0f8a0;stop-opacity:1" offset="0" id="stop6201" />
          <stop id="stop6272" offset="0.75" style="stop-color:#c1e0a4;stop-opacity:1;" />
@@ -45,7 +47,7 @@
          </cc:Work>
       </rdf:RDF>
    </metadata>
-   <g transform="translate(-22.812503,-211.33333)" style="display:inline" id="layer2">
+   <g transform="translate(-22.812503,-211.33333)" style="display:inline" id="layer2" filter="url(#shadow)">
       <g id="CD" style="display:inline">
          <path
             d="M 63.5,225.5625 H 50.270837 c -13.229167,0 -26.458334,6.61458 -26.458334,26.45834 0,19.84374 13.229167,26.55586 26.599104,26.50658 L 63.5,278.47922 l 4e-5,-13.22917 H 50.270837 c 0,0 -12.705299,1e-4 -12.964614,-13.09685 -0.264553,-13.36153 12.964614,-13.36153 12.964614,-13.36153 H 63.5 Z"
