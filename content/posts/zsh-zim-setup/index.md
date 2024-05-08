@@ -5,7 +5,7 @@ slug: zsh-zim-setup
 aliases:
     - 1345558699
 
-title: 使用 Zim 配置称手且快速的 Zsh
+title: 使用 Zim 配置称手且快速的 Zsh⸺语法高亮、自动补全、键位配置等
 categories: 工具
 tags:
     - Zim
