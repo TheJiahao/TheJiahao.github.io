@@ -22,7 +22,7 @@
             d="M 858 510 A 1 1 0 0 1 886 494 C 996 716 835 759 789 813 Q 770 893 762 981 A 1 1 0 0 1 725 978 Q 739 854 757 796 C 885 681 916 680 858 510 Z" />
     </g>
 
-    <g id="face" fill="black" filter="url(#face-blur)">
+    <g id="face" fill="black" filter="url(#face-blur)" shape-rendering="geometricPrecision">
         <path
             d="M 317 412 Q 341 401 368 419 C 384 410 390 417 412 405 A 1 1 0 0 1 420 421 Q 403 432 370 427 C 357 425 366 436 326 430 Q 302 420 317 412 Z" />
         <path
