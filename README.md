@@ -17,3 +17,8 @@ Commit message 采用 [约定式提交](https://www.conventionalcommits.org/zh-h
 - post：新文章
 - perf：优化性能
 - chore：修改网站配置、修订文章等
+
+## 封面图片
+
+尽量使用 SVG 以降低数据传输。
+如果使用图标，则将在图标周围填充 25 %。
