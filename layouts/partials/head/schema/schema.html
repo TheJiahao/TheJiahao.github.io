@@ -1,11 +1,3 @@
-{{- $authorName := default .Site.Params.Author.Name .Params.Author -}}
-
-{{ $author := dict
-    "@type" "Person"
-    "name" $authorName
-    "url" (absLangURL "about")
-}}
-
 {{ $schema := partialCached "head/schema/base" . .RelPermalink }}
 
 {{- if .IsHome }}
