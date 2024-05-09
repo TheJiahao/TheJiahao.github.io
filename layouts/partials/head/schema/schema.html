@@ -6,7 +6,7 @@
     {{ $schema = partial "head/schema/profile-page" . }}
 {{- else if eq .Params.Layout "search" }}
     {{ $schema = partial "head/schema/search-page" . .RelPermalink }}
-{{- else if .IsPage }}
+{{- else if eq .Section "posts" }}
     {{ $schema = partial "head/schema/blog-page" . .RelPermalink }}
 {{- end }}
 
