@@ -1,0 +1,20 @@
+{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
+
+{{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
+{{- with $articleImage.permalink }}
+    {{ $schema = merge $schema (dict "image" .) }}
+{{ end -}}
+{{ $schema = merge $schema (
+    dict
+    "@type" "BlogPosting"
+    "wordCount" .WordCount
+    "headline" .Title
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    )
+}}
+
+{{ with .Date }}
+    {{ $schema = merge $schema (dict "datePublished" (.Format "2006-01-02T15:04:05-07:00")) }}
+{{ end }}
+
+{{ return $schema }}
