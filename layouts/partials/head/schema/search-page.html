@@ -1,8 +1,11 @@
-{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
+{{ $schema :=
+    partialCached
+    "head/schema/base"
+    (dict "Context" . "Type" "SearchResultsPage")
+    .RelPermalink
+}}
 
-{{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
+{{ $searchAction :=partialCached "head/schema/search-action" .Site.Language.Lang }}
 {{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
-
-{{ $schema = merge $schema (dict "@type" "SearchResultsPage") }}
 
 {{ return $schema }}

@@ -1,4 +1,4 @@
-{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
+{{ $schema := partialCached "head/schema/base" (dict "Context" . "Type" "ProfilePage") .RelPermalink }}
 
 {{ $sameAs := slice }}
 
@@ -8,7 +8,6 @@
 
 {{ $schema := merge $schema (
     dict
-    "@type" "ProfilePage"
     "mainEntity" (dict
     "@type" "Person"
     "name" $schema.author.name

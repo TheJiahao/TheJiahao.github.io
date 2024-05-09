@@ -1,4 +1,4 @@
-{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
+{{ $schema := partialCached "head/schema/base" (dict "Context" . "Type" "BlogPosting") .RelPermalink }}
 
 {{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
 {{- with $articleImage.permalink }}
@@ -6,7 +6,6 @@
 {{ end -}}
 {{ $schema = merge $schema (
     dict
-    "@type" "BlogPosting"
     "wordCount" .WordCount
     "headline" .Title
     "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)

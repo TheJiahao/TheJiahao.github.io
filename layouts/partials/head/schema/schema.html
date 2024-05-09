@@ -1,4 +1,4 @@
-{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
+{{ $schema := partialCached "head/schema/base" (dict "Context" .) .RelPermalink "default" }}
 
 {{- if .IsHome }}
     {{ $schema = partialCached "head/schema/home-page" . .RelPermalink }}
