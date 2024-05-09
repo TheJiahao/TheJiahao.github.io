@@ -1,0 +1,19 @@
+{{ $author := dict
+    "@type" "Person"
+    "name" (default .Site.Params.Author.Name .Params.Author)
+    "url" (absLangURL "about")
+}}
+
+{{ $schema := dict
+    "name" (default .Site.Title .Title)
+    "license" (default .Site.Params.article.license.default .Params.License | markdownify)
+    "description" (partialCached "data/description" . .RelPermalink)
+    "author" (default .Site.Params.Author.Name .Params.Author)
+    "@context" "http://schema.org"
+    "url" .Permalink
+    "author" $author
+    "copyrightHolder" $author
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML)
+}}
+
+{{ return $schema }}

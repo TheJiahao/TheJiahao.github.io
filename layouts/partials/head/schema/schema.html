@@ -20,17 +20,7 @@
     "query-input" "required name=search_term_string"
 }}
 
-{{ $schema := dict
-    "name" (default .Site.Title .Title)
-    "license" (default .Site.Params.article.license.default .Params.License | markdownify)
-    "description" (partialCached "data/description" . .RelPermalink)
-    "author" (default .Site.Params.Author.Name .Params.Author)
-    "@context" "http://schema.org"
-    "url" .Permalink
-    "author" $author
-    "copyrightHolder" $author
-    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML)
-}}
+{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
 
 {{ if or .IsHome $isSearch }}
     {{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
