@@ -1,13 +1,13 @@
-{{ $schema := partialCached "head/schema/base" (dict "Context" .) .RelPermalink "default" }}
+{{ $schema := partial "head/schema/base" (dict "Context" . "Type" "CollectionPage") }}
 
 {{- if .IsHome }}
-    {{ $schema = partialCached "head/schema/home-page" . .RelPermalink }}
+    {{ $schema = partial "head/schema/home-page" . }}
 {{- else if eq .Params.Layout "about" }}
     {{ $schema = partial "head/schema/profile-page" . }}
 {{- else if eq .Params.Layout "search" }}
-    {{ $schema = partialCached "head/schema/search-page" . .RelPermalink }}
+    {{ $schema = partial "head/schema/search-page" . .RelPermalink }}
 {{- else if .IsPage }}
-    {{ $schema = partialCached "head/schema/blog-page" . .RelPermalink }}
+    {{ $schema = partial "head/schema/blog-page" . .RelPermalink }}
 {{- end }}
 
 <script type="application/ld+json">
