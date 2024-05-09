@@ -1,79 +1,97 @@
-{{- $license := default .Site.Params.article.license.default .Params.License | markdownify -}}
-{{- $title := default .Site.Title .Title -}}
-{{- $description := partialCached "data/description" . .RelPermalink -}}
-{{- $author := default .Site.Params.Author.Name .Params.Author -}}
+{{- $authorName := default .Site.Params.Author.Name .Params.Author -}}
 
-{{- $avatar := .Site.Params.Sidebar.Avatar -}}
-{{- $avatar := cond $avatar.local $avatar $avatar.src -}}
-
-{{- $isAbout := eq .Params.Layout "about" -}}
 {{- $isSearch := eq .Params.Layout "search" -}}
+{{- $isAbout := eq .Params.Layout "about" -}}
 
-<script type="application/ld+json">
-{
-    "name": {{ $title }},
-    "@context": "http://schema.org",
-    "author": {
-        "@type": "Person",
-        "name": {{ $author }},
-        "url": {{ absLangURL "about"}}
-    },
-    "copyrightHolder": {
-        "@type": "Person",
-        "name": {{ $author }}
-    },
-    "license": {{ $license }},
-    "url": {{ .Permalink }},
-    {{- with $description }}
-    "description": {{ . }},
-    {{ end -}}
-    "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }},
-{{- if or .IsHome $isSearch }}
-    "potentialAction": {
-        "@type": "SearchAction",
-        "name": "Internal search",
-        "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": {{ absLangURL "search/?keyword={search_term_string}"}}
-        },
-        "query-input": "required name=search_term_string"
-    },
-{{ end -}}
+{{ $author := dict
+    "@type" "Person"
+    "name" $authorName
+    "url" (absLangURL "about")
+}}
+
+{{ $searchAction := dict
+    "@type" "SearchAction"
+    "name" "Internal search"
+    "target" (
+    dict
+    "@type" "EntryPoint"
+    "urlTemplate" (absLangURL "search/?keyword={search_term_string}")
+    )
+    "query-input" "required name=search_term_string"
+}}
+
+{{ $schema := dict
+    "name" (default .Site.Title .Title)
+    "license" (default .Site.Params.article.license.default .Params.License | markdownify)
+    "description" (partialCached "data/description" . .RelPermalink)
+    "author" (default .Site.Params.Author.Name .Params.Author)
+    "@context" "http://schema.org"
+    "url" .Permalink
+    "author" $author
+    "copyrightHolder" $author
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML)
+}}
+
+{{ if or .IsHome $isSearch }}
+    {{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
+{{ end }}
+
 {{- if .IsHome }}
-    {{- with .Site.Params.image }}
-    "image": {{ .url | absURL }},
-    {{ end -}}
-    "@type": "WebSite"
+    {{ $schema = merge $schema (dict "@type" "WebSite") }}
+    {{ with .Site.Params.image }}
+        {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
+    {{ end }}
 {{- else if $isAbout }}
-    "image": {{ $avatar }},
-    "@type": "ProfilePage",
-    "mainEntity": {
-        "@type": "Person",
-        "name": {{ $author }},
-        "sameAs": [
-        {{- range $k, $_ := .Site.Menus.social -}}
-            {{ if $k }},{{ end }}
-            {{ .URL | absURL -}}
+    {{ $sameAs := slice }}
+    {{ range .Site.Menus.social }}
+        {{ $sameAs = $sameAs | append (.URL | absURL) }}
+    {{ end }}
+
+    {{ $schema = merge $schema (
+        dict
+        "@type" "ProfilePage"
+        "mainEntity" (dict
+        "@type" "Person"
+        "name" $authorName
+        "sameAs" $sameAs
+        )
+        )
+        }}
+
+    {{- with .Site.Params.sidebar.avatar }}
+        {{ if (default true .enabled) }}
+            {{- $src := .src -}}
+
+            {{- if .local -}}
+                {{ $avatar := resources.Get .src }}
+                {{- $src = $avatar.Permalink -}}
+            {{- end -}}
+
+            {{ $schema = merge $schema (dict "image" $src) }}
         {{ end }}
-        ]
-    }
+    {{ end }}
+
 {{- else if $isSearch }}
-    "@type": "SearchResultsPage"
+    {{ $schema = merge $schema (dict "@type" "SearchResultsPage") }}
 {{- else if .IsPage }}
     {{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{- with $articleImage.permalink }}
-    "image": {{ . }},
+        {{ $schema = merge $schema (dict "image" .) }}
     {{ end -}}
-    "@type": "BlogPosting",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": {{ .Permalink }}
-    },
-    {{- with .Date }}
-    "datePublished": {{ .Format "2006-01-02T15:04:05-07:00" | safeHTML }},
-    {{ end -}}
-    "headline": {{ $title }},
-    "wordCount": {{ .WordCount }}
+    {{ $schema = merge $schema (
+        dict
+        "@type" "BlogPosting"
+        "wordCount" .WordCount
+        "headline" .Title
+        "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+        )
+    }}
+
+    {{ with .Date }}
+        {{ $schema = merge $schema (dict "datePublished" (.Format "2006-01-02T15:04:05-07:00")) }}
+    {{ end }}
 {{- end }}
-}
+
+<script type="application/ld+json">
+{{ $schema | jsonify (dict "indent" "    ") | safeJS }}
 </script>
