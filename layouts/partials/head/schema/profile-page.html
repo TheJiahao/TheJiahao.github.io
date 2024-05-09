@@ -1,0 +1,33 @@
+{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
+
+{{ $sameAs := slice }}
+
+{{ range .Site.Menus.social }}
+    {{ $sameAs = $sameAs | append (.URL | absLangURL) }}
+{{ end }}
+
+{{ $schema := merge $schema (
+    dict
+    "@type" "ProfilePage"
+    "mainEntity" (dict
+    "@type" "Person"
+    "name" $schema.author.name
+    "sameAs" $sameAs
+    )
+    )
+    }}
+
+{{- with .Site.Params.sidebar.avatar }}
+    {{ if (default true .enabled) }}
+        {{- $src := .src -}}
+
+        {{- if .local -}}
+            {{ $avatar := resources.Get .src }}
+            {{- $src = $avatar.Permalink -}}
+        {{- end -}}
+
+        {{ $schema = merge $schema (dict "image" $src) }}
+    {{ end }}
+{{ end }}
+
+{{ return $schema }}

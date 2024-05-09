@@ -1,7 +1,6 @@
 {{- $authorName := default .Site.Params.Author.Name .Params.Author -}}
 
 {{- $isSearch := eq .Params.Layout "search" -}}
-{{- $isAbout := eq .Params.Layout "about" -}}
 
 {{ $author := dict
     "@type" "Person"
@@ -31,36 +30,8 @@
     {{ with .Site.Params.image }}
         {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
     {{ end }}
-{{- else if $isAbout }}
-    {{ $sameAs := slice }}
-    {{ range .Site.Menus.social }}
-        {{ $sameAs = $sameAs | append (.URL | absURL) }}
-    {{ end }}
-
-    {{ $schema = merge $schema (
-        dict
-        "@type" "ProfilePage"
-        "mainEntity" (dict
-        "@type" "Person"
-        "name" $authorName
-        "sameAs" $sameAs
-        )
-        )
-        }}
-
-    {{- with .Site.Params.sidebar.avatar }}
-        {{ if (default true .enabled) }}
-            {{- $src := .src -}}
-
-            {{- if .local -}}
-                {{ $avatar := resources.Get .src }}
-                {{- $src = $avatar.Permalink -}}
-            {{- end -}}
-
-            {{ $schema = merge $schema (dict "image" $src) }}
-        {{ end }}
-    {{ end }}
-
+{{- else if eq .Params.Layout "about" }}
+    {{ $schema = partial "head/schema/profile-page" . }}
 {{- else if $isSearch }}
     {{ $schema = merge $schema (dict "@type" "SearchResultsPage") }}
 {{- else if .IsPage }}
