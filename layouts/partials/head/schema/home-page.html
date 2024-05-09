@@ -1,0 +1,11 @@
+{{ $schema := partialCached "head/schema/base" . .RelPermalink }}
+
+{{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
+{{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
+
+{{ $schema = merge $schema (dict "@type" "WebSite") }}
+{{ with .Site.Params.image }}
+    {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
+{{ end }}
+
+{{ return $schema }}

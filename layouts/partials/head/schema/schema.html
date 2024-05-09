@@ -16,10 +16,7 @@
 {{ end }}
 
 {{- if .IsHome }}
-    {{ $schema = merge $schema (dict "@type" "WebSite") }}
-    {{ with .Site.Params.image }}
-        {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
-    {{ end }}
+    {{ $schema = partialCached "head/schema/home-page" . .RelPermalink }}
 {{- else if eq .Params.Layout "about" }}
     {{ $schema = partial "head/schema/profile-page" . }}
 {{- else if $isSearch }}
