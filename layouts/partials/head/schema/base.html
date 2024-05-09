@@ -5,7 +5,7 @@
 }}
 
 {{ $schema := dict
-    "@type" (default "WebPage" .Type)
+    "@type" .Type
     "name" (default .Context.Site.Title .Title)
     "license" (default .Context.Site.Params.article.license.default .Params.License | markdownify)
     "description" (partialCached "data/description" . .RelPermalink)
