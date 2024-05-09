@@ -1,7 +1,5 @@
 {{- $authorName := default .Site.Params.Author.Name .Params.Author -}}
 
-{{- $isSearch := eq .Params.Layout "search" -}}
-
 {{ $author := dict
     "@type" "Person"
     "name" $authorName
@@ -10,17 +8,12 @@
 
 {{ $schema := partialCached "head/schema/base" . .RelPermalink }}
 
-{{ if or .IsHome $isSearch }}
-    {{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
-    {{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
-{{ end }}
-
 {{- if .IsHome }}
     {{ $schema = partialCached "head/schema/home-page" . .RelPermalink }}
 {{- else if eq .Params.Layout "about" }}
     {{ $schema = partial "head/schema/profile-page" . }}
-{{- else if $isSearch }}
-    {{ $schema = merge $schema (dict "@type" "SearchResultsPage") }}
+{{- else if eq .Params.Layout "search" }}
+    {{ $schema = partialCached "head/schema/search-page" . .RelPermalink }}
 {{- else if .IsPage }}
     {{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
     {{- with $articleImage.permalink }}
