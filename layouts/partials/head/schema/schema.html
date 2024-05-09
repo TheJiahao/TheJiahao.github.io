@@ -8,20 +8,10 @@
     "url" (absLangURL "about")
 }}
 
-{{ $searchAction := dict
-    "@type" "SearchAction"
-    "name" "Internal search"
-    "target" (
-    dict
-    "@type" "EntryPoint"
-    "urlTemplate" (absLangURL "search/?keyword={search_term_string}")
-    )
-    "query-input" "required name=search_term_string"
-}}
-
 {{ $schema := partialCached "head/schema/base" . .RelPermalink }}
 
 {{ if or .IsHome $isSearch }}
+    {{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
     {{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
 {{ end }}
 

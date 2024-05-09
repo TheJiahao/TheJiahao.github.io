@@ -1,0 +1,12 @@
+{{ $searchAction := dict
+    "@type" "SearchAction"
+    "name" "Internal search"
+    "target" (
+    dict
+    "@type" "EntryPoint"
+    "urlTemplate" (absLangURL "search/?keyword={search_term_string}")
+    )
+    "query-input" "required name=search_term_string"
+}}
+
+{{ return $searchAction }}
