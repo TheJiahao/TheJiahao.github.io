@@ -21,8 +21,8 @@ pagesEcludedFromIndex = ["section", "term", "taxonomy"]
 
     [sidebar.avatar]
         enabled = true
-        local = false
-        src = "/avatar.svg"
+        local = true
+        src = "avatar.svg"
 
 [article]
     math = false

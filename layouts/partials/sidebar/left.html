@@ -15,36 +15,35 @@
     </button>
 
     <header>
-        {{ with .Site.Params.sidebar.avatar }}
+        {{- with .Site.Params.sidebar.avatar }}
             {{ if (default true .enabled) }}
                 <figure class="site-avatar">
                     <a href="{{ .Site.BaseURL | relLangURL }}">
-                        {{ if not .local }}
-                            <img
-                                src="{{ .src }}"
-                                width="300"
-                                height="300"
-                                class="site-logo"
-                                loading="lazy"
-                                alt="Avatar"
-                            />
-                        {{ else }}
-                            {{ $avatar := resources.Get (.src) }}
+                        {{- $src := .src -}}
 
-                            {{ if $avatar }}
-                                {{ $avatarResized := $avatar.Resize "300x" }}
-                                <img
-                                    src="{{ $avatarResized.RelPermalink }}"
-                                    width="{{ $avatarResized.Width }}"
-                                    height="{{ $avatarResized.Height }}"
-                                    class="site-logo"
-                                    loading="lazy"
-                                    alt="Avatar"
-                                />
-                            {{ else }}
-                                {{ errorf "Failed loading avatar from %q" . }}
-                            {{ end }}
-                        {{ end }}
+                        {{- if .local -}}
+                            {{ $avatar := resources.Get .src }}
+
+                            {{- if not $avatar -}}
+                                {{- errorf "Failed loading avatar from %q" . -}}
+                            {{- end -}}
+
+                            {{- if not (eq $avatar.MediaType.SubType "svg") -}}
+                                {{- $avatar := $avatar.Resize "300x" -}}
+                            {{- end -}}
+
+                            {{- $src = $avatar.RelPermalink -}}
+                        {{- end -}}
+
+
+                        <img
+                            src="{{ $src }}"
+                            width="300"
+                            height="300"
+                            class="site-logo"
+                            loading="lazy"
+                            alt="Avatar"
+                        />
                     </a>
                     {{ with $.Site.Params.sidebar.emoji }}
                         <span class="emoji">{{ . }}</span>
