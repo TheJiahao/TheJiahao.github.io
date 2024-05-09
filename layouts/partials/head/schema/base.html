@@ -6,10 +6,10 @@
 
 {{ $schema := dict
     "@type" .Type
-    "name" (default .Context.Site.Title .Title)
-    "license" (default .Context.Site.Params.article.license.default .Params.License | markdownify)
-    "description" (partialCached "data/description" . .RelPermalink)
-    "author" (default .Context.Site.Params.Author.Name .Params.Author)
+    "name" (default .Context.Site.Title .Context.Title)
+    "license" (default .Context.Site.Params.article.license.default .Context.Params.License | markdownify)
+    "description" (partialCached "data/description" .Context .Context.RelPermalink)
+    "author" (default .Context.Site.Params.Author.Name .Context.Params.Author)
     "@context" "http://schema.org"
     "url" .Context.Permalink
     "author" $author
