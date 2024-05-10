@@ -115,35 +115,35 @@ favicon = "/favicon.svg"
         [comments.waline.locale]
             admin = "Admin"
 
-[comments.twikoo]
-    envId = ""
-    region = ""
-    path = ""
-    lang = ""
+    [comments.twikoo]
+        envId = ""
+        region = ""
+        path = ""
+        lang = ""
 
-[comments.cactus]
-    defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
-    serverName = "cactus.chat"
-    siteName = ""
+    [comments.cactus]
+        defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
+        serverName = "cactus.chat"
+        siteName = ""
 
-[comments.giscus]
-    repo = "TheJiahao/TheJiahao.github.io"
-    repoID = "MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY="
-    category = "General"
-    categoryID = "DIC_kwDOEb6W1s4Cb_e4"
-    mapping = "pathname"
-    lightTheme = "light_tritanopia"
-    darkTheme = "dark_tritanopia"
-    reactionsEnabled = 1
-    emitMetadata = 0
+    [comments.giscus]
+        repo = "TheJiahao/TheJiahao.github.io"
+        repoID = "MDEwOlJlcG9zaXRvcnkyOTc3MDMxMjY="
+        category = "General"
+        categoryID = "DIC_kwDOEb6W1s4Cb_e4"
+        mapping = "pathname"
+        lightTheme = "light_tritanopia"
+        darkTheme = "dark_tritanopia"
+        reactionsEnabled = 1
+        emitMetadata = 0
 
-[comments.gitalk]
-    owner = ""
-    admin = ""
-    repo = ""
-    clientID = ""
-    clientSecret = ""
+    [comments.gitalk]
+        owner = ""
+        admin = ""
+        repo = ""
+        clientID = ""
+        clientSecret = ""
 
-[comments.cusdis]
-    host = ""
-    id = ""
+    [comments.cusdis]
+        host = ""
+        id = ""
