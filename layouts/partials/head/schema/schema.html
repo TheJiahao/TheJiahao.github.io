@@ -1,12 +1,12 @@
 {{ $schema := dict }}
 
-{{- if .IsHome }}
+{{ if .IsHome }}
     {{ $schema = partial "head/schema/home-page" . }}
-{{- else if eq .Params.Layout "about" }}
+{{ else if eq .Params.Layout "about" }}
     {{ $schema = partial "head/schema/profile-page" . }}
-{{- else if eq .Params.Layout "search" }}
+{{ else if eq .Params.Layout "search" }}
     {{ $schema = partial "head/schema/search-page" . .RelPermalink }}
-{{- else if eq .Section "posts" }}
+{{ else if eq .Section "posts" }}
     {{ $schema = partial "head/schema/blog-page" . .RelPermalink }}
 {{ else if eq .Kind "404" }}
     {{ $schema = partial "head/schema/base" (dict "Context" . "Type" "WebPage") . .RelPermalink }}
