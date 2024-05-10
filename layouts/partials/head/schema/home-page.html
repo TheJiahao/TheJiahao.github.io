@@ -3,6 +3,16 @@
 {{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
 {{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
 
+{{ $breadcrumb := partial "head/schema/breadcrumb" . }}
+
+{{ $mainEntityOfPage := dict
+    "@type" "WebPage"
+    "@id" .Permalink
+    "breadcrumb" $breadcrumb
+}}
+
+{{ $schema = merge $schema (dict "mainEntityOfPage" $mainEntityOfPage) }}
+
 {{ with .Site.Params.image }}
     {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
 {{ end }}

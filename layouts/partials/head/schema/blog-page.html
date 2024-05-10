@@ -1,14 +1,22 @@
 {{ $schema := partialCached "head/schema/base" (dict "Context" . "Type" "BlogPosting") .RelPermalink }}
-
 {{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
+{{ $breadcrumb := partial "head/schema/breadcrumb" . }}
+
 {{- with $articleImage.permalink }}
     {{ $schema = merge $schema (dict "image" .) }}
 {{ end -}}
+
+{{ $mainEntityOfPage := dict
+    "@type" "WebPage"
+    "@id" .Permalink
+    "breadcrumb" $breadcrumb
+}}
+
 {{ $schema = merge $schema (
     dict
     "wordCount" .WordCount
     "headline" .Title
-    "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+    "mainEntityOfPage" $mainEntityOfPage
     )
 }}
 

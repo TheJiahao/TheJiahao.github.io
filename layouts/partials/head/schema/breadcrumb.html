@@ -1,0 +1,19 @@
+{{ $breadcrumbItems := slice }}
+
+{{ range $index, $page := .Ancestors.Reverse }}
+    {{ $item := dict
+        "@type" "ListItem"
+        "position" (add $index 1)
+        "name" (default .Site.Title $page.Title)
+        "item" $page.Permalink
+    }}
+
+    {{ $breadcrumbItems = $breadcrumbItems | append $item }}
+{{ end }}
+
+{{ $breadcrumb := dict
+    "@type" "BreadcrumbList"
+    "itemListElement" $breadcrumbItems
+}}
+
+{{ return $breadcrumb }}

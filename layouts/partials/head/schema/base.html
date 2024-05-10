@@ -18,4 +18,9 @@
     "inLanguage" .Context.Language.LanguageCode
 }}
 
+{{ if hasSuffix .Type "Page" }}
+    {{ $breadcrumb := partial "head/schema/breadcrumb" . }}
+    {{ $schema = merge $schema (dict "breadcrumb" $breadcrumb) }}
+{{ end }}
+
 {{ return $schema }}
