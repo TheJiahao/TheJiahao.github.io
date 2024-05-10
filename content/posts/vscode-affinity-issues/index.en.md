@@ -19,6 +19,9 @@ hidden: false
 math:
 comments: true
 draft: false
+
+sitemap:
+    disable: false
 ---
 
 A collection of compatibility issues of experimental setting `extensions.experimental.affinity` in Visual Studio Code.

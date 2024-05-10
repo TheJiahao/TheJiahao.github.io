@@ -19,6 +19,9 @@ hidden: false
 math:
 comments: true
 draft: false
+
+sitemap:
+    disable: false
 ---
 
 本文汇总了 Visual Studio Code 实验性设置 `extensions.experimental.affinity` 的兼容性问题。

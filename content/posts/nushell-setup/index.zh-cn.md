@@ -33,6 +33,8 @@ hidden: false
 math:
 comments: true
 draft: false
+sitemap:
+    disable: false
 
 build:
     publishResources: false

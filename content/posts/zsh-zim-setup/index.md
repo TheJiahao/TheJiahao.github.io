@@ -33,6 +33,8 @@ hidden: false
 math:
 comments: true
 draft: false
+sitemap:
+    disable: false
 ---
 
 ## 安装 Zim

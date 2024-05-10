@@ -8,6 +8,9 @@ comments: false
 readingTime: false
 license: false
 
+sitemap:
+    disable: false
+
 menu:
     main:
         weight: 100

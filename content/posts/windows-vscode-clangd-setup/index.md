@@ -24,6 +24,9 @@ math:
 comments: true
 draft: false
 
+sitemap:
+    disable: false
+
 links:
     - title: clangd - Visual Studio Marketplace
       website: https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd
