@@ -14,4 +14,6 @@ hidden: false
 math:
 comments: true
 draft: true
+sitemap:
+    disable: false
 ---
