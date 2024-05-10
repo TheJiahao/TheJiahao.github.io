@@ -3,8 +3,6 @@ mainSections = ["posts"]
 # Output page's full content in RSS.
 rssFullContent = true
 favicon = "/favicon.svg"
-taxonomiesExcludedFromSitemap = ["tags"]
-excludedFromIndex = ["term", "taxonomy"]
 
 [author]
     name = "Jiahao Li"
