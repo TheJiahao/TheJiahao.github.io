@@ -1,4 +1,4 @@
-{{- if (or .Params.noindex (in .Site.Params.pagesEcludedFromIndex .Kind)) }}
+{{- if (.Params.noindex | default (in .Site.Params.pagesEcludedFromIndex .Kind)) }}
     <meta name="robots" content="noindex" />
 {{ end -}}
 
