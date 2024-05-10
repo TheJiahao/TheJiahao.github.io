@@ -8,6 +8,8 @@
     {{ $schema = partial "head/schema/search-page" . .RelPermalink }}
 {{- else if eq .Section "posts" }}
     {{ $schema = partial "head/schema/blog-page" . .RelPermalink }}
+{{ else if eq .Kind "404" }}
+    {{ $schema = partial "head/schema/base" (dict "Context" . "Type" "WebPage") . .RelPermalink }}
 {{ else }}
     {{ $schema = partial "head/schema/base" (dict "Context" . "Type" "CollectionPage") }}
 {{- end }}
