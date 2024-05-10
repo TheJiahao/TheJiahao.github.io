@@ -4,7 +4,7 @@ mainSections = ["posts"]
 rssFullContent = true
 favicon = "/favicon.svg"
 taxonomiesExcludedFromSitemap = ["tags"]
-pagesEcludedFromIndex = ["term", "taxonomy"]
+excludedFromIndex = ["term", "taxonomy"]
 
 [author]
     name = "Jiahao Li"
