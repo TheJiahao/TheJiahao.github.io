@@ -1,4 +1,4 @@
-{{- if (.Params.noindex | default (in .Site.Params.excludedFromIndex .Kind)) }}
+{{- if .Sitemap.Disable }}
     <meta name="robots" content="noindex" />
 {{ end -}}
 
