@@ -1,11 +1,7 @@
 {{ $schema := partialCached "head/schema/base" (dict "Context" . "Type" "BlogPosting") .RelPermalink }}
-{{- $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
+
 {{ $breadcrumb := partial "head/schema/breadcrumb" . }}
-
-{{- with $articleImage.permalink }}
-    {{ $schema = merge $schema (dict "image" .) }}
-{{ end -}}
-
+{{ $articleImage := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink }}
 {{ $mainEntityOfPage := dict
     "@type" "WebPage"
     "@id" .Permalink
@@ -19,6 +15,10 @@
     "mainEntityOfPage" $mainEntityOfPage
     )
 }}
+
+{{ with $articleImage.permalink }}
+    {{ $schema = merge $schema (dict "image" .) }}
+{{ end }}
 
 {{ with .Date }}
     {{ $schema = merge $schema (dict "datePublished" (.Format "2006-01-02T15:04:05-07:00")) }}
