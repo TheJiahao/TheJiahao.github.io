@@ -1,17 +1,18 @@
 {{ $schema := partialCached "head/schema/base" (dict "Context" . "Type" "WebSite") .RelPermalink }}
 
-{{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
-{{ $schema = merge $schema (dict "potentialAction" $searchAction) }}
-
 {{ $breadcrumb := partial "head/schema/breadcrumb" . }}
-
+{{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
 {{ $mainEntityOfPage := dict
     "@type" "WebPage"
     "@id" .Permalink
     "breadcrumb" $breadcrumb
 }}
 
-{{ $schema = merge $schema (dict "mainEntityOfPage" $mainEntityOfPage) }}
+{{ $schema = merge $schema (dict
+    "potentialAction" $searchAction
+    "mainEntityOfPage" $mainEntityOfPage
+    )
+}}
 
 {{ with .Site.Params.image }}
     {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
