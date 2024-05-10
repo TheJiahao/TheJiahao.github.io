@@ -1,8 +1,7 @@
-{{- if .Sitemap.Disable }}
-    <meta name="robots" content="noindex" />
-{{ end -}}
-
-
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+{{- if .Sitemap.Disable -}}
+    <meta name="robots" content="noindex" />
+{{- end -}}
 
 {{- partial "head/schema/schema.html" . -}}
