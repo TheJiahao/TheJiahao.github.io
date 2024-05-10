@@ -3,7 +3,7 @@
     "plugins": ["prettier-plugin-go-template"],
     "overrides": [
         {
-            "files": ["*.html", "*.css"],
+            "files": ["*.html", "*.css", "*.xml"],
             "options": {
                 "parser": "go-template",
                 "singleQuote": false
