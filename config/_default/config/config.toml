@@ -30,3 +30,6 @@ hasCJKLanguage = false
 [imaging]
     quality = 100
     hint = "picture"
+
+[sitemap]
+    disable = true
