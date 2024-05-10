@@ -3,7 +3,8 @@ title: "搜索"
 slug: "search"
 layout: "search"
 hidden: true
-sitemapExclude: true
+sitemap:
+    disable: true
 noindex: true
 outputs:
     - html

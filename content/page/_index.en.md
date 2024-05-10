@@ -1,6 +1,7 @@
 ---
 title: Pages
 hidden: true
-sitemapExclude: true
+sitemap:
+    disable: true
 noindex: true
 ---

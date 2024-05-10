@@ -3,7 +3,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
-    {{ range where .Pages "Params.sitemapExclude" "ne" true }}
+    {{ range where .Pages "Sitemap.Disable" "ne" true }}
         {{- if not (in .Site.Params.taxonomiesExcludedFromSitemap .Data.Plural) -}}
             {{- if .Permalink -}}
                 <url>

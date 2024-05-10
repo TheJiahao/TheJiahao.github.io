@@ -3,7 +3,8 @@ title: "归档"
 layout: "archives"
 slug: "archives"
 hidden: true
-sitemapExclude: true
+sitemap:
+    disable: true
 noindex: true
 menu:
     main:

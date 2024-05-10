@@ -1,6 +1,7 @@
 ---
 title: 标签
 hidden: true
-sitemapExclude: true
+sitemap:
+    disable: true
 noindex: true
 ---
