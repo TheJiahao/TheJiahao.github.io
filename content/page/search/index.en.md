@@ -5,7 +5,7 @@ layout: "search"
 hidden: true
 sitemap:
     disable: true
-noindex: true
+
 outputs:
     - html
     - json

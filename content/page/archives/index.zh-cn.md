@@ -5,7 +5,7 @@ slug: "archives"
 hidden: true
 sitemap:
     disable: true
-noindex: true
+
 menu:
     main:
         weight: 20
