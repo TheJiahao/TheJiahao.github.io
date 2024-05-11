@@ -2,17 +2,10 @@
 
 {{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
 
-{{ $breadcrumb := partial "head/schema/breadcrumb" . }}
 {{ $mainEntityOfPage := dict
     "@type" "WebPage"
     "@id" .Permalink
 }}
-{{ with $breadcrumb.itemListElement }}
-    {{ $mainEntityOfPage = merge $mainEntityOfPage (dict
-        "breadcrumb" $breadcrumb
-        )
-    }}
-{{ end }}
 
 {{ $schema = merge $schema (dict
     "potentialAction" $searchAction
