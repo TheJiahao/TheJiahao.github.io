@@ -7,7 +7,7 @@
 
     <defs>
         <filter id="shadow">
-            <feDropShadow dx="15" dy="15" stdDeviation="5" flood-color="rgba(0, 0, 0)" flood-opacity="0.4" />
+            <feDropShadow dx="15" dy="15" stdDeviation="5" flood-color="black" flood-opacity="0.4" />
         </filter>
     </defs>
 
