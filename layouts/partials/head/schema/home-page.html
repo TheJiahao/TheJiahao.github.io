@@ -14,14 +14,14 @@
     }}
 {{ end }}
 
-{{ with .Site.Params.image }}
-    {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
-{{ end }}
-
 {{ $schema = merge $schema (dict
     "potentialAction" $searchAction
     "mainEntityOfPage" $mainEntityOfPage
     )
 }}
+
+{{ with .Site.Params.image }}
+    {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
+{{ end }}
 
 {{ return $schema }}
