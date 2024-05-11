@@ -1,21 +1,27 @@
 {{ $schema := partialCached "head/schema/base" (dict "Context" . "Type" "WebSite") .RelPermalink }}
 
-{{ $breadcrumb := partial "head/schema/breadcrumb" . }}
 {{ $searchAction := partialCached "head/schema/search-action" . .Site.Language.Lang }}
+
+{{ $breadcrumb := partial "head/schema/breadcrumb" . }}
 {{ $mainEntityOfPage := dict
     "@type" "WebPage"
     "@id" .Permalink
-    "breadcrumb" $breadcrumb
 }}
+{{ with $breadcrumb.itemListElement }}
+    {{ $mainEntityOfPage = merge $mainEntityOfPage (dict
+        "breadcrumb" $breadcrumb
+        )
+    }}
+{{ end }}
+
+{{ with .Site.Params.image }}
+    {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
+{{ end }}
 
 {{ $schema = merge $schema (dict
     "potentialAction" $searchAction
     "mainEntityOfPage" $mainEntityOfPage
     )
 }}
-
-{{ with .Site.Params.image }}
-    {{ $schema = merge $schema (dict "image" (.url | absURL)) }}
-{{ end }}
 
 {{ return $schema }}

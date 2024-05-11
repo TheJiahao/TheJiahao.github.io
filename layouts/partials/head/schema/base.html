@@ -20,7 +20,10 @@
 
 {{ if hasSuffix .Type "Page" }}
     {{ $breadcrumb := partial "head/schema/breadcrumb" . }}
-    {{ $schema = merge $schema (dict "breadcrumb" $breadcrumb) }}
+
+    {{ if $breadcrumb.itemListElement }}
+        {{ $schema = merge $schema (dict "breadcrumb" $breadcrumb) }}
+    {{ end }}
 {{ end }}
 
 {{ return $schema }}
