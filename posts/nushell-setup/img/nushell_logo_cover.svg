@@ -31,7 +31,7 @@ SOFTWARE.
     </style>
     <defs>
         <filter id="shadow">
-            <feDropShadow dx="5" dy="5" stdDeviation="2.5" flood-color="rgba(0, 0, 0, 0.7)" />
+            <feDropShadow dx="6" dy="6" stdDeviation="2" flood-color="black" flood-opacity="0.6" />
         </filter>
     </defs>
 

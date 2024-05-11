@@ -11,7 +11,7 @@
 
    <defs id="defs2">
       <filter id="shadow">
-         <feDropShadow dx="3" dy="3" stdDeviation="0.7" flood-color="rgb(0,0,0)" flood-opacity="0.5" />
+         <feDropShadow dx="3" dy="3" stdDeviation="0.7" flood-color="black" flood-opacity="0.5" />
       </filter>
       <linearGradient id="linearGradient6203">
          <stop style="stop-color:#f0f8a0;stop-opacity:1" offset="0" id="stop6201" />
