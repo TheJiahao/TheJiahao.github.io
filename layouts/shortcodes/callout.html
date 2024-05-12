@@ -4,5 +4,5 @@
 
 <aside class="callout callout-{{ $type }}">
     <strong class="callout-{{ $type }}-title">{{ $title }}</strong>
-    {{- .Inner | .Page.RenderString (dict "display" "block") -}}
+    {{ .Inner | safeHTML }}
 </aside>
