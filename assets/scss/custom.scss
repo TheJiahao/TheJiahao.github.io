@@ -2,14 +2,14 @@
     You can add your own custom styles here.
 */
 
-@use "math.scss";
-@import "code_block.scss";
-@import "font.scss";
-@import "colors.scss";
-@import "image.scss";
-@import "footer.scss";
-@import "theme_toggle.scss";
-@import "callout.scss";
+@use "components/math.scss";
+@import "components/code_block.scss";
+@import "components/callout.scss";
+@import "components/image.scss";
+@import "components/footer.scss";
+@import "components/theme_toggle.scss";
+@import "config/font.scss";
+@import "config/colors.scss";
 
 // 滚动条
 ::-webkit-scrollbar-thumb {
