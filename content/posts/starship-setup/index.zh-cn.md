@@ -65,6 +65,11 @@ export PATH = "$HOME/.cargo/bin:$PATH"
 Starship 的许多主题都需要 [Nerd Font](https://www.nerdfonts.com/) 中的符号。
 所以需要安装带有 Nerd Font 补丁的[字体](https://www.nerdfonts.com/font-downloads)。
 
+{{% callout warning 注意 %}}
+安装字体后还需要在终端中使用字体。
+如果使用 [Windows 终端](https://github.com/microsoft/terminal)，字体可于 `设置 > 配置文件 > 外观 > 字体` 中设置。
+{{% /callout %}}
+
 #### Windows
 
 Scoop 的 [`nerd-fonts`](https://github.com/matthewjberger/scoop-nerd-fonts/tree/master/bucket) 源中包含了许多字体的 Nerd Font 版本。
