@@ -12,6 +12,16 @@ $colors: (
     border-radius: var(--card-border-radius);
     box-shadow: var(--shadow-l1);
 
+    @each $name, $color in $colors {
+        &-#{$name} {
+            background-color: rgba($color, 0.1);
+
+            .callout-title {
+                color: $color;
+            }
+        }
+    }
+
     &-title {
         display: inline-flex;
         align-items: center;
@@ -40,16 +50,6 @@ $colors: (
                 &::after {
                     content: "\F282";
                 }
-            }
-        }
-    }
-
-    @each $name, $color in $colors {
-        &-#{$name} {
-            background-color: rgba($color, 0.1);
-
-            .callout-title {
-                color: $color;
             }
         }
     }
