@@ -1,0 +1,10 @@
+{{- $type := .Get "type" | default (.Get 0) -}}
+{{- $title := .Get "title" | default (.Get 1) -}}
+
+
+<aside class="callout callout-{{ $type }}">
+    <strong class="callout-{{ $type }}-title">{{ $title }}</strong>
+    <p>
+        {{- .Inner | .Page.RenderString -}}
+    </p>
+</aside>
