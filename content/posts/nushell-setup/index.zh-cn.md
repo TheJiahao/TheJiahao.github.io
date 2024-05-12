@@ -97,6 +97,8 @@ Nushell 的配置保存在 `$env.config` 变量中。
 $env.config.show_banner = false
 ```
 
+{{% callout warning 注意 %}}
+
 为避免覆盖之前的配置，笔者推荐单独给 `$env.config` 中的每一项赋值，而不是重新给 `$env.config` 赋值：
 
 ```nu
@@ -104,6 +106,8 @@ $env.config = {
     show_banner: false
 }
 ```
+
+{{% /callout %}}
 
 Nushell 的默认配置文件可以从 [GitHub 仓库](https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/sample_config/default_config.nu) 中找到，其更新的比 [官方文档](https://www.nushell.sh/book/configuration.html) 及时。
 
@@ -183,8 +187,7 @@ $env.config.completions.external.max_results = 20
 默认配置下按输入命令后 <kbd>Tab</kbd> 即可生成补全，然后用方向键选择，最后按 <kbd>Enter</kbd> 就可以完成补全。
 此外，如果已经当前命令和历史记录里的命令匹配，则可以按 <kbd>→</kbd> 从历史记录补全。
 
-#### Argc 1.17.0 补全失效的临时解决办法
-
+{{% callout type=info title="Argc 1.17.0 补全失效的临时解决办法" open=false collapsible=true %}}
 Argc 1.17.0 版本生成的 `argc-completions.nu` 文件有问题，导致补全失效。
 该问题已在 [PR#325](https://github.com/sigoden/argc/pull/325) 中修复，但作者还没发布新版本。
 
@@ -204,6 +207,8 @@ let external_completer = {|spans|
 $env.config.completions.external.enable = true
 $env.config.completions.external.completer = $external_completer
 ```
+
+{{% /callout %}}
 
 ### 其他配置
 
