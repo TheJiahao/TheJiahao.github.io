@@ -16,6 +16,32 @@ $colors: (
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        pointer-events: none;
+
+        &::after,
+        &::marker {
+            display: none;
+        }
+    }
+
+    &.collapsible {
+        .callout-title {
+            pointer-events: auto;
+
+            &::after {
+                display: unset;
+                content: "\F285";
+                font-family: "bootstrap-icons";
+            }
+        }
+
+        &[open] {
+            .callout-title {
+                &::after {
+                    content: "\F282";
+                }
+            }
+        }
     }
 
     @each $name, $color in $colors {

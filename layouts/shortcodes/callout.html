@@ -1,15 +1,21 @@
 {{- $type := .Get "type" | default (.Get 0) -}}
 {{- $title := .Get "title" | default (.Get 1) -}}
+{{- $collapsible := .Get "collapsible" | default false -}}
+{{- $open := .Get "open" | default true }}
 
 {{ $icons := newScratch }}
 {{ $icons.Set "warning" "exclamation-triangle" }}
 {{ $icons.Set "info" "info-circle" }}
 
 
-<aside class="callout callout-{{ $type }}">
-    <span class="callout-title">
+<details
+    class="callout callout-{{ $type }}
+    {{ if $collapsible }}collapsible{{ end }}"
+    {{- if $open }}open{{ end -}}
+>
+    <summary class="callout-title">
         <i class="bi bi-{{ $icons.Get $type }}"></i>
         <strong>{{ $title }}</strong>
-    </span>
+    </summary>
     {{ .Inner | safeHTML }}
-</aside>
+</details>
