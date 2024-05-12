@@ -36,6 +36,7 @@ $colors: (
 
     &.collapsible {
         .callout-title {
+            cursor: pointer;
             pointer-events: auto;
 
             &::after {
