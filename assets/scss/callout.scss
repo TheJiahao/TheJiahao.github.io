@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @use "sass:map";
 
 $colors: (
@@ -6,8 +7,8 @@ $colors: (
 );
 
 $icons: (
-    "info": "ℹ️",
-    "warning": "⚠️",
+    "info": "\F431",
+    "warning": "\F33B",
 );
 
 .callout {
@@ -16,20 +17,28 @@ $icons: (
     border-radius: var(--card-border-radius);
     box-shadow: var(--shadow-l1);
 
+    &-title {
+        vertical-align: middle;
+    }
+
     @each $name, $color in $colors {
         &-#{$name} {
             background-color: rgba($color, 0.1);
 
-            &-title {
+            .callout-title {
                 color: $color;
             }
         }
     }
 
     @each $name, $icon in $icons {
-        &-#{$name}-title::before {
-            content: $icon;
-            margin-right: 0.5rem;
+        &-#{$name} {
+            .callout-title::before {
+                content: $icon;
+                font-family: "bootstrap-icons";
+                margin-right: 0.5rem;
+                vertical-align: baseline;
+            }
         }
     }
 }
