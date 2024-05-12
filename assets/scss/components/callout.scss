@@ -22,6 +22,11 @@ $colors: (
         }
     }
 
+    &:hover {
+        box-shadow: var(--shadow-l3);
+        transition: all 0.5s ease-in;
+    }
+
     &-title {
         display: inline-flex;
         align-items: center;
