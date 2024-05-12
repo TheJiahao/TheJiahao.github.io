@@ -6,11 +6,6 @@ $colors: (
     "warning": rgb(236, 117, 0),
 );
 
-$icons: (
-    "info": "\F431",
-    "warning": "\F33B",
-);
-
 .callout {
     margin: 1em 0;
     padding: var(--card-padding);
@@ -18,7 +13,9 @@ $icons: (
     box-shadow: var(--shadow-l1);
 
     &-title {
-        vertical-align: middle;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     @each $name, $color in $colors {
@@ -27,17 +24,6 @@ $icons: (
 
             .callout-title {
                 color: $color;
-            }
-        }
-    }
-
-    @each $name, $icon in $icons {
-        &-#{$name} {
-            .callout-title::before {
-                content: $icon;
-                font-family: "bootstrap-icons";
-                margin-right: 0.5rem;
-                vertical-align: baseline;
             }
         }
     }

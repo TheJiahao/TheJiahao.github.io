@@ -1,8 +1,15 @@
 {{- $type := .Get "type" | default (.Get 0) -}}
 {{- $title := .Get "title" | default (.Get 1) -}}
 
+{{ $icons := newScratch }}
+{{ $icons.Set "warning" "exclamation-triangle" }}
+{{ $icons.Set "info" "info-circle" }}
+
 
 <aside class="callout callout-{{ $type }}">
-    <span class="callout-title">{{ $title }}</span>
+    <span class="callout-title">
+        <i class="bi bi-{{ $icons.Get $type }}"></i>
+        <strong>{{ $title }}</strong>
+    </span>
     {{ .Inner | safeHTML }}
 </aside>
