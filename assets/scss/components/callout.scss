@@ -46,10 +46,8 @@ $colors: (
         }
 
         &[open] {
-            .callout-title {
-                &::after {
-                    content: "\F282";
-                }
+            .callout-title::after {
+                content: "\F282";
             }
         }
     }
