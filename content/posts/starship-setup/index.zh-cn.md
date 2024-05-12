@@ -80,8 +80,48 @@ scoop bucket add nerd-fonts
 scoop install jetbrainsmono-nf-mono
 ```
 
-笔者推荐使用带 `mono` 后缀的字体，这种字体中所有符号都等宽。
-不带 `mono` 的版本中的有些 Nerd Font 符号更宽 [^nerd-font-mono]。
+{{% callout info 字体后缀 %}}
+
+- `nf`：Nerd Fonts 字体
+- `mono`：等宽字体
+
+具体含义可参考 Nerd Fonts 的 [README](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#features)。
+
+{{% /callout %}}
+
+#### Ubuntu (Linux)
+
+从 Nerd Fonts [官网](https://www.nerdfonts.com/font-downloads) 上下载心仪的字体，然后将其中字体文件解压到 `~/.local/share/fonts` 即可 [^ubuntu-font-install]。
+带 `Mono` 后缀的为等宽字体。
+
+### Shell 配置
+
+安装 Starship 后还需要配置 shell，[官网](https://starship.rs/zh-CN/guide/) 上介绍了不同 shell 的设置，本文仅介绍 Nushell 和 Zsh 的配置。
+
+#### Nushell
+
+Nushell 的情况下需要在 `$nu.env-path` 环境文件中添加以下内容来生成 Starship 初始化脚本：
+
+```nu
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+```
+
+之后还需要在 `$nu.config-path` 配置文件中加载脚本：
+
+```nu
+use ~/.cache/starship/init.nu
+```
+
+`~/.cache/starship/init.nu` 可以更改为任意路径。
+
+#### Zsh
+
+在 `~/.zshrc` 中添加：
+
+```sh
+eval "$(starship init zsh)"
+```
 
 ### Starship 配置
 
@@ -89,4 +129,4 @@ scoop install jetbrainsmono-nf-mono
 
 [Nerd Font](https://www.nerdfonts.com/cheat-sheet) 的网站里可以按关键词搜索符号。
 
-[^nerd-font-mono]: ryanoasis/nerd-fonts, https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#features
+[^ubuntu-font-install]: How do I install fonts? https://askubuntu.com/a/3706
