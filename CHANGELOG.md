@@ -2,7 +2,6 @@
 
 ## [2.7.0](https://github.com/TheJiahao/blog/compare/v2.6.0...v2.7.0) (2024-05-13)
 
-
 ### Features
 
 * (callout): Align icon and title vertically ([75f6fc1](https://github.com/TheJiahao/blog/commit/75f6fc154a3727552d4b6c8b5c58766f909a3d56))
@@ -30,7 +29,6 @@
 * **site:** Add SVG avatar ([45f94a5](https://github.com/TheJiahao/blog/commit/45f94a51aefd2a6d89ab4c1ba242b7651007eb44))
 * **video:** Add attributes control, loop, muted and disablepictureinpicture ([09ed5e1](https://github.com/TheJiahao/blog/commit/09ed5e10b411c8f8332a19444b70ce327d36de2b))
 
-
 ### Bug Fixes
 
 * Add shape-rendering="geometricPrecision" to avatar ([4c8613b](https://github.com/TheJiahao/blog/commit/4c8613bbeb8269e1cee0585b2045d03b0702cc25))
@@ -48,7 +46,6 @@
 * **schema:** Add .Context to base ([caafd80](https://github.com/TheJiahao/blog/commit/caafd80b851d66722335c4d7bef76f3d52442f0f))
 * **schema:** Change [@context](https://github.com/context) to https URL ([1f1b460](https://github.com/TheJiahao/blog/commit/1f1b4600cbfbe482c0a119bbfe24c30d4533a5a2))
 * **schema:** Determine blog postings by section ([fd7e7c7](https://github.com/TheJiahao/blog/commit/fd7e7c79e6d05ff199a3ab2113ce53f97f788141))
-
 
 ### Performance Improvements
 
