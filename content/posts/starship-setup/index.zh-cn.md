@@ -130,8 +130,11 @@ eval "$(starship init zsh)"
 
 ### Starship 配置
 
-默认情况下 Starship 的配置文件位于 `~/.config/starship.toml`。
+默认情况下，Starship 的配置文件位于 `~/.config/starship.toml`。
+Starship 提供了许多预设主题。
 
 [Nerd Font](https://www.nerdfonts.com/cheat-sheet) 的网站里可以按关键词搜索符号。
+
+## 跨设备同步
 
 [^ubuntu-font-install]: How do I install fonts? https://askubuntu.com/a/3706
