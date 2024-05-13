@@ -2,11 +2,25 @@
     "name": "jiahao-blog",
     "version": "1.0.0",
     "private": true,
+    "type": "module",
     "scripts": {
         "format": "markdownlint --fix . && zhlint *.md --fix && prettier --write . && taplo format",
         "measure": "hugo --templateMetrics --templateMetricsHints",
         "measure:nocache": "hugo --templateMetrics --templateMetricsHints --ignoreCache",
-        "index": "gis $SITE_URL"
+        "index": "gis $SITE_URL",
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/mdx": "^3.0.0",
+        "@astrojs/rss": "^4.0.5",
+        "@astrojs/sitemap": "^3.1.4",
+        "astro": "^4.8.3",
+        "@astrojs/check": "^0.6.0",
+        "typescript": "^5.4.5"
     },
     "devDependencies": {
         "@taplo/cli": "^0.7.0",
