@@ -6,11 +6,9 @@ runs:
         - name: Checkout
           uses: actions/checkout@v4
 
-        - name: Install pnpm
-          uses: pnpm/action-setup@v3
-          with:
-              version: latest
-              run_install: false
+        - name: Enable corepack
+          run: corepack enable
+          shell: bash
 
         - name: Install Node.js
           uses: actions/setup-node@v4
