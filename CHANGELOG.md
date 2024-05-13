@@ -1,5 +1,60 @@
 # Changelog
 
+## [2.7.0](https://github.com/TheJiahao/blog/compare/v2.6.0...v2.7.0) (2024-05-13)
+
+
+### Features
+
+* (callout): Align icon and title vertically ([75f6fc1](https://github.com/TheJiahao/blog/commit/75f6fc154a3727552d4b6c8b5c58766f909a3d56))
+* **callout:** Add hover shadow ([851a8c4](https://github.com/TheJiahao/blog/commit/851a8c4142c1fef5abaae858a1305a9c10a89705))
+* **callout:** Add top and bottom margin ([d661752](https://github.com/TheJiahao/blog/commit/d661752668de5465931bc0228976d99c0a7c4e58))
+* **callout:** Make callout collapsible if needed ([c61d967](https://github.com/TheJiahao/blog/commit/c61d967f89726cb8e920faf150a6c4c7fbe69037))
+* **callout:** Show clickable cursor on hover ([143f377](https://github.com/TheJiahao/blog/commit/143f3771d5f57102023565d02a10b7c27efb114e))
+* **callout:** Use Bootstrap icons ([e869100](https://github.com/TheJiahao/blog/commit/e86910092bd2d6212091c4cad7cd5f1b49020243))
+* **css:** Make SVG article-image responsive ([61198f4](https://github.com/TheJiahao/blog/commit/61198f4ff40ad5d562bef12fcbdc4fdebf7851f6))
+* Implement callout shortcode ([4a47dcb](https://github.com/TheJiahao/blog/commit/4a47dcbeb9e50e5b0a039e9581896bfd5f2b295e))
+* **post:** Add background for Edge logo ([dfbad54](https://github.com/TheJiahao/blog/commit/dfbad54c98f27d8e6ed45d09336022922272c931))
+* **post:** Add draft for starship-setup ([7ad2488](https://github.com/TheJiahao/blog/commit/7ad248826a05814eb70f243e555d314501c1d722))
+* **post:** Add gradient background to clangd cover ([db543a2](https://github.com/TheJiahao/blog/commit/db543a2580dc8b0c9a7570dadae9edab67723e1c))
+* **post:** Add gradient Nushell cover ([f8251f8](https://github.com/TheJiahao/blog/commit/f8251f898217bd54be128b77859cc5151e42f931))
+* **post:** Add logo for starship-setup ([244a5c5](https://github.com/TheJiahao/blog/commit/244a5c5f91381d793b8788ce4d168628dc9872b2))
+* **post:** Add shell setup to starship-setup ([7c65e1b](https://github.com/TheJiahao/blog/commit/7c65e1b2638d2626db753401b9aa367a1112cc00))
+* **post:** Add transitions to nushell-setup ([58929f5](https://github.com/TheJiahao/blog/commit/58929f5dcbe8a235b2a12c3bb68e67cf6dee77b4))
+* **post:** Make Zim logo responsive ([93f789c](https://github.com/TheJiahao/blog/commit/93f789ce0ece7a00e9c6bb1b3dfd1a1a78082e18))
+* **post:** Update starship-setup ([b50c92e](https://github.com/TheJiahao/blog/commit/b50c92e8e5757b90fe859f8c40dbecdaaae71295))
+* **schema:** Add breadcrumbs ([062295c](https://github.com/TheJiahao/blog/commit/062295c79c214b981b70cb4cd5cbb404a3182e40))
+* **schema:** Add inLanguage ([90d268d](https://github.com/TheJiahao/blog/commit/90d268db8187fd0438733060ee4831782be2f413))
+* **schema:** Handle 404 page ([6a19418](https://github.com/TheJiahao/blog/commit/6a194186dc75a4435573dc2811c877c97b48887a))
+* **schema:** Only add non-empty breadcrumbs ([3774c9f](https://github.com/TheJiahao/blog/commit/3774c9fbb5096764ffd2ab06845ef14f58549d69))
+* **shortcode:** Add shortcode for links ([5e4271c](https://github.com/TheJiahao/blog/commit/5e4271c7040ff004c186915f5854c34bb71a2fa2))
+* **site:** Add SVG avatar ([45f94a5](https://github.com/TheJiahao/blog/commit/45f94a51aefd2a6d89ab4c1ba242b7651007eb44))
+* **video:** Add attributes control, loop, muted and disablepictureinpicture ([09ed5e1](https://github.com/TheJiahao/blog/commit/09ed5e10b411c8f8332a19444b70ce327d36de2b))
+
+
+### Bug Fixes
+
+* Add shape-rendering="geometricPrecision" to avatar ([4c8613b](https://github.com/TheJiahao/blog/commit/4c8613bbeb8269e1cee0585b2045d03b0702cc25))
+* **ci:** Replace bun with pnpm ([da7aae5](https://github.com/TheJiahao/blog/commit/da7aae552272b7a28881c8336e22d974279de11c))
+* **cover:** Adjust SVG covers ([41a4d30](https://github.com/TheJiahao/blog/commit/41a4d3041f9ffbe3823fbdaafc8a515281268a56))
+* Drop-shadows not showing in Firefox ([ff6f5c8](https://github.com/TheJiahao/blog/commit/ff6f5c8c8b1515da9c16c83cfec107132fcddf4b))
+* Footnotes inside callout not rendering ([199d2f9](https://github.com/TheJiahao/blog/commit/199d2f94f929d4e9ae8ba653fbe2243c43ab1fe4))
+* Grammar ([9011c6d](https://github.com/TheJiahao/blog/commit/9011c6de0240800718035114e91aceaaebf27ffc))
+* Incorrect link ([ab91b3a](https://github.com/TheJiahao/blog/commit/ab91b3af0ced699909422b68c87a88b19807c5b4))
+* Incorrect markdownlint config ([8c37da7](https://github.com/TheJiahao/blog/commit/8c37da7498ac4cf41d33b069b8d66d19d3946549))
+* Install pnpm with corepack ([185917b](https://github.com/TheJiahao/blog/commit/185917bd955d58f869c110c5427a4f634f50869e))
+* Remove packageManager SHA from package.json ([8d6a18f](https://github.com/TheJiahao/blog/commit/8d6a18f2d47344a26273d07b47b233c5dcf9f7bc))
+* Rename sitemapExclude back to Sitemap.Disable ([c09972f](https://github.com/TheJiahao/blog/commit/c09972f49cf024ad9aa947d5e3beb25b06a7529c))
+* Respect noindex = false in frontmatter ([5ca1f0e](https://github.com/TheJiahao/blog/commit/5ca1f0ecc17abeb65b982c71d061c80203856276))
+* **schema:** Add .Context to base ([caafd80](https://github.com/TheJiahao/blog/commit/caafd80b851d66722335c4d7bef76f3d52442f0f))
+* **schema:** Change [@context](https://github.com/context) to https URL ([1f1b460](https://github.com/TheJiahao/blog/commit/1f1b4600cbfbe482c0a119bbfe24c30d4533a5a2))
+* **schema:** Determine blog postings by section ([fd7e7c7](https://github.com/TheJiahao/blog/commit/fd7e7c79e6d05ff199a3ab2113ce53f97f788141))
+
+
+### Performance Improvements
+
+* Remove useless optimization ([32c3b77](https://github.com/TheJiahao/blog/commit/32c3b77795599889567a9e207920e61e057804c1))
+* **schema:** Calculate base schema only once ([26706fe](https://github.com/TheJiahao/blog/commit/26706fed74c2e3994aace6f8dece2ead3914ba56))
+
 ## [2.6.0](https://github.com/TheJiahao/blog/compare/v2.5.0...v2.6.0) (2024-05-05)
 
 ### Features
