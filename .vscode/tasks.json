@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Server (draft)",
+            "label": "Server (development)",
             "type": "shell",
-            "command": "hugo server -D",
+            "command": "pnpm run dev",
             "group": {
                 "kind": "test",
                 "isDefault": true
@@ -15,16 +15,9 @@
             "problemMatcher": []
         },
         {
-            "label": "Server (production)",
-            "type": "shell",
-            "command": "hugo server --environment production",
-            "isBackground": true,
-            "problemMatcher": []
-        },
-        {
             "label": "Build",
             "type": "shell",
-            "command": "hugo --environment production",
+            "command": "pnpm run build",
             "group": {
                 "kind": "build",
                 "isDefault": true
