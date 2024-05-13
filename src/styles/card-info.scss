@@ -1,0 +1,17 @@
+@use "./card.scss";
+@use "./config.scss" as config;
+
+.card-info {
+    display: block;
+    text-align: center;
+    max-width: 15%;
+    position: sticky;
+    align-items: center;
+}
+
+.avatar {
+    display: block;
+    margin: auto;
+    border-radius: 100%;
+    filter: config.$shadow-l1;
+}
