@@ -1,6 +1,5 @@
 import type { CollectionEntry } from "astro:content";
 import type { ReactNode } from "react";
-import BaseHead from "../components/BaseHead.astro";
 
 type postData = CollectionEntry<"posts">["data"];
 
