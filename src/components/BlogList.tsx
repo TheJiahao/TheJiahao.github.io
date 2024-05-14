@@ -1,4 +1,4 @@
-import "../styles/card.css"
+import "../styles/card.css";
 
 const BlogList = () => {
     return (
@@ -6,6 +6,6 @@ const BlogList = () => {
             <h2>Blog List</h2>
         </div>
     );
-}
+};
 
 export default BlogList;
