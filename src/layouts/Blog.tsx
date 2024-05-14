@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 type postData = CollectionEntry<"posts">["data"];
 
-interface BlogPostProps extends postData {
+interface BlogProps extends postData {
     children: ReactNode;
 }
 
@@ -13,7 +13,7 @@ const BlogPost = ({
     date,
     image,
     children,
-}: BlogPostProps) => {
+}: BlogProps) => {
     return (
         <>
             <article>{children}</article>
