@@ -1,4 +1,9 @@
-import { defineConfig, presetAttributify, presetWind } from "unocss";
+import {
+    defineConfig,
+    presetAttributify,
+    presetWind,
+    transformerDirectives,
+} from "unocss";
 
 export default defineConfig({
     presets: [
@@ -7,4 +12,5 @@ export default defineConfig({
         }),
         presetWind(),
     ],
+    transformers: [transformerDirectives()],
 });
