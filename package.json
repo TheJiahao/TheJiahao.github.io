@@ -4,7 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "format": "markdownlint --fix . && zhlint *.md --fix && prettier --write . && taplo format",
+        "format": "markdownlint --fix . && zhlint *.md --fix && prettier --write . && taplo format && eslint --fix .",
         "measure": "hugo --templateMetrics --templateMetricsHints",
         "measure:nocache": "hugo --templateMetrics --templateMetricsHints --ignoreCache",
         "index": "gis $SITE_URL",
