@@ -9,6 +9,7 @@ jobs:
     Build:
         runs-on: ubuntu-latest
         environment: gh-pages
+        if: false
 
         steps:
             - uses: actions/checkout@v4
