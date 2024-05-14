@@ -8,3 +8,4 @@ public/**
 db.json
 .github/workflows
 .zhlintrc
+*.html
