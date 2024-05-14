@@ -3,6 +3,7 @@ import reactJSXRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
+import astroEslint from "eslint-plugin-astro";
 
 export default tseslint.config(
     {
@@ -18,6 +19,7 @@ export default tseslint.config(
     },
     eslint.configs.recommended,
     ...tseslint.configs.recommended,
+    ...astroEslint.configs.recommended,
     reactRecommended,
     reactJSXRuntime,
 );
