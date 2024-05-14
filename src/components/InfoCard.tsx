@@ -1,15 +1,23 @@
 import { SITE_AVATAR, SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-import "../styles/card-info.scss";
+//import "../styles/card-info.scss";
 
 const InfoCard = () => {
     return (
-        <div className="card card-info">
+        <div
+            un-text="center"
+            un-border="rounded-md"
+            un-bg="white"
+            un-drop-shadow="md"
+            un-w="sm"
+            un-h="md"
+        >
             <img
-                className="avatar"
                 src={SITE_AVATAR}
                 alt="Avatar"
-                width={120}
-                height={120}
+                un-size="30"
+                un-mx="auto"
+                un-drop-shadow="md"
+                un-rounded="full"
             />
             <h1>{SITE_TITLE}</h1>
             <p>{SITE_DESCRIPTION}</p>
