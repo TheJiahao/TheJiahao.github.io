@@ -23,6 +23,9 @@ dependencies:
   '@unocss/astro':
     specifier: ^0.60.2
     version: 0.60.2(vite@5.2.11)
+  '@unocss/preset-typography':
+    specifier: ^0.60.2
+    version: 0.60.2
   '@unocss/reset':
     specifier: ^0.60.2
     version: 0.60.2
