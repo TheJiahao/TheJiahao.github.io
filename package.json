@@ -12,7 +12,9 @@
         "start": "astro dev",
         "build": "astro check && astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "lint": "eslint . --report-unused-disable-directives",
+        "lint:fix": "eslint --fix ."
     },
     "dependencies": {
         "@astrojs/check": "^0.6.0",
@@ -30,13 +32,18 @@
         "unocss": "^0.60.2"
     },
     "devDependencies": {
+        "@eslint/js": "^9.2.0",
         "@taplo/cli": "^0.7.0",
         "@types/react": "^18.3.2",
         "@types/react-dom": "^18.3.0",
+        "eslint": "^9.2.0",
+        "eslint-plugin-react": "^7.34.1",
+        "globals": "^15.2.0",
         "google-indexing-script": "^0.0.5",
         "markdownlint-cli": "^0.40.0",
         "prettier": "^3.2.5",
         "prettier-plugin-go-template": "^0.0.15",
+        "typescript-eslint": "^7.9.0",
         "zhlint": "^0.8.1"
     },
     "packageManager": "pnpm@9.1.0"
