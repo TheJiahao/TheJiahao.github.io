@@ -1,5 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 import type { ReactNode } from "react";
+import "../styles/card.css";
 
 type postData = CollectionEntry<"posts">["data"];
 
@@ -7,17 +8,16 @@ interface BlogProps extends postData {
     children: ReactNode;
 }
 
-const BlogPost = ({
-    title,
-    description,
-    date,
-    image,
-    children,
-}: BlogProps) => {
+const BlogPost = ({ title, description, date, children }: BlogProps) => {
     return (
-        <>
-            <article>{children}</article>
-        </>
+        <article
+            className="card prose"
+            un-container="sm"
+            un-max-w="prose"
+            un-mx="auto"
+        >
+            {children}
+        </article>
     );
 };
 
