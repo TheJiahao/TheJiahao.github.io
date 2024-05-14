@@ -24,3 +24,17 @@ jobs:
                   author_name: github-actions[bot]
                   author_email: github-ations[bot]@users.noreply.github.com
                   message: "style: Format code"
+    Lint:
+        runs-on: ubuntu-latest
+        needs: Format
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: "HEAD"
+
+            - name: Set up
+              uses: ./.github/workflows/setup-action
+
+            - name: Format code
+              run: pnpm run lint
