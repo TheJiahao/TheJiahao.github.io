@@ -1,4 +1,4 @@
-import { SITE_AVATAR, SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { SITE_AVATAR, SITE_DESCRIPTION, SITE_TITLE } from "../config";
 import "../styles/card.css";
 
 const InfoCard = () => {
