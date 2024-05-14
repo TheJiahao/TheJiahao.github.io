@@ -2,5 +2,5 @@
     @apply rounded-md
         bg-white
         drop-shadow-md
-        break-inside-avoid block px-8 py-2;
+        break-inside-avoid block;
 }
