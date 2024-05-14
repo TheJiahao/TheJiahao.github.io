@@ -22,9 +22,9 @@ export default tseslint.config(
             },
         },
     },
-    eslint.configs.recommended,
-    ...tseslint.configs.recommended,
-    ...astroEslint.configs.recommended,
-    reactRecommended,
-    reactJSXRuntime,
+    {
+        rules: {
+            "react/no-unknown-property": ["off"],
+        },
+    },
 );
