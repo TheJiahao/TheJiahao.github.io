@@ -1,11 +1,23 @@
-import pluginJs from "@eslint/js";
-import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
+import eslint from "@eslint/js";
+import reactJSXRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
+import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-export default [
-    { languageOptions: { globals: globals.browser } },
-    pluginJs.configs.recommended,
+export default tseslint.config(
+    {
+        ignores: ["dist", ".astro"],
+    },
+    {
+        languageOptions: { globals: globals.browser },
+        settings: {
+            react: {
+                version: "detect",
+            },
+        },
+    },
+    eslint.configs.recommended,
     ...tseslint.configs.recommended,
-    pluginReactConfig,
-];
+    reactRecommended,
+    reactJSXRuntime,
+);
