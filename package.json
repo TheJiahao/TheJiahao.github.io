@@ -44,7 +44,6 @@
         "google-indexing-script": "^0.0.5",
         "markdownlint-cli": "^0.40.0",
         "prettier": "^3.2.5",
-        "prettier-plugin-go-template": "^0.0.15",
         "typescript-eslint": "^7.9.0",
         "zhlint": "^0.8.1"
     },
