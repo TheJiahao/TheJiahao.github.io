@@ -16,7 +16,7 @@ tags:
     - LLVM
     - Clang
 description: 本文介绍了通过 Scoop 安装 clangd 的方法。
-image: /assets/images/clangd_logo.svg
+image: img/clangd_logo.svg
 license:
 
 hidden: false
