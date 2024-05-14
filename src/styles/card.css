@@ -1,0 +1,3 @@
+.card {
+    @apply rounded-md bg-white drop-shadow-md;
+}
