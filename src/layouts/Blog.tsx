@@ -13,7 +13,6 @@ const BlogPost = ({ title, description, date, image, children }: BlogProps) => {
         <article
             className="card prose"
             un-container="sm"
-            un-max-w="prose"
             un-mx="auto"
         >
             <header>
