@@ -26,7 +26,7 @@ license: >-
 links:
     - title: Zim
       description: Modular, customizable, and blazing fast Zsh framework
-      website: https://zimfw.sh/
+      url: https://zimfw.sh/
       image: https://zimfw.sh/images/favicons/apple-touch-icon.png
 
 hidden: false

@@ -27,7 +27,7 @@ sitemap:
 links:
     - title: Starship
       description: 轻量、迅速、客制化的高颜值终端！
-      website: https://starship.rs/zh-CN/
+      url: https://starship.rs/zh-CN/
       image: https://raw.githubusercontent.com/starship/starship/2eb5e7e73451a8113b32fdbeca8e0c684b776e05/media/icon.svg
 ---
 
