@@ -2,5 +2,7 @@
     @apply rounded-md
         bg-white
         drop-shadow-md
-        break-inside-avoid block;
+        break-inside-avoid 
+        block 
+        overflow-hidden;
 }
