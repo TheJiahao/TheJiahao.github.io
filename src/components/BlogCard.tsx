@@ -22,7 +22,7 @@ const BlogCard = ({
         <div className="card" un-w="sm" un-aspect-ratio="1.618">
             <img
                 src={image.src}
-                alt={`Cover image of "${title}"`}
+                alt={`Cover of "${title}"`}
                 className="[&[src$='svg']]:object-fill"
                 un-object="cover"
                 un-h={(1.618 / 2.618) * height}
