@@ -1,9 +1,13 @@
+import type { CollectionEntry } from "astro:content";
 import "../styles/card.css";
+import BlogCard from "./BlogCard";
 
-const BlogList = () => {
+const BlogList = ({ blogs }: { blogs: CollectionEntry<"posts">["data"][] }) => {
     return (
-        <div className="card">
-            <h2>Blog List</h2>
+        <div className="flex" un-flex="col">
+            {blogs.map((blog) => (
+                <BlogCard key={blog.title} {...blog} />
+            ))}
         </div>
     );
 };
