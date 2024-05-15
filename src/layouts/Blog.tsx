@@ -1,6 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 import type { ReactNode } from "react";
 import "../styles/card.css";
+import formatDate from "../utils/formatDate";
 
 type postData = CollectionEntry<"posts">["data"];
 
@@ -27,7 +28,7 @@ const BlogPost = ({ title, description, date, image, children }: BlogProps) => {
                 <div un-px="8" un-py="2">
                     <h2>{title}</h2>
                     <h3 un-text="slate">{description}</h3>
-                    <time>{date.toISOString().split("T")[0]}</time>
+                    <time>{formatDate(date)}</time>
                 </div>
             </header>
             <section un-px="8" un-py="2">
