@@ -8,7 +8,7 @@ const LinkList = ({ links }: { links?: LinkProps[] }) => {
     }
 
     return (
-        <div className="card" un-max-w="80ch" un-mx="auto">
+        <div className="card" un-w="full" un-mx="auto">
             {links.map((link) => (
                 <Link key={link.url} {...link} />
             ))}
