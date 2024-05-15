@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/Blog";
 import BaseHead from "../../components/BaseHead.astro";
+import LinkList from "../../components/LinkList";
 
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
@@ -20,4 +21,4 @@ const { Content } = await post.render();
 <BlogPost {...post.data} client:only="react">
     <Content />
 </BlogPost>
-<Link
+<LinkList links={post.data.links} />
