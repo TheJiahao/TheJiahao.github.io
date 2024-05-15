@@ -14,7 +14,6 @@ tags:
     - Edge
     - JavaScript Debugger
     - Windows
-description:
 image: img/edge_logo.svg
 license:
 
