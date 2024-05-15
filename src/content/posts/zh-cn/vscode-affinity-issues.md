@@ -1,7 +1,6 @@
 ---
 date: 2024-02-22T19:43:26+02:00
 
-slug: vscode-affinity-issues
 aliases:
     - 54972536
 
@@ -11,8 +10,7 @@ tags:
     - VS Code
     - Markdown
     - Git
-description:
-image: img/vscode_logo.svg
+image: /src/assets/images/vscode_logo.svg
 license:
 
 hidden: false
