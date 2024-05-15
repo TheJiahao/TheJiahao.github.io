@@ -14,6 +14,7 @@ const BlogPost = ({ title, description, date, image, children }: BlogProps) => {
             className="card prose"
             un-container="sm"
             un-mx="auto"
+            un-max-w="80ch"
         >
             <header>
                 {image && (
