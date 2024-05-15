@@ -18,7 +18,9 @@ const { Content } = await post.render();
 ---
 
 <BaseHead {...post.data} />
-<BlogPost {...post.data} client:only="react">
-    <Content />
-</BlogPost>
-<LinkList links={post.data.links} />
+<main class="prose" un-max-w="80ch" un-mx="auto">
+    <BlogPost {...post.data} client:only="react">
+        <Content />
+    </BlogPost>
+    <LinkList links={post.data.links} />
+</main>

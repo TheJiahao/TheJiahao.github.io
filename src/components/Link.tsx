@@ -18,6 +18,7 @@ const Link = ({ title, description, url, image }: LinkProps) => {
                 width="50vh"
                 height="50vh"
                 un-flex="none"
+                un-object="contain"
             />
         </a>
     );
