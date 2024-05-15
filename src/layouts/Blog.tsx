@@ -10,10 +10,7 @@ interface BlogProps extends postData {
 
 const BlogPost = ({ title, description, date, image, children }: BlogProps) => {
     return (
-        <article
-            className="card"
-            un-container="sm"
-        >
+        <article className="card" un-container="sm">
             <header>
                 {image && (
                     <img
