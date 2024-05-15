@@ -9,6 +9,16 @@ const postCollection = defineCollection({
             tags: z.array(z.string()).optional(),
             description: z.string().optional(),
             image: image().optional(),
+            links: z
+                .array(
+                    z.object({
+                        title: z.string(),
+                        description: z.string().optional(),
+                        url: z.string(),
+                        image: z.string().optional(),
+                    }),
+                )
+                .optional(),
         }),
 });
 
