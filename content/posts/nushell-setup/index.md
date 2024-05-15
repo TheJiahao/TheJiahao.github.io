@@ -21,12 +21,12 @@ license:
 links:
     - title: Nushell
       description: 一种新的 Shell
-      website: https://www.nushell.sh/zh-CN/
+      url: https://www.nushell.sh/zh-CN/
       image: img/nushell_logo.svg
 
     - title: sigoden/argc-completions
       description: "{bash,zsh,fish,powershell,nushell}-completions for 1000+ commands."
-      website: https://github.com/sigoden/argc-completions
+      url: https://github.com/sigoden/argc-completions
       image: https://github.githubassets.com/favicons/favicon.svg
 
 hidden: false

@@ -29,11 +29,11 @@ sitemap:
 
 links:
     - title: clangd - Visual Studio Marketplace
-      website: https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd
+      url: https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd
       image: https://raw.githubusercontent.com/clangd/vscode-clangd/eca1e05a39c4e987dca6247d825dfbe92fd5996f/icon.png
       description: C/C++ completion, navigation, and insights
     - title: 如何配置 vscode clangd
-      website: https://zhuanlan.zhihu.com/p/508819503
+      url: https://zhuanlan.zhihu.com/p/508819503
       image: https://www.google.com/s2/favicons?domain=zhihu.com&sz=128
 ---
 
