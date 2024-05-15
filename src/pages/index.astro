@@ -1,8 +1,11 @@
 ---
+import { getCollection } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import BlogList from "../components/BlogList";
 import InfoCard from "../components/InfoCard";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const blogs = await getCollection("posts");
 ---
 
 <!doctype html>
@@ -11,9 +14,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
     <body>
-        <main un-columns-2>
+        <main un-columns="2" un-gap="8">
             <InfoCard />
-            <BlogList />
+            <BlogList blogs={blogs.map((blog) => blog.data)} />
         </main>
     </body>
 </html>
