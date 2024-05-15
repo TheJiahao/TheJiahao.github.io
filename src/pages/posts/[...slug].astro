@@ -28,5 +28,5 @@ const { Content } = await post.render();
     <BlogPost {...post.data} client:only="react">
         <Content />
     </BlogPost>
-    <LinkList links={post.data.links} />
+    <LinkList links={post.data.links || []} />
 </main>
