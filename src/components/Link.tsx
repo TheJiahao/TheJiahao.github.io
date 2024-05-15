@@ -17,6 +17,7 @@ const Link = ({ title, description, url, image }: LinkProps) => {
                 alt={`Cover image of "${title}"`}
                 width="50vh"
                 height="50vh"
+                un-my="auto"
                 un-flex="none"
                 un-object="contain"
             />
