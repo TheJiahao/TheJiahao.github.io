@@ -18,7 +18,13 @@ const { Content } = await post.render();
 ---
 
 <BaseHead {...post.data} />
-<main class="prose flex" un-max-w="80ch" un-mx="auto" un-gap-y="7" un-flex="col">
+<main
+    class="prose flex"
+    un-max-w="80ch"
+    un-mx="auto"
+    un-gap-y="7"
+    un-flex="col"
+>
     <BlogPost {...post.data} client:only="react">
         <Content />
     </BlogPost>
