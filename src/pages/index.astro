@@ -18,7 +18,11 @@ const blogs = await getCollection("posts");
             <InfoCard />
         </aside>
         <main>
-            <BlogList blogs={blogs.map((blog) => blog.data)} />
+            <BlogList
+                blogs={blogs.map((blog) => {
+                    return { ...blog.data, slug: blog.slug };
+                })}
+            />
         </main>
     </body>
 </html>
