@@ -3,6 +3,13 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import UnoCSS from "unocss/astro";
+import { loadEnv } from "vite";
+
+const { PUBLIC_PORT } = loadEnv(
+    process.env.NODE_ENV || "dev",
+    process.cwd(),
+    "",
+);
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,4 +22,7 @@ export default defineConfig({
             injectReset: true, // or a path to the reset file
         }),
     ],
+    server: {
+        port: Number(PUBLIC_PORT),
+    },
 });

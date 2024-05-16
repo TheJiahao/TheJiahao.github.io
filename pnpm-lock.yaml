@@ -102,6 +102,9 @@ importers:
       typescript-eslint:
         specifier: ^7.9.0
         version: 7.9.0(eslint@8.57.0)(typescript@5.4.5)
+      vite:
+        specifier: ^5.2.11
+        version: 5.2.11(@types/node@20.12.12)(sass@1.77.1)
       zhlint:
         specifier: ^0.8.1
         version: 0.8.1
