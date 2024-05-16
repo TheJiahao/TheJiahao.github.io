@@ -18,6 +18,7 @@ const NavigationBar = () => {
                 un-mx="auto"
                 un-drop-shadow="md"
                 un-rounded="full"
+                un-object="contain"
             />
             <h1>{SITE_TITLE}</h1>
             <p>{SITE_DESCRIPTION}</p>
