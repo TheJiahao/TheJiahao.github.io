@@ -1,19 +1,7 @@
-# Jiahao 的博客源代码
+# Jiahao's blog
 
-此仓库包含我的 [博客](https://thejiahao.github.io/) 源代码。
+This repository contains the source code of my [blog](thejiahao.github.io/).
 
-## Commit
+## Fullstack harjoitustyö
 
-Commit message 采用 [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)。
-
-使用以下类型
-
-- fix：修复 bug
-- feat：新功能
-- ci：CI 相关，例如 GitHub Actions
-- style：代码样式、格式化代码
-- refactor：重构
-- docs：修改文档
-- post：新文章
-- perf：优化性能
-- chore：修改网站配置、修订文章等
+- [Tuntikirjanpito](https://helsinkifi-my.sharepoint.com/:x:/g/personal/jiahao_ad_helsinki_fi/EfxlAGlsZ-1OqF8D3fEOavsBbZQ-u6v1JAbhDKakP0KQ9Q?e=kw9ZnQ)
