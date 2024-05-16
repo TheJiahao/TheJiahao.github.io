@@ -8,8 +8,7 @@ const NavigationBar = () => {
             un-self="start"
             un-top="0"
             un-text="left"
-            un-w="sm"
-            un-h="md"
+            un-h="screen"
         >
             <img
                 src={SITE_AVATAR}
