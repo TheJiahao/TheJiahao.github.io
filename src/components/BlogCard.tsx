@@ -1,24 +1,18 @@
 import type { CollectionEntry } from "astro:content";
 import "../styles/card.css";
 import formatDate from "../utils/formatDate";
+import { BLOG_IMAGE_HEIGHT, BLOG_IMAGE_PLACEHOLDER } from "../config";
 
 type BlogProps = CollectionEntry<"posts">["data"] & { slug: string };
 
-const width = 200;
-const height = width / 1.618;
-const detailsHeight = (1 / 2.618) * height;
+const detailsHeight = (1 / 2.618) * BLOG_IMAGE_HEIGHT;
 
 const BlogCard = ({
     title,
     description,
     date,
     slug,
-    image = {
-        src: "/src/assets/images/cover_placeholder.svg",
-        width,
-        height,
-        format: "svg",
-    },
+    image = BLOG_IMAGE_PLACEHOLDER,
 }: BlogProps) => {
     return (
         <a className="card flex" href={`/posts/${slug}`} un-w="90ch" un-mx="auto">
