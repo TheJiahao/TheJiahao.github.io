@@ -7,7 +7,7 @@ const NavigationBar = () => {
             className="card sticky"
             un-self="start"
             un-top="0"
-            un-text="center"
+            un-text="left"
             un-w="sm"
             un-h="md"
         >
@@ -15,7 +15,6 @@ const NavigationBar = () => {
                 src={SITE_AVATAR}
                 alt="Avatar"
                 un-size="30"
-                un-mx="auto"
                 un-drop-shadow="md"
                 un-rounded="full"
                 un-object="contain"
