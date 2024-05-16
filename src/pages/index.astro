@@ -15,7 +15,7 @@ const blogs = await getCollection("posts");
     </head>
     <body class="flex">
         <NavigationBar />
-        <main>
+        <main un-w="screen">
             <BlogList
                 blogs={blogs.map((blog) => {
                     return { ...blog.data, slug: blog.slug };
