@@ -1,6 +1,7 @@
 import {
     defineConfig,
     presetAttributify,
+    presetIcons,
     presetTypography,
     presetWind,
     transformerDirectives,
@@ -13,6 +14,7 @@ export default defineConfig({
         }),
         presetWind(),
         presetTypography(),
+        presetIcons(),
     ],
     transformers: [transformerDirectives()],
 });
