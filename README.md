@@ -1,6 +1,6 @@
 # Jiahao's blog
 
-This repository contains the source code of my [blog](thejiahao.github.io/).
+This repository contains the source code of my [blog](https://thejiahao.github.io).
 
 ## Fullstack harjoitustyö
 
