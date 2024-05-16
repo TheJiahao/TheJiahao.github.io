@@ -21,7 +21,7 @@ const BlogCard = ({
     },
 }: BlogProps) => {
     return (
-        <a className="card flex" href={`/posts/${slug}`} un-w="90ch">
+        <a className="card flex" href={`/posts/${slug}`} un-w="90ch" un-mx="auto">
             <img
                 src={image.src}
                 alt={`Cover of "${title}"`}
