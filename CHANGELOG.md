@@ -2,7 +2,6 @@
 
 ## 1.0.0 (2024-05-16)
 
-
 ### Features
 
 * (callout): Align icon and title vertically ([2c93594](https://github.com/TheJiahao/TheJiahao.github.io/commit/2c935949b47ec8d8935e35d9bd9c90c6cd362862))
@@ -68,7 +67,6 @@
 * **url:** Use directory name as default slug ([96f9891](https://github.com/TheJiahao/TheJiahao.github.io/commit/96f98915a7288420b69bd647b202d38a31c8aec3))
 * Use tags as keywords if no keywords specified ([d3dd4b5](https://github.com/TheJiahao/TheJiahao.github.io/commit/d3dd4b51159b4e8a6e16d9af7282ddd6a40b24fa))
 * **video:** Add attributes control, loop, muted and disablepictureinpicture ([5a6f529](https://github.com/TheJiahao/TheJiahao.github.io/commit/5a6f5294ea05c5601199e690def8d629ff99acb5))
-
 
 ### Bug Fixes
 
@@ -138,7 +136,6 @@
 * Update giscus language ([0d35f4a](https://github.com/TheJiahao/TheJiahao.github.io/commit/0d35f4a9687bbdc30d30cb5c310f3ab6baca4e25))
 * Use larger zhihu.com favicon ([e058c08](https://github.com/TheJiahao/TheJiahao.github.io/commit/e058c08522ca5cb8affb3d8a20efb945da3f13eb))
 * Use sun-filled icon instead of sun ([3182d8e](https://github.com/TheJiahao/TheJiahao.github.io/commit/3182d8e03fff8da733df2cd10d2ecfd55b593205))
-
 
 ### Performance Improvements
 
