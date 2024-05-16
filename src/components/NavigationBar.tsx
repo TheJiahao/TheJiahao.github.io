@@ -1,5 +1,12 @@
 import { SITE_AVATAR, SITE_DESCRIPTION, SITE_TITLE } from "../config";
 import "../styles/card.css";
+import NavigationBarLink from "./NavigationBarLink";
+
+const links = [
+    { href: "/", text: "首页", icon: "i-fluent-emoji-flat-house" },
+    { href: "/posts", text: "归档", icon: "i-fluent-emoji-flat-file-cabinet" },
+    { href: "/about", text: "关于", icon: "i-fluent-emoji-flat-star" },
+];
 
 const NavigationBar = () => {
     return (
@@ -23,6 +30,11 @@ const NavigationBar = () => {
                 <h1>{SITE_TITLE}</h1>
                 <p>{SITE_DESCRIPTION}</p>
             </div>
+            <ul>
+                {links.map((link) => (
+                    <NavigationBarLink key={link.text} {...link} />
+                ))}
+            </ul>
         </nav>
     );
 };
