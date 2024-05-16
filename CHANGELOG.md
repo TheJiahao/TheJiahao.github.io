@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/TheJiahao/TheJiahao.github.io/compare/v1.0.0...v1.0.1) (2024-05-16)
+
+
+### Bug Fixes
+
+* **docs:** Link to blog ([394f93e](https://github.com/TheJiahao/TheJiahao.github.io/commit/394f93e92be07076966cd65fbe4335ae512f19df))
+
 ## 1.0.0 (2024-05-16)
 
 ### Features
