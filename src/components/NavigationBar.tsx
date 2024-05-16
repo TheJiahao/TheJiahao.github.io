@@ -9,6 +9,7 @@ const NavigationBar = () => {
             un-top="0"
             un-text="left"
             un-h="screen"
+            un-p="6"
         >
             <img
                 src={SITE_AVATAR}
