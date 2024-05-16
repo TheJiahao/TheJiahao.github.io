@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import BlogList from "../components/BlogList";
-import InfoCard from "../components/InfoCard";
+import NavigationBar from "../components/NavigationBar";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 const blogs = await getCollection("posts");
@@ -15,7 +15,7 @@ const blogs = await getCollection("posts");
     </head>
     <body class="flex">
         <aside class="sticky" un-self="start" un-top="0">
-            <InfoCard />
+            <NavigationBar />
         </aside>
         <main>
             <BlogList
