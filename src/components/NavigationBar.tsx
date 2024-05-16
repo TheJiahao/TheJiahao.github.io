@@ -1,7 +1,7 @@
 import { SITE_AVATAR, SITE_DESCRIPTION, SITE_TITLE } from "../config";
 import "../styles/card.css";
 
-const InfoCard = () => {
+const NavigationBar = () => {
     return (
         <div className="card" un-text="center" un-w="sm" un-h="md">
             <img
@@ -18,4 +18,4 @@ const InfoCard = () => {
     );
 };
 
-export default InfoCard;
+export default NavigationBar;
