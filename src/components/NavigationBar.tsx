@@ -19,8 +19,10 @@ const NavigationBar = () => {
                 un-rounded="full"
                 un-object="contain"
             />
-            <h1>{SITE_TITLE}</h1>
-            <p>{SITE_DESCRIPTION}</p>
+            <div>
+                <h1>{SITE_TITLE}</h1>
+                <p>{SITE_DESCRIPTION}</p>
+            </div>
         </nav>
     );
 };
