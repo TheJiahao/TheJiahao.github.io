@@ -14,9 +14,7 @@ const blogs = await getCollection("posts");
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
     <body class="flex">
-        <aside class="sticky" un-self="start" un-top="0">
-            <NavigationBar />
-        </aside>
+        <NavigationBar />
         <main>
             <BlogList
                 blogs={blogs.map((blog) => {

@@ -3,7 +3,14 @@ import "../styles/card.css";
 
 const NavigationBar = () => {
     return (
-        <div className="card" un-text="center" un-w="sm" un-h="md">
+        <nav
+            className="card sticky"
+            un-self="start"
+            un-top="0"
+            un-text="center"
+            un-w="sm"
+            un-h="md"
+        >
             <img
                 src={SITE_AVATAR}
                 alt="Avatar"
@@ -14,7 +21,7 @@ const NavigationBar = () => {
             />
             <h1>{SITE_TITLE}</h1>
             <p>{SITE_DESCRIPTION}</p>
-        </div>
+        </nav>
     );
 };
 
