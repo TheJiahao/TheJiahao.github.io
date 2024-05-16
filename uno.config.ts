@@ -17,4 +17,12 @@ export default defineConfig({
         presetIcons(),
     ],
     transformers: [transformerDirectives()],
+    content: {
+        pipeline: {
+            include: [
+                /\.(vue|svelte|[jt]sx|mdx?|astro|elm|php|phtml|html)($|\?)/,
+                "src/**/*.{js,ts}",
+            ],
+        },
+    },
 });
