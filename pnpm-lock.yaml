@@ -12,8 +12,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0
       google-indexing-script:
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.1.0
+        version: 0.1.0
       markdownlint-cli:
         specifier: ^0.40.0
         version: 0.40.0
@@ -270,8 +270,8 @@ packages:
     resolution: {integrity: sha512-9l+zO07h1tDJdIHN74SpnWIlNR+OuOemXlWJlLP9pXy6vFtizgpEzMuwJa4lqY9UAdiAv5DVd5ql0Am916I+aA==}
     engines: {node: '>=14'}
 
-  google-indexing-script@0.0.5:
-    resolution: {integrity: sha512-9+vyCSsmpru+Qz3KqkAFgI2li9pUhqYNRhC185IlNbCCRLta9OlUK/kU08UmRrwm8ckC5s6hyyPFnXCs8hlqOw==}
+  google-indexing-script@0.1.0:
+    resolution: {integrity: sha512-qR4c1n3bUkmJsOSH0951HfQY48F0ozw214tj42UKmwieGce5B41Ru2+AgUokmaemqK0TQLB1eKYXdrSVC839Bg==}
     hasBin: true
 
   googleapis-common@7.2.0:
@@ -1060,7 +1060,7 @@ snapshots:
       - encoding
       - supports-color
 
-  google-indexing-script@0.0.5:
+  google-indexing-script@0.1.0:
     dependencies:
       googleapis: 131.0.0
       sitemapper: 3.2.8
