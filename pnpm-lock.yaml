@@ -56,6 +56,9 @@ importers:
       unocss:
         specifier: ^0.60.2
         version: 0.60.2(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.1))
+      vite:
+        specifier: ^5.2.11
+        version: 5.2.11(@types/node@20.12.12)(sass@1.77.1)
     devDependencies:
       '@eslint/js':
         specifier: ^9.2.0
@@ -102,9 +105,6 @@ importers:
       typescript-eslint:
         specifier: ^7.9.0
         version: 7.9.0(eslint@8.57.0)(typescript@5.4.5)
-      vite:
-        specifier: ^5.2.11
-        version: 5.2.11(@types/node@20.12.12)(sass@1.77.1)
       zhlint:
         specifier: ^0.8.1
         version: 0.8.1
