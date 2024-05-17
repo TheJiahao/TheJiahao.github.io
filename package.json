@@ -7,7 +7,7 @@
         "format": "pnpm run lint:fix && prettier --write .",
         "format:ci": "pnpm run lint:fix && prettier --write . !.github/**",
         "lint": "eslint . && markdownlint . && zhlint *.md",
-        "lint:fix": "eslint --fix . && markdownlint --fix . && zhlint *.md --fix",
+        "lint:fix": "eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
         "test:e2e": "playwright test",
         "index": "gis $SITE_URL",
         "build": "astro check && astro build",
