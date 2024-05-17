@@ -66,9 +66,6 @@ importers:
       '@playwright/test':
         specifier: ^1.44.0
         version: 1.44.0
-      '@taplo/cli':
-        specifier: ^0.7.0
-        version: 0.7.0
       '@types/node':
         specifier: ^20.12.12
         version: 20.12.12
@@ -102,6 +99,9 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.13.0
         version: 0.13.0
+      prettier-plugin-toml:
+        specifier: ^2.0.1
+        version: 2.0.1(prettier@3.2.5)
       typescript-eslint:
         specifier: ^7.9.0
         version: 7.9.0(eslint@8.57.0)(typescript@5.4.5)
@@ -946,9 +946,11 @@ packages:
     resolution: {integrity: sha512-4BAffykYOgO+5nzBWYwE3W90sBgLJoUPRWWcL8wlyiM8IB8ipJz3UMJ9KXQd1RKQXpKp8Tutn80HZtWsu2u76w==}
     engines: {node: '>=10'}
 
-  '@taplo/cli@0.7.0':
-    resolution: {integrity: sha512-Ck3zFhQhIhi02Hl6T4ZmJsXdnJE+wXcJz5f8klxd4keRYgenMnip3JDPMGDRLbnC/2iGd8P0sBIQqI3KxfVjBg==}
-    hasBin: true
+  '@taplo/core@0.1.1':
+    resolution: {integrity: sha512-BG/zLGf5wiNXGEVPvUAAX/4ilB3PwDUY2o0MV0y47mZbDZ9ad9UK/cIQsILat3bqbPJsALVbU6k3cskNZ3vAQg==}
+
+  '@taplo/lib@0.4.0-alpha.2':
+    resolution: {integrity: sha512-DV/Re3DPVY+BhBtLZ3dmP4mP6YMLSsgq9qGLXwOV38lvNF/fBlgvQswzlXmzCEefL/3q2eMoefZpOI/+GLuCNA==}
 
   '@types/acorn@4.0.6':
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -3099,6 +3101,12 @@ packages:
     resolution: {integrity: sha512-5HrJNnPmZqTUNoA97zn4gNQv9BgVhv+et03314WpQ9H9N8m2L9OSV798olwmG2YLXPl1iSstlJCR1zB3x5xG4g==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
+  prettier-plugin-toml@2.0.1:
+    resolution: {integrity: sha512-99z1YOkViECHtXQjGIigd3talI/ybUI1zB3yniAwUrlWBXupNXThB1hM6bwSMUEj2/+tomTlMtT98F5t4s8IWA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      prettier: ^3.0.3
+
   prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
     engines: {node: '>=14'}
@@ -4730,7 +4738,11 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@taplo/cli@0.7.0': {}
+  '@taplo/core@0.1.1': {}
+
+  '@taplo/lib@0.4.0-alpha.2':
+    dependencies:
+      '@taplo/core': 0.1.1
 
   '@types/acorn@4.0.6':
     dependencies:
@@ -7836,6 +7848,11 @@ snapshots:
       '@astrojs/compiler': 1.8.2
       prettier: 3.2.5
       sass-formatter: 0.7.9
+
+  prettier-plugin-toml@2.0.1(prettier@3.2.5):
+    dependencies:
+      '@taplo/lib': 0.4.0-alpha.2
+      prettier: 3.2.5
 
   prettier@3.2.5: {}
 
