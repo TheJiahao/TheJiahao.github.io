@@ -34,5 +34,5 @@ jobs:
             - name: Set up
               uses: ./.github/workflows/setup-action
 
-            - name: Format code
+            - name: Lint code
               run: pnpm run lint
