@@ -6,6 +6,5 @@ pnpm-lock.yaml
 public/**
 *.md
 db.json
-.github/workflows
 .zhlintrc
 *.html

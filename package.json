@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "format": "pnpm run lint:fix && prettier --write .",
+        "format:ci": "pnpm run lint:fix && prettier --write . !.github/**",
         "index": "gis $SITE_URL",
         "dev": "astro dev",
         "start": "pnpm run build && astro preview",
