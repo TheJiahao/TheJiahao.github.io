@@ -4,14 +4,14 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "format": "markdownlint --fix . && zhlint *.md --fix && prettier --write . && eslint --fix .",
+        "format": "pnpm run lint:fix && prettier --write .",
         "index": "gis $SITE_URL",
         "dev": "astro dev",
         "start": "pnpm run build && astro preview",
         "test:e2e": "playwright test",
         "build": "astro check && astro build",
-        "lint": "eslint . --report-unused-disable-directives",
-        "lint:fix": "eslint --fix ."
+        "lint": "eslint . && markdownlint . && zhlint *.md",
+        "lint:fix": "eslint --fix . && markdownlint --fix . && zhlint *.md --fix"
     },
     "dependencies": {
         "@astrojs/check": "^0.6.0",
