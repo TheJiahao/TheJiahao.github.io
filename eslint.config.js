@@ -13,16 +13,12 @@ export default tseslint.config(
     ...astroEslint.configs.recommended,
     {
         ignores: ["dist", ".astro"],
-    },
-    {
         languageOptions: { globals: globals.browser },
         settings: {
             react: {
                 version: "detect",
             },
         },
-    },
-    {
         rules: {
             "react/no-unknown-property": ["off"],
         },
