@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "format": "pnpm run lint:fix && prettier --write .",
-        "format:ci": "pnpm run lint:fix && prettier --write . !.github/**",
+        "format:ci": "pnpm run format -- !.github/**",
         "lint": "eslint . && markdownlint . && zhlint *.md",
         "lint:fix": "eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
         "test:e2e": "playwright test",
