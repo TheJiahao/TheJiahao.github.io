@@ -5,6 +5,7 @@ import {
     presetTypography,
     presetWind,
     transformerDirectives,
+    transformerAttributifyJsx,
 } from "unocss";
 
 export default defineConfig({
@@ -16,7 +17,7 @@ export default defineConfig({
         presetTypography(),
         presetIcons(),
     ],
-    transformers: [transformerDirectives()],
+    transformers: [transformerDirectives(), transformerAttributifyJsx()],
     content: {
         pipeline: {
             include: [
