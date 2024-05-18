@@ -23,6 +23,6 @@ export default defineConfig({
         }),
     ],
     server: {
-        port: Number(PUBLIC_PORT),
+        port: Number(PUBLIC_PORT) || 4321,
     },
 });
