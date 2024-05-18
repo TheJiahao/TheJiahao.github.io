@@ -10,9 +10,7 @@ import {
 
 export default defineConfig({
     presets: [
-        presetAttributify({
-            prefixedOnly: true,
-        }),
+        presetAttributify(),
         presetWind(),
         presetTypography(),
         presetIcons(),
