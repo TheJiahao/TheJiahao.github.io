@@ -1,26 +1,15 @@
 ---
 import { getCollection } from "astro:content";
-import BaseHead from "../components/BaseHeader.astro";
-import BlogList from "../components/BlogList";
-import NavigationBar from "../components/NavigationBar";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import HomeLayout from "../layouts/HomeLayout.astro";
 
 const blogs = await getCollection("posts");
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body class="flex">
-        <NavigationBar />
-        <main un-w="screen">
-            <BlogList
-                blogs={blogs.map((blog) => {
-                    return { ...blog.data, slug: blog.slug };
-                })}
-            />
-        </main>
-    </body>
-</html>
+<HomeLayout
+    title={SITE_TITLE}
+    description={SITE_DESCRIPTION}
+    blogs={blogs.map((blog) => {
+        return { ...blog.data, slug: blog.slug };
+    })}
+/>
