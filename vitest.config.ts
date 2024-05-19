@@ -7,7 +7,7 @@ export default getViteConfig({
         coverage: {
             reporter: ["json", "html"],
             include: ["src"],
-            exclude: ["src/tests/**", "**/*.d.ts"],
+            exclude: ["src/tests", "src/content", "src/pages", "**/*.d.ts"],
         },
     },
 });
