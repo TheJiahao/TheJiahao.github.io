@@ -16,7 +16,7 @@ const { title, description, blogs } = Astro.props;
 <BaseLayout title={title} description={description}>
     <div flex>
         <NavigationBar />
-        <main un-w="screen">
+        <main w-screen>
             <BlogList blogs={blogs} />
         </main>
     </div>
