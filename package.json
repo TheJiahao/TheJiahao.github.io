@@ -44,6 +44,7 @@
         "eslint-plugin-react": "^7.34.1",
         "globals": "^15.2.0",
         "google-indexing-script": "^0.0.5",
+        "jsdom": "^24.0.0",
         "markdownlint-cli": "^0.40.0",
         "prettier": "^3.2.5",
         "prettier-plugin-astro": "^0.13.0",
