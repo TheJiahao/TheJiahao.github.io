@@ -47,6 +47,9 @@ hugo.linux
 # jetbrains setting folder
 .idea/
 /test-results/
+
+# Testing
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+coverage
