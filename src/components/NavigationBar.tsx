@@ -4,7 +4,6 @@ import {
     SITE_DESCRIPTION,
     SITE_TITLE,
 } from "../config";
-import "../styles/card.css";
 import NavigationBarLink from "./NavigationBarLink";
 
 const NavigationBar = () => {

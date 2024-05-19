@@ -16,6 +16,9 @@ export default defineConfig({
         presetIcons(),
     ],
     transformers: [transformerDirectives(), transformerAttributifyJsx()],
+    shortcuts: {
+        card: "rounded-md bg-white drop-shadow-md break-inside-avoid block overflow-hidden",
+    },
     content: {
         pipeline: {
             include: [
