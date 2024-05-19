@@ -4,18 +4,20 @@ import {
     SITE_DESCRIPTION,
     SITE_TITLE,
 } from "../config";
-import NavigationLink from "./NavigationLink";
+import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
 
 interface NavigationBarProps {
     title?: string;
     description?: string;
     avatar?: ImageMetadata;
+    links?: NavigationLinkProps[];
 }
 
 const NavigationBar = ({
     title = SITE_TITLE,
     description = SITE_DESCRIPTION,
     avatar = SITE_AVATAR,
+    links = NAVIGATION_LINKS,
 }: NavigationBarProps) => {
     return (
         <nav card sticky self-start top-0 text-left h-screen p-6>
@@ -32,7 +34,7 @@ const NavigationBar = ({
                 <p>{description}</p>
             </div>
             <ul>
-                {NAVIGATION_LINKS.map((link) => (
+                {links.map((link) => (
                     <NavigationLink key={link.text} {...link} />
                 ))}
             </ul>
