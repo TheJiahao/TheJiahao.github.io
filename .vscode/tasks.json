@@ -15,6 +15,17 @@
             "problemMatcher": []
         },
         {
+            "label": "Preview",
+            "type": "shell",
+            "command": "pnpm run start",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
             "label": "Build",
             "type": "shell",
             "command": "pnpm run build",
