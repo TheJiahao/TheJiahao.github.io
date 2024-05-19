@@ -20,7 +20,17 @@ const NavigationBar = ({
     links = NAVIGATION_LINKS,
 }: NavigationBarProps) => {
     return (
-        <nav card sticky self-start top-0 text-left h-screen p-6>
+        <nav
+            card
+            sticky
+            flex="~ col"
+            items-center
+            self-auto
+            top-0
+            h-screen
+            p-2
+            gap-4
+        >
             <img
                 {...avatar}
                 alt="Avatar"
@@ -29,11 +39,13 @@ const NavigationBar = ({
                 rounded-full
                 object-contain
             />
-            <div>
-                <h1>{title}</h1>
-                <p>{description}</p>
+            <div text-center>
+                <h1 text-xl font-bold>
+                    {title}
+                </h1>
+                <p text-base>{description}</p>
             </div>
-            <ul>
+            <ul space-y-4 text-xl>
                 {links.map((link) => (
                     <NavigationLink key={link.text} {...link} />
                 ))}
