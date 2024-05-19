@@ -1,9 +1,11 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
+import getImage from "./utils/getImage";
+
 export const SITE_TITLE = "Astro Blog";
 export const SITE_DESCRIPTION = "Welcome to my website!";
-export const SITE_AVATAR = "/assets/avatar.svg";
+export const SITE_AVATAR = await getImage("/src/assets/images/avatar.svg");
 
 export const NAVIGATION_LINKS = [
     { href: "/", text: "首页", icon: "i-fluent-emoji-flat-house" },
