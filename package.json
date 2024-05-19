@@ -8,6 +8,7 @@
         "format:ci": "pnpm run format -- !.github/**",
         "lint": "eslint . && markdownlint . && zhlint *.md",
         "lint:fix": "eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
+        "test": "vitest",
         "test:e2e": "playwright test",
         "index": "gis $SITE_URL",
         "build": "astro check && astro build",
