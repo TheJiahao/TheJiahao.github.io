@@ -3,10 +3,17 @@ import type { CollectionEntry } from "astro:content";
 import formatDate from "../utils/formatDate";
 import BaseLayout from "./BaseLayout.astro";
 import LinkList from "../components/LinkList";
+import { BLOG_IMAGE_PLACEHOLDER } from "../config";
 
 type Props = CollectionEntry<"posts">["data"];
 
-const { title, description, date, image, links } = Astro.props;
+const {
+    title,
+    description,
+    date,
+    image = BLOG_IMAGE_PLACEHOLDER,
+    links,
+} = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} image={image}>
@@ -14,7 +21,7 @@ const { title, description, date, image, links } = Astro.props;
         <article card>
             <header>
                 {
-                    image && (
+                    (
                         <img
                             src={image.src}
                             alt={`Cover image of "${title}"`}
