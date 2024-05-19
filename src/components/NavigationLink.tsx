@@ -6,7 +6,7 @@ interface NavigationBarLinkProps {
 
 const NavigationLink = ({ href, text, icon }: NavigationBarLinkProps) => (
     <li>
-        <a href={href} className="inline-flex" un-gap="10" un-leading="4">
+        <a href={href} inline-flex gap-10 leading-4>
             <span className={icon} />
             <span>{text}</span>
         </a>
