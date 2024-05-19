@@ -46,6 +46,7 @@
         "prettier-plugin-astro": "^0.13.0",
         "prettier-plugin-toml": "^2.0.1",
         "typescript-eslint": "^7.9.0",
+        "vitest": "^1.6.0",
         "zhlint": "^0.8.1"
     },
     "packageManager": "pnpm@9.1.0"
