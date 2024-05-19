@@ -1,61 +1,61 @@
 name: CI
 on:
-    workflow_call:
+  workflow_call:
 
 jobs:
-    format:
-        name: Format
-        runs-on: ubuntu-latest
+  format:
+    name: Format
+    runs-on: ubuntu-latest
 
-        permissions:
-            contents: write
+    permissions:
+      contents: write
 
-        steps:
-            - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Set up
-              uses: ./.github/workflows/setup-action
+      - name: Set up
+        uses: ./.github/workflows/setup-action
 
-            - name: Format code
-              run: pnpm run format:ci
+      - name: Format code
+        run: pnpm run format:ci
 
-            - name: Commit and push changes
-              uses: EndBug/add-and-commit@v9
-              with:
-                  author_name: github-actions[bot]
-                  author_email: github-ations[bot]@users.noreply.github.com
-                  message: "style: Format code"
-    lint:
-        name: Lint
-        runs-on: ubuntu-latest
-        needs: format
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-ations[bot]@users.noreply.github.com
+          message: "style: Format code"
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    needs: format
 
-        steps:
-            - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Set up
-              uses: ./.github/workflows/setup-action
+      - name: Set up
+        uses: ./.github/workflows/setup-action
 
-            - name: Lint code
-              run: pnpm run lint
+      - name: Lint code
+        run: pnpm run lint
 
-    unit_test:
-        name: Unit test
-        runs-on: ubuntu-latest
-        environment: test
+  unit_test:
+    name: Unit test
+    runs-on: ubuntu-latest
+    environment: test
 
-        steps:
-            - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Set up
-              uses: ./.github/workflows/setup-action
+      - name: Set up
+        uses: ./.github/workflows/setup-action
 
-            - name: Test code
-              run: pnpm run coverage
+      - name: Test code
+        run: pnpm run coverage
 
-            - name: Upload coverage reports to Codecov
-              uses: codecov/codecov-action@v4
-              env:
-                  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-              with:
-                  files: ./coverage/coverage-final.json
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          files: ./coverage/coverage-final.json

@@ -1,23 +1,23 @@
 name: CI/CD
 on:
-    push:
-    workflow_dispatch:
+  push:
+  workflow_dispatch:
 
 jobs:
-    ci:
-        name: CI
-        permissions:
-            contents: write
+  ci:
+    name: CI
+    permissions:
+      contents: write
 
-        uses: ./.github/workflows/ci.yml
+    uses: ./.github/workflows/ci.yml
 
-    cd:
-        name: CD
-        needs: ci
-        concurrency:
-            group: cd
-            cancel-in-progress: true
-        secrets:
-            ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+  cd:
+    name: CD
+    needs: ci
+    concurrency:
+      group: cd
+      cancel-in-progress: true
+    secrets:
+      ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
-        uses: ./.github/workflows/cd.yml
+    uses: ./.github/workflows/cd.yml

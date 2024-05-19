@@ -1,77 +1,77 @@
 name: CD
 on:
-    workflow_call:
-        secrets:
-            ACTIONS_DEPLOY_KEY:
-                required: true
+  workflow_call:
+    secrets:
+      ACTIONS_DEPLOY_KEY:
+        required: true
 
 jobs:
-    Build:
-        runs-on: ubuntu-latest
-        environment: gh-pages
-        if: false
+  Build:
+    runs-on: ubuntu-latest
+    environment: gh-pages
+    if: false
 
-        steps:
-            - uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-            - name: Disable quotePath
-              run: git config --global core.quotePath false
+      - name: Disable quotePath
+        run: git config --global core.quotePath false
 
-            - name: Cache Hugo resources
-              uses: actions/cache@v4
-              env:
-                  cache-name: cache-hugo-resources
-              with:
-                  path: resources
-                  key: ${{ env.cache-name }}
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-hugo-resources
+        with:
+          path: resources
+          key: ${{ env.cache-name }}
 
-            - uses: actions/setup-go@v5
-              with:
-                  go-version: stable
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
 
-            - name: Setup Hugo
-              uses: peaceiris/actions-hugo@v3.0.0
-              with:
-                  hugo-version: latest
-                  extended: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3.0.0
+        with:
+          hugo-version: latest
+          extended: true
 
-            - name: Build
-              run: hugo --environment production
+      - name: Build
+        run: hugo --environment production
 
-            - name: Upload site artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: site-artifact
-                  path: public
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-artifact
+          path: public
 
-    Deploy:
-        runs-on: ubuntu-latest
-        environment: gh-pages
+  Deploy:
+    runs-on: ubuntu-latest
+    environment: gh-pages
 
-        needs: Build
+    needs: Build
 
-        steps:
-            - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-            - name: Download site artifact
-              uses: actions/download-artifact@v4
-              with:
-                  name: site-artifact
-                  path: public
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-artifact
+          path: public
 
-            - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@v4
-              with:
-                  repository-name: TheJiahao/TheJiahao.github.io
-                  branch: main
-                  ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-                  folder: public
-                  git-config-name: github-actions[bot]
-                  git-config-email: github-actions[bot]@users.noreply.github.com
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: TheJiahao/TheJiahao.github.io
+          branch: main
+          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          folder: public
+          git-config-name: github-actions[bot]
+          git-config-email: github-actions[bot]@users.noreply.github.com
 
-                  single-commit: false
-                  clean: true
-                  clean-exclude: |
-                      .github
+          single-commit: false
+          clean: true
+          clean-exclude: |
+            .github
