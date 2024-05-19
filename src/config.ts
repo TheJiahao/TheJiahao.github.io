@@ -13,9 +13,6 @@ export const NAVIGATION_LINKS = [
     { href: "/about", text: "关于", icon: "i-fluent-emoji-flat-star" },
 ];
 
-export const BLOG_IMAGE_WIDTH = 200;
-export const BLOG_IMAGE_HEIGHT = BLOG_IMAGE_WIDTH / 1.618;
-
 export const BLOG_IMAGE_PLACEHOLDER = await getImage(
     "/src/assets/images/cover_placeholder.svg",
 );
