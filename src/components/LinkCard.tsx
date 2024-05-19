@@ -5,7 +5,7 @@ interface LinkProps {
     image?: string;
 }
 
-const Link = ({ title, description, url, image }: LinkProps) => {
+const LinkCard = ({ title, description, url, image }: LinkProps) => {
     return (
         <a href={url} className="flex" un-gap="4" un-px="8" un-py="2">
             <div un-flex="auto">
@@ -26,4 +26,4 @@ const Link = ({ title, description, url, image }: LinkProps) => {
 };
 
 export type { LinkProps };
-export default Link;
+export default LinkCard;
