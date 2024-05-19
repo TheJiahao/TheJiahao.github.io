@@ -16,9 +16,6 @@ export const NAVIGATION_LINKS = [
 export const BLOG_IMAGE_WIDTH = 200;
 export const BLOG_IMAGE_HEIGHT = BLOG_IMAGE_WIDTH / 1.618;
 
-export const BLOG_IMAGE_PLACEHOLDER = Object.freeze({
-    src: "/src/assets/images/cover_placeholder.svg",
-    width: BLOG_IMAGE_WIDTH,
-    height: BLOG_IMAGE_HEIGHT,
-    format: "svg",
-});
+export const BLOG_IMAGE_PLACEHOLDER = await getImage(
+    "/src/assets/images/cover_placeholder.svg",
+);
