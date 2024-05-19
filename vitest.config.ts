@@ -4,7 +4,7 @@ export default getViteConfig({
     test: {
         environment: "jsdom",
         setupFiles: ["src/tests/setup.ts"],
-        reporters: process.env.GITHUB_ACTIONS ? ["github-actions"] : [],
+        reporters: "default",
         coverage: {
             reporter: ["json", "html"],
             include: ["src"],
