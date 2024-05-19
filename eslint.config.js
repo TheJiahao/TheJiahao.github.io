@@ -13,6 +13,8 @@ export default tseslint.config(
     ...astroEslint.configs.recommended,
     {
         ignores: ["dist", ".astro"],
+    },
+    {
         languageOptions: { globals: globals.browser },
         settings: {
             react: {
