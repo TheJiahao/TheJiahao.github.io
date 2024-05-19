@@ -1,19 +1,21 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import BaseHeader from "../components/BaseHeader.astro";
 
 interface Props {
     title: string;
     description?: string;
     lang: string;
+    image?: CollectionEntry<"posts">["data"]["image"];
 }
 
-const { lang = "zh-cn", title, description }: Props = Astro.props;
+const { lang = "zh-cn", title, description, image }: Props = Astro.props;
 ---
 
 <!doctype html>
 <html lang={lang}>
     <head>
-        <BaseHeader title={title} description={description} />
+        <BaseHeader title={title} description={description} image={image} />
     </head>
     <body>
         <slot />
