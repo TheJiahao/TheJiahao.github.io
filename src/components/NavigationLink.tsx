@@ -4,7 +4,7 @@ interface NavigationBarLinkProps {
     icon: string;
 }
 
-const NavigationBarLink = ({ href, text, icon }: NavigationBarLinkProps) => (
+const NavigationLink = ({ href, text, icon }: NavigationBarLinkProps) => (
     <li>
         <a href={href} className="inline-flex" un-gap="10" un-leading="4">
             <span className={icon} />
@@ -13,4 +13,4 @@ const NavigationBarLink = ({ href, text, icon }: NavigationBarLinkProps) => (
     </li>
 );
 
-export default NavigationBarLink;
+export default NavigationLink;

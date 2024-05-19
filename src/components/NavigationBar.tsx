@@ -4,7 +4,7 @@ import {
     SITE_DESCRIPTION,
     SITE_TITLE,
 } from "../config";
-import NavigationBarLink from "./NavigationBarLink";
+import NavigationLink from "./NavigationLink";
 
 const NavigationBar = () => {
     return (
@@ -30,7 +30,7 @@ const NavigationBar = () => {
             </div>
             <ul>
                 {NAVIGATION_LINKS.map((link) => (
-                    <NavigationBarLink key={link.text} {...link} />
+                    <NavigationLink key={link.text} {...link} />
                 ))}
             </ul>
         </nav>
