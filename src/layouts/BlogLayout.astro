@@ -10,15 +10,8 @@ const { title, description, date, image, links } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} image={image}>
-    <main
-        class="prose flex"
-        un-max-w="80ch"
-        un-mx="auto"
-        un-gap-y="7"
-        un-flex="col"
-        container="sm"
-    >
-        <article class="card">
+    <main prose flex max-w-80ch mx-auto gap-y-7 flex-col>
+        <article card>
             <header>
                 {
                     image && (
@@ -26,21 +19,21 @@ const { title, description, date, image, links } = Astro.props;
                             src={image.src}
                             alt={`Cover image of "${title}"`}
                             class="[&[src$='svg']]:object-fill"
-                            un-w="full"
-                            un-max-w="full"
-                            un-max-h="30vh"
-                            un-object="cover"
-                            un-overflow="hidden"
+                            w-full
+                            max-w-full
+                            max-h-30vh
+                            object-cover
+                            overflow-hidden
                         />
                     )
                 }
-                <div un-px="8" un-py="2">
+                <div px-8 py-2>
                     <h2>{title}</h2>
-                    <h3 un-text="slate">{description}</h3>
+                    <h3 text-slate>{description}</h3>
                     <time>{formatDate(date)}</time>
                 </div>
             </header>
-            <section un-px="8" un-py="2">
+            <section px-8 py-2>
                 <slot />
             </section>
         </article>
