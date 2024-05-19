@@ -5,7 +5,7 @@ interface NavigationLinkProps {
 }
 
 const NavigationLink = ({ href, text, icon }: NavigationLinkProps) => (
-    <li>
+    <li aria-label="Navigation link">
         <a href={href} inline-flex gap-10 leading-4>
             <span className={icon} />
             <span>{text}</span>
