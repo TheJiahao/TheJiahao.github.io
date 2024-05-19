@@ -8,7 +8,7 @@ interface BlogProps extends postData {
     children: ReactNode;
 }
 
-const BlogPost = ({ title, description, date, image, children }: BlogProps) => {
+const BlogLayout = ({ title, description, date, image, children }: BlogProps) => {
     return (
         <article className="card" un-container="sm">
             <header>
@@ -37,4 +37,4 @@ const BlogPost = ({ title, description, date, image, children }: BlogProps) => {
     );
 };
 
-export default BlogPost;
+export default BlogLayout;
