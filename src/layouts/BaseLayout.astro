@@ -9,7 +9,7 @@ interface Props {
     image?: CollectionEntry<"posts">["data"]["image"];
 }
 
-const { lang = "zh-cn", title, description, image }: Props = Astro.props;
+const { lang = "zh-cn", title, description, image } = Astro.props;
 ---
 
 <!doctype html>
