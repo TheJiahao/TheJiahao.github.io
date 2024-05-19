@@ -1,21 +1,21 @@
 description: Set up Node and pnpm
 
 runs:
-    using: composite
-    steps:
-        - name: Checkout
-          uses: actions/checkout@v4
+  using: composite
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
 
-        - name: Enable corepack
-          run: corepack enable
-          shell: bash
+    - name: Enable corepack
+      run: corepack enable
+      shell: bash
 
-        - name: Install Node.js
-          uses: actions/setup-node@v4
-          with:
-              node-version: lts/*
-              cache: pnpm
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: pnpm
 
-        - name: Install dependencies
-          run: pnpm install
-          shell: bash
+    - name: Install dependencies
+      run: pnpm install
+      shell: bash
