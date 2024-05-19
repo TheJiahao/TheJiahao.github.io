@@ -26,9 +26,6 @@ importers:
       '@iconify-json/fluent-emoji-flat':
         specifier: ^1.1.16
         version: 1.1.16
-      '@unocss/astro':
-        specifier: ^0.60.2
-        version: 0.60.2(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.1))
       '@unocss/reset':
         specifier: ^0.60.2
         version: 0.60.2
