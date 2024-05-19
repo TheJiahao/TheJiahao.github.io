@@ -6,11 +6,21 @@ import {
 } from "../config";
 import NavigationLink from "./NavigationLink";
 
-const NavigationBar = () => {
+interface NavigationBarProps {
+    title?: string;
+    description?: string;
+    avatar?: string;
+}
+
+const NavigationBar = ({
+    title = SITE_TITLE,
+    description = SITE_DESCRIPTION,
+    avatar = SITE_AVATAR,
+}: NavigationBarProps) => {
     return (
         <nav card sticky self-start top-0 text-left h-screen p-6>
             <img
-                src={SITE_AVATAR}
+                src={avatar}
                 alt="Avatar"
                 size-30
                 drop-shadow-md
@@ -18,8 +28,8 @@ const NavigationBar = () => {
                 object-contain
             />
             <div>
-                <h1>{SITE_TITLE}</h1>
-                <p>{SITE_DESCRIPTION}</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </div>
             <ul>
                 {NAVIGATION_LINKS.map((link) => (
