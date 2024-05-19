@@ -4,7 +4,7 @@ import LinkCard from "./LinkCard";
 const LinkList = ({ links }: { links: LinkProps[] }) => {
     return (
         links && (
-            <div className="card" un-w="full" un-mx="auto" un-divide="y">
+            <div card w-full mx-auto divide-y>
                 {links.map((link) => (
                     <LinkCard key={link.url} {...link} />
                 ))}
