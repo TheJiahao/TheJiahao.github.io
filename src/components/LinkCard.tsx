@@ -7,8 +7,8 @@ interface LinkProps {
 
 const LinkCard = ({ title, description, url, image }: LinkProps) => {
     return (
-        <a href={url} className="flex" un-gap="4" un-px="8" un-py="2">
-            <div un-flex="auto">
+        <a href={url} flex gap-4 px-8 py-2>
+            <div flex-auto>
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>
@@ -17,9 +17,9 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => {
                 alt={`Cover image of "${title}"`}
                 width="50vh"
                 height="50vh"
-                un-my="auto"
-                un-flex="none"
-                un-object="contain"
+                my-auto
+                flex-none
+                object-contain
             />
         </a>
     );
