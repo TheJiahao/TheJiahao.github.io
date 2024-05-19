@@ -1,5 +1,4 @@
 import type { CollectionEntry } from "astro:content";
-import "../styles/card.css";
 import formatDate from "../utils/formatDate";
 import { BLOG_IMAGE_HEIGHT, BLOG_IMAGE_PLACEHOLDER } from "../config";
 
@@ -15,12 +14,7 @@ const BlogCard = ({
     image = BLOG_IMAGE_PLACEHOLDER,
 }: BlogProps) => {
     return (
-        <a
-            className="card flex"
-            href={`/posts/${slug}`}
-            un-w="90ch"
-            un-mx="auto"
-        >
+        <a className="card" href={`/posts/${slug}`} un-w="90ch" un-mx="auto">
             <img
                 src={image.src}
                 alt={`Cover of "${title}"`}

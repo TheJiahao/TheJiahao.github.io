@@ -1,4 +1,3 @@
-import "../styles/card.css";
 import BlogCard, { type BlogProps } from "./BlogCard";
 
 const BlogList = ({ blogs }: { blogs: BlogProps[] }) => {

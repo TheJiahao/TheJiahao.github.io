@@ -1,6 +1,5 @@
 import type { CollectionEntry } from "astro:content";
 import type { ReactNode } from "react";
-import "../styles/card.css";
 import formatDate from "../utils/formatDate";
 
 type postData = CollectionEntry<"posts">["data"];
