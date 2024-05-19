@@ -9,7 +9,7 @@ import NavigationLink from "./NavigationLink";
 interface NavigationBarProps {
     title?: string;
     description?: string;
-    avatar?: string;
+    avatar?: ImageMetadata;
 }
 
 const NavigationBar = ({
@@ -20,7 +20,7 @@ const NavigationBar = ({
     return (
         <nav card sticky self-start top-0 text-left h-screen p-6>
             <img
-                src={avatar}
+                {...avatar}
                 alt="Avatar"
                 size-30
                 drop-shadow-md
