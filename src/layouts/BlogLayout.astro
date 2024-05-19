@@ -2,44 +2,49 @@
 import type { CollectionEntry } from "astro:content";
 import formatDate from "../utils/formatDate";
 import BaseLayout from "./BaseLayout.astro";
+import LinkList from "../components/LinkList";
 
 type Props = CollectionEntry<"posts">["data"];
 
-const { title, description, date, image } = Astro.props;
+const { title, description, date, image, links } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} image={image}>
-    <article
-        class="card prose flex"
-        un-container="sm"
+    <main
+        class="prose flex"
         un-max-w="80ch"
         un-mx="auto"
         un-gap-y="7"
         un-flex="col"
+        container="sm"
     >
-        <header>
-            {
-                image && (
-                    <img
-                        src={image.src}
-                        alt={`Cover image of "${title}"`}
-                        class="[&[src$='svg']]:object-fill"
-                        un-w="full"
-                        un-max-w="full"
-                        un-max-h="30vh"
-                        un-object="cover"
-                        un-overflow="hidden"
-                    />
-                )
-            }
-            <div un-px="8" un-py="2">
-                <h2>{title}</h2>
-                <h3 un-text="slate">{description}</h3>
-                <time>{formatDate(date)}</time>
-            </div>
-        </header>
-        <section un-px="8" un-py="2">
-            <slot />
-        </section>
-    </article>
+        <article class="card">
+            <header>
+                {
+                    image && (
+                        <img
+                            src={image.src}
+                            alt={`Cover image of "${title}"`}
+                            class="[&[src$='svg']]:object-fill"
+                            un-w="full"
+                            un-max-w="full"
+                            un-max-h="30vh"
+                            un-object="cover"
+                            un-overflow="hidden"
+                        />
+                    )
+                }
+                <div un-px="8" un-py="2">
+                    <h2>{title}</h2>
+                    <h3 un-text="slate">{description}</h3>
+                    <time>{formatDate(date)}</time>
+                </div>
+            </header>
+            <section un-px="8" un-py="2">
+                <slot />
+            </section>
+        </article>
+
+        <LinkList links={links || []} />
+    </main>
 </BaseLayout>
