@@ -4,7 +4,6 @@ import {
     presetIcons,
     presetTypography,
     presetWind,
-    transformerDirectives,
     transformerAttributifyJsx,
 } from "unocss";
 
@@ -15,7 +14,7 @@ export default defineConfig({
         presetTypography(),
         presetIcons(),
     ],
-    transformers: [transformerDirectives(), transformerAttributifyJsx()],
+    transformers: [transformerAttributifyJsx()],
     shortcuts: {
         card: "rounded-md bg-white drop-shadow-md break-inside-avoid block overflow-hidden",
     },
