@@ -1,8 +1,6 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import BlogLayout from "../../layouts/BlogLayout";
-import BaseHead from "../../components/BaseHeader.astro";
-import LinkList from "../../components/LinkList";
+import { getCollection } from "astro:content";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
@@ -11,22 +9,11 @@ export async function getStaticPaths() {
         props: post,
     }));
 }
-type Props = CollectionEntry<"posts">;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BaseHead {...post.data} />
-<main
-    class="prose flex"
-    un-max-w="80ch"
-    un-mx="auto"
-    un-gap-y="7"
-    un-flex="col"
->
-    <BlogLayout {...post.data} client:only="react">
-        <Content />
-    </BlogLayout>
-    <LinkList links={post.data.links || []} />
-</main>
+<BlogLayout {...post.data}>
+    <Content />
+</BlogLayout>
