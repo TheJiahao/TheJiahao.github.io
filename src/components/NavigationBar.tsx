@@ -8,21 +8,14 @@ import NavigationLink from "./NavigationLink";
 
 const NavigationBar = () => {
     return (
-        <nav
-            className="card sticky"
-            un-self="start"
-            un-top="0"
-            un-text="left"
-            un-h="screen"
-            un-p="6"
-        >
+        <nav card sticky self-start top-0 text-left h-screen p-6>
             <img
                 src={SITE_AVATAR}
                 alt="Avatar"
-                un-size="30"
-                un-drop-shadow="md"
-                un-rounded="full"
-                un-object="contain"
+                size-30
+                drop-shadow-md
+                rounded-full
+                object-contain
             />
             <div>
                 <h1>{SITE_TITLE}</h1>
