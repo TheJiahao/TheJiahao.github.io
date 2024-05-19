@@ -3,7 +3,8 @@ on:
     workflow_call:
 
 jobs:
-    Format:
+    format:
+        name: Format
         runs-on: ubuntu-latest
 
         permissions:
@@ -24,9 +25,10 @@ jobs:
                   author_name: github-actions[bot]
                   author_email: github-ations[bot]@users.noreply.github.com
                   message: "style: Format code"
-    Lint:
+    lint:
+        name: Lint
         runs-on: ubuntu-latest
-        needs: Format
+        needs: format
 
         steps:
             - uses: actions/checkout@v4
