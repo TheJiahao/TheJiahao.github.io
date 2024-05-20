@@ -32,6 +32,7 @@ const NavigationBar = ({
             gap-4
             max-w-25ch
         >
+            <header>
             <img
                 {...avatar}
                 alt="Avatar"
@@ -46,6 +47,7 @@ const NavigationBar = ({
                 </h1>
                 <p text="base left">{description}</p>
             </div>
+            </header>
             <ul space-y-4 text-xl>
                 {links.map((link) => (
                     <NavigationLink key={link.text} {...link} />
