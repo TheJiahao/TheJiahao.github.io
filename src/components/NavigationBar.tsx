@@ -28,13 +28,14 @@ const NavigationBar = ({
             self-auto
             top-0
             h-screen
-            p-2
+            p-6
             gap-4
+            max-w-25ch
         >
             <img
                 {...avatar}
                 alt="Avatar"
-                size-30
+                size-15ch
                 drop-shadow-md
                 rounded-full
                 object-contain
@@ -43,7 +44,7 @@ const NavigationBar = ({
                 <h1 text-xl font-bold>
                     {title}
                 </h1>
-                <p text-base>{description}</p>
+                <p text="base left">{description}</p>
             </div>
             <ul space-y-4 text-xl>
                 {links.map((link) => (
