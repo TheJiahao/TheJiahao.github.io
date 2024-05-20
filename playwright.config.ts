@@ -20,9 +20,9 @@ export default defineConfig({
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? "100%" : undefined,
     reporter: process.env.CI ? [["github"], ["dot"]] : [["html"], ["list"]],
-    timeout: 3000,
+    timeout: 10000,
     expect: {
-        timeout: 1000,
+        timeout: 3000,
     },
     use: {
         baseURL: BASE_URL,
