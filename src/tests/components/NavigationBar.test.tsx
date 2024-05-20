@@ -1,5 +1,5 @@
 import { describe, expect, test, beforeEach } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import NavigationBar from "../../components/NavigationBar";
 import type { NavigationLinkProps } from "../../components/NavigationLink";
 
@@ -37,20 +37,22 @@ describe("NavigationBar", () => {
             },
         ];
 
+        let navigationBar: HTMLElement;
+        let navigationLinks: HTMLElement[];
+
         beforeEach(() => {
             render(<NavigationBar links={links} />);
+
+            navigationBar = screen.getByRole("navigation");
+            navigationLinks = within(navigationBar).getAllByRole("listitem");
         });
 
         test("are all rendered", () => {
-            expect(
-                screen.getAllByRole("listitem", { name: "Navigation link" }),
-            ).toHaveLength(3);
+            expect(navigationLinks).toHaveLength(3);
         });
 
         test("have correct texts", () => {
-            const linkTexts = screen
-                .getAllByRole("listitem", { name: "Navigation link" })
-                .map((link) => link.textContent);
+            const linkTexts = navigationLinks.map((link) => link.textContent);
 
             for (const [i, link] of links.entries()) {
                 expect(linkTexts[i]).toContain(link.text);
@@ -58,9 +60,9 @@ describe("NavigationBar", () => {
         });
 
         test("have correct icons", () => {
-            const linkIcons = screen
-                .getAllByRole("listitem", { name: "Navigation link" })
-                .map((link) => link.querySelector("[class^=i-]"));
+            const linkIcons = navigationLinks.map((link) =>
+                link.querySelector("[class^=i-]"),
+            );
 
             for (const [i, link] of links.entries()) {
                 linkIcons[i]!.classList.contains(link.icon);
@@ -68,9 +70,9 @@ describe("NavigationBar", () => {
         });
 
         test("have visible icons", () => {
-            const linkIcons = screen
-                .getAllByRole("listitem", { name: "Navigation link" })
-                .map((link) => link.querySelector("[class^=i-]"));
+            const linkIcons = navigationLinks.map((link) =>
+                link.querySelector("[class^=i-]"),
+            );
 
             for (const icon of linkIcons) {
                 expect(icon).toBeVisible();
