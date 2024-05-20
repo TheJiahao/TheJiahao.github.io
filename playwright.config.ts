@@ -24,6 +24,12 @@ export default defineConfig({
         baseURL: BASE_URL,
         trace: "on-first-retry",
     },
+    webServer: {
+        command: "pnpm run start",
+        url: BASE_URL,
+        timeout: 120 * 1000,
+        reuseExistingServer: !process.env.CI,
+    },
     projects: [
         {
             name: "chromium",
@@ -50,11 +56,4 @@ export default defineConfig({
             use: { ...devices["iPhone 12"] },
         },
     ],
-
-    webServer: {
-        command: "pnpm run start",
-        url: BASE_URL,
-        timeout: 120 * 1000,
-        reuseExistingServer: !process.env.CI,
-    },
 });
