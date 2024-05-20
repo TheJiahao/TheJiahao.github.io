@@ -67,5 +67,18 @@ test.describe("Homepage", () => {
         test("exists", async () => {
             expect(blogList).toBeDefined();
         });
+
+        test("has at least one blog", async () => {
+            const blogs = await blogList.getByRole("listitem").count();
+            expect(blogs).toBeGreaterThan(0);
+        });
+
+        test("clicking a blog leads to blog post", async ({ page }) => {
+            const firstBlog = blogList.getByRole("listitem").first();
+
+            await firstBlog.click();
+
+            await expect(page).toHaveURL(/\/posts\//);
+        });
     });
 });
