@@ -52,8 +52,8 @@ describe("NavigationBar", () => {
                 .getAllByRole("listitem", { name: "Navigation link" })
                 .map((link) => link.textContent);
 
-            for (const [i, text] of linkTexts.entries()) {
-                expect(linkTexts[i]).toContain(text);
+            for (const [i, link] of links.entries()) {
+                expect(linkTexts[i]).toContain(link.text);
             }
         });
     });
