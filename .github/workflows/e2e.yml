@@ -4,6 +4,7 @@ on:
 
 jobs:
   e2e_test:
+    name: End-to-end test
     runs-on: ubuntu-latest
     environment: test
     env:
