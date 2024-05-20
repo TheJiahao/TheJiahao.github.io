@@ -50,7 +50,7 @@ const NavigationBar = ({
             </header>
             <ul space-y-4 text-xl>
                 {links.map((link) => (
-                    <li aria-label="Navigation link" key={link.text}>
+                    <li key={link.text}>
                         <NavigationLink {...link} />
                     </li>
                 ))}
