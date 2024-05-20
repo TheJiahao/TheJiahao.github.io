@@ -53,4 +53,16 @@ test.describe("Homepage", () => {
             await expect(link).toHaveAttribute("href", "/about");
         });
     });
+
+    test.describe("blog list", () => {
+        let blogList: Locator;
+
+        test.beforeEach(async ({ page }) => {
+            blogList = page.getByRole("list", { name: "List of blogs" });
+        });
+
+        test("exists", async () => {
+            expect(blogList).toBeDefined();
+        });
+    });
 });
