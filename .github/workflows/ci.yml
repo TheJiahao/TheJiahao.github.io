@@ -28,6 +28,7 @@ jobs:
           author_name: github-actions[bot]
           author_email: github-ations[bot]@users.noreply.github.com
           message: "style: Format code"
+
   lint:
     name: Lint
     runs-on: ubuntu-latest
