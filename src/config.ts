@@ -3,8 +3,9 @@
 
 import getImage from "./utils/getImage";
 
-export const SITE_TITLE = "Astro Blog";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+export const SITE_TITLE = "Jiahao 的博客";
+export const SITE_DESCRIPTION =
+    "个人博客，内容可能涵盖工具配置、技术、数学等，不定时更新。";
 export const SITE_AVATAR = await getImage("/src/assets/images/avatar.svg");
 
 export const NAVIGATION_LINKS = [
