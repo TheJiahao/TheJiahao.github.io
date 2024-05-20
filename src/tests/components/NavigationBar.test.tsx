@@ -66,5 +66,15 @@ describe("NavigationBar", () => {
                 linkIcons[i]!.classList.contains(link.icon);
             }
         });
+
+        test("have visible icons", () => {
+            const linkIcons = screen
+                .getAllByRole("listitem", { name: "Navigation link" })
+                .map((link) => link.querySelector("[class^=i-]"));
+
+            for (const icon of linkIcons) {
+                expect(icon).toBeVisible();
+            }
+        });
     });
 });
