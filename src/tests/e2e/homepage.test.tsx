@@ -26,31 +26,34 @@ test.describe("Homepage", () => {
             await expect(navigationBar).toHaveCount(1);
         });
 
-        test("has link to homepage", async () => {
+        test("has link to homepage", async ({ page }) => {
             const link = navigationBar
                 .getByRole("link")
                 .filter({ hasText: "首页" });
 
-            expect(link).toBeDefined();
-            await expect(link).toHaveAttribute("href", "/");
+            await link.click();
+
+            await expect(page).toHaveURL("/");
         });
 
-        test("has link to posts page", async () => {
+        test("has link to posts page", async ({ page }) => {
             const link = navigationBar
                 .getByRole("link")
                 .filter({ hasText: "归档" });
 
-            expect(link).toBeDefined();
-            await expect(link).toHaveAttribute("href", "/posts");
+            await link.click();
+
+            await expect(page).toHaveURL("/posts");
         });
 
-        test("has link to about page", async () => {
+        test("has link to about page", async ({ page }) => {
             const link = navigationBar
                 .getByRole("link")
                 .filter({ hasText: "关于" });
 
-            expect(link).toBeDefined();
-            await expect(link).toHaveAttribute("href", "/about");
+            await link.click();
+
+            await expect(page).toHaveURL("/about");
         });
     });
 
