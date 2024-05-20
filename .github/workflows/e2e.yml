@@ -9,7 +9,7 @@ jobs:
     container: mcr.microsoft.com/playwright:latest
     environment: test
     env:
-      PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/ms-playwright
+      PLAYWRIGHT_BROWSERS_PATH: /root/ms-playwright
 
     steps:
       - uses: actions/checkout@v4
