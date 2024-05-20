@@ -33,24 +33,26 @@ const NavigationBar = ({
             max-w-25ch
         >
             <header>
-            <img
-                {...avatar}
-                alt="Avatar"
-                size-15ch
-                drop-shadow-md
-                rounded-full
-                object-contain
-            />
-            <div text-center>
-                <h1 text-xl font-bold>
-                    {title}
-                </h1>
-                <p text="base left">{description}</p>
-            </div>
+                <img
+                    {...avatar}
+                    alt="Avatar"
+                    size-15ch
+                    drop-shadow-md
+                    rounded-full
+                    object-contain
+                />
+                <div text-center>
+                    <h1 text-xl font-bold>
+                        {title}
+                    </h1>
+                    <p text="base left">{description}</p>
+                </div>
             </header>
             <ul space-y-4 text-xl>
                 {links.map((link) => (
-                    <NavigationLink key={link.text} {...link} />
+                    <li aria-label="Navigation link" key={link.text}>
+                        <NavigationLink {...link} />
+                    </li>
                 ))}
             </ul>
         </nav>
