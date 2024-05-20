@@ -66,6 +66,7 @@ jobs:
 
   e2e_test:
     name: End-to-end test
+    runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright:latest
     environment: test
     env:
