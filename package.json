@@ -16,7 +16,8 @@
         "index": "gis $SITE_URL",
         "build": "astro check && astro build",
         "start": "pnpm run build && astro preview",
-        "dev": "astro dev"
+        "dev": "astro dev",
+        "dev:host": "astro dev --host"
     },
     "dependencies": {
         "@astrojs/check": "^0.6.0",
