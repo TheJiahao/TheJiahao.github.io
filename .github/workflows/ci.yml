@@ -77,9 +77,9 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
-      - run: |
-          echo "PLAYWRIGHT_VERSION=$(node -e "console.log(require('playwright/package.json').version)")" >> $GITHUB_OUTPUT
+      - name: Get installed Playwright version
         id: playwright-version
+        run: echo "PLAYWRIGHT_VERSION=$(node -e "process.stdout.write(require('@playwright/test/package.json').version)")" >> $GITHUB_OUTPUT
 
       - name: Cache playwright binaries
         uses: actions/cache@v4
