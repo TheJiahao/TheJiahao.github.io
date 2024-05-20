@@ -5,7 +5,7 @@ import type { NavigationLinkProps } from "../../components/NavigationLink";
 
 describe("NavigationBar", () => {
     describe("avatar", () => {
-        let avatar: HTMLElement | null = null;
+        let avatar: HTMLElement;
 
         beforeEach(() => {
             render(<NavigationBar />);
