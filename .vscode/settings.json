@@ -1,6 +1,10 @@
 {
     "files.associations": {
-        "*.css": "tailwindcss"
+        "*.css": "tailwindcss",
+        "*.yml": "github-actions-workflow"
+    },
+    "[github-actions-workflow]": {
+        "editor.tabSize": 2
     },
     "eslint.experimental.useFlatConfig": true
 }
