@@ -41,8 +41,8 @@ const NavigationBar = ({
                     rounded-full
                     object-contain
                 />
-                <div text-center>
-                    <h1 text-xl font-bold>
+                <div>
+                    <h1 text="center xl bold" font-bold>
                         {title}
                     </h1>
                     <p text="base left">{description}</p>
