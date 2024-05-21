@@ -19,7 +19,7 @@ describe("<NavigationBar/>", () => {
         test("has valid src", () => {
             expect(avatar).toHaveAttribute(
                 "src",
-                expect.not.stringMatching(""),
+                expect.not.stringMatching(/^$/),
             );
         });
     });
