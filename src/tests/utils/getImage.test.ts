@@ -15,7 +15,6 @@ test("finds existing vector image", async () => {
     expect(image).toBeDefined();
 });
 
-
 test("throws error for non-existing image", async () => {
     const image = "non-existing-image.png";
 
