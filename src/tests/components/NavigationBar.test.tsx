@@ -25,6 +25,8 @@ describe("<NavigationBar/>", () => {
     });
 
     describe("links", () => {
+        let navigationBar: HTMLElement;
+        let navigationLinks: HTMLElement[];
         const links: NavigationLinkProps[] = [
             {
                 href: "/",
@@ -42,9 +44,6 @@ describe("<NavigationBar/>", () => {
                 icon: "i-article",
             },
         ];
-
-        let navigationBar: HTMLElement;
-        let navigationLinks: HTMLElement[];
 
         beforeEach(() => {
             render(<NavigationBar links={links} />);
