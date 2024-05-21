@@ -18,6 +18,10 @@ describe("<NavigationLink/>", () => {
         expect(link).toBeInTheDocument();
     });
 
+    test("is valid", async () => {
+        expect(link).toHaveAttribute("href", href);
+    });
+
     test("has text", () => {
         expect(within(link).getByText(text)).toBeInTheDocument();
     });
