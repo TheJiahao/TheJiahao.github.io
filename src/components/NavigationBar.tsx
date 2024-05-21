@@ -43,7 +43,7 @@ const NavigationBar = ({
                     mx-auto
                 />
                 <div>
-                    <h1 text="center xl bold" font-bold>
+                    <h1 text="center xl" font-bold>
                         {title}
                     </h1>
                     <p text="base left">{description}</p>
