@@ -40,6 +40,7 @@ const NavigationBar = ({
                     drop-shadow-md
                     rounded-full
                     object-contain
+                    mx-auto
                 />
                 <div>
                     <h1 text="center xl bold" font-bold>
