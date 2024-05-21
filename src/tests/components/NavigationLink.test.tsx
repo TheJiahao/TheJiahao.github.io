@@ -3,14 +3,14 @@ import { beforeEach, describe, expect, test } from "vitest";
 import NavigationLink from "../../components/NavigationLink";
 
 describe("<NavigationLink/>", () => {
-    const href = "/about";
+    const url = "/about";
     const text = "About";
     const icon = "i-ui-library-user";
 
     let link: HTMLElement;
 
     beforeEach(() => {
-        render(<NavigationLink {...{ href, text, icon }} />);
+        render(<NavigationLink {...{ url: url, text, icon }} />);
         link = screen.getByRole("link");
     });
 
@@ -19,7 +19,7 @@ describe("<NavigationLink/>", () => {
     });
 
     test("is valid", async () => {
-        expect(link).toHaveAttribute("href", href);
+        expect(link).toHaveAttribute("href", url);
     });
 
     test("has text", () => {

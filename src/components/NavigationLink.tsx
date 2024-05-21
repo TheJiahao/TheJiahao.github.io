@@ -1,11 +1,11 @@
 interface NavigationLinkProps {
-    href: string;
+    url: string;
     text: string;
     icon: string;
 }
 
-const NavigationLink = ({ href, text, icon }: NavigationLinkProps) => (
-    <a href={href} inline-flex gap-10 leading-4>
+const NavigationLink = ({ url, text, icon }: NavigationLinkProps) => (
+    <a href={url} inline-flex gap-10 leading-4>
         <span className={icon} />
         <span>{text}</span>
     </a>
