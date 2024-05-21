@@ -21,16 +21,13 @@ const NavigationBar = ({
 }: NavigationBarProps) => {
     return (
         <nav
-            card
-            sticky
             flex="~ col"
             items-center
-            self-auto
-            top-0
-            h-screen
-            p-6
+            p-4
             gap-4
-            max-w-25ch
+            w-full
+            mx-auto
+            lg="card sticky top-0 h-screen max-w-25ch "
         >
             <header>
                 <img
