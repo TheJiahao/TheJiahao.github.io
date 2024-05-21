@@ -6,5 +6,6 @@
     "[github-actions-workflow]": {
         "editor.tabSize": 2
     },
-    "eslint.experimental.useFlatConfig": true
+    "eslint.experimental.useFlatConfig": true,
+    "typescript.preferences.autoImportFileExcludePatterns": ["node/test.d.ts"]
 }
