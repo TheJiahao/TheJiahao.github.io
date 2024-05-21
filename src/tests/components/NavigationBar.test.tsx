@@ -3,7 +3,7 @@ import { render, screen, within } from "@testing-library/react";
 import NavigationBar from "../../components/NavigationBar";
 import type { NavigationLinkProps } from "../../components/NavigationLink";
 
-describe("NavigationBar", () => {
+describe("<NavigationBar/>", () => {
     describe("avatar", () => {
         let avatar: HTMLElement;
 
@@ -12,9 +12,15 @@ describe("NavigationBar", () => {
             avatar = screen.getByAltText("Avatar");
         });
 
-        test("has non-empty src", () => {
-            expect(avatar).not.toHaveProperty("src", "");
-            expect(avatar).not.toHaveProperty("src", undefined);
+        test("exists", () => {
+            expect(avatar).toBeDefined();
+        });
+
+        test("has valid src", () => {
+            expect(avatar).toHaveAttribute(
+                "src",
+                expect.not.stringMatching(""),
+            );
         });
     });
 
@@ -47,7 +53,7 @@ describe("NavigationBar", () => {
             navigationLinks = within(navigationBar).getAllByRole("listitem");
         });
 
-        test("are all rendered", () => {
+        test("are rendered", () => {
             expect(navigationLinks).toHaveLength(3);
         });
 
