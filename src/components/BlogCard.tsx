@@ -12,22 +12,25 @@ const BlogCard = ({
     image = BLOG_IMAGE_PLACEHOLDER,
 }: BlogProps) => {
     return (
-        <a href={`/posts/${slug}`} card w-90ch mx-auto>
-            <img
-                src={image.src}
-                alt={`Cover of "${title}"`}
-                className="[&[src$='svg']]:object-fill"
-                object-cover
-                w-full
-                max-h-30vh
-            />
-
-            <div prose block p-8 max-w-full>
-                <h2>{title}</h2>
-                <p>{description}</p>
-                <time>{formatDate(date)}</time>
-            </div>
-        </a>
+        <article card w-90ch mx-auto>
+            <a href={`/posts/${slug}`} rel="bookmark">
+                <img
+                    src={image.src}
+                    alt={`Cover of "${title}"`}
+                    className="[&[src$='svg']]:object-fill"
+                    object-cover
+                    w-full
+                    max-h-30vh
+                />
+                <div prose p-8 max-w-full>
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                    <footer>
+                        <time>{formatDate(date)}</time>
+                    </footer>
+                </div>
+            </a>
+        </article>
     );
 };
 
