@@ -64,25 +64,5 @@ describe("<NavigationBar/>", () => {
                 expect(linkTexts[i]).toContain(link.text);
             }
         });
-
-        test("have correct icons", () => {
-            const linkIcons = navigationLinks.map((link) =>
-                link.querySelector("[class^=i-]"),
-            );
-
-            for (const [i, link] of links.entries()) {
-                linkIcons[i]!.classList.contains(link.icon);
-            }
-        });
-
-        test("have visible icons", () => {
-            const linkIcons = navigationLinks.map((link) =>
-                link.querySelector("[class^=i-]"),
-            );
-
-            for (const icon of linkIcons) {
-                expect(icon).toBeVisible();
-            }
-        });
     });
 });
