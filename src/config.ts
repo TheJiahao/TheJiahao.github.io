@@ -9,9 +9,9 @@ export const SITE_DESCRIPTION =
 export const SITE_AVATAR = await getImage("/src/assets/images/avatar.svg");
 
 export const NAVIGATION_LINKS = [
-    { href: "/", text: "首页", icon: "i-fluent-emoji-flat-house" },
-    { href: "/posts", text: "归档", icon: "i-fluent-emoji-flat-file-cabinet" },
-    { href: "/about", text: "关于", icon: "i-fluent-emoji-flat-star" },
+    { url: "/", text: "首页", icon: "i-fluent-emoji-flat-house" },
+    { url: "/posts", text: "归档", icon: "i-fluent-emoji-flat-file-cabinet" },
+    { url: "/about", text: "关于", icon: "i-fluent-emoji-flat-star" },
 ];
 
 export const BLOG_IMAGE_PLACEHOLDER = await getImage(

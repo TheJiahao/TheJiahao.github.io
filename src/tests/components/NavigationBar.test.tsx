@@ -29,17 +29,17 @@ describe("<NavigationBar/>", () => {
         let navigationLinks: HTMLElement[];
         const links: NavigationLinkProps[] = [
             {
-                href: "/",
+                url: "/",
                 text: "Home",
                 icon: "i-home",
             },
             {
-                href: "/about",
+                url: "/about",
                 text: "About",
                 icon: "i-user",
             },
             {
-                href: "/posts",
+                url: "/posts",
                 text: "Posts",
                 icon: "i-article",
             },
