@@ -12,7 +12,7 @@ const BlogCard = ({
     image = BLOG_IMAGE_PLACEHOLDER,
 }: BlogProps) => {
     return (
-        <article card max-w-90ch mx-auto>
+        <article card>
             <a href={`/posts/${slug}`} rel="bookmark">
                 <img
                     src={image.src}
