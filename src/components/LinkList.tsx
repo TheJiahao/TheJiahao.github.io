@@ -4,11 +4,13 @@ import LinkCard from "./LinkCard";
 const LinkList = ({ links }: { links: LinkProps[] }) => {
     return (
         links && (
-            <div card w-full mx-auto divide-y>
+            <ul aria-label="External links" card w-full mx-auto divide-y>
                 {links.map((link) => (
-                    <LinkCard key={link.url} {...link} />
+                    <li key={link.url}>
+                        <LinkCard {...link} />
+                    </li>
                 ))}
-            </div>
+            </ul>
         )
     );
 };
