@@ -2,7 +2,7 @@ import type { ImageMetadata } from "astro";
 
 const getImage = async (path: string): Promise<ImageMetadata> => {
     const images = import.meta.glob<{ default: ImageMetadata }>(
-        "/src/assets/images/**",
+        "/src/assets/**/*.{png,jpg,jpeg,tiff,webp,svg,gif,avif}",
     );
 
     if (!images[path]) {
