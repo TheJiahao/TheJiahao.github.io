@@ -19,6 +19,7 @@ const postCollection = defineCollection({
                     }),
                 )
                 .optional(),
+            draft: z.boolean().optional(),
         }),
 });
 

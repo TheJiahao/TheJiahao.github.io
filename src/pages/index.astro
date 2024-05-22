@@ -1,9 +1,9 @@
 ---
-import { getCollection } from "astro:content";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 import HomeLayout from "../layouts/HomeLayout.astro";
+import getBlogs from "../utils/getBlogs";
 
-const blogs = await getCollection("posts");
+const blogs = await getBlogs();
 ---
 
 <HomeLayout
