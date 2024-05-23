@@ -25,4 +25,8 @@ export default defineConfig({
     server: {
         port: Number(PUBLIC_PORT) || 4321,
     },
+    i18n: {
+        defaultLocale: "zh-cn",
+        locales: ["zh-cn", "en"],
+    },
 });
