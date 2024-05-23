@@ -14,4 +14,3 @@ const getTranslation = (language: string): Language =>
     translations.get(language) || translations.get(defaultLocale)!;
 
 export { defaultLocale, getTranslation, locales };
-
