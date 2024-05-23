@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
-import languages from "./src/i18n/languages";
+import { languages } from "./src/utils/translation";
 
 const { PUBLIC_PORT } = loadEnv(
     process.env.NODE_ENV || "dev",
