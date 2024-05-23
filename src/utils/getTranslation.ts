@@ -1,12 +1,6 @@
-import zh_cn from "../i18n/zh-cn";
-import en from "../i18n/en";
-import type { Language } from "../i18n/Language";
 import defaultLanguage from "../i18n/defaultLanguage";
-
-const languages = new Map<string, Language>([
-    ["zh-cn", zh_cn],
-    ["en", en],
-]);
+import languages from "../i18n/languages";
+import type { Language } from "../interfaces/Language";
 
 const getTranslation = (language: string): Language =>
     languages.get(language) || defaultLanguage;
