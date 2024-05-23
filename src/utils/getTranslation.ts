@@ -1,7 +1,7 @@
 import zh_cn from "../i18n/zh-cn";
 import en from "../i18n/en";
 import type { Language } from "../i18n/Language";
-import defaultLanguage from "../i18n/default";
+import defaultLanguage from "../i18n/defaultLanguage";
 
 const languages = new Map<string, Language>([
     ["zh-cn", zh_cn],
