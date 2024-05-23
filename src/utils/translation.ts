@@ -3,12 +3,14 @@ import en from "../i18n/en";
 import zh_cn from "../i18n/zh-cn";
 import type { Language } from "../interfaces/Language";
 
-const languages = new Map<string, Language>([
+const translations = new Map<string, Language>([
     ["zh-cn", zh_cn],
     ["en", en],
 ]);
 
-const getTranslation = (language: string): Language =>
-    languages.get(language) || defaultLanguage;
+const locales = Array.from(translations.keys());
 
-export { getTranslation, languages };
+const getTranslation = (language: string): Language =>
+    translations.get(language) || defaultLanguage;
+
+export { getTranslation, locales };
