@@ -13,7 +13,7 @@ const { PUBLIC_PORT } = loadEnv(
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://example.com",
+    site: "https://thejiahao.github.io",
     integrations: [
         mdx(),
         sitemap(),
