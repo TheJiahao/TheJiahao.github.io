@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
+import languages from "./src/i18n/languages";
 
 const { PUBLIC_PORT } = loadEnv(
     process.env.NODE_ENV || "dev",
@@ -27,6 +28,6 @@ export default defineConfig({
     },
     i18n: {
         defaultLocale: "zh-cn",
-        locales: ["zh-cn", "en"],
+        locales: Array.from(languages.keys()),
     },
 });
