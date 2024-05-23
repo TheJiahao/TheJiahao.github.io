@@ -1,4 +1,6 @@
-const en = {
+import type { Language } from "./Language";
+
+const en: Language = {
     name: "English",
     siteTitle: "Jiahao's blog",
     siteDescription:

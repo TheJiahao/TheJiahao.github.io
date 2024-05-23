@@ -1,6 +1,7 @@
+import type { Language } from "./Language";
 import defaultLanguage from "./default";
 
-const zh_cn = {
+const zh_cn: Language = {
     ...defaultLanguage,
     name: "简体中文",
     siteTitle: "Jiahao 的博客",
