@@ -2,13 +2,15 @@
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 import HomeLayout from "../layouts/HomeLayout.astro";
 import getBlogs from "../utils/getBlogs";
+import getTranslation from "../utils/getTranslation";
 
 const blogs = await getBlogs();
+const languageCode = Astro.currentLocale as string;
 ---
 
 <HomeLayout
-    title={SITE_TITLE}
-    description={SITE_DESCRIPTION}
+    title={getTranslation(languageCode).siteTitle}
+    description={getTranslation(languageCode).siteDescription}
     blogs={blogs.map((blog) => {
         return { ...blog.data, slug: blog.slug };
     })}
