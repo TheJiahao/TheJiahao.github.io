@@ -1,5 +1,5 @@
 import type { Language } from "./Language";
-import defaultLanguage from "./default";
+import defaultLanguage from "./defaultLanguage";
 
 const zh_cn: Language = {
     ...defaultLanguage,
