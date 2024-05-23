@@ -2,18 +2,25 @@
 import type { BlogProps } from "../components/BlogCard";
 import BlogList from "../components/BlogList";
 import NavigationBar from "../components/NavigationBar";
+import getBlogs from "../utils/getBlogs";
+import getTranslation from "../utils/getTranslation";
 import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
-    title: string;
-    description: string;
-    blogs: BlogProps[];
+    lang: string;
 }
 
-const { title, description, blogs } = Astro.props;
+const { lang } = Astro.props;
+
+const blogs: BlogProps[] = (await getBlogs()).map((blog) => {
+    return { ...blog.data, slug: blog.slug };
+});
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+    title={getTranslation(lang).siteTitle}
+    description={getTranslation(lang).siteDescription}
+>
     <div flex="~ col" min-w-60ch p-4 gap-4 lg="flex-row">
         <NavigationBar />
         <main w-full>
