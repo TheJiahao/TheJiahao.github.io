@@ -35,6 +35,7 @@ const SiteFooter = ({
                 。
             </p>
             <a
+                title="Site source"
                 aria-label="Site source"
                 href={source}
                 i-logos-github-icon
