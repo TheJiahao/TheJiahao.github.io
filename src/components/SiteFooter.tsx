@@ -38,7 +38,7 @@ const SiteFooter = ({
                 title="Site source"
                 aria-label="Site source"
                 href={source}
-                i-logos-github-icon
+                className="i-logos-github-icon"
                 block
                 flex
                 text-xl
