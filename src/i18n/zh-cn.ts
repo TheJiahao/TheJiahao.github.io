@@ -1,8 +1,8 @@
 import type { Language } from "../interfaces/Language";
-import defaultLanguage from "./defaultLanguage";
+import en from "./en";
 
 const zh_cn: Language = {
-    ...defaultLanguage,
+    ...en,
     name: "简体中文",
     siteTitle: "Jiahao 的博客",
     siteDescription:
