@@ -1,3 +1,4 @@
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { DEFAULT_LOCALE, SITE_AVATAR } from "../config";
 import { getTranslation } from "../utils/translation";
 import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
@@ -10,17 +11,17 @@ interface NavigationBarProps {
 
 const getLinks = (lang: string) => [
     {
-        url: "/",
+        url: getRelativeLocaleUrl(lang, "/"),
         text: getTranslation(lang).homePage,
         icon: "i-fluent-emoji-flat-house",
     },
     {
-        url: "/posts",
+        url: getRelativeLocaleUrl(lang, "/posts"),
         text: getTranslation(lang).archive,
         icon: "i-fluent-emoji-flat-file-cabinet",
     },
     {
-        url: "/about",
+        url: getRelativeLocaleUrl(lang, "/about"),
         text: getTranslation(lang).about,
         icon: "i-fluent-emoji-flat-star",
     },
