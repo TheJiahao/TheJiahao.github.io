@@ -51,14 +51,9 @@ const NavigationBar = ({
                     object-contain
                     mx-auto
                 />
-                <div>
-                    <h1 text="center xl" font-bold>
-                        {getTranslation(lang).siteTitle}
-                    </h1>
-                    <p text="base left">
-                        {getTranslation(lang).siteDescription}
-                    </p>
-                </div>
+                <h1 text="center xl" font-bold>
+                    {getTranslation(lang).siteTitle}
+                </h1>
             </header>
             <ul space-y-4 text-xl>
                 {links.map((link) => (
