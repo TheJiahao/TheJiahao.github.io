@@ -4,11 +4,7 @@ import {
     SITE_SOURCE,
     SITE_START_YEAR,
 } from "../config";
-
-interface License {
-    name: string;
-    url: string;
-}
+import type { License } from "../interfaces/License";
 
 interface SiteFooterProps {
     owner?: string;
