@@ -1,22 +1,14 @@
-import {
-    SITE_LICENSE,
-    SITE_OWNER,
-    SITE_SOURCE,
-    SITE_START_YEAR,
-} from "../config";
-import type { License } from "../interfaces/License";
+import { SITE_OWNER, SITE_SOURCE, SITE_START_YEAR } from "../config";
 
 interface SiteFooterProps {
     owner?: string;
     startYear?: number;
-    license?: License;
     source?: string;
 }
 
 const SiteFooter = ({
     owner = SITE_OWNER,
     startYear = SITE_START_YEAR,
-    license = SITE_LICENSE,
     source = SITE_SOURCE,
 }: SiteFooterProps) => {
     const year = new Date().getFullYear();
@@ -25,12 +17,6 @@ const SiteFooter = ({
         <footer max-w-full flex="~ col" items-center py-8 line-height-loose>
             <p>
                 © {startYear} - {year} {owner}
-            </p>
-            <p>
-                博客内容遵循{" "}
-                <a rel="license" href={license.url} underline>
-                    {license.name}
-                </a>
             </p>
             <a
                 title="Site source"
