@@ -1,21 +1,15 @@
-import {
-    NAVIGATION_LINKS,
-    SITE_AVATAR,
-    SITE_DESCRIPTION,
-    SITE_TITLE,
-} from "../config";
+import { NAVIGATION_LINKS, SITE_AVATAR } from "../config";
+import { defaultLocale, getTranslation } from "../utils/translation";
 import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
 
 interface NavigationBarProps {
-    title?: string;
-    description?: string;
+    lang: string;
     avatar?: ImageMetadata;
     links?: NavigationLinkProps[];
 }
 
 const NavigationBar = ({
-    title = SITE_TITLE,
-    description = SITE_DESCRIPTION,
+    lang = defaultLocale,
     avatar = SITE_AVATAR,
     links = NAVIGATION_LINKS,
 }: NavigationBarProps) => {
@@ -41,9 +35,11 @@ const NavigationBar = ({
                 />
                 <div>
                     <h1 text="center xl" font-bold>
-                        {title}
+                        {getTranslation(lang).siteTitle}
                     </h1>
-                    <p text="base left">{description}</p>
+                    <p text="base left">
+                        {getTranslation(lang).siteDescription}
+                    </p>
                 </div>
             </header>
             <ul space-y-4 text-xl>
