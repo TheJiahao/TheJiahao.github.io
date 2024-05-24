@@ -18,6 +18,7 @@ const blogs: BlogProps[] = (await getBlogs()).map((blog) => {
 ---
 
 <BaseLayout
+    lang={lang}
     title={getTranslation(lang).siteTitle}
     description={getTranslation(lang).siteDescription}
 >
