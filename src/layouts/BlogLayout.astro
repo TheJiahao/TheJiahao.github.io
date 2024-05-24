@@ -4,6 +4,7 @@ import formatDate from "../utils/formatDate";
 import BaseLayout from "./BaseLayout.astro";
 import LinkList from "../components/LinkList";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
+import BlogFooter from "../components/BlogFooter";
 
 type Props = CollectionEntry<"posts">["data"];
 
@@ -41,6 +42,7 @@ const {
             </header>
             <div px-8 py-2>
                 <slot />
+                <BlogFooter px-8 py-2 />
             </div>
         </article>
 
