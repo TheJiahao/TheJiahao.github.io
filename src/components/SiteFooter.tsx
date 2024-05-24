@@ -1,12 +1,20 @@
-import { SITE_OWNER, SITE_SOURCE, SITE_START_YEAR } from "../config";
+import {
+    DEFAULT_LOCALE,
+    SITE_OWNER,
+    SITE_SOURCE,
+    SITE_START_YEAR,
+} from "../config";
+import { getTranslation } from "../utils/translation";
 
 interface SiteFooterProps {
+    lang?: string;
     owner?: string;
     startYear?: number;
     source?: string;
 }
 
 const SiteFooter = ({
+    lang = DEFAULT_LOCALE,
     owner = SITE_OWNER,
     startYear = SITE_START_YEAR,
     source = SITE_SOURCE,
@@ -18,15 +26,10 @@ const SiteFooter = ({
             <p>
                 © {startYear} - {year} {owner}
             </p>
-            <a
-                title="Site source"
-                aria-label="Site source"
-                href={source}
-                className="i-logos-github-icon"
-                block
-                flex
-                text-xl
-            />
+            <a href={source} inline-flex items-center gap-2>
+                <span className="i-logos-github-icon" />
+                {getTranslation(lang).siteSource}
+            </a>
         </footer>
     );
 };
