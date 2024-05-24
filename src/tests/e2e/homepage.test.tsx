@@ -27,9 +27,7 @@ test.describe("Homepage", () => {
         });
 
         test("has link to homepage", async ({ page }) => {
-            const link = navigationBar
-                .getByRole("link")
-                .filter({ hasText: "首页" });
+            const link = navigationBar.getByRole("link", { name: "首页" });
 
             await link.click();
 
@@ -37,9 +35,7 @@ test.describe("Homepage", () => {
         });
 
         test("has link to posts page", async ({ page }) => {
-            const link = navigationBar
-                .getByRole("link")
-                .filter({ hasText: "归档" });
+            const link = navigationBar.getByRole("link", { name: "归档" });
 
             await link.click();
 
@@ -47,9 +43,7 @@ test.describe("Homepage", () => {
         });
 
         test("has link to about page", async ({ page }) => {
-            const link = navigationBar
-                .getByRole("link")
-                .filter({ hasText: "关于" });
+            const link = navigationBar.getByRole("link", { name: "关于" });
 
             await link.click();
 
