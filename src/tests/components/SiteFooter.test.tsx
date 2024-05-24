@@ -1,15 +1,12 @@
 import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
 import SiteFooter from "../../components/SiteFooter";
+import { getTranslation } from "../../utils/translation";
 
 describe("<SiteFooter/>", () => {
     const props = {
         owner: "Site Owner",
         startYear: 2019,
-        license: {
-            name: "MIT",
-            url: "https://opensource.org/license/MIT",
-        },
         source: "https://github.com/TheJiahao/TheJiahao.github.io",
     };
 
@@ -24,22 +21,12 @@ describe("<SiteFooter/>", () => {
         expect(footer).toHaveTextContent(props.owner);
     });
 
-    describe("contains link to", () => {
-        test("license", () => {
-            const link = within(footer).getByRole("link", {
-                name: props.license.name,
-            });
-
-            expect(link).toHaveAttribute("href", props.license.url);
+    test("contains site source", () => {
+        const link = within(footer).getByRole("link", {
+            name: getTranslation("zh-cn").siteSource,
         });
 
-        test("site source", () => {
-            const link = within(footer).getByRole("link", {
-                name: "Site source",
-            });
-
-            expect(link).toHaveAttribute("href", props.source);
-        });
+        expect(link).toHaveAttribute("href", props.source);
     });
 
     test("contains start year", () => {
