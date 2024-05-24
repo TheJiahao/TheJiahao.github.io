@@ -3,7 +3,7 @@ import { defaultLocale, getTranslation } from "../utils/translation";
 import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
 
 interface NavigationBarProps {
-    lang: string;
+    lang?: string;
     avatar?: ImageMetadata;
     links?: NavigationLinkProps[];
 }
