@@ -7,6 +7,7 @@ const zh_cn: Language = {
     siteTitle: "Jiahao 的博客",
     siteDescription:
         "个人博客，内容可能涵盖工具配置、技术、数学等，不定时更新。",
+    siteSource: "本站源代码",
     homePage: "首页",
     archive: "归档",
     about: "关于",

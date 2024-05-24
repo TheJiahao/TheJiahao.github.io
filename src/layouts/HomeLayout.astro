@@ -29,7 +29,7 @@ const blogs: BlogProps[] = (await getBlogs()).map((blog) => {
             <main>
                 <BlogList blogs={blogs} />
             </main>
-            <SiteFooter />
+            <SiteFooter lang={lang} />
         </div>
     </div>
 </BaseLayout>
