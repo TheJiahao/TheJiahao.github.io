@@ -23,7 +23,7 @@ const blogs: BlogProps[] = (await getBlogs()).map((blog) => {
     description={getTranslation(lang).siteDescription}
 >
     <div flex="~ col" min-w-60ch p-4 gap-4 lg="flex-row">
-        <NavigationBar />
+        <NavigationBar lang={lang} />
         <main w-full>
             <BlogList blogs={blogs} />
         </main>
