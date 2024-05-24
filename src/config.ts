@@ -24,3 +24,5 @@ export const NAVIGATION_LINKS = [
 export const BLOG_IMAGE_PLACEHOLDER = await getImage(
     "/src/assets/images/cover_placeholder.svg",
 );
+
+export const DEFAULT_LOCALE = "zh-cn";

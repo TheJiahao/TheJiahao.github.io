@@ -1,5 +1,5 @@
-import { NAVIGATION_LINKS, SITE_AVATAR } from "../config";
-import { defaultLocale, getTranslation } from "../utils/translation";
+import { DEFAULT_LOCALE, NAVIGATION_LINKS, SITE_AVATAR } from "../config";
+import { getTranslation } from "../utils/translation";
 import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
 
 interface NavigationBarProps {
@@ -9,7 +9,7 @@ interface NavigationBarProps {
 }
 
 const NavigationBar = ({
-    lang = defaultLocale,
+    lang = DEFAULT_LOCALE,
     avatar = SITE_AVATAR,
     links = NAVIGATION_LINKS,
 }: NavigationBarProps) => {
