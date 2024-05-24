@@ -5,6 +5,7 @@ import BaseLayout from "./BaseLayout.astro";
 import LinkList from "../components/LinkList";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
 import BlogFooter from "../components/BlogFooter";
+import SiteFooter from "../components/SiteFooter";
 
 type Props = CollectionEntry<"posts">["data"];
 
@@ -48,4 +49,5 @@ const {
 
         <LinkList links={links || []} />
     </main>
+    <SiteFooter />
 </BaseLayout>
