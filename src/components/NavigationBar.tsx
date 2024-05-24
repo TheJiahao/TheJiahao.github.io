@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, NAVIGATION_LINKS, SITE_AVATAR } from "../config";
+import { DEFAULT_LOCALE, SITE_AVATAR } from "../config";
 import { getTranslation } from "../utils/translation";
 import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
 
@@ -8,10 +8,28 @@ interface NavigationBarProps {
     links?: NavigationLinkProps[];
 }
 
+const getLinks = (lang: string) => [
+    {
+        url: "/",
+        text: getTranslation(lang).homePage,
+        icon: "i-fluent-emoji-flat-house",
+    },
+    {
+        url: "/posts",
+        text: getTranslation(lang).archive,
+        icon: "i-fluent-emoji-flat-file-cabinet",
+    },
+    {
+        url: "/about",
+        text: getTranslation(lang).about,
+        icon: "i-fluent-emoji-flat-star",
+    },
+];
+
 const NavigationBar = ({
     lang = DEFAULT_LOCALE,
     avatar = SITE_AVATAR,
-    links = NAVIGATION_LINKS,
+    links = getLinks(lang),
 }: NavigationBarProps) => {
     return (
         <nav

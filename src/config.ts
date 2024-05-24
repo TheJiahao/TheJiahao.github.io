@@ -15,12 +15,6 @@ export const SITE_LICENSE = {
 export const SITE_START_YEAR = 2020;
 export const SITE_SOURCE = "https://github.com/TheJiahao/TheJiahao.github.io";
 
-export const NAVIGATION_LINKS = [
-    { url: "/", text: "首页", icon: "i-fluent-emoji-flat-house" },
-    { url: "/posts", text: "归档", icon: "i-fluent-emoji-flat-file-cabinet" },
-    { url: "/about", text: "关于", icon: "i-fluent-emoji-flat-star" },
-];
-
 export const BLOG_IMAGE_PLACEHOLDER = await getImage(
     "/src/assets/images/cover_placeholder.svg",
 );
