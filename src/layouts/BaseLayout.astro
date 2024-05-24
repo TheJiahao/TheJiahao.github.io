@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import BaseHeader from "../components/BaseHeader.astro";
-import SiteFooter from "../components/SiteFooter";
 
 interface Props {
     title: string;
@@ -20,6 +19,5 @@ const { lang, title, description, image } = Astro.props;
     </head>
     <body>
         <slot />
-        <SiteFooter />
     </body>
 </html>
