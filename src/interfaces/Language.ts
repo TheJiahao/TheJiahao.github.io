@@ -1,10 +1,5 @@
-interface Language {
-    name: string;
-    siteTitle: string;
-    siteDescription: string;
-    homePage: string;
-    archive: string;
-    about: string;
-}
+import type en from "../i18n/en";
+
+type Language = typeof en;
 
 export type { Language };
