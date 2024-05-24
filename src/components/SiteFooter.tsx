@@ -28,11 +28,13 @@ const SiteFooter = ({
     return (
         <footer max-w-full flex="~ col" items-center py-8 line-height-loose>
             <p>
-                © {startYear} - {year} {owner}，博客内容遵循{" "}
+                © {startYear} - {year} {owner}
+            </p>
+            <p>
+                博客内容遵循{" "}
                 <a rel="license" href={license.url} underline>
                     {license.name}
                 </a>
-                。
             </p>
             <a
                 title="Site source"
