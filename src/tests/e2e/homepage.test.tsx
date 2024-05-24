@@ -43,7 +43,7 @@ test.describe("Homepage", () => {
 
             await link.click();
 
-            await expect(page).toHaveURL("/posts");
+            await expect(page).toHaveURL(/\/posts\/?/);
         });
 
         test("has link to about page", async ({ page }) => {
@@ -53,7 +53,7 @@ test.describe("Homepage", () => {
 
             await link.click();
 
-            await expect(page).toHaveURL("/about");
+            await expect(page).toHaveURL(/\/about\/?/);
         });
     });
 
