@@ -16,7 +16,7 @@ test.describe("Homepage", () => {
     test.describe("navigation bar", () => {
         let navigationBar: Locator;
 
-        test.beforeEach(async ({ page }) => {
+        test.beforeEach(({ page }) => {
             navigationBar = page.getByRole("navigation");
         });
 
@@ -54,11 +54,11 @@ test.describe("Homepage", () => {
     test.describe("blog list", () => {
         let blogList: Locator;
 
-        test.beforeEach(async ({ page }) => {
+        test.beforeEach(({ page }) => {
             blogList = page.getByRole("list", { name: "List of blogs" });
         });
 
-        test("exists", async () => {
+        test("exists", () => {
             expect(blogList).toBeDefined();
         });
 

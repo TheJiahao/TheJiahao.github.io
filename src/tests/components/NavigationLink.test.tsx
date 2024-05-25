@@ -18,7 +18,7 @@ describe("<NavigationLink/>", () => {
         expect(link).toBeInTheDocument();
     });
 
-    test("is valid", async () => {
+    test("is valid", () => {
         expect(link).toHaveAttribute("href", url);
     });
 
