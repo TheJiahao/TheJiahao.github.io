@@ -13,7 +13,7 @@
         "playwright:open": "playwright test --ui",
         "coverage": "vitest run --coverage",
         "index": "gis $SITE_URL",
-        "build": "astro check && astro build",
+        "build": "astro check --tsconfig tsconfig.build.json && astro build",
         "start": "pnpm run build && astro preview",
         "dev": "astro dev",
         "dev:host": "astro dev --host"
