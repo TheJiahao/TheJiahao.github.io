@@ -1,4 +1,4 @@
-import type en from "../i18n/en";
+import type en from "../localization/en";
 
 type Language = typeof en;
 
