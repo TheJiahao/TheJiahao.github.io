@@ -1,7 +1,7 @@
 ---
 import { DEFAULT_LOCALE } from "../../../config";
 import BlogLayout from "../../../layouts/BlogLayout.astro";
-import getBlogs from "../../../utils/getBlogs";
+import getBlogs, { type BlogEntry } from "../../../utils/getBlogs";
 
 export async function getStaticPaths() {
     const posts = await getBlogs();
@@ -11,6 +11,9 @@ export async function getStaticPaths() {
         props: post,
     }));
 }
+
+type Props = BlogEntry;
+
 const lang = Astro.currentLocale ?? DEFAULT_LOCALE;
 
 const post = Astro.props;

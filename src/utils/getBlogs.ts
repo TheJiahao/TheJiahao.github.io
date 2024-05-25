@@ -22,4 +22,5 @@ const getBlogs = async (): Promise<BlogEntry[]> => {
     });
 };
 
+export type { BlogEntry };
 export default getBlogs;
