@@ -9,13 +9,18 @@ export default tseslint.config(
     reactRecommended,
     reactJSXRuntime,
     eslint.configs.recommended,
-    ...tseslint.configs.recommended,
+    ...tseslint.configs.strictTypeChecked,
     ...astroEslint.configs.recommended,
     {
         ignores: ["dist", ".astro"],
     },
     {
-        languageOptions: { globals: globals.browser },
+        languageOptions: {
+            globals: globals.browser,
+            parserOptions: {
+                project: ["./tsconfig.json"],
+            },
+        },
         settings: {
             react: {
                 version: "detect",
