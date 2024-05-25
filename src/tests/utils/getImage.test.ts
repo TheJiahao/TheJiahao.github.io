@@ -18,5 +18,5 @@ test("finds existing vector image", async () => {
 test("throws error for non-existing image", async () => {
     const image = "non-existing-image.png";
 
-    await expect(getImage(image)).rejects.toThrowError(RegExp(`${image}`, "g"));
+    await expect(getImage(image)).rejects.toThrowError(RegExp(image, "g"));
 });
