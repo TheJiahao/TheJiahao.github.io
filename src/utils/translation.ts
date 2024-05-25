@@ -1,16 +1,16 @@
 import { DEFAULT_LOCALE } from "../config";
+import type { Language } from "../interfaces/Language";
 import en from "../localization/en";
 import zh_cn from "../localization/zh-cn";
-import type { Language } from "../interfaces/Language";
 
-const translations = new Map<string, Language>([
-    ["zh-cn", zh_cn],
-    ["en", en],
-]);
+const translations: Record<string, Language> = {
+    "zh-cn": zh_cn,
+    en,
+};
 
-const locales = Array.from(translations.keys());
+const locales = Object.getOwnPropertyNames(translations);
 
 const getTranslation = (language: string): Language =>
-    translations.get(language) || translations.get(DEFAULT_LOCALE)!;
+    translations[language] ?? translations[DEFAULT_LOCALE];
 
 export { getTranslation, locales };
