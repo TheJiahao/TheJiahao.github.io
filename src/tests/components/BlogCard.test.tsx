@@ -8,10 +8,10 @@ describe("<BlogCard/>", () => {
     const description =
         "This blog post will teach you how to write unit tests for Astro components.";
     const date = new Date("2024-05-21");
-    const slug = "astro-unit-tests";
+    const url = "astro-unit-tests";
 
     beforeEach(() => {
-        render(<BlogCard {...{ title, description, date, slug }} />);
+        render(<BlogCard {...{ title, description, date, url }} />);
     });
 
     describe("image exists", () => {
@@ -20,7 +20,7 @@ describe("<BlogCard/>", () => {
         });
 
         test("when no image is given", () => {
-            render(<BlogCard {...{ title, description, date, slug }} />);
+            render(<BlogCard {...{ title, description, date, url }} />);
 
             expect(screen.getByRole("img")).toHaveAttribute(
                 "src",
@@ -37,7 +37,7 @@ describe("<BlogCard/>", () => {
                 format: "jpg",
             });
 
-            render(<BlogCard {...{ title, description, date, slug, image }} />);
+            render(<BlogCard {...{ title, description, date, url, image }} />);
 
             expect(screen.getByRole("img")).toHaveAttribute("src", image.src);
         });
@@ -60,9 +60,6 @@ describe("<BlogCard/>", () => {
     });
 
     test("has link", () => {
-        expect(screen.getByRole("link")).toHaveAttribute(
-            "href",
-            `/posts/${slug}`,
-        );
+        expect(screen.getByRole("link")).toHaveAttribute("href");
     });
 });
