@@ -10,13 +10,13 @@ describe("<BlogList/>", () => {
             description:
                 "This blog post will teach you how to write unit tests for Astro components.",
             date: new Date("2020-12-11"),
-            slug: "astro-unit-tests",
+            url: "astro-unit-tests",
         },
         {
             title: "如何写出一篇好文章？",
             description: "本文介绍了如何写出一篇好文章。",
             date: new Date("2019-01-05"),
-            slug: "how-to-write-good-articles",
+            url: "how-to-write-good-articles",
         },
     ];
 
