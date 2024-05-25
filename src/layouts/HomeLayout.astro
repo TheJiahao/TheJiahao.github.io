@@ -16,7 +16,9 @@ const { lang } = Astro.props;
 const blogs: BlogProps[] = (await getBlogs())
     .filter((blog) => blog.lang === lang)
     .map((blog) => {
-        return { ...blog.data, slug: blog.slug };
+        const { data, lang, slug } = blog;
+
+        return { ...data, url: `${lang}/posts/${slug}` };
     });
 ---
 
