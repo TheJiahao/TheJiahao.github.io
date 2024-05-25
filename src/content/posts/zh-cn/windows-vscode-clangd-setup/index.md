@@ -1,7 +1,6 @@
 ---
 date: 2022-05-12
 
-slug: windows-vscode-clangd-setup
 aliases:
     - 645e20ca
 

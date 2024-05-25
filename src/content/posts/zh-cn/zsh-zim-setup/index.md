@@ -1,7 +1,6 @@
 ---
 date: 2024-01-05T21:09:00+02:00
 
-slug: zsh-zim-setup
 aliases:
     - 1345558699
 

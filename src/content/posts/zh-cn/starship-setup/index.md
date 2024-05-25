@@ -1,8 +1,6 @@
 ---
 date: 2024-05-06T14:03:48+03:00
 
-slug: starship-setup
-
 title: Starship 配置⸺在终端上显示 Git 状态、Python 虚拟环境、命令运行时间等
 categories:
     - 工具
