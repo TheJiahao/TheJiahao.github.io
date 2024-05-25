@@ -1,7 +1,8 @@
 ---
+import { DEFAULT_LOCALE } from "../config";
 import HomeLayout from "../layouts/HomeLayout.astro";
 
-const lang = Astro.currentLocale!;
+const lang = Astro.currentLocale ?? DEFAULT_LOCALE;
 ---
 
 <HomeLayout lang={lang} />
