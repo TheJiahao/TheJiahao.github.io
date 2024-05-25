@@ -13,9 +13,11 @@ interface Props {
 
 const { lang } = Astro.props;
 
-const blogs: BlogProps[] = (await getBlogs()).map((blog) => {
-    return { ...blog.data, slug: blog.slug };
-});
+const blogs: BlogProps[] = (await getBlogs())
+    .filter((blog) => blog.lang === lang)
+    .map((blog) => {
+        return { ...blog.data, slug: blog.slug };
+    });
 ---
 
 <BaseLayout
