@@ -19,7 +19,8 @@ const blogs: BlogProps[] = (await getBlogs())
         const { data, lang, slug } = blog;
 
         return { ...data, url: `${lang}/posts/${slug}` };
-    });
+    })
+    .sort((a, b) => +b.date - +a.date);
 ---
 
 <BaseLayout
