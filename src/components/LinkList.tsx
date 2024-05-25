@@ -1,7 +1,7 @@
 import type { LinkProps } from "./LinkCard";
 import LinkCard from "./LinkCard";
 
-const LinkList = ({ links }: { links: LinkProps[] }) => {
+const LinkList = ({ links }: { links?: LinkProps[] }) => {
     return (
         links && (
             <ul aria-label="External links" card w-full mx-auto divide-y>
