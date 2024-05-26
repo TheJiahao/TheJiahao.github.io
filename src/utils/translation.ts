@@ -3,14 +3,14 @@ import type { Language } from "../interfaces/Language";
 import en from "../localization/en";
 import zh_cn from "../localization/zh-cn";
 
-const translations: Record<string, Language> = {
-    "zh-cn": zh_cn,
-    en,
-};
+const languages = [en, zh_cn];
 
-const locales = Object.getOwnPropertyNames(translations);
+const locales = languages.map((language) => language.code);
+const translations: Record<string, Language> = Object.fromEntries(
+    languages.map((language) => [language.code, language]),
+);
 
 const getTranslation = (language: string): Language =>
     translations[language] ?? translations[DEFAULT_LOCALE];
 
-export { getTranslation, locales };
+export { getTranslation, languages, locales };
