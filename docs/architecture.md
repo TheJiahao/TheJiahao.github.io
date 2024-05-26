@@ -19,6 +19,7 @@ BlogLayout --> formatDate
 BlogLayout --> LinkList
 BlogLayout --> CommentCard
 BlogLayout --> RelevantBlogList
+BlogLayout --> BlogFooter
 
 LinkList --> LinkCard
 
@@ -57,14 +58,19 @@ namespace components {
     class BaseHeader {
         +string type
     }
+    class BlogFooter
 }
 
 namespace utils {
     class formatDate {
-    +formatDate(date) string
+        +formatDate(date) string
     }
     class getSchema {
-    +getSchema(type) object
+        +getSchema(type) object
+    }
+    class translation {
+        +locales string[]
+        +getTranslation(language) Language
     }
 }
 ```
