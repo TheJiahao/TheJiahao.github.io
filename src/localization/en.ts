@@ -8,6 +8,7 @@ const en = {
     homePage: "Home",
     archive: "Archive",
     about: "About",
+    selectLanguage: "Select language",
 };
 
 export default en;

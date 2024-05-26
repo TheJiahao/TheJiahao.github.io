@@ -1,6 +1,6 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import type { ChangeEventHandler } from "react";
-import { languages } from "../utils/translation";
+import { getTranslation, languages } from "../utils/translation";
 
 const onChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
     const language = event.target.value;
@@ -10,7 +10,10 @@ const onChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
 const LanguageButton = ({ lang }: { lang: string }) => (
     <div inline-flex items-center gap-2>
         <span className="i-fluent-emoji-flat-globe-with-meridians" />
-        <select onChange={onChange}>
+        <select
+            aria-label={getTranslation(lang).selectLanguage}
+            onChange={onChange}
+        >
             {languages.map(({ name, code }) => (
                 <option key={code} value={code} selected={code === lang}>
                     {name}
