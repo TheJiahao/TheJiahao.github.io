@@ -2,7 +2,7 @@ import type { ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
 import formatDate from "../utils/formatDate";
 
-interface BlogProps {
+interface BlogCardProps {
     title: string;
     description: string;
     date: Date;
@@ -16,7 +16,7 @@ const BlogCard = ({
     date,
     url,
     image = BLOG_IMAGE_PLACEHOLDER,
-}: BlogProps) => {
+}: BlogCardProps) => {
     return (
         <article card>
             <a href={url} rel="bookmark">
@@ -40,5 +40,5 @@ const BlogCard = ({
     );
 };
 
-export type { BlogProps };
+export type { BlogCardProps };
 export default BlogCard;

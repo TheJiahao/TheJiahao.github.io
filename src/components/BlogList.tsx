@@ -1,6 +1,6 @@
-import BlogCard, { type BlogProps } from "./BlogCard";
+import BlogCard, { type BlogCardProps } from "./BlogCard";
 
-const BlogList = ({ blogs }: { blogs: BlogProps[] }) => {
+const BlogList = ({ blogs }: { blogs: BlogCardProps[] }) => {
     return (
         <ul aria-label="List of blogs" flex="~ col" max-w-90ch mx-auto gap="10">
             {blogs.map((blog) => (
