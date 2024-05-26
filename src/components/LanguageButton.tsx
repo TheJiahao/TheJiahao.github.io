@@ -26,10 +26,11 @@ const LanguageButton = ({
         <span className="i-fluent-emoji-flat-globe-with-meridians" />
         <select
             aria-label={getTranslation(lang).selectLanguage}
+            defaultValue={lang}
             onChange={onChange}
         >
             {languages.map(({ name, code }) => (
-                <option key={code} value={code} selected={code === lang}>
+                <option key={code} value={code}>
                     {name}
                 </option>
             ))}
