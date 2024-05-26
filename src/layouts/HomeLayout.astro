@@ -32,12 +32,12 @@ const blogs: BlogProps[] = (await getBlogs())
     <div flex="~ col" min-w-60ch p-4 gap-4 lg="flex-row">
         <NavigationBar lang={lang} />
         <div w-full flex="~ col" gap-10 my-2>
+            <ToolBar />
             <main>
                 <BlogList blogs={blogs} />
             </main>
 
             <SiteFooter lang={lang} />
         </div>
-        <ToolBar />
     </div>
 </BaseLayout>
