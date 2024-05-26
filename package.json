@@ -4,7 +4,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "format": "pnpm run lint:fix && prettier --write .",
+        "format": "prettier --write .",
         "format:ci": "pnpm run format -- !.github/**",
         "lint": "astro sync && eslint . && markdownlint . && zhlint *.md",
         "lint:fix": "astro sync && eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
