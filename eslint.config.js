@@ -12,7 +12,7 @@ export default tseslint.config(
     ...tseslint.configs.strictTypeChecked,
     ...astroEslint.configs.recommended,
     {
-        ignores: ["dist", ".astro"],
+        ignores: ["dist", ".astro", "*.config.{js,ts,mjs}"],
     },
     {
         languageOptions: {

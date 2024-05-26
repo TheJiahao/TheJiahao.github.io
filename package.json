@@ -6,8 +6,8 @@
     "scripts": {
         "format": "pnpm run lint:fix && prettier --write .",
         "format:ci": "pnpm run format -- !.github/**",
-        "lint": "astro sync && eslint src && markdownlint . && zhlint *.md",
-        "lint:fix": "astro sync && eslint src --fix && markdownlint . --fix && zhlint *.md --fix",
+        "lint": "astro sync && eslint . && markdownlint . && zhlint *.md",
+        "lint:fix": "astro sync && eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
         "test": "vitest",
         "test:e2e": "playwright test",
         "playwright:open": "playwright test --ui",
