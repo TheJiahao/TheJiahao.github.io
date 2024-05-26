@@ -1,27 +1,23 @@
-import { DEFAULT_LOCALE } from "../config";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import type { ChangeEventHandler } from "react";
 import { languages } from "../utils/translation";
 
-const LanguageButton = () => {
-    return (
-        <div inline-flex items-center gap-2>
-            <span className="i-fluent-emoji-flat-globe-with-meridians" />
-            <select
-                onChange={(event) =>
-                    (window.location.href = event.target.value)
-                }
-            >
-                {languages.map(({ name, code }) => (
-                    <option
-                        key={code}
-                        value={code}
-                        selected={code === DEFAULT_LOCALE}
-                    >
-                        {name}
-                    </option>
-                ))}
-            </select>
-        </div>
-    );
+const onChange: ChangeEventHandler<HTMLSelectElement> = (event) => {
+    const language = event.target.value;
+    window.location.href = getRelativeLocaleUrl(language, "/");
 };
+
+const LanguageButton = ({ lang }: { lang: string }) => (
+    <div inline-flex items-center gap-2>
+        <span className="i-fluent-emoji-flat-globe-with-meridians" />
+        <select onChange={onChange}>
+            {languages.map(({ name, code }) => (
+                <option key={code} value={code} selected={code === lang}>
+                    {name}
+                </option>
+            ))}
+        </select>
+    </div>
+);
 
 export default LanguageButton;
