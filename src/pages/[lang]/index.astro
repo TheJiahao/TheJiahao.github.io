@@ -1,0 +1,14 @@
+---
+import HomeLayout from "../../layouts/HomeLayout.astro";
+import { locales } from "../../utils/translation";
+
+export function getStaticPaths() {
+    return locales.map((lang) => ({
+        params: { lang },
+    }));
+}
+
+const { lang } = Astro.params;
+---
+
+<HomeLayout lang={lang} />
