@@ -13,4 +13,5 @@ This repository contains the source code of my [blog](https://thejiahao.github.i
 ## Documentation
 
 - [Backlog](https://github.com/users/TheJiahao/projects/2)
+- [Architecture](/docs/architecture.md)
 - [Testing](/docs/testing.md)
