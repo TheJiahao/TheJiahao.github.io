@@ -3,7 +3,7 @@ import type { BlogProps } from "../components/BlogCard";
 import BlogList from "../components/BlogList";
 import NavigationBar from "../components/NavigationBar";
 import SiteFooter from "../components/SiteFooter";
-import ToolBar from "../components/ToolBar.astro";
+import ToolBar from "../components/ToolBar";
 import getBlogs from "../utils/getBlogs";
 import { getTranslation } from "../utils/translation";
 import BaseLayout from "./BaseLayout.astro";
@@ -32,7 +32,7 @@ const blogs: BlogProps[] = (await getBlogs())
     <div flex="~ col" min-w-60ch p-4 gap-4 lg="flex-row">
         <NavigationBar lang={lang} />
         <div w-full flex="~ col" gap-10 my-2>
-            <ToolBar />
+            <ToolBar client:only="react" />
             <main>
                 <BlogList blogs={blogs} />
             </main>
