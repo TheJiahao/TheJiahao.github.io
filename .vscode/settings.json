@@ -7,5 +7,12 @@
         "editor.tabSize": 2
     },
     "eslint.experimental.useFlatConfig": true,
-    "typescript.preferences.autoImportFileExcludePatterns": ["node/test.d.ts"]
+    "typescript.preferences.autoImportFileExcludePatterns": ["node/test.d.ts"],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "astro"
+    ]
 }
