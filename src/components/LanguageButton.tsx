@@ -9,6 +9,7 @@ import type { Language } from "../interfaces/Language";
 interface LanguageButtonProps {
     lang: string;
     languages?: Pick<Language, "name" | "code">[];
+    onChange?: ChangeEventHandler<HTMLSelectElement>;
 }
 
 const handleNavigation: ChangeEventHandler<HTMLSelectElement> = (event) => {
@@ -19,12 +20,13 @@ const handleNavigation: ChangeEventHandler<HTMLSelectElement> = (event) => {
 const LanguageButton = ({
     lang,
     languages = DEFAULT_LANGUAGES,
+    onChange = handleNavigation,
 }: LanguageButtonProps) => (
     <div inline-flex items-center gap-2>
         <span className="i-fluent-emoji-flat-globe-with-meridians" />
         <select
             aria-label={getTranslation(lang).selectLanguage}
-            onChange={handleNavigation}
+            onChange={onChange}
         >
             {languages.map(({ name, code }) => (
                 <option key={code} value={code} selected={code === lang}>
