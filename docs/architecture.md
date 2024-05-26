@@ -9,13 +9,10 @@ BaseLayout --> BaseHeader
 BaseLayout <|-- HomeLayout
 BaseLayout <|-- BlogLayout
 
-BaseHeader --> getSchema
-
 HomeLayout --> NavigationBar
 HomeLayout --> ToolBar
 HomeLayout --> BlogList
 
-BlogLayout --> formatDate
 BlogLayout --> LinkList
 BlogLayout --> CommentCard
 BlogLayout --> RelevantBlogList
@@ -24,7 +21,6 @@ BlogLayout --> BlogFooter
 LinkList --> LinkCard
 
 BlogList --> BlogCard
-BlogCard --> formatDate
 
 NavigationBar --> NavigationLink
 NavigationBar --> SocialLinkList
@@ -60,17 +56,21 @@ namespace components {
     }
     class BlogFooter
 }
+```
 
-namespace utils {
-    class formatDate {
-        +formatDate(date) string
-    }
-    class getSchema {
-        +getSchema(type) object
-    }
-    class translation {
-        +locales string[]
-        +getTranslation(language) Language
-    }
+## Utils
+
+```mermaid
+classDiagram
+
+class formatDate {
+    +formatDate(date) string
+}
+class getSchema {
+    +getSchema(type) object
+}
+class translation {
+    +locales string[]
+    +getTranslation(language) Language
 }
 ```
