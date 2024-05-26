@@ -1,8 +1,14 @@
-import type { CollectionEntry } from "astro:content";
+import type { ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
 import formatDate from "../utils/formatDate";
 
-type BlogProps = CollectionEntry<"posts">["data"] & { url: string };
+interface BlogProps {
+    title: string;
+    description: string;
+    date: Date;
+    url: string;
+    image?: ImageMetadata;
+}
 
 const BlogCard = ({
     title,
