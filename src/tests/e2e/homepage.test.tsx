@@ -5,11 +5,8 @@ test.describe("Homepage", () => {
         await page.goto("/");
     });
 
-    test.beforeEach(async ({ page }) => {
-        await page.goto("/");
-    });
-
     test("has correct title", async ({ page }) => {
+        await page.goto("/");
         await expect(page).toHaveTitle("Jiahao 的博客");
     });
 });
