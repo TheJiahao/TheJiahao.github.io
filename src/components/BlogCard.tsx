@@ -4,7 +4,7 @@ import formatDate from "../utils/formatDate";
 
 interface BlogCardProps {
     title: string;
-    description: string;
+    description?: string;
     date: Date;
     url: string;
     image?: ImageMetadata;
@@ -30,7 +30,7 @@ const BlogCard = ({
                 />
                 <div prose p-8 max-w-full>
                     <h2>{title}</h2>
-                    <p>{description}</p>
+                    {description && <p>{description}</p>}
                     <footer>
                         <time>{formatDate(date)}</time>
                     </footer>
