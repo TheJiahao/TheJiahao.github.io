@@ -31,7 +31,7 @@ test.describe("Homepage", () => {
 
             await link.click();
 
-            await expect(page).toHaveURL("/");
+            await expect(page).toHaveURL(/\/zh-cn\/?/);
         });
 
         test("has link to posts page", async ({ page }) => {
