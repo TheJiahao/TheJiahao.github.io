@@ -9,8 +9,6 @@ jobs:
     name: End-to-end test
     runs-on: ubuntu-latest
     environment: test
-    env:
-      BASE_URL: ${{ github.event.deployment_status.environment_url }}
 
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +22,7 @@ jobs:
           args: npx playwright test
         env:
           HOME: /root
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}
 
       - uses: actions/upload-artifact@v4
         if: failure()
