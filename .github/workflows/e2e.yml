@@ -25,7 +25,7 @@ jobs:
           args: npx playwright test
         env:
           HOME: /root
-          BASE_URL: ${{ github.event.deployment_status.environment_url }}/zh-cn
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}/zh-cn/
 
       - uses: actions/upload-artifact@v4
         if: failure()

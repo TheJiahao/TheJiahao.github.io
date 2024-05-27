@@ -16,7 +16,7 @@ export default defineConfig({
         timeout: 3000,
     },
     use: {
-        baseURL: process.env.BASE_URL || `http://localhost:${PORT}/zh-cn`,
+        baseURL: process.env.BASE_URL || `http://localhost:${PORT}/zh-cn/`,
         trace: "on-first-retry",
         screenshot: "only-on-failure",
     },
