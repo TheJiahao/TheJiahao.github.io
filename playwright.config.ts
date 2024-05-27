@@ -16,7 +16,7 @@ export default defineConfig({
         timeout: 3000,
     },
     use: {
-        baseURL: `http://localhost:${PORT}/zh-cn/`,
+        baseURL: `http://localhost:${PORT}`,
         trace: "on-first-retry",
         screenshot: "only-on-failure",
     },
