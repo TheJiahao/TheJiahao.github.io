@@ -52,7 +52,3 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
           files: ./coverage/coverage-final.json
-
-  e2e_test:
-    name: End-to-end test
-    uses: ./.github/workflows/e2e.yml

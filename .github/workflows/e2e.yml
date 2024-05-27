@@ -1,9 +1,11 @@
 name: End-to-end test
 on:
-  workflow_call:
+  deployment_status:
 
 jobs:
   e2e_test:
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+
     name: End-to-end test
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright:latest
@@ -16,9 +18,6 @@ jobs:
 
       - name: Set up
         uses: ./.github/workflows/setup-action
-
-      - name: Install @actions/core
-        run: pnpm install @actions/core
 
       - name: Get installed Playwright version
         id: playwright-version
@@ -34,18 +33,11 @@ jobs:
       - name: Install Playwright dependencies
         run: pnpm exec playwright install --with-deps
 
-      - name: Wait for staging deployment
-        uses: patrickedqvist/wait-for-vercel-preview@v1
-        id: deploy-staging
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 180
-
       - name: Test code
         run: pnpm run test:e2e
         env:
           HOME: /root
-          BASE_URL: ${{ steps.deploy-staging.outputs.url }}
+          BASE_URL: ${{ github.event.deployment_status.environment_url }}
 
       - uses: actions/upload-artifact@v4
         if: failure()
