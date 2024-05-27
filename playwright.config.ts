@@ -16,18 +16,16 @@ export default defineConfig({
         timeout: 3000,
     },
     use: {
-        baseURL: process.env.BASE_URL || `http://localhost:${PORT}/zh-cn/`,
+        baseURL: `http://localhost:${PORT}/zh-cn/`,
         trace: "on-first-retry",
         screenshot: "only-on-failure",
     },
-    webServer: process.env.CI
-        ? undefined
-        : {
-              command: "pnpm run dev",
-              port: PORT,
-              timeout: 120 * 1000,
-              reuseExistingServer: true,
-          },
+    webServer: {
+        command: process.env.CI ? "pnpm run start" : "pnpm run dev",
+        port: PORT,
+        timeout: 120 * 1000,
+        reuseExistingServer: !process.env.CI,
+    },
     projects: [
         {
             name: "chromium",
