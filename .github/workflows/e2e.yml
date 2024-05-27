@@ -11,7 +11,6 @@ jobs:
     environment: test
     env:
       BASE_URL: ${{ github.event.deployment_status.environment_url }}
-      HOME: /root
 
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +19,8 @@ jobs:
         uses: docker://mcr.microsoft.com/playwright:latest
         with:
           args: npx playwright test
+        env:
+          HOME: /root
 
       - uses: actions/upload-artifact@v4
         if: failure()
