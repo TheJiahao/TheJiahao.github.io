@@ -16,7 +16,6 @@ const BASE_URL = `http://localhost:${PORT}/zh-cn`;
 export default defineConfig({
     testDir: "src/tests/e2e",
     fullyParallel: true,
-    maxFailures: process.env.CI ? 3 : undefined,
     forbidOnly: !!process.env.CI,
     workers: process.env.CI ? "100%" : undefined,
     reporter: process.env.CI ? [["github"], ["dot"]] : [["html"], ["list"]],
