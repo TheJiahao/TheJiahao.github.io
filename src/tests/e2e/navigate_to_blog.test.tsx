@@ -8,8 +8,8 @@ test.describe("blog list", () => {
         blogList = page.getByRole("list", { name: "List of blogs" });
     });
 
-    test("exists", () => {
-        expect(blogList).toBeDefined();
+    test("exists", async () => {
+        await expect(blogList).toBeVisible();
     });
 
     test("has at least one blog", async () => {
