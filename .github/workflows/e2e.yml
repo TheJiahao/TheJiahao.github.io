@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run tests
-        uses: docker://mcr.microsoft.com/playwright:latest
+        uses: docker://mcr.microsoft.com/playwright:v1.44.1-jammy
         with:
           args: npx playwright test
         env:
