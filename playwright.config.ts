@@ -28,12 +28,14 @@ export default defineConfig({
         trace: "on-first-retry",
         screenshot: "only-on-failure",
     },
-    webServer: {
-        command: "pnpm run dev",
-        url: BASE_URL,
-        timeout: 120 * 1000,
-        reuseExistingServer: !process.env.CI,
-    },
+    webServer: process.env.CI
+        ? undefined
+        : {
+              command: "pnpm run dev",
+              url: BASE_URL,
+              timeout: 120 * 1000,
+              reuseExistingServer: true,
+          },
     projects: [
         {
             name: "chromium",
