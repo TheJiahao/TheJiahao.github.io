@@ -1,0 +1,18 @@
+---
+import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
+import { DEFAULT_LOCALE } from "../config";
+
+const url = getRelativeLocaleUrl(DEFAULT_LOCALE, "/");
+const canonical_url = getAbsoluteLocaleUrl(DEFAULT_LOCALE, "/");
+---
+
+<!doctype html>
+<title>Redirecting to: {url}</title>
+<meta http-equiv="refresh" content=`0; url=${url}` />
+<meta name="robots" content="noindex" />
+<link rel="canonical" href={canonical_url} />
+<body>
+    <a href={url}>
+        Redirecting from <code>/</code> to <code>{url}</code>
+    </a>
+</body>
