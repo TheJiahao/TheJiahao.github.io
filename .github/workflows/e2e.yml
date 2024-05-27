@@ -17,6 +17,9 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
+      - name: Install @actions/core
+        run: pnpm install @actions/core
+
       - name: Get installed Playwright version
         id: playwright-version
         run: echo "PLAYWRIGHT_VERSION=$(node -e "process.stdout.write(require('@playwright/test/package.json').version)")" >> $GITHUB_OUTPUT
