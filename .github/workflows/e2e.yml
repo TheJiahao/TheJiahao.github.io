@@ -4,7 +4,10 @@ on:
 
 jobs:
   e2e_test:
-    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    if: >-
+      github.event_name == 'deployment_status'
+      && github.event.deployment_status.state == 'success'
+      && github.event.deployment_status.environment_url != ''
 
     name: End-to-end test
     runs-on: ubuntu-latest
