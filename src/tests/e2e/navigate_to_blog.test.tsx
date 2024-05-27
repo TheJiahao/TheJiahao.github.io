@@ -13,8 +13,8 @@ test.describe("blog list", () => {
     });
 
     test("has at least one blog", async () => {
-        const blogs = await blogList.getByRole("listitem").count();
-        expect(blogs).toBeGreaterThan(0);
+        const blogs = blogList.getByRole("listitem");
+        await expect(blogs).not.toHaveCount(0);
     });
 
     test("clicking a blog leads to blog post", async ({ page }) => {
