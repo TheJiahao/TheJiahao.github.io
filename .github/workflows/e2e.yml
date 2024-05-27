@@ -6,6 +6,8 @@ jobs:
   e2e_test:
     name: End-to-end test
     runs-on: ubuntu-latest
+
+    container: mcr.microsoft.com/playwright:v1.44.1-jammy
     environment: test
 
     steps:
@@ -15,9 +17,7 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Run tests
-        uses: docker://mcr.microsoft.com/playwright:v1.44.1-jammy
-        with:
-          args: npx playwright test
+        run: pnpm run test:e2e
         env:
           HOME: /root
 
