@@ -2,7 +2,7 @@ import { defineConfig, devices } from "@playwright/test";
 import "dotenv/config";
 
 const PORT = process.env.PUBLIC_PORT || "4321";
-const BASE_URL = `http://localhost:${PORT}/`;
+const BASE_URL = `http://localhost:${PORT}/zh-cn`;
 
 /**
  * Read environment variables from file.
