@@ -1,8 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 import "dotenv/config";
 
-const PORT = process.env.PUBLIC_PORT || "4321";
-const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}/zh-cn`;
+const PORT = Number(process.env.PUBLIC_PORT) || 4321;
 
 /**
  * Read environment variables from file.
@@ -24,7 +23,7 @@ export default defineConfig({
         timeout: 3000,
     },
     use: {
-        baseURL: BASE_URL,
+        baseURL: process.env.BASE_URL || `http://localhost:${PORT}/zh-cn`,
         trace: "on-first-retry",
         screenshot: "only-on-failure",
     },
@@ -32,7 +31,7 @@ export default defineConfig({
         ? undefined
         : {
               command: "pnpm run dev",
-              url: BASE_URL,
+              port: PORT,
               timeout: 120 * 1000,
               reuseExistingServer: true,
           },
