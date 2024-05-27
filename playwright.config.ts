@@ -26,6 +26,7 @@ export default defineConfig({
     use: {
         baseURL: BASE_URL,
         trace: "on-first-retry",
+        screenshot: "only-on-failure",
     },
     webServer: {
         command: process.env.CI ? "pnpm run start" : "pnpm run dev",
