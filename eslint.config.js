@@ -12,7 +12,12 @@ export default tseslint.config(
     ...tseslint.configs.strictTypeChecked,
     ...astroEslint.configs.recommended,
     {
-        ignores: ["dist", ".astro", "*.config.{js,ts,mjs}"],
+        ignores: [
+            "dist",
+            ".astro",
+            "*.config.{js,ts,mjs}",
+            "playwright-report",
+        ],
     },
     {
         languageOptions: {
