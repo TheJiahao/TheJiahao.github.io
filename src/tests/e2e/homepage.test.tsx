@@ -1,12 +1,13 @@
-import test, { expect } from "@playwright/test";
+import { expect } from "@playwright/test";
+import test from "./utils/fixtures";
 
 test.describe("Homepage", () => {
-    test("can be accessed", async ({ page }) => {
-        await page.goto("/");
+    test("can be accessed", async ({ homepage }) => {
+        await homepage.goto();
     });
 
-    test("has correct title", async ({ page }) => {
-        await page.goto("/");
+    test("has correct title", async ({ homepage, page }) => {
+        await homepage.goto();
         await expect(page).toHaveTitle("Jiahao 的博客");
     });
 });

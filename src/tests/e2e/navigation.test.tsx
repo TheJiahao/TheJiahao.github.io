@@ -1,10 +1,11 @@
-import test, { expect, type Locator } from "@playwright/test";
+import { expect, type Locator } from "@playwright/test";
+import test from "./utils/fixtures";
 
 test.describe("Navigation", () => {
     let navigationBar: Locator;
 
-    test.beforeEach(async ({ page }) => {
-        await page.goto("/");
+    test.beforeEach(async ({ homepage, page }) => {
+        await homepage.goto();
         navigationBar = page.getByRole("navigation");
     });
 
