@@ -19,9 +19,7 @@ test.describe("blog list", () => {
     });
 
     test("clicking a blog leads to blog post", async ({ page }) => {
-        const firstBlog = blogList.getByRole("listitem").first();
-
-        await firstBlog.click();
+        await blogList.getByRole("listitem").first().click();
 
         await expect(page).toHaveURL(/\/posts\//);
     });
