@@ -12,7 +12,6 @@ const zh_cn: Language = {
     homePage: "首页",
     archive: "归档",
     about: "关于",
-    selectLanguage: "选择语言",
 };
 
 export default zh_cn;
