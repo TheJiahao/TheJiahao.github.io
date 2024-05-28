@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 import astroEslint from "eslint-plugin-astro";
 
 export default tseslint.config(
-    reactRecommended,
+    { ...reactRecommended, ignores: ["**/*.astro"] },
     reactJSXRuntime,
     eslint.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
