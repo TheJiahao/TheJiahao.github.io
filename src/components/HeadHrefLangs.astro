@@ -1,0 +1,19 @@
+---
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+import { locales } from "../utils/translation";
+
+const pathName = Astro.url.pathname
+    .split("/")
+    .filter((part) => !locales.includes(part))
+    .join("/");
+---
+
+{
+    locales.map((locale) => (
+        <link
+            rel="alternative"
+            hreflang={locale}
+            href={getAbsoluteLocaleUrl(locale, pathName)}
+        />
+    ))
+}

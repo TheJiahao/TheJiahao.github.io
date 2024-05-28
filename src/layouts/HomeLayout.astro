@@ -2,6 +2,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import type { BlogCardProps } from "../components/BlogCard";
 import BlogList from "../components/BlogList";
+import HeadHrefLangs from "../components/HeadHrefLangs.astro";
 import NavigationBar from "../components/NavigationBar";
 import SiteFooter from "../components/SiteFooter";
 import ToolBar from "../components/ToolBar";
@@ -30,6 +31,7 @@ const blogs: BlogCardProps[] = (await getBlogs())
     title={getTranslation(lang).siteTitle}
     description={getTranslation(lang).siteDescription}
 >
+    <HeadHrefLangs slot="head" />
     <div flex="~ col" min-w-60ch p-4 gap-4 lg="flex-row">
         <NavigationBar lang={lang} />
         <div w-full flex="~ col" gap-10 my-2>
