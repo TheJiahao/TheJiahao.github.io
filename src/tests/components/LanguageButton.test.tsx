@@ -16,7 +16,7 @@ describe("<LanguageSelector/>", () => {
     beforeEach(() => {
         render(
             <LanguageSelector
-                lang="en"
+                language="en"
                 languages={languages}
                 onChange={mockHandleNavigation}
             />,

@@ -3,12 +3,12 @@ import HomeLayout from "../../layouts/HomeLayout.astro";
 import { locales } from "../../utils/translation";
 
 export function getStaticPaths() {
-    return locales.map((lang) => ({
-        params: { lang },
+    return locales.map((language) => ({
+        params: { language },
     }));
 }
 
-const { lang } = Astro.params;
+const { language } = Astro.params;
 ---
 
-<HomeLayout lang={lang} />
+<HomeLayout language={language} />

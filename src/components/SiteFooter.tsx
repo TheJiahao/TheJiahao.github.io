@@ -7,14 +7,14 @@ import {
 import { getTranslation } from "../utils/translation";
 
 interface SiteFooterProps {
-    lang?: string;
+    language?: string;
     owner?: string;
     startYear?: number;
     source?: string;
 }
 
 const SiteFooter = ({
-    lang = DEFAULT_LOCALE,
+    language = DEFAULT_LOCALE,
     owner = SITE_OWNER,
     startYear = SITE_START_YEAR,
     source = SITE_SOURCE,
@@ -28,7 +28,7 @@ const SiteFooter = ({
             </p>
             <a href={source} inline-flex items-center gap-2>
                 <span className="i-logos-github-icon" />
-                {getTranslation(lang).siteSource}
+                {getTranslation(language).siteSource}
             </a>
         </footer>
     );

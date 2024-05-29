@@ -3,14 +3,14 @@ import { getTranslation } from "../utils/translation";
 import NavigationLink from "./NavigationLink";
 
 interface BackButtonProps {
-    lang: string;
+    language: string;
 }
 
-const BackButton = ({ lang }: BackButtonProps) => {
+const BackButton = ({ language }: BackButtonProps) => {
     return (
         <NavigationLink
-            text={getTranslation(lang).back}
-            url={getRelativeLocaleUrl(lang, "/")}
+            text={getTranslation(language).back}
+            url={getRelativeLocaleUrl(language, "/")}
             icon="i-ic:round-arrow-back-ios-new"
             classNames={["card", "p-2"]}
         />

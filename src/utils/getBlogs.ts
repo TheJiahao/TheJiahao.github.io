@@ -2,7 +2,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 
 type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
     slug: string;
-    lang: string;
+    language: string;
 };
 
 const getBlogs = async (): Promise<BlogEntry[]> => {
@@ -12,12 +12,12 @@ const getBlogs = async (): Promise<BlogEntry[]> => {
     );
 
     return blogs.map((blog) => {
-        const [lang, ...slug] = blog.slug.split("/");
+        const [language, ...slug] = blog.slug.split("/");
 
         return {
             ...blog,
             slug: slug.join("/"),
-            lang,
+            language,
         };
     });
 };

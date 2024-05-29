@@ -7,7 +7,7 @@ import {
 } from "../utils/translation";
 
 interface LanguageSelectorProps {
-    lang: string;
+    language: string;
     languages?: Pick<Language, "name" | "code">[];
     onChange?: ChangeEventHandler<HTMLSelectElement>;
 }
@@ -18,7 +18,7 @@ const handleNavigation: ChangeEventHandler<HTMLSelectElement> = (event) => {
 };
 
 const LanguageSelector = ({
-    lang,
+    language,
     languages = DEFAULT_LANGUAGES,
     onChange = handleNavigation,
 }: LanguageSelectorProps) => {
@@ -32,8 +32,8 @@ const LanguageSelector = ({
         <div inline-flex items-center gap-2>
             <span className="i-fluent-emoji-flat-globe-with-meridians" />
             <select
-                aria-label={getTranslation(lang).selectLanguage}
-                defaultValue={lang}
+                aria-label={getTranslation(language).selectLanguage}
+                defaultValue={language}
                 onChange={onChange}
                 disabled={!hydrated}
             >

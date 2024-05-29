@@ -5,15 +5,15 @@ import BaseHeader from "../components/BaseHeader.astro";
 interface Props {
     title: string;
     description?: string;
-    lang?: string;
+    language?: string;
     image?: CollectionEntry<"posts">["data"]["image"];
 }
 
-const { lang, title, description, image } = Astro.props;
+const { language, title, description, image } = Astro.props;
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={language}>
     <head>
         <BaseHeader title={title} description={description} image={image} />
         <slot name="head" />

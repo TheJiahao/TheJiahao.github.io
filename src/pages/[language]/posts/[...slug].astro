@@ -7,19 +7,19 @@ export async function getStaticPaths() {
     const posts = await getBlogs();
 
     return posts.map((post) => ({
-        params: { lang: post.lang, slug: post.slug },
+        params: { language: post.language, slug: post.slug },
         props: post,
     }));
 }
 
 type Props = BlogEntry;
 
-const lang = Astro.currentLocale ?? DEFAULT_LOCALE;
+const language = Astro.currentLocale ?? DEFAULT_LOCALE;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogLayout lang={lang} {...post.data}>
+<BlogLayout language={language} {...post.data}>
     <Content />
 </BlogLayout>

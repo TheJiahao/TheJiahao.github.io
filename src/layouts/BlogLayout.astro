@@ -9,7 +9,7 @@ import BackButton from "../components/BackButton";
 import CoverImage from "../components/CoverImage";
 import BlogDetails from "../components/BlogDetails";
 
-type Props = CollectionEntry<"posts">["data"] & { lang: string };
+type Props = CollectionEntry<"posts">["data"] & { language: string };
 
 const {
     title,
@@ -17,14 +17,14 @@ const {
     date,
     image = BLOG_IMAGE_PLACEHOLDER,
     links,
-    lang,
+    language,
 } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} image={image}>
     <div flex="~ col" my-6 lg="flex-row gap-4">
         <aside lg="flex-1 flex items-start justify-end">
-            <BackButton lang={lang} />
+            <BackButton language={language} />
         </aside>
         <main flex="~ col" max-w-100ch mx-auto gap-y-7>
             <article prose min-w-40ch max-w-full card>
@@ -46,5 +46,5 @@ const {
         </main>
         <aside flex-1></aside>
     </div>
-    <SiteFooter lang={lang} />
+    <SiteFooter language={language} />
 </BaseLayout>

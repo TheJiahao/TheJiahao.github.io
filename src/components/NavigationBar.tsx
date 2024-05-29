@@ -4,33 +4,33 @@ import { getTranslation } from "../utils/translation";
 import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
 
 interface NavigationBarProps {
-    lang?: string;
+    language?: string;
     avatar?: ImageMetadata;
     links?: NavigationLinkProps[];
 }
 
-const getLinks = (lang: string) => [
+const getLinks = (language: string) => [
     {
-        url: getRelativeLocaleUrl(lang, "/"),
-        text: getTranslation(lang).homePage,
+        url: getRelativeLocaleUrl(language, "/"),
+        text: getTranslation(language).homePage,
         icon: "i-fluent-emoji-flat-house",
     },
     {
-        url: getRelativeLocaleUrl(lang, "/posts"),
-        text: getTranslation(lang).archive,
+        url: getRelativeLocaleUrl(language, "/posts"),
+        text: getTranslation(language).archive,
         icon: "i-fluent-emoji-flat-file-cabinet",
     },
     {
-        url: getRelativeLocaleUrl(lang, "/about"),
-        text: getTranslation(lang).about,
+        url: getRelativeLocaleUrl(language, "/about"),
+        text: getTranslation(language).about,
         icon: "i-fluent-emoji-flat-star",
     },
 ];
 
 const NavigationBar = ({
-    lang = DEFAULT_LOCALE,
+    language = DEFAULT_LOCALE,
     avatar = SITE_AVATAR,
-    links = getLinks(lang),
+    links = getLinks(language),
 }: NavigationBarProps) => {
     return (
         <nav
@@ -53,7 +53,7 @@ const NavigationBar = ({
                     mx-auto
                 />
                 <h1 text="center xl" font-bold>
-                    {getTranslation(lang).siteTitle}
+                    {getTranslation(language).siteTitle}
                 </h1>
             </header>
             <ul space-y-4 text-xl>
