@@ -23,28 +23,36 @@ const {
 
 <BaseLayout title={title} description={description} image={image}>
     <div flex="~ col" my-6 lg="flex-row gap-4">
-        <aside lg="flex-1 flex items-start justify-end">
+        <aside
+            sticky
+            top-0
+            z-1
+            h-screen
+            lg="flex-1 flex items-start justify-end"
+        >
             <BackButton language={language} />
         </aside>
-        <main flex="~ col" max-w-100ch mx-auto gap-y-7>
-            <article prose min-w-40ch max-w-full card>
-                <header>
-                    <CoverImage image={image} title={title} />
-                    <BlogDetails
-                        title={title}
-                        description={description}
-                        date={date}
-                    />
-                </header>
-                <div px-8 py-2>
-                    <slot />
-                    <BlogFooter px-8 py-2 />
-                </div>
-            </article>
+        <div flex="~ col" gap-y-7>
+            <main flex="~ col" max-w-100ch gap-y-7>
+                <article prose min-w-40ch max-w-full card>
+                    <header>
+                        <CoverImage image={image} title={title} />
+                        <BlogDetails
+                            title={title}
+                            description={description}
+                            date={date}
+                        />
+                    </header>
+                    <div px-8 py-2>
+                        <slot />
+                        <BlogFooter px-8 py-2 />
+                    </div>
+                </article>
 
-            <LinkList links={links} />
-        </main>
+                <LinkList links={links} />
+            </main>
+            <SiteFooter language={language} />
+        </div>
         <aside flex-1></aside>
     </div>
-    <SiteFooter language={language} />
 </BaseLayout>
