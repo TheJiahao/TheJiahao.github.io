@@ -13,9 +13,6 @@ export default defineConfig({
     reporter: process.env.CI ? [["github"], ["dot"]] : [["html"], ["list"]],
     retries: 1,
     timeout: 10000,
-    expect: {
-        timeout: 3000,
-    },
     use: {
         baseURL: `http://localhost:${PORT}`,
         trace: "on-first-retry",
