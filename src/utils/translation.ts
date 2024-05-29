@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE } from "../config";
+import { DEFAULT_LANGUAGE } from "../config";
 import type { Language } from "../interfaces/Language";
 import en from "../localization/en";
 import zh_cn from "../localization/zh-cn";
@@ -11,6 +11,6 @@ const translations: Record<string, Language> = Object.fromEntries(
 );
 
 const getTranslation = (languageCode: string): Language =>
-    translations[languageCode] ?? translations[DEFAULT_LOCALE];
+    translations[languageCode] ?? translations[DEFAULT_LANGUAGE];
 
 export { getTranslation, languages, languageCodes };

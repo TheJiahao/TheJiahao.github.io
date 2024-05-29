@@ -19,4 +19,4 @@ export const BLOG_IMAGE_PLACEHOLDER = await getImage(
     "/src/assets/images/cover_placeholder.svg",
 );
 
-export const DEFAULT_LOCALE = "zh-cn";
+export const DEFAULT_LANGUAGE = "zh-cn";

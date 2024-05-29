@@ -1,5 +1,5 @@
 import {
-    DEFAULT_LOCALE,
+    DEFAULT_LANGUAGE,
     SITE_OWNER,
     SITE_SOURCE,
     SITE_START_YEAR,
@@ -14,7 +14,7 @@ interface SiteFooterProps {
 }
 
 const SiteFooter = ({
-    language = DEFAULT_LOCALE,
+    language = DEFAULT_LANGUAGE,
     owner = SITE_OWNER,
     startYear = SITE_START_YEAR,
     source = SITE_SOURCE,

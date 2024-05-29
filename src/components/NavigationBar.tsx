@@ -1,5 +1,5 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { DEFAULT_LOCALE, SITE_AVATAR } from "../config";
+import { DEFAULT_LANGUAGE, SITE_AVATAR } from "../config";
 import { getTranslation } from "../utils/translation";
 import NavigationLink, { type NavigationLinkProps } from "./NavigationLink";
 
@@ -28,7 +28,7 @@ const getLinks = (language: string) => [
 ];
 
 const NavigationBar = ({
-    language = DEFAULT_LOCALE,
+    language = DEFAULT_LANGUAGE,
     avatar = SITE_AVATAR,
     links = getLinks(language),
 }: NavigationBarProps) => {
