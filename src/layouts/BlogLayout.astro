@@ -28,19 +28,15 @@ const {
         <main flex="~ col" max-w-100ch mx-auto gap-y-7>
             <article prose min-w-40ch max-w-full card>
                 <header>
-                    {
-                        (
-                            <img
-                                src={image.src}
-                                alt={`Cover image of "${title}"`}
-                                class="[&[src$='svg']]:object-fill"
-                                w-full
-                                max-h-30vh
-                                object-cover
-                                overflow-hidden
-                            />
-                        )
-                    }
+                    <img
+                        src={image.src}
+                        alt={`Cover image of "${title}"`}
+                        class="[&[src$='svg']]:object-fill"
+                        w-full
+                        max-h-30vh
+                        object-cover
+                        overflow-hidden
+                    />
                     <div px-8 py-2>
                         <h2>{title}</h2>
                         <h3 text-slate>{description}</h3>
