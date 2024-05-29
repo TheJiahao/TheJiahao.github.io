@@ -17,18 +17,25 @@ BlogLayout --> LinkList
 BlogLayout --> CommentCard
 BlogLayout --> RelevantBlogList
 BlogLayout --> BlogFooter
+BlogLayout --> BackButton
+BlogLayout --> BlogDetails
+BlogLayout --> CoverImage
 
 LinkList --> LinkCard
-
 BlogList --> BlogCard
+SocialLinkList --> SocialLink
 
 NavigationBar --> NavigationLink
 NavigationBar --> SocialLinkList
-SocialLinkList --> SocialLink
 
 ToolBar --> SearchButton
 ToolBar --> ThemeButton
 ToolBar --> LanguageSelector
+
+BackButton --> NavigationLink
+
+BlogCard --> BlogDetails
+BlogCard --> CoverImage
 
 namespace layouts {
     class HomeLayout
@@ -55,6 +62,9 @@ namespace components {
         +string type
     }
     class BlogFooter
+    class BlogDetails
+    class CoverImage
+    class BackButton
 }
 ```
 
