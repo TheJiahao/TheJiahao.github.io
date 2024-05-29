@@ -1,19 +1,19 @@
 ---
 import { getAbsoluteLocaleUrl } from "astro:i18n";
-import { locales } from "../utils/translation";
+import { languageCodes } from "../utils/translation";
 
 const pathName = Astro.url.pathname
     .split("/")
-    .filter((part) => !locales.includes(part))
+    .filter((part) => !languageCodes.includes(part))
     .join("/");
 ---
 
 {
-    locales.map((locale) => (
+    languageCodes.map((code) => (
         <link
             rel="alternative"
-            hreflang={locale}
-            href={getAbsoluteLocaleUrl(locale, pathName)}
+            hreflang={code}
+            href={getAbsoluteLocaleUrl(code, pathName)}
         />
     ))
 }

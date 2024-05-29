@@ -70,7 +70,7 @@ class getSchema {
     +getSchema(type) object
 }
 class translation {
-    +locales string[]
+    +languageCodes string[]
     +getTranslation(language) Language
 }
 ```
