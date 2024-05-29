@@ -15,3 +15,4 @@ This repository contains the source code of my [blog](https://thejiahao.github.i
 - [Backlog](https://github.com/users/TheJiahao/projects/2)
 - [Architecture](/docs/architecture.md)
 - [Testing](/docs/testing.md)
+- [Conventions](/docs/conventions.md)
