@@ -2,6 +2,7 @@ import type { ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
 import formatDate from "../utils/formatDate";
 import CoverImage from "./CoverImage";
+import BlogDetails from "./BlogDetails";
 
 interface BlogCardProps {
     title: string;
@@ -22,13 +23,11 @@ const BlogCard = ({
         <article card>
             <a href={url} rel="bookmark">
                 <CoverImage image={image} title={title} />
-                <div prose p-8 max-w-full>
-                    <h2>{title}</h2>
-                    {description && <p>{description}</p>}
-                    <footer>
-                        <time>{formatDate(date)}</time>
-                    </footer>
-                </div>
+                <BlogDetails
+                    title={title}
+                    description={description}
+                    date={date}
+                />
             </a>
         </article>
     );

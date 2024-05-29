@@ -8,6 +8,7 @@ import BlogFooter from "../components/BlogFooter";
 import SiteFooter from "../components/SiteFooter";
 import BackButton from "../components/BackButton";
 import CoverImage from "../components/CoverImage";
+import BlogDetails from "../components/BlogDetails";
 
 type Props = CollectionEntry<"posts">["data"] & { lang: string };
 
@@ -30,11 +31,11 @@ const {
             <article prose min-w-40ch max-w-full card>
                 <header>
                     <CoverImage image={image} title={title} />
-                    <div px-8 py-2>
-                        <h2>{title}</h2>
-                        <h3 text-slate>{description}</h3>
-                        <time>{formatDate(date)}</time>
-                    </div>
+                    <BlogDetails
+                        title={title}
+                        description={description}
+                        date={date}
+                    />
                 </header>
                 <div px-8 py-2>
                     <slot />
