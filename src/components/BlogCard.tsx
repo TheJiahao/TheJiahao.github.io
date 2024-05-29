@@ -1,6 +1,5 @@
 import type { ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
-import formatDate from "../utils/formatDate";
 import CoverImage from "./CoverImage";
 import BlogDetails from "./BlogDetails";
 
