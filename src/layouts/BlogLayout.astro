@@ -19,7 +19,7 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} image={image}>
+<BaseLayout {title} {description} {image}>
     <div flex="~ col" my-6 lg="flex-row gap-4">
         <aside
             sticky
@@ -28,22 +28,17 @@ const {
             h-screen
             lg="flex-1 flex items-start justify-end"
         >
-            <BackButton language={language} />
+            <BackButton {language} />
         </aside>
         <div flex="~ col" gap-y-7>
             <main flex="~ col" max-w-100ch gap-y-7>
-                <BlogArticle
-                    title={title}
-                    description={description}
-                    date={date}
-                    image={image}
-                >
+                <BlogArticle {title} {description} {date} {image}>
                     <slot />
                 </BlogArticle>
 
-                <LinkList links={links} />
+                <LinkList {links} />
             </main>
-            <SiteFooter language={language} />
+            <SiteFooter {language} />
         </div>
         <aside flex-1></aside>
     </div>
