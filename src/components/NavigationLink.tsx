@@ -16,7 +16,7 @@ const NavigationLink = ({
     <a
         href={url}
         inline-flex
-        gap-10
+        gap-2
         leading-4
         className={classnames(classNames)}
     >
