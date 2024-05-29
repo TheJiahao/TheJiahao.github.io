@@ -20,17 +20,18 @@ const {
 ---
 
 <BaseLayout {title} {description} {image}>
-    <div flex="~ col" my-6 lg="flex-row gap-4">
+    <div flex="~ col" lg="flex-row gap-4">
         <aside
             sticky
             top-0
+            h-0
             z-1
-            h-screen
-            lg="flex-1 flex items-start justify-end"
+            p-6
+            lg="flex-1 flex h-screen items-start justify-end"
         >
             <BackButton {language} />
         </aside>
-        <div flex="~ col" gap-y-7>
+        <div flex="~ col" py-6 gap-y-7>
             <main flex="~ col" max-w-100ch gap-y-7>
                 <BlogArticle {title} {description} {date} {image}>
                     <slot />
