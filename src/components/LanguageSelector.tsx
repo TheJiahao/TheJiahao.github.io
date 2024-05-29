@@ -1,10 +1,10 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
-import type { ChangeEventHandler } from "react";
+import { useEffect, useState, type ChangeEventHandler } from "react";
+import type { Language } from "../interfaces/Language";
 import {
     languages as DEFAULT_LANGUAGES,
     getTranslation,
 } from "../utils/translation";
-import type { Language } from "../interfaces/Language";
 
 interface LanguageSelectorProps {
     lang: string;
@@ -21,21 +21,30 @@ const LanguageSelector = ({
     lang,
     languages = DEFAULT_LANGUAGES,
     onChange = handleNavigation,
-}: LanguageSelectorProps) => (
-    <div inline-flex items-center gap-2>
-        <span className="i-fluent-emoji-flat-globe-with-meridians" />
-        <select
-            aria-label={getTranslation(lang).selectLanguage}
-            defaultValue={lang}
-            onChange={onChange}
-        >
-            {languages.map(({ name, code }) => (
-                <option key={code} value={code}>
-                    {name}
-                </option>
-            ))}
-        </select>
-    </div>
-);
+}: LanguageSelectorProps) => {
+    const [hydrated, setHydrated] = useState(false);
+
+    useEffect(() => {
+        setHydrated(true);
+    }, []);
+
+    return (
+        <div inline-flex items-center gap-2>
+            <span className="i-fluent-emoji-flat-globe-with-meridians" />
+            <select
+                aria-label={getTranslation(lang).selectLanguage}
+                defaultValue={lang}
+                onChange={onChange}
+                disabled={!hydrated}
+            >
+                {languages.map(({ name, code }) => (
+                    <option key={code} value={code}>
+                        {name}
+                    </option>
+                ))}
+            </select>
+        </div>
+    );
+};
 
 export default LanguageSelector;
