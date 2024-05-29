@@ -33,15 +33,7 @@ const NavigationBar = ({
     links = getLinks(language),
 }: NavigationBarProps) => {
     return (
-        <nav
-            flex="~ col"
-            items-center
-            p-4
-            gap-4
-            w-full
-            mx-auto
-            lg="card sticky top-0 h-screen max-w-25ch "
-        >
+        <nav flex="~ col" gap-4 items-center lg="card p-2 h-full w-full">
             <header>
                 <img
                     {...avatar}
