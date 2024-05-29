@@ -30,20 +30,20 @@ const blogs: BlogCardProps[] = (await getBlogs())
 ---
 
 <BaseLayout
-    language={language}
+    {language}
     title={getTranslation(language).siteTitle}
     description={getTranslation(language).siteDescription}
 >
     <HeadHrefLangs slot="head" />
     <div flex="~ col" min-w-60ch p-4 gap-4 lg="flex-row">
-        <NavigationBar language={language} />
+        <NavigationBar {language} />
         <div w-full flex="~ col" gap-10 my-2>
-            <ToolBar language={language} client:load />
+            <ToolBar {language} client:load />
             <main>
-                <BlogList blogs={blogs} />
+                <BlogList {blogs} />
             </main>
 
-            <SiteFooter language={language} />
+            <SiteFooter {language} />
         </div>
     </div>
 </BaseLayout>
