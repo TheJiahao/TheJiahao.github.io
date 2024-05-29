@@ -2,7 +2,11 @@
 
 export default {
     tabWidth: 4,
-    plugins: ["prettier-plugin-astro", "prettier-plugin-toml"],
+    plugins: [
+        "prettier-plugin-astro",
+        "prettier-plugin-toml",
+        "prettier-plugin-organize-imports",
+    ],
     overrides: [
         {
             files: "*.astro",
