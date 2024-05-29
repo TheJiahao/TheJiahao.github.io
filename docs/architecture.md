@@ -17,9 +17,7 @@ BlogLayout --> LinkList
 BlogLayout --> CommentCard
 BlogLayout --> RelevantBlogList
 BlogLayout --> BlogFooter
-BlogLayout --> BackButton
-BlogLayout --> BlogDetails
-BlogLayout --> CoverImage
+BlogLayout --> BlogArticle
 
 LinkList --> LinkCard
 BlogList --> BlogCard
@@ -36,6 +34,10 @@ BackButton --> NavigationLink
 
 BlogCard --> BlogDetails
 BlogCard --> CoverImage
+
+BlogArticle --> BackButton
+BlogArticle --> BlogDetails
+BlogArticle --> CoverImage
 
 namespace layouts {
     class HomeLayout
@@ -65,6 +67,7 @@ namespace components {
     class BlogDetails
     class CoverImage
     class BackButton
+    class BlogArticle
 }
 ```
 

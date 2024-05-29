@@ -1,13 +1,11 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import BaseLayout from "./BaseLayout.astro";
-import LinkList from "../components/LinkList";
-import { BLOG_IMAGE_PLACEHOLDER } from "../config";
-import BlogFooter from "../components/BlogFooter";
-import SiteFooter from "../components/SiteFooter";
 import BackButton from "../components/BackButton";
-import CoverImage from "../components/CoverImage";
-import BlogDetails from "../components/BlogDetails";
+import BlogArticle from "../components/BlogArticle";
+import LinkList from "../components/LinkList";
+import SiteFooter from "../components/SiteFooter";
+import { BLOG_IMAGE_PLACEHOLDER } from "../config";
+import BaseLayout from "./BaseLayout.astro";
 
 type Props = CollectionEntry<"posts">["data"] & { language: string };
 
@@ -34,20 +32,14 @@ const {
         </aside>
         <div flex="~ col" gap-y-7>
             <main flex="~ col" max-w-100ch gap-y-7>
-                <article prose min-w-40ch max-w-full card>
-                    <header>
-                        <CoverImage image={image} title={title} />
-                        <BlogDetails
-                            title={title}
-                            description={description}
-                            date={date}
-                        />
-                    </header>
-                    <div px-8 py-2>
-                        <slot />
-                        <BlogFooter px-8 py-2 />
-                    </div>
-                </article>
+                <BlogArticle
+                    title={title}
+                    description={description}
+                    date={date}
+                    image={image}
+                >
+                    <slot />
+                </BlogArticle>
 
                 <LinkList links={links} />
             </main>
