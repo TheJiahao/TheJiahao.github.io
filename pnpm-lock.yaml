@@ -26,6 +26,9 @@ importers:
       '@iconify-json/fluent-emoji-flat':
         specifier: ^1.1.16
         version: 1.1.16
+      '@iconify-json/ic':
+        specifier: ^1.1.17
+        version: 1.1.17
       '@iconify-json/logos':
         specifier: ^1.1.42
         version: 1.1.42
@@ -707,6 +710,9 @@ packages:
 
   '@iconify-json/fluent-emoji-flat@1.1.16':
     resolution: {integrity: sha512-rfag8s2Ippaos57BC8huT6cVc0oWkvYaLDl0lokVX2EsS7VakKEvUlJ20CqaKiPTuaccWRthlCbjEq8XfLHDHw==}
+
+  '@iconify-json/ic@1.1.17':
+    resolution: {integrity: sha512-EvAjZzVESmN36zlyefylePUNaU2BQ3eRKVZ6KQSQ2bG01ppoZaiFZRri74VTyvp5Mlv2yn68ux1fgCoT+etGmA==}
 
   '@iconify-json/logos@1.1.42':
     resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
@@ -4995,6 +5001,10 @@ snapshots:
   '@humanwhocodes/object-schema@2.0.3': {}
 
   '@iconify-json/fluent-emoji-flat@1.1.16':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ic@1.1.17':
     dependencies:
       '@iconify/types': 2.0.0
 
