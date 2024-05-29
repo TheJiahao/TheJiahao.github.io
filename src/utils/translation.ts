@@ -13,4 +13,4 @@ const translations: Record<string, Language> = Object.fromEntries(
 const getTranslation = (languageCode: string): Language =>
     translations[languageCode] ?? translations[DEFAULT_LANGUAGE];
 
-export { getTranslation, languages, languageCodes };
+export { getTranslation, languageCodes, languages };

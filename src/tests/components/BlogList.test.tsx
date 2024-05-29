@@ -1,6 +1,6 @@
+import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
 import type { BlogCardProps } from "../../components/BlogCard";
-import { render, screen, within } from "@testing-library/react";
 import BlogList from "../../components/BlogList";
 
 describe("<BlogList/>", () => {

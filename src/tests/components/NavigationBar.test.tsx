@@ -1,5 +1,5 @@
-import { describe, expect, test, beforeEach } from "vitest";
 import { render, screen, within } from "@testing-library/react";
+import { beforeEach, describe, expect, test } from "vitest";
 import NavigationBar from "../../components/NavigationBar";
 import type { NavigationLinkProps } from "../../components/NavigationLink";
 

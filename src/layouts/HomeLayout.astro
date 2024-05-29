@@ -21,7 +21,10 @@ const blogs: BlogCardProps[] = (await getBlogs())
     .map((blog) => {
         const { data, language, slug } = blog;
 
-        return { ...data, url: getRelativeLocaleUrl(language, `posts/${slug}`) };
+        return {
+            ...data,
+            url: getRelativeLocaleUrl(language, `posts/${slug}`),
+        };
     })
     .sort((a, b) => +b.date - +a.date);
 ---
