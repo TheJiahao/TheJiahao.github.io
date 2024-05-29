@@ -6,14 +6,14 @@
     "scripts": {
         "format": "prettier --write .",
         "format:ci": "pnpm run format -- !.github/**",
-        "lint": "astro sync && eslint . && markdownlint . && zhlint *.md",
-        "lint:fix": "astro sync && eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
+        "lint": "astro check && eslint . && markdownlint . && zhlint *.md",
+        "lint:fix": "astro check && eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
         "test": "vitest",
         "test:e2e": "playwright test",
         "playwright:open": "playwright test --ui",
         "coverage": "vitest run --coverage",
         "index": "gis $SITE_URL",
-        "build": "astro check --tsconfig tsconfig.build.json && astro build",
+        "build": "astro build",
         "start": "pnpm run build && astro preview",
         "dev": "astro dev",
         "dev:host": "astro dev --host"
