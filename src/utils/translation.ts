@@ -10,7 +10,7 @@ const translations: Record<string, Language> = Object.fromEntries(
     languages.map((language) => [language.code, language]),
 );
 
-const getTranslation = (language: string): Language =>
-    translations[language] ?? translations[DEFAULT_LOCALE];
+const getTranslation = (languageCode: string): Language =>
+    translations[languageCode] ?? translations[DEFAULT_LOCALE];
 
 export { getTranslation, languages, languageCodes };
