@@ -12,6 +12,7 @@ const zh_cn: Language = {
     homePage: "首页",
     archive: "归档",
     about: "关于",
+    back: "返回",
 };
 
 export default zh_cn;

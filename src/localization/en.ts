@@ -9,6 +9,7 @@ const en = {
     archive: "Archive",
     about: "About",
     selectLanguage: "Select language",
+    back: "Back",
 };
 
 export default en;
