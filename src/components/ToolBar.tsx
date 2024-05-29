@@ -1,9 +1,9 @@
-import LanguageButton from "./LanguageButton";
+import LanguageSelector from "./LanguageSelector";
 
 const ToolBar = ({ lang }: { lang: string }) => {
     return (
         <aside card mx-auto p-2>
-            <LanguageButton lang={lang} />
+            <LanguageSelector lang={lang} />
         </aside>
     );
 };

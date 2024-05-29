@@ -28,7 +28,7 @@ SocialLinkList --> SocialLink
 
 ToolBar --> SearchButton
 ToolBar --> ThemeButton
-ToolBar --> LanguageButton
+ToolBar --> LanguageSelector
 
 namespace layouts {
     class HomeLayout
@@ -50,7 +50,7 @@ namespace components {
     class RelevantBlogList
     class SearchButton
     class ThemeButton
-    class LanguageButton
+    class LanguageSelector
     class BaseHeader {
         +string type
     }

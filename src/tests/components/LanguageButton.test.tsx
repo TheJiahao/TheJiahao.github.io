@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import LanguageButton from "../../components/LanguageButton";
+import LanguageSelector from "../../components/LanguageSelector";
 
-describe("<LanguageButton/>", () => {
+describe("<LanguageSelector/>", () => {
     const languages = [
         { name: "简体中文", code: "zh-cn" },
         { name: "English", code: "en" },
@@ -15,7 +15,7 @@ describe("<LanguageButton/>", () => {
 
     beforeEach(() => {
         render(
-            <LanguageButton
+            <LanguageSelector
                 lang="en"
                 languages={languages}
                 onChange={mockHandleNavigation}

@@ -6,7 +6,7 @@ import {
 } from "../utils/translation";
 import type { Language } from "../interfaces/Language";
 
-interface LanguageButtonProps {
+interface LanguageSelectorProps {
     lang: string;
     languages?: Pick<Language, "name" | "code">[];
     onChange?: ChangeEventHandler<HTMLSelectElement>;
@@ -17,11 +17,11 @@ const handleNavigation: ChangeEventHandler<HTMLSelectElement> = (event) => {
     window.location.href = getRelativeLocaleUrl(language, "/");
 };
 
-const LanguageButton = ({
+const LanguageSelector = ({
     lang,
     languages = DEFAULT_LANGUAGES,
     onChange = handleNavigation,
-}: LanguageButtonProps) => (
+}: LanguageSelectorProps) => (
     <div inline-flex items-center gap-2>
         <span className="i-fluent-emoji-flat-globe-with-meridians" />
         <select
@@ -38,4 +38,4 @@ const LanguageButton = ({
     </div>
 );
 
-export default LanguageButton;
+export default LanguageSelector;
