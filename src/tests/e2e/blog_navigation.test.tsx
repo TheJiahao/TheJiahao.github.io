@@ -18,9 +18,22 @@ test.describe("Blog navigation", () => {
         await expect(blogs).not.toHaveCount(0);
     });
 
-    test("clicking a blog leads to blog post", async ({ page }) => {
-        await blogList.getByRole("listitem").first().click();
+    test.describe("after clicking blog card", () => {
+        test.beforeEach("clicking a blog leads to blog post", async () => {
+            await blogList.getByRole("listitem").first().click();
+        });
 
-        await expect(page).toHaveURL(/\/posts\//);
+        test("navigates to blog post", async ({ page }) => {
+            await expect(page).toHaveURL(/\/posts\//);
+        });
+
+        test("clicking back button leads back to homepage", async ({
+            page,
+        }) => {
+            const backButton = page.getByRole("link", { name: "返回" });
+            await backButton.click();
+
+            await expect(page).toHaveURL(/\/zh-cn\/$/);
+        });
     });
 });
