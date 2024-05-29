@@ -1,7 +1,7 @@
 import { expect, type Locator } from "@playwright/test";
 import test from "./utils/fixtures";
 
-test.describe("blog list", () => {
+test.describe("Blog navigation", () => {
     let blogList: Locator;
 
     test.beforeEach(async ({ homepage, page }) => {
