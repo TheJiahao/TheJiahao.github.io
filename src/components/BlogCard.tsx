@@ -1,6 +1,7 @@
 import type { ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
 import formatDate from "../utils/formatDate";
+import CoverImage from "./CoverImage";
 
 interface BlogCardProps {
     title: string;
@@ -20,14 +21,7 @@ const BlogCard = ({
     return (
         <article card>
             <a href={url} rel="bookmark">
-                <img
-                    src={image.src}
-                    alt={`Cover of "${title}"`}
-                    className="[&[src$='svg']]:object-fill"
-                    object-cover
-                    w-full
-                    max-h-30vh
-                />
+                <CoverImage image={image} title={title} />
                 <div prose p-8 max-w-full>
                     <h2>{title}</h2>
                     {description && <p>{description}</p>}
