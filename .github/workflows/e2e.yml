@@ -18,14 +18,12 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
-      - name: Verify safe directory
-        run: git config --global --get-all safe.directory
-
       - name: Debug info
         run: |
           whoami
           pwd
           ls -la /__w/TheJiahao.github.io/TheJiahao.github.io
+          git config --get safe.directory
           git config --list
 
       - name: Run tests
