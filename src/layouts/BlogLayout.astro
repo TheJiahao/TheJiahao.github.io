@@ -28,7 +28,13 @@ const {
 
         <div flex="~ col" py-6 gap-y-7>
             <main flex="~ col" max-w-4xl gap-y-7>
-                <BlogArticle {title} {description} {date} {lastModified} {image}>
+                <BlogArticle
+                    {title}
+                    {description}
+                    {date}
+                    {lastModified}
+                    {image}
+                >
                     <slot />
                 </BlogArticle>
 
