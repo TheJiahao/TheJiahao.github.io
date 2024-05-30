@@ -1,12 +1,12 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import type { ImageMetadata } from "astro";
 import BaseHeader from "../components/BaseHeader.astro";
 
 interface Props {
     title: string;
     description?: string;
     language?: string;
-    image?: CollectionEntry<"posts">["data"]["image"];
+    image?: ImageMetadata;
 }
 
 const { language, title, description, image } = Astro.props;
