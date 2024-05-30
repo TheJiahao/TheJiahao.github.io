@@ -39,14 +39,17 @@ const blogs: BlogCardProps[] = (await getBlogs())
         <div w-full p-4 lg=" flex-1 sticky top-0 h-screen">
             <NavigationBar {language} />
         </div>
+
         <div flex="~ col" gap-10 my-2>
             <ToolBar {language} client:load />
+
             <main max-w-90ch>
                 <BlogList {blogs} />
             </main>
 
             <SiteFooter {language} />
         </div>
+
         <div flex-1></div>
     </div>
 </BaseLayout>
