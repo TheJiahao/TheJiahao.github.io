@@ -18,6 +18,9 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
+      - name: Build
+        run: pnpm run build
+
       - name: Run tests
         run: pnpm run test:e2e
         env:

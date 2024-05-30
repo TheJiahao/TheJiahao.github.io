@@ -14,7 +14,7 @@
         "coverage": "vitest run --coverage",
         "index": "gis $SITE_URL",
         "build": "astro build",
-        "start": "pnpm run build && astro preview",
+        "start": "astro preview",
         "dev": "astro dev",
         "dev:host": "astro dev --host"
     },
