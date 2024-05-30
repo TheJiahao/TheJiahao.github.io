@@ -17,6 +17,7 @@ export default tseslint.config(
             ".astro",
             "*.config.{js,ts,mjs}",
             "playwright-report",
+            "coverage",
         ],
     },
     {
