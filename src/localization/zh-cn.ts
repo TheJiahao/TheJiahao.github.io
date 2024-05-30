@@ -13,6 +13,7 @@ const zh_cn: Language = {
     archive: "归档",
     about: "关于",
     back: "返回",
+    updated: "更新于",
 };
 
 export default zh_cn;

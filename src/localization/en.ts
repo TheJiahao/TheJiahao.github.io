@@ -10,6 +10,7 @@ const en = {
     about: "About",
     selectLanguage: "Select language",
     back: "Back",
+    updated: "Updated on",
 };
 
 export default en;
