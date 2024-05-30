@@ -3,6 +3,7 @@ import { DEFAULT_LANGUAGE, SITE_LICENSE } from "../config";
 import type { License } from "../interfaces/License";
 import formatDate from "../utils/formatDate";
 import { getTranslation } from "../utils/translation";
+import IconText from "./IconText";
 
 interface Props {
     license?: License;
@@ -15,9 +16,13 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
 <footer card prose max-w-full p-2>
     <p>
-        {getTranslation(language).updated}
-        <time>{formatDate(lastModified)}</time>
+        <IconText icon="i-fluent-emoji-flat-check-mark-button">
+            {getTranslation(language).updated}
+            {" "}
+            <time>{formatDate(lastModified)}</time>
+        </IconText>
     </p>
+
     <p>
         博客内容遵循{" "}
         <a rel="license" href={license.url}>
