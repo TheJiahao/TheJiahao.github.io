@@ -13,7 +13,7 @@ const { license = SITE_LICENSE, lastModified } = Astro.props;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
-<footer card prose p-2>
+<footer card prose max-w-full p-2>
     <p>
         {getTranslation(language).updated}
         <time>{formatDate(lastModified)}</time>
