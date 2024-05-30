@@ -35,8 +35,8 @@ const blogs: BlogCardProps[] = (await getBlogs())
     description={getTranslation(language).siteDescription}
 >
     <HeadHrefLangs slot="head" />
-    <div flex="~ col" min-w-md gap-4 lg="flex-row">
-        <div w-full p-4 lg="flex-1 sticky top-0 h-screen">
+    <div min-w-md lg="grid grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]">
+        <div p-4 lg="sticky top-0 h-screen">
             <NavigationBar {language} />
         </div>
 
@@ -49,7 +49,5 @@ const blogs: BlogCardProps[] = (await getBlogs())
 
             <SiteFooter {language} />
         </div>
-
-        <div hidden lg="block flex-1"></div>
     </div>
 </BaseLayout>
