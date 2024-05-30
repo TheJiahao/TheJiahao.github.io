@@ -12,11 +12,11 @@ const BlogFooter = ({
     lastModified,
 }: BlogFooterProps) => {
     return (
-        <footer card p-2>
+        <footer card prose p-2>
             <time>{formatDate(lastModified)}</time>
             <p>
                 博客内容遵循{" "}
-                <a rel="license" href={license.url} underline>
+                <a rel="license" href={license.url}>
                     {license.name}
                 </a>
             </p>
