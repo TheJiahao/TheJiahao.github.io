@@ -7,8 +7,6 @@ export function getStaticPaths() {
         params: { language },
     }));
 }
-
-const { language } = Astro.params;
 ---
 
-<HomeLayout language={language} />
+<HomeLayout />
