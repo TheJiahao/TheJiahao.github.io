@@ -1,0 +1,27 @@
+---
+import { DEFAULT_LANGUAGE, SITE_LICENSE } from "../config";
+import type { License } from "../interfaces/License";
+import formatDate from "../utils/formatDate";
+import { getTranslation } from "../utils/translation";
+
+interface Props {
+    license?: License;
+    lastModified: Date;
+}
+
+const { license = SITE_LICENSE, lastModified } = Astro.props;
+const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
+---
+
+<footer card prose p-2>
+    <p>
+        {getTranslation(language).updated}
+        <time>{formatDate(lastModified)}</time>
+    </p>
+    <p>
+        博客内容遵循{" "}
+        <a rel="license" href={license.url}>
+            {license.name}
+        </a>
+    </p>
+</footer>
