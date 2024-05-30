@@ -1,8 +1,20 @@
 import { getCollection, type CollectionEntry } from "astro:content";
+import { execSync } from "child_process";
 
 type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
     slug: string;
     language: string;
+    lastModified: Date;
+};
+
+const getLastModified = ({
+    collection,
+    id,
+}: CollectionEntry<"posts">): Date => {
+    const filePath = `src/content/${collection}/${id}`;
+    const result = execSync(`git log -1 --pretty="format:%cI" "${filePath}"`);
+
+    return new Date(result.toString());
 };
 
 const getBlogs = async (): Promise<BlogEntry[]> => {
@@ -18,6 +30,7 @@ const getBlogs = async (): Promise<BlogEntry[]> => {
             ...blog,
             slug: slug.join("/"),
             language,
+            lastModified: getLastModified(blog),
         };
     });
 };
