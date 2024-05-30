@@ -11,7 +11,7 @@ const CoverImage = ({ image, title }: CoverImageProps) => (
         alt={`Cover image of "${title}"`}
         className="[&[src$='svg']]:object-fill"
         w-full
-        max-h-30vh
+        max-h-xs
         object-cover
         overflow-hidden
     />
