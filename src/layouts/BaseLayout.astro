@@ -15,7 +15,7 @@ const { title, description, image } = Astro.props;
 <!doctype html>
 <html lang={Astro.currentLocale ?? DEFAULT_LANGUAGE}>
     <head>
-        <BaseHeader title={title} description={description} image={image} />
+        <BaseHeader {title} {description} {image} />
         <slot name="head" />
     </head>
     <body>
