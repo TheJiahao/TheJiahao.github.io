@@ -31,6 +31,7 @@ const {
         >
             <BackButton {language} />
         </aside>
+
         <div flex="~ col" py-6 gap-y-7>
             <main flex="~ col" max-w-4xl gap-y-7>
                 <BlogArticle {title} {description} {date} {image}>
@@ -39,8 +40,10 @@ const {
 
                 <LinkList {links} />
             </main>
+
             <SiteFooter {language} />
         </div>
+
         <aside flex-1></aside>
     </div>
 </BaseLayout>
