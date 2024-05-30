@@ -35,7 +35,7 @@ const blogs: BlogCardProps[] = (await getBlogs())
     description={getTranslation(language).siteDescription}
 >
     <HeadHrefLangs slot="head" />
-    <div flex="~ col" min-w-60ch gap-4 lg="flex-row">
+    <div flex="~ col" min-w-md gap-4 lg="flex-row">
         <div w-full p-4 lg="flex-1 sticky top-0 h-screen">
             <NavigationBar {language} />
         </div>
@@ -43,7 +43,7 @@ const blogs: BlogCardProps[] = (await getBlogs())
         <div flex="~ col" gap-10 my-2>
             <ToolBar {language} client:load />
 
-            <main max-w-90ch>
+            <main lg="max-w-4xl">
                 <BlogList {blogs} />
             </main>
 
