@@ -33,12 +33,12 @@ const NavigationBar = ({
     links = getLinks(language),
 }: NavigationBarProps) => {
     return (
-        <nav flex="~ col" gap-4 items-center lg="card p-2 h-full max-w-25ch">
+        <nav flex="~ col" gap-4 items-center lg="card p-2 h-full w-50">
             <header>
                 <img
                     {...avatar}
                     alt="Avatar"
-                    size-15ch
+                    size-30
                     drop-shadow-md
                     rounded-full
                     object-contain
