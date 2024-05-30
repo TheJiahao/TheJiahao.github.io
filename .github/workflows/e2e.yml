@@ -18,14 +18,6 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
-      - name: Debug info
-        run: |
-          whoami
-          pwd
-          ls -la /__w/TheJiahao.github.io/TheJiahao.github.io
-          git config --get safe.directory
-          git config --list
-
       - name: Run tests
         run: pnpm run test:e2e
         env:
