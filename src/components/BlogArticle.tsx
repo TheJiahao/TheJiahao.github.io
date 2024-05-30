@@ -9,6 +9,7 @@ interface BlogArticleProps {
     title: string;
     description?: string;
     date: Date;
+    lastModified: Date;
     image?: ImageMetadata;
 }
 
@@ -16,6 +17,7 @@ const BlogArticle = ({
     title,
     description,
     date,
+    lastModified,
     image = BLOG_IMAGE_PLACEHOLDER,
     children,
 }: PropsWithChildren<BlogArticleProps>) => (
@@ -26,7 +28,7 @@ const BlogArticle = ({
         </header>
         <div px-8 py-2>
             {children}
-            <BlogFooter px-8 py-2 />
+            <BlogFooter lastModified={lastModified} px-8 py-2 />
         </div>
     </article>
 );
