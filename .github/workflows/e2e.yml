@@ -18,9 +18,6 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
-      - name: Set repository safe
-        run: git config --global --add safe.directory /__w/TheJiahao.github.io/TheJiahao.github.io
-
       - name: Run tests
         run: pnpm run test:e2e
         env:
