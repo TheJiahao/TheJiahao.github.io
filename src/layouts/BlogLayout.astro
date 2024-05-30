@@ -20,14 +20,14 @@ const {
 ---
 
 <BaseLayout {title} {description} {image}>
-    <div flex="~ col" lg="flex-row gap-4">
+    <div min-w-md lg="grid-sidebars">
         <aside
             sticky
             top-0
             h-0
             z-1
             p-6
-            lg="flex-1 flex h-screen items-start justify-end"
+            lg="flex h-screen items-start justify-end"
         >
             <BackButton {language} />
         </aside>
@@ -43,7 +43,5 @@ const {
 
             <SiteFooter {language} />
         </div>
-
-        <aside hidden lg="block flex-1"></aside>
     </div>
 </BaseLayout>
