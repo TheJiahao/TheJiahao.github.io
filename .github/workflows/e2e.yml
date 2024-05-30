@@ -18,6 +18,9 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
+      - name: Change ownership
+        run: sudo chown -R $(whoami) ${{ github.workspace }} 
+
       - name: Build
         run: pnpm run build
 
