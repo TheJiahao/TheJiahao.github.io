@@ -41,7 +41,7 @@ const blogs: BlogCardProps[] = (await getBlogs())
         </div>
         <div flex="~ col" gap-10 my-2>
             <ToolBar {language} client:load />
-            <main>
+            <main max-w-90ch>
                 <BlogList {blogs} />
             </main>
 
