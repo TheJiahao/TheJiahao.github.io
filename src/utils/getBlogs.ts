@@ -1,10 +1,14 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { execSync } from "child_process";
 
-type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
-    slug: string;
+type BlogData = CollectionEntry<"posts">["data"] & {
     language: string;
     lastModified: Date;
+};
+
+type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
+    slug: string;
+    data: BlogData;
 };
 
 const getLastModified = ({
@@ -29,11 +33,14 @@ const getBlogs = async (): Promise<BlogEntry[]> => {
         return {
             ...blog,
             slug: slug.join("/"),
-            language,
-            lastModified: getLastModified(blog),
+            data: {
+                ...blog.data,
+                language,
+                lastModified: getLastModified(blog),
+            },
         };
     });
 };
 
-export type { BlogEntry };
+export type { BlogData, BlogEntry };
 export default getBlogs;

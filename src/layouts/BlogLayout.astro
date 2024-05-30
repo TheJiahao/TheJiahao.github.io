@@ -1,13 +1,13 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import BackButton from "../components/BackButton";
 import BlogArticle from "../components/BlogArticle";
 import LinkList from "../components/LinkList";
 import SiteFooter from "../components/SiteFooter";
 import { BLOG_IMAGE_PLACEHOLDER } from "../config";
+import type { BlogData } from "../utils/getBlogs";
 import BaseLayout from "./BaseLayout.astro";
 
-type Props = CollectionEntry<"posts">["data"] & { language: string };
+type Props = BlogData;
 
 const {
     title,

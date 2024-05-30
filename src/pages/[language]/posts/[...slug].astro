@@ -1,25 +1,24 @@
 ---
-import { DEFAULT_LANGUAGE } from "../../../config";
 import BlogLayout from "../../../layouts/BlogLayout.astro";
 import getBlogs, { type BlogEntry } from "../../../utils/getBlogs";
 
 export async function getStaticPaths() {
     const posts = await getBlogs();
 
-    return posts.map((post) => ({
-        params: { language: post.language, slug: post.slug },
-        props: post,
-    }));
+    return posts.map((post: BlogEntry) => {
+        return {
+            params: { language: post.data.language, slug: post.slug },
+            props: post,
+        };
+    });
 }
 
 type Props = BlogEntry;
-
-const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogLayout language={language} {...post.data}>
+<BlogLayout {...post.data}>
     <Content />
 </BlogLayout>

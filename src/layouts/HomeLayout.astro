@@ -17,9 +17,9 @@ interface Props {
 const { language } = Astro.props;
 
 const blogs: BlogCardProps[] = (await getBlogs())
-    .filter((blog) => blog.language === language)
+    .filter(({ data }) => data.language === language)
     .map((blog) => {
-        const { data, language, slug } = blog;
+        const { data, slug } = blog;
 
         return {
             ...data,
