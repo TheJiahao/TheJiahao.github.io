@@ -21,26 +21,26 @@ const getLastModified = ({
     return new Date(result.toString());
 };
 
-const getBlogs = async (): Promise<BlogEntry[]> => {
-    const blogs = await getCollection(
+const blogs = (
+    await getCollection(
         "posts",
         ({ data }) => import.meta.env.MODE === "development" || !data.draft,
-    );
+    )
+).map((blog) => {
+    const [language, ...slug] = blog.slug.split("/");
 
-    return blogs.map((blog) => {
-        const [language, ...slug] = blog.slug.split("/");
+    return {
+        ...blog,
+        slug: slug.join("/"),
+        data: {
+            ...blog.data,
+            language,
+            lastModified: getLastModified(blog),
+        },
+    };
+});
 
-        return {
-            ...blog,
-            slug: slug.join("/"),
-            data: {
-                ...blog.data,
-                language,
-                lastModified: getLastModified(blog),
-            },
-        };
-    });
-};
+const getBlogs = (): BlogEntry[] => blogs;
 
 export type { BlogData, BlogEntry };
 export default getBlogs;

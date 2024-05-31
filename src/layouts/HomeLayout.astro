@@ -13,7 +13,7 @@ import { DEFAULT_LANGUAGE } from "../config";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
-const blogs: BlogCardProps[] = (await getBlogs())
+const blogs: BlogCardProps[] = getBlogs()
     .filter(({ data }) => data.language === language)
     .map((blog) => {
         const { data, slug } = blog;
