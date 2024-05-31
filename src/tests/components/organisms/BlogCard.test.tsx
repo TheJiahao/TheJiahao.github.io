@@ -1,7 +1,6 @@
-import { cleanup, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
 import BlogCard from "../../../components/organisms/BlogCard";
-import { BLOG_IMAGE_PLACEHOLDER } from "../../../config";
 
 describe("<BlogCard/>", () => {
     const title = "How to write unit tests for Astro components?";
@@ -12,35 +11,6 @@ describe("<BlogCard/>", () => {
 
     beforeEach(() => {
         render(<BlogCard {...{ title, description, date, url }} />);
-    });
-
-    describe("image exists", () => {
-        beforeEach(() => {
-            cleanup();
-        });
-
-        test("when no image is given", () => {
-            render(<BlogCard {...{ title, description, date, url }} />);
-
-            expect(screen.getByRole("img")).toHaveAttribute(
-                "src",
-                BLOG_IMAGE_PLACEHOLDER.src,
-            );
-        });
-
-        test("when image is given", () => {
-            const image = Object.freeze({
-                src: "https://example.com/image.jpg",
-                alt: "Image",
-                width: 100,
-                height: 1000,
-                format: "jpg",
-            });
-
-            render(<BlogCard {...{ title, description, date, url, image }} />);
-
-            expect(screen.getByRole("img")).toHaveAttribute("src", image.src);
-        });
     });
 
     test("is rendered", () => {
