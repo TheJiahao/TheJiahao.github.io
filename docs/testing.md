@@ -3,6 +3,7 @@
 [![codecov](https://codecov.io/gh/TheJiahao/TheJiahao.github.io/graph/badge.svg?token=M48R27ULMT)](https://codecov.io/gh/TheJiahao/TheJiahao.github.io)
 
 Only components and utility functions will be covered in unit tests.
+Astro components will be tested when [experimental APIs](https://docs.astro.build/en/reference/container-reference/) become stable.
 Layouts and pages are covered by E2E tests.
 
 ## Commands
