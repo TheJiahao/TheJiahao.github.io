@@ -22,6 +22,6 @@ const { title, description, date, lastModified, image } = Astro.props;
     </header>
     <div px-8 py-2>
         <slot />
-        <BlogFooter lastModified={lastModified} px-8 py-2 />
+        <BlogFooter lastModified={lastModified} />
     </div>
 </article>
