@@ -14,5 +14,6 @@
         "typescript",
         "typescriptreact",
         "astro"
-    ]
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "never"
 }
