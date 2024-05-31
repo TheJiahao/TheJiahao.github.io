@@ -16,7 +16,7 @@ describe("<LinkCard/>", () => {
     });
 
     test("is rendered", () => {
-        expect(link).toBeInTheDocument();
+        expect(link).toBeVisible();
     });
 
     test("is valid", () => {
@@ -32,6 +32,6 @@ describe("<LinkCard/>", () => {
     });
 
     test("has icon", () => {
-        expect(screen.getByRole("img")).toBeInTheDocument();
+        expect(screen.getByRole("img")).toBeVisible();
     });
 });

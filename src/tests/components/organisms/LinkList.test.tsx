@@ -26,7 +26,7 @@ describe("<LinkList/>", () => {
     });
 
     test("is rendered", () => {
-        expect(linkList).toBeInTheDocument();
+        expect(linkList).toBeVisible();
     });
 
     test("contains given links", () => {

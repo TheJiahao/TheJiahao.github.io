@@ -11,7 +11,7 @@ describe("<IconComponent/>", () => {
     });
 
     test("has text", () => {
-        expect(screen.getByText(text)).toBeInTheDocument();
+        expect(screen.getByText(text)).toBeVisible();
     });
 
     test("has icon", () => {

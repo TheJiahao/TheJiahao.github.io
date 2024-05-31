@@ -28,7 +28,7 @@ describe("<BlogList/>", () => {
     });
 
     test("is rendered", () => {
-        expect(blogList).toBeInTheDocument();
+        expect(blogList).toBeVisible();
     });
 
     test("contains given blogs", () => {

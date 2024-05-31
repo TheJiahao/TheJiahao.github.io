@@ -14,7 +14,7 @@ describe("<BlogCard/>", () => {
     });
 
     test("is rendered", () => {
-        expect(screen.getByRole("article")).toBeInTheDocument();
+        expect(screen.getByRole("article")).toBeVisible();
     });
 
     test("has title", () => {
@@ -22,11 +22,11 @@ describe("<BlogCard/>", () => {
     });
 
     test("has description", () => {
-        expect(screen.getByText(description)).toBeInTheDocument();
+        expect(screen.getByText(description)).toBeVisible();
     });
 
     test("has date", () => {
-        expect(screen.getByText("2024-05-21")).toBeInTheDocument();
+        expect(screen.getByText("2024-05-21")).toBeVisible();
     });
 
     test("has link", () => {

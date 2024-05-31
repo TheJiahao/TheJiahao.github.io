@@ -31,7 +31,7 @@ describe("<LanguageSelector/>", () => {
 
     test("has all languages", () => {
         for (const { name } of languages) {
-            expect(screen.getByRole("option", { name })).toBeInTheDocument();
+            expect(screen.getByRole("option", { name })).toBeVisible();
         }
     });
 

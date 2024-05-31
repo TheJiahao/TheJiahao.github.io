@@ -13,7 +13,7 @@ describe("<NavigationBar/>", () => {
         });
 
         test("exists", () => {
-            expect(avatar).toBeInTheDocument();
+            expect(avatar).toBeVisible();
         });
 
         test("has valid src", () => {
