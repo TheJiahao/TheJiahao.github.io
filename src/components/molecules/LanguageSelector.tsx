@@ -1,11 +1,11 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { useEffect, useState, type ChangeEventHandler } from "react";
-import type { Language } from "../interfaces/Language";
+import type { Language } from "../../interfaces/Language";
 import {
     languages as DEFAULT_LANGUAGES,
     getTranslation,
-} from "../utils/translation";
-import IconComponent from "./atoms/IconComponent";
+} from "../../utils/translation";
+import IconComponent from "../atoms/IconComponent";
 
 interface LanguageSelectorProps {
     defaultLanguage: string;

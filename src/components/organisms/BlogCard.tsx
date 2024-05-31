@@ -1,6 +1,6 @@
 import type { ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "../../config";
-import BlogDetails from "../BlogDetails";
+import BlogDetails from "../molecules/BlogDetails";
 import CoverImage from "../atoms/CoverImage";
 
 interface BlogCardProps {

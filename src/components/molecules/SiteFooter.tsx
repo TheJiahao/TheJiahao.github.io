@@ -3,9 +3,9 @@ import {
     SITE_OWNER,
     SITE_SOURCE,
     SITE_START_YEAR,
-} from "../config";
-import { getTranslation } from "../utils/translation";
-import IconComponent from "./atoms/IconComponent";
+} from "../../config";
+import { getTranslation } from "../../utils/translation";
+import IconComponent from "../atoms/IconComponent";
 
 interface SiteFooterProps {
     language?: string;

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import LanguageSelector from "../../components/LanguageSelector";
+import LanguageSelector from "../../../components/molecules/LanguageSelector";
 
 describe("<LanguageSelector/>", () => {
     const languages = [
