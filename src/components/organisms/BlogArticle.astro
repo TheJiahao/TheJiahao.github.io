@@ -20,7 +20,7 @@ const { title, description, date, lastModified, image } = Astro.props;
         <CoverImage image={image} title={title} />
         <BlogDetails title={title} description={description} date={date} />
     </header>
-    <div px-8 py-2>
+    <div px-8 pb-8>
         <slot />
         <BlogFooter lastModified={lastModified} />
     </div>
