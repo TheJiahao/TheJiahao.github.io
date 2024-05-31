@@ -29,7 +29,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
         <IconComponent icon="i-fluent-emoji-flat-copyright">
             {getTranslation(language).licensedUnder}
             {" "}
-            <a rel="license" href={license.url}>
+            <a rel="license" href={license.url} target="_blank">
                 {license.name}
             </a>
         </IconComponent>
