@@ -9,20 +9,6 @@ export default getViteConfig({
         reporters: "default",
         coverage: {
             include: ["src/components", "src/utils"],
-            extension: [
-                ".js",
-                ".cjs",
-                ".mjs",
-                ".ts",
-                ".mts",
-                ".cts",
-                ".tsx",
-                ".jsx",
-                ".vue",
-                ".svelte",
-                ".marko",
-                ".astro",
-            ],
         },
     },
 });
