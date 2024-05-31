@@ -7,7 +7,7 @@ interface IconComponentProps extends PropsWithChildren {
 const IconComponent = ({ icon, children }: IconComponentProps) => (
     <span inline-flex gap-1 leading-4 items-center>
         <span role="img" className={icon}></span>
-        <span>{children}</span>
+        {children}
     </span>
 );
 
