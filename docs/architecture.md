@@ -1,76 +1,22 @@
 # Architecture
 
-## UI
+The architecture follows [atomic design](https://bradfrost.com/blog/post/atomic-web-design/).
 
 ```mermaid
-classDiagram
-direction LR
-BaseLayout --> BaseHeader
-BaseLayout <|-- HomeLayout
-BaseLayout <|-- BlogLayout
+graph TB
+pages --> layouts
+pages --> utils
 
-HomeLayout --> NavigationBar
-HomeLayout --> ToolBar
-HomeLayout --> BlogList
+layouts --> components
+layouts --> utils
 
-BlogLayout --> LinkList
-BlogLayout --> CommentCard
-BlogLayout --> RelevantBlogList
-BlogLayout --> BlogFooter
-BlogLayout --> BlogArticle
+subgraph components
+    atoms
+    molecules
+    organisms
+end
 
-LinkList --> LinkCard
-BlogList --> BlogCard
-SocialLinkList --> SocialLink
-
-NavigationBar --> IconComponent
-NavigationBar --> SocialLinkList
-
-ToolBar --> SearchButton
-ToolBar --> ThemeButton
-ToolBar --> LanguageSelector
-LanguageSelector --> IconComponent
-
-BackButton --> IconComponent
-
-BlogCard --> BlogDetails
-BlogCard --> CoverImage
-
-BlogArticle --> BackButton
-BlogArticle --> BlogDetails
-BlogArticle --> CoverImage
-BlogFooter --> IconComponent
-
-namespace layouts {
-    class HomeLayout
-    class BlogLayout
-    class BaseLayout
-}
-
-namespace components {
-    class ToolBar
-    class NavigationBar
-    class IconComponent
-    class SocialLink
-    class SocialLinkList
-    class BlogCard
-    class BlogList
-    class LinkCard
-    class LinkList
-    class CommentCard
-    class RelevantBlogList
-    class SearchButton
-    class ThemeButton
-    class LanguageSelector
-    class BaseHeader {
-        +string type
-    }
-    class BlogFooter
-    class BlogDetails
-    class CoverImage
-    class BackButton
-    class BlogArticle
-}
+components --> utils
 ```
 
 ## Utils
