@@ -17,9 +17,11 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 <footer card prose max-w-full p-2>
     <p>
         <IconComponent icon="i-fluent-emoji-flat-check-mark-button">
-            {getTranslation(language).updated}
-            {" "}
-            <time>{formatDate(lastModified)}</time>
+            <span>
+                {getTranslation(language).updated}
+                {" "}
+                <time>{formatDate(lastModified)}</time>
+            </span>
         </IconComponent>
     </p>
 
