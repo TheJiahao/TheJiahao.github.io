@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import type { BlogCardProps } from "../../components/BlogCard";
-import BlogList from "../../components/BlogList";
+import type { BlogCardProps } from "../../../components/organisms/BlogCard";
+import BlogList from "../../../components/organisms/BlogList";
 
 describe("<BlogList/>", () => {
     const blogs: BlogCardProps[] = [

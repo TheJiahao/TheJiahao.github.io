@@ -1,4 +1,4 @@
-import LanguageSelector from "./LanguageSelector";
+import LanguageSelector from "../LanguageSelector";
 
 const ToolBar = ({ language }: { language: string }) => {
     return (

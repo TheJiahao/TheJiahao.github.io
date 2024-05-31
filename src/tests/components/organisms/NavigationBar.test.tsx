@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import NavigationBar from "../../components/NavigationBar";
-import type { IconLink } from "../../interfaces/IconLink";
+import NavigationBar from "../../../components/organisms/NavigationBar";
+import type { IconLink } from "../../../interfaces/IconLink";
 
 describe("<NavigationBar/>", () => {
     describe("avatar", () => {

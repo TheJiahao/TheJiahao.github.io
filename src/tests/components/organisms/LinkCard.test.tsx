@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import LinkCard from "../../components/LinkCard";
+import LinkCard from "../../../components/organisms/LinkCard";
 
 describe("<LinkCard/>", () => {
     const url = "https://www.example.com/documentation";
