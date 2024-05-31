@@ -10,6 +10,8 @@ This repository contains the source code of my [blog](https://thejiahao.github.i
 
 - [Tuntikirjanpito](https://helsinkifi-my.sharepoint.com/:x:/g/personal/jiahao_ad_helsinki_fi/EfxlAGlsZ-1OqF8D3fEOavsBbZQ-u6v1JAbhDKakP0KQ9Q?e=kw9ZnQ)
 
+Projektissa on hyödynnetty ChatGPT:tä ja GitHub Copilotia debuggaukseen, koodin generointiin ja teknisten ratkaisujen arviointiin.
+
 ## Documentation
 
 - [Backlog](https://github.com/users/TheJiahao/projects/2)
