@@ -1,6 +1,6 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getTranslation } from "../utils/translation";
-import NavigationLink from "./NavigationLink";
+import IconText from "./IconText";
 
 interface BackButtonProps {
     language: string;
@@ -8,12 +8,11 @@ interface BackButtonProps {
 
 const BackButton = ({ language }: BackButtonProps) => {
     return (
-        <NavigationLink
-            text={getTranslation(language).back}
-            url={getRelativeLocaleUrl(language, "/")}
-            icon="i-ic:round-arrow-back-ios-new"
-            classNames={["card", "p-2"]}
-        />
+        <a href={getRelativeLocaleUrl(language, "/")} flex card p-2>
+            <IconText icon="i-ic:round-arrow-back-ios-new">
+                {getTranslation(language).back}
+            </IconText>
+        </a>
     );
 };
 
