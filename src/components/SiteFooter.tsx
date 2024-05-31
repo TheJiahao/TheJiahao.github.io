@@ -5,6 +5,7 @@ import {
     SITE_START_YEAR,
 } from "../config";
 import { getTranslation } from "../utils/translation";
+import IconComponent from "./IconComponent";
 
 interface SiteFooterProps {
     language?: string;
@@ -26,9 +27,10 @@ const SiteFooter = ({
             <p>
                 © {startYear} - {year} {owner}
             </p>
-            <a href={source} inline-flex items-center gap-2>
-                <span className="i-logos-github-icon" />
-                {getTranslation(language).siteSource}
+            <a href={source}>
+                <IconComponent icon="i-logos-github-icon">
+                    {getTranslation(language).siteSource}
+                </IconComponent>
             </a>
         </footer>
     );
