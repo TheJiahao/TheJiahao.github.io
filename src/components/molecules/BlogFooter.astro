@@ -26,9 +26,12 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
     </p>
 
     <p>
-        博客内容遵循{" "}
-        <a rel="license" href={license.url}>
-            {license.name}
-        </a>
+        <IconComponent icon="i-fluent-emoji-flat-copyright">
+            {getTranslation(language).licensedUnder}
+            {" "}
+            <a rel="license" href={license.url}>
+                {license.name}
+            </a>
+        </IconComponent>
     </p>
 </footer>

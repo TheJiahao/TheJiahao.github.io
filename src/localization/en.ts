@@ -11,6 +11,7 @@ const en = {
     selectLanguage: "Select language",
     back: "Back",
     updated: "Updated on",
+    licensedUnder: "Licensed under",
 };
 
 export default en;

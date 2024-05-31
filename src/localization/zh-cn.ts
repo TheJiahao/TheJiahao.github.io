@@ -14,6 +14,7 @@ const zh_cn: Language = {
     about: "关于",
     back: "返回",
     updated: "更新于",
+    licensedUnder: "内容遵循",
 };
 
 export default zh_cn;
