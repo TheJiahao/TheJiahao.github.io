@@ -1,8 +1,8 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "../../config";
+import { type IconLink } from "../../interfaces/IconLink";
 import { getTranslation } from "../../utils/translation";
 import IconComponent from "../atoms/IconComponent";
-import { type IconLink } from "../../interfaces/IconLink";
 
 interface NavigationBarProps {
     language?: string;
@@ -53,7 +53,9 @@ const NavigationBar = ({
                 {links.map((link) => (
                     <li key={link.text}>
                         <a href={link.url} flex>
-                            <IconComponent icon={link.icon}>{link.text}</IconComponent>
+                            <IconComponent icon={link.icon}>
+                                {link.text}
+                            </IconComponent>
                         </a>
                     </li>
                 ))}
