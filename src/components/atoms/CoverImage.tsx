@@ -1,11 +1,15 @@
 import { type ImageMetadata } from "astro";
+import { BLOG_IMAGE_PLACEHOLDER } from "../../config";
 
 interface CoverImageProps {
-    image: ImageMetadata;
+    image?: ImageMetadata;
     title: string;
 }
 
-const CoverImage = ({ image, title }: CoverImageProps) => (
+const CoverImage = ({
+    image = BLOG_IMAGE_PLACEHOLDER,
+    title,
+}: CoverImageProps) => (
     <img
         src={image.src}
         alt={`Cover image of "${title}"`}

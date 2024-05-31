@@ -1,5 +1,4 @@
 import type { ImageMetadata } from "astro";
-import { BLOG_IMAGE_PLACEHOLDER } from "../../config";
 import CoverImage from "../atoms/CoverImage";
 import BlogDetails from "../molecules/BlogDetails";
 
@@ -11,13 +10,7 @@ interface BlogCardProps {
     image?: ImageMetadata;
 }
 
-const BlogCard = ({
-    title,
-    description,
-    date,
-    url,
-    image = BLOG_IMAGE_PLACEHOLDER,
-}: BlogCardProps) => {
+const BlogCard = ({ title, description, date, url, image }: BlogCardProps) => {
     return (
         <article card>
             <a href={url} rel="bookmark">

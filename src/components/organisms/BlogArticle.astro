@@ -1,9 +1,8 @@
 ---
 import type { ImageMetadata } from "astro";
-import { BLOG_IMAGE_PLACEHOLDER } from "../../config";
+import CoverImage from "../atoms/CoverImage";
 import BlogDetails from "../molecules/BlogDetails";
 import BlogFooter from "../molecules/BlogFooter.astro";
-import CoverImage from "../atoms/CoverImage";
 
 interface Props {
     title: string;
@@ -13,13 +12,7 @@ interface Props {
     image?: ImageMetadata;
 }
 
-const {
-    title,
-    description,
-    date,
-    lastModified,
-    image = BLOG_IMAGE_PLACEHOLDER,
-} = Astro.props;
+const { title, description, date, lastModified, image } = Astro.props;
 ---
 
 <article prose min-w-40ch max-w-full card>
