@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
 import NavigationBar from "../../components/NavigationBar";
-import type { NavigationLinkProps } from "../../components/NavigationLink";
+import type { IconLink } from "../../interfaces/IconLink";
 
 describe("<NavigationBar/>", () => {
     describe("avatar", () => {
@@ -27,7 +27,7 @@ describe("<NavigationBar/>", () => {
     describe("links", () => {
         let navigationBar: HTMLElement;
         let navigationLinks: HTMLElement[];
-        const links: NavigationLinkProps[] = [
+        const links: IconLink[] = [
             {
                 url: "/",
                 text: "Home",

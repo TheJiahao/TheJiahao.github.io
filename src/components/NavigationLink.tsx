@@ -1,18 +1,7 @@
 import classnames from "classnames";
+import { type IconLink } from "../interfaces/IconLink";
 
-interface NavigationLinkProps {
-    url: string;
-    text: string;
-    icon: string;
-    classNames?: string[];
-}
-
-const NavigationLink = ({
-    url,
-    text,
-    icon,
-    classNames,
-}: NavigationLinkProps) => (
+const NavigationLink = ({ url, text, icon }: IconLink) => (
     <a
         href={url}
         inline-flex
@@ -25,5 +14,4 @@ const NavigationLink = ({
     </a>
 );
 
-export type { NavigationLinkProps };
 export default NavigationLink;

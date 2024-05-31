@@ -2,12 +2,12 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "../config";
 import { getTranslation } from "../utils/translation";
 import IconText from "./IconText";
-import { type NavigationLinkProps } from "./NavigationLink";
+import { type IconLink } from "../interfaces/IconLink";
 
 interface NavigationBarProps {
     language?: string;
     avatar?: ImageMetadata;
-    links?: NavigationLinkProps[];
+    links?: IconLink[];
 }
 
 const getLinks = (language: string) => [
