@@ -52,7 +52,7 @@ const NavigationBar = ({
             <ul space-y-4 text-xl>
                 {links.map((link) => (
                     <li key={link.text}>
-                        <a href={link.url}>
+                        <a href={link.url} flex>
                             <IconText icon={link.icon}>{link.text}</IconText>
                         </a>
                     </li>
