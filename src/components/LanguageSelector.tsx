@@ -5,7 +5,7 @@ import {
     languages as DEFAULT_LANGUAGES,
     getTranslation,
 } from "../utils/translation";
-import IconComponent from "./IconComponent";
+import IconComponent from "./atoms/IconComponent";
 
 interface LanguageSelectorProps {
     defaultLanguage: string;

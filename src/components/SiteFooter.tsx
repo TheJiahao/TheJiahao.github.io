@@ -5,7 +5,7 @@ import {
     SITE_START_YEAR,
 } from "../config";
 import { getTranslation } from "../utils/translation";
-import IconComponent from "./IconComponent";
+import IconComponent from "./atoms/IconComponent";
 
 interface SiteFooterProps {
     language?: string;

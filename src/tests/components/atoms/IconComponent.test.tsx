@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import IconComponent from "../../components/IconComponent";
+import IconComponent from "../../../components/atoms/IconComponent";
 
 describe("<IconComponent/>", () => {
     const text = "About";
