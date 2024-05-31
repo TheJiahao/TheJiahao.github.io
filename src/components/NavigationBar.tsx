@@ -1,7 +1,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "../config";
 import { getTranslation } from "../utils/translation";
-import IconText from "./IconText";
+import IconComponent from "./IconComponent";
 import { type IconLink } from "../interfaces/IconLink";
 
 interface NavigationBarProps {
@@ -53,7 +53,7 @@ const NavigationBar = ({
                 {links.map((link) => (
                     <li key={link.text}>
                         <a href={link.url} flex>
-                            <IconText icon={link.icon}>{link.text}</IconText>
+                            <IconComponent icon={link.icon}>{link.text}</IconComponent>
                         </a>
                     </li>
                 ))}

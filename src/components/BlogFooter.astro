@@ -3,7 +3,7 @@ import { DEFAULT_LANGUAGE, SITE_LICENSE } from "../config";
 import type { License } from "../interfaces/License";
 import formatDate from "../utils/formatDate";
 import { getTranslation } from "../utils/translation";
-import IconText from "./IconText";
+import IconComponent from "./IconComponent";
 
 interface Props {
     license?: License;
@@ -16,11 +16,11 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
 <footer card prose max-w-full p-2>
     <p>
-        <IconText icon="i-fluent-emoji-flat-check-mark-button">
+        <IconComponent icon="i-fluent-emoji-flat-check-mark-button">
             {getTranslation(language).updated}
             {" "}
             <time>{formatDate(lastModified)}</time>
-        </IconText>
+        </IconComponent>
     </p>
 
     <p>

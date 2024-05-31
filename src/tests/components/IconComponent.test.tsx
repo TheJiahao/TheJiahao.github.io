@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import IconText from "../../components/IconText";
+import IconComponent from "../../components/IconComponent";
 
-describe("<IconText/>", () => {
+describe("<IconComponent/>", () => {
     const text = "About";
     const icon = "i-ui-library-user";
 
     beforeEach(() => {
-        render(<IconText icon={icon}>{text}</IconText>);
+        render(<IconComponent icon={icon}>{text}</IconComponent>);
     });
 
     test("has text", () => {
