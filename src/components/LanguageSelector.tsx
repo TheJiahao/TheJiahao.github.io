@@ -5,6 +5,7 @@ import {
     languages as DEFAULT_LANGUAGES,
     getTranslation,
 } from "../utils/translation";
+import IconComponent from "./IconComponent";
 
 interface LanguageSelectorProps {
     defaultLanguage: string;
@@ -29,8 +30,7 @@ const LanguageSelector = ({
     }, []);
 
     return (
-        <div inline-flex items-center gap-2>
-            <span className="i-fluent-emoji-flat-globe-with-meridians" />
+        <IconComponent icon="i-fluent-emoji-flat-globe-with-meridians">
             <select
                 aria-label={getTranslation(defaultLanguage).selectLanguage}
                 defaultValue={defaultLanguage}
@@ -43,7 +43,7 @@ const LanguageSelector = ({
                     </option>
                 ))}
             </select>
-        </div>
+        </IconComponent>
     );
 };
 
