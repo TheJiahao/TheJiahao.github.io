@@ -8,7 +8,7 @@ export default getViteConfig({
         setupFiles: ["src/tests/setup.ts"],
         reporters: "default",
         coverage: {
-            include: ["src"],
+            include: ["src/components", "src/utils"],
             extension: [
                 ".js",
                 ".cjs",
@@ -23,7 +23,6 @@ export default getViteConfig({
                 ".marko",
                 ".astro",
             ],
-            exclude: ["src/tests", "src/content", "src/pages", "**/*.d.ts"],
         },
     },
 });
