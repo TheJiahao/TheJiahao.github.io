@@ -23,14 +23,15 @@ LinkList --> LinkCard
 BlogList --> BlogCard
 SocialLinkList --> SocialLink
 
-NavigationBar --> NavigationLink
+NavigationBar --> IconComponent
 NavigationBar --> SocialLinkList
 
 ToolBar --> SearchButton
 ToolBar --> ThemeButton
 ToolBar --> LanguageSelector
+LanguageSelector --> IconComponent
 
-BackButton --> NavigationLink
+BackButton --> IconComponent
 
 BlogCard --> BlogDetails
 BlogCard --> CoverImage
@@ -38,6 +39,7 @@ BlogCard --> CoverImage
 BlogArticle --> BackButton
 BlogArticle --> BlogDetails
 BlogArticle --> CoverImage
+BlogFooter --> IconComponent
 
 namespace layouts {
     class HomeLayout
@@ -48,7 +50,7 @@ namespace layouts {
 namespace components {
     class ToolBar
     class NavigationBar
-    class NavigationLink
+    class IconComponent
     class SocialLink
     class SocialLinkList
     class BlogCard
@@ -85,5 +87,8 @@ class getSchema {
 class translation {
     +languageCodes string[]
     +getTranslation(language) Language
+}
+class getBlogs {
+    +getBlogs() BlogEntry[]
 }
 ```
