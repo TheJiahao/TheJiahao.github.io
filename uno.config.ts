@@ -18,7 +18,7 @@ export default defineConfig({
     shortcuts: {
         card: "rounded-md bg-white drop-shadow-md break-inside-avoid block overflow-hidden",
         "grid-sidebars":
-            "grid grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
+            "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
     },
     content: {
         pipeline: {
