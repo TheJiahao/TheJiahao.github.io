@@ -28,7 +28,7 @@
         "@iconify-json/ic": "^1.1.17",
         "@iconify-json/logos": "^1.1.42",
         "@testing-library/user-event": "^14.5.2",
-        "@unocss/reset": "^0.60.3",
+        "@unocss/reset": "^0.60.4",
         "astro": "^4.9.2",
         "classnames": "^2.5.1",
         "dayjs": "^1.11.11",
@@ -36,7 +36,7 @@
         "react-dom": "^18.3.1",
         "sharp": "^0.33.4",
         "typescript": "^5.4.5",
-        "unocss": "^0.60.3",
+        "unocss": "^0.60.4",
         "vite": "^5.2.11"
     },
     "devDependencies": {
