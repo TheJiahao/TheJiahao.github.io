@@ -35,4 +35,15 @@ export default defineConfig({
             redirectToDefaultLocale: false,
         },
     },
+    vite: {
+        server: {
+            watch: {
+                ignored: [
+                    "**/playwright-report/**",
+                    "**/coverage/**",
+                    "**/test-results/**",
+                ],
+            },
+        },
+    },
 });
