@@ -34,24 +34,41 @@ const NavigationBar = ({
     links = getLinks(language),
 }: NavigationBarProps) => {
     return (
-        <nav flex="~ col" gap-4 items-center lg="card p-2 h-full w-50">
-            <div>
+        <nav card p-4 flex="~ col" gap-4 items-center lg="card h-full w-50">
+            <div
+                w-full
+                sticky
+                bottom-0
+                grid
+                grid-cols-3
+                items-center
+                lg="block"
+            >
                 <img
                     {...avatar}
                     alt="Avatar"
-                    size-30
+                    size-15
                     drop-shadow-md
                     rounded-full
                     object-contain
-                    mx-auto
+                    lg="size-30 mx-auto"
                 />
 
-                <h1 text="center xl" font-bold>
+                <div />
+
+                <div
+                    className="i-ic-round-menu"
+                    justify-self-end
+                    size-15
+                    lg="hidden"
+                />
+
+                <h1 className="hidden" lg="block text-center text-xl font-bold">
                     {getTranslation(language).siteTitle}
                 </h1>
             </div>
 
-            <ul space-y-4 text-xl>
+            <ul className="hidden" lg="block" space-y-4 text-xl>
                 {links.map((link) => (
                     <li key={link.text}>
                         <a href={link.url} flex>
