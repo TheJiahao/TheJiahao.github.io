@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { beforeEach, describe, expect, test, vi } from "vitest";
+import { beforeEach, describe, expect, test } from "vitest";
 import LanguageSelector from "../../../components/molecules/LanguageSelector";
 
 describe("<LanguageSelector/>", () => {
@@ -11,16 +10,9 @@ describe("<LanguageSelector/>", () => {
         { name: "Français", code: "fr" },
         { name: "Suomi", code: "fi" },
     ];
-    const mockHandleNavigation = vi.fn();
 
     beforeEach(() => {
-        render(
-            <LanguageSelector
-                defaultLanguage="en"
-                languages={languages}
-                onChange={mockHandleNavigation}
-            />,
-        );
+        render(<LanguageSelector defaultLanguage="en" languages={languages} />);
     });
 
     test("shows given language by default", () => {
@@ -33,13 +25,5 @@ describe("<LanguageSelector/>", () => {
         for (const { name } of languages) {
             expect(screen.getByRole("option", { name })).toBeVisible();
         }
-    });
-
-    test("calls onChange", async () => {
-        const user = userEvent.setup();
-
-        await user.selectOptions(screen.getByRole("combobox"), "fi");
-
-        expect(mockHandleNavigation).toHaveBeenCalledTimes(1);
     });
 });

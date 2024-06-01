@@ -10,32 +10,32 @@ import IconComponent from "../atoms/IconComponent";
 interface LanguageSelectorProps {
     defaultLanguage: string;
     languages?: Pick<Language, "name" | "code">[];
-    onChange?: ChangeEventHandler<HTMLSelectElement>;
 }
-
-const handleNavigation: ChangeEventHandler<HTMLSelectElement> = (event) => {
-    const language = event.target.value;
-    window.location.href = getRelativeLocaleUrl(language, "/");
-};
 
 const LanguageSelector = ({
     defaultLanguage,
     languages = DEFAULT_LANGUAGES,
-    onChange = handleNavigation,
 }: LanguageSelectorProps) => {
-    const [hydrated, setHydrated] = useState(false);
+    const [disabled, setDisabled] = useState(true);
 
     useEffect(() => {
-        setHydrated(true);
+        setDisabled(false);
     }, []);
+
+    const handleNavigation: ChangeEventHandler<HTMLSelectElement> = (event) => {
+        const language = event.target.value;
+
+        setDisabled(true);
+        window.location.href = getRelativeLocaleUrl(language, "/");
+    };
 
     return (
         <IconComponent icon="i-fluent-emoji-flat-globe-with-meridians">
             <select
                 aria-label={getTranslation(defaultLanguage).selectLanguage}
                 defaultValue={defaultLanguage}
-                onChange={onChange}
-                disabled={!hydrated}
+                onChange={handleNavigation}
+                disabled={disabled}
             >
                 {languages.map(({ name, code }) => (
                     <option key={code} value={code}>
