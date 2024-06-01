@@ -1,4 +1,5 @@
 import { expect } from "@playwright/test";
+import { waitForDebugger } from "inspector";
 import test from "./utils/fixtures";
 
 test.describe("Language selection", () => {
@@ -22,6 +23,7 @@ test.describe("Language selection", () => {
         page,
     }) => {
         await homepage.selectLanguage("English");
+        await page.waitForURL(/\/en?\//)
         await homepage.selectLanguage("简体中文");
 
         const navigationBar = page.getByRole("navigation");
