@@ -35,7 +35,7 @@ const NavigationBar = ({
 }: NavigationBarProps) => {
     return (
         <nav flex="~ col" gap-4 items-center lg="card p-2 h-full w-50">
-            <header>
+            <div>
                 <img
                     {...avatar}
                     alt="Avatar"
@@ -45,10 +45,12 @@ const NavigationBar = ({
                     object-contain
                     mx-auto
                 />
+
                 <h1 text="center xl" font-bold>
                     {getTranslation(language).siteTitle}
                 </h1>
-            </header>
+            </div>
+
             <ul space-y-4 text-xl>
                 {links.map((link) => (
                     <li key={link.text}>
