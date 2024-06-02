@@ -1,5 +1,6 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import IconComponent from "components/atoms/IconComponent";
+import Menu from "components/molecules/Menu";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
 import { type IconLink } from "interfaces/IconLink";
 import { getTranslation } from "utils/getTranslation";
@@ -68,17 +69,17 @@ const NavigationBar = ({
                 </h1>
             </div>
 
-            <ul className="hidden" lg="block" space-y-4 text-xl>
-                {links.map((link) => (
-                    <li key={link.text}>
-                        <a href={link.url} flex>
+            <div className="hidden" card lg="block w-full">
+                <Menu>
+                    {links.map((link) => (
+                        <a key={link.text} href={link.url}>
                             <IconComponent icon={link.icon}>
                                 {link.text}
                             </IconComponent>
                         </a>
-                    </li>
-                ))}
-            </ul>
+                    ))}
+                </Menu>
+            </div>
         </nav>
     );
 };
