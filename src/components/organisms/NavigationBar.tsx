@@ -17,7 +17,7 @@ const NavigationBar = ({
     links = NAVIGATION_LINKS[language],
 }: NavigationBarProps) => {
     return (
-        <nav card p-4 flex="~ col" gap-4 items-center lg="card h-full w-50">
+        <nav card p-4 flex="~ col" gap-4 items-center lg="h-full w-50">
             <div
                 w-full
                 sticky
