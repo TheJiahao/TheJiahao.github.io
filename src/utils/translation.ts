@@ -17,4 +17,4 @@ const getTranslation = (languageCode: string): Language => {
     return translations[languageCode];
 };
 
-export { getTranslation, languageCodes, languages };
+export { getTranslation, languageCodes };
