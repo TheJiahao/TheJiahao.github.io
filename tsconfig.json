@@ -6,9 +6,6 @@
         "jsx": "react-jsx",
         "jsxImportSource": "react",
         "outDir": "dist",
-        "baseUrl": ".",
-        "paths": {
-            "*": ["./src/*", "./*"]
-        }
+        "baseUrl": "src"
     }
 }
