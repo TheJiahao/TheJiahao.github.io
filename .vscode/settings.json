@@ -17,4 +17,5 @@
     ],
     "typescript.updateImportsOnFileMove.enabled": "never",
     "typescript.preferences.preferTypeOnlyAutoImports": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative"
 }

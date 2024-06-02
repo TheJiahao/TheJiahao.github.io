@@ -5,6 +5,7 @@
         "strictNullChecks": true,
         "jsx": "react-jsx",
         "jsxImportSource": "react",
-        "outDir": "dist"
+        "outDir": "dist",
+        "baseUrl": "src"
     }
 }
