@@ -1,7 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-import getImage from "./utils/getImage";
+import getImage from "utils/getImage";
 
 export const SITE_TITLE = "Jiahao 的博客";
 export const SITE_DESCRIPTION =

@@ -1,5 +1,5 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { DEFAULT_LANGUAGE, SITE_AVATAR } from "../../config";
+import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
 import { type IconLink } from "../../interfaces/IconLink";
 import { getTranslation } from "../../utils/translation";
 import IconComponent from "../atoms/IconComponent";

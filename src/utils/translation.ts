@@ -1,4 +1,4 @@
-import { DEFAULT_LANGUAGE } from "../config";
+import { DEFAULT_LANGUAGE } from "config";
 import type { Language } from "../interfaces/Language";
 import en from "../localization/en";
 import zh_cn from "../localization/zh-cn";

@@ -3,7 +3,7 @@ import {
     SITE_OWNER,
     SITE_SOURCE,
     SITE_START_YEAR,
-} from "../../config";
+} from "config";
 import { getTranslation } from "../../utils/translation";
 import IconComponent from "../atoms/IconComponent";
 

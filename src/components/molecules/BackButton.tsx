@@ -1,6 +1,6 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getTranslation } from "../../utils/translation";
-import IconComponent from "../atoms/IconComponent";
+import IconComponent from "components/atoms/IconComponent";
 
 interface BackButtonProps {
     language: string;

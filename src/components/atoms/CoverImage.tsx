@@ -1,5 +1,5 @@
 import { type ImageMetadata } from "astro";
-import { BLOG_IMAGE_PLACEHOLDER } from "../../config";
+import { BLOG_IMAGE_PLACEHOLDER } from "config";
 
 interface CoverImageProps {
     image?: ImageMetadata;
