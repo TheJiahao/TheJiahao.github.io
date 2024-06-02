@@ -1,5 +1,5 @@
 interface AvatarProps {
-    image?: ImageMetadata;
+    image: ImageMetadata;
     /** Avatar size in Tailwind format */
     size: string;
 }
