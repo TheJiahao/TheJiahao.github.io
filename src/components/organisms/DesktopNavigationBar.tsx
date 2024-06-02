@@ -1,6 +1,6 @@
-import Avatar from "components/atoms/Avatar";
 import InfoCard from "components/molecules/InfoCard";
 import NavigationMenu from "components/molecules/NavigationMenu";
+import NavigationToolBar from "components/molecules/NavigationToolBar";
 import { DEFAULT_LANGUAGE } from "config";
 
 interface DesktopNavigationBarProps {
@@ -16,25 +16,8 @@ const DesktopNavigationBar = ({
                 <InfoCard language={language} />
             </div>
 
-            <div
-                w-full
-                sticky
-                bottom-0
-                grid
-                grid-cols-3
-                items-center
-                lg="hidden"
-            >
-                <Avatar size="15" />
-
-                <div />
-
-                <div
-                    className="i-ic-round-menu"
-                    justify-self-end
-                    size-15
-                    lg="hidden"
-                />
+            <div w-full sticky bottom-0 lg="hidden">
+                <NavigationToolBar />
             </div>
 
             <div className="hidden" card lg="block w-full">
