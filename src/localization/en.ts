@@ -12,6 +12,7 @@ const en = {
     back: "Back",
     updated: "Updated on",
     licensedUnder: "Licensed under",
+    showNavigationMenu: "Show navigation menu",
 };
 
 export default en;

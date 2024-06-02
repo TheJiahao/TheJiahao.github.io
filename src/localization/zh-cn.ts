@@ -15,6 +15,7 @@ const zh_cn: Language = {
     back: "返回",
     updated: "更新于",
     licensedUnder: "内容遵循",
+    showNavigationMenu: "显示导航菜单",
 };
 
 export default zh_cn;
