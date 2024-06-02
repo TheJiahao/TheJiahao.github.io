@@ -2,7 +2,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import IconComponent from "components/atoms/IconComponent";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
 import { type IconLink } from "interfaces/IconLink";
-import { getTranslation } from "utils/translation";
+import { getTranslation } from "utils/getTranslation";
 
 interface NavigationBarProps {
     language?: string;

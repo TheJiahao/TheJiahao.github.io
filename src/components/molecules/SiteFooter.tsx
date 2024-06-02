@@ -5,7 +5,7 @@ import {
     SITE_SOURCE,
     SITE_START_YEAR,
 } from "config";
-import { getTranslation } from "utils/translation";
+import { getTranslation } from "utils/getTranslation";
 
 interface SiteFooterProps {
     language?: string;

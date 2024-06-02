@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
 import SiteFooter from "../../../components/molecules/SiteFooter";
-import { getTranslation } from "../../../utils/translation";
+import { getTranslation } from "../../../utils/getTranslation";
 
 describe("<SiteFooter/>", () => {
     const props = {

@@ -3,7 +3,7 @@ import IconComponent from "components/atoms/IconComponent";
 import type { Language } from "interfaces/Language";
 import { languages as DEFAULT_LANGUAGES } from "localization";
 import { useEffect, useState, type ChangeEventHandler } from "react";
-import { getTranslation } from "utils/translation";
+import { getTranslation } from "utils/getTranslation";
 
 interface LanguageSelectorProps {
     defaultLanguage: string;
