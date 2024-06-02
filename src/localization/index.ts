@@ -1,12 +1,7 @@
-import type { Language } from "../interfaces/Language";
 import en from "../localization/en";
 import zh_cn from "../localization/zh-cn";
 
-const languageObjects = [en, zh_cn];
-
-const languageCodes = languageObjects.map((language) => language.code);
-const languages: Record<string, Language> = Object.fromEntries(
-    languageObjects.map((language) => [language.code, language]),
-);
+const languages = [zh_cn, en];
+const languageCodes = languages.map((language) => language.code);
 
 export { languageCodes, languages };
