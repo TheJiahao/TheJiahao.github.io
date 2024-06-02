@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config";
-import { languageCodes } from "./src/utils/translation";
+import { languageCodes } from "./src/localization";
 
 const { PUBLIC_PORT } = loadEnv(
     process.env.NODE_ENV || "dev",
