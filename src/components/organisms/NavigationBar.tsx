@@ -15,7 +15,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
             </div>
             <div className="hidden" card lg="block w-full">
                 <NavigationMenu />
-            </div>{" "}
+            </div>
             <div w-full sticky bottom-0 lg="hidden">
                 <NavigationToolBar />
             </div>
