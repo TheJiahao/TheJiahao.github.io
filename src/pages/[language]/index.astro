@@ -1,6 +1,6 @@
 ---
 import HomeLayout from "../../layouts/HomeLayout.astro";
-import { languageCodes } from "../../utils/translation";
+import { languageCodes } from "localization";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({
