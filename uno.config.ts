@@ -17,8 +17,7 @@ export default defineConfig({
     transformers: [transformerAttributifyJsx()],
     shortcuts: {
         card: "rounded-md bg-white drop-shadow-md break-inside-avoid block overflow-hidden",
-        "grid-sidebars":
-            "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
+        "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
     },
     content: {
         pipeline: {
