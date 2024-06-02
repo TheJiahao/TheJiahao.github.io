@@ -13,9 +13,11 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
             <div className="hidden" w-full lg="block">
                 <InfoBox language={language} />
             </div>
+
             <div className="hidden" lg="block w-full">
                 <NavigationMenu />
             </div>
+
             <div w-full sticky bottom-0 lg="hidden">
                 <NavigationToolBar />
             </div>
