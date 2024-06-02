@@ -1,6 +1,6 @@
 ---
 import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
-import { DEFAULT_LANGUAGE } from "../config";
+import { DEFAULT_LANGUAGE } from "config";
 
 const url = getRelativeLocaleUrl(DEFAULT_LANGUAGE, "/");
 const canonical_url = getAbsoluteLocaleUrl(DEFAULT_LANGUAGE, "/");
