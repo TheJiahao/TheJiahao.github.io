@@ -1,19 +1,14 @@
 import Avatar from "components/atoms/Avatar";
-import IconComponent from "components/atoms/IconComponent";
 import InfoCard from "components/molecules/InfoCard";
-import Menu from "components/molecules/Menu";
+import NavigationMenu from "components/molecules/NavigationMenu";
 import { DEFAULT_LANGUAGE } from "config";
-import NAVIGATION_LINKS from "config/navigation";
-import { type IconLink } from "interfaces/IconLink";
 
 interface DesktopNavigationBarProps {
     language?: string;
-    links?: IconLink[];
 }
 
 const DesktopNavigationBar = ({
     language = DEFAULT_LANGUAGE,
-    links = NAVIGATION_LINKS[language],
 }: DesktopNavigationBarProps) => {
     return (
         <nav card p-4 flex="~ col" gap-4 items-center lg="h-full w-50">
@@ -43,15 +38,7 @@ const DesktopNavigationBar = ({
             </div>
 
             <div className="hidden" card lg="block w-full">
-                <Menu>
-                    {links.map((link) => (
-                        <a key={link.text} href={link.url}>
-                            <IconComponent icon={link.icon}>
-                                {link.text}
-                            </IconComponent>
-                        </a>
-                    ))}
-                </Menu>
+                <NavigationMenu />
             </div>
         </nav>
     );
