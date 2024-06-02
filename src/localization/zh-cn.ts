@@ -1,5 +1,5 @@
 import type { Language } from "interfaces/Language";
-import en from "localization/en";
+import en from "./en";
 
 const zh_cn: Language = {
     ...en,
