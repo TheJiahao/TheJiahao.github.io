@@ -1,4 +1,4 @@
-import type en from "../localization/en";
+import type en from "localization/en";
 
 type Language = typeof en;
 
