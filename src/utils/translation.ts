@@ -1,4 +1,3 @@
-import { DEFAULT_LANGUAGE } from "config";
 import type { Language } from "../interfaces/Language";
 import en from "../localization/en";
 import zh_cn from "../localization/zh-cn";
@@ -10,7 +9,12 @@ const translations: Record<string, Language> = Object.fromEntries(
     languages.map((language) => [language.code, language]),
 );
 
-const getTranslation = (languageCode: string): Language =>
-    translations[languageCode] ?? translations[DEFAULT_LANGUAGE];
+const getTranslation = (languageCode: string): Language => {
+    if (!(languageCode in translations)) {
+        throw new Error(`Invalid language code: ${languageCode}`);
+    }
+
+    return translations[languageCode];
+};
 
 export { getTranslation, languageCodes, languages };
