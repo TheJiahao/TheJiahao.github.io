@@ -1,7 +1,7 @@
-import { getRelativeLocaleUrl } from "astro:i18n";
 import IconComponent from "components/atoms/IconComponent";
 import Menu from "components/molecules/Menu";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
+import NAVIGATION_LINKS from "config/navigation";
 import { type IconLink } from "interfaces/IconLink";
 import { getTranslation } from "utils/getTranslation";
 
@@ -11,28 +11,10 @@ interface NavigationBarProps {
     links?: IconLink[];
 }
 
-const getLinks = (language: string) => [
-    {
-        url: getRelativeLocaleUrl(language, "/"),
-        text: getTranslation(language).homePage,
-        icon: "i-fluent-emoji-flat-house",
-    },
-    {
-        url: getRelativeLocaleUrl(language, "/posts"),
-        text: getTranslation(language).archive,
-        icon: "i-fluent-emoji-flat-file-cabinet",
-    },
-    {
-        url: getRelativeLocaleUrl(language, "/about"),
-        text: getTranslation(language).about,
-        icon: "i-fluent-emoji-flat-star",
-    },
-];
-
 const NavigationBar = ({
     language = DEFAULT_LANGUAGE,
     avatar = SITE_AVATAR,
-    links = getLinks(language),
+    links = NAVIGATION_LINKS[language],
 }: NavigationBarProps) => {
     return (
         <nav card p-4 flex="~ col" gap-4 items-center lg="card h-full w-50">
