@@ -1,3 +1,4 @@
+import Avatar from "components/atoms/Avatar";
 import IconComponent from "components/atoms/IconComponent";
 import InfoCard from "components/molecules/InfoCard";
 import Menu from "components/molecules/Menu";
@@ -31,14 +32,7 @@ const NavigationBar = ({
                 items-center
                 lg="hidden"
             >
-                <img
-                    {...avatar}
-                    alt="Avatar"
-                    size-15
-                    drop-shadow-md
-                    rounded-full
-                    object-contain
-                />
+                <Avatar image={avatar} size="15" />
 
                 <div />
 

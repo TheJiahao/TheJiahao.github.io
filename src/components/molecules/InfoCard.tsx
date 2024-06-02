@@ -1,3 +1,4 @@
+import Avatar from "components/atoms/Avatar";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
 import { getTranslation } from "utils/getTranslation";
 
@@ -10,16 +11,8 @@ const InfoCard = ({
     language = DEFAULT_LANGUAGE,
     avatar = SITE_AVATAR,
 }: InfoCardProps) => (
-    <div card>
-        <img
-            {...avatar}
-            alt="Avatar"
-            drop-shadow-md
-            rounded-full
-            object-contain
-            size-30
-            mx-auto
-        />
+    <div card flex="~ col" items-center p-2>
+        <Avatar image={avatar} size="30" />
 
         <h1 className="hidden" lg="block text-center text-xl font-bold">
             {getTranslation(language).siteTitle}
