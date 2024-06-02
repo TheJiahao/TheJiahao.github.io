@@ -1,3 +1,4 @@
+import IconComponent from "components/atoms/IconComponent";
 import {
     DEFAULT_LANGUAGE,
     SITE_OWNER,
@@ -5,7 +6,6 @@ import {
     SITE_START_YEAR,
 } from "config";
 import { getTranslation } from "utils/translation";
-import IconComponent from "components/atoms/IconComponent";
 
 interface SiteFooterProps {
     language?: string;
