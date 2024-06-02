@@ -1,5 +1,4 @@
-import type { LinkProps } from "./LinkCard";
-import LinkCard from "./LinkCard";
+import LinkCard, { type LinkProps } from "components/organisms/LinkCard";
 
 const LinkList = ({ links }: { links?: LinkProps[] }) => {
     return (

@@ -1,4 +1,4 @@
-import BlogCard, { type BlogCardProps } from "./BlogCard";
+import BlogCard, { type BlogCardProps } from "components/organisms/BlogCard";
 
 const BlogList = ({ blogs }: { blogs: BlogCardProps[] }) => {
     return (
