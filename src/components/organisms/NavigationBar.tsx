@@ -1,4 +1,4 @@
-import InfoCard from "components/molecules/InfoCard";
+import InfoBox from "components/molecules/InfoBox";
 import NavigationMenu from "components/molecules/NavigationMenu";
 import NavigationToolBar from "components/molecules/NavigationToolBar";
 import { DEFAULT_LANGUAGE } from "config";
@@ -11,7 +11,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
     return (
         <nav card p-4 flex="~ col" gap-4 items-center lg="h-full w-50">
             <div className="hidden" w-full lg="block">
-                <InfoCard language={language} />
+                <InfoBox language={language} />
             </div>
             <div className="hidden" lg="block w-full">
                 <NavigationMenu />

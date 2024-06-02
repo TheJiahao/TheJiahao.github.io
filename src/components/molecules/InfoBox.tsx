@@ -7,7 +7,7 @@ interface InfoCardProps {
     language?: string;
 }
 
-const InfoCard = ({
+const InfoBox = ({
     language = DEFAULT_LANGUAGE,
     avatar = SITE_AVATAR,
 }: InfoCardProps) => (
@@ -20,4 +20,4 @@ const InfoCard = ({
     </div>
 );
 
-export default InfoCard;
+export default InfoBox;
