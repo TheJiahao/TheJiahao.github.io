@@ -27,7 +27,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                 <NavigationHeader language={language} />
             </header>
 
-            <div className={expanded ? undefined : "hidden"} lg="block w-full">
+            <div className={expanded ? undefined : "hidden"} w-full lg="block">
                 <NavigationMenu />
             </div>
 
