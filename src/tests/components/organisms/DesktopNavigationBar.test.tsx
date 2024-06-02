@@ -1,14 +1,14 @@
 import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import NavigationBar from "../../../components/organisms/NavigationBar";
+import DesktopNavigationBar from "../../../components/organisms/DesktopNavigationBar";
 import type { IconLink } from "../../../interfaces/IconLink";
 
-describe("<NavigationBar/>", () => {
+describe("<DesktopNavigationBar/>", () => {
     describe("avatar", () => {
         let avatar: HTMLElement;
 
         beforeEach(() => {
-            render(<NavigationBar />);
+            render(<DesktopNavigationBar />);
             avatar = screen.getByAltText("Avatar");
         });
 
@@ -46,7 +46,7 @@ describe("<NavigationBar/>", () => {
         ];
 
         beforeEach(() => {
-            render(<NavigationBar links={links} />);
+            render(<DesktopNavigationBar links={links} />);
 
             navigationBar = screen.getByRole("navigation");
             navigationLinks = within(navigationBar).getAllByRole("listitem");

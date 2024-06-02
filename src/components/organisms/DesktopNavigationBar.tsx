@@ -6,17 +6,17 @@ import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
 import NAVIGATION_LINKS from "config/navigation";
 import { type IconLink } from "interfaces/IconLink";
 
-interface NavigationBarProps {
+interface DesktopNavigationBarProps {
     language?: string;
     avatar?: ImageMetadata;
     links?: IconLink[];
 }
 
-const NavigationBar = ({
+const DesktopNavigationBar = ({
     language = DEFAULT_LANGUAGE,
     avatar = SITE_AVATAR,
     links = NAVIGATION_LINKS[language],
-}: NavigationBarProps) => {
+}: DesktopNavigationBarProps) => {
     return (
         <nav card p-4 flex="~ col" gap-4 items-center lg="h-full w-50">
             <div className="hidden" w-full lg="block">
@@ -59,4 +59,4 @@ const NavigationBar = ({
     );
 };
 
-export default NavigationBar;
+export default DesktopNavigationBar;
