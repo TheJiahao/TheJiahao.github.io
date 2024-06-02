@@ -7,17 +7,17 @@ interface InfoCardProps {
     language?: string;
 }
 
-const InfoBox = ({
+const NavigationHeader = ({
     language = DEFAULT_LANGUAGE,
     avatar = SITE_AVATAR,
 }: InfoCardProps) => (
-    <div flex="~ col" items-center p-2>
+    <>
         <Avatar image={avatar} size="30" />
 
         <h1 className="hidden" lg="block text-center text-xl font-bold">
             {getTranslation(language).siteTitle}
         </h1>
-    </div>
+    </>
 );
 
-export default InfoBox;
+export default NavigationHeader;
