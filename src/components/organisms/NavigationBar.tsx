@@ -1,4 +1,3 @@
-import { Transition } from "@headlessui/react";
 import NavigationHeader from "components/molecules/NavigationHeader";
 import NavigationMenu from "components/molecules/NavigationMenu";
 import NavigationToolBar from "components/molecules/NavigationToolBar";
@@ -28,20 +27,18 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                 <NavigationHeader language={language} />
             </header>
 
-            <Transition
-                show={expanded}
-                enter="transition-all duration-150 ease-in"
-                enterFrom="max-h-0"
-                enterTo="max-h-screen"
-                leave="transition-all duration-100 ease-out"
-                leaveFrom="max-h-screen opacity-100"
-                leaveTo="max-h-0 opacity-0"
+            <div
+                w-full
+                un-hidden
+                lg="block max-h-unset"
+                className={expanded ? "max-h-screen" : "max-h-0"}
                 overflow-hidden
+                transition-all
+                duration-150
+                ease-in-out
             >
-                <div w-full lg="block">
-                    <NavigationMenu language={language} />
-                </div>
-            </Transition>
+                <NavigationMenu language={language} />
+            </div>
 
             <div w-full sticky bottom-0 bg-white lg="hidden">
                 <NavigationToolBar
