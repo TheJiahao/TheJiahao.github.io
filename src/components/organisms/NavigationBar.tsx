@@ -35,7 +35,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                 enterTo="max-h-screen"
                 leave="transition-all duration-100 ease-out"
                 leaveFrom="max-h-screen opacity-100"
-                leaveTo="max-h-0 opcaity-0"
+                leaveTo="max-h-0 opacity-0"
                 overflow-hidden
             >
                 <div w-full lg="block">
