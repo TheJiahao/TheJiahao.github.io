@@ -15,7 +15,7 @@ const NavigationToolBar = ({
     avatar = SITE_AVATAR,
     language = DEFAULT_LANGUAGE,
 }: NavigationToolBarProps) => (
-    <div grid grid-cols-3 items-center>
+    <div role="menubar" aria-haspopup="true" grid grid-cols-3 items-center>
         <a href={getRelativeLocaleUrl(language, "/about")}>
             <Avatar image={avatar} size="15" />
         </a>
