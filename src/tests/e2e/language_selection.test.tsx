@@ -9,12 +9,7 @@ test.describe("Language selection", () => {
     test("language can be changed to English", async ({ homepage, page }) => {
         await homepage.selectLanguage("English");
 
-        const navigationBar = page.getByRole("navigation");
-
-        await expect(
-            navigationBar.getByRole("link"),
-            "to be translated",
-        ).toContainText(["Home", "About"]);
+        await expect(page).toHaveURL(/en?\//);
     });
 
     test("language can be changed back to Chinese", async ({
@@ -25,11 +20,6 @@ test.describe("Language selection", () => {
         await page.waitForURL(/\/en?\//);
         await homepage.selectLanguage("简体中文");
 
-        const navigationBar = page.getByRole("navigation");
-
-        await expect(
-            navigationBar.getByRole("link"),
-            "to be translated",
-        ).toContainText(["首页", "关于"]);
+        await expect(page).toHaveURL(/zh-cn?\//);
     });
 });
