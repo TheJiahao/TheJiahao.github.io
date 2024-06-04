@@ -26,17 +26,17 @@ export default defineConfig({
     },
     projects: [
         {
-            name: "chromium",
+            name: "Desktop Chrome",
             use: { ...devices["Desktop Chrome"] },
             grepInvert: /@mobile/,
         },
         {
-            name: "firefox",
+            name: "Desktop Firefox",
             use: { ...devices["Desktop Firefox"] },
             grepInvert: /@mobile/,
         },
         {
-            name: "webkit",
+            name: "Desktop Safari",
             use: { ...devices["Desktop Safari"] },
             grepInvert: /@mobile/,
         },
