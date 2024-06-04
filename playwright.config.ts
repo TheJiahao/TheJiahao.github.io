@@ -28,6 +28,7 @@ export default defineConfig({
         {
             name: "chromium",
             use: { ...devices["Desktop Chrome"] },
+            grepInvert: /@mobile/,
         },
         {
             name: "firefox",
@@ -41,12 +42,12 @@ export default defineConfig({
         {
             name: "Mobile Chrome",
             use: { ...devices["Pixel 5"] },
-            testMatch: /.*mobile.test.ts$/,
+            grepInvert: /@desktop/,
         },
         {
             name: "Mobile Safari",
             use: { ...devices["iPhone 12"] },
-            testMatch: /.*mobile.test.ts$/,
+            grepInvert: /@desktop/,
         },
     ],
 });
