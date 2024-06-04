@@ -1,9 +1,9 @@
 import { Children, type PropsWithChildren } from "react";
 
 const Menu = ({ children }: PropsWithChildren) => (
-    <ul flex="~ col" gap-3 p-4 items-center justify-center text-xl>
+    <ul role="menu" flex="~ col" gap-3 p-4 items-center justify-center text-xl>
         {Children.map(children, (child) => (
-            <li>{child}</li>
+            <li role="menuitem">{child}</li>
         ))}
     </ul>
 );
