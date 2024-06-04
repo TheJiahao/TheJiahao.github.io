@@ -44,4 +44,52 @@ test.describe("Navigation", () => {
             await expect(page).toHaveURL(/\/about\/?/);
         });
     });
+
+    test.describe("navigation toolbar", { tag: "@mobile" }, () => {
+        let navigationToolBar: Locator;
+        let expandButton: Locator;
+
+        test.beforeEach(({ page }) => {
+            navigationToolBar = page.getByRole("menubar");
+            expandButton = navigationToolBar.getByRole("button", {
+                name: "显示导航菜单",
+            });
+        });
+
+        test("is visible", async () => {
+            await expect(navigationToolBar).toBeVisible();
+        });
+
+        test("has expand button", async () => {
+            await expect(expandButton).toBeVisible();
+        });
+
+        test.describe("before clicking expand button", () => {
+            test("navigation menu is hidden", async () => {
+                await expect(navigationBar.getByRole("menu")).toBeHidden();
+            });
+        });
+
+        test.describe("clicking expand button", () => {
+            test.beforeEach(async () => {
+                await expandButton.click();
+            });
+
+            test("shows navigation menu", async () => {
+                await expect(navigationBar.getByRole("menu")).toBeVisible();
+            });
+
+            test("navigation menu is not empty", async () => {
+                await expect(
+                    navigationBar.getByRole("menuitem"),
+                ).not.toHaveCount(0);
+            });
+
+            test("twice hides navigation menu", async () => {
+                await expandButton.click();
+
+                await expect(navigationBar.getByRole("menu")).toBeHidden();
+            });
+        });
+    });
 });
