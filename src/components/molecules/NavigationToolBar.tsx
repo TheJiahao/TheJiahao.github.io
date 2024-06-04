@@ -1,3 +1,4 @@
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Avatar from "components/atoms/Avatar";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
 import type { MouseEventHandler } from "react";
@@ -15,7 +16,9 @@ const NavigationToolBar = ({
     language = DEFAULT_LANGUAGE,
 }: NavigationToolBarProps) => (
     <div grid grid-cols-3 items-center>
-        <Avatar image={avatar} size="15" />
+        <a href={getRelativeLocaleUrl(language, "/about")}>
+            <Avatar image={avatar} size="15" />
+        </a>
 
         <div />
 
