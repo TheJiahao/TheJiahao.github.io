@@ -29,7 +29,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
 
             <div
                 w-full
-                lg="block max-h-unset"
+                lg="block max-h-unset visible opacity-100"
                 className={
                     expanded
                         ? "max-h-screen opacity-100 visible"
