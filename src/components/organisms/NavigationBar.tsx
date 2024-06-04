@@ -30,7 +30,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
             <div
                 w-full
                 lg="block max-h-unset"
-                className={expanded ? "max-h-screen" : "max-h-0"}
+                className={expanded ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}
                 overflow-hidden
                 transition-all
                 duration-150
