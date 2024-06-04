@@ -15,27 +15,33 @@ test.describe("Navigation", () => {
         await expect(navigationBar).toHaveCount(1);
     });
 
-    test("has link to homepage", async ({ page }) => {
-        const link = navigationBar.getByRole("link", { name: "首页" });
+    test.describe("navigation menu", { tag: "@desktop" }, () => {
+        test("has links", async () => {
+            await expect(navigationBar.getByRole("link")).not.toHaveCount(0);
+        });
 
-        await link.click();
+        test("has link to homepage", async ({ page }) => {
+            const link = navigationBar.getByRole("link", { name: "首页" });
 
-        await expect(page).toHaveURL(/\/zh-cn\/?/);
-    });
+            await link.click();
 
-    test("has link to posts page", async ({ page }) => {
-        const link = navigationBar.getByRole("link", { name: "归档" });
+            await expect(page).toHaveURL(/\/zh-cn\/?/);
+        });
 
-        await link.click();
+        test("has link to posts page", async ({ page }) => {
+            const link = navigationBar.getByRole("link", { name: "归档" });
 
-        await expect(page).toHaveURL(/\/posts\/?/);
-    });
+            await link.click();
 
-    test("has link to about page", async ({ page }) => {
-        const link = navigationBar.getByRole("link", { name: "关于" });
+            await expect(page).toHaveURL(/\/posts\/?/);
+        });
 
-        await link.click();
+        test("has link to about page", async ({ page }) => {
+            const link = navigationBar.getByRole("link", { name: "关于" });
 
-        await expect(page).toHaveURL(/\/about\/?/);
+            await link.click();
+
+            await expect(page).toHaveURL(/\/about\/?/);
+        });
     });
 });
