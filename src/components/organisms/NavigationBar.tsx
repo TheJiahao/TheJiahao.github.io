@@ -29,7 +29,6 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
 
             <div
                 w-full
-                un-hidden
                 lg="block max-h-unset"
                 className={expanded ? "max-h-screen" : "max-h-0"}
                 overflow-hidden
