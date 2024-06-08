@@ -39,7 +39,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                 >
                     <NavigationMenu language={language} />
                 </div>
-                <div w-full sticky bottom-0 bg-white>
+                <div w-full bg-white>
                     <NavigationToolBar
                         language={language}
                         handleExpand={handleExpand}
