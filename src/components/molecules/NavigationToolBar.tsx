@@ -23,6 +23,7 @@ const NavigationToolBar = ({
         <div />
 
         <button
+            type="button"
             className="i-ic-round-menu"
             onClick={handleExpand}
             aria-label={getTranslation(language).showNavigationMenu}
