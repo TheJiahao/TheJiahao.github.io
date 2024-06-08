@@ -17,37 +17,34 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
 
     return (
         <nav card p-4 flex="~ col" gap-4 items-center lg="h-full w-50">
-            <header
-                className="hidden"
-                items-center
-                p-2
-                w-full
-                lg="flex flex-col"
-            >
-                <NavigationHeader language={language} />
-            </header>
+            <div className="hidden" lg-block>
+                <header items-center p-2 w-full lg="flex flex-col">
+                    <NavigationHeader language={language} />
+                </header>
 
-            <div
-                w-full
-                lg="block max-h-unset visible opacity-100"
-                className={
-                    expanded
-                        ? "max-h-screen opacity-100 visible"
-                        : "max-h-0 opacity-0 invisible"
-                }
-                overflow-hidden
-                transition-all
-                duration-150
-                ease-in-out
-            >
                 <NavigationMenu language={language} />
             </div>
 
-            <div w-full sticky bottom-0 bg-white lg="hidden">
-                <NavigationToolBar
-                    language={language}
-                    handleExpand={handleExpand}
-                />
+            <div w-full className="block" lg-hidden>
+                <div
+                    className={
+                        expanded
+                            ? "max-h-screen opacity-100 visible"
+                            : "max-h-0 opacity-0 invisible"
+                    }
+                    overflow-hidden
+                    transition-all
+                    duration-150
+                    ease-in-out
+                >
+                    <NavigationMenu language={language} />
+                </div>
+                <div w-full sticky bottom-0 bg-white>
+                    <NavigationToolBar
+                        language={language}
+                        handleExpand={handleExpand}
+                    />
+                </div>
             </div>
         </nav>
     );
