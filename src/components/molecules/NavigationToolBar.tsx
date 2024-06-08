@@ -28,7 +28,7 @@ const NavigationToolBar = ({
 
             <button
                 type="button"
-                className="i-ic-round-menu"
+                className="i-lucide:menu"
                 disabled={disabled}
                 onClick={handleExpand}
                 aria-label={getTranslation(language).showNavigationMenu}

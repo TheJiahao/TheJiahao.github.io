@@ -9,7 +9,7 @@ interface BackButtonProps {
 const BackButton = ({ language }: BackButtonProps) => {
     return (
         <a href={getRelativeLocaleUrl(language, "/")} flex card p-2>
-            <IconComponent icon="i-ic:round-arrow-back-ios-new">
+            <IconComponent icon="i-lucide:chevron-left">
                 {getTranslation(language).back}
             </IconComponent>
         </a>
