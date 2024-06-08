@@ -1,6 +1,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Avatar from "components/atoms/Avatar";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
+import useHydrationState from "hooks/useHydrationState";
 import type { MouseEventHandler } from "react";
 import { getTranslation } from "utils/getTranslation";
 
@@ -14,24 +15,30 @@ const NavigationToolBar = ({
     handleExpand,
     avatar = SITE_AVATAR,
     language = DEFAULT_LANGUAGE,
-}: NavigationToolBarProps) => (
-    <div role="menubar" aria-haspopup="true" grid grid-cols-3 items-center>
-        <a href={getRelativeLocaleUrl(language, "/about")}>
-            <Avatar image={avatar} size="15" />
-        </a>
+}: NavigationToolBarProps) => {
+    const disabled = !useHydrationState();
 
-        <div />
+    return (
+        <div role="menubar" aria-haspopup="true" grid grid-cols-3 items-center>
+            <a href={getRelativeLocaleUrl(language, "/about")}>
+                <Avatar image={avatar} size="15" />
+            </a>
 
-        <button
-            type="button"
-            className="i-ic-round-menu"
-            onClick={handleExpand}
-            aria-label={getTranslation(language).showNavigationMenu}
-            justify-self-end
-            size-15
-            lg="hidden"
-        />
-    </div>
-);
+            <div />
+
+            <button
+                type="button"
+                className="i-ic-round-menu"
+                disabled={disabled}
+                onClick={handleExpand}
+                aria-label={getTranslation(language).showNavigationMenu}
+                un-disabled="animate-spin i-lucide-loader-circle size-15"
+                justify-self-end
+                size-15
+                lg="hidden"
+            />
+        </div>
+    );
+};
 
 export default NavigationToolBar;
