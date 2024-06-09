@@ -6,8 +6,8 @@ type MyFixtures = {
 };
 
 const pageTestUtils = test.extend<MyFixtures>({
-    homepage: async ({ page }, use) => {
-        await use(new HomePage(page));
+    homepage: async ({ page, isMobile }, use) => {
+        await use(new HomePage(page, isMobile));
     },
 });
 

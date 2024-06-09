@@ -16,8 +16,8 @@ test.describe("Language selection", () => {
         homepage,
         page,
     }) => {
-        await homepage.selectLanguage("English");
-        await page.waitForURL(/\/en?\//);
+        await page.goto("/en");
+
         await homepage.selectLanguage("简体中文");
 
         await expect(page).toHaveURL(/zh-cn?\//);
