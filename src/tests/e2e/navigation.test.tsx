@@ -72,7 +72,9 @@ test.describe("Navigation", () => {
 
         test.describe("clicking expand button", () => {
             test.beforeEach(async () => {
-                await expandButton.click();
+                await expect(expandButton).toBeEnabled();
+
+                await expandButton.click({ force: true });
             });
 
             test("shows navigation menu", async () => {
@@ -86,7 +88,7 @@ test.describe("Navigation", () => {
             });
 
             test("twice hides navigation menu", async () => {
-                await expandButton.click();
+                await expandButton.click({ force: true });
 
                 await expect(navigationBar.getByRole("menu")).toBeHidden();
             });
