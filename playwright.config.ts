@@ -13,7 +13,7 @@ export default defineConfig({
     reporter: process.env.CI ? [["github"], ["dot"]] : [["html"], ["list"]],
     retries: 1,
     timeout: 10000,
-    maxFailures: 3,
+    maxFailures: process.env.CI ? 3 : undefined,
     use: {
         baseURL: `http://localhost:${PORT}`,
         trace: "on-first-retry",
