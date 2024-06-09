@@ -14,7 +14,7 @@ const NavigationMenu = ({
     language = DEFAULT_LANGUAGE,
     links = NAVIGATION_LINKS[language],
 }: NavigationMenuProps) => (
-    <Menu aria-label={getTranslation(language).navigationLinks}>
+    <Menu role="group" aria-label={getTranslation(language).navigationLinks}>
         {links.map((link) => (
             <a key={link.text} href={link.url}>
                 <IconComponent icon={link.icon}>{link.text}</IconComponent>

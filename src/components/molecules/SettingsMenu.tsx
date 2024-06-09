@@ -8,7 +8,7 @@ interface SettingsMenuProps {
 }
 
 const SettingsMenu = ({ language = DEFAULT_LANGUAGE }: SettingsMenuProps) => (
-    <Menu aria-label={getTranslation(language).settings}>
+    <Menu role="group" aria-label={getTranslation(language).settings}>
         <LanguageSelector defaultLanguage={language} />
     </Menu>
 );
