@@ -46,6 +46,8 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                     <NavigationToolBar
                         language={language}
                         handleExpand={handleExpand}
+                        aria-haspopup="menu"
+                        aria-expanded={expanded}
                     />
                 </div>
             </div>
