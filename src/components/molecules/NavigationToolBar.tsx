@@ -17,7 +17,7 @@ const NavigationToolBar = ({
     handleExpand,
     avatar = SITE_AVATAR,
     language = DEFAULT_LANGUAGE,
-    role = "menubar",
+    role = "toolbar",
     ...props
 }: NavigationToolBarProps) => {
     const disabled = !useHydrationState();
