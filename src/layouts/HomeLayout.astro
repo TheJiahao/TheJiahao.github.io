@@ -37,7 +37,9 @@ const blogs: BlogCardProps[] = getBlogs()
         </div>
 
         <div flex="~ col" gap-10 p-lg>
-            <ToolBar {language} client:load />
+            <div un-hidden lg="flex flex-none">
+                <ToolBar {language} client:load />
+            </div>
 
             <main lg="max-w-4xl">
                 <BlogList {blogs} />

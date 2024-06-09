@@ -1,6 +1,7 @@
 import NavigationHeader from "components/molecules/NavigationHeader";
 import NavigationMenu from "components/molecules/NavigationMenu";
 import NavigationToolBar from "components/molecules/NavigationToolBar";
+import SettingsMenu from "components/molecules/SettingsMenu";
 import { DEFAULT_LANGUAGE } from "config";
 import { useState } from "react";
 
@@ -36,7 +37,9 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                     transition-all
                     duration-150
                     ease-in-out
+                    divide-y
                 >
+                    <SettingsMenu language={language} />
                     <NavigationMenu language={language} />
                 </div>
                 <div w-full bg-white>
