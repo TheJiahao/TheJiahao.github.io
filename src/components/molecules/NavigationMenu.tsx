@@ -3,6 +3,7 @@ import Menu from "components/molecules/Menu";
 import { DEFAULT_LANGUAGE } from "config";
 import NAVIGATION_LINKS from "config/navigation";
 import type { IconLink } from "interfaces/IconLink";
+import { getTranslation } from "utils/getTranslation";
 
 interface NavigationMenuProps {
     links?: IconLink[];
@@ -13,7 +14,7 @@ const NavigationMenu = ({
     language = DEFAULT_LANGUAGE,
     links = NAVIGATION_LINKS[language],
 }: NavigationMenuProps) => (
-    <Menu>
+    <Menu aria-label={getTranslation(language).navigationLinks}>
         {links.map((link) => (
             <a key={link.text} href={link.url}>
                 <IconComponent icon={link.icon}>{link.text}</IconComponent>

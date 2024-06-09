@@ -16,6 +16,8 @@ const zh_cn: Language = {
     updated: "更新于",
     licensedUnder: "内容遵循",
     showNavigationMenu: "显示导航菜单",
+    navigationLinks: "导航链接",
+    settings: "设置",
 };
 
 export default zh_cn;

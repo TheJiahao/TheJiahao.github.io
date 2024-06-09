@@ -13,6 +13,8 @@ const en = {
     updated: "Updated on",
     licensedUnder: "Licensed under",
     showNavigationMenu: "Show navigation menu",
+    navigationLinks: "Navigation links",
+    settings: "Settings",
 };
 
 export default en;
