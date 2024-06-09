@@ -2,10 +2,12 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import Avatar from "components/atoms/Avatar";
 import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
 import useHydrationState from "hooks/useHydrationState";
-import type { MouseEventHandler } from "react";
+import type { AriaAttributes, HTMLAttributes, MouseEventHandler } from "react";
 import { getTranslation } from "utils/getTranslation";
 
-interface NavigationToolBarProps {
+interface NavigationToolBarProps
+    extends HTMLAttributes<HTMLDivElement>,
+        AriaAttributes {
     handleExpand: MouseEventHandler<HTMLButtonElement>;
     avatar?: ImageMetadata;
     language?: string;
@@ -15,11 +17,13 @@ const NavigationToolBar = ({
     handleExpand,
     avatar = SITE_AVATAR,
     language = DEFAULT_LANGUAGE,
+    role = "menubar",
+    ...props
 }: NavigationToolBarProps) => {
     const disabled = !useHydrationState();
 
     return (
-        <div role="menubar" aria-haspopup="true" grid grid-cols-3 items-center>
+        <div role={role} {...props} grid grid-cols-3 items-center>
             <a href={getRelativeLocaleUrl(language, "/about")}>
                 <Avatar image={avatar} size="15" />
             </a>
