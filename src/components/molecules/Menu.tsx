@@ -1,11 +1,19 @@
-import { Children, type AriaAttributes, type PropsWithChildren } from "react";
+import {
+    Children,
+    type AriaAttributes,
+    type HTMLAttributes,
+    type PropsWithChildren,
+} from "react";
 
-interface MenuProps extends PropsWithChildren, AriaAttributes {}
+interface MenuProps
+    extends PropsWithChildren,
+        HTMLAttributes<HTMLUListElement>,
+        AriaAttributes {}
 
-const Menu = ({ children, ...ariaProps }: MenuProps) => (
+const Menu = ({ children, role = "menu", ...props }: MenuProps) => (
     <ul
-        role="menu"
-        {...ariaProps}
+        role={role}
+        {...props}
         flex="~ col"
         gap-3
         p-4
