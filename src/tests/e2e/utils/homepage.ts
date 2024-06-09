@@ -16,25 +16,20 @@ export class HomePage {
         await this.page.goto("/");
     }
 
+    async toggleMenu() {
+        const languageCode = this.#getLanguage();
+
+        const expandButton = this.page.getByRole("button", {
+            name: getTranslation(languageCode).showNavigationMenu,
+        });
+
+        await expect.soft(expandButton).toBeEnabled();
+        await expandButton.click({ force: true });
+    }
+
     async selectLanguage(language: string) {
         if (this.isMobile) {
-            const languageCode = this.#getLanguage();
-
-            const expandButton = this.page.getByRole("button", {
-                name: getTranslation(languageCode).showNavigationMenu,
-            });
-
-            await expect.soft(expandButton).toBeEnabled();
-            await expandButton.click({ force: true });
-
-            await this.page
-                .getByRole("navigation")
-                .getByRole("combobox", {
-                    name: "Select language",
-                })
-                .selectOption(language);
-
-            return;
+            await this.toggleMenu();
         }
 
         await this.page
