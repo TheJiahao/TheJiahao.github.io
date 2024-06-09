@@ -8,14 +8,17 @@ export class HomePage {
         public readonly isMobile: boolean,
     ) {}
 
+    #getLanguage() {
+        return this.page.url().split("/").at(-1) || DEFAULT_LANGUAGE;
+    }
+
     async goto() {
         await this.page.goto("/");
     }
 
     async selectLanguage(language: string) {
         if (this.isMobile) {
-            const languageCode =
-                this.page.url().split("/").at(-1) || DEFAULT_LANGUAGE;
+            const languageCode = this.#getLanguage();
 
             const expandButton = this.page.getByRole("button", {
                 name: getTranslation(languageCode).showNavigationMenu,
