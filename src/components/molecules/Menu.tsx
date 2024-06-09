@@ -1,7 +1,18 @@
-import { Children, type PropsWithChildren } from "react";
+import { Children, type AriaAttributes, type PropsWithChildren } from "react";
 
-const Menu = ({ children }: PropsWithChildren) => (
-    <ul role="menu" flex="~ col" gap-3 p-4 items-center justify-center text-xl>
+interface MenuProps extends PropsWithChildren, AriaAttributes {}
+
+const Menu = ({ children, ...ariaProps }: MenuProps) => (
+    <ul
+        role="menu"
+        {...ariaProps}
+        flex="~ col"
+        gap-3
+        p-4
+        items-center
+        justify-center
+        text-xl
+    >
         {Children.map(children, (child) => (
             <li role="menuitem">{child}</li>
         ))}
