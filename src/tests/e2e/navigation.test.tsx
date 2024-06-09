@@ -50,7 +50,7 @@ test.describe("Navigation", () => {
         let expandButton: Locator;
 
         test.beforeEach(({ page }) => {
-            navigationToolBar = page.getByRole("menubar");
+            navigationToolBar = page.getByRole("toolbar");
             expandButton = navigationToolBar.getByRole("button", {
                 name: "显示导航菜单",
             });
@@ -70,27 +70,29 @@ test.describe("Navigation", () => {
             });
         });
 
-        test.describe("clicking expand button", () => {
-            test.beforeEach(async () => {
-                await expect(expandButton).toBeEnabled();
-
-                await expandButton.click({ force: true });
+        test.describe("navigation menu", () => {
+            test.beforeEach(async ({ homepage }) => {
+                await homepage.toggleMenu();
             });
 
-            test("shows navigation menu", async () => {
-                await expect(navigationBar.getByRole("menu")).toBeVisible();
+            test("can be expanded", async () => {
+                await expect(
+                    navigationBar.getByRole("toolbar"),
+                ).toHaveAttribute("aria-expanded", "true");
             });
 
-            test("navigation menu is not empty", async () => {
+            test("is not empty", async () => {
                 await expect(
                     navigationBar.getByRole("menuitem"),
                 ).not.toHaveCount(0);
             });
 
-            test("twice hides navigation menu", async () => {
-                await expandButton.click({ force: true });
+            test("can be collapsed", async ({ homepage }) => {
+                await homepage.toggleMenu();
 
-                await expect(navigationBar.getByRole("menu")).toBeHidden();
+                await expect(
+                    navigationBar.getByRole("toolbar"),
+                ).toHaveAttribute("aria-expanded", "false");
             });
         });
     });
