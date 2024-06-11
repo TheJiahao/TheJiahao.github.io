@@ -32,7 +32,7 @@ const blogs: BlogCardProps[] = getBlogs()
     description={getTranslation(language).siteDescription}
 >
     <HeadHrefLangs slot="head" />
-    <div min-w-md lg="grid grid-sidebars">
+    <div lg="grid grid-sidebars">
         <div un-hidden p-lg lg="block sticky top-0 h-screen">
             <NavigationBar {language} client:load />
         </div>
