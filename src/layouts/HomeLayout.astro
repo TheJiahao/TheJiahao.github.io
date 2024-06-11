@@ -10,6 +10,7 @@ import getBlogs from "utils/getBlogs";
 import { getTranslation } from "utils/getTranslation";
 import BaseLayout from "layouts/BaseLayout.astro";
 import { DEFAULT_LANGUAGE } from "config";
+import MobileNavigationBar from "components/organisms/MobileNavigationBar";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
@@ -31,8 +32,8 @@ const blogs: BlogCardProps[] = getBlogs()
     description={getTranslation(language).siteDescription}
 >
     <HeadHrefLangs slot="head" />
-    <div min-w-md flex="~ col-reverse" lg="grid grid-sidebars">
-        <div sticky bottom-0 z-1 p-lg lg="top-0 h-screen">
+    <div min-w-md lg="grid grid-sidebars">
+        <div un-hidden p-lg lg="block sticky top-0 h-screen">
             <NavigationBar {language} client:load />
         </div>
 
@@ -46,6 +47,10 @@ const blogs: BlogCardProps[] = getBlogs()
             </main>
 
             <SiteFooter {language} />
+        </div>
+
+        <div sticky bottom-0 p-lg block lg="hidden">
+            <MobileNavigationBar {language} client:load />
         </div>
     </div>
 </BaseLayout>
