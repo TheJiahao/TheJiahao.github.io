@@ -4,12 +4,6 @@
             <stop offset="10%" stop-color="rgba(0,0,0,0.4)" />
             <stop offset="60%" stop-color="rgba(0,0,0,0.1)" />
         </radialGradient>
-        <filter id="cheek-blur">
-            <feGaussianBlur stdDeviation="4" />
-        </filter>
-        <filter id="face-blur">
-            <feGaussianBlur stdDeviation="1" />
-        </filter>
     </defs>
 
     <g id="frame" fill="black">
@@ -22,7 +16,7 @@
             d="M 858 510 A 1 1 0 0 1 886 494 C 996 716 835 759 789 813 Q 770 893 762 981 A 1 1 0 0 1 725 978 Q 739 854 757 796 C 885 681 916 680 858 510 Z" />
     </g>
 
-    <g id="face" fill="black" filter="url(#face-blur)" shape-rendering="geometricPrecision">
+    <g id="face" fill="black" shape-rendering="geometricPrecision">
         <path
             d="M 317 412 Q 341 401 368 419 C 384 410 390 417 412 405 A 1 1 0 0 1 420 421 Q 403 432 370 427 C 357 425 366 436 326 430 Q 302 420 317 412 Z" />
         <path
@@ -39,7 +33,7 @@
         </g>
 
 
-        <g id="cheek" filter="url(#cheek-blur)" fill="url(#cheek-gradient)">
+        <g id="cheek" fill="url(#cheek-gradient)">
             <path
                 d="M 271 460 C 247 517 234 525 278 571 C 289 587 270 590 266 581 C 247 569 221 553 223 519 Q 233 478 257 459 Q 269 450 271 460 Z" />
             <path d="M 486 417 C 594 470 541 583 498 589 C 538 533 544 483 482 424 Q 476 414 486 417 Z" />
