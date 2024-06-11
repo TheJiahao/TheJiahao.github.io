@@ -33,7 +33,7 @@ const blogs: BlogCardProps[] = getBlogs()
     <HeadHrefLangs slot="head" />
     <div min-w-md flex="~ col-reverse" lg="grid grid-sidebars">
         <div sticky bottom-0 z-1 p-lg lg="top-0 h-screen">
-            <NavigationBar {language} client:idle />
+            <NavigationBar {language} client:load />
         </div>
 
         <div flex="~ col" gap-10 p-lg>
