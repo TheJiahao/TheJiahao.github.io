@@ -1,4 +1,4 @@
-import { expect, type Page } from "@playwright/test";
+import { type Page } from "@playwright/test";
 import { DEFAULT_LANGUAGE } from "config/languages";
 import { getTranslation } from "utils/getTranslation";
 
@@ -23,8 +23,7 @@ export class HomePage {
             name: getTranslation(languageCode).showNavigationMenu,
         });
 
-        await expect.soft(expandButton).toBeEnabled();
-        await expandButton.click({ force: true });
+        await expandButton.click();
     }
 
     async selectLanguage(language: string) {
