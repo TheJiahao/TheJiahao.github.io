@@ -8,20 +8,15 @@ type customAttributifyNames<Prefix extends string = ""> =
     | `${Prefix}${customAttributes}`
     | `${Prefix}${PseudoPrefix}:${customAttributes}`;
 
-type customAttribifyAttributes = Partial<
-    Record<customAttributifyNames, string | boolean>
->;
+type CustomAttribifyAttributes = AttributifyAttributes &
+    Partial<Record<customAttributifyNames, string | boolean>>;
 
 declare module "react" {
-    interface HTMLAttributes
-        extends AttributifyAttributes,
-            customAttribifyAttributes {}
+    interface HTMLAttributes extends CustomAttribifyAttributes {}
 }
 
 declare global {
     namespace astroHTML.JSX {
-        interface HTMLAttributes
-            extends AttributifyAttributes,
-                customAttribifyAttributes {}
+        interface HTMLAttributes extends CustomAttribifyAttributes {}
     }
 }
