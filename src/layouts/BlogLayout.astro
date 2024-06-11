@@ -20,28 +20,20 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout {title} {description} {image}>
-    <div lg="grid grid-sidebars">
-        <aside sticky top-0 z-1 p-6 lg="h-screen justify-self-end">
-            <BackButton {language} />
-        </aside>
+<BaseLayout {title} {description} {image} lg="grid grid-sidebars">
+    <aside sticky top-0 z-1 p-6 lg="h-screen justify-self-end">
+        <BackButton {language} />
+    </aside>
 
-        <div flex="~ col" py-6 gap-y-7>
-            <main flex="~ col" max-w-4xl gap-y-7>
-                <BlogArticle
-                    {title}
-                    {description}
-                    {date}
-                    {lastModified}
-                    {image}
-                >
-                    <slot />
-                </BlogArticle>
+    <div flex="~ col" py-6 gap-y-7>
+        <main flex="~ col" max-w-4xl gap-y-7>
+            <BlogArticle {title} {description} {date} {lastModified} {image}>
+                <slot />
+            </BlogArticle>
 
-                <LinkList {links} />
-            </main>
+            <LinkList {links} />
+        </main>
 
-            <SiteFooter {language} />
-        </div>
+        <SiteFooter {language} />
     </div>
 </BaseLayout>
