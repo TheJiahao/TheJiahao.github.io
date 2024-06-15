@@ -30,8 +30,7 @@ test.describe("Blog navigation", () => {
         test("clicking back button leads back to homepage", async ({
             page,
         }) => {
-            const backButton = page.getByRole("link", { name: "返回" });
-            await backButton.click();
+            await page.getByRole("link", { name: "返回" }).click();
 
             await expect(page).toHaveURL(/\/zh-cn\/$/);
         });
