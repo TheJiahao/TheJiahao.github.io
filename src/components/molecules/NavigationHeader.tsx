@@ -16,6 +16,7 @@ const NavigationHeader = ({
         <Avatar
             image={avatar}
             size="30"
+            alt={getTranslation(language).siteAvatar}
             url={getRelativeLocaleUrl(language, "/about")}
         />
 

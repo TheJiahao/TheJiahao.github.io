@@ -18,6 +18,7 @@ const zh_cn: Language = {
     showNavigationMenu: "显示导航菜单",
     navigationLinks: "导航链接",
     settings: "设置",
+    siteAvatar: "站长头像",
 };
 
 export default zh_cn;

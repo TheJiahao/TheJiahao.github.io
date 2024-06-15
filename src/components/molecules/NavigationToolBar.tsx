@@ -24,6 +24,7 @@ const NavigationToolBar = ({
         <Avatar
             image={avatar}
             size="15"
+            alt={getTranslation(language).siteAvatar}
             url={getRelativeLocaleUrl(language, "/about")}
         />
 

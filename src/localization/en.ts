@@ -15,6 +15,7 @@ const en = {
     showNavigationMenu: "Show navigation menu",
     navigationLinks: "Navigation links",
     settings: "Settings",
+    siteAvatar: "Avatar of the site owner",
 };
 
 export default en;

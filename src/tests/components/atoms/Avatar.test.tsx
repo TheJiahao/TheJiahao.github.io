@@ -6,7 +6,7 @@ import { describe, expect, test } from "vitest";
 describe("<Avatar/>", () => {
     describe("can display", () => {
         test("local image", () => {
-            render(<Avatar image={SITE_AVATAR} size="20" />);
+            render(<Avatar image={SITE_AVATAR} size="20" alt="local image" />);
 
             expect(screen.getByRole("img"), "image is correct").toHaveAttribute(
                 "src",
@@ -22,7 +22,7 @@ describe("<Avatar/>", () => {
                 format: "jpg",
             });
 
-            render(<Avatar image={image} size="30" />);
+            render(<Avatar image={image} size="30" alt="remote image" />);
 
             expect(screen.getByRole("img"), "image is correct").toHaveAttribute(
                 "src",
@@ -32,7 +32,7 @@ describe("<Avatar/>", () => {
     });
 
     test("has alt", () => {
-        render(<Avatar image={SITE_AVATAR} size="20" />);
+        render(<Avatar image={SITE_AVATAR} size="20" alt="Avatar" />);
 
         expect(screen.getByRole("img")).toHaveAttribute(
             "alt",
@@ -41,7 +41,7 @@ describe("<Avatar/>", () => {
     });
 
     test("has correct size", () => {
-        render(<Avatar image={SITE_AVATAR} size="50" />);
+        render(<Avatar image={SITE_AVATAR} size="50" alt="Avatar" />);
 
         expect(screen.getByRole("img")).toHaveAttribute("size", "50");
     });

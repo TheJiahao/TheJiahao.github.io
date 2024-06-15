@@ -2,6 +2,7 @@ import type { FC, PropsWithChildren } from "react";
 
 interface AvatarProps {
     image: ImageMetadata;
+    alt: string;
     /** Avatar size in Tailwind format */
     size: string;
     /** URL to navigate when clicking avatar */
@@ -12,11 +13,11 @@ const ConditionalLink: FC<PropsWithChildren<{ url?: string }>> = ({
     url,
 }) => (url ? <a href={url}>{children}</a> : <>{children}</>);
 
-const Avatar = ({ image, size, url }: AvatarProps) => (
+const Avatar = ({ image, size, url, alt }: AvatarProps) => (
     <ConditionalLink url={url}>
         <img
             {...image}
-            alt="Avatar"
+            alt={alt}
             size={size}
             drop-shadow-md
             rounded-full
