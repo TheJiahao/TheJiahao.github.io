@@ -4,11 +4,13 @@ import SettingsMenu from "components/molecules/SettingsMenu";
 import { DEFAULT_LANGUAGE } from "config";
 import { useState } from "react";
 
-interface NavigationBarProps {
+interface MobileNavigationBarProps {
     language?: string;
 }
 
-const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
+const MobileNavigationBar = ({
+    language = DEFAULT_LANGUAGE,
+}: MobileNavigationBarProps) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpand = () => {
@@ -44,4 +46,4 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
     );
 };
 
-export default NavigationBar;
+export default MobileNavigationBar;
