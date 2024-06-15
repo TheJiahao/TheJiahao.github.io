@@ -15,7 +15,7 @@ interface Props {
 const { title, description, date, lastModified, image } = Astro.props;
 ---
 
-<article prose min-w-40ch max-w-full card>
+<article prose max-w-full card>
     <header>
         <CoverImage {image} {title} />
         <BlogDetails {title} {description} {date} />
