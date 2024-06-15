@@ -30,27 +30,27 @@ const blogs: BlogCardProps[] = getBlogs()
 <BaseLayout
     title={getTranslation(language).siteTitle}
     description={getTranslation(language).siteDescription}
-    lg="grid grid-sidebars"
 >
     <HeadHrefLangs slot="head" />
-
-    <div un-hidden p-lg lg="block sticky top-0 h-screen">
-        <NavigationBar {language} client:load />
-    </div>
-
-    <div flex="~ col" gap-10 p-lg>
-        <div un-hidden lg="flex flex-none">
-            <ToolBar {language} client:load />
+    <div lg="grid grid-sidebars">
+        <div un-hidden p-lg lg="block sticky top-0 h-screen">
+            <NavigationBar {language} client:load />
         </div>
 
-        <main lg="max-w-4xl">
-            <BlogList {blogs} />
-        </main>
+        <div flex="~ col" gap-10 p-lg>
+            <div un-hidden lg="flex flex-none">
+                <ToolBar {language} client:load />
+            </div>
 
-        <SiteFooter {language} />
-    </div>
+            <main lg="max-w-4xl">
+                <BlogList {blogs} />
+            </main>
 
-    <div sticky bottom-0 p-lg block lg="hidden">
-        <MobileNavigationBar {language} client:load />
+            <SiteFooter {language} />
+        </div>
+
+        <div sticky bottom-0 p-lg block lg="hidden">
+            <MobileNavigationBar {language} client:load />
+        </div>
     </div>
 </BaseLayout>
