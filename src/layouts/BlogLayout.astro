@@ -22,11 +22,11 @@ const {
 
 <BaseLayout {title} {description} {image}>
     <div lg="grid grid-sidebars">
-        <aside sticky top-0 z-1 p-6 lg="h-screen justify-self-end">
+        <aside sticky top-0 z-1 p-lg lg="h-screen justify-self-end">
             <BackButton {language} />
         </aside>
 
-        <div flex="~ col" py-6 gap-y-7>
+        <div flex="~ col" p-lg gap-y-7>
             <main flex="~ col" max-w-4xl gap-y-7>
                 <BlogArticle
                     {title}
