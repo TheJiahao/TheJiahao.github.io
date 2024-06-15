@@ -32,6 +32,7 @@ const NavigationToolBar = ({
         <MenuButton
             onClick={handleExpand}
             aria-label={getTranslation(language).showNavigationMenu}
+            justify-self-end
         />
     </div>
 );
