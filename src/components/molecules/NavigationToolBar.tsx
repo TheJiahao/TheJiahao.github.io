@@ -23,7 +23,15 @@ const NavigationToolBar = ({
     const disabled = !useHydrationState();
 
     return (
-        <div role={role} {...props} grid grid-cols-3 items-center>
+        <div
+            role={role}
+            {...props}
+            w-full
+            bg-white
+            grid
+            grid-cols-3
+            items-center
+        >
             <a href={getRelativeLocaleUrl(language, "/about")}>
                 <Avatar image={avatar} size="15" />
             </a>

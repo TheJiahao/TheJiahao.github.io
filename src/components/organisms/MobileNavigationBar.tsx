@@ -33,14 +33,13 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                 <SettingsMenu language={language} />
                 <NavigationMenu language={language} />
             </div>
-            <div w-full bg-white>
-                <NavigationToolBar
-                    language={language}
-                    handleExpand={handleExpand}
-                    aria-haspopup="menu"
-                    aria-expanded={expanded}
-                />
-            </div>
+
+            <NavigationToolBar
+                language={language}
+                handleExpand={handleExpand}
+                aria-haspopup="menu"
+                aria-expanded={expanded}
+            />
         </nav>
     );
 };
