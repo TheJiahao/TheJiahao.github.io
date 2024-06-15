@@ -19,7 +19,7 @@ test.describe("Blog navigation", () => {
     });
 
     test.describe("after clicking blog card", () => {
-        test.beforeEach("clicking a blog leads to blog post", async () => {
+        test.beforeEach(async () => {
             await blogList.getByRole("listitem").first().click();
         });
 
