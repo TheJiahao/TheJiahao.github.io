@@ -16,7 +16,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
     };
 
     return (
-        <nav card p-4 flex="~ col" gap-4 items-center>
+        <nav card p-sm flex="~ col" items-center>
             <div
                 className={
                     expanded
@@ -27,6 +27,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => {
                 transition-all
                 duration-150
                 ease-in-out
+                w-full
                 divide-y
             >
                 <SettingsMenu language={language} />
