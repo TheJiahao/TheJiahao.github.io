@@ -12,7 +12,6 @@ const MenuButton = (
         un-disabled="animate-spin i-lucide-loader-circle size-15"
         justify-self-end
         size-15
-        lg="hidden"
     />
 );
 
