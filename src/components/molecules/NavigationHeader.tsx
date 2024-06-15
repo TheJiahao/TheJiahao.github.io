@@ -13,9 +13,11 @@ const NavigationHeader = ({
     avatar = SITE_AVATAR,
 }: InfoCardProps) => (
     <>
-        <a href={getRelativeLocaleUrl(language, "/about")}>
-            <Avatar image={avatar} size="30" />
-        </a>
+        <Avatar
+            image={avatar}
+            size="30"
+            url={getRelativeLocaleUrl(language, "/about")}
+        />
 
         <h1 className="hidden" lg="block text-center text-xl font-bold">
             {getTranslation(language).siteTitle}

@@ -32,9 +32,11 @@ const NavigationToolBar = ({
             grid-cols-3
             items-center
         >
-            <a href={getRelativeLocaleUrl(language, "/about")}>
-                <Avatar image={avatar} size="15" />
-            </a>
+            <Avatar
+                image={avatar}
+                size="15"
+                url={getRelativeLocaleUrl(language, "/about")}
+            />
 
             <div />
 
