@@ -10,20 +10,7 @@ export default defineConfig({
     fullyParallel: true,
     forbidOnly: !!process.env.CI,
     workers: "75%",
-    reporter: process.env.CI
-        ? [
-              ["line"],
-              ["html", { open: "never" }],
-              [
-                  "@estruyf/github-actions-reporter",
-                  {
-                      title: "End-to-end test results",
-                      useDetails: true,
-                      showError: true,
-                  },
-              ],
-          ]
-        : [["line"], ["html"]],
+    reporter: process.env.CI ? [["line"], ["blob"]] : [["line"], ["html"]],
     retries: 1,
     timeout: 10000,
     maxFailures: process.env.CI ? 5 : undefined,

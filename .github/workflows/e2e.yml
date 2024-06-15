@@ -3,9 +3,14 @@ on:
   workflow_call:
 
 jobs:
-  e2e_test:
+  test:
     name: End-to-end test
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3, 4, 5, 6, 7, 8]
+        shardTotal: [8]
 
     container: mcr.microsoft.com/playwright:v1.44.1-jammy
     environment: test
@@ -22,17 +27,45 @@ jobs:
         run: chown -R $(id -u):$(id -g) $PWD
 
       - name: Run tests
-        run: pnpm run test:e2e
+        run: pnpm run test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
         env:
           HOME: /root
 
-      - name: Upload test results
+      - name: Upload blob report
+        if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
-        if: failure()
         with:
-          name: e2e-test-results
-          path: |
-            test-results
-            playwright-report/
+          name: blob-report-${{ matrix.shardIndex }}
+          path: blob-report
+          retention-days: 1
 
+  merge_reports:
+    if: ${{ !cancelled() }}
+    needs: [test]
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up
+        uses: ./.github/workflows/setup-action
+
+      - name: Change ownership
+        run: chown -R $(id -u):$(id -g) $PWD
+
+      - name: Download blob reports
+        uses: actions/download-artifact@v4
+        with:
+          path: all-blob-reports
+          pattern: blob-report-*
+          merge-multiple: true
+
+      - name: Merge into HTML Report
+        run: pnpm exec playwright merge-reports --config=playwright-merge.config.ts ./all-blob-reports
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-report--attempt-${{ github.run_attempt }}
+          path: playwright-report
           retention-days: 30
