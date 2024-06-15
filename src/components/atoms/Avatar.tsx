@@ -7,23 +7,22 @@ interface AvatarProps {
     /** URL to navigate when clicking avatar */
     url?: string;
 }
+const ConditionalLink: FC<PropsWithChildren<{ url?: string }>> = ({
+    children,
+    url,
+}) => (url ? <a href={url}>{children}</a> : <>{children}</>);
 
-const Avatar = ({ image, size, url }: AvatarProps) => {
-    const Parent: FC<PropsWithChildren> = ({ children }) =>
-        url ? <a href={url}>{children}</a> : <>{children}</>;
-
-    return (
-        <Parent>
-            <img
-                {...image}
-                alt="Avatar"
-                size={size}
-                drop-shadow-md
-                rounded-full
-                object-contain
-            />
-        </Parent>
-    );
-};
+const Avatar = ({ image, size, url }: AvatarProps) => (
+    <ConditionalLink url={url}>
+        <img
+            {...image}
+            alt="Avatar"
+            size={size}
+            drop-shadow-md
+            rounded-full
+            object-contain
+        />
+    </ConditionalLink>
+);
 
 export default Avatar;
