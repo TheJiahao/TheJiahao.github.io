@@ -1,0 +1,21 @@
+---
+import MobileNavigationBar from "components/organisms/MobileNavigationBar";
+import NavigationBar from "components/organisms/NavigationBar";
+import { DEFAULT_LANGUAGE } from "config";
+import BaseLayout from "layouts/BaseLayout.astro";
+import { type Props } from "components/atoms/BaseHeader.astro";
+
+const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
+---
+
+<BaseLayout {...Astro.props}>
+    <div slot="left-sidebar" un-hidden p-lg lg="block sticky top-0 h-screen">
+        <NavigationBar {language} client:load />
+    </div>
+
+    <slot />
+
+    <div sticky bottom-0 p-lg block lg="hidden">
+        <MobileNavigationBar {language} client:load />
+    </div>
+</BaseLayout>
