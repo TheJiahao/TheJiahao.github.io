@@ -20,6 +20,7 @@ const MobileNavigationBar = ({
     return (
         <nav card p-sm flex="~ col" items-center>
             <div
+                role="menu"
                 className={
                     expanded
                         ? "max-h-screen opacity-100 visible"
