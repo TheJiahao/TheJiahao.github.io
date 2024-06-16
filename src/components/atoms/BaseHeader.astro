@@ -2,53 +2,54 @@
 import type { ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import { ViewTransitions } from "astro:transitions";
-import { SEO } from "astro-seo";
+import { SEO, type SEOProps } from "astro-seo";
 
-export interface Props {
+export interface Props extends SEOProps {
     title: string;
     description?: string;
     image?: ImageMetadata;
-    noindex?: boolean;
 }
 
 const {
     title,
     description,
     image = BLOG_IMAGE_PLACEHOLDER,
-    noindex,
-} = Astro.props;
-
-const imageURL = new URL(image.src, Astro.url).toString();
----
-
-<SEO
-    {title}
-    {description}
-    {noindex}
-    charset="utf-8"
-    openGraph={{
+    charset = "utf-8",
+    openGraph = {
         basic: {
             type: "website",
             title,
-            image: imageURL,
+            image: new URL(image.src, Astro.url).toString(),
         },
         optional: {
             description,
         },
-    }}
-    twitter={{
+    },
+    twitter = {
         card: "summary_large_image",
         title,
-        image: imageURL,
+        image: new URL(image.src, Astro.url).toString(),
         description,
-    }}
-    extend={{
+    },
+    extend = {
         meta: [
             { name: "viewport", content: "width=device-width,initial-scale=1" },
             { name: "twitter:url", content: Astro.url.toString() },
         ],
         link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
-    }}
+    },
+    ...props
+} = Astro.props;
+---
+
+<SEO
+    {title}
+    {description}
+    {charset}
+    {openGraph}
+    {twitter}
+    {extend}
+    {...props}
 />
 
 <ViewTransitions />
