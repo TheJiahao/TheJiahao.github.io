@@ -16,14 +16,10 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
 const blogs: BlogCardProps[] = getBlogs()
     .filter(({ data }) => data.language === language)
-    .map((blog) => {
-        const { data, slug } = blog;
-
-        return {
-            ...data,
-            url: getRelativeLocaleUrl(language, `posts/${slug}`),
-        };
-    })
+    .map(({ data, slug }) => ({
+        ...data,
+        url: getRelativeLocaleUrl(language, `posts/${slug}`),
+    }))
     .sort((a, b) => +b.date - +a.date);
 ---
 
