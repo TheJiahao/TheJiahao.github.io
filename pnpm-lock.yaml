@@ -41,6 +41,9 @@ importers:
       astro:
         specifier: ^4.9.2
         version: 4.9.2(@types/node@20.14.2)(sass@1.77.1)(typescript@5.4.5)
+      astro-seo:
+        specifier: ^0.8.4
+        version: 0.8.4(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.4.5)
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -156,6 +159,12 @@ packages:
 
   '@antfu/utils@0.7.8':
     resolution: {integrity: sha512-rWQkqXRESdjXtc+7NRfK9lASQjpXJu1ayp7qi1d23zZorY+wBHVLHHoVcMsEnkqEBWTFqbztO7/QdJFzyEcLTg==}
+
+  '@astrojs/check@0.5.10':
+    resolution: {integrity: sha512-vliHXM9cu/viGeKiksUM4mXfO816ohWtawTl2ADPgTsd4nUMjFiyAl7xFZhF34yy4hq4qf7jvK1F2PlR3b5I5w==}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
 
   '@astrojs/check@0.7.0':
     resolution: {integrity: sha512-UTqwOeKNu9IYZmJXEeWnQuTdSd/pX58Hl4TUARsMlT97SVDL//kLBE4T/ctxRz6J573N87oE5ddtW/uOOnQTug==}
@@ -1612,6 +1621,9 @@ packages:
   astro-eslint-parser@1.0.2:
     resolution: {integrity: sha512-8hJaCuqxObShWl2wEsnASqh/DbQ2O+S66m0Q3ctJlzBPEQ4pfGwwama3FCjZO3GDLQsjvn1T0v93Vxyu/+5fGw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  astro-seo@0.8.4:
+    resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
   astro@4.9.2:
     resolution: {integrity: sha512-apzpRoISk6L8g99m3zKIW5SYxw2GhOju/1Gq0Ccf3SH+X2UcFXF+MTdxPOFl5yJUQg7X0qsVQDOIVf8zHRRKFg==}
@@ -4667,6 +4679,18 @@ snapshots:
 
   '@antfu/utils@0.7.8': {}
 
+  '@astrojs/check@0.5.10(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.4.5)':
+    dependencies:
+      '@astrojs/language-server': 2.10.0(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.4.5)
+      chokidar: 3.6.0
+      fast-glob: 3.3.2
+      kleur: 4.1.5
+      typescript: 5.4.5
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+
   '@astrojs/check@0.7.0(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.4.5)':
     dependencies:
       '@astrojs/language-server': 2.10.0(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.4.5)
@@ -6327,6 +6351,14 @@ snapshots:
       semver: 7.6.2
     transitivePeerDependencies:
       - supports-color
+      - typescript
+
+  astro-seo@0.8.4(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.4.5):
+    dependencies:
+      '@astrojs/check': 0.5.10(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.4.5)
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
       - typescript
 
   astro@4.9.2(@types/node@20.14.2)(sass@1.77.1)(typescript@5.4.5):
