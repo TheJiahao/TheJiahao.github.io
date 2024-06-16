@@ -10,7 +10,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
 <BaseLayout {...Astro.props}>
     <div slot="left-sidebar" un-hidden p-lg lg="block sticky top-0 h-screen">
-        <NavigationBar {language} client:load />
+        <NavigationBar {language} />
     </div>
 
     <slot />
