@@ -7,6 +7,7 @@ type BlogData = CollectionEntry<"posts">["data"] & {
 };
 
 type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
+    /** Blog slug without language */
     slug: string;
     data: BlogData;
 };
