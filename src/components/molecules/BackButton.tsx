@@ -4,14 +4,16 @@ import { getTranslation } from "utils/getTranslation";
 
 interface BackButtonProps {
     language: string;
+    label?: string;
 }
 
-const BackButton = ({ language }: BackButtonProps) => {
+const BackButton = ({
+    language,
+    label = getTranslation(language).back,
+}: BackButtonProps) => {
     return (
         <a href={getRelativeLocaleUrl(language, "/")} inline-flex card p-2>
-            <IconComponent icon="i-lucide:chevron-left">
-                {getTranslation(language).back}
-            </IconComponent>
+            <IconComponent icon="i-lucide:chevron-left">{label}</IconComponent>
         </a>
     );
 };

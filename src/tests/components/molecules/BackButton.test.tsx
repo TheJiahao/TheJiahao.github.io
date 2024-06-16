@@ -11,4 +11,10 @@ describe("<BackButton/>", () => {
             expect.stringMatching(/\/zh-cn?\/$/),
         );
     });
+
+    test("shows custom label", () => {
+        render(<BackButton language="zh-cn" label="Labeled button" />);
+
+        expect(screen.getByRole("link")).toHaveTextContent("Labeled button");
+    });
 });
