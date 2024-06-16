@@ -32,25 +32,24 @@ const blogs: BlogCardProps[] = getBlogs()
     description={getTranslation(language).siteDescription}
 >
     <HeadHrefLangs slot="head" />
-    <div lg="grid grid-sidebars">
-        <div un-hidden p-lg lg="block sticky top-0 h-screen">
-            <NavigationBar {language} client:load />
+
+    <div slot="left-sidebar" un-hidden p-lg lg="block sticky top-0 h-screen">
+        <NavigationBar {language} client:load />
+    </div>
+
+    <div flex="~ col" gap-10 p-lg>
+        <div un-hidden lg="flex flex-none">
+            <ToolBar {language} client:load />
         </div>
 
-        <div flex="~ col" gap-10 p-lg>
-            <div un-hidden lg="flex flex-none">
-                <ToolBar {language} client:load />
-            </div>
+        <main lg="max-w-4xl">
+            <BlogList {blogs} />
+        </main>
 
-            <main lg="max-w-4xl">
-                <BlogList {blogs} />
-            </main>
+        <SiteFooter {language} />
+    </div>
 
-            <SiteFooter {language} />
-        </div>
-
-        <div sticky bottom-0 p-lg block lg="hidden">
-            <MobileNavigationBar {language} client:load />
-        </div>
+    <div sticky bottom-0 p-lg block lg="hidden">
+        <MobileNavigationBar {language} client:load />
     </div>
 </BaseLayout>

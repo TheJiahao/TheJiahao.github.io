@@ -21,27 +21,26 @@ const {
 ---
 
 <BaseLayout {title} {description} {image}>
-    <div lg="grid grid-sidebars">
-        <aside sticky top-0 z-1 p-lg lg="h-screen justify-self-end">
-            <BackButton {language} />
-        </aside>
+    <aside
+        slot="left-sidebar"
+        sticky
+        top-0
+        z-1
+        p-lg
+        lg="h-screen justify-self-end"
+    >
+        <BackButton {language} />
+    </aside>
 
-        <div flex="~ col" p-lg gap-y-7>
-            <main flex="~ col" max-w-4xl gap-y-7>
-                <BlogArticle
-                    {title}
-                    {description}
-                    {date}
-                    {lastModified}
-                    {image}
-                >
-                    <slot />
-                </BlogArticle>
+    <div flex="~ col" p-lg gap-y-7>
+        <main flex="~ col" max-w-4xl gap-y-7>
+            <BlogArticle {title} {description} {date} {lastModified} {image}>
+                <slot />
+            </BlogArticle>
 
-                <LinkList {links} />
-            </main>
+            <LinkList {links} />
+        </main>
 
-            <SiteFooter {language} />
-        </div>
+        <SiteFooter {language} />
     </div>
 </BaseLayout>
