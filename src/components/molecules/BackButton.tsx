@@ -18,7 +18,7 @@ const BackButton = ({
             href={getRelativeLocaleUrl(language, "/")}
             inline-flex
             card
-            p-2
+            p-3
             text={fontSize}
         >
             <IconComponent icon="i-lucide:chevron-left">{label}</IconComponent>
