@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "*.css": "tailwindcss",
+        "*.css": "css",
         "*.yml": "github-actions-workflow"
     },
     "[github-actions-workflow]": {
