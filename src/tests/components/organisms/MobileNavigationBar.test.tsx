@@ -16,7 +16,7 @@ describe("<MobileNavigationBar/>", () => {
         });
     });
 
-    describe("navigation menu", () => {
+    describe("menu", () => {
         beforeEach(() => {
             toolBar = screen.getByRole("toolbar");
         });
