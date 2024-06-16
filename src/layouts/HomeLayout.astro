@@ -1,5 +1,5 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
 import type { BlogCardProps } from "components/organisms/BlogCard";
 import BlogList from "components/organisms/BlogList";
 import HeadHrefLangs from "components/atoms/HeadHrefLangs.astro";
@@ -11,6 +11,7 @@ import { getTranslation } from "utils/getTranslation";
 import BaseLayout from "layouts/BaseLayout.astro";
 import { DEFAULT_LANGUAGE } from "config";
 import MobileNavigationBar from "components/organisms/MobileNavigationBar";
+import { languageCodes } from "localization";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
@@ -21,14 +22,18 @@ const blogs: BlogCardProps[] = getBlogs()
         url: getRelativeLocaleUrl(language, `posts/${slug}`),
     }))
     .sort((a, b) => +b.date - +a.date);
+
+const languageAlternates = languageCodes.map((code) => ({
+    hrefLang: code,
+    href: getAbsoluteLocaleUrl(code, "/"),
+}));
 ---
 
 <BaseLayout
     title={getTranslation(language).siteTitle}
     description={getTranslation(language).siteDescription}
+    {languageAlternates}
 >
-    <HeadHrefLangs slot="head" />
-
     <div slot="left-sidebar" un-hidden p-lg lg="block sticky top-0 h-screen">
         <NavigationBar {language} client:load />
     </div>
