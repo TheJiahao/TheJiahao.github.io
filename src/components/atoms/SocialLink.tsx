@@ -12,7 +12,7 @@ const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
         size-10
         block
         target="_blank"
-        rel="noopener noreferrer"
+        rel="me noopener noreferrer"
     />
 );
 
