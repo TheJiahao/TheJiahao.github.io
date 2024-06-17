@@ -1,5 +1,6 @@
 import NavigationHeader from "components/molecules/NavigationHeader";
 import NavigationMenu from "components/molecules/NavigationMenu";
+import SocialMenu from "components/molecules/SocialMenu";
 import { DEFAULT_LANGUAGE } from "config";
 
 interface NavigationBarProps {
@@ -12,6 +13,7 @@ const NavigationBar = ({ language = DEFAULT_LANGUAGE }: NavigationBarProps) => (
             <NavigationHeader language={language} />
         </header>
 
+        <SocialMenu language={language} />
         <NavigationMenu language={language} />
     </nav>
 );
