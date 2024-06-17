@@ -5,7 +5,15 @@ interface SocialLinkProps {
 }
 
 const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
-    <a className={icon} href={url} title={title} size-10 block />
+    <a
+        className={icon}
+        href={url}
+        title={title}
+        size-10
+        block
+        target="_blank"
+        rel="noopener noreferrer"
+    />
 );
 
 export default SocialLink;
