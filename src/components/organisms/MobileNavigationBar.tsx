@@ -1,6 +1,7 @@
 import NavigationMenu from "components/molecules/NavigationMenu";
 import NavigationToolBar from "components/molecules/NavigationToolBar";
 import SettingsMenu from "components/molecules/SettingsMenu";
+import SocialMenu from "components/molecules/SocialMenu";
 import { DEFAULT_LANGUAGE } from "config";
 import { useState } from "react";
 
@@ -34,6 +35,7 @@ const MobileNavigationBar = ({
                 divide-y
             >
                 <SettingsMenu language={language} />
+                <SocialMenu language={language} />
                 <NavigationMenu language={language} />
             </div>
 
