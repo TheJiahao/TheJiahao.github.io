@@ -27,8 +27,8 @@ importers:
         specifier: ^1.1.16
         version: 1.1.16
       '@iconify-json/logos':
-        specifier: ^1.1.42
-        version: 1.1.42
+        specifier: ^1.1.43
+        version: 1.1.43
       '@iconify-json/lucide':
         specifier: ^1.1.191
         version: 1.1.191
@@ -859,8 +859,8 @@ packages:
   '@iconify-json/fluent-emoji-flat@1.1.16':
     resolution: {integrity: sha512-rfag8s2Ippaos57BC8huT6cVc0oWkvYaLDl0lokVX2EsS7VakKEvUlJ20CqaKiPTuaccWRthlCbjEq8XfLHDHw==}
 
-  '@iconify-json/logos@1.1.42':
-    resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
+  '@iconify-json/logos@1.1.43':
+    resolution: {integrity: sha512-UtvL1yDHUr9dl1Tqihh6K9m5dmbYKOYyLf3i9aKhymSW76QjOCGjpgQc0PQ4GJCAdU1cAMu+WO61TgPxdonrlg==}
 
   '@iconify-json/lucide@1.1.191':
     resolution: {integrity: sha512-lF5GibjcXCJRTnYVQhmtMZxRGZAVXACTsR1qe9Zlfqje0zW4+HVZqPPqqqxTYCDpvXCGNCuDhz2lUWI+mtW9Pw==}
@@ -5469,7 +5469,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/logos@1.1.42':
+  '@iconify-json/logos@1.1.43':
     dependencies:
       '@iconify/types': 2.0.0
 
