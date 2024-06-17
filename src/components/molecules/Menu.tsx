@@ -8,13 +8,20 @@ import {
 interface MenuProps
     extends PropsWithChildren,
         HTMLAttributes<HTMLUListElement>,
-        AriaAttributes {}
+        AriaAttributes {
+    direction?: "row" | "col";
+}
 
-const Menu = ({ children, role = "menu", ...props }: MenuProps) => (
+const Menu = ({
+    children,
+    role = "menu",
+    direction = "col",
+    ...props
+}: MenuProps) => (
     <ul
         role={role}
         {...props}
-        flex="~ col"
+        flex={`~ ${direction}`}
         gap-3
         p-4
         items-center
