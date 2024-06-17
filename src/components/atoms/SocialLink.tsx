@@ -8,6 +8,7 @@ const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
     <a
         className={icon}
         href={url}
+        aria-label={title}
         title={title}
         size-10
         block
