@@ -14,7 +14,7 @@ const SocialMenu = ({
     links = SOCIAL_LINKS,
     language = DEFAULT_LANGUAGE,
 }: SocialMenuProps) => (
-    <Menu>
+    <Menu direction="row">
         {links.map(({ url, ...props }) => (
             <SocialLink
                 key={url}
