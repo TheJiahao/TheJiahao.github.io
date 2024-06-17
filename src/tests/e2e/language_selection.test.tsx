@@ -12,14 +12,16 @@ test.describe("Language selection", () => {
         await expect(page).toHaveURL(/en?\//);
     });
 
-    test("language can be changed back to Chinese", async ({
-        homepage,
-        page,
-    }) => {
-        await page.goto("/en");
+    test.describe("in English homepage", () => {
+        test.use({ languageCode: "en" });
 
-        await homepage.selectLanguage("简体中文");
+        test("language can be changed to Chinese", async ({
+            homepage,
+            page,
+        }) => {
+            await homepage.selectLanguage("简体中文");
 
-        await expect(page).toHaveURL(/zh-cn?\//);
+            await expect(page).toHaveURL(/zh-cn?\//);
+        });
     });
 });

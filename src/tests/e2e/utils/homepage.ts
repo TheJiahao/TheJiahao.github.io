@@ -1,26 +1,20 @@
 import { type Page } from "@playwright/test";
-import { DEFAULT_LANGUAGE } from "config/languages";
 import { getTranslation } from "utils/getTranslation";
 
 export class HomePage {
     constructor(
         public readonly page: Page,
         public readonly isMobile: boolean,
+        public readonly languageCode: string,
     ) {}
 
-    #getLanguage() {
-        return this.page.url().split("/").at(-1) || DEFAULT_LANGUAGE;
-    }
-
     async goto() {
-        await this.page.goto("/");
+        await this.page.goto(`/${this.languageCode}`);
     }
 
     async toggleMenu() {
-        const languageCode = this.#getLanguage();
-
         const expandButton = this.page.getByRole("button", {
-            name: getTranslation(languageCode).showNavigationMenu,
+            name: getTranslation(this.languageCode).showNavigationMenu,
         });
 
         await expandButton.click();
