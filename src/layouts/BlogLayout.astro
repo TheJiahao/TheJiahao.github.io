@@ -6,6 +6,9 @@ import SiteFooter from "components/molecules/SiteFooter";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import type { BlogData } from "utils/getBlogs";
 import BaseLayout from "layouts/BaseLayout.astro";
+import CoverImage from "components/atoms/CoverImage";
+import BlogDetails from "components/molecules/BlogDetails";
+import BlogFooter from "components/molecules/BlogFooter.astro";
 
 type Props = BlogData;
 
@@ -34,8 +37,15 @@ const {
 
     <div flex="~ col" p-lg gap-y-7>
         <main flex="~ col" max-w-4xl gap-y-7>
-            <Article {title} {description} {date} {lastModified} {image}>
+            <Article>
+                <header slot="header">
+                    <CoverImage {image} {title} />
+                    <BlogDetails {title} {description} {date} />
+                </header>
+
                 <slot />
+
+                <BlogFooter slot="footer" {lastModified} />
             </Article>
 
             <LinkList {links} />
