@@ -9,6 +9,7 @@ interface MenuProps
     extends PropsWithChildren,
         HTMLAttributes<HTMLUListElement>,
         AriaAttributes {
+    /** Child component direction, defaults to column. */
     direction?: "row" | "col";
 }
 
