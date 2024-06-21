@@ -27,4 +27,5 @@ export default defineConfig({
             ],
         },
     },
+    safelist: ["size-15", "size-30", "size-40"],
 });
