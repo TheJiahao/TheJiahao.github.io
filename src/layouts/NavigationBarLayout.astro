@@ -15,7 +15,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
     <slot />
 
-    <div sticky bottom-0 p-lg block lg="hidden">
+    <div sticky mt-auto bottom-0 p-lg block lg="hidden">
         <MobileNavigationBar {language} client:load />
     </div>
 </BaseLayout>

@@ -9,7 +9,7 @@ import { DEFAULT_LANGUAGE } from "config";
         <BaseHeader {...Astro.props} />
         <slot name="head" />
     </head>
-    <body lg="grid grid-sidebars">
+    <body h-screen flex="~ col" lg="grid grid-sidebars">
         <slot name="left-sidebar">
             <div></div>
         </slot>
