@@ -21,7 +21,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 <NavigationBarLayout {title}>
     <ContentLayout>
         <Article>
-            <header slot="header" flex="~ col" items-center>
+            <header slot="header" flex="~ col" items-center px-lg pt-lg>
                 <Avatar
                     image={SITE_AVATAR}
                     alt={getTranslation(language).siteAvatar}
