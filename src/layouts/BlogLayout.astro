@@ -7,6 +7,7 @@ import Article from "components/organisms/Article.astro";
 import LinkList from "components/organisms/LinkList";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import BaseLayout from "layouts/BaseLayout.astro";
+import ContentLayout from "layouts/ContentLayout.astro";
 import type { BlogData } from "utils/getBlogs";
 
 type Props = BlogData;
@@ -34,25 +35,13 @@ const {
         <BackButton {language} />
     </aside>
 
-    <div flex="~ col" p-lg gap-y-7>
-        <main flex="~ col" max-w-4xl gap-y-7>
-            <Article>
-                <BlogHeader
-                    slot="header"
-                    {title}
-                    {description}
-                    {date}
-                    {image}
-                />
+    <ContentLayout>
+        <Article>
+            <BlogHeader slot="header" {title} {description} {date} {image} />
+            <slot />
+            <BlogFooter slot="footer" {lastModified} />
+        </Article>
 
-                <slot />
-
-                <BlogFooter slot="footer" {lastModified} />
-            </Article>
-
-            <LinkList {links} />
-        </main>
-
-        <SiteFooter {language} />
-    </div>
+        <LinkList {links} />
+    </ContentLayout>
 </BaseLayout>

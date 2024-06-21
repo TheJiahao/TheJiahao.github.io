@@ -1,0 +1,14 @@
+---
+import SiteFooter from "components/molecules/SiteFooter";
+import { DEFAULT_LANGUAGE } from "config";
+
+const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
+---
+
+<div flex="~ col" p-lg gap-y-7>
+    <main flex="~ col" max-w-4xl gap-y-7>
+        <slot />
+    </main>
+
+    <SiteFooter {language} />
+</div>
