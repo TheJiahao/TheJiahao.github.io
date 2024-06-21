@@ -32,7 +32,7 @@ export default defineConfig({
         locales: languageCodes,
         routing: {
             prefixDefaultLocale: true,
-            redirectToDefaultLocale: false,
+            redirectToDefaultLocale: true,
         },
     },
     vite: {
@@ -44,6 +44,12 @@ export default defineConfig({
                     "**/test-results/**",
                 ],
             },
+        },
+    },
+    redirects: {
+        "/": {
+            destination: "/zh-cn",
+            status: 301,
         },
     },
 });
