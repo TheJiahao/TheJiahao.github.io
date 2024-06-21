@@ -15,7 +15,7 @@ test.describe("Navigation", () => {
                 navigationBar = page.getByRole("navigation");
             });
 
-            test("only one navigation bar exists", async () => {
+            test("exists only one navigation bar", async () => {
                 expect(navigationBar).toBeDefined();
 
                 await expect(navigationBar).toHaveCount(1);
