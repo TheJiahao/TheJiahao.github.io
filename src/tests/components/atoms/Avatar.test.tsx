@@ -40,9 +40,10 @@ describe("<Avatar/>", () => {
         );
     });
 
-    test("has correct size", () => {
-        render(<Avatar image={SITE_AVATAR} size="50" alt="Avatar" />);
-
-        expect(screen.getByRole("img")).toHaveAttribute("size", "50");
-    });
+    for (const size of ["15", "30", "40"]) {
+        test("has correct size", () => {
+            render(<Avatar image={SITE_AVATAR} size={size} alt="Avatar" />);
+            expect(screen.getByRole("img")).toHaveClass(`size-${size}`);
+        });
+    }
 });
