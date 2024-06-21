@@ -1,27 +1,30 @@
 import { expect } from "@playwright/test";
+import { languageCodes } from "localization";
 import test from "./utils/fixtures";
 
 test.describe("Language selection", () => {
-    test.beforeEach(async ({ homepage }) => {
-        await homepage.goto();
-    });
+    for (const languageCode of languageCodes) {
+        test.describe(`in ${languageCode} site`, () => {
+            test.use({ languageCode });
 
-    test("language can be changed to English", async ({ homepage, page }) => {
-        await homepage.selectLanguage("English");
+            test.beforeEach(async ({ homepage }) => {
+                await homepage.goto();
+            });
 
-        await expect(page).toHaveURL(/en?\//);
-    });
+            for (const targetLanguage of languageCodes.filter(
+                (target) => target !== languageCode,
+            )) {
+                test(`language can be changed to ${targetLanguage}`, async ({
+                    homepage,
+                    page,
+                }) => {
+                    await homepage.selectLanguage(targetLanguage);
 
-    test.describe("in English homepage", () => {
-        test.use({ languageCode: "en" });
-
-        test("language can be changed to Chinese", async ({
-            homepage,
-            page,
-        }) => {
-            await homepage.selectLanguage("简体中文");
-
-            await expect(page).toHaveURL(/zh-cn?\//);
+                    await expect(page).toHaveURL(
+                        RegExp(`/${targetLanguage}/?$`),
+                    );
+                });
+            }
         });
-    });
+    }
 });
