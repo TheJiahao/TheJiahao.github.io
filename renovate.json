@@ -4,6 +4,8 @@
         "config:recommended",
         ":automergeMinor",
         ":automergeTypes",
+        ":automergeLinters",
+        ":automergeTesters",
         "group:linters",
         "group:test"
     ],
