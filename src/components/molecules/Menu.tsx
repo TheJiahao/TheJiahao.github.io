@@ -35,3 +35,4 @@ const Menu = ({
 );
 
 export default Menu;
+export type { MenuProps };
