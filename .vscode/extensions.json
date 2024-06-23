@@ -7,7 +7,6 @@
         "ms-playwright.playwright",
         "antfu.unocss",
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "spmeesseman.vscode-taskexplorer"
+        "esbenp.prettier-vscode"
     ]
 }
