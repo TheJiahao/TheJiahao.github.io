@@ -17,6 +17,7 @@ const en = {
     settings: "Settings",
     siteAvatar: "Avatar of the site owner",
     socialLinks: "Social links",
+    blogList: "Blog list",
 };
 
 export default en;

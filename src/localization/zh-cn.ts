@@ -20,6 +20,7 @@ const zh_cn: Language = {
     settings: "设置",
     siteAvatar: "站长头像",
     socialLinks: "社交链接",
+    blogList: "博客列表",
 };
 
 export default zh_cn;
