@@ -121,8 +121,8 @@ importers:
         specifier: ^15.4.0
         version: 15.6.0
       google-indexing-script:
-        specifier: ^0.1.0
-        version: 0.1.0
+        specifier: ^0.2.0
+        version: 0.2.0
       jsdom:
         specifier: ^24.1.0
         version: 24.1.0
@@ -2165,8 +2165,8 @@ packages:
     resolution: {integrity: sha512-9l+zO07h1tDJdIHN74SpnWIlNR+OuOemXlWJlLP9pXy6vFtizgpEzMuwJa4lqY9UAdiAv5DVd5ql0Am916I+aA==}
     engines: {node: '>=14'}
 
-  google-indexing-script@0.1.0:
-    resolution: {integrity: sha512-qR4c1n3bUkmJsOSH0951HfQY48F0ozw214tj42UKmwieGce5B41Ru2+AgUokmaemqK0TQLB1eKYXdrSVC839Bg==}
+  google-indexing-script@0.2.0:
+    resolution: {integrity: sha512-QJRd9Cc9H7cEQpue/iTQK0xZoxtHFVfxeFCcCUoJv3IWq/8oymZZkaNsWS6+HmrMk0Iz62v5iC2rG4+LqKWHFQ==}
     hasBin: true
 
   googleapis-common@7.2.0:
@@ -6920,7 +6920,7 @@ snapshots:
       - encoding
       - supports-color
 
-  google-indexing-script@0.1.0:
+  google-indexing-script@0.2.0:
     dependencies:
       googleapis: 131.0.0
       sitemapper: 3.2.8
