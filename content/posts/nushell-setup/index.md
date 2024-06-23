@@ -16,7 +16,6 @@ description: >-
     内置许多数据处理相关命令，且速度较快。
     本文介绍了如何配置 Nushell 的语法高亮和自动补全。
 image: img/nushell_logo_cover.svg
-license:
 
 links:
     - title: Nushell

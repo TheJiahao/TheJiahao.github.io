@@ -14,7 +14,6 @@ tags:
     - JavaScript Debugger
     - Windows
 image: img/edge_logo.svg
-license:
 
 hidden: false
 math:

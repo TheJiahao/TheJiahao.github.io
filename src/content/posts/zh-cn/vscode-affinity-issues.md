@@ -11,7 +11,6 @@ tags:
     - Markdown
     - Git
 image: /src/assets/images/vscode_logo.svg
-license:
 
 hidden: false
 math:
