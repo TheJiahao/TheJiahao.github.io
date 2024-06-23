@@ -18,6 +18,7 @@ const en = {
     siteAvatar: "Avatar of the site owner",
     socialLinks: "Social links",
     blogList: "Blog list",
+    externalLinks: "External links",
 };
 
 export default en;

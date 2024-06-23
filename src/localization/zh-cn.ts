@@ -21,6 +21,7 @@ const zh_cn: Language = {
     siteAvatar: "站长头像",
     socialLinks: "社交链接",
     blogList: "博客列表",
+    externalLinks: "外部链接",
 };
 
 export default zh_cn;
