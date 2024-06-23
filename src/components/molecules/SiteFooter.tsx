@@ -5,10 +5,10 @@ import {
     SITE_SOURCE,
     SITE_START_YEAR,
 } from "config";
+import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
-interface SiteFooterProps {
-    language?: string;
+interface SiteFooterProps extends TranslatedElement {
     owner?: string;
     startYear?: number;
     source?: string;

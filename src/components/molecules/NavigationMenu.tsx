@@ -3,11 +3,11 @@ import Menu, { type MenuProps } from "components/molecules/Menu";
 import { DEFAULT_LANGUAGE } from "config";
 import NAVIGATION_LINKS from "config/navigation";
 import type { IconLink } from "interfaces/IconLink";
+import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
-interface NavigationMenuProps extends MenuProps {
+interface NavigationMenuProps extends MenuProps, TranslatedElement {
     links?: IconLink[];
-    language?: string;
 }
 
 const NavigationMenu = ({

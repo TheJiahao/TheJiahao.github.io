@@ -4,11 +4,11 @@ import SocialLink from "components/atoms/SocialLink";
 import Menu, { type MenuProps } from "components/molecules/Menu";
 import { DEFAULT_LANGUAGE } from "config";
 import SOCIAL_LINKS from "config/social";
+import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
-interface SocialMenuProps extends MenuProps {
+interface SocialMenuProps extends MenuProps, TranslatedElement {
     links?: SocialLinkProps[];
-    language?: string;
 }
 
 const SocialMenu = ({
