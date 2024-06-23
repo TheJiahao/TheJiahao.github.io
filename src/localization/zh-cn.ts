@@ -19,6 +19,7 @@ const zh_cn: Language = {
     navigationLinks: "导航链接",
     settings: "设置",
     siteAvatar: "站长头像",
+    socialLinks: "社交链接",
 };
 
 export default zh_cn;

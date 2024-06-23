@@ -4,6 +4,7 @@ import SocialLink from "components/atoms/SocialLink";
 import Menu, { type MenuProps } from "components/molecules/Menu";
 import { DEFAULT_LANGUAGE } from "config";
 import SOCIAL_LINKS from "config/social";
+import { getTranslation } from "utils/getTranslation";
 
 interface SocialMenuProps extends MenuProps {
     links?: SocialLinkProps[];
@@ -15,7 +16,11 @@ const SocialMenu = ({
     language = DEFAULT_LANGUAGE,
     ...props
 }: SocialMenuProps) => (
-    <Menu direction="row" {...props}>
+    <Menu
+        direction="row"
+        aria-label={getTranslation(language).socialLinks}
+        {...props}
+    >
         {links.map(({ url, ...props }) => (
             <SocialLink
                 key={url}
