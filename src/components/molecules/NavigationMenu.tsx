@@ -1,6 +1,5 @@
 import IconComponent from "components/atoms/IconComponent";
 import Menu, { type MenuProps } from "components/molecules/Menu";
-import { DEFAULT_LANGUAGE } from "config";
 import NAVIGATION_LINKS from "config/navigation";
 import type { IconLink } from "interfaces/IconLink";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
@@ -11,7 +10,7 @@ interface NavigationMenuProps extends MenuProps, TranslatedElement {
 }
 
 const NavigationMenu = ({
-    language = DEFAULT_LANGUAGE,
+    language,
     links = NAVIGATION_LINKS[language],
     ...props
 }: NavigationMenuProps) => (

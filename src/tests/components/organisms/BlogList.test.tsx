@@ -23,7 +23,7 @@ describe("<BlogList/>", () => {
     let blogList: HTMLElement;
 
     beforeEach(() => {
-        render(<BlogList blogs={blogs} />);
+        render(<BlogList language="zh-cn" blogs={blogs} />);
         blogList = screen.getByRole("list", { name: "List of blogs" });
     });
 

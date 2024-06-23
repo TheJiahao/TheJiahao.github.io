@@ -1,7 +1,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Avatar from "components/atoms/Avatar";
 import MenuButton from "components/atoms/MenuButton";
-import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
+import { SITE_AVATAR } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import type { AriaAttributes, HTMLAttributes, MouseEventHandler } from "react";
 import { getTranslation } from "utils/getTranslation";
@@ -17,7 +17,7 @@ interface NavigationToolBarProps
 const NavigationToolBar = ({
     handleExpand,
     avatar = SITE_AVATAR,
-    language = DEFAULT_LANGUAGE,
+    language,
     role = "toolbar",
     ...props
 }: NavigationToolBarProps) => (

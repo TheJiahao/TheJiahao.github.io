@@ -1,6 +1,6 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Avatar from "components/atoms/Avatar";
-import { DEFAULT_LANGUAGE, SITE_AVATAR } from "config";
+import { SITE_AVATAR } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
@@ -9,7 +9,7 @@ interface InfoCardProps extends TranslatedElement {
 }
 
 const NavigationHeader = ({
-    language = DEFAULT_LANGUAGE,
+    language,
     avatar = SITE_AVATAR,
 }: InfoCardProps) => (
     <>

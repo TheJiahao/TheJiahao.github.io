@@ -1,5 +1,4 @@
 import LinkCard, { type LinkProps } from "components/organisms/LinkCard";
-import { DEFAULT_LANGUAGE } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
@@ -7,7 +6,7 @@ interface LinkListProps extends TranslatedElement {
     links?: LinkProps[];
 }
 
-const LinkList = ({ links, language = DEFAULT_LANGUAGE }: LinkListProps) => {
+const LinkList = ({ links, language }: LinkListProps) => {
     return (
         links && (
             <ul

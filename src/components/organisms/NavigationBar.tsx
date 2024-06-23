@@ -4,7 +4,7 @@ import SocialMenu from "components/molecules/SocialMenu";
 import { DEFAULT_LANGUAGE } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 
-const NavigationBar = ({ language = DEFAULT_LANGUAGE }: TranslatedElement) => (
+const NavigationBar = ({ language  }: TranslatedElement) => (
     <nav card p-4 flex="~ col" gap-4 items-center h-full w-50>
         <header items-center p-2 w-full lg="flex flex-col">
             <NavigationHeader language={language} />

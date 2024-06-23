@@ -37,7 +37,7 @@ const languageAlternates = languageCodes.map((code) => ({
         </div>
 
         <main lg="max-w-4xl">
-            <BlogList {blogs} />
+            <BlogList {language} {blogs} />
         </main>
 
         <SiteFooter {language} />

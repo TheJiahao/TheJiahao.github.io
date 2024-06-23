@@ -13,7 +13,7 @@ describe("<SiteFooter/>", () => {
     let footer: HTMLElement;
 
     beforeEach(() => {
-        render(<SiteFooter {...props} />);
+        render(<SiteFooter language="zh-cn" {...props} />);
         footer = screen.getByRole("contentinfo");
     });
 

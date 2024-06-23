@@ -1,10 +1,5 @@
 import IconComponent from "components/atoms/IconComponent";
-import {
-    DEFAULT_LANGUAGE,
-    SITE_OWNER,
-    SITE_SOURCE,
-    SITE_START_YEAR,
-} from "config";
+import { SITE_OWNER, SITE_SOURCE, SITE_START_YEAR } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
@@ -15,7 +10,7 @@ interface SiteFooterProps extends TranslatedElement {
 }
 
 const SiteFooter = ({
-    language = DEFAULT_LANGUAGE,
+    language,
     owner = SITE_OWNER,
     startYear = SITE_START_YEAR,
     source = SITE_SOURCE,

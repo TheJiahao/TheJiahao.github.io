@@ -2,13 +2,10 @@ import NavigationMenu from "components/molecules/NavigationMenu";
 import NavigationToolBar from "components/molecules/NavigationToolBar";
 import SettingsMenu from "components/molecules/SettingsMenu";
 import SocialMenu from "components/molecules/SocialMenu";
-import { DEFAULT_LANGUAGE } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { useState } from "react";
 
-const MobileNavigationBar = ({
-    language = DEFAULT_LANGUAGE,
-}: TranslatedElement) => {
+const MobileNavigationBar = ({ language }: TranslatedElement) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpand = () => {

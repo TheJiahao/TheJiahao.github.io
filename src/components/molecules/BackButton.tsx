@@ -1,6 +1,5 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import IconComponent from "components/atoms/IconComponent";
-import { DEFAULT_LANGUAGE } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
@@ -10,7 +9,7 @@ interface BackButtonProps extends TranslatedElement {
 }
 
 const BackButton = ({
-    language = DEFAULT_LANGUAGE,
+    language,
     label = getTranslation(language).back,
     fontSize = "lg",
 }: BackButtonProps) => {

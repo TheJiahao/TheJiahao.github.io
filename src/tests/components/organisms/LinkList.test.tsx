@@ -21,7 +21,7 @@ describe("<LinkList/>", () => {
     let linkList: HTMLElement;
 
     beforeEach(() => {
-        render(<LinkList links={links} />);
+        render(<LinkList language="zh-cn" links={links} />);
         linkList = screen.getByRole("list", { name: "External links" });
     });
 
