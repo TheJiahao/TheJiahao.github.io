@@ -25,9 +25,9 @@ describe("<NavigationMenu/>", () => {
     ];
 
     beforeEach(() => {
-        render(<NavigationMenu links={links} />);
+        render(<NavigationMenu role="menu" links={links} />);
 
-        navigationMenu = screen.getByRole("group", {
+        navigationMenu = screen.getByRole("menu", {
             name: "导航链接",
         });
         navigationLinks = within(navigationMenu).getAllByRole("menuitem");
