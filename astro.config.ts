@@ -1,7 +1,6 @@
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
-import paraglide from "@inlang/paraglide-astro";
 import { defineConfig } from "astro/config";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
@@ -26,10 +25,6 @@ export default defineConfig({
         react(),
         UnoCSS({
             injectReset: true, // or a path to the reset file
-        }),
-        paraglide({
-            project: "./project.inlang",
-            outdir: "./src/paraglide",
         }),
     ],
     server: {

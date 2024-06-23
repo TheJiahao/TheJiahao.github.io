@@ -13,11 +13,10 @@
         "playwright:open": "playwright test --ui",
         "coverage": "vitest run --coverage",
         "index": "gis $SITE_URL",
-        "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && astro build",
+        "build": "astro build",
         "start": "pnpm run build && astro preview",
         "dev": "astro dev",
-        "dev:host": "astro dev --host",
-        "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
+        "dev:host": "astro dev --host"
     },
     "dependencies": {
         "@astrojs/check": "^0.7.0",
@@ -28,7 +27,6 @@
         "@iconify-json/fluent-emoji-flat": "^1.1.16",
         "@iconify-json/logos": "^1.1.43",
         "@iconify-json/lucide": "^1.1.191",
-        "@inlang/paraglide-astro": "^0.1.31",
         "@testing-library/user-event": "^14.5.2",
         "@unocss/reset": "^0.61.0",
         "astro": "^4.9.2",
@@ -47,7 +45,6 @@
     "devDependencies": {
         "@eslint/js": "^9.5.0",
         "@estruyf/github-actions-reporter": "^1.7.0",
-        "@inlang/paraglide-js": "1.10.1",
         "@playwright/test": "^1.44.1",
         "@testing-library/jest-dom": "^6.4.5",
         "@testing-library/react": "^16.0.0",
