@@ -35,7 +35,9 @@ const parser = new MarkdownIt();
             {
                 licenseText ? (
                     <Fragment
-                        set:html={sanitizeHtml(parser.renderInline(licenseText))}
+                        set:html={sanitizeHtml(
+                            parser.renderInline(licenseText),
+                        )}
                     />
                 ) : (
                     <>
