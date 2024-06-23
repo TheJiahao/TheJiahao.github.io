@@ -1,13 +1,14 @@
 {
-    "recommendations": [
-        "esbenp.prettier-vscode",
-        "astro-build.astro-vscode",
-        "unifiedjs.vscode-mdx",
-        "vitest.explorer",
-        "ms-playwright.playwright",
-        "antfu.unocss",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "spmeesseman.vscode-taskexplorer"
-    ]
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx",
+    "vitest.explorer",
+    "ms-playwright.playwright",
+    "antfu.unocss",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "spmeesseman.vscode-taskexplorer",
+    "inlang.vs-code-extension"
+  ]
 }
