@@ -11,11 +11,7 @@ const SettingsMenu = ({
     language = DEFAULT_LANGUAGE,
     ...props
 }: SettingsMenuProps) => (
-    <Menu
-        role="group"
-        aria-label={getTranslation(language).settings}
-        {...props}
-    >
+    <Menu aria-label={getTranslation(language).settings} {...props}>
         <LanguageSelector defaultLanguage={language} />
     </Menu>
 );
