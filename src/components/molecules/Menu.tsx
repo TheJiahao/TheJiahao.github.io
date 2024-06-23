@@ -25,7 +25,6 @@ const Menu = ({
         flex={`~ ${direction}`}
         gap-3
         p-4
-        items-center
         justify-center
         text-xl
     >
