@@ -12,7 +12,7 @@ interface BlogCardProps {
 
 const BlogCard = ({ title, description, date, url, image }: BlogCardProps) => {
     return (
-        <article card>
+        <article title={title} card>
             <a href={url} rel="bookmark">
                 <CoverImage image={image} title={title} />
                 <BlogDetails
