@@ -38,7 +38,7 @@ const MobileNavigationBar = ({
                     <SettingsMenu role="group" language={language} />
                 </div>
 
-                <SocialMenu language={language} />
+                <SocialMenu role="group" language={language} />
 
                 <div flex="~ col" items-center>
                     <NavigationMenu language={language} />
