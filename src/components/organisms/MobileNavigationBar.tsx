@@ -34,9 +34,15 @@ const MobileNavigationBar = ({
                 w-full
                 divide-y
             >
-                <SettingsMenu language={language} />
+                <div flex="~ col" items-center>
+                    <SettingsMenu language={language} />
+                </div>
+
                 <SocialMenu language={language} />
-                <NavigationMenu language={language} />
+
+                <div flex="~ col" items-center>
+                    <NavigationMenu language={language} />
+                </div>
             </div>
 
             <NavigationToolBar
