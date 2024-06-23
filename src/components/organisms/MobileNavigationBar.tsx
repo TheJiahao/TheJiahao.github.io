@@ -41,7 +41,7 @@ const MobileNavigationBar = ({
                 <SocialMenu role="group" language={language} />
 
                 <div flex="~ col" items-center>
-                    <NavigationMenu language={language} />
+                    <NavigationMenu role="group" language={language} />
                 </div>
             </div>
 
