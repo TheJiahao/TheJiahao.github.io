@@ -1,7 +1,7 @@
 import type { PropsWithChildren, ReactElement } from "react";
 
 interface IconComponentProps extends PropsWithChildren {
-    icon: ReactElement;
+    icon?: ReactElement;
 }
 
 const IconComponent = ({ icon, children }: IconComponentProps) => (
