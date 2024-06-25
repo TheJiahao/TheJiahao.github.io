@@ -9,5 +9,11 @@
         "group:linters",
         "group:test"
     ],
-    "dependencyDashboard": true
+    "dependencyDashboard": true,
+    "packageRules": [
+        {
+            "extends": "group:playwrightMonorepo",
+            "matchPackageNames": ["playwright"]
+        }
+    ]
 }
