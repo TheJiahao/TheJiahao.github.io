@@ -6,6 +6,7 @@ import sanitizeHtml from "sanitize-html";
 import formatDate from "utils/formatDate";
 import { getTranslation } from "utils/getTranslation";
 import { LuCopyright, LuFileEdit } from "react-icons/lu";
+import IconComponent from "components/atoms/IconComponent";
 interface Props {
     license?: License;
     licenseText?: string;
@@ -20,26 +21,32 @@ const parser = new MarkdownIt();
 
 <footer card prose max-w-full px-4>
     <p>
-        <LuFileEdit className="inline align-middle" />
-        {getTranslation(language).updated}
-        <time>{formatDate(lastModified)}</time>
+        <IconComponent>
+            <LuFileEdit slot="icon" />
+            {getTranslation(language).updated}
+            <time>{formatDate(lastModified)}</time>
+        </IconComponent>
     </p>
 
     <p>
-        <LuCopyright className="inline align-middle" />
-        {
-            licenseText ? (
-                <Fragment
-                    set:html={sanitizeHtml(parser.renderInline(licenseText))}
-                />
-            ) : (
-                <>
-                    {getTranslation(language).licensedUnder}{" "}
-                    <a rel="license" href={license.url} target="_blank">
-                        {license.name}
-                    </a>
-                </>
-            )
-        }
+        <IconComponent>
+            <LuCopyright slot="icon" />
+            {
+                licenseText ? (
+                    <Fragment
+                        set:html={sanitizeHtml(
+                            parser.renderInline(licenseText),
+                        )}
+                    />
+                ) : (
+                    <>
+                        {getTranslation(language).licensedUnder}{" "}
+                        <a rel="license" href={license.url} target="_blank">
+                            {license.name}
+                        </a>
+                    </>
+                )
+            }
+        </IconComponent>
     </p>
 </footer>
