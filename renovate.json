@@ -12,7 +12,6 @@
     "dependencyDashboard": true,
     "packageRules": [
         {
-            "extends": "monorepo:playwright",
             "matchPackageNames": ["playwright"],
             "groupName": "playwright and Docker image",
             "matchUpdateTypes": ["digest", "patch", "minor", "major"]
