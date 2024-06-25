@@ -1,5 +1,7 @@
+import type { ReactElement } from "react";
+
 export interface IconLink {
     url: string;
     text: string;
-    icon: string;
+    icon: ReactElement;
 }

@@ -1,6 +1,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import type { IconLink } from "interfaces/IconLink";
 import { languageCodes } from "localization";
+import { LuArchive, LuHome, LuUser2 } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
@@ -10,17 +11,17 @@ const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
             {
                 url: getRelativeLocaleUrl(language, "/"),
                 text: getTranslation(language).homePage,
-                icon: "i-fluent-emoji-flat-house",
+                icon: <LuHome />,
             },
             {
                 url: getRelativeLocaleUrl(language, "/posts"),
                 text: getTranslation(language).archive,
-                icon: "i-fluent-emoji-flat-file-cabinet",
+                icon: <LuArchive />,
             },
             {
                 url: getRelativeLocaleUrl(language, "/about"),
                 text: getTranslation(language).about,
-                icon: "i-fluent-emoji-flat-star",
+                icon: <LuUser2 />,
             },
         ],
     ]),
