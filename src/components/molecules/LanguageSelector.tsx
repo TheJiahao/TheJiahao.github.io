@@ -3,6 +3,7 @@ import IconComponent from "components/atoms/IconComponent";
 import type { Language } from "interfaces/Language";
 import { languages as DEFAULT_LANGUAGES } from "localization";
 import { useEffect, useState, type ChangeEventHandler } from "react";
+import { LuGlobe } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 interface LanguageSelectorProps {
@@ -28,7 +29,7 @@ const LanguageSelector = ({
     };
 
     return (
-        <IconComponent icon="i-fluent-emoji-flat-globe-with-meridians">
+        <IconComponent icon={<LuGlobe />}>
             <select
                 aria-label={getTranslation(defaultLanguage).selectLanguage}
                 defaultValue={defaultLanguage}
