@@ -1,12 +1,11 @@
 ---
-import IconComponent from "components/atoms/IconComponent";
 import { DEFAULT_LANGUAGE, SITE_LICENSE } from "config";
 import type { License } from "interfaces/License";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
 import formatDate from "utils/formatDate";
 import { getTranslation } from "utils/getTranslation";
-
+import { LuCopyright, LuFileEdit } from "react-icons/lu";
 interface Props {
     license?: License;
     licenseText?: string;
@@ -21,33 +20,26 @@ const parser = new MarkdownIt();
 
 <footer card prose max-w-full px-4>
     <p>
-        <IconComponent icon="i-fluent-emoji-flat-memo">
-            <span>
-                {getTranslation(language).updated}
-                {" "}
-                <time>{formatDate(lastModified)}</time>
-            </span>
-        </IconComponent>
+        <LuFileEdit className="inline align-middle" />
+        {getTranslation(language).updated}
+        <time>{formatDate(lastModified)}</time>
     </p>
 
     <p>
-        <IconComponent icon="i-fluent-emoji-flat-copyright">
-            {
-                licenseText ? (
-                    <Fragment
-                        set:html={sanitizeHtml(
-                            parser.renderInline(licenseText),
-                        )}
-                    />
-                ) : (
-                    <>
-                        {getTranslation(language).licensedUnder}{" "}
-                        <a rel="license" href={license.url} target="_blank">
-                            {license.name}
-                        </a>
-                    </>
-                )
-            }
-        </IconComponent>
+        <LuCopyright className="inline align-middle" />
+        {
+            licenseText ? (
+                <Fragment
+                    set:html={sanitizeHtml(parser.renderInline(licenseText))}
+                />
+            ) : (
+                <>
+                    {getTranslation(language).licensedUnder}{" "}
+                    <a rel="license" href={license.url} target="_blank">
+                        {license.name}
+                    </a>
+                </>
+            )
+        }
     </p>
 </footer>
