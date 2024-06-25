@@ -10,17 +10,17 @@ describe("<NavigationMenu/>", () => {
         {
             url: "/",
             text: "Home",
-            icon: "i-home",
+            icon: <span />,
         },
         {
             url: "/about",
             text: "About",
-            icon: "i-user",
+            icon: <span />,
         },
         {
             url: "/posts",
             text: "Posts",
-            icon: "i-article",
+            icon: <span />,
         },
     ];
 
