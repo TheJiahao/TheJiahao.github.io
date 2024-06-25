@@ -1,6 +1,7 @@
 import IconComponent from "components/atoms/IconComponent";
 import { SITE_OWNER, SITE_SOURCE, SITE_START_YEAR } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
+import { SiGithub } from "react-icons/si";
 import { getTranslation } from "utils/getTranslation";
 
 interface SiteFooterProps extends TranslatedElement {
@@ -23,7 +24,7 @@ const SiteFooter = ({
                 © {startYear} - {year} {owner}
             </p>
             <a href={source}>
-                <IconComponent icon="i-logos-github-icon">
+                <IconComponent icon={<SiGithub />}>
                     {getTranslation(language).siteSource}
                 </IconComponent>
             </a>
