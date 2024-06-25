@@ -1,6 +1,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import IconComponent from "components/atoms/IconComponent";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
+import { LuChevronLeft } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 interface BackButtonProps extends TranslatedElement {
@@ -21,7 +22,7 @@ const BackButton = ({
             p-3
             text={fontSize}
         >
-            <IconComponent icon="i-lucide:chevron-left">{label}</IconComponent>
+            <IconComponent icon={<LuChevronLeft />}>{label}</IconComponent>
         </a>
     );
 };
