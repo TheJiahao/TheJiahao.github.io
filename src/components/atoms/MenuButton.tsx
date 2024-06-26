@@ -1,5 +1,10 @@
 import useHydrationState from "hooks/useHydrationState";
-import type { AriaAttributes, ButtonHTMLAttributes } from "react";
+import {
+    cloneElement,
+    type AriaAttributes,
+    type ButtonHTMLAttributes,
+} from "react";
+import { LuLoader2, LuMenu, LuX } from "react-icons/lu";
 
 interface MenuButtonProps
     extends AriaAttributes,
@@ -10,15 +15,21 @@ interface MenuButtonProps
 const MenuButton = ({ expanded, ...props }: MenuButtonProps) => {
     const disabled = !useHydrationState();
 
+    const icon = disabled ? <LuLoader2 /> : expanded ? <LuX /> : <LuMenu />;
+
     return (
         <button
             type="button"
-            className={!disabled && expanded ? "i-lucide-x" : "i-lucide:menu"}
             disabled={disabled}
             {...props}
-            un-disabled="animate-spin i-lucide-loader-circle size-15"
-            size-15
-        />
+            un-disabled="animate-spin size-15"
+        >
+            {cloneElement(icon, {
+                className: "size-15",
+                role: "presentation",
+                focusable: false,
+            })}
+        </button>
     );
 };
 
