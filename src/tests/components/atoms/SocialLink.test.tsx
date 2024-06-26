@@ -1,23 +1,21 @@
 import { render, screen } from "@testing-library/react";
 import SocialLink from "components/atoms/SocialLink";
-import { LuCircle, LuSquare } from "react-icons/lu";
+import { LuSquare } from "react-icons/lu";
 import { describe, expect, test } from "vitest";
 
 describe("<SocialLink/>", () => {
-    test.each(["i-lucide-rss", "i-logos-github-icon", "icon-3"])(
+    test.each(["lucide-rss", "logos-github-icon", "icon-3"])(
         "renders correct icon %s",
         (icon) => {
             render(
                 <SocialLink
                     url="https://example.com"
-                    icon={<LuCircle />}
+                    icon={<span data-testid={icon} />}
                     title="Social link"
                 />,
             );
 
-            expect(
-                screen.getByRole("link", { name: "Social link" }),
-            ).toHaveClass(icon);
+            expect(screen.getByTestId(icon)).toBeInTheDocument();
         },
     );
 
