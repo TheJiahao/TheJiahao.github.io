@@ -141,6 +141,12 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 ```
 
+由于 Zim 会运行 `compinit`，所以还需要 `~/.zshenv` 中禁用 Ubuntu 的 `compinit` 以加快启动速度[^zim_installation][^global_compinit]：
+
+```shell
+skip_global_compinit=1
+```
+
 ## 测速
 
 配置好后使用 [hyperfine](https://github.com/sharkdp/hyperfine) 测试 Zsh 启动速度。
@@ -192,3 +198,5 @@ appendWindowsPath = false
 [^zim_installation]: Installation, https://zimfw.sh/docs/install/
 
 [^github_wsl_syntax_highlight]: syntax highlighting is super slow in WSL2, https://github.com/zsh-users/zsh-syntax-highlighting/issues/790#issuecomment-1385406603
+
+[^global_compinit]: Speed up zsh compinit by only checking cache once a day, https://gist.github.com/ctechols/ca1035271ad134841284
