@@ -24,6 +24,7 @@ const parser = new MarkdownIt();
         <IconComponent>
             <LuFileEdit slot="icon" />
             {getTranslation(language).updated}
+            {" "}
             <time>{formatDate(lastModified)}</time>
         </IconComponent>
     </p>
