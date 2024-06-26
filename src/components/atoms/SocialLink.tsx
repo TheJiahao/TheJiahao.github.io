@@ -1,20 +1,27 @@
+import { cloneElement, type ReactElement } from "react";
+import type { IconBaseProps } from "react-icons/lib";
+
 interface SocialLinkProps {
     url: string;
-    icon: string;
+    icon: ReactElement<IconBaseProps>;
     title: string;
 }
 
 const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
     <a
-        className={icon}
         href={url}
         aria-label={title}
         title={title}
-        size-10
         block
         target="_blank"
         rel="me noopener noreferrer"
-    />
+    >
+        {cloneElement(icon, {
+            size: "3rem",
+            role: "presentation",
+            focusable: false,
+        })}
+    </a>
 );
 
 export default SocialLink;
