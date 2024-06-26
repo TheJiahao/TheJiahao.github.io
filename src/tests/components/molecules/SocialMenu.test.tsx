@@ -2,18 +2,19 @@ import { render, screen } from "@testing-library/react";
 import { type SocialLinkProps } from "components/atoms/SocialLink";
 import SocialMenu from "components/molecules/SocialMenu";
 import { languageCodes } from "localization";
+import { LuCircle, LuSquare } from "react-icons/lu";
 import { beforeEach, describe, expect, test } from "vitest";
 
 describe("<SocialMenu/>", () => {
     const links: SocialLinkProps[] = [
         {
             url: "/relative-url",
-            icon: "i-relative",
+            icon: <LuSquare />,
             title: "Relative",
         },
         {
             url: "https://absolute-url.com",
-            icon: "i-absolute",
+            icon: <LuCircle />,
             title: "Absolute",
         },
     ];

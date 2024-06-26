@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import SocialLink from "components/atoms/SocialLink";
+import { LuCircle, LuSquare } from "react-icons/lu";
 import { describe, expect, test } from "vitest";
 
 describe("<SocialLink/>", () => {
@@ -9,7 +10,7 @@ describe("<SocialLink/>", () => {
             render(
                 <SocialLink
                     url="https://example.com"
-                    icon={icon}
+                    icon={<LuCircle />}
                     title="Social link"
                 />,
             );
@@ -24,7 +25,11 @@ describe("<SocialLink/>", () => {
         "has correct url %s",
         (url) => {
             render(
-                <SocialLink url={url} icon="i-some-icon" title="Social link" />,
+                <SocialLink
+                    url={url}
+                    icon={<LuSquare />}
+                    title="Social link"
+                />,
             );
 
             expect(
@@ -37,7 +42,7 @@ describe("<SocialLink/>", () => {
         render(
             <SocialLink
                 url="https://mylink.com"
-                icon="i-some-icon"
+                icon={<LuSquare />}
                 title={title}
             />,
         );

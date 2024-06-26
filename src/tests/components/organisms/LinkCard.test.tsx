@@ -6,12 +6,12 @@ describe("<LinkCard/>", () => {
     const url = "https://www.example.com/documentation";
     const title = "Documentation";
     const description = "Documentation of Example";
-    const icon = "i-ui-library-user";
+    const image = "https://www.example.com/favicon.ico";
 
     let link: HTMLElement;
 
     beforeEach(() => {
-        render(<LinkCard {...{ url, title, description, icon }} />);
+        render(<LinkCard {...{ url, title, description, image }} />);
         link = screen.getByRole("link");
     });
 
