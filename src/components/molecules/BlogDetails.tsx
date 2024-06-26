@@ -9,7 +9,7 @@ interface BlogDetailsProps {
 }
 
 const BlogDetails = ({ title, description, date }: BlogDetailsProps) => (
-    <div prose px-8 py-2 max-w-full>
+    <div prose max-w-full>
         <h2>{title}</h2>
         {description && <p text="slate lg">{description}</p>}
         <IconComponent

@@ -13,5 +13,7 @@ const { title, image, date, description } = Astro.props;
 
 <header slot="header">
     <CoverImage image={image} title={title} />
-    <BlogDetails title={title} {description} date={date} />
+    <div px-8>
+        <BlogDetails title={title} {description} date={date} />
+    </div>
 </header>

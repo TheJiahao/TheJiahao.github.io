@@ -15,11 +15,13 @@ const BlogCard = ({ title, description, date, url, image }: BlogCardProps) => {
         <article title={title} card>
             <a href={url} rel="bookmark">
                 <CoverImage image={image} title={title} />
-                <BlogDetails
-                    title={title}
-                    description={description}
-                    date={date}
-                />
+                <div px-8 pb-6>
+                    <BlogDetails
+                        title={title}
+                        description={description}
+                        date={date}
+                    />
+                </div>
             </a>
         </article>
     );
