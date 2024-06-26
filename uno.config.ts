@@ -1,19 +1,13 @@
 import {
     defineConfig,
     presetAttributify,
-    presetIcons,
     presetTypography,
     presetWind,
     transformerAttributifyJsx,
 } from "unocss";
 
 export default defineConfig({
-    presets: [
-        presetAttributify(),
-        presetWind(),
-        presetTypography(),
-        presetIcons(),
-    ],
+    presets: [presetAttributify(), presetWind(), presetTypography()],
     transformers: [transformerAttributifyJsx()],
     shortcuts: {
         card: "rounded-md bg-white shadow-md break-inside-avoid overflow-hidden",
