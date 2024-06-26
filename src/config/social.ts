@@ -1,16 +1,14 @@
 import type { SocialLinkProps } from "components/atoms/SocialLink";
-import { LuRss } from "react-icons/lu";
-import { SiGithub } from "react-icons/si";
 
 const SOCIAL_LINKS: SocialLinkProps[] = [
     {
         url: "https://github.com/TheJiahao",
-        icon: <SiGithub />,
+        icon: "i-logos-github-icon",
         title: "GitHub",
     },
     {
         url: "/rss.xml",
-        icon: <LuRss />,
+        icon: "i-lucide-rss",
         title: "RSS",
     },
 ];
