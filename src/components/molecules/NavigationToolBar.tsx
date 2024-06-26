@@ -12,6 +12,7 @@ interface NavigationToolBarProps
         TranslatedElement {
     handleExpand: MouseEventHandler<HTMLButtonElement>;
     avatar?: ImageMetadata;
+    expanded?: boolean;
 }
 
 const NavigationToolBar = ({
@@ -19,6 +20,7 @@ const NavigationToolBar = ({
     avatar = SITE_AVATAR,
     language,
     role = "toolbar",
+    expanded,
     ...props
 }: NavigationToolBarProps) => (
     <div role={role} {...props} w-full bg-white grid grid-cols-3 items-center>
@@ -34,6 +36,7 @@ const NavigationToolBar = ({
         <MenuButton
             onClick={handleExpand}
             aria-label={getTranslation(language).showNavigationMenu}
+            expanded={expanded}
             justify-self-end
         />
     </div>

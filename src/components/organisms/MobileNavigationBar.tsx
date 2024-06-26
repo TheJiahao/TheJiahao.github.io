@@ -44,6 +44,7 @@ const MobileNavigationBar = ({ language }: TranslatedElement) => {
                 handleExpand={handleExpand}
                 aria-haspopup="menu"
                 aria-expanded={expanded}
+                expanded={expanded}
             />
         </nav>
     );
