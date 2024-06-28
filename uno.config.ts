@@ -25,6 +25,9 @@ export default defineConfig({
                     "text-decoration": "underline 2px",
                     "text-underline-offset": "0.25em",
                 },
+                ".data-footnote-backref": {
+                    "text-decoration": "none",
+                },
             },
         }),
     ],
