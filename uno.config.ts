@@ -19,7 +19,11 @@ export default defineConfig({
                     "background-color": "#f2f1f1",
                     padding: "0.3em 0.2em",
                     "border-radius": "0.375em",
-                    color:"darkGreen"
+                    color: "darkGreen",
+                },
+                a: {
+                    "text-decoration": "underline 2px",
+                    "text-underline-offset": "0.25em",
                 },
             },
         }),
