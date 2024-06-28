@@ -62,7 +62,7 @@ fi
 source ${ZIM_HOME}/init.zsh
 ```
 
-文件的第一行配置了 {{< link "degit" "https://github.com/Rich-Harris/degit" >}} 来安装插件。
+文件的第一行配置了 [degit](https://github.com/Rich-Harris/degit) 来安装插件。
 degit 只下载 Git 仓库的最新版本，所以比直接使用 `git clone` 下载整个仓库历史快。
 
 接着在 `.zshrc` 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 `~/.config/zsh` 目录下：
@@ -84,21 +84,21 @@ Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/
 
 ### 必要
 
-- {{< link "input" "https://github.com/zimfw/input" >}}，配置按键，例如 <kbd>home</kbd> 键移动到当前行的开头
-- {{< link "F-Sy-H" "https://github.com/z-shell/F-Sy-H" >}}，语法高亮
-  - 也可以选择 {{< link "fast-syntax-highlighting" "https://github.com/zdharma-continuum/fast-syntax-highlighting" >}} 或 {{< link "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting" >}}，区别不大
-- {{< link "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions" >}}，在终端显示命令建议
-- {{< link "zsh-completions" "https://github.com/zsh-users/zsh-completions" >}}，许多外部命令的自动补全
-- {{< link "zsh-history-substring-search" "https://github.com/zsh-users/zsh-history-substring-search" >}}，使用方向键搜索命令历史记录
+- [input](https://github.com/zimfw/input)，配置按键，例如 <kbd>home</kbd> 键移动到当前行的开头
+- [F-Sy-H](https://github.com/z-shell/F-Sy-H)，语法高亮
+  - 也可以选择 [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) 或 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)，区别不大
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)，在终端显示命令建议
+- [zsh-completions](https://github.com/zsh-users/zsh-completions)，许多外部命令的自动补全
+- [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)，使用方向键搜索命令历史记录
 
 ### 可选
 
-- {{< link "history" "https://github.com/sorin-ionescu/prezto/tree/master/modules/history" >}}，命令历史相关设置，比直接使用 `setopt` 方便和快速
-- {{< link "command-not-found" "https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found" >}}，输入不存在的命令时提示安装命令
-- {{< link "sudo" "https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo" >}}，双击 <kbd>esc</kbd> 时在命令前添加 `sudo`
-- {{< link "completion" "https://github.com/zimfw/completion" >}}，自动补全相关设置
-- {{< link "utility" "https://github.com/zimfw/utility" >}}，命令缩写以及为 `ls`、`grep` 和 `less` 命令输出上色
-- {{< link "termtitle" "https://github.com/zimfw/termtitle" >}}，设置终端标题，例如设置为当前路径
+- [history](https://github.com/sorin-ionescu/prezto/tree/master/modules/history)，命令历史相关设置，比直接使用 `setopt` 方便和快速
+- [command-not-found](https://github.com/sorin-ionescu/prezto/tree/master/modules/command-not-found)，输入不存在的命令时提示安装命令
+- [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)，双击 <kbd>esc</kbd> 时在命令前添加 `sudo`
+- [completion](https://github.com/zimfw/completion)，自动补全相关设置
+- [utility](https://github.com/zimfw/utility)，命令缩写以及为 `ls`、`grep` 和 `less` 命令输出上色
+- [termtitle](https://github.com/zimfw/termtitle)，设置终端标题，例如设置为当前路径
 
 `.zimrc` 内容如下：
 
