@@ -7,7 +7,23 @@ import {
 } from "unocss";
 
 export default defineConfig({
-    presets: [presetAttributify(), presetWind(), presetTypography()],
+    presets: [
+        presetAttributify(),
+        presetWind(),
+        presetTypography({
+            cssExtend: {
+                ":not(pre) > code::before,:not(pre) > code::after": {
+                    content: "unset",
+                },
+                ":not(pre) > code": {
+                    "background-color": "#f2f1f1",
+                    padding: "0.3em 0.2em",
+                    "border-radius": "0.375em",
+                    color:"darkGreen"
+                },
+            },
+        }),
+    ],
     transformers: [transformerAttributifyJsx()],
     shortcuts: {
         card: "rounded-md bg-white shadow-md break-inside-avoid overflow-hidden",
