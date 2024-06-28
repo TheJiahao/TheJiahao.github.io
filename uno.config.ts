@@ -2,6 +2,7 @@ import {
     defineConfig,
     presetAttributify,
     presetTypography,
+    presetWebFonts,
     presetWind,
     transformerAttributifyJsx,
 } from "unocss";
@@ -28,6 +29,13 @@ export default defineConfig({
                 ".data-footnote-backref": {
                     "text-decoration": "none",
                 },
+            },
+        }),
+        presetWebFonts({
+            provider: "bunny",
+            fonts: {
+                "sans-serif": "Noto Sans SC",
+                mono: "JetBrains Mono",
             },
         }),
     ],
