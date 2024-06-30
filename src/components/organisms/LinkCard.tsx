@@ -14,7 +14,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => {
             </div>
             <img
                 src={image}
-                alt={`Cover image of "${title}"`}
+                alt={title}
                 width="50vh"
                 height="50vh"
                 my-auto
