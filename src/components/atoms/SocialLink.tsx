@@ -17,7 +17,7 @@ const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
         rel="me noopener noreferrer"
     >
         {cloneElement(icon, {
-            className: "size-10",
+            className: "size-10 text-secondary",
             role: "presentation",
             focusable: false,
         })}
