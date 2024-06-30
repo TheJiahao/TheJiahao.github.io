@@ -2,10 +2,12 @@ interface LinkProps {
     title: string;
     description?: string;
     url: string;
-    image?: string;
+    image?: ImageMetadata | string;
 }
 
 const LinkCard = ({ title, description, url, image }: LinkProps) => {
+    console.log(image);
+
     return (
         <article title={title}>
             <a href={url} flex="~ row" w-full p-8>
@@ -16,15 +18,17 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => {
                     <p text-secondary>{description}</p>
                 </div>
 
-                <img
-                    src={image}
-                    alt={title}
-                    width="50vh"
-                    height="50vh"
-                    my-auto
-                    flex-none
-                    object-contain
-                />
+                {image && (
+                    <img
+                        src={typeof image == "string" ? image : image.src}
+                        alt={title}
+                        width="50vh"
+                        height="50vh"
+                        my-auto
+                        flex-none
+                        object-contain
+                    />
+                )}
             </a>
         </article>
     );

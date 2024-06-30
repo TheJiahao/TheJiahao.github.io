@@ -16,7 +16,7 @@ const postCollection = defineCollection({
                         title: z.string(),
                         description: z.string().optional(),
                         url: z.string(),
-                        image: z.string().optional(),
+                        image: z.union([image(), z.string()]).optional(),
                     }),
                 )
                 .optional(),
