@@ -19,7 +19,13 @@ const SiteFooter = ({
     const year = new Date().getFullYear();
 
     return (
-        <footer text-secondary max-w-full flex="~ col" items-center line-height-loose>
+        <footer
+            text-secondary
+            max-w-full
+            flex="~ col"
+            items-center
+            line-height-loose
+        >
             <p>
                 © {startYear} - {year} {owner}
             </p>
