@@ -2,8 +2,8 @@ import {
     defineConfig,
     presetAttributify,
     presetTypography,
+    presetUno,
     presetWebFonts,
-    presetWind,
     transformerAttributifyJsx,
 } from "unocss";
 import presetTheme from "unocss-preset-theme";
@@ -11,7 +11,7 @@ import presetTheme from "unocss-preset-theme";
 export default defineConfig({
     presets: [
         presetAttributify(),
-        presetWind({
+        presetUno({
             dark: "media",
         }),
         presetTypography({
