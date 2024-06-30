@@ -9,8 +9,10 @@ interface BlogDetailsProps {
 }
 
 const BlogDetails = ({ title, description, date }: BlogDetailsProps) => (
-    <div prose prose-primary max-w-full>
-        <h1>{title}</h1>
+    <div flex="~ col" gap-sm>
+        <h1 text="primary 3xl" font-bold>
+            {title}
+        </h1>
 
         {description && <p text="secondary lg">{description}</p>}
 
