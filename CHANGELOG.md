@@ -2,7 +2,6 @@
 
 ## [3.0.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v2.8.0...v3.0.0) (2024-06-30)
 
-
 ### ⚠ BREAKING CHANGES
 
 * **#21:** Set prefixDefaultLocale to true
@@ -136,7 +135,6 @@
 * **social:** Open social links in new tab ([5821332](https://github.com/TheJiahao/TheJiahao.github.io/commit/5821332dcabdb8a8f75a39b8c1718c5485464c65))
 * **social:** Show social menu in mobile menu ([1bf7084](https://github.com/TheJiahao/TheJiahao.github.io/commit/1bf7084431611207eea9d2808d409590fb04f5e1))
 * **UnoCSS:** Add custom attributify attributes ([5a8aa8e](https://github.com/TheJiahao/TheJiahao.github.io/commit/5a8aa8ed5185bcbb698d8a2e1fbb05a28e31f6be))
-
 
 ### Bug Fixes
 
@@ -322,13 +320,11 @@
 * Update pnpm-lock.yaml ([2e08a59](https://github.com/TheJiahao/TheJiahao.github.io/commit/2e08a591fdf5562edd84e6fdfb5aaf2dc3cf00b9))
 * vscode-affinity-issues not working ([5faf468](https://github.com/TheJiahao/TheJiahao.github.io/commit/5faf46822e6fc62f32b69e68fe4bf32fd889e999))
 
-
 ### Performance Improvements
 
 * **#10:** Cache Playwright binaries ([af9a6c5](https://github.com/TheJiahao/TheJiahao.github.io/commit/af9a6c57ab3970e3171fb97b8057eca89b0e2202))
 * **DX:** Cache `getBlogs` to improve dev server performance ([2f81b57](https://github.com/TheJiahao/TheJiahao.github.io/commit/2f81b57d0c383a39e2959b4283f48670dab97a1d))
 * Import images only once ([c06b759](https://github.com/TheJiahao/TheJiahao.github.io/commit/c06b75962363ffb2f69b7422fd76887dd80ecfff))
-
 
 ### Reverts
 
@@ -355,7 +351,6 @@
 * "refactor([#55](https://github.com/TheJiahao/TheJiahao.github.io/issues/55)): Read and check locales from Astro config" ([7a4f46d](https://github.com/TheJiahao/TheJiahao.github.io/commit/7a4f46dc403ced5de47ef9b21abd5272f74bcb38))
 * "refactor(SocialLink): Use react-icons" ([25d9f63](https://github.com/TheJiahao/TheJiahao.github.io/commit/25d9f63018216f6eea731bea93e1dc0693e64182))
 * "revert: "refactor(SocialLink): Use react-icons"" ([15bf5c1](https://github.com/TheJiahao/TheJiahao.github.io/commit/15bf5c1057fc1c9499def359b99b5519c31dbbce))
-
 
 ### Miscellaneous Chores
 
