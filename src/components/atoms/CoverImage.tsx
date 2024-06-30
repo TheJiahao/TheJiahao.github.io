@@ -12,7 +12,7 @@ const CoverImage = ({
 }: CoverImageProps) => (
     <img
         src={image.src}
-        alt={`Cover image of "${title}"`}
+        alt={title}
         className="[&[src$='svg']]:object-fill"
         w-full
         h-sm
