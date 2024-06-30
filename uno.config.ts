@@ -51,6 +51,11 @@ export default defineConfig({
             },
         }),
     ],
+    theme: {
+        colors: {
+            background: "hsl(0 0% 96%)",
+        },
+    },
     transformers: [transformerAttributifyJsx()],
     shortcuts: {
         card: "rounded-md bg-white shadow-md break-inside-avoid overflow-hidden",
@@ -65,9 +70,4 @@ export default defineConfig({
         },
     },
     safelist: ["size-15", "size-30", "size-40"],
-    theme: {
-        colors: {
-            background: "hsl(0 0% 96%)",
-        },
-    },
 });
