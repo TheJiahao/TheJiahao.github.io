@@ -11,7 +11,9 @@ interface BlogDetailsProps {
 const BlogDetails = ({ title, description, date }: BlogDetailsProps) => (
     <div prose prose-primary max-w-full>
         <h1>{title}</h1>
+
         {description && <p text="secondary lg">{description}</p>}
+
         <IconComponent
             icon={<LuCalendar role="presentation" focusable="false" />}
         >
