@@ -1,3 +1,4 @@
 {
-    "packages": {}
+    "packages": {},
+    "commit-search-depth": 2000
 }
