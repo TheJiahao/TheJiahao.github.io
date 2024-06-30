@@ -46,6 +46,7 @@ export default defineConfig({
                 dark: {
                     colors: {
                         background: "hsl(0 0% 9%)",
+                        card: "hsl(0 0% 15%)",
                     },
                 },
             },
@@ -54,11 +55,12 @@ export default defineConfig({
     theme: {
         colors: {
             background: "hsl(0 0% 96%)",
+            card: "hsl(0 0% 100%)",
         },
     },
     transformers: [transformerAttributifyJsx()],
     shortcuts: {
-        card: "rounded-md bg-white shadow-md break-inside-avoid overflow-hidden",
+        card: "rounded-md bg-card shadow-md break-inside-avoid overflow-hidden",
         "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
     },
     content: {
