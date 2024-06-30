@@ -18,7 +18,7 @@ const BackButton = ({
             inline-flex
             card
             p-3
-            text="lg"
+            text="secondary lg"
         >
             <IconComponent icon={<LuChevronLeft />}>{label}</IconComponent>
         </a>
