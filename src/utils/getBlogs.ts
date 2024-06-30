@@ -1,11 +1,10 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { execSync } from "child_process";
-import type { ImageWithAlt } from "interfaces/ImageWithAlt";
 
 type BlogData = Omit<CollectionEntry<"posts">["data"], "image"> & {
     language: string;
     lastModified: Date;
-    image?: ImageWithAlt;
+    image?: ImageMetadata & { alt: string };
 };
 
 type BlogEntry = Omit<CollectionEntry<"posts">, "slug" | "data"> & {
