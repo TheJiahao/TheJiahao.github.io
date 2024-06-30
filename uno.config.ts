@@ -6,11 +6,14 @@ import {
     presetWind,
     transformerAttributifyJsx,
 } from "unocss";
+import presetTheme from "unocss-preset-theme";
 
 export default defineConfig({
     presets: [
         presetAttributify(),
-        presetWind(),
+        presetWind({
+            dark: "media",
+        }),
         presetTypography({
             cssExtend: {
                 ":not(pre) > code::before,:not(pre) > code::after": {
@@ -38,6 +41,15 @@ export default defineConfig({
                 mono: "JetBrains Mono",
             },
         }),
+        presetTheme({
+            theme: {
+                dark: {
+                    colors: {
+                        background: "hsl(0 0% 9%)",
+                    },
+                },
+            },
+        }),
     ],
     transformers: [transformerAttributifyJsx()],
     shortcuts: {
@@ -55,7 +67,7 @@ export default defineConfig({
     safelist: ["size-15", "size-30", "size-40"],
     theme: {
         colors: {
-            backgroundLight: "hsl(0 0% 96%)",
+            background: "hsl(0 0% 96%)",
         },
     },
 });
