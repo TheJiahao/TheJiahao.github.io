@@ -1,13 +1,12 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { execSync } from "child_process";
 
-type BlogData = Omit<CollectionEntry<"posts">["data"], "image"> & {
+type BlogData = CollectionEntry<"posts">["data"] & {
     language: string;
     lastModified: Date;
-    image?: ImageMetadata & { alt: string };
 };
 
-type BlogEntry = Omit<CollectionEntry<"posts">, "slug" | "data"> & {
+type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
     /** Blog slug without language */
     slug: string;
     data: BlogData;
@@ -23,14 +22,6 @@ const getLastModified = ({
     return new Date(result.toString());
 };
 
-const transformImage = (image: CollectionEntry<"posts">["data"]["image"]) => {
-    if (!image) {
-        return undefined;
-    }
-
-    return { alt: image.alt, ...image.src };
-};
-
 const blogs = (
     await getCollection(
         "posts",
@@ -44,7 +35,6 @@ const blogs = (
         slug: slug.join("/"),
         data: {
             ...blog.data,
-            image: transformImage(blog.data.image),
             language,
             lastModified: getLastModified(blog),
         },
