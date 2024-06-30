@@ -6,13 +6,11 @@ import { getTranslation } from "utils/getTranslation";
 
 interface BackButtonProps extends TranslatedElement {
     label?: string;
-    fontSize?: string;
 }
 
 const BackButton = ({
     language,
     label = getTranslation(language).back,
-    fontSize = "lg",
 }: BackButtonProps) => {
     return (
         <a
@@ -20,7 +18,7 @@ const BackButton = ({
             inline-flex
             card
             p-3
-            text={fontSize}
+            text="lg"
         >
             <IconComponent icon={<LuChevronLeft />}>{label}</IconComponent>
         </a>
