@@ -9,12 +9,7 @@ const postCollection = defineCollection({
             license: z.string().optional(),
             tags: z.array(z.string()).optional(),
             description: z.string().optional(),
-            image: z
-                .object({
-                    src: image(),
-                    alt: z.string(),
-                })
-                .optional(),
+            image: image().optional(),
             links: z
                 .array(
                     z.object({
