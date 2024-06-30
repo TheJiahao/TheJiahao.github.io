@@ -23,7 +23,7 @@ const NavigationToolBar = ({
     expanded,
     ...props
 }: NavigationToolBarProps) => (
-    <div role={role} {...props} w-full bg-white grid grid-cols-3 items-center>
+    <div role={role} {...props} w-full grid grid-cols-3 items-center>
         <Avatar
             image={avatar}
             size="15"
