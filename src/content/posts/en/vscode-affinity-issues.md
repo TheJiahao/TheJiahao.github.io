@@ -10,9 +10,7 @@ tags:
     - VS Code
     - Markdown
     - Git
-image:
-    src: /src/assets/images/vscode_logo.svg
-    alt: Visual Studio Code logo
+image: /src/assets/images/vscode_logo.svg
 
 hidden: false
 math:

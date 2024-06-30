@@ -13,9 +13,7 @@ tags:
     - Edge
     - JavaScript Debugger
     - Windows
-image:
-    src: img/edge_logo.svg
-    alt: Microsoft Edge 图标
+image: img/edge_logo.svg
 
 hidden: false
 math:
