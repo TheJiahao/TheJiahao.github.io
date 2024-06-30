@@ -8,7 +8,7 @@ interface LinkProps {
 const LinkCard = ({ title, description, url, image }: LinkProps) => {
     return (
         <a href={url} flex gap-4 px-8 py-2>
-            <div prose flex-auto max-w-full>
+            <div prose dark="prose-white" flex-auto max-w-full>
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>
