@@ -53,4 +53,9 @@ export default defineConfig({
         },
     },
     safelist: ["size-15", "size-30", "size-40"],
+    theme: {
+        colors: {
+            backgroundLight: "hsl(0 0% 96%)",
+        },
+    },
 });
