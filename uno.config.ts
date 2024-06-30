@@ -46,6 +46,7 @@ export default defineConfig({
                 dark: {
                     colors: {
                         primary: "white",
+                        secondary: "hsl(0 0% 70%)",
                         background: "hsl(0 0% 9%)",
                         card: "hsl(0 0% 15%)",
                     },
@@ -56,6 +57,7 @@ export default defineConfig({
     theme: {
         colors: {
             primary: "black",
+            secondary: "hsl(0 0% 25%)",
             background: "hsl(0 0% 96%)",
             card: "hsl(0 0% 100%)",
         },
