@@ -17,5 +17,11 @@
     ],
     "typescript.updateImportsOnFileMove.enabled": "never",
     "typescript.preferences.preferTypeOnlyAutoImports": true,
-    "typescript.preferences.importModuleSpecifier": "non-relative"
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "json.schemas": [
+        {
+            "fileMatch": ["release-please-config.json"],
+            "url": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+        }
+    ]
 }
