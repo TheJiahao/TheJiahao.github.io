@@ -20,7 +20,7 @@ const NavigationHeader = ({
             url={getRelativeLocaleUrl(language, "/about")}
         />
 
-        <h1 className="hidden" lg="block text-center text-xl font-bold">
+        <h1 block text="center xl" font-bold>
             {getTranslation(language).siteTitle}
         </h1>
     </>
