@@ -1,8 +1,4 @@
-import getImage from "utils/getImage";
-
-const SITE_AVATAR = await getImage("/src/assets/images/avatar.svg");
-const BLOG_IMAGE_PLACEHOLDER = await getImage(
-    "/src/assets/images/cover_placeholder.svg",
-);
+import SITE_AVATAR from "/src/assets/images/avatar.svg";
+import BLOG_IMAGE_PLACEHOLDER from "/src/assets/images/cover_placeholder.svg";
 
 export { BLOG_IMAGE_PLACEHOLDER, SITE_AVATAR };
