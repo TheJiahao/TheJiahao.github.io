@@ -6,10 +6,9 @@
             &::after {
                 content: unset;
             }
-            background-color: #f2f1f1;
-            padding: 0.3em 0.2em;
-            border-radius: 0.375em;
-            color: darkGreen;
+            @apply p-1 rounded-md;
+            color: theme("colors.accent");
+            background-color: theme("colors.code-background");
         }
 
         a {

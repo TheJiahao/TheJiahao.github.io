@@ -5,6 +5,7 @@ import {
     presetUno,
     presetWebFonts,
     transformerAttributifyJsx,
+    transformerDirectives,
 } from "unocss";
 import presetTheme from "unocss-preset-theme";
 
@@ -28,7 +29,9 @@ export default defineConfig({
                     colors: {
                         primary: "white",
                         secondary: "hsl(0 0% 70%)",
+                        accent: "#2eb172",
                         background: "hsl(0 0% 9%)",
+                        "code-background": "#272a2f",
                         card: "hsl(0 0% 15%)",
                     },
                 },
@@ -39,11 +42,13 @@ export default defineConfig({
         colors: {
             primary: "black",
             secondary: "hsl(0 0% 25%)",
+            accent: "#18794e",
             background: "hsl(0 0% 96%)",
+            "code-background": "#f2f1f1",
             card: "hsl(0 0% 100%)",
         },
     },
-    transformers: [transformerAttributifyJsx()],
+    transformers: [transformerAttributifyJsx(), transformerDirectives()],
     shortcuts: {
         card: "rounded-md bg-card shadow-md break-inside-avoid overflow-hidden",
         "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
@@ -56,5 +61,11 @@ export default defineConfig({
             ],
         },
     },
-    safelist: ["size-15", "size-30", "size-40"],
+    safelist: [
+        "size-15",
+        "size-30",
+        "size-40",
+        "text-accent",
+        "bg-code-background",
+    ],
 });
