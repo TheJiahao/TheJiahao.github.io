@@ -30,6 +30,7 @@ export default defineConfig({
                         primary: "white",
                         secondary: "hsl(0 0% 70%)",
                         code: "#2eb172",
+                        link: "#84c5e6",
                         background: "hsl(0 0% 9%)",
                         "code-background": "#272a2f",
                         card: "hsl(0 0% 15%)",
@@ -43,6 +44,7 @@ export default defineConfig({
             primary: "black",
             secondary: "hsl(0 0% 25%)",
             code: "#18794e",
+            link: "#005782",
             background: "hsl(0 0% 96%)",
             "code-background": "#f2f1f1",
             card: "hsl(0 0% 100%)",
@@ -66,6 +68,7 @@ export default defineConfig({
         "size-30",
         "size-40",
         "text-code",
+        "text-link",
         "bg-code-background",
     ],
 });
