@@ -29,7 +29,7 @@ export default defineConfig({
                     colors: {
                         primary: "white",
                         secondary: "hsl(0 0% 70%)",
-                        accent: "#2eb172",
+                        code: "#2eb172",
                         background: "hsl(0 0% 9%)",
                         "code-background": "#272a2f",
                         card: "hsl(0 0% 15%)",
@@ -42,7 +42,7 @@ export default defineConfig({
         colors: {
             primary: "black",
             secondary: "hsl(0 0% 25%)",
-            accent: "#18794e",
+            code: "#18794e",
             background: "hsl(0 0% 96%)",
             "code-background": "#f2f1f1",
             card: "hsl(0 0% 100%)",
@@ -65,7 +65,7 @@ export default defineConfig({
         "size-15",
         "size-30",
         "size-40",
-        "text-accent",
+        "text-code",
         "bg-code-background",
     ],
 });
