@@ -1,5 +1,49 @@
 # Changelog
 
+## [3.1.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.0.0...v3.1.0) (2024-07-01)
+
+
+### Features
+
+* **#51:** Add dark mode background ([a675f1c](https://github.com/TheJiahao/TheJiahao.github.io/commit/a675f1c97d0dd6be9fdac07bacd463059170697e))
+* **#51:** Add secondary color ([bafd6a2](https://github.com/TheJiahao/TheJiahao.github.io/commit/bafd6a2f37af7c7d0818c40f906cd060868116cc))
+* **#51:** Allow passing color to IconComponent ([4963bce](https://github.com/TheJiahao/TheJiahao.github.io/commit/4963bce8c268b7f6e07705cb2769ce5ef8c25a34))
+* **#51:** Configure link color ([1e07c81](https://github.com/TheJiahao/TheJiahao.github.io/commit/1e07c81015b736cf7659284d306eea6807875cae))
+* **#51:** Remove `NavigationToolBar` background ([644e696](https://github.com/TheJiahao/TheJiahao.github.io/commit/644e696d36e0d99d778e2ed9c05effca3b62e864))
+* **#51:** Replace prose with manual style in `LinkCard` ([044085c](https://github.com/TheJiahao/TheJiahao.github.io/commit/044085c71c7e4e7435d801cd2bc469f2c6203bbc))
+* **#51:** Set background colors for card ([e0e7ad1](https://github.com/TheJiahao/TheJiahao.github.io/commit/e0e7ad11e7a26e700a9217b9697f9c19414c54a8))
+* **#51:** Set darker background ([d0bc6cc](https://github.com/TheJiahao/TheJiahao.github.io/commit/d0bc6cca321387684cc2b66fea646e3c5faa0f2b))
+* **#51:** Set prose-white in dark mode ([c21d092](https://github.com/TheJiahao/TheJiahao.github.io/commit/c21d092c0378aa9be3c966d431a126bc1ee4df68))
+* **#51:** Use primary color in `NavigationHeader` ([0d5add2](https://github.com/TheJiahao/TheJiahao.github.io/commit/0d5add2e3d9c89ed8104129bd601d06e6c16b5f8))
+* **#51:** Use secondary color for `MobileNavigationToolBar` ([e5ad9b2](https://github.com/TheJiahao/TheJiahao.github.io/commit/e5ad9b2aecf6606079583f7919078b37e923deba))
+* **#51:** Use secondary color for `SocialLink` ([7d81dfb](https://github.com/TheJiahao/TheJiahao.github.io/commit/7d81dfb07c234491bae41fd429b8804e75b2b551))
+* **#51:** Use secondary color in BackButton ([b3dc467](https://github.com/TheJiahao/TheJiahao.github.io/commit/b3dc467eaf2c6585fb4ac5886fe2d4e4101a030a))
+* **#51:** Use secondary color in site footer ([1fee368](https://github.com/TheJiahao/TheJiahao.github.io/commit/1fee3684a9915794a88c57714a90e947f29e2c32))
+* **#51:** Use UnoCSS directives transformer ([39dc97d](https://github.com/TheJiahao/TheJiahao.github.io/commit/39dc97d36a7a93de946df445bd805bad4db39b74))
+* **#72:** Add alt to cover images ([7226ceb](https://github.com/TheJiahao/TheJiahao.github.io/commit/7226ceb8a4b8652fea7b16da3c3bedc21ef91932))
+* **#72:** Add defaultBlogCover translation ([2c55003](https://github.com/TheJiahao/TheJiahao.github.io/commit/2c55003a38a05570641d5026b6fc23d1063c7c18))
+* **#72:** Add workaround to spread image.src ([c433dfc](https://github.com/TheJiahao/TheJiahao.github.io/commit/c433dfc44bf06a99f95e5a370c1ab4a4a64354e5))
+* **#72:** Require alt for cover image ([9afe4e5](https://github.com/TheJiahao/TheJiahao.github.io/commit/9afe4e53a888386950444db71f88f80cf928fb68))
+
+
+### Bug Fixes
+
+* **#72:** Use blog title as cover alt ([3ed8735](https://github.com/TheJiahao/TheJiahao.github.io/commit/3ed8735271fa9fd09bb4fefdec6fa3ca0d50c844)), closes [#72](https://github.com/TheJiahao/TheJiahao.github.io/issues/72)
+* **deps:** update dependency unocss-preset-theme to ^0.13.0 ([669c895](https://github.com/TheJiahao/TheJiahao.github.io/commit/669c8953e578324ad0c9d5569f849a63ede40893))
+* **docs:** Preview link in README ([f6b17a0](https://github.com/TheJiahao/TheJiahao.github.io/commit/f6b17a0f6956e749b6e162ebbba4e048c43a0cdf))
+* Link card alt not translated ([2c698bb](https://github.com/TheJiahao/TheJiahao.github.io/commit/2c698bbf0c6e8b9793254bcc84c6150ccafa01dc))
+* **LinkCard:** Local images not displaying ([9fad963](https://github.com/TheJiahao/TheJiahao.github.io/commit/9fad963e679036a08379803c86fbab411a5146df))
+* **LinkCard:** Remove `console.log` ([458de05](https://github.com/TheJiahao/TheJiahao.github.io/commit/458de055841f121337a8cb45ff6d437e983fdda5))
+
+
+### Reverts
+
+* "feat([#72](https://github.com/TheJiahao/TheJiahao.github.io/issues/72)): Add alt to cover images" ([d5c262a](https://github.com/TheJiahao/TheJiahao.github.io/commit/d5c262ab13299eae721272fb04e4c8e68633de58))
+* "feat([#72](https://github.com/TheJiahao/TheJiahao.github.io/issues/72)): Add defaultBlogCover translation" ([93d6c9c](https://github.com/TheJiahao/TheJiahao.github.io/commit/93d6c9c1bd3980694cf2284b753627c42128313d))
+* "feat([#72](https://github.com/TheJiahao/TheJiahao.github.io/issues/72)): Add workaround to spread image.src" ([6cbee41](https://github.com/TheJiahao/TheJiahao.github.io/commit/6cbee41df8dca52373b3348b0febca5a46ffb0a8))
+* "feat([#72](https://github.com/TheJiahao/TheJiahao.github.io/issues/72)): Require alt for cover image" ([9b7a2d6](https://github.com/TheJiahao/TheJiahao.github.io/commit/9b7a2d691ca99deade472784df9076d86b4f1dd5))
+* "refactor([#72](https://github.com/TheJiahao/TheJiahao.github.io/issues/72)): Add ImageWithAlt" ([c29417e](https://github.com/TheJiahao/TheJiahao.github.io/commit/c29417e509818cb4bacfcb9615404c4f7485b75e))
+
 ## [3.0.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v2.8.0...v3.0.0) (2024-06-30)
 
 ### ⚠ BREAKING CHANGES
