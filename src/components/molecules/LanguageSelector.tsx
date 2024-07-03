@@ -53,6 +53,7 @@ const LanguageSelector = ({
                             <LuChevronDown aria-hidden />
                         </span>
                     </ListboxButton>
+
                     <ListboxOptions
                         className="[--anchor-gap:1rem] data-[closed]:opacity-0"
                         anchor="bottom end"
