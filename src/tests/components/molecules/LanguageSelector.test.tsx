@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, test } from "vitest";
 import LanguageSelector from "../../../components/molecules/LanguageSelector";
 
@@ -16,14 +17,19 @@ describe("<LanguageSelector/>", () => {
     });
 
     test("shows given language by default", () => {
-        expect(screen.getByRole("option", { name: "English" })).toHaveAttribute(
-            "selected",
-        );
+        expect(screen.getByRole("combobox")).toHaveTextContent("English");
     });
 
-    test("has all languages", () => {
+    test("has all languages", async () => {
+        const user = userEvent.setup();
+        const languageSelector = screen.getByRole("combobox", {
+            name: "Select language",
+        });
+
+        await user.click(languageSelector);
+
         for (const { name } of languages) {
-            expect(screen.getByRole("option", { name })).toBeVisible();
+            expect(screen.getByRole("option", { name })).toBeInTheDocument();
         }
     });
 });
