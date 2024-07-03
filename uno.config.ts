@@ -32,9 +32,11 @@ export default defineConfig({
                         disabled: "hsl(0 0% 30%)",
                         code: "#2eb172",
                         link: "#84c5e6",
-                        "surface-tertiary": "hsl(0 0% 9%)",
+                        surface: {
+                            primary: "hsl(0 0% 15%)",
+                            tertiary: "hsl(0 0% 9%)",
+                        },
                         "code-background": "#272a2f",
-                        card: "hsl(0 0% 15%)",
                     },
                 },
             },
@@ -47,14 +49,16 @@ export default defineConfig({
             disabled: "hsl(0 0% 70%)",
             code: "#18794e",
             link: "#005782",
-            "surface-tertiary": "hsl(0 0% 96%)",
+            surface: {
+                primary: "hsl(0 0% 100%)",
+                tertiary: "hsl(0 0% 96%)",
+            },
             "code-background": "#f2f1f1",
-            card: "hsl(0 0% 100%)",
         },
     },
     transformers: [transformerAttributifyJsx(), transformerDirectives()],
     shortcuts: {
-        card: "rounded-md bg-card shadow-md break-inside-avoid overflow-hidden",
+        card: "rounded-md bg-surface-primary shadow-md break-inside-avoid overflow-hidden",
         "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
     },
     content: {
