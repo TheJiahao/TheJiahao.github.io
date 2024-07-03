@@ -1,0 +1,8 @@
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: theme("colors.disabled");
+    border-radius: 0.25rem;
+}
