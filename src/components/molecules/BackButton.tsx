@@ -17,7 +17,7 @@ const BackButton = ({
             href={getRelativeLocaleUrl(language, "/")}
             inline-flex
             card
-            p-3
+            p-2
             text="secondary lg"
         >
             <IconComponent icon={<LuChevronLeft />}>{label}</IconComponent>
