@@ -55,8 +55,8 @@ const LanguageSelector = ({
                     </ListboxButton>
 
                     <ListboxOptions
-                        className="[--anchor-gap:1rem] data-[closed]:opacity-0"
-                        anchor="bottom end"
+                        className="data-[closed]:opacity-0"
+                        anchor={{ to: "bottom end", gap: "1rem" }}
                         card
                         flex="~ col"
                         text-secondary
