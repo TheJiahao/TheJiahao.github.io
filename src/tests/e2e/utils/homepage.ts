@@ -29,6 +29,8 @@ export class HomePage {
             .getByRole("combobox", {
                 name: "Select language",
             })
-            .selectOption(language);
+            .click();
+
+        await this.page.getByRole("option", { name: language }).click();
     }
 }

@@ -1,5 +1,6 @@
 import { expect } from "@playwright/test";
 import { languageCodes } from "localization";
+import { getTranslation } from "utils/getTranslation";
 import test from "./utils/fixtures";
 
 test.describe("Language selection", () => {
@@ -18,7 +19,9 @@ test.describe("Language selection", () => {
                     homepage,
                     page,
                 }) => {
-                    await homepage.selectLanguage(targetLanguage);
+                    await homepage.selectLanguage(
+                        getTranslation(targetLanguage).name,
+                    );
 
                     await expect(page).toHaveURL(
                         RegExp(`/${targetLanguage}/?$`),
