@@ -47,6 +47,7 @@ const LanguageSelector = ({
                             getTranslation(defaultLanguage).selectLanguage
                         }
                         un-disabled="text-disabled"
+                        role="combobox"
                     >
                         <span inline-flex items-center gap-2>
                             {getTranslation(defaultLanguage).name}
