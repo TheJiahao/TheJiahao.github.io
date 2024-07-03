@@ -58,7 +58,6 @@ const LanguageSelector = ({
                     <ListboxOptions
                         className="data-[closed]:opacity-0"
                         anchor={{ to: "bottom end", gap: "1rem" }}
-                        as="datalist"
                         card
                         flex="~ col"
                         text-secondary
@@ -71,7 +70,6 @@ const LanguageSelector = ({
                             <ListboxOption
                                 key={code}
                                 value={code}
-                                as="option"
                                 p-2
                                 hover="cursor-pointer bg-surface-tertiary"
                             >
