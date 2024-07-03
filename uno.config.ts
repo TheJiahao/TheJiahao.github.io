@@ -29,6 +29,10 @@ export default defineConfig({
                     colors: {
                         primary: "white",
                         secondary: "hsl(0 0% 70%)",
+                        accent: {
+                            primary: "hsl(195 100% 60%)",
+                            secondary: "hsl(195 50% 20%)",
+                        },
                         disabled: "hsl(0 0% 30%)",
                         code: "#2eb172",
                         link: "#84c5e6",
@@ -46,6 +50,10 @@ export default defineConfig({
         colors: {
             primary: "black",
             secondary: "hsl(0 0% 25%)",
+            accent: {
+                primary: "hsl(195 100% 100%)",
+                secondary: "hsl(195 100% 95%)",
+            },
             disabled: "hsl(0 0% 70%)",
             code: "#18794e",
             link: "#005782",
