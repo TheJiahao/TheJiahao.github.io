@@ -46,6 +46,7 @@ const LanguageSelector = ({
                         aria-label={
                             getTranslation(defaultLanguage).selectLanguage
                         }
+                        un-disabled="text-disabled"
                     >
                         <span inline-flex items-center gap-2>
                             {getTranslation(defaultLanguage).name}
@@ -57,6 +58,7 @@ const LanguageSelector = ({
                         anchor="bottom end"
                         card
                         flex="~ col"
+                        text-secondary
                         gap-1
                     >
                         {languages.map(({ name, code }) => (
