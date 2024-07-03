@@ -54,12 +54,15 @@ const LanguageSelector = ({
                         </span>
                     </ListboxButton>
                     <ListboxOptions
-                        className="[--anchor-gap:1rem]"
+                        className="[--anchor-gap:1rem] data-[closed]:opacity-0"
                         anchor="bottom end"
                         card
                         flex="~ col"
                         text-secondary
                         gap-1
+                        transition={true}
+                        duration-100
+                        ease-in
                     >
                         {languages.map(({ name, code }) => (
                             <ListboxOption
