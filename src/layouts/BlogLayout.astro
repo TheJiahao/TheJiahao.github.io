@@ -7,9 +7,13 @@ import LinkList from "components/organisms/LinkList";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import BaseLayout from "layouts/BaseLayout.astro";
 import ContentLayout from "layouts/ContentLayout.astro";
+import TableOfContents from "components/organisms/TableOfContents";
 import type { BlogData } from "utils/getBlogs";
+import type { MarkdownHeading } from "astro";
 
-type Props = BlogData;
+type Props = BlogData & {
+    headings: MarkdownHeading[];
+};
 
 const {
     title,
@@ -20,6 +24,7 @@ const {
     license,
     language,
     lastModified,
+    headings,
 } = Astro.props;
 ---
 
@@ -44,4 +49,8 @@ const {
 
         <LinkList {links} {language} />
     </ContentLayout>
+
+    <aside un-hidden lg="block sticky top-0 p-lg h-screen">
+        <TableOfContents {headings} />
+    </aside>
 </BaseLayout>
