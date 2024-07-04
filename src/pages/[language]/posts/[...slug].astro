@@ -15,11 +15,11 @@ export function getStaticPaths() {
 
 type Props = BlogEntry;
 
-const post = Astro.props;
+const { data, render } = Astro.props;
 
-const { Content, headings } = await post.render();
+const { Content, headings } = await render();
 ---
 
-<BlogLayout {...post.data} {headings}>
+<BlogLayout {...data} {headings}>
     <Content />
 </BlogLayout>
