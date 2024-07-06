@@ -15,4 +15,4 @@ const SOCIAL_LINKS: SocialLinkProps[] = [
     },
 ];
 
-export default SOCIAL_LINKS;
+export { SOCIAL_LINKS };

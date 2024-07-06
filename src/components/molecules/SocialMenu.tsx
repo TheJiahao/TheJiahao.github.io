@@ -2,7 +2,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import type { SocialLinkProps } from "components/atoms/SocialLink";
 import SocialLink from "components/atoms/SocialLink";
 import Menu, { type MenuProps } from "components/molecules/Menu";
-import SOCIAL_LINKS from "config/social";
+import { SOCIAL_LINKS } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
