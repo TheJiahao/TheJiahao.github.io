@@ -8,7 +8,7 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => (
     <li key={heading.slug}>
         <a href={`#${heading.slug}`}>{heading.text}</a>
 
-        {heading.subHeadings.length !== 0 ? (
+        {heading.subHeadings.length > 0 ? (
             <ul>
                 {heading.subHeadings.map((heading) => (
                     <TableOfContentsHeading
