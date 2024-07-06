@@ -35,7 +35,6 @@ export default tseslint.config(
         },
         rules: {
             "react/no-unknown-property": ["off"],
-            "@typescript-eslint/no-non-null-assertion": ["off"],
         },
     },
 );
