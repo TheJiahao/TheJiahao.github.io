@@ -71,7 +71,7 @@ describe("getTOC()", () => {
             { depth: 3, text: "Highlight", slug: "highlight" },
         ];
 
-        expect(getTOC(headings)[0].subHeadings).toEqual([
+        expect(getTOC(headings, 2, 4)[0].subHeadings).toEqual([
             {
                 depth: 3,
                 text: "Background",
@@ -100,7 +100,7 @@ describe("getTOC()", () => {
             { depth: 4, text: "Subsubheading", slug: "subsubheading" },
         ];
 
-        expect(() => getTOC(headings)).toThrowError(/Subsubheading/);
+        expect(() => getTOC(headings, 2, 4)).toThrowError(/Subsubheading/);
     });
 
     test("stops at endDepth", () => {
