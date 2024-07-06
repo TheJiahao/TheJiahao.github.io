@@ -2,6 +2,7 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import { defineConfig } from "astro/config";
+import remarkSectionize from "remark-sectionize";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
@@ -53,6 +54,7 @@ export default defineConfig({
         shikiConfig: {
             theme: "one-dark-pro",
         },
+        remarkPlugins: [remarkSectionize],
     },
     redirects: {
         "/": {
