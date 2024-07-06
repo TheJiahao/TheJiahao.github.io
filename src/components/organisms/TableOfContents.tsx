@@ -1,5 +1,5 @@
 import { type MarkdownHeading } from "astro";
-import { HeadingList } from "components/molecules/HeadingList";
+import { TableOfContentsHeading } from "components/molecules/TableOfContentsHeading";
 import { getTOC } from "utils/getTOC";
 
 interface TableOfContentsProps {
@@ -11,7 +11,7 @@ const TableOfContents = ({ headings }: TableOfContentsProps) => {
         <nav card p-lg bg-surface-primary text-secondary>
             <ul>
                 {getTOC(headings).map((heading) => (
-                    <HeadingList key={heading.slug} heading={heading} />
+                    <TableOfContentsHeading key={heading.slug} heading={heading} />
                 ))}
             </ul>
         </nav>
