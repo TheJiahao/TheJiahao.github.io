@@ -1,4 +1,4 @@
-const en = {
+export const en = {
     name: "English",
     code: "en",
     siteTitle: "Jiahao's blog",
@@ -20,5 +20,3 @@ const en = {
     blogList: "Blog list",
     externalLinks: "External links",
 };
-
-export default en;
