@@ -4,7 +4,7 @@ interface HeadingListProps {
     heading: Heading;
 }
 
-export const TableOfContentsHeading = ({ heading }: HeadingListProps) => (
+const TableOfContentsHeading = ({ heading }: HeadingListProps) => (
     <li key={heading.slug}>
         <a href={`#${heading.slug}`}>{heading.text}</a>
 
@@ -20,3 +20,5 @@ export const TableOfContentsHeading = ({ heading }: HeadingListProps) => (
         ) : null}
     </li>
 );
+
+export default TableOfContentsHeading;
