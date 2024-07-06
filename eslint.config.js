@@ -35,13 +35,6 @@ export default tseslint.config(
         },
         rules: {
             "react/no-unknown-property": ["off"],
-            "no-restricted-syntax": [
-                "error",
-                {
-                    selector: "ExportDefaultDeclaration",
-                    message: "Prefer named exports",
-                },
-            ],
         },
     },
 );
