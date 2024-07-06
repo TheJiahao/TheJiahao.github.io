@@ -1,10 +1,11 @@
 import type { MarkdownHeading } from "astro";
+import { TOC_END_DEPTH, TOC_START_DEPTH } from "config";
 import type { Heading } from "interfaces/Heading";
 
 export const getTOC = (
     headings: MarkdownHeading[],
-    startDepth: number = 2,
-    endDepth: number = 3,
+    startDepth: number = TOC_START_DEPTH,
+    endDepth: number = TOC_END_DEPTH,
 ): Heading[] => {
     const result: Heading[] = [];
     const parentHeadings = new Array<Heading | null>(7).fill(null);

@@ -27,4 +27,7 @@ const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
     ]),
 );
 
-export {NAVIGATION_LINKS};
+const TOC_START_DEPTH = 2;
+const TOC_END_DEPTH = 3;
+
+export { NAVIGATION_LINKS, TOC_END_DEPTH, TOC_START_DEPTH };
