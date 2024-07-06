@@ -12,6 +12,7 @@ export const getTOC = (
 
     headings
         .filter((h) => h.depth <= endDepth)
+        .filter((h) => h.text !== "Footnotes")
         .forEach((h) => {
             const heading = { ...h, subHeadings: [] };
             parentHeadings[heading.depth] = heading;
