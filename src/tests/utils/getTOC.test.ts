@@ -18,35 +18,35 @@ describe("getTOC()", () => {
                 depth: 2,
                 text: "Introduction",
                 slug: "introduction",
-                subHeading: [
+                subHeadings: [
                     {
                         depth: 3,
                         text: "Background",
                         slug: "background",
-                        subHeading: [],
+                        subHeadings: [],
                     },
                     {
                         depth: 3,
                         text: "Highlight",
                         slug: "highlight",
-                        subHeading: [],
+                        subHeadings: [],
                     },
                     {
                         depth: 2,
                         text: "Features",
                         slug: "features",
-                        subHeading: [
+                        subHeadings: [
                             {
                                 depth: 3,
                                 text: "Feature 1",
                                 slug: "feature-1",
-                                subHeading: [],
+                                subHeadings: [],
                             },
                             {
                                 depth: 3,
                                 text: "Feature 2",
                                 slug: "feature-2",
-                                subHeading: [],
+                                subHeadings: [],
                             },
                         ],
                     },
