@@ -11,9 +11,7 @@ const TableOfContents = ({ headings }: TableOfContentsProps) => {
         <nav card p-lg bg-surface-primary text-secondary>
             <ul>
                 {getTOC(headings).map((heading) => (
-                    <li key={heading.slug}>
-                        <HeadingList heading={heading} />
-                    </li>
+                    <HeadingList key={heading.slug} heading={heading} />
                 ))}
             </ul>
         </nav>
