@@ -1,7 +1,7 @@
 import type { Language } from "interfaces/Language";
-import { en } from "./en";
+import en from "./en";
 
-export const zh_cn: Language = {
+const zh_cn: Language = {
     ...en,
     name: "简体中文",
     code: "zh-cn",
@@ -23,3 +23,5 @@ export const zh_cn: Language = {
     blogList: "博客列表",
     externalLinks: "外部链接",
 };
+
+export default zh_cn;
