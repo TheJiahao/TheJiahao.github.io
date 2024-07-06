@@ -102,4 +102,29 @@ describe("getTOC()", () => {
 
         expect(() => getTOC(headings)).toThrowError(/Subsubheading/);
     });
+
+    test("stops at endDepth", () => {
+        const headings: MarkdownHeading[] = [
+            { depth: 2, text: "Introduction", slug: "introduction" },
+            { depth: 3, text: "Introduction", slug: "introduction" },
+            { depth: 4, text: "Subsubheading", slug: "subsubheading" },
+            { depth: 5, text: "Subsubsubheading", slug: "subsubsubheading" },
+        ];
+
+        expect(getTOC(headings, 2, 3)).toEqual([
+            {
+                depth: 2,
+                text: "Introduction",
+                slug: "introduction",
+                subHeadings: [
+                    {
+                        depth: 3,
+                        text: "Introduction",
+                        slug: "introduction",
+                        subHeadings: [],
+                    },
+                ],
+            },
+        ]);
+    });
 });
