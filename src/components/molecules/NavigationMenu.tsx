@@ -1,6 +1,6 @@
 import IconComponent from "components/atoms/IconComponent";
 import Menu, { type MenuProps } from "components/molecules/Menu";
-import NAVIGATION_LINKS from "config/navigation";
+import { NAVIGATION_LINKS } from "config/navigation";
 import type { IconLink } from "interfaces/IconLink";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";

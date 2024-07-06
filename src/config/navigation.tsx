@@ -27,4 +27,4 @@ const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
     ]),
 );
 
-export default NAVIGATION_LINKS;
+export {NAVIGATION_LINKS};
