@@ -9,7 +9,7 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => (
         <a href={`#${heading.slug}`}>{heading.text}</a>
 
         {heading.subHeadings.length > 0 ? (
-            <ul>
+            <ul indent-10>
                 {heading.subHeadings.map((heading) => (
                     <TableOfContentsHeading
                         key={heading.slug}
