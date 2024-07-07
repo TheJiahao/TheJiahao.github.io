@@ -5,7 +5,7 @@ import "scss/scrollbar.scss";
 ---
 
 <!doctype html>
-<html lang={Astro.currentLocale ?? DEFAULT_LANGUAGE}>
+<html lang={Astro.currentLocale ?? DEFAULT_LANGUAGE} scroll-smooth>
     <head>
         <BaseHeader {...Astro.props} />
         <slot name="head" />
