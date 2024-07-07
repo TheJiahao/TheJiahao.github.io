@@ -3,11 +3,7 @@ import { useEffect, useState } from "react";
 const useVisibleSection = (): string | null => {
     const [id, setId] = useState<string | null>(null);
 
-const useVisibleSection = () => {
     useEffect(() => {
-        const articleSections =
-            document.querySelectorAll<HTMLDivElement>("article section");
-
         const observer = new IntersectionObserver((entries) => {
             entries.map((entry) => {
                 const heading =
@@ -25,9 +21,11 @@ const useVisibleSection = () => {
             });
         });
 
-        for (const section of articleSections) {
-            observer.observe(section);
-        }
+        document
+            .querySelectorAll<HTMLDivElement>("article section")
+            .forEach((section) => {
+                observer.observe(section);
+            });
 
         return () => {
             observer.disconnect();
