@@ -6,17 +6,13 @@ interface HeadingListProps {
 }
 
 const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
-    const activeSections = useVisibleSection();
+    const id = useVisibleSection();
 
     return (
         <li key={heading.slug}>
             <a
                 href={`#${heading.slug}`}
-                className={
-                    activeSections.includes(heading.slug)
-                        ? "text-blue"
-                        : undefined
-                }
+                className={id === heading.slug ? "text-blue" : undefined}
             >
                 {heading.text}
             </a>
