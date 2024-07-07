@@ -14,7 +14,7 @@ const BlogDetails = ({ title, description, date }: BlogDetailsProps) => (
             {title}
         </h1>
 
-        {description && <p text="secondary lg">{description}</p>}
+        {description && <p text="secondary xl">{description}</p>}
 
         <IconComponent
             icon={<LuCalendar role="presentation" focusable="false" />}
