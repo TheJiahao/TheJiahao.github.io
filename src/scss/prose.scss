@@ -16,6 +16,10 @@
             text-underline-offset: 0.25em;
             color: theme("colors.link");
         }
+        p,
+        code {
+            font-size: large;
+        }
     }
 
     .data-footnote-backref {
