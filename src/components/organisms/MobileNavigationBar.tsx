@@ -23,7 +23,7 @@ const MobileNavigationBar = ({ language }: TranslatedElement) => {
                 }
                 overflow-hidden
                 transition-all
-                duration-150
+                duration-300
                 ease-in-out
                 w-full
                 divide-y
