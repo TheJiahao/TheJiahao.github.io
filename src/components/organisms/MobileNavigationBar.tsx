@@ -18,8 +18,8 @@ const MobileNavigationBar = ({ language }: TranslatedElement) => {
                 role="menu"
                 className={
                     expanded
-                        ? "max-h-screen opacity-100 visible"
-                        : "max-h-0 opacity-0 invisible"
+                        ? "max-h-screen visible"
+                        : "max-h-0 invisible"
                 }
                 overflow-hidden
                 transition-all
