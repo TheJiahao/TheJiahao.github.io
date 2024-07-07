@@ -1,4 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+const useVisibleSection = (): string | null => {
+    const [id, setId] = useState<string | null>(null);
 
 const useVisibleSection = () => {
     useEffect(() => {
@@ -12,24 +15,13 @@ const useVisibleSection = () => {
                         "h2,h3,h4,h5,h6",
                     );
 
-                if (!heading) return;
+                if (!heading) {
+                    return;
+                }
 
-                const id = heading.getAttribute("id");
-
-                if (!id) return;
-
-                const link = document.querySelector<HTMLAnchorElement>(
-                    `nav > * a[href="#${id}"]`,
-                );
-
-                if (!link) return;
-
-                const addRemove =
-                    entry.intersectionRatio > 0 ? "add" : "remove";
-                link.classList[addRemove](
-                    "text-blue-500",
-                    "dark:text-blue-400",
-                );
+                if (entry.intersectionRatio > 0) {
+                    setId(heading.getAttribute("id"));
+                }
             });
         });
 
@@ -41,6 +33,8 @@ const useVisibleSection = () => {
             observer.disconnect();
         });
     }, []);
+
+    return id;
 };
 
 export default useVisibleSection;
