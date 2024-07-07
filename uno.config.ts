@@ -3,7 +3,6 @@ import {
     presetAttributify,
     presetTypography,
     presetUno,
-    presetWebFonts,
     transformerAttributifyJsx,
     transformerDirectives,
 } from "unocss";
@@ -16,13 +15,6 @@ export default defineConfig({
             dark: "media",
         }),
         presetTypography(),
-        presetWebFonts({
-            provider: "bunny",
-            fonts: {
-                "sans-serif": "Noto Sans SC",
-                mono: "JetBrains Mono",
-            },
-        }),
         presetTheme({
             theme: {
                 dark: {
