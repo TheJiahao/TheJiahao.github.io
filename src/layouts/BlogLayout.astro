@@ -1,16 +1,16 @@
 ---
+import type { MarkdownHeading } from "astro";
 import BackButton from "components/molecules/BackButton";
 import BlogFooter from "components/molecules/BlogFooter.astro";
 import BlogHeader from "components/molecules/BlogHeader.astro";
 import Article from "components/organisms/Article.astro";
+import CommentList from "components/organisms/CommentList";
 import LinkList from "components/organisms/LinkList";
+import TableOfContents from "components/organisms/TableOfContents";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import BaseLayout from "layouts/BaseLayout.astro";
 import ContentLayout from "layouts/ContentLayout.astro";
-import TableOfContents from "components/organisms/TableOfContents";
 import type { BlogData } from "utils/getBlogs";
-import type { MarkdownHeading } from "astro";
-import CommentList from "components/organisms/CommentList";
 
 type Props = BlogData & {
     headings: MarkdownHeading[];
