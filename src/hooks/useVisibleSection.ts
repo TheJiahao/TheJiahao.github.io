@@ -29,9 +29,9 @@ const useVisibleSection = () => {
             observer.observe(section);
         }
 
-        window.document.addEventListener("beforeunload", () => {
+        return () => {
             observer.disconnect();
-        });
+        };
     }, []);
 
     return id;
