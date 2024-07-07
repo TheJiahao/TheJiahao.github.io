@@ -10,6 +10,7 @@ import ContentLayout from "layouts/ContentLayout.astro";
 import TableOfContents from "components/organisms/TableOfContents";
 import type { BlogData } from "utils/getBlogs";
 import type { MarkdownHeading } from "astro";
+import CommentList from "components/organisms/CommentList";
 
 type Props = BlogData & {
     headings: MarkdownHeading[];
@@ -48,6 +49,8 @@ const {
         </Article>
 
         <LinkList {links} {language} />
+
+        <CommentList {language} client:idle />
     </ContentLayout>
 
     <aside un-hidden lg="block sticky top-0 p-lg h-screen">
