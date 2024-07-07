@@ -1,4 +1,11 @@
+import { TOC_END_DEPTH, TOC_START_DEPTH } from "config";
 import { useEffect, useState } from "react";
+
+const targetHeadings = Array.from(
+    Array(TOC_END_DEPTH - TOC_START_DEPTH + 1).keys(),
+)
+    .map((i) => `h${(i + TOC_START_DEPTH).toString()}`)
+    .join(",");
 
 const useVisibleSection = (): string[] => {
     const [activeSections, setActiveSections] = useState<string[]>([]);
@@ -8,7 +15,7 @@ const useVisibleSection = (): string[] => {
             entries.map((entry) => {
                 const heading =
                     entry.target.querySelector<HTMLHeadingElement>(
-                        "h2,h3,h4,h5,h6",
+                        targetHeadings,
                     );
 
                 if (!heading) {
