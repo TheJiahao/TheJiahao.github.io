@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-const useVisibleSection = (): string | null => {
-    const [id, setId] = useState<string | null>(null);
+const useVisibleSection = (): string[] => {
+    const [activeSections, setActiveSections] = useState<string[]>([]);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -16,7 +16,11 @@ const useVisibleSection = (): string | null => {
                 }
 
                 if (entry.intersectionRatio > 0) {
-                    setId(heading.getAttribute("id"));
+                    setActiveSections(activeSections.concat(heading.id));
+                } else {
+                    setActiveSections(
+                        activeSections.filter((id) => id !== heading.id),
+                    );
                 }
             });
         });
@@ -32,7 +36,7 @@ const useVisibleSection = (): string | null => {
         };
     }, []);
 
-    return id;
+    return activeSections;
 };
 
 export default useVisibleSection;
