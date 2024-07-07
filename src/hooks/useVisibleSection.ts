@@ -12,21 +12,17 @@ const useVisibleSection = (): string | null => {
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
-            entries.map((entry) => {
+            entries.forEach(({ isIntersecting, target }) => {
+                if (!isIntersecting) return;
+
                 const heading =
-                    entry.target.querySelector<HTMLHeadingElement>(
-                        targetHeadings,
-                    );
+                    target.querySelector<HTMLHeadingElement>(targetHeadings);
 
                 if (!heading) {
                     return;
                 }
 
-                if (entry.isIntersecting) {
-                    setId(heading.id);
-                } else {
-                    setId(null);
-                }
+                setId(heading.id);
             });
         });
 
