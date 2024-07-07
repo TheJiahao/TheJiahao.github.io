@@ -73,5 +73,5 @@
         "vitest": "^1.6.0",
         "zhlint": "^0.8.1"
     },
-    "packageManager": "pnpm@9.4.0"
+    "packageManager": "pnpm@9.5.0"
 }
