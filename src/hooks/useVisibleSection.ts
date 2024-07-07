@@ -22,7 +22,7 @@ const useVisibleSection = (): string[] => {
                     return;
                 }
 
-                if (entry.intersectionRatio > 0) {
+                if (entry.isIntersecting) {
                     setActiveSections(activeSections.concat(heading.id));
                 } else {
                     setActiveSections(
