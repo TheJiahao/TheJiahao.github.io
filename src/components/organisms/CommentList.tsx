@@ -15,7 +15,7 @@ const CommentList = ({ language }: TranslatedElement) => {
         language = [languageTag, countryCode.toUpperCase()].join("-");
     }
 
-    return <Giscus {...GISCUS_CONFIG} lang={language} />;
+    return <Giscus {...GISCUS_CONFIG} lang={language} inputPosition="top" />;
 };
 
 export default CommentList;
