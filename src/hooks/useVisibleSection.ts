@@ -24,6 +24,8 @@ const useVisibleSection = (): string | null => {
 
                 if (entry.isIntersecting) {
                     setId(heading.id);
+                } else {
+                    setId(null);
                 }
             });
         });
