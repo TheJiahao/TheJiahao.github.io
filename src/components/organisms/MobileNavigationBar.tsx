@@ -17,9 +17,7 @@ const MobileNavigationBar = ({ language }: TranslatedElement) => {
             <div
                 role="menu"
                 className={
-                    expanded
-                        ? "max-h-screen visible"
-                        : "max-h-0 invisible"
+                    expanded ? "max-h-screen visible" : "max-h-0 invisible"
                 }
                 overflow-hidden
                 transition-all
