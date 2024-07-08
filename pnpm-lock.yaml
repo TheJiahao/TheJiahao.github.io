@@ -145,8 +145,8 @@ importers:
         specifier: ^15.4.0
         version: 15.8.0
       google-indexing-script:
-        specifier: ^0.3.0
-        version: 0.3.0
+        specifier: ^0.4.0
+        version: 0.4.0
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -2443,8 +2443,8 @@ packages:
     resolution: {integrity: sha512-9l+zO07h1tDJdIHN74SpnWIlNR+OuOemXlWJlLP9pXy6vFtizgpEzMuwJa4lqY9UAdiAv5DVd5ql0Am916I+aA==}
     engines: {node: '>=14'}
 
-  google-indexing-script@0.3.0:
-    resolution: {integrity: sha512-F5/ULCt/TCYC4KFK8ZwOefGGpvg0foKnK1HVZosGYM0Gkj+AZ5A24nBgCafSe34k7OFp7Ykx7+ZtCY/kGQGKBg==}
+  google-indexing-script@0.4.0:
+    resolution: {integrity: sha512-nSyT/RDc9HpsiugTPzBLWYTxLFu1whMFKF+VXa6Wsd2fJJfU0rFeppt1keTSoGUKM6T8ZVvdJcgYJdlUup0idw==}
     hasBin: true
 
   googleapis-common@7.2.0:
@@ -7662,9 +7662,11 @@ snapshots:
       - encoding
       - supports-color
 
-  google-indexing-script@0.3.0:
+  google-indexing-script@0.4.0:
     dependencies:
+      commander: 12.1.0
       googleapis: 131.0.0
+      picocolors: 1.0.1
       sitemapper: 3.2.8
     transitivePeerDependencies:
       - encoding
@@ -10486,7 +10488,7 @@ snapshots:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       vite: 5.3.3(@types/node@20.14.10)(sass@1.77.6)
     transitivePeerDependencies:
       - '@types/node'
