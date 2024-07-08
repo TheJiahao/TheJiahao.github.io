@@ -49,9 +49,9 @@
         "vite": "^5.3.1"
     },
     "devDependencies": {
-        "@commitlint/types": "^19.0.3",
         "@commitlint/cli": "^19.3.0",
         "@commitlint/config-conventional": "^19.2.2",
+        "@commitlint/types": "^19.0.3",
         "@eslint/js": "^9.5.0",
         "@estruyf/github-actions-reporter": "^1.7.0",
         "@playwright/test": "^1.44.1",
@@ -70,6 +70,7 @@
         "google-indexing-script": "^0.3.0",
         "husky": "^9.0.11",
         "jsdom": "^24.1.0",
+        "lint-staged": "^15.2.7",
         "markdownlint-cli": "^0.41.0",
         "prettier": "^3.3.2",
         "prettier-plugin-astro": "^0.14.0",
