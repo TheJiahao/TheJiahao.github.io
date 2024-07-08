@@ -8,6 +8,7 @@
         "format:ci": "pnpm run format -- !.github/**",
         "lint": "astro check && eslint . && markdownlint . && zhlint *.md",
         "lint:fix": "astro check && eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
+        "lint:staged": "lint-staged",
         "test": "vitest run",
         "test:watch": "vitest",
         "test:e2e": "playwright test",
