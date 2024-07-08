@@ -49,6 +49,9 @@
         "vite": "^5.3.1"
     },
     "devDependencies": {
+        "@commitlint/types": "^19.0.3",
+        "@commitlint/cli": "^19.3.0",
+        "@commitlint/config-conventional": "^19.2.2",
         "@eslint/js": "^9.5.0",
         "@estruyf/github-actions-reporter": "^1.7.0",
         "@playwright/test": "^1.44.1",
