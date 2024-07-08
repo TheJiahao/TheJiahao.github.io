@@ -31,7 +31,7 @@ const useVisibleSection = (): string | null => {
         });
 
         document
-            .querySelectorAll<HTMLDivElement>("article section")
+            .querySelectorAll<HTMLDivElement>("article section:not(.footnotes)")
             .forEach((section) => {
                 observer.observe(section);
             });
