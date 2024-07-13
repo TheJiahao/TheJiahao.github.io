@@ -7,21 +7,23 @@ const targetHeadings = Array.from(
     .map((i) => `h${(i + TOC_START_DEPTH).toString()}`)
     .join(",");
 
+const getHeadingDepth = (heading: HTMLHeadingElement): number => {
+    return Number(heading.tagName.replace(/h/i, ""));
+};
+
 const useVisibleSection = (): string | undefined => {
     const [visible, setVisible] = useState<Set<string>>(new Set());
-    const [headings, setHeadings] = useState<string[]>([]);
+    const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
 
     useEffect(() => {
         setHeadings(
             Array.from(
                 document.querySelectorAll("article section:not(.footnotes)"),
             )
-                .map(
-                    (section) =>
-                        section.querySelector(targetHeadings)?.id ?? null,
+                .map((section) =>
+                    section.querySelector<HTMLHeadingElement>(targetHeadings),
                 )
-                .filter((id) => id !== null)
-                .reverse(),
+                .filter((heading) => heading !== null),
         );
 
         const observer = new IntersectionObserver((entries) => {
@@ -55,7 +57,24 @@ const useVisibleSection = (): string | undefined => {
         };
     }, []);
 
-    return headings.find((heading) => visible.has(heading));
+    let current = null;
+
+    for (const heading of headings) {
+        if (!visible.has(heading.id)) {
+            continue;
+        }
+
+        if (!current) {
+            current = heading;
+            continue;
+        }
+
+        if (getHeadingDepth(heading) > getHeadingDepth(current)) {
+            current = heading;
+        }
+    }
+
+    return current?.id;
 };
 
 export default useVisibleSection;
