@@ -1,4 +1,4 @@
-import useVisibleSection from "hooks/useVisibleSection";
+import useSectionState from "hooks/useSectionState";
 import type { Heading } from "interfaces/Heading";
 
 interface HeadingListProps {
@@ -6,15 +6,13 @@ interface HeadingListProps {
 }
 
 const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
-    const id = useVisibleSection();
+    const visible = useSectionState(heading.slug);
 
     return (
         <li key={heading.slug} flex="~ col">
             <a
                 href={`#${heading.slug}`}
-                className={
-                    heading.slug === id ? "text-accent-primary" : undefined
-                }
+                className={visible ? "text-accent-primary" : undefined}
                 text-lg
                 p-2
                 hover="bg-surface-tertiary rounded-md"
