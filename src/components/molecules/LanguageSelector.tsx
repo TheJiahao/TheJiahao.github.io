@@ -71,7 +71,7 @@ const LanguageSelector = ({
                                 key={code}
                                 value={code}
                                 p-2
-                                hover="cursor-pointer bg-accent-secondary"
+                                hover="cursor-pointer bg-hover"
                             >
                                 {name}
                             </ListboxOption>
