@@ -12,7 +12,9 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
         <li key={heading.slug}>
             <a
                 href={`#${heading.slug}`}
-                className={heading.slug === id ? "text-blue" : undefined}
+                className={
+                    heading.slug === id ? "text-accent-primary" : undefined
+                }
             >
                 {heading.text}
             </a>
