@@ -22,7 +22,7 @@ const Avatar = ({ image, size, url, alt }: AvatarProps) => (
             drop-shadow-md
             rounded-full
             object-contain
-            hover:drop-shadow-lg
+            hover="drop-shadow-lg"
             active="brightness-90"
             dark="brightness-90 hover:brightness-95 active:brightness-100"
         />
