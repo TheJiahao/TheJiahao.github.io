@@ -2,13 +2,13 @@
 [prose=""] {
     :not(pre) {
         & > code {
+            @apply p-1 rounded-md;
+            color: theme("colors.code");
+            background-color: theme("colors.code-background");
             &::before,
             &::after {
                 content: unset;
             }
-            @apply p-1 rounded-md;
-            color: theme("colors.code");
-            background-color: theme("colors.code-background");
         }
 
         a {
