@@ -11,6 +11,30 @@ const getHeadingDepth = (heading: HTMLHeadingElement): number => {
     return Number(heading.tagName.replace(/h/i, ""));
 };
 
+const getCurrentHeading = (
+    headings: HTMLHeadingElement[],
+    visibleHeadings: Set<string>,
+): string | undefined => {
+    let current = null;
+
+    for (const heading of headings) {
+        if (!visibleHeadings.has(heading.id)) {
+            continue;
+        }
+
+        if (!current) {
+            current = heading;
+            continue;
+        }
+
+        if (getHeadingDepth(heading) > getHeadingDepth(current)) {
+            current = heading;
+        }
+    }
+
+    return current?.id;
+};
+
 const useVisibleSection = (): string | undefined => {
     const [visible, setVisible] = useState<Set<string>>(new Set());
     const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
@@ -57,24 +81,7 @@ const useVisibleSection = (): string | undefined => {
         };
     }, []);
 
-    let current = null;
-
-    for (const heading of headings) {
-        if (!visible.has(heading.id)) {
-            continue;
-        }
-
-        if (!current) {
-            current = heading;
-            continue;
-        }
-
-        if (getHeadingDepth(heading) > getHeadingDepth(current)) {
-            current = heading;
-        }
-    }
-
-    return current?.id;
+    return getCurrentHeading(headings, visible);
 };
 
 export default useVisibleSection;
