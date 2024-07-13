@@ -15,9 +15,8 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
                 className={visible ? "text-accent-primary" : undefined}
                 text-lg
                 p-2
-                transition
-                hover="bg-hover rounded-md"
-                active="bg-clicked"
+                rounded-md
+                clickable
             >
                 {heading.text}
             </a>
