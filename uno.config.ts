@@ -7,6 +7,7 @@ import {
     transformerDirectives,
 } from "unocss";
 import presetTheme from "unocss-preset-theme";
+import type { Theme } from "unocss/preset-uno";
 
 export default defineConfig({
     presets: [
@@ -15,7 +16,7 @@ export default defineConfig({
             dark: "media",
         }),
         presetTypography(),
-        presetTheme({
+        presetTheme<Theme>({
             theme: {
                 dark: {
                     colors: {
