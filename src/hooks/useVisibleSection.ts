@@ -30,8 +30,12 @@ const useVisibleSection = (): string | null => {
             setId(headings[0] ?? null);
         });
 
-        document
-            .querySelectorAll<HTMLDivElement>("article section:not(.footnotes)")
+        Array.from(
+            document.querySelectorAll<HTMLDivElement>(
+                "article section:not(.footnotes)",
+            ),
+        )
+            .filter((section) => section.querySelector(targetHeadings))
             .forEach((section) => {
                 observer.observe(section);
             });
