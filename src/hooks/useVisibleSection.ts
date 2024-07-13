@@ -42,10 +42,12 @@ const useVisibleSection = (): string | undefined => {
     const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
 
     useEffect(() => {
+        const sections = Array.from(
+            document.querySelectorAll("article section:not(.footnotes)"),
+        );
+
         setHeadings(
-            Array.from(
-                document.querySelectorAll("article section:not(.footnotes)"),
-            )
+            sections
                 .map((section) =>
                     section.querySelector<HTMLHeadingElement>(targetHeadings),
                 )
@@ -72,11 +74,9 @@ const useVisibleSection = (): string | undefined => {
             });
         });
 
-        document
-            .querySelectorAll("article section:not(.footnotes)")
-            .forEach((section) => {
-                observer.observe(section);
-            });
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
 
         return () => {
             observer.disconnect();
