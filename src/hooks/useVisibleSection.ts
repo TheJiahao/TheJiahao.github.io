@@ -31,12 +31,8 @@ const useVisibleSection = (): Set<string> => {
             });
         });
 
-        Array.from(
-            document.querySelectorAll<HTMLDivElement>(
-                "article section:not(.footnotes)",
-            ),
-        )
-            .filter((section) => section.querySelector(targetHeadings))
+        document
+            .querySelectorAll<HTMLDivElement>("article section:not(.footnotes)")
             .forEach((section) => {
                 observer.observe(section);
             });
