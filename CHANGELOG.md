@@ -2,7 +2,6 @@
 
 ## [3.1.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.0.0...v3.1.0) (2024-07-13)
 
-
 ### Features
 
 * **#111:** Add `CommentList` ([a0b7ed3](https://github.com/TheJiahao/TheJiahao.github.io/commit/a0b7ed3ff865365ab7b0ba654e2be36127f80516))
@@ -46,7 +45,6 @@
 * **TOC:** ✨ Increase font size ([5c89599](https://github.com/TheJiahao/TheJiahao.github.io/commit/5c8959991dd3ce2c8b8398ff4c39042647cbd6ff))
 * **TOC:** ✨ Make width responsive ([611e8ec](https://github.com/TheJiahao/TheJiahao.github.io/commit/611e8eca1b3a934c088c511c89272c6bdfaf851a))
 
-
 ### Bug Fixes
 
 * **#111:** Capitalize country code in language ([784a057](https://github.com/TheJiahao/TheJiahao.github.io/commit/784a0573ac7d2d86332dfe3ffc4572546e9c7c5e))
@@ -83,7 +81,6 @@
 * **TOC:** 🐛 First visible heading not highlighted ([fd2cfe2](https://github.com/TheJiahao/TheJiahao.github.io/commit/fd2cfe22c12227376f7eaa30dd8a28250094c86c))
 * **TOC:** Do not observe footnotes ([3ad7753](https://github.com/TheJiahao/TheJiahao.github.io/commit/3ad77532882bf61104fdc736cd24f2652ec25fad)), closes [#5](https://github.com/TheJiahao/TheJiahao.github.io/issues/5)
 * Typo ([db2fd9d](https://github.com/TheJiahao/TheJiahao.github.io/commit/db2fd9d4da10e004d87ff95a3579674127f527d2))
-
 
 ### Reverts
 
