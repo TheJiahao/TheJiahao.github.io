@@ -24,6 +24,7 @@ const Avatar = ({ image, size, url, alt }: AvatarProps) => (
             object-contain
             hover:drop-shadow-lg
             active="brightness-90"
+            dark="brightness-90 hover:brightness-95 active:brightness-100"
         />
     </ConditionalLink>
 );
