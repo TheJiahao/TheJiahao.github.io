@@ -15,6 +15,7 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
                 className={visible ? "text-accent-primary" : undefined}
                 text-lg
                 p-2
+                transition
                 hover="bg-surface-tertiary rounded-md"
             >
                 {heading.text}
