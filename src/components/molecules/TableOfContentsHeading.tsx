@@ -15,6 +15,7 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
                 className={
                     heading.slug === id ? "text-accent-primary" : undefined
                 }
+                text-lg
                 p-2
                 hover="bg-surface-tertiary rounded-md"
             >
