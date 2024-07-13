@@ -4,7 +4,7 @@
         & > code {
             @apply p-1 rounded-md;
             color: theme("colors.code");
-            background-color: theme("colors.code-background");
+            background-color: theme("colors.surface.code");
             &::before,
             &::after {
                 content: unset;

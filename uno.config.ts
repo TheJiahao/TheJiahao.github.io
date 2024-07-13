@@ -31,8 +31,8 @@ export default defineConfig({
                         surface: {
                             primary: "hsl(0 0% 15%)",
                             tertiary: "hsl(0 0% 9%)",
+                            code: "#272a2f",
                         },
-                        "code-background": "#272a2f",
                     },
                 },
             },
@@ -52,8 +52,8 @@ export default defineConfig({
             surface: {
                 primary: "hsl(0 0% 100%)",
                 tertiary: "hsl(0 0% 96%)",
+                code: "#f2f1f1",
             },
-            "code-background": "#f2f1f1",
         },
     },
     transformers: [transformerAttributifyJsx(), transformerDirectives()],
@@ -75,6 +75,6 @@ export default defineConfig({
         "size-40",
         "text-code",
         "text-link",
-        "bg-code-background",
+        "bg-surface-code",
     ],
 });
