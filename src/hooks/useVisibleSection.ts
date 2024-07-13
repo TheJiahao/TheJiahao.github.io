@@ -27,9 +27,11 @@ const getCurrentHeading = (
             continue;
         }
 
-        if (getHeadingDepth(heading) > getHeadingDepth(current)) {
-            current = heading;
+        if (getHeadingDepth(heading) <= getHeadingDepth(current)) {
+            break;
         }
+
+        current = heading;
     }
 
     return current?.id;
