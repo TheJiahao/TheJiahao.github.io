@@ -7,10 +7,23 @@ const targetHeadings = Array.from(
     .map((i) => `h${(i + TOC_START_DEPTH).toString()}`)
     .join(",");
 
-const useVisibleSection = (): Set<string> => {
+const useVisibleSection = (): string | undefined => {
     const [visible, setVisible] = useState<Set<string>>(new Set());
+    const [headings, setHeadings] = useState<string[]>([]);
 
     useEffect(() => {
+        setHeadings(
+            Array.from(
+                document.querySelectorAll("article section:not(.footnotes)"),
+            )
+                .map(
+                    (section) =>
+                        section.querySelector(targetHeadings)?.id ?? null,
+                )
+                .filter((id) => id !== null)
+                .reverse(),
+        );
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(({ target, isIntersecting }) => {
                 const heading =
@@ -42,7 +55,7 @@ const useVisibleSection = (): Set<string> => {
         };
     }, []);
 
-    return visible;
+    return headings.find((heading) => visible.has(heading));
 };
 
 export default useVisibleSection;
