@@ -29,7 +29,7 @@ const SiteFooter = ({
             <p>
                 © {startYear} - {year} {owner}
             </p>
-            <a href={source}>
+            <a href={source} target="_blank" rel="noreferrer noopener">
                 <IconComponent icon={<SiGithub />}>
                     {getTranslation(language).siteSource}
                 </IconComponent>
