@@ -14,7 +14,11 @@ const NavigationMenu = ({
     links = NAVIGATION_LINKS[language],
     ...props
 }: NavigationMenuProps) => (
-    <Menu aria-label={getTranslation(language).navigationLinks} {...props}>
+    <Menu
+        aria-label={getTranslation(language).navigationLinks}
+        itemClassName="clickable p-2 rounded-md"
+        {...props}
+    >
         {links.map((link) => (
             <a key={link.text} href={link.url}>
                 <IconComponent icon={link.icon}>{link.text}</IconComponent>
