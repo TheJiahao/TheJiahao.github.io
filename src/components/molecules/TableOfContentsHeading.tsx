@@ -9,12 +9,14 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
     const id = useVisibleSection();
 
     return (
-        <li key={heading.slug}>
+        <li key={heading.slug} flex="~ col">
             <a
                 href={`#${heading.slug}`}
                 className={
                     heading.slug === id ? "text-accent-primary" : undefined
                 }
+                p-2
+                hover="bg-surface-tertiary rounded-md"
             >
                 {heading.text}
             </a>
