@@ -10,7 +10,12 @@ import "scss/scrollbar.scss";
         <BaseHeader {...Astro.props} />
         <slot name="head" />
     </head>
-    <body min-h-screen flex="~ col" lg="grid grid-sidebars" bg-surface-tertiary>
+    <body
+        min-h-screen
+        flex="~ col"
+        lg="grid grid-sidebars"
+        bg-surface-secondary
+    >
         <slot name="left-sidebar">
             <div></div>
         </slot>

@@ -28,7 +28,7 @@ export default defineConfig({
                         },
                         surface: {
                             primary: "hsl(0 0% 15%)",
-                            tertiary: "hsl(0 0% 9%)",
+                            secondary: "hsl(0 0% 9%)",
                             code: "#272a2f",
                         },
                         code: "#2eb172",
@@ -51,7 +51,7 @@ export default defineConfig({
             },
             surface: {
                 primary: "hsl(0 0% 100%)",
-                tertiary: "hsl(0 0% 96%)",
+                secondary: "hsl(0 0% 96%)",
                 code: "#f2f1f1",
             },
             code: "#18794e",
