@@ -3,7 +3,7 @@ import type {
     PseudoPrefix,
 } from "unocss/preset-attributify";
 
-type customAttributes = "prose" | "card" | "grid-sidebars";
+type customAttributes = "prose" | "card" | "grid-sidebars" | "clickable";
 type customAttributifyNames<Prefix extends string = ""> =
     | `${Prefix}${customAttributes}`
     | `${Prefix}${PseudoPrefix}:${customAttributes}`;
