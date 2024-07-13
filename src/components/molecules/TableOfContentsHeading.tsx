@@ -16,7 +16,7 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
                 text-lg
                 p-2
                 transition
-                hover="bg-surface-tertiary rounded-md"
+                hover="bg-hover rounded-md"
             >
                 {heading.text}
             </a>
