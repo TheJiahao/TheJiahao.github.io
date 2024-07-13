@@ -8,7 +8,7 @@ interface TableOfContentsProps {
 
 const TableOfContents = ({ headings }: TableOfContentsProps) => {
     return (
-        <nav card max-w-30ch p-lg bg-surface-primary text-secondary>
+        <nav card max-w-30ch p-lg text-secondary>
             <ul>
                 {getTOC(headings).map((heading) => (
                     <TableOfContentsHeading
