@@ -63,7 +63,7 @@ export default defineConfig({
     },
     transformers: [transformerAttributifyJsx(), transformerDirectives()],
     shortcuts: {
-        card: "rounded-md bg-surface-primary shadow-md break-inside-avoid overflow-hidden",
+        card: "rounded-md bg-surface-primary shadow-md break-inside-avoid overflow-hidden transition hover:shadow-lg",
         "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
     },
     content: {
