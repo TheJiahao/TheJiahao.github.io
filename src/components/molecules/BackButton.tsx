@@ -19,6 +19,7 @@ const BackButton = ({
             card
             p-2
             text="secondary lg"
+            clickable
         >
             <IconComponent icon={<LuChevronLeft />}>{label}</IconComponent>
         </a>
