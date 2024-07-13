@@ -35,6 +35,7 @@ export default defineConfig({
                         link: "#84c5e6",
                         disabled: "hsl(0 0% 30%)",
                         hover: "hsl(0 0% 9%)",
+                        clicked: "hsl(0 0% 12%)",
                     },
                 },
             },
@@ -57,6 +58,7 @@ export default defineConfig({
             link: "#005782",
             disabled: "hsl(0 0% 70%)",
             hover: "hsl(0 0% 96%)",
+            clicked: "hsl(0 0% 92%)",
         },
     },
     transformers: [transformerAttributifyJsx(), transformerDirectives()],
@@ -79,5 +81,6 @@ export default defineConfig({
         "text-code",
         "text-link",
         "bg-hover",
+        "bg-clicked",
     ],
 });
