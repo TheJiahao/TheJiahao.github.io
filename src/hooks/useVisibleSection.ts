@@ -7,27 +7,28 @@ const targetHeadings = Array.from(
     .map((i) => `h${(i + TOC_START_DEPTH).toString()}`)
     .join(",");
 
-const useVisibleSection = (): string | null => {
-    const [id, setId] = useState<string | null>(null);
+const useVisibleSection = (): Set<string> => {
+    const [visible, setVisible] = useState<Set<string>>(new Set());
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
-            const headings = entries
-                .filter((entry) => entry.isIntersecting)
-                .map(({ target }) => {
-                    const heading =
-                        target.querySelector<HTMLHeadingElement>(
-                            targetHeadings,
-                        );
+            entries.forEach(({ target, isIntersecting }) => {
+                const heading =
+                    target.querySelector<HTMLHeadingElement>(targetHeadings);
 
-                    if (!heading) {
-                        return;
-                    }
+                if (!heading) {
+                    return;
+                }
 
-                    return heading.id;
-                });
+                if (!isIntersecting) {
+                    setVisible((current) =>
+                        current.difference(new Set([heading.id])),
+                    );
+                    return;
+                }
 
-            setId(headings[0] ?? null);
+                setVisible((current) => current.union(new Set([heading.id])));
+            });
         });
 
         Array.from(
@@ -45,7 +46,7 @@ const useVisibleSection = (): string | null => {
         };
     }, []);
 
-    return id;
+    return visible;
 };
 
 export default useVisibleSection;
