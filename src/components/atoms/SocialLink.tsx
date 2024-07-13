@@ -15,6 +15,9 @@ const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
         block
         target="_blank"
         rel="me noopener noreferrer"
+        clickable
+        rounded-md
+        p-1
     >
         {cloneElement(icon, {
             className: "size-10 text-secondary",
