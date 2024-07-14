@@ -35,6 +35,7 @@
         "astro-seo": "^0.8.4",
         "classnames": "^2.5.1",
         "dayjs": "^1.11.11",
+        "fuzzysort": "^3.0.2",
         "giscus": "^1.5.0",
         "markdown-it": "^14.1.0",
         "react": "^18.3.1",
@@ -78,6 +79,7 @@
         "prettier-plugin-astro": "^0.14.0",
         "prettier-plugin-organize-imports": "^4.0.0",
         "prettier-plugin-toml": "^2.0.1",
+        "ts-node": "^10.9.2",
         "typescript-eslint": "8.0.0-alpha.41",
         "vitest": "^2.0.0",
         "zhlint": "^0.8.1"
