@@ -13,7 +13,6 @@ description: >-
     Starship 是跨 shell 的主题管理器，其支持 Zsh、Nushell、PowerShell 等。
     本文介绍了如何配置 Starship，并分享了笔者使用的主题。
 image: img/starship_logo.svg
-
 hidden: false
 math:
 comments: true
@@ -27,6 +26,8 @@ links:
       url: https://starship.rs/zh-CN/
       image: https://raw.githubusercontent.com/starship/starship/2eb5e7e73451a8113b32fdbeca8e0c684b776e05/media/icon.svg
 ---
+
+import Callout from "components/molecules/Callout";
 
 ## 安装 Starship
 
@@ -62,10 +63,12 @@ export PATH = "$HOME/.cargo/bin:$PATH"
 Starship 的许多主题都需要 [Nerd Font](https://www.nerdfonts.com/) 中的符号。
 所以需要安装带有 Nerd Font 补丁的[字体](https://www.nerdfonts.com/font-downloads)。
 
-{{% callout warning 注意 %}}
+<Callout type="warning" title="注意" client:idle>
+
 安装字体后还需要在终端中使用字体。
 如果使用 [Windows 终端](https://github.com/microsoft/terminal)，字体可于 `设置 > 配置文件 > 外观 > 字体` 中设置。
-{{% /callout %}}
+
+</Callout>
 
 #### Windows
 
@@ -82,14 +85,14 @@ scoop bucket add nerd-fonts
 scoop install jetbrainsmono-nf-mono
 ```
 
-{{% callout info 字体后缀 %}}
+<Callout type="info" title="字体后缀" open={false} collapsible={true} client:idle>
 
 - `nf`：Nerd Fonts 字体
 - `mono`：等宽字体
 
 具体含义可参考 Nerd Fonts 的 [README](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#features)。
 
-{{% /callout %}}
+</Callout>
 
 #### Ubuntu (Linux)
 
