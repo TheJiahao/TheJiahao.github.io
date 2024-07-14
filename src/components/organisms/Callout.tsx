@@ -22,7 +22,7 @@ const Callout = ({
     return (
         <Disclosure defaultOpen={open}>
             <DisclosureButton>{title}</DisclosureButton>
-            <DisclosurePanel>{children}</DisclosurePanel>
+            <DisclosurePanel static={!collapsible}>{children}</DisclosurePanel>
         </Disclosure>
     );
 };
