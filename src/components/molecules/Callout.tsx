@@ -6,7 +6,7 @@ import {
 import { type PropsWithChildren } from "react";
 
 interface CalloutProps extends PropsWithChildren {
-    type: string;
+    type: "info" | "warning";
     title: string;
     collapsible?: boolean;
     open?: boolean;
