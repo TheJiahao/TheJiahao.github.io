@@ -20,7 +20,7 @@ const Callout = ({
     children,
 }: CalloutProps) => {
     return (
-        <Disclosure defaultOpen={open}>
+        <Disclosure defaultOpen={open} as="div" card p-lg>
             <DisclosureButton>{title}</DisclosureButton>
             <DisclosurePanel static={!collapsible}>{children}</DisclosurePanel>
         </Disclosure>
