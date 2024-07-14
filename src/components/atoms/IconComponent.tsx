@@ -10,7 +10,7 @@ const IconComponent = ({
     color = "secondary",
     children,
 }: IconComponentProps) => (
-    <span flex items-center gap-4 text={color}>
+    <span className={`text-${color}`} flex items-center gap-4>
         {icon}
         <span>{children}</span>
     </span>
