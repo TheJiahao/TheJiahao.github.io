@@ -9,6 +9,8 @@ jobs:
   format_lint:
     name: Format and lint
     runs-on: ubuntu-latest
+    env:
+      HUSKY: 0
 
     permissions:
       contents: write
