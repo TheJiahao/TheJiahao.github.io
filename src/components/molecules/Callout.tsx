@@ -3,7 +3,6 @@ import {
     DisclosureButton,
     DisclosurePanel,
 } from "@headlessui/react";
-import IconComponent from "components/atoms/IconComponent";
 import { type PropsWithChildren } from "react";
 import { LuAlertTriangle, LuChevronDown, LuInfo } from "react-icons/lu";
 
@@ -42,9 +41,18 @@ const Callout = ({
                 justify-between
                 items-center
             >
-                <IconComponent icon={icons[type]} color={type}>
+                <span
+                    className={`text-${type}`}
+                    text-lg
+                    font-bold
+                    flex
+                    items-center
+                    gap-4
+                >
+                    {icons[type]}
                     {title}
-                </IconComponent>
+                </span>
+
                 {collapsible && (
                     <LuChevronDown className="group-data-[open]:rotate-180 transition" />
                 )}
