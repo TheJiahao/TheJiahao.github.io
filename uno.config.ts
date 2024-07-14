@@ -53,8 +53,6 @@ export default defineConfig({
                 primary: "hsl(0 0% 100%)",
                 secondary: "hsl(0 0% 96%)",
                 code: "#f2f1f1",
-                info: "rgba(8, 109, 221, 0.1)",
-                warning: "rgba(236, 117, 0, 0.1)",
             },
             code: "#18794e",
             link: "#005782",
@@ -90,7 +88,7 @@ export default defineConfig({
         "bg-clicked",
         "text-info",
         "text-warning",
-        "bg-surface-info",
-        "bg-surface-warning",
+        "bg-info",
+        "bg-warning",
     ],
 });

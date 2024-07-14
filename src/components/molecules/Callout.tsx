@@ -30,7 +30,8 @@ const Callout = ({
         <Disclosure
             defaultOpen={open}
             as="div"
-            className={`bg-surface-${type}`}
+            className={`bg-${type}`}
+            bg-opacity-10
             card
             p-lg
         >
