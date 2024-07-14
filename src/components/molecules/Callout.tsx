@@ -63,7 +63,6 @@ const Callout = ({
             <DisclosurePanel
                 static={!collapsible}
                 transition={true}
-                unmount={false}
                 duration-200
                 ease-in-out
                 origin-top

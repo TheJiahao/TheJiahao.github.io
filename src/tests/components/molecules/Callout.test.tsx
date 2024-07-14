@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Callout from "components/molecules/Callout";
 import { beforeEach, describe, expect, test } from "vitest";
@@ -30,7 +30,9 @@ describe("<Callout/>", () => {
 
             await user.click(button);
 
-            expect(screen.queryByText(content)).not.toBeInTheDocument();
+            await waitFor(() => {
+                expect(screen.queryByText(content)).not.toBeInTheDocument();
+            });
         });
     });
 
