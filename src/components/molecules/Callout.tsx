@@ -40,6 +40,9 @@ const Callout = ({
                 flex
                 justify-between
                 items-center
+                hover="brightness-80"
+                active="brightness-70"
+                dark="hover:brightness-120 active:brightness-140"
             >
                 <span
                     className={`text-${type}`}
