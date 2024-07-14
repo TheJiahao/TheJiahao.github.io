@@ -54,6 +54,6 @@ const {
     </ContentLayout>
 
     <aside un-hidden lg="block sticky top-0 p-lg h-screen">
-        <TableOfContents {headings} client:load />
+        {headings.length > 0 && <TableOfContents {headings} client:load />}
     </aside>
 </BaseLayout>
