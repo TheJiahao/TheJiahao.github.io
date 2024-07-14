@@ -5,7 +5,7 @@ import {
 } from "@headlessui/react";
 import IconComponent from "components/atoms/IconComponent";
 import { type PropsWithChildren } from "react";
-import { LuAlertTriangle, LuInfo } from "react-icons/lu";
+import { LuAlertTriangle, LuChevronDown, LuInfo } from "react-icons/lu";
 
 interface CalloutProps extends PropsWithChildren {
     type: "info" | "warning";
@@ -28,8 +28,17 @@ const Callout = ({
 }: CalloutProps) => {
     return (
         <Disclosure defaultOpen={open} as="div" card p-lg>
-            <DisclosureButton>
+            <DisclosureButton
+                className="group"
+                w-full
+                flex
+                justify-between
+                items-center
+            >
                 <IconComponent icon={icons[type]}>{title}</IconComponent>
+                {collapsible && (
+                    <LuChevronDown className="group-data-[open]:rotate-180 transition" />
+                )}
             </DisclosureButton>
             <DisclosurePanel static={!collapsible}>{children}</DisclosurePanel>
         </Disclosure>
