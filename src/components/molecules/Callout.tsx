@@ -27,7 +27,13 @@ const Callout = ({
     children,
 }: CalloutProps) => {
     return (
-        <Disclosure defaultOpen={open} as="div" card p-lg>
+        <Disclosure
+            defaultOpen={open}
+            as="div"
+            className={`bg-surface-${type}`}
+            card
+            p-lg
+        >
             <DisclosureButton
                 className="group"
                 w-full
@@ -35,7 +41,9 @@ const Callout = ({
                 justify-between
                 items-center
             >
-                <IconComponent icon={icons[type]}>{title}</IconComponent>
+                <IconComponent icon={icons[type]} color={type}>
+                    {title}
+                </IconComponent>
                 {collapsible && (
                     <LuChevronDown className="group-data-[open]:rotate-180 transition" />
                 )}
