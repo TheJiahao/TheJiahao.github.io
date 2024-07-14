@@ -14,7 +14,6 @@ description: >-
     内置许多数据处理相关命令，且速度较快。
     本文介绍了如何配置 Nushell 的语法高亮和自动补全。
 image: img/nushell_logo_cover.svg
-
 links:
     - title: Nushell
       description: 一种新的 Shell
@@ -37,6 +36,8 @@ build:
     publishResources: false
 ---
 
+import Callout from "components/molecules/Callout";
+
 本文中使用 Scoop 的部分也可以用其他包管理器替代。
 配置部分除了 Windows 特有的 `%APPDATA%` 和 `%USERPROFILE%` 环境变量以外也适用于其他平台。
 
@@ -44,7 +45,13 @@ build:
 
 ### 语法高亮 + 自动补全
 
-{{< video src="img/nushell_completion.webm" autoplay="true" loop="true" controls="false" disablepictureinpicture="true" >}}
+<video
+    src="img/nushell_completion.webm"
+    autoplay
+    loop
+    controls="false"
+    disablepictureinpicture
+/>
 
 ### Nushell 管道
 
@@ -94,7 +101,7 @@ Nushell 的配置保存在 `$env.config` 变量中。
 $env.config.show_banner = false
 ```
 
-{{% callout warning 注意 %}}
+<Callout type="warning" title="注意">
 
 为避免覆盖之前的配置，笔者推荐单独给 `$env.config` 中的每一项赋值，而不是重新给 `$env.config` 赋值：
 
@@ -104,7 +111,7 @@ $env.config = {
 }
 ```
 
-{{% /callout %}}
+</Callout>
 
 Nushell 的默认配置文件可以从 [GitHub 仓库](https://github.com/nushell/nushell/blob/main/crates/nu-utils/src/sample_config/default_config.nu) 中找到，其更新的比 [官方文档](https://www.nushell.sh/book/configuration.html) 及时。
 
@@ -145,21 +152,21 @@ $env.config.color_config = {
 
 1. 进入 argc-completions 目录
 
-   ```sh
-   cd argc-completions
-   ```
+    ```sh
+    cd argc-completions
+    ```
 
 1. 安装依赖
 
-   ```sh
-   bash ./scripts/download-tools.sh
-   ```
+    ```sh
+    bash ./scripts/download-tools.sh
+    ```
 
 1. 将以下命令生成的配置（用\`\`\`围起来的部分）复制到 `$nu.config-path`
 
-   ```sh
-   bash ./scripts/setup-shell.sh nushell
-   ```
+    ```sh
+    bash ./scripts/setup-shell.sh nushell
+    ```
 
 由于 Argc-completions 的 Git 补全非常慢，笔者推荐使用 [nu_scripts](https://github.com/nushell/nu_scripts) 仓库中的 [Git 补全脚本](https://github.com/nushell/nu_scripts/blob/main/custom-completions/git/git-completions.nu)。
 
@@ -184,7 +191,8 @@ $env.config.completions.external.max_results = 20
 默认配置下按输入命令后 <kbd>Tab</kbd> 即可生成补全，然后用方向键选择，最后按 <kbd>Enter</kbd> 就可以完成补全。
 此外，如果已经当前命令和历史记录里的命令匹配，则可以按 <kbd>→</kbd> 从历史记录补全。
 
-{{% callout type=info title="Argc 1.17.0 补全失效的临时解决办法" open=false collapsible=true %}}
+<Callout type="info" title="Argc 1.17.0 补全失效的临时解决办法" open collapsible client:idle>
+
 Argc 1.17.0 版本生成的 `argc-completions.nu` 文件有问题，导致补全失效。
 该问题已在 [PR#325](https://github.com/sigoden/argc/pull/325) 中修复，但作者还没发布新版本。
 
@@ -195,17 +203,17 @@ def _argc_completer [args: list<string>] {
     argc --argc-compgen nushell "" ...$args
         | split row "\n"
         | each { |line| $line | split column "\t" value description }
-        | flatten 
+        | flatten
 }
 
-let external_completer = {|spans| 
+let external_completer = {|spans|
     _argc_completer $spans
 }
 $env.config.completions.external.enable = true
 $env.config.completions.external.completer = $external_completer
 ```
 
-{{% /callout %}}
+</Callout>
 
 ### 其他配置
 
@@ -233,7 +241,7 @@ Benchmark 1: nu -l -i -c exit
   Range (min … max):    43.4 ms …  51.2 ms    42 runs
 ```
 
-参数与 [Zim 配置文章]({{< relref "/posts/zsh-zim-setup" >}}) 中一致。
+参数与 [Zim 配置文章](/posts/zsh-zim-setup) 中一致。
 
 ### PowerShell 7.4.2（不读取配置）
 
@@ -247,4 +255,5 @@ Benchmark 1: pwsh -NoProfile -l -i -c exit
 注意到，Nushell 启动速度比 PowerShell 7 快了一个数量级。
 
 [^nushell_config]: Configuration | Nushell, https://www.nushell.sh/book/configuration.html
+
 [^syntax_highlight_performance]: add shape ExternalResolved to show found externals via syntax highlighting in the repl, https://github.com/nushell/nushell/pull/11135
