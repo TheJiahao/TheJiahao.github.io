@@ -191,30 +191,6 @@ $env.config.completions.external.max_results = 20
 默认配置下按输入命令后 <kbd>Tab</kbd> 即可生成补全，然后用方向键选择，最后按 <kbd>Enter</kbd> 就可以完成补全。
 此外，如果已经当前命令和历史记录里的命令匹配，则可以按 <kbd>→</kbd> 从历史记录补全。
 
-<Callout type="info" title="Argc 1.17.0 补全失效的临时解决办法" open collapsible client:idle>
-
-Argc 1.17.0 版本生成的 `argc-completions.nu` 文件有问题，导致补全失效。
-该问题已在 [PR#325](https://github.com/sigoden/argc/pull/325) 中修复，但作者还没发布新版本。
-
-手动将 Argc-completions 中的 `argc --argc-completions nushell ...` 注释掉，并将 `argc-completions/tmp/argc-completions.nu` 替换为以下内容即可临时解决问题：
-
-```nu
-def _argc_completer [args: list<string>] {
-    argc --argc-compgen nushell "" ...$args
-        | split row "\n"
-        | each { |line| $line | split column "\t" value description }
-        | flatten
-}
-
-let external_completer = {|spans|
-    _argc_completer $spans
-}
-$env.config.completions.external.enable = true
-$env.config.completions.external.completer = $external_completer
-```
-
-</Callout>
-
 ### 其他配置
 
 以下为笔者的其他配置：
