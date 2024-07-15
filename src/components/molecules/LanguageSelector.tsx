@@ -5,7 +5,6 @@ import {
     ListboxOptions,
 } from "@headlessui/react";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import IconComponent from "components/atoms/IconComponent";
 import type { Language } from "interfaces/Language";
 import { languages as DEFAULT_LANGUAGES } from "localization";
 import { useEffect, useState } from "react";
@@ -35,51 +34,45 @@ const LanguageSelector = ({
     };
 
     return (
-        <IconComponent icon={<LuGlobe />}>
-            <div>
-                <Listbox
-                    value={defaultLanguage}
-                    onChange={handleNavigation}
-                    disabled={disabled}
-                >
-                    <ListboxButton
-                        aria-label={
-                            getTranslation(defaultLanguage).selectLanguage
-                        }
-                        un-disabled="text-disabled"
-                        role="combobox"
-                    >
-                        <span inline-flex items-center gap-2>
-                            {getTranslation(defaultLanguage).name}
-                            <LuChevronDown aria-hidden />
-                        </span>
-                    </ListboxButton>
+        <Listbox
+            value={defaultLanguage}
+            onChange={handleNavigation}
+            disabled={disabled}
+        >
+            <ListboxButton
+                aria-label={getTranslation(defaultLanguage).selectLanguage}
+                un-disabled="text-disabled"
+                role="combobox"
+                align-icon
+                gap-sm
+                text-secondary
+            >
+                <LuGlobe aria-hidden />
 
-                    <ListboxOptions
-                        className="data-[closed]:opacity-0"
-                        anchor={{ to: "bottom end", gap: "1rem" }}
-                        card
-                        flex="~ col"
-                        text-secondary
-                        gap-1
-                        transition={true}
-                        duration-100
-                        ease-in
-                    >
-                        {languages.map(({ name, code }) => (
-                            <ListboxOption
-                                key={code}
-                                value={code}
-                                p-2
-                                clickable
-                            >
-                                {name}
-                            </ListboxOption>
-                        ))}
-                    </ListboxOptions>
-                </Listbox>
-            </div>
-        </IconComponent>
+                <span align-icon gap-1>
+                    {getTranslation(defaultLanguage).name}
+                    <LuChevronDown aria-hidden />
+                </span>
+            </ListboxButton>
+
+            <ListboxOptions
+                className="data-[closed]:opacity-0"
+                anchor={{ to: "bottom end", gap: "1rem" }}
+                card
+                flex="~ col"
+                text-secondary
+                gap-1
+                transition={true}
+                duration-100
+                ease-in
+            >
+                {languages.map(({ name, code }) => (
+                    <ListboxOption key={code} value={code} p-2 clickable>
+                        {name}
+                    </ListboxOption>
+                ))}
+            </ListboxOptions>
+        </Listbox>
     );
 };
 
