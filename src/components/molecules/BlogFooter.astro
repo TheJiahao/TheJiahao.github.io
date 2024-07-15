@@ -19,35 +19,33 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const parser = new MarkdownIt();
 ---
 
-<footer>
+<footer
+    grid="~ cols-[auto_minmax(auto,2fr)]"
+    items-center
+    text-secondary
+    gap-sm
+>
+    <LuFileEdit />
     <p>
-        <IconComponent>
-            <LuFileEdit slot="icon" />
-            {getTranslation(language).updated}
-            {" "}
-            <time>{formatDate(lastModified)}</time>
-        </IconComponent>
+        {getTranslation(language).updated}
+        <time>{formatDate(lastModified)}</time>
     </p>
 
+    <LuCopyright />
     <p>
-        <IconComponent>
-            <LuCopyright slot="icon" />
-            {
-                licenseText ? (
-                    <Fragment
-                        set:html={sanitizeHtml(
-                            parser.renderInline(licenseText),
-                        )}
-                    />
-                ) : (
-                    <>
-                        {getTranslation(language).licensedUnder}{" "}
-                        <a rel="license" href={license.url} target="_blank">
-                            {license.name}
-                        </a>
-                    </>
-                )
-            }
-        </IconComponent>
+        {
+            licenseText ? (
+                <Fragment
+                    set:html={sanitizeHtml(parser.renderInline(licenseText))}
+                />
+            ) : (
+                <>
+                    {getTranslation(language).licensedUnder}{" "}
+                    <a rel="license" href={license.url} target="_blank">
+                        {license.name}
+                    </a>
+                </>
+            )
+        }
     </p>
 </footer>
