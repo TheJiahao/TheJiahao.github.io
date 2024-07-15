@@ -1,5 +1,4 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
-import IconComponent from "components/atoms/IconComponent";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { LuChevronLeft } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
@@ -15,13 +14,15 @@ const BackButton = ({
     return (
         <a
             href={getRelativeLocaleUrl(language, "/")}
-            inline-flex
-            card
-            p-2
             text="secondary lg"
             clickable
+            card
+            align-icon
+            p-2
+            gap-2
         >
-            <IconComponent icon={<LuChevronLeft />}>{label}</IconComponent>
+            <LuChevronLeft />
+            {label}
         </a>
     );
 };
