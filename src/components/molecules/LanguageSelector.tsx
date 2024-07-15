@@ -43,6 +43,7 @@ const LanguageSelector = ({
                 aria-label={getTranslation(defaultLanguage).selectLanguage}
                 un-disabled="text-disabled"
                 role="combobox"
+                className="group"
                 align-icon
                 gap-sm
                 text-secondary
@@ -51,7 +52,10 @@ const LanguageSelector = ({
 
                 <span align-icon gap-1>
                     {getTranslation(defaultLanguage).name}
-                    <LuChevronDown aria-hidden />
+                    <LuChevronDown
+                        className="group-data-[open]:rotate-180 transition"
+                        aria-hidden
+                    />
                 </span>
             </ListboxButton>
 
