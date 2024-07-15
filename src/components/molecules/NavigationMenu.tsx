@@ -1,8 +1,8 @@
-import IconComponent from "components/atoms/IconComponent";
 import Menu, { type MenuProps } from "components/molecules/Menu";
 import { NAVIGATION_LINKS } from "config";
 import type { IconLink } from "interfaces/IconLink";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
+import { cloneElement } from "react";
 import { getTranslation } from "utils/getTranslation";
 
 interface NavigationMenuProps extends MenuProps, TranslatedElement {
@@ -17,11 +17,13 @@ const NavigationMenu = ({
     <Menu
         aria-label={getTranslation(language).navigationLinks}
         itemClassName="clickable p-2 rounded-md"
+        text-secondary
         {...props}
     >
         {links.map((link) => (
-            <a key={link.text} href={link.url}>
-                <IconComponent icon={link.icon}>{link.text}</IconComponent>
+            <a key={link.text} href={link.url} align-icon gap-lg>
+                {cloneElement(link.icon, { "aria-hidden": true })}
+                {link.text}
             </a>
         ))}
     </Menu>
