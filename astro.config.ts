@@ -25,7 +25,7 @@ export default defineConfig({
         sitemap(),
         react(),
         UnoCSS({
-            injectReset: true, // or a path to the reset file
+            injectReset: true,
         }),
     ],
     server: {
