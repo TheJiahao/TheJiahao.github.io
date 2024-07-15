@@ -7,19 +7,23 @@ interface BlogDetailsProps {
     date: Date;
 }
 
-const BlogDetails = ({ title, description, date }: BlogDetailsProps) => (
-    <div flex="~ col" gap-sm>
-        <h1 text="primary 3xl" font-bold>
-            {title}
-        </h1>
+const BlogDetails = ({ title, description, date }: BlogDetailsProps) => {
+    const formattedDate = formatDate(date);
 
-        {description && <p text="secondary xl">{description}</p>}
+    return (
+        <div flex="~ col" gap-sm>
+            <h1 text="primary 3xl" font-bold>
+                {title}
+            </h1>
 
-        <time text-secondary align-icon gap-2>
-            <LuCalendar role="presentation" focusable="false" />
-            {formatDate(date)}
-        </time>
-    </div>
-);
+            {description && <p text="secondary xl">{description}</p>}
+
+            <time dateTime={formattedDate} text-secondary align-icon gap-2>
+                <LuCalendar role="presentation" focusable="false" />
+                {formattedDate}
+            </time>
+        </div>
+    );
+};
 
 export default BlogDetails;
