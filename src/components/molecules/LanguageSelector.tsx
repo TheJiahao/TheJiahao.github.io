@@ -62,6 +62,7 @@ const LanguageSelector = ({
             <ListboxOptions
                 className="data-[closed]:opacity-0"
                 anchor={{ to: "bottom end", gap: "1rem" }}
+                modal={false}
                 card
                 flex="~ col"
                 text-secondary
