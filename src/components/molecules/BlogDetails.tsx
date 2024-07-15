@@ -1,4 +1,3 @@
-import IconComponent from "components/atoms/IconComponent";
 import { LuCalendar } from "react-icons/lu";
 import formatDate from "utils/formatDate";
 
@@ -16,11 +15,10 @@ const BlogDetails = ({ title, description, date }: BlogDetailsProps) => (
 
         {description && <p text="secondary xl">{description}</p>}
 
-        <IconComponent
-            icon={<LuCalendar role="presentation" focusable="false" />}
-        >
-            <time>{formatDate(date)}</time>
-        </IconComponent>
+        <time text-secondary align-icon gap-2>
+            <LuCalendar role="presentation" focusable="false" />
+            {formatDate(date)}
+        </time>
     </div>
 );
 
