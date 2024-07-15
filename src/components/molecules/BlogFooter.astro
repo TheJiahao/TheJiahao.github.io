@@ -25,13 +25,13 @@ const parser = new MarkdownIt();
     text-secondary
     gap-sm
 >
-    <LuFileEdit />
+    <LuFileEdit aria-hidden />
     <p>
         {getTranslation(language).updated}
         <time>{formatDate(lastModified)}</time>
     </p>
 
-    <LuCopyright />
+    <LuCopyright aria-hidden />
     <p>
         {
             licenseText ? (
