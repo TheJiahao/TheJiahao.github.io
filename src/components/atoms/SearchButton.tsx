@@ -7,7 +7,7 @@ type SearchButtonProps = AriaAttributes &
 
 const SearchButton = ({ ...props }: SearchButtonProps) => (
     <button disabled={!useHydrationState()} {...props}>
-        <LuSearch size-15 />
+        <LuSearch />
     </button>
 );
 
