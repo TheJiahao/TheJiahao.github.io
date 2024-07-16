@@ -9,7 +9,7 @@ const SearchBox = () => {
     };
 
     return (
-        <form>
+        <form align-icon gap-sm>
             <input type="search" value={keyword} onChange={onChange} />
             <SearchButton type="submit" />
         </form>
