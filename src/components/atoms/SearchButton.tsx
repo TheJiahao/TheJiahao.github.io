@@ -6,7 +6,7 @@ type SearchButtonProps = AriaAttributes &
     ButtonHTMLAttributes<HTMLButtonElement>;
 
 const SearchButton = ({ ...props }: SearchButtonProps) => (
-    <button type="submit" disabled={!useHydrationState()} {...props}>
+    <button disabled={!useHydrationState()} {...props}>
         <LuSearch size-15 />
     </button>
 );
