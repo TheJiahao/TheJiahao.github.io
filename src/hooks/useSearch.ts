@@ -1,6 +1,10 @@
+import type { Page } from "interfaces/Page";
 import { search } from "utils/search";
 
-const useSearch = async (keyword: string, languageCode: string) => {
+const useSearch = async (
+    keyword: string,
+    languageCode: string,
+): Promise<Page[]> => {
     const url = `/${languageCode}/search-index.json`;
 
     const response = await fetch(url);
