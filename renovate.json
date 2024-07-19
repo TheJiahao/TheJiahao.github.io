@@ -2,7 +2,7 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
         "config:recommended",
-        "::semanticCommitTypeAll(build)",
+        ":semanticCommitTypeAll(build)",
         ":automergeMinor",
         ":automergeTypes",
         ":automergeLinters",
