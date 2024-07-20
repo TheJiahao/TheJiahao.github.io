@@ -2,10 +2,10 @@ import SearchButton from "components/atoms/SearchButton";
 import useSearch from "hooks/useSearch";
 import { useState, type ChangeEventHandler } from "react";
 
-const SearchBox = async () => {
+const SearchBox = () => {
     const [keyword, setKeyword] = useState("");
 
-    const searchResult = await useSearch(keyword, "zh-cn");
+    const searchResult = useSearch(keyword, "zh-cn");
 
     const onChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
         setKeyword(target.value);
