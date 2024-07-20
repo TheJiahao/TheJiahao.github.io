@@ -17,11 +17,13 @@ export function GET({ params }: APIContext) {
         throw new TypeError("Invalid language");
     }
 
-    const blogs = getBlogs().map(({ data, slug, body }) => ({
-        title: data.title,
-        url: getAbsoluteLocaleUrl(language, `posts/${slug}`),
-        content: sanitizeHtml(parser.render(body)),
-    }));
+    const blogs = getBlogs()
+        .filter(({ data }) => data.language === language)
+        .map(({ data, slug, body }) => ({
+            title: data.title,
+            url: getAbsoluteLocaleUrl(data.language, `posts/${slug}`),
+            content: sanitizeHtml(parser.render(body)),
+        }));
 
     return new Response(JSON.stringify(blogs));
 }
