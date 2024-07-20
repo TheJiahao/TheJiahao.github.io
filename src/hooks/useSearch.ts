@@ -9,7 +9,7 @@ const fetchData = async (url: string): Promise<Page[]> => {
 };
 
 const useSearch = (keyword: string, languageCode: string): Page[] => {
-    const [pages, setPages] = useState<Page[]>(new Array<Page>());
+    const [pages, setPages] = useState<Page[]>([]);
 
     useEffect(() => {
         fetchData(`/${languageCode}/search-index.json`)
