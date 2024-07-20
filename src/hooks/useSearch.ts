@@ -1,18 +1,28 @@
 import type { Page } from "interfaces/Page";
+import { useEffect, useState } from "react";
 import { search } from "utils/search";
 
 const useSearch = (keyword: string, languageCode: string): Page[] => {
-    const url = `/${languageCode}/search-index.json`;
+    const [pages, setPages] = useState<Page[]>(new Array<Page>());
 
-    const response = fetch(url);
+    useEffect(() => {
+        const url = `/${languageCode}/search-index.json`;
 
-    if (!response.ok) {
-        console.error(
-            `${response.statusText}: Failed to fetch search index from ${url}.`,
-        );
-    }
-
-    const pages = response.json().data;
+        fetch(url)
+            .then((response) => {
+                response
+                    .json()
+                    .then((data: Page[]) => {
+                        setPages(data);
+                    })
+                    .catch(() => {
+                        console.error("Failed to parse JSON");
+                    });
+            })
+            .catch((error: unknown) => {
+                console.error(error);
+            });
+    });
 
     return search(keyword, pages);
 };
