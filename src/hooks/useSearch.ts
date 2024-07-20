@@ -2,22 +2,19 @@ import type { Page } from "interfaces/Page";
 import { useEffect, useState } from "react";
 import { search } from "utils/search";
 
+const fetchData = async (url: string): Promise<Page[]> => {
+    const response = await fetch(url);
+
+    return (await response.json()) as Page[];
+};
+
 const useSearch = (keyword: string, languageCode: string): Page[] => {
     const [pages, setPages] = useState<Page[]>(new Array<Page>());
 
     useEffect(() => {
-        const url = `/${languageCode}/search-index.json`;
-
-        fetch(url)
-            .then((response) => {
-                response
-                    .json()
-                    .then((data: Page[]) => {
-                        setPages(data);
-                    })
-                    .catch(() => {
-                        console.error("Failed to parse JSON");
-                    });
+        fetchData(`/${languageCode}/search-index.json`)
+            .then((data) => {
+                setPages(data);
             })
             .catch((error: unknown) => {
                 console.error(error);
