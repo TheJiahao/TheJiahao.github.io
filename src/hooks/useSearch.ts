@@ -19,7 +19,7 @@ const useSearch = (keyword: string, languageCode: string): Page[] => {
             .catch((error: unknown) => {
                 console.error(error);
             });
-    });
+    }, []);
 
     return search(keyword, pages);
 };
