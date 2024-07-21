@@ -3,12 +3,6 @@
     "headers": [
         {
             "source": "/",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "[\\s\\S]*"
-                }
-            ],
             "headers": [
                 {
                     "key": "X-Robots-Tag",
