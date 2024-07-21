@@ -19,7 +19,10 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
                 <h1 text="primary xl" font-bold>
                     {title}
                 </h1>
-                <p text-secondary>{description}</p>
+                <p
+                    text-secondary
+                    dangerouslySetInnerHTML={{ __html: description ?? "" }}
+                />
             </div>
 
             {image && (
