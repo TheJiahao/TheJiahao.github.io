@@ -46,7 +46,10 @@ const SearchBox = ({
                     w-full
                 />
             </form>
-            <LinkList language={language} links={searchResult} />
+            <LinkList
+                links={searchResult}
+                aria-label={getTranslation(language).searchResults}
+            />
         </div>
     );
 };

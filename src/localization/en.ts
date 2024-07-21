@@ -20,6 +20,7 @@ const en = {
     blogList: "Blog list",
     externalLinks: "External links",
     search: "Search",
+    searchResults: "Search results",
 };
 
 export default en;
