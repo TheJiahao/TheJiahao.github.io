@@ -31,12 +31,12 @@ const languageAlternates = languageCodes.map((code) => ({
     description={getTranslation(language).siteDescription}
     {languageAlternates}
 >
-    <div flex="~ col" gap-10 p-lg>
+    <div flex="~ col" gap-10 p-lg lg="max-w-4xl">
         <aside un-hidden lg="flex card p-2">
             <SearchBox language={language} client:load />
         </aside>
 
-        <main lg="max-w-4xl">
+        <main>
             <BlogList {language} {blogs} />
         </main>
 
