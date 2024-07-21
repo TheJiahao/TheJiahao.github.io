@@ -32,8 +32,8 @@ const languageAlternates = languageCodes.map((code) => ({
     {languageAlternates}
 >
     <div flex="~ col" gap-10 p-lg lg="max-w-4xl">
-        <aside un-hidden lg="flex card p-2">
-            <SearchBox language={language} client:load />
+        <aside un-hidden lg="block card p-2">
+            <SearchBox language={language} client:load w-full />
         </aside>
 
         <main>
