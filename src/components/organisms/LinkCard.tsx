@@ -16,9 +16,11 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
             rel="noreferrer noopener"
         >
             <div flex-auto leading-loose>
-                <h1 text="primary xl" font-bold>
-                    {title}
-                </h1>
+                <h1
+                    dangerouslySetInnerHTML={{ __html: title }}
+                    text="primary xl"
+                    font-bold
+                />
                 <p
                     text-secondary
                     dangerouslySetInnerHTML={{ __html: description ?? "" }}
