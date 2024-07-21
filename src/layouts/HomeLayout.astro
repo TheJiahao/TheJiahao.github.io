@@ -1,9 +1,9 @@
 ---
 import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
+import SearchBox from "components/molecules/SearchBox";
 import SiteFooter from "components/molecules/SiteFooter";
 import type { BlogCardProps } from "components/organisms/BlogCard";
 import BlogList from "components/organisms/BlogList";
-import ToolBar from "components/organisms/ToolBar";
 import { DEFAULT_LANGUAGE } from "config";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import { languageCodes } from "localization";
@@ -32,9 +32,9 @@ const languageAlternates = languageCodes.map((code) => ({
     {languageAlternates}
 >
     <div flex="~ col" gap-10 p-lg>
-        <div un-hidden lg="flex flex-none">
-            <ToolBar {language} client:load />
-        </div>
+        <aside un-hidden lg="flex card p-2">
+            <SearchBox language={language} client:load />
+        </aside>
 
         <main lg="max-w-4xl">
             <BlogList {language} {blogs} />

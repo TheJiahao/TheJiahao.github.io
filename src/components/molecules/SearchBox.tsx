@@ -34,6 +34,7 @@ const SearchBox = ({
                     id="search"
                     value={keyword}
                     onChange={onChange}
+                    w-full
                 />
             </form>
             <LinkList language={language} links={searchResult} />
