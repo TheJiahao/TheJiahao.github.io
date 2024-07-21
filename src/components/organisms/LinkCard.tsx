@@ -23,6 +23,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
                 />
                 <p
                     text-secondary
+                    line-clamp-3
                     dangerouslySetInnerHTML={{ __html: description ?? "" }}
                 />
             </div>
