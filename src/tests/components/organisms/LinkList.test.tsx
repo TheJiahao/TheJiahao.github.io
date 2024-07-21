@@ -24,7 +24,12 @@ describe("<LinkList/>", () => {
 
     describe.each(languageCodes)("%s", (language) => {
         beforeEach(() => {
-            render(<LinkList language={language} links={links} />);
+            render(
+                <LinkList
+                    links={links}
+                    aria-label={getTranslation(language).externalLinks}
+                />,
+            );
             linkList = screen.getByRole("list", {
                 name: getTranslation(language).externalLinks,
             });

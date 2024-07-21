@@ -1,24 +1,16 @@
 import LinkCard, { type LinkProps } from "components/organisms/LinkCard";
-import type { TranslatedElement } from "interfaces/TranslatedElement";
-import type { HTMLAttributes } from "react";
-import { getTranslation } from "utils/getTranslation";
+import type { AriaAttributes, HTMLAttributes } from "react";
 
 interface LinkListProps
-    extends TranslatedElement,
-        HTMLAttributes<HTMLUListElement> {
+    extends HTMLAttributes<HTMLUListElement>,
+        AriaAttributes {
     links?: LinkProps[];
 }
 
-const LinkList = ({ links, language, ...props }: LinkListProps) => {
+const LinkList = ({ links, ...props }: LinkListProps) => {
     return (
         links && (
-            <ul
-                aria-label={getTranslation(language).externalLinks}
-                w-full
-                mx-auto
-                divide-y
-                {...props}
-            >
+            <ul w-full mx-auto divide-y {...props}>
                 {links.map((link) => (
                     <li key={link.url}>
                         <LinkCard {...link} />
