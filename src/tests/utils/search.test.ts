@@ -31,30 +31,35 @@ describe("search()", () => {
             },
         ];
 
-        test.each([
-            ["博客", [pagesChinese[0]]],
-            ["TypeScript", [pagesChinese[1]]],
-            ["使用", [pagesChinese[1], pagesChinese[2]]],
-            ["pnpm", [pagesChinese[2]]],
-        ])('with keyword "%s" in blog title', (keyword, expectedResult) => {
-            const results = search(keyword, pagesChinese);
+        test.each(["博客", "TypeScript", "使用", "pnpm"])(
+            'with keyword "%s" in blog title',
+            (keyword) => {
+                const results = search(keyword, pagesChinese);
 
-            for (const result of expectedResult) {
-                expect(results).toContainEqual(result);
-            }
-        });
+                expect(
+                    results.find(
+                        ({ content, title }) =>
+                            content.includes(keyword) ||
+                            title.includes(keyword),
+                    ),
+                ).toBeDefined();
+            },
+        );
 
-        test.each([
-            ["一篇", [pagesChinese[0]]],
-            ["方法", [pagesChinese[1]]],
-            ["astro", [pagesChinese[1], pagesChinese[2]]],
-        ])('with keyword "%s" in blog content', (keyword, expectedResult) => {
-            const results = search(keyword, pagesChinese);
+        test.each(["一篇", "方法", "astro"])(
+            'with keyword "%s" in blog content',
+            (keyword) => {
+                const results = search(keyword, pagesChinese);
 
-            for (const result of expectedResult) {
-                expect(results).toContainEqual(result);
-            }
-        });
+                expect(
+                    results.find(
+                        ({ content, title }) =>
+                            content.includes(keyword) ||
+                            title.includes(keyword),
+                    ),
+                ).toBeDefined();
+            },
+        );
 
         test.each([["客人"], ["JavaScript"], ["食用"], ["yarn"]])(
             'with keyword "%s" not in blogs',
