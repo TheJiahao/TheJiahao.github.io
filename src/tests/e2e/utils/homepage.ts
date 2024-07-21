@@ -33,4 +33,10 @@ export class HomePage {
 
         await this.page.getByRole("option", { name: language }).click();
     }
+
+    async search(keyword: string) {
+        const searchBox = this.page.getByRole("searchbox");
+
+        await searchBox.fill(keyword);
+    }
 }
