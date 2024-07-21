@@ -1,6 +1,4 @@
 import { render, screen, within } from "@testing-library/react";
-import { languageCodes } from "localization";
-import { getTranslation } from "utils/getTranslation";
 import { beforeEach, describe, expect, test } from "vitest";
 import type { LinkProps } from "../../../components/organisms/LinkCard";
 import LinkList from "../../../components/organisms/LinkList";
@@ -22,32 +20,25 @@ describe("<LinkList/>", () => {
 
     let linkList: HTMLElement;
 
-    describe.each(languageCodes)("%s", (language) => {
-        beforeEach(() => {
-            render(
-                <LinkList
-                    links={links}
-                    aria-label={getTranslation(language).externalLinks}
-                />,
-            );
-            linkList = screen.getByRole("list", {
-                name: getTranslation(language).externalLinks,
-            });
+    beforeEach(() => {
+        render(<LinkList links={links} aria-label="link list" />);
+        linkList = screen.getByRole("list", {
+            name: "link list",
         });
+    });
 
-        test("is rendered", () => {
-            expect(linkList).toBeVisible();
-        });
+    test("is rendered", () => {
+        expect(linkList).toBeVisible();
+    });
 
-        test("contains given links", () => {
-            expect(within(linkList).getAllByRole("listitem")).toHaveLength(2);
-        });
+    test("contains given links", () => {
+        expect(within(linkList).getAllByRole("listitem")).toHaveLength(2);
+    });
 
-        test("links have correct titles", () => {
-            const titles = screen.getAllByRole("heading");
+    test("links have correct titles", () => {
+        const titles = screen.getAllByRole("heading");
 
-            expect(titles[0]).toHaveTextContent(links[0].title);
-            expect(titles[1]).toHaveTextContent(links[1].title);
-        });
+        expect(titles[0]).toHaveTextContent(links[0].title);
+        expect(titles[1]).toHaveTextContent(links[1].title);
     });
 });
