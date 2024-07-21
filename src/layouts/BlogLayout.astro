@@ -48,7 +48,7 @@ const {
             <BlogFooter slot="footer" {lastModified} licenseText={license} />
         </Article>
 
-        <LinkList {links} {language} />
+        <LinkList {links} {language} className="card" />
 
         <CommentList {language} client:idle />
     </ContentLayout>
