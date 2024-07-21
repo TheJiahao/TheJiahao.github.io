@@ -1,14 +1,11 @@
 import LinkList from "components/organisms/LinkList";
 import useSearch from "hooks/useSearch";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
-import { useState, type ChangeEventHandler, type HTMLAttributes } from "react";
+import { useState, type ChangeEventHandler } from "react";
 import { LuSearch } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
-const SearchBox = ({
-    language,
-    ...props
-}: TranslatedElement & HTMLAttributes<HTMLDivElement>) => {
+const SearchBox = ({ language }: TranslatedElement) => {
     const [keyword, setKeyword] = useState("");
 
     const searchResult = useSearch(keyword, language).map(
@@ -25,7 +22,7 @@ const SearchBox = ({
     };
 
     return (
-        <div {...props}>
+        <div>
             <form
                 align-icon
                 gap-1
