@@ -26,7 +26,13 @@ const SearchBox = ({
 
     return (
         <div {...props}>
-            <form align-icon gap-1>
+            <form
+                align-icon
+                gap-1
+                onSubmit={(e) => {
+                    e.preventDefault();
+                }}
+            >
                 <label htmlFor="search">
                     <LuSearch />
                 </label>
