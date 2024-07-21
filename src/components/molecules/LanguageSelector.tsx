@@ -3,6 +3,7 @@ import {
     ListboxButton,
     ListboxOption,
     ListboxOptions,
+    type ListboxButtonProps,
 } from "@headlessui/react";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import type { Language } from "interfaces/Language";
@@ -11,7 +12,7 @@ import { useEffect, useState } from "react";
 import { LuChevronDown, LuGlobe } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
-interface LanguageSelectorProps {
+interface LanguageSelectorProps extends ListboxButtonProps {
     defaultLanguage: string;
     languages?: Pick<Language, "name" | "code">[];
 }
@@ -19,6 +20,7 @@ interface LanguageSelectorProps {
 const LanguageSelector = ({
     defaultLanguage,
     languages = DEFAULT_LANGUAGES,
+    ...props
 }: LanguageSelectorProps) => {
     const [disabled, setDisabled] = useState(true);
 
@@ -44,6 +46,7 @@ const LanguageSelector = ({
                 un-disabled="text-disabled"
                 role="combobox"
                 className="group"
+                {...props}
                 align-icon
                 gap-sm
                 text-secondary
