@@ -11,7 +11,11 @@ export function getStaticPaths() {
     return languageCodes.map((language) => ({ params: { language } }));
 }
 
-export function GET({ params }: APIContext) {
+export function GET({ params, site }: APIContext) {
+    if (!site) {
+        return new Response("Site is not defined", { status: 500 });
+    }
+
     const language = params.language;
     const blogs = getBlogs();
     const parser = new MarkdownIt();
