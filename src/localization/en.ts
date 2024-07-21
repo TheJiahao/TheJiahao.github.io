@@ -19,6 +19,7 @@ const en = {
     socialLinks: "Social links",
     blogList: "Blog list",
     externalLinks: "External links",
+    search: "Search",
 };
 
 export default en;

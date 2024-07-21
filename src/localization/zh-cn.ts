@@ -22,6 +22,7 @@ const zh_cn: Language = {
     socialLinks: "社交链接",
     blogList: "博客列表",
     externalLinks: "外部链接",
+    search: "搜索",
 };
 
 export default zh_cn;

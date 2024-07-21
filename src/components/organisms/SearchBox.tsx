@@ -3,6 +3,7 @@ import useSearch from "hooks/useSearch";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { useState, type ChangeEventHandler, type HTMLAttributes } from "react";
 import { LuSearch } from "react-icons/lu";
+import { getTranslation } from "utils/getTranslation";
 
 const SearchBox = ({
     language,
@@ -32,6 +33,8 @@ const SearchBox = ({
                 <input
                     type="search"
                     id="search"
+                    title={getTranslation(language).search}
+                    placeholder={getTranslation(language).search}
                     value={keyword}
                     onChange={onChange}
                     w-full
