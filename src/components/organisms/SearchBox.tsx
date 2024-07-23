@@ -22,7 +22,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
     };
 
     return (
-        <search>
+        <search card p-2>
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
