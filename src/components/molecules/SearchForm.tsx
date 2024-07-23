@@ -20,7 +20,7 @@ const SearchForm = ({
     const disabled = !useHydrationState();
 
     let icon = <LuSearch aria-hidden />;
-    let placeholder = getTranslation(language).loading;
+    let placeholder = getTranslation(language).typeToSearch;
 
     if (disabled) {
         icon = <LoadingIcon aria-hidden />;
