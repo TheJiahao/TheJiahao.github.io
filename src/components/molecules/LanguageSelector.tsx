@@ -47,6 +47,9 @@ const LanguageSelector = ({
                 role="combobox"
                 className="group"
                 {...props}
+                clickable
+                p-2
+                rounded-md
                 align-icon
                 gap-sm
                 text-secondary
