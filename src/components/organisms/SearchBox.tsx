@@ -48,10 +48,12 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 />
             </form>
 
-            <LinkList
-                links={searchResult}
-                aria-label={getTranslation(language).searchResults}
-            />
+            {searchResult.length > 0 && (
+                <LinkList
+                    links={searchResult}
+                    aria-label={getTranslation(language).searchResults}
+                />
+            )}
         </search>
     );
 };
