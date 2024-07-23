@@ -24,11 +24,11 @@ const SearchBox = ({ language }: TranslatedElement) => {
     return (
         <div>
             <form
-                align-icon
-                gap-1
                 onSubmit={(e) => {
                     e.preventDefault();
                 }}
+                gap-1
+                align-icon
             >
                 <label htmlFor="search">
                     <LuSearch />
