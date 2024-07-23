@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 /**
  * Custom hook for checking hydration.
  *
- * @returns Boolean indicating whether component is hydrated/loaded.
+ * @returns Boolean indicating whether component is hydrated.
  */
 
 const useHydrationState = (): boolean => {
