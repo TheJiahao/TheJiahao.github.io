@@ -22,7 +22,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
     };
 
     return (
-        <div>
+        <search>
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
@@ -48,7 +48,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 links={searchResult}
                 aria-label={getTranslation(language).searchResults}
             />
-        </div>
+        </search>
     );
 };
 
