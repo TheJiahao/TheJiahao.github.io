@@ -17,11 +17,10 @@ const SearchBox = ({ language }: TranslatedElement) => {
         }),
     );
 
-    const onChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
+    const handleSearch: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
         setKeyword(target.value);
     };
-
-    const clearKeyword = () => {
+    const handleReset = () => {
         setKeyword("");
     };
 
@@ -30,8 +29,8 @@ const SearchBox = ({ language }: TranslatedElement) => {
             <SearchForm
                 value={keyword}
                 language={language}
-                handleSearch={onChange}
-                handleReset={clearKeyword}
+                handleSearch={handleSearch}
+                handleReset={handleReset}
             />
 
             {searchResult.length > 0 && (
