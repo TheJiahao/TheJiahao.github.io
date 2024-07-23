@@ -59,7 +59,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                         onClick={clearKeyword}
                         title={getTranslation(language).clear}
                         transition
-                        duration-200
+                        ease-in-out
                         hover:text-accent-primary
                         active="text-accent-primary brightness-70 dark:brightness-125"
                     >
