@@ -27,6 +27,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 onSubmit={(e) => {
                     e.preventDefault();
                 }}
+                hoverable
                 align-icon
                 gap-4
                 p-4
