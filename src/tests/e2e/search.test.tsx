@@ -36,7 +36,7 @@ test.describe("Search", () => {
                     name: getTranslation(languageCode).searchResults,
                 });
 
-                await expect(searchResults).toBeEmpty();
+                await expect(searchResults).not.toBeAttached();
             });
         });
     }
