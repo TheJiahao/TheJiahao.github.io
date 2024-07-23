@@ -11,7 +11,7 @@ type Props = Pick<
 const { title, image, date, description } = Astro.props;
 ---
 
-<header>
+<header flex="~ col" gap-lg>
     <CoverImage image={image} title={title} />
     <div px-8>
         <BlogDetails title={title} {description} date={date} />
