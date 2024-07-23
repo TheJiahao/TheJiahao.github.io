@@ -1,0 +1,76 @@
+import LoadingIcon from "components/atoms/LoadingIcon";
+import useHydrationState from "hooks/useHydrationState";
+import type { TranslatedElement } from "interfaces/TranslatedElement";
+import type { ChangeEventHandler, MouseEventHandler } from "react";
+import { LuSearch, LuX } from "react-icons/lu";
+import { getTranslation } from "utils/getTranslation";
+
+interface SearchFormProps extends TranslatedElement {
+    handleSearch: ChangeEventHandler<HTMLInputElement>;
+    handleReset: MouseEventHandler<HTMLButtonElement>;
+    value: string;
+}
+
+const SearchForm = ({
+    language,
+    value,
+    handleSearch,
+    handleReset,
+}: SearchFormProps) => {
+    const disabled = !useHydrationState();
+    const icon = disabled ? (
+        <LoadingIcon aria-hidden />
+    ) : (
+        <LuSearch aria-hidden />
+    );
+
+    const placeholder = disabled
+        ? getTranslation(language).loading
+        : getTranslation(language).typeToSearch;
+
+    return (
+        <form
+            onSubmit={(e) => {
+                e.preventDefault();
+            }}
+            hoverable
+            align-icon
+            gap-4
+            p-4
+            text="xl secondary"
+            w-full
+        >
+            <label htmlFor="search">{icon}</label>
+
+            <input
+                type="search"
+                id="search"
+                title={getTranslation(language).search}
+                placeholder={placeholder}
+                value={value}
+                onChange={handleSearch}
+                className="[&::-webkit-search-cancel-button]:hidden"
+                w-full
+                outline-none
+                bg-transparent
+                disabled={disabled}
+            />
+
+            {value != "" && (
+                <button
+                    type="reset"
+                    onClick={handleReset}
+                    title={getTranslation(language).clear}
+                    transition
+                    ease-in-out
+                    hover:text-accent-primary
+                    active="text-accent-primary brightness-70 dark:brightness-125"
+                >
+                    <LuX />
+                </button>
+            )}
+        </form>
+    );
+};
+
+export default SearchForm;
