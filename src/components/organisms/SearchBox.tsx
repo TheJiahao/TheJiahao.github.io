@@ -22,13 +22,14 @@ const SearchBox = ({ language }: TranslatedElement) => {
     };
 
     return (
-        <search card p-4>
+        <search card flex="~ col">
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
                 }}
                 align-icon
                 gap-4
+                p-4
                 text="xl secondary"
                 w-full
             >
