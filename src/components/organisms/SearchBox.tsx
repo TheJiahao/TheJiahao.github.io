@@ -41,6 +41,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                     value={keyword}
                     onChange={onChange}
                     w-full
+                    outline-none
                 />
             </form>
             <LinkList
