@@ -22,6 +22,7 @@ const en = {
     search: "Search",
     typeToSearch: "Type to search",
     searchResults: "Search results",
+    noResults: "No results",
     clear: "Clear",
     loading: "Loading",
 };

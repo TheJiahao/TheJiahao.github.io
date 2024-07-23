@@ -25,6 +25,7 @@ const zh_cn: Language = {
     search: "搜索",
     typeToSearch: "输入以搜索",
     searchResults: "搜索结果",
+    noResults: "未找到结果",
     clear: "清空",
     loading: "加载中",
 };
