@@ -29,7 +29,7 @@ const SearchResult = ({ keyword, language }: SearchResultProps) => {
 
     if (keyword != "") {
         return (
-            <p align-icon gap-4 p-4 text="xl secondary">
+            <p align-icon gap-4 p-4 text="lg primary" justify-center>
                 <LuSearchX />
                 {getTranslation(language).noResults}
             </p>
