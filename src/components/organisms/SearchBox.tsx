@@ -30,6 +30,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 align-icon
                 gap-4
                 text-xl
+                w-full
             >
                 <label htmlFor="search">
                     <LuSearch aria-hidden />
