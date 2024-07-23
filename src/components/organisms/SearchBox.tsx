@@ -47,6 +47,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                     bg-transparent
                 />
             </form>
+
             <LinkList
                 links={searchResult}
                 aria-label={getTranslation(language).searchResults}
