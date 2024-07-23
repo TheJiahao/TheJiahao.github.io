@@ -29,7 +29,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 }}
                 align-icon
                 gap-4
-                text-xl
+                text="xl secondary"
                 w-full
             >
                 <label htmlFor="search">
@@ -44,6 +44,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                     onChange={onChange}
                     w-full
                     outline-none
+                    bg-transparent
                 />
             </form>
             <LinkList
