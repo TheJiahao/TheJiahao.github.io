@@ -22,13 +22,14 @@ const SearchBox = ({ language }: TranslatedElement) => {
     };
 
     return (
-        <search card p-2>
+        <search card p-4>
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
                 }}
-                gap-1
                 align-icon
+                gap-4
+                text-xl
             >
                 <label htmlFor="search">
                     <LuSearch aria-hidden />
