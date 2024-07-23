@@ -1,4 +1,6 @@
+import LoadingIcon from "components/atoms/LoadingIcon";
 import LinkList from "components/organisms/LinkList";
+import useHydrationState from "hooks/useHydrationState";
 import useSearch from "hooks/useSearch";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { useState, type ChangeEventHandler } from "react";
@@ -7,6 +9,7 @@ import { getTranslation } from "utils/getTranslation";
 
 const SearchBox = ({ language }: TranslatedElement) => {
     const [keyword, setKeyword] = useState("");
+    const disabled = !useHydrationState();
 
     const searchResult = useSearch(keyword, language).map(
         ({ title, content, url, image }) => ({
@@ -16,6 +19,15 @@ const SearchBox = ({ language }: TranslatedElement) => {
             image,
         }),
     );
+
+    const icon = disabled ? (
+        <LoadingIcon aria-hidden />
+    ) : (
+        <LuSearch aria-hidden />
+    );
+    const placeholder = disabled
+        ? getTranslation(language).loading
+        : getTranslation(language).typeToSearch;
 
     const onChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
         setKeyword(target.value);
@@ -38,16 +50,16 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 text="xl secondary"
                 w-full
             >
-                <label htmlFor="search">
-                    <LuSearch aria-hidden />
-                </label>
+                <label htmlFor="search">{icon}</label>
+
                 <input
                     type="search"
                     id="search"
                     title={getTranslation(language).search}
-                    placeholder={getTranslation(language).typeToSearch}
+                    placeholder={placeholder}
                     value={keyword}
                     onChange={onChange}
+                    disabled={disabled}
                     className="[&::-webkit-search-cancel-button]:hidden"
                     w-full
                     outline-none

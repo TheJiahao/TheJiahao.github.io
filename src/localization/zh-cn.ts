@@ -26,6 +26,7 @@ const zh_cn: Language = {
     typeToSearch: "输入以搜索",
     searchResults: "搜索结果",
     clear: "清空",
+    loading: "加载中",
 };
 
 export default zh_cn;

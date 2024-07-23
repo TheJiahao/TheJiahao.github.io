@@ -23,6 +23,7 @@ const en = {
     typeToSearch: "Type to search",
     searchResults: "Search results",
     clear: "Clear",
+    loading: "Loading",
 };
 
 export default en;
