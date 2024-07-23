@@ -45,7 +45,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                     type="search"
                     id="search"
                     title={getTranslation(language).search}
-                    placeholder={getTranslation(language).search}
+                    placeholder={getTranslation(language).typeToSearch}
                     value={keyword}
                     onChange={onChange}
                     className="[&::-webkit-search-cancel-button]:hidden"

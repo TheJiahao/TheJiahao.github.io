@@ -23,6 +23,7 @@ const zh_cn: Language = {
     blogList: "博客列表",
     externalLinks: "外部链接",
     search: "搜索",
+    typeToSearch: "输入以搜索",
     searchResults: "搜索结果",
     clear: "清空",
 };

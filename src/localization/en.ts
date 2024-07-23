@@ -20,6 +20,7 @@ const en = {
     blogList: "Blog list",
     externalLinks: "External links",
     search: "Search",
+    typeToSearch: "Type to search",
     searchResults: "Search results",
     clear: "Clear",
 };
