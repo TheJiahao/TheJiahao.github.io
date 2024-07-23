@@ -21,6 +21,7 @@ const en = {
     externalLinks: "External links",
     search: "Search",
     searchResults: "Search results",
+    clear: "Clear",
 };
 
 export default en;

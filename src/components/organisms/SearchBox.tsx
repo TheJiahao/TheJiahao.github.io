@@ -2,7 +2,7 @@ import LinkList from "components/organisms/LinkList";
 import useSearch from "hooks/useSearch";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { useState, type ChangeEventHandler } from "react";
-import { LuSearch } from "react-icons/lu";
+import { LuSearch, LuX } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 const SearchBox = ({ language }: TranslatedElement) => {
@@ -19,6 +19,10 @@ const SearchBox = ({ language }: TranslatedElement) => {
 
     const onChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
         setKeyword(target.value);
+    };
+
+    const clearKeyword = () => {
+        setKeyword("");
     };
 
     return (
@@ -44,10 +48,24 @@ const SearchBox = ({ language }: TranslatedElement) => {
                     placeholder={getTranslation(language).search}
                     value={keyword}
                     onChange={onChange}
+                    className="[&::-webkit-search-cancel-button]:hidden"
                     w-full
                     outline-none
                     bg-transparent
                 />
+                {keyword != "" && (
+                    <button
+                        type="reset"
+                        onClick={clearKeyword}
+                        title={getTranslation(language).clear}
+                        transition
+                        duration-200
+                        hover:text-accent-primary
+                        active="text-accent-primary brightness-70 dark:brightness-125"
+                    >
+                        <LuX />
+                    </button>
+                )}
             </form>
 
             {searchResult.length > 0 && (

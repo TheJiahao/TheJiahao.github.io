@@ -24,6 +24,7 @@ const zh_cn: Language = {
     externalLinks: "外部链接",
     search: "搜索",
     searchResults: "搜索结果",
+    clear: "清空",
 };
 
 export default zh_cn;
