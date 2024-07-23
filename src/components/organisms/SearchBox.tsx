@@ -65,6 +65,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                     outline-none
                     bg-transparent
                 />
+
                 {keyword != "" && (
                     <button
                         type="reset"
