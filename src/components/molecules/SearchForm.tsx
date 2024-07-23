@@ -18,15 +18,14 @@ const SearchForm = ({
     handleReset,
 }: SearchFormProps) => {
     const disabled = !useHydrationState();
-    const icon = disabled ? (
-        <LoadingIcon aria-hidden />
-    ) : (
-        <LuSearch aria-hidden />
-    );
 
-    const placeholder = disabled
-        ? getTranslation(language).loading
-        : getTranslation(language).typeToSearch;
+    let icon = <LuSearch aria-hidden />;
+    let placeholder = getTranslation(language).loading;
+
+    if (disabled) {
+        icon = <LoadingIcon aria-hidden />;
+        placeholder = getTranslation(language).loading;
+    }
 
     return (
         <form
