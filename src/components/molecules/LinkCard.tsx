@@ -1,7 +1,7 @@
-interface LinkProps {
-    title: string;
+import type { Page } from "interfaces/Page";
+
+interface LinkProps extends Omit<Page, "content" | "image"> {
     content?: string;
-    url: string;
     image?: ImageMetadata | string;
 }
 
