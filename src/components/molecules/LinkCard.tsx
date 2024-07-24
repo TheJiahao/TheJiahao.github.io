@@ -1,11 +1,11 @@
 interface LinkProps {
     title: string;
-    description?: string;
+    content?: string;
     url: string;
     image?: ImageMetadata | string;
 }
 
-const LinkCard = ({ title, description, url, image }: LinkProps) => (
+const LinkCard = ({ title, content, url, image }: LinkProps) => (
     <article title={title} clickable>
         <a
             href={url}
@@ -24,7 +24,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
                 <p
                     text-secondary
                     line-clamp-3
-                    dangerouslySetInnerHTML={{ __html: description ?? "" }}
+                    dangerouslySetInnerHTML={{ __html: content ?? "" }}
                 />
             </div>
 

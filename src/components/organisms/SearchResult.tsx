@@ -9,14 +9,7 @@ interface SearchResultProps extends TranslatedElement {
 }
 
 const SearchResult = ({ keyword, language }: SearchResultProps) => {
-    const searchResult = useSearch(keyword, language).map(
-        ({ title, content, url, image }) => ({
-            title,
-            description: content,
-            url,
-            image,
-        }),
-    );
+    const searchResult = useSearch(keyword, language);
 
     if (searchResult.length > 0) {
         return (
