@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import SearchForm from "components/molecules/SearchForm";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
@@ -8,8 +9,11 @@ describe("<SearchForm/>", () => {
     describe.each(languageCodes)("%s", (language) => {
         const onChange = vi.fn();
         const onReset = vi.fn();
+        const user = userEvent.setup();
 
         describe("when given input", () => {
+            let clearButton: HTMLElement;
+
             beforeEach(() => {
                 render(
                     <SearchForm
@@ -19,14 +23,20 @@ describe("<SearchForm/>", () => {
                         value={"Hello world!"}
                     />,
                 );
+
+                clearButton = screen.getByRole("button", {
+                    name: getTranslation(language).clear,
+                });
             });
 
             test("clear button is visible", () => {
-                const clearButton = screen.queryByRole("button", {
-                    name: getTranslation(language).clear,
-                });
-
                 expect(clearButton).toBeVisible();
+            });
+
+            test("clicking clear button calls onReset", async () => {
+                await user.click(clearButton);
+
+                expect(onReset).toHaveBeenCalledTimes(1);
             });
         });
 
@@ -48,6 +58,14 @@ describe("<SearchForm/>", () => {
                 });
 
                 expect(clearButton).not.toBeInTheDocument();
+            });
+
+            test("typing calls onChange", async () => {
+                const searchInput = screen.getByRole("searchbox");
+
+                await user.type(searchInput, "Hello world!");
+
+                expect(onChange).toHaveBeenCalled();
             });
         });
     });
