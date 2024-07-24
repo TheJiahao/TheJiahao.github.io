@@ -1,21 +1,21 @@
 import LoadingIcon from "components/atoms/LoadingIcon";
 import useHydrationState from "hooks/useHydrationState";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
-import type { ChangeEventHandler, MouseEventHandler } from "react";
+import type { DOMAttributes, InputHTMLAttributes } from "react";
 import { LuSearch, LuX } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
-interface SearchFormProps extends TranslatedElement {
-    handleSearch: ChangeEventHandler<HTMLInputElement>;
-    handleReset: MouseEventHandler<HTMLButtonElement>;
-    value: string;
-}
+type SearchFormProps = TranslatedElement &
+    Required<
+        Pick<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> &
+            Pick<DOMAttributes<HTMLFormElement>, "onReset">
+    >;
 
 const SearchForm = ({
     language,
     value,
-    handleSearch,
-    handleReset,
+    onChange,
+    onReset,
 }: SearchFormProps) => {
     const disabled = !useHydrationState();
 
@@ -38,6 +38,7 @@ const SearchForm = ({
             p-4
             text="xl secondary"
             w-full
+            onReset={onReset}
         >
             <label htmlFor="search">{icon}</label>
 
@@ -47,7 +48,7 @@ const SearchForm = ({
                 title={getTranslation(language).search}
                 placeholder={placeholder}
                 value={value}
-                onChange={handleSearch}
+                onChange={onChange}
                 className="[&::-webkit-search-cancel-button]:hidden"
                 w-full
                 outline-none
@@ -58,7 +59,6 @@ const SearchForm = ({
             {value != "" && (
                 <button
                     type="reset"
-                    onClick={handleReset}
                     title={getTranslation(language).clear}
                     transition
                     ease-in-out

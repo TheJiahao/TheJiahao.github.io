@@ -18,8 +18,8 @@ const SearchBox = ({ language }: TranslatedElement) => {
             <SearchForm
                 value={keyword}
                 language={language}
-                handleSearch={handleSearch}
-                handleReset={handleReset}
+                onChange={handleSearch}
+                onReset={handleReset}
             />
             <SearchResult keyword={keyword} language={language} />
         </search>
