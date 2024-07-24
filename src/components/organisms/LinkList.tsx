@@ -1,4 +1,4 @@
-import LinkCard, { type LinkProps } from "components/organisms/LinkCard";
+import LinkCard, { type LinkProps } from "components/molecules/LinkCard";
 import type { AriaAttributes, HTMLAttributes } from "react";
 
 interface LinkListProps

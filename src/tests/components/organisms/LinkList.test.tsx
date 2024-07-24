@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import type { LinkProps } from "../../../components/organisms/LinkCard";
+import type { LinkProps } from "../../../components/molecules/LinkCard";
 import LinkList from "../../../components/organisms/LinkList";
 
 describe("<LinkList/>", () => {
