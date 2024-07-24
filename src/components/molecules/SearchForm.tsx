@@ -5,11 +5,12 @@ import type { DOMAttributes, InputHTMLAttributes } from "react";
 import { LuSearch, LuX } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
-type SearchFormProps = TranslatedElement &
-    Required<
-        Pick<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> &
-            Pick<DOMAttributes<HTMLFormElement>, "onReset">
-    >;
+interface SearchFormProps
+    extends TranslatedElement,
+        Required<
+            Pick<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> &
+                Pick<DOMAttributes<HTMLFormElement>, "onReset">
+        > {}
 
 const SearchForm = ({
     language,
