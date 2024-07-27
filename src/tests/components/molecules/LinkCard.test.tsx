@@ -11,7 +11,7 @@ describe("<LinkCard/>", () => {
     let link: HTMLElement;
 
     beforeEach(() => {
-        render(<LinkCard {...{ url, title, content: description, image }} />);
+        render(<LinkCard {...{ url, title, description, image }} />);
         link = screen.getByRole("link");
     });
 

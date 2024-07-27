@@ -1,6 +1,6 @@
 interface Page {
     title: string;
-    content: string;
+    description: string;
     url: string;
     image: ImageMetadata;
 }

@@ -9,20 +9,20 @@ describe("search()", () => {
             {
                 title: "如何写出一篇博客",
                 url: "/zh-cn/posts/how-to-write-a-blog",
-                content: "本文将教读者写出一篇博客。",
+                description: "本文将教读者写出一篇博客。",
                 image: mock<ImageMetadata>(),
             },
             {
                 title: "使用 TypeScript 实现搜索功能",
                 url: "/zh-cn/posts/typescript-search",
-                content:
+                description:
                     "本文介绍了一种使用 TypeScript 为 Astro 网站实现搜索功能的方法。",
                 image: mock<ImageMetadata>(),
             },
             {
                 title: "在 Astro 网站中使用 React 组件",
                 url: "/zh-cn/posts/react-components-in-astro",
-                content: `
+                description: `
             <h2>安装<h2>
             使用 pnpm 安装 astro
             <code>pnpm add astro</code>
@@ -38,7 +38,7 @@ describe("search()", () => {
 
                 expect(
                     results.find(
-                        ({ content, title }) =>
+                        ({ description: content, title }) =>
                             content.includes(keyword) ||
                             title.includes(keyword),
                     ),
@@ -53,7 +53,7 @@ describe("search()", () => {
 
                 expect(
                     results.find(
-                        ({ content, title }) =>
+                        ({ description: content, title }) =>
                             content.includes(keyword) ||
                             title.includes(keyword),
                     ),

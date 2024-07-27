@@ -1,11 +1,11 @@
 import type { Page } from "interfaces/Page";
 
-interface LinkProps extends Omit<Page, "content" | "image"> {
-    content?: string;
+interface LinkProps extends Omit<Page, "description" | "image"> {
+    description?: string;
     image?: ImageMetadata | string;
 }
 
-const LinkCard = ({ title, content, url, image }: LinkProps) => (
+const LinkCard = ({ title, description, url, image }: LinkProps) => (
     <article title={title} clickable>
         <a
             href={url}
@@ -24,7 +24,7 @@ const LinkCard = ({ title, content, url, image }: LinkProps) => (
                 <p
                     text-secondary
                     line-clamp-3
-                    dangerouslySetInnerHTML={{ __html: content ?? "" }}
+                    dangerouslySetInnerHTML={{ __html: description ?? "" }}
                 />
             </div>
 

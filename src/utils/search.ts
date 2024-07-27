@@ -6,12 +6,12 @@ const search = (keyword: string, pages: Page[]): Page[] => {
         .go(keyword, pages, {
             limit: 5,
             threshold: 0.4,
-            keys: ["title", "content"],
+            keys: ["title", "description"],
         })
         .map((result) => ({
             ...result.obj,
             title: result[0].highlight("<strong bg-cyan-2>", "</strong>"),
-            content: result[1].highlight("<strong bg-cyan-2>", "</strong>"),
+            description: result[1].highlight("<strong bg-cyan-2>", "</strong>"),
         }));
 };
 

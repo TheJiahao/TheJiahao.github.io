@@ -7,13 +7,13 @@ describe("<LinkList/>", () => {
     const links: LinkProps[] = [
         {
             title: "How to write unit tests for Astro components?",
-            content:
+            description:
                 "This blog post will teach you how to write unit tests for Astro components.",
             url: "https://www.blog.com/astro-unit-tests",
         },
         {
             title: "如何写出一篇好文章？",
-            content: "本文介绍了如何写出一篇好文章。",
+            description: "本文介绍了如何写出一篇好文章。",
             url: "https://another.blog.com/how-to-write-good-articles",
         },
     ];
