@@ -1,35 +1,33 @@
 import LinkList from "components/organisms/LinkList";
-import useSearch from "hooks/useSearch";
+import type { Page } from "interfaces/Page";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { LuSearchX } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 interface SearchResultProps extends TranslatedElement {
-    keyword: string;
+    results?: Page[];
 }
 
-const SearchResult = ({ keyword, language }: SearchResultProps) => {
-    const searchResult = useSearch(keyword, language);
+const SearchResult = ({ results, language }: SearchResultProps) => {
+    if (!results) {
+        return null;
+    }
 
-    if (searchResult.length > 0) {
+    if (results.length > 0) {
         return (
             <LinkList
-                links={searchResult}
+                links={results}
                 aria-label={getTranslation(language).searchResults}
             />
         );
     }
 
-    if (keyword != "") {
-        return (
-            <p align-icon gap-4 p-4 text="lg primary" justify-center>
-                <LuSearchX />
-                {getTranslation(language).noResults}
-            </p>
-        );
-    }
-
-    return null;
+    return (
+        <p align-icon gap-4 p-4 text="lg primary" justify-center>
+            <LuSearchX />
+            {getTranslation(language).noResults}
+        </p>
+    );
 };
 
 export default SearchResult;

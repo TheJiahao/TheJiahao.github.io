@@ -1,10 +1,12 @@
 import SearchForm from "components/molecules/SearchForm";
 import SearchResult from "components/organisms/SearchResult";
+import useSearch from "hooks/useSearch";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { useState, type ChangeEventHandler } from "react";
 
 const SearchBox = ({ language }: TranslatedElement) => {
     const [keyword, setKeyword] = useState("");
+    const results = useSearch(keyword, language);
 
     const handleSearch: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
         setKeyword(target.value);
@@ -21,7 +23,10 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 onChange={handleSearch}
                 onReset={handleReset}
             />
-            <SearchResult keyword={keyword} language={language} />
+            <SearchResult
+                results={keyword ? results : undefined}
+                language={language}
+            />
         </search>
     );
 };
