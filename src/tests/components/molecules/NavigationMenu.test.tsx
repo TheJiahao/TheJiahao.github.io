@@ -25,7 +25,14 @@ describe("<NavigationMenu/>", () => {
     ];
 
     beforeEach(() => {
-        render(<NavigationMenu language="zh-cn" role="menu" links={links} />);
+        render(
+            <NavigationMenu
+                language="zh-cn"
+                role="menu"
+                links={links}
+                currentURL="/some-url"
+            />,
+        );
 
         navigationMenu = screen.getByRole("menu", {
             name: "导航链接",

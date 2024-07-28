@@ -7,11 +7,13 @@ import { getTranslation } from "utils/getTranslation";
 
 interface NavigationMenuProps extends MenuProps, TranslatedElement {
     links?: IconLink[];
+    currentURL: string;
 }
 
 const NavigationMenu = ({
     language,
     links = NAVIGATION_LINKS[language],
+    currentURL,
     ...props
 }: NavigationMenuProps) => (
     <Menu
@@ -21,8 +23,17 @@ const NavigationMenu = ({
         {...props}
     >
         {links.map((link) => (
-            <a key={link.text} href={link.url} align-icon gap-lg>
-                {cloneElement(link.icon, { "aria-hidden": true })}
+            <a
+                key={link.text}
+                href={link.url}
+                className={currentURL === link.url ? "text-primary" : undefined}
+                aria-current={currentURL === link.url}
+                align-icon
+                gap-lg
+            >
+                {cloneElement(link.icon, {
+                    "aria-hidden": true,
+                })}
                 {link.text}
             </a>
         ))}

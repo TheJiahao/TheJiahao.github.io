@@ -6,16 +6,17 @@ import { DEFAULT_LANGUAGE } from "config";
 import BaseLayout from "layouts/BaseLayout.astro";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
+const currentURL = Astro.url.pathname;
 ---
 
 <BaseLayout {...Astro.props}>
     <div slot="left-sidebar" un-hidden p-lg lg="block sticky top-0 h-screen">
-        <NavigationBar {language} client:idle />
+        <NavigationBar {language} {currentURL} client:idle />
     </div>
 
     <slot />
 
     <div fixed bottom-0 w-full p-lg block lg="hidden">
-        <MobileNavigationBar {language} client:load />
+        <MobileNavigationBar {language} {currentURL} client:load />
     </div>
 </BaseLayout>

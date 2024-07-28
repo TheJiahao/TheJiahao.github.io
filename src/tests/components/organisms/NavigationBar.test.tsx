@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, test } from "vitest";
 
 describe("<NavigationBar/>", () => {
     beforeEach(() => {
-        render(<NavigationBar language="zh-cn" />);
+        render(<NavigationBar language="zh-cn" currentURL="/zh-cn" />);
     });
 
     test("has header", () => {

@@ -10,7 +10,7 @@ describe("<MobileNavigationBar/>", () => {
     let toolBar: HTMLElement;
 
     beforeEach(() => {
-        render(<MobileNavigationBar language="zh-cn" />);
+        render(<MobileNavigationBar language="zh-cn" currentURL="/zh-cn" />);
         menuButton = screen.getByRole("button", {
             name: getTranslation("zh-cn").showNavigationMenu,
         });
