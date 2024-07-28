@@ -24,7 +24,11 @@ export function GET({ params }: APIContext) {
         .map(({ data, slug, body }) => ({
             title: data.title,
             url: getRelativeLocaleUrl(data.language, `posts/${slug}`),
-            description: sanitizeHtml(parser.render(body)),
+            description: sanitizeHtml(parser.render(body), {
+                allowedTags: sanitizeHtml.defaults.allowedTags.filter(
+                    (tag) => tag !== "a",
+                ),
+            }),
             image: data.image ?? BLOG_IMAGE_PLACEHOLDER,
         }));
 

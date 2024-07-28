@@ -14,7 +14,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
             grid="~ cols-[minmax(0,1fr)_auto] flow-col"
             gap-8
         >
-            <div>
+            <div tabIndex={-1}>
                 <h1
                     dangerouslySetInnerHTML={{ __html: title }}
                     text="primary xl"
