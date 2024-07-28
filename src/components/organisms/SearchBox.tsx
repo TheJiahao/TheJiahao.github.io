@@ -1,5 +1,5 @@
 import SearchForm from "components/molecules/SearchForm";
-import SearchResultList from "components/organisms/SearchResultList";
+import SearchResultList from "components/molecules/SearchResultList";
 import useSearch from "hooks/useSearch";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { useState, type ChangeEventHandler } from "react";

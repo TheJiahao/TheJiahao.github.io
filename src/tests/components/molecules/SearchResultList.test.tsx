@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import SearchResultList from "components/organisms/SearchResultList";
+import SearchResultList from "components/molecules/SearchResultList";
 import type { Page } from "interfaces/Page";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
