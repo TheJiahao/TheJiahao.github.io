@@ -13,8 +13,7 @@ const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
         aria-label={title}
         title={title}
         block
-        target="_blank"
-        rel="me noopener noreferrer"
+        rel="me"
         clickable
         rounded-md
         p-1

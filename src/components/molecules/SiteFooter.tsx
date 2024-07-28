@@ -28,13 +28,7 @@ const SiteFooter = ({
             <p>
                 © {startYear} - {year} {owner}
             </p>
-            <a
-                href={source}
-                target="_blank"
-                rel="noreferrer noopener"
-                align-icon
-                gap-2
-            >
+            <a href={source} align-icon gap-2>
                 {<SiGithub aria-hidden />}
                 {getTranslation(language).siteSource}
             </a>
