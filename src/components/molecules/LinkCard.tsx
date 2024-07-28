@@ -12,6 +12,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
             target="_blank"
             rel="noreferrer noopener"
             grid="~ cols-[minmax(0,1fr)_auto] flow-col"
+            gap-8
         >
             <div>
                 <h1
