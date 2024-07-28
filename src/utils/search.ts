@@ -1,7 +1,8 @@
 import fuzzysort from "fuzzysort";
 import type { Page } from "interfaces/Page";
+import type { PreparedPage } from "interfaces/PreparedPage";
 
-const search = (keyword: string, pages: Page[]): Page[] => {
+const search = (keyword: string, pages: (Page | PreparedPage)[]): Page[] => {
     return fuzzysort
         .go(keyword, pages, {
             limit: 5,
