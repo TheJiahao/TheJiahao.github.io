@@ -3,12 +3,37 @@ import { userEvent } from "@testing-library/user-event";
 import SearchBox from "components/organisms/SearchBox";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeAll, beforeEach, describe, expect, test, vi } from "vitest";
+import { mock } from "vitest-mock-extended";
 
 describe("<SearchBox/>", () => {
     describe.each(languageCodes)("%s", (language) => {
+        const fetchSpy = vi.spyOn(global, "fetch");
         const user = userEvent.setup();
         let searchInput: HTMLElement;
+
+        beforeAll(() => {
+            const image = mock<ImageMetadata>({ src: "imagelink.com" });
+            const mockResponse: Response = mock<Response>({
+                ok: true,
+                // eslint-disable-next-line @typescript-eslint/require-await
+                json: async () => [
+                    {
+                        title: "Hello world!",
+                        description: "Result 1",
+                        url: "/hello-world",
+                        image,
+                    },
+                    {
+                        title: "Result 2",
+                        description: "Result 2",
+                        url: "/result-2",
+                        image,
+                    },
+                ],
+            });
+            fetchSpy.mockResolvedValue(mockResponse);
+        });
 
         beforeEach(() => {
             render(<SearchBox language={language} />);
