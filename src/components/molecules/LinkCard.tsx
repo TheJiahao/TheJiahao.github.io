@@ -6,16 +6,14 @@ interface LinkProps extends Omit<Page, "description" | "image"> {
 }
 
 const LinkCard = ({ title, description, url, image }: LinkProps) => (
-    <article title={title} clickable>
+    <article title={title} clickable p-8>
         <a
             href={url}
-            flex="~ row"
-            w-full
-            p-8
             target="_blank"
             rel="noreferrer noopener"
+            grid="~ cols-[minmax(0,1fr)_auto] flow-col"
         >
-            <div flex-auto leading-loose>
+            <div>
                 <h1
                     dangerouslySetInnerHTML={{ __html: title }}
                     text="primary xl"
@@ -27,16 +25,13 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
                     dangerouslySetInnerHTML={{ __html: description ?? "" }}
                 />
             </div>
-
             {image && (
                 <img
                     src={typeof image == "string" ? image : image.src}
                     alt={title}
-                    width="50vh"
-                    height="50vh"
-                    my-auto
-                    flex-none
+                    size-15
                     object-contain
+                    self-center
                 />
             )}
         </a>
