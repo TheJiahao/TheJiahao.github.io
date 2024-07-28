@@ -5,7 +5,7 @@ import test from "./utils/fixtures";
 
 test.describe("Search", () => {
     for (const languageCode of languageCodes) {
-        test.describe(`in ${languageCode} site`, { tag: "@desktop" }, () => {
+        test.describe(`in ${languageCode} site`, () => {
             test.use({ languageCode });
 
             test.beforeEach(async ({ homepage }) => {
