@@ -77,7 +77,13 @@ const LanguageSelector = ({
                 ease-in
             >
                 {languages.map(({ name, code }) => (
-                    <ListboxOption key={code} value={code} p-2 clickable>
+                    <ListboxOption
+                        key={code}
+                        value={code}
+                        className="data-[focus]:bg-hover data-[hover]:bg-hover"
+                        clickable
+                        p-2
+                    >
                         {name}
                     </ListboxOption>
                 ))}
