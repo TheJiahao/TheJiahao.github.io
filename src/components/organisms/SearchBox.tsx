@@ -1,5 +1,5 @@
 import SearchForm from "components/molecules/SearchForm";
-import SearchResult from "components/organisms/SearchResult";
+import SearchResultList from "components/organisms/SearchResultList";
 import useSearch from "hooks/useSearch";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { useState, type ChangeEventHandler } from "react";
@@ -23,7 +23,7 @@ const SearchBox = ({ language }: TranslatedElement) => {
                 onChange={handleSearch}
                 onReset={handleReset}
             />
-            <SearchResult
+            <SearchResultList
                 results={keyword ? results : undefined}
                 language={language}
             />

@@ -8,7 +8,7 @@ interface SearchResultProps extends TranslatedElement {
     results?: Page[];
 }
 
-const SearchResult = ({ results, language }: SearchResultProps) => {
+const SearchResultList = ({ results, language }: SearchResultProps) => {
     if (!results) {
         return null;
     }
@@ -30,4 +30,4 @@ const SearchResult = ({ results, language }: SearchResultProps) => {
     );
 };
 
-export default SearchResult;
+export default SearchResultList;
