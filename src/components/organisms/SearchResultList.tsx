@@ -1,4 +1,4 @@
-import LinkList from "components/organisms/LinkList";
+import LinkList from "components/molecules/LinkList";
 import type { Page } from "interfaces/Page";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { LuSearchX } from "react-icons/lu";
