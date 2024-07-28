@@ -9,7 +9,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import type { Language } from "interfaces/Language";
 import { languages as DEFAULT_LANGUAGES } from "localization";
 import { useEffect, useState } from "react";
-import { LuChevronDown, LuGlobe } from "react-icons/lu";
+import { LuCheck, LuChevronDown, LuGlobe } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 interface LanguageSelectorProps extends ListboxButtonProps {
@@ -80,11 +80,14 @@ const LanguageSelector = ({
                     <ListboxOption
                         key={code}
                         value={code}
-                        className="data-[focus]:bg-hover data-[hover]:bg-hover"
+                        className="group data-[focus]:bg-hover data-[hover]:bg-hover"
                         clickable
+                        align-icon
+                        gap-3
                         p-2
                     >
-                        {name}
+                        <LuCheck className="invisible group-data-[selected]:visible" />
+                        <span>{name}</span>
                     </ListboxOption>
                 ))}
             </ListboxOptions>
