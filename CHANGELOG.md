@@ -2,7 +2,6 @@
 
 ## [3.2.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.1.0...v3.2.0) (2024-07-28)
 
-
 ### Features
 
 * **`BlogCard`:** Add click effect ([67b404b](https://github.com/TheJiahao/TheJiahao.github.io/commit/67b404b90a97b399054f61ffba21c59750919d74))
@@ -73,7 +72,6 @@
 * **TOC:** ✨ Add clicked color ([9f8e96c](https://github.com/TheJiahao/TheJiahao.github.io/commit/9f8e96c2d52816ec4c8eb17f6341bbd2685480c0)), closes [#116](https://github.com/TheJiahao/TheJiahao.github.io/issues/116)
 * **TOC:** ✨ Add hover transition ([58be3b0](https://github.com/TheJiahao/TheJiahao.github.io/commit/58be3b0d151321902c32ab7e7b41d0ca4503bc8d)), closes [#116](https://github.com/TheJiahao/TheJiahao.github.io/issues/116)
 
-
 ### Bug Fixes
 
 * 🐛 Add types ([1bb874a](https://github.com/TheJiahao/TheJiahao.github.io/commit/1bb874af3591d23f98eb6455ee454c03ea9243b7))
@@ -120,11 +118,9 @@
 * **TOC:** 🐛 Hide TOC when no headings ([b639ada](https://github.com/TheJiahao/TheJiahao.github.io/commit/b639adad6fcc999c5953aa4893238252d7985590))
 * **vercel:** 🐛 Noindex not working ([7d72bea](https://github.com/TheJiahao/TheJiahao.github.io/commit/7d72beab85883c0f876c3e09940dfef1ebcc7f71))
 
-
 ### Performance Improvements
 
 * **search:** ⚡️ Prepare pages with fuzzysort ([b1dbfd8](https://github.com/TheJiahao/TheJiahao.github.io/commit/b1dbfd81afb3949e30cd82233afcdea792c8c86c)), closes [#53](https://github.com/TheJiahao/TheJiahao.github.io/issues/53)
-
 
 ### Reverts
 
