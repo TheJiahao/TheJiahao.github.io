@@ -18,6 +18,7 @@ const BackButton = ({
             clickable
             card
             align-icon
+            inline-flex
             p-2
             gap-2
         >
