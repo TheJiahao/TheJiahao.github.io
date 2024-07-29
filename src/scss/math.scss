@@ -1,3 +1,7 @@
 .katex-display {
     overflow: auto;
 }
+
+.katex {
+    @apply select-all;
+}
