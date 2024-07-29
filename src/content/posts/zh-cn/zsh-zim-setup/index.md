@@ -29,7 +29,6 @@ links:
       image: https://zimfw.sh/images/favicons/apple-touch-icon.png
 
 hidden: false
-math:
 comments: true
 draft: false
 sitemap:

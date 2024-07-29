@@ -16,7 +16,6 @@ tags:
 image: img/edge_logo.svg
 
 hidden: false
-math:
 comments: true
 draft: false
 sitemap:

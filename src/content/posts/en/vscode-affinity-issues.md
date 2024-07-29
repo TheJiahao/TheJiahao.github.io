@@ -13,7 +13,6 @@ tags:
 image: /src/assets/images/vscode_logo.svg
 
 hidden: false
-math:
 comments: true
 draft: false
 

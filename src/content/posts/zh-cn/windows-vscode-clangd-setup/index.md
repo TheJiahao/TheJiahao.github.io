@@ -18,7 +18,6 @@ description: 本文介绍了通过 Scoop 安装 clangd 的方法。
 image: img/clangd_logo.svg
 
 hidden: false
-math:
 comments: true
 draft: false
 
