@@ -1,4 +1,4 @@
-import BlogCard, { type BlogCardProps } from "components/organisms/BlogCard";
+import BlogCard, { type BlogCardProps } from "components/molecules/BlogCard";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 

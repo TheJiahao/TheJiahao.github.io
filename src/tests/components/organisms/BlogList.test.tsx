@@ -2,7 +2,7 @@ import { render, screen, within } from "@testing-library/react";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
 import { beforeEach, describe, expect, test } from "vitest";
-import type { BlogCardProps } from "../../../components/organisms/BlogCard";
+import type { BlogCardProps } from "../../../components/molecules/BlogCard";
 import BlogList from "../../../components/organisms/BlogList";
 
 describe("<BlogList/>", () => {

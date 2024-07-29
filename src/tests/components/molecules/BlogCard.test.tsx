@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import BlogCard from "../../../components/organisms/BlogCard";
+import BlogCard from "../../../components/molecules/BlogCard";
 
 describe("<BlogCard/>", () => {
     const title = "How to write unit tests for Astro components?";
