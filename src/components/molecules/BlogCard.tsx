@@ -13,9 +13,9 @@ interface BlogCardProps {
 const BlogCard = ({ title, description, date, url, image }: BlogCardProps) => {
     return (
         <article title={title} card clickable>
-            <a href={url} rel="bookmark" block>
+            <a href={url} rel="bookmark">
                 <CoverImage image={image} title={title} />
-                <div p-8>
+                <div p-4 lg:p-8>
                     <BlogDetails
                         title={title}
                         description={description}
