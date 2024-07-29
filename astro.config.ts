@@ -1,6 +1,7 @@
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
+import robotsTxt from "astro-robots-txt";
 import { defineConfig } from "astro/config";
 import remarkSectionize from "remark-sectionize";
 import UnoCSS from "unocss/astro";
@@ -26,6 +27,14 @@ export default defineConfig({
                     languageCodes.map((language) => [language, language]),
                 ),
             },
+        }),
+        robotsTxt({
+            policy: [
+                {
+                    userAgent: "*",
+                    disallow: ["/IndexNow-*"],
+                },
+            ],
         }),
         react(),
         UnoCSS({
