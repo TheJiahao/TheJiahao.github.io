@@ -19,7 +19,14 @@ export default defineConfig({
     site: process.env.SITE_BASE_URL,
     integrations: [
         mdx(),
-        sitemap(),
+        sitemap({
+            i18n: {
+                defaultLocale,
+                locales: Object.fromEntries(
+                    languageCodes.map((language) => [language, language]),
+                ),
+            },
+        }),
         react(),
         UnoCSS({
             injectReset: true,
