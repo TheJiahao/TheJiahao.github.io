@@ -3,6 +3,8 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig } from "astro/config";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
@@ -67,7 +69,8 @@ export default defineConfig({
         shikiConfig: {
             theme: "one-dark-pro",
         },
-        remarkPlugins: [remarkSectionize],
+        remarkPlugins: [remarkSectionize, remarkMath],
+        rehypePlugins: [rehypeKatex],
     },
     redirects: {
         "/": {
