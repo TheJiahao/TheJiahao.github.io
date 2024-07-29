@@ -31,7 +31,7 @@ const languageAlternates = languageCodes.map((code) => ({
     description={getTranslation(language).siteDescription}
     {languageAlternates}
 >
-    <div flex="~ col" gap-10 p-lg lg="max-w-4xl">
+    <div flex="~ col" gap-10 p-3 lg="max-w-4xl p-lg">
         <header>
             <SearchBox language={language} client:load />
         </header>

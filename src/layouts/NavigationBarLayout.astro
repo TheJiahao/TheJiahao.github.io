@@ -16,7 +16,7 @@ const currentURL = Astro.url.pathname;
 
     <slot />
 
-    <div fixed bottom-0 w-full p-lg block lg="hidden">
+    <div fixed bottom-0 w-full p-3 block lg="hidden">
         <MobileNavigationBar {language} {currentURL} client:load />
     </div>
 </BaseLayout>
