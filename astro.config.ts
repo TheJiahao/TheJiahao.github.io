@@ -3,6 +3,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig } from "astro/config";
+import rehypeFigure from "rehype-figure";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
@@ -70,7 +71,7 @@ export default defineConfig({
             theme: "one-dark-pro",
         },
         remarkPlugins: [remarkSectionize, remarkMath],
-        rehypePlugins: [rehypeKatex],
+        rehypePlugins: [rehypeKatex, rehypeFigure],
     },
     redirects: {
         "/": {
