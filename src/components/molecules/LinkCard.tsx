@@ -27,6 +27,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
                     size-15
                     object-contain
                     self-center
+                    rounded-md
                 />
             )}
         </a>
