@@ -65,7 +65,7 @@ export default defineConfig({
     },
     transformers: [transformerAttributifyJsx(), transformerDirectives()],
     shortcuts: {
-        card: "rounded-md bg-surface-primary shadow-md break-inside-avoid overflow-hidden transition ease-in-out hover:shadow-lg",
+        card: "rounded-lg bg-surface-primary shadow-md break-inside-avoid overflow-hidden transition ease-in-out hover:shadow-lg",
         hoverable: "transition ease-in-out hover:bg-hover",
         clickable:
             "cursor-pointer transition ease-in-out hoverable active:bg-clicked",
