@@ -1,4 +1,5 @@
 import studyPlannerImage from "assets/images/projects/study-planner.webp";
+import tiraAIPlatformImage from "assets/images/projects/tira-ai-platform.webp";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import { languageCodes } from "localization";
 interface RawProject extends Omit<ImageCardProps, "description"> {
@@ -30,6 +31,7 @@ const rawProjects: RawProject[] = [
             en: "Tool for testing game AIs. Can run AIs on HPC or locally.",
             "zh-cn": "游戏 AI 测试工具。可在 HPC 或本地运行 AI。",
         },
+        image: tiraAIPlatformImage,
     },
     {
         title: "TheJiahao.github.io",
