@@ -1,7 +1,7 @@
-import type { BlogCardProps } from "components/molecules/BlogCard";
+import type { ImageCardProps } from "components/molecules/ImageCard";
 import { languageCodes } from "localization";
 
-interface RawProject extends Omit<BlogCardProps, "description"> {
+interface RawProject extends Omit<ImageCardProps, "description"> {
     description?: Record<string, string>;
 }
 
@@ -40,7 +40,7 @@ const rawProjects: RawProject[] = [
     },
 ];
 
-const PROJECTS: Record<string, BlogCardProps[]> = Object.fromEntries(
+const PROJECTS: Record<string, ImageCardProps[]> = Object.fromEntries(
     languageCodes.map((language) => {
         const projects = rawProjects.map(({ description, ...project }) => ({
             ...project,

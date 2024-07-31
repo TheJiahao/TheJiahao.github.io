@@ -1,10 +1,10 @@
-import type { BlogCardProps } from "components/molecules/BlogCard";
-import BlogCard from "components/molecules/BlogCard";
+import type { ImageCardProps } from "components/molecules/ImageCard";
+import ImageCard from "components/molecules/ImageCard";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
 interface ProjectListProps extends TranslatedElement {
-    projects: BlogCardProps[];
+    projects: ImageCardProps[];
 }
 
 const ProjectList = ({ projects, language }: ProjectListProps) => (
@@ -16,7 +16,7 @@ const ProjectList = ({ projects, language }: ProjectListProps) => (
     >
         {projects.map((blog) => (
             <li key={blog.title}>
-                <BlogCard {...blog} />
+                <ImageCard {...blog} />
             </li>
         ))}
     </ul>

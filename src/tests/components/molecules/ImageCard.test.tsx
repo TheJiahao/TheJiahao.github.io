@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, test } from "vitest";
-import BlogCard from "../../../components/molecules/BlogCard";
+import ImageCard from "../../../components/molecules/ImageCard";
 
-describe("<BlogCard/>", () => {
+describe("<ImageCard/>", () => {
     const title = "How to write unit tests for Astro components?";
     const description =
         "This blog post will teach you how to write unit tests for Astro components.";
@@ -10,7 +10,7 @@ describe("<BlogCard/>", () => {
     const url = "astro-unit-tests";
 
     beforeEach(() => {
-        render(<BlogCard {...{ title, description, date, url }} />);
+        render(<ImageCard {...{ title, description, date, url }} />);
     });
 
     test("is rendered", () => {

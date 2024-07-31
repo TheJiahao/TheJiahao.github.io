@@ -1,6 +1,6 @@
 ---
 import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
-import type { BlogCardProps } from "components/molecules/BlogCard";
+import type { ImageCardProps } from "components/molecules/ImageCard";
 import BlogList from "components/organisms/BlogList";
 import SearchBox from "components/organisms/SearchBox";
 import { DEFAULT_LANGUAGE } from "config";
@@ -12,7 +12,7 @@ import { getTranslation } from "utils/getTranslation";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
-const blogs: BlogCardProps[] = getBlogs()
+const blogs: ImageCardProps[] = getBlogs()
     .filter(({ data }) => data.language === language)
     .map(({ data, slug }) => ({
         ...data,

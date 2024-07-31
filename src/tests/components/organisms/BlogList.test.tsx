@@ -2,11 +2,11 @@ import { render, screen, within } from "@testing-library/react";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
 import { beforeEach, describe, expect, test } from "vitest";
-import type { BlogCardProps } from "../../../components/molecules/BlogCard";
+import type { ImageCardProps } from "../../../components/molecules/ImageCard";
 import BlogList from "../../../components/organisms/BlogList";
 
 describe("<BlogList/>", () => {
-    const blogs: BlogCardProps[] = [
+    const blogs: ImageCardProps[] = [
         {
             title: "How to write unit tests for Astro components?",
             description:

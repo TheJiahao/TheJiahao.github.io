@@ -4,12 +4,12 @@ import BlogDetails, {
     type BlogDetailsProps,
 } from "components/molecules/BlogDetails";
 
-interface BlogCardProps extends BlogDetailsProps {
+interface ImageCardProps extends BlogDetailsProps {
     url: string;
     image?: ImageMetadata;
 }
 
-const BlogCard = ({ title, url, image, ...props }: BlogCardProps) => {
+const ImageCard = ({ title, url, image, ...props }: ImageCardProps) => {
     return (
         <article title={title} card clickable>
             <a href={url} rel="bookmark">
@@ -22,5 +22,5 @@ const BlogCard = ({ title, url, image, ...props }: BlogCardProps) => {
     );
 };
 
-export type { BlogCardProps };
-export default BlogCard;
+export type { ImageCardProps };
+export default ImageCard;
