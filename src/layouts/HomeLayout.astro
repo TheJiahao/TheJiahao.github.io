@@ -1,15 +1,14 @@
 ---
 import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
-import SearchBox from "components/organisms/SearchBox";
-import SiteFooter from "components/molecules/SiteFooter";
 import type { BlogCardProps } from "components/molecules/BlogCard";
 import BlogList from "components/organisms/BlogList";
+import SearchBox from "components/organisms/SearchBox";
 import { DEFAULT_LANGUAGE } from "config";
+import ContentLayout from "layouts/ContentLayout.astro";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import { languageCodes } from "localization";
 import getBlogs from "utils/getBlogs";
 import { getTranslation } from "utils/getTranslation";
-import ContentLayout from "layouts/ContentLayout.astro";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
