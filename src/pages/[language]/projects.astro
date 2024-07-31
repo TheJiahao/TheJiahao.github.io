@@ -1,11 +1,10 @@
 ---
-import ProjectList from "components/organisms/ProjectList";
-import { DEFAULT_LANGUAGE } from "config";
+import CardList from "components/organisms/CardList";
+import { DEFAULT_LANGUAGE, PROJECTS } from "config";
+import ContentLayout from "layouts/ContentLayout.astro";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
-import { PROJECTS } from "config";
-import ContentLayout from "layouts/ContentLayout.astro";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({
@@ -20,6 +19,9 @@ const projects = PROJECTS[language];
 
 <NavigationBarLayout {title}>
     <ContentLayout>
-        <ProjectList {language} {projects} />
+        <CardList
+            cards={projects}
+            aria-label={getTranslation(language).projects}
+        />
     </ContentLayout>
 </NavigationBarLayout>
