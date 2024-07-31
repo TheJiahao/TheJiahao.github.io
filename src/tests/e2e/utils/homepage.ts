@@ -8,8 +8,17 @@ export class HomePage {
         public readonly languageCode: string,
     ) {}
 
-    async goto() {
-        await this.page.goto(`/${this.languageCode}`);
+    async goto(linkName?: string) {
+        if (!linkName) {
+            await this.page.goto(`/${this.languageCode}`);
+            return;
+        }
+
+        if (this.isMobile) {
+            await this.toggleMenu();
+        }
+
+        await this.page.getByRole("link", { name: linkName }).click();
     }
 
     async toggleMenu() {
