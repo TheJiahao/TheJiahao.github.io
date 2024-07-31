@@ -2,11 +2,11 @@ import ImageCard, { type ImageCardProps } from "components/molecules/ImageCard";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
-interface BlogListProps extends TranslatedElement {
+interface CardListProps extends TranslatedElement {
     blogs: ImageCardProps[];
 }
 
-const BlogList = ({ blogs, language }: BlogListProps) => {
+const CardList = ({ blogs, language }: CardListProps) => {
     return (
         <ul aria-label={getTranslation(language).blogList} flex="~ col" gap-10>
             {blogs.map((blog) => (
@@ -18,4 +18,4 @@ const BlogList = ({ blogs, language }: BlogListProps) => {
     );
 };
 
-export default BlogList;
+export default CardList;

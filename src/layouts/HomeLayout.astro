@@ -1,7 +1,7 @@
 ---
 import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
 import type { ImageCardProps } from "components/molecules/ImageCard";
-import BlogList from "components/organisms/BlogList";
+import CardList from "components/organisms/CardList";
 import SearchBox from "components/organisms/SearchBox";
 import { DEFAULT_LANGUAGE } from "config";
 import ContentLayout from "layouts/ContentLayout.astro";
@@ -37,7 +37,7 @@ const languageAlternates = languageCodes.map((code) => ({
         </header>
 
         <main>
-            <BlogList {language} {blogs} />
+            <CardList {language} {blogs} />
         </main>
     </ContentLayout>
 </NavigationBarLayout>

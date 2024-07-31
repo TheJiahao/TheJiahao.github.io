@@ -1,11 +1,11 @@
 import { render, screen, within } from "@testing-library/react";
+import CardList from "components/organisms/CardList";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
 import { beforeEach, describe, expect, test } from "vitest";
 import type { ImageCardProps } from "../../../components/molecules/ImageCard";
-import BlogList from "../../../components/organisms/BlogList";
 
-describe("<BlogList/>", () => {
+describe("<CardList/>", () => {
     const blogs: ImageCardProps[] = [
         {
             title: "How to write unit tests for Astro components?",
@@ -26,7 +26,7 @@ describe("<BlogList/>", () => {
 
     describe.each(languageCodes)("%s", (language) => {
         beforeEach(() => {
-            render(<BlogList language={language} blogs={blogs} />);
+            render(<CardList language={language} blogs={blogs} />);
             blogList = screen.getByRole("list", {
                 name: getTranslation(language).blogList,
             });
