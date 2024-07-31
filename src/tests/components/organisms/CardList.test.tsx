@@ -20,20 +20,20 @@ describe("<CardList/>", () => {
         },
     ];
 
-    let blogList: HTMLElement;
+    let list: HTMLElement;
 
     beforeEach(() => {
         render(<CardList blogs={blogs} />);
 
-        blogList = screen.getByRole("list");
+        list = screen.getByRole("list");
     });
 
     test("is rendered", () => {
-        expect(blogList).toBeVisible();
+        expect(list).toBeVisible();
     });
 
     test("contains given blogs", () => {
-        expect(within(blogList).getAllByRole("listitem")).toHaveLength(2);
+        expect(within(list).getAllByRole("listitem")).toHaveLength(2);
     });
 
     test("blogs have correct titles", () => {
