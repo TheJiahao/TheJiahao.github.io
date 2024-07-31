@@ -47,23 +47,35 @@ const {
     </aside>
 
     <ContentLayout>
-        <Article>
-            <BlogHeader slot="header" {title} {description} {date} {image} />
-            <slot />
-            <BlogFooter slot="footer" {lastModified} licenseText={license} />
-        </Article>
-
-        {
-            links && (
-                <LinkList
-                    {links}
-                    aria-label={getTranslation(language).externalLinks}
-                    className="card"
+        <main flex="~ col" gap-y-7>
+            <Article>
+                <BlogHeader
+                    slot="header"
+                    {title}
+                    {description}
+                    {date}
+                    {image}
                 />
-            )
-        }
+                <slot />
+                <BlogFooter
+                    slot="footer"
+                    {lastModified}
+                    licenseText={license}
+                />
+            </Article>
 
-        <CommentList {language} client:idle />
+            {
+                links && (
+                    <LinkList
+                        {links}
+                        aria-label={getTranslation(language).externalLinks}
+                        className="card"
+                    />
+                )
+            }
+
+            <CommentList {language} client:idle />
+        </main>
     </ContentLayout>
 
     <aside un-hidden lg="block sticky top-0 p-lg h-screen">

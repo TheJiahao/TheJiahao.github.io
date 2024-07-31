@@ -5,10 +5,7 @@ import { DEFAULT_LANGUAGE } from "config";
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
-<div flex="~ col" p-3 lg:p-lg gap-y-7>
-    <main flex="~ col" gap-y-7 lg="min-w-3xl max-w-4xl">
-        <slot />
-    </main>
-
+<div flex="~ col" p-3 lg:p-lg gap-y-7 lg="min-w-3xl max-w-4xl">
+    <slot />
     <SiteFooter {language} />
 </div>
