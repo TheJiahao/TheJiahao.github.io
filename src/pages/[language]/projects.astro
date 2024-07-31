@@ -1,0 +1,20 @@
+---
+import ProjectList from "components/organisms/ProjectList";
+import { DEFAULT_LANGUAGE } from "config";
+import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
+import { languageCodes } from "localization";
+import { getTranslation } from "utils/getTranslation";
+
+export function getStaticPaths() {
+    return languageCodes.map((language) => ({
+        params: { language },
+    }));
+}
+
+const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
+const title = getTranslation(language).projects;
+---
+
+<NavigationBarLayout {title}>
+    <ProjectList {language} projects={[]} />
+</NavigationBarLayout>
