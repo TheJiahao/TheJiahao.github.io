@@ -25,6 +25,7 @@ const en = {
     noResults: "No results",
     clear: "Clear",
     loading: "Loading",
+    projects: "Projects",
 };
 
 export default en;

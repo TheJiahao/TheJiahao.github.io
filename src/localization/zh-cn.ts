@@ -28,6 +28,7 @@ const zh_cn: Language = {
     noResults: "未找到结果",
     clear: "清空",
     loading: "加载中",
+    projects: "项目",
 };
 
 export default zh_cn;
