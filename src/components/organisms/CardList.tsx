@@ -1,14 +1,13 @@
 import ImageCard, { type ImageCardProps } from "components/molecules/ImageCard";
-import type { TranslatedElement } from "interfaces/TranslatedElement";
-import { getTranslation } from "utils/getTranslation";
+import type { AriaAttributes } from "react";
 
-interface CardListProps extends TranslatedElement {
+interface CardListProps extends AriaAttributes {
     blogs: ImageCardProps[];
 }
 
-const CardList = ({ blogs, language }: CardListProps) => {
+const CardList = ({ blogs, ...props }: CardListProps) => {
     return (
-        <ul aria-label={getTranslation(language).blogList} flex="~ col" gap-10>
+        <ul flex="~ col" gap-10 {...props}>
             {blogs.map((blog) => (
                 <li key={blog.title}>
                     <ImageCard {...blog} />

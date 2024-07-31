@@ -1,7 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
 import CardList from "components/organisms/CardList";
-import { languageCodes } from "localization";
-import { getTranslation } from "utils/getTranslation";
 import { beforeEach, describe, expect, test } from "vitest";
 import type { ImageCardProps } from "../../../components/molecules/ImageCard";
 
@@ -24,27 +22,24 @@ describe("<CardList/>", () => {
 
     let blogList: HTMLElement;
 
-    describe.each(languageCodes)("%s", (language) => {
-        beforeEach(() => {
-            render(<CardList language={language} blogs={blogs} />);
-            blogList = screen.getByRole("list", {
-                name: getTranslation(language).blogList,
-            });
-        });
+    beforeEach(() => {
+        render(<CardList blogs={blogs} />);
 
-        test("is rendered", () => {
-            expect(blogList).toBeVisible();
-        });
+        blogList = screen.getByRole("list");
+    });
 
-        test("contains given blogs", () => {
-            expect(within(blogList).getAllByRole("listitem")).toHaveLength(2);
-        });
+    test("is rendered", () => {
+        expect(blogList).toBeVisible();
+    });
 
-        test("blogs have correct titles", () => {
-            const blogTitles = screen.getAllByRole("heading");
+    test("contains given blogs", () => {
+        expect(within(blogList).getAllByRole("listitem")).toHaveLength(2);
+    });
 
-            expect(blogTitles[0]).toHaveTextContent(blogs[0].title);
-            expect(blogTitles[1]).toHaveTextContent(blogs[1].title);
-        });
+    test("blogs have correct titles", () => {
+        const blogTitles = screen.getAllByRole("heading");
+
+        expect(blogTitles[0]).toHaveTextContent(blogs[0].title);
+        expect(blogTitles[1]).toHaveTextContent(blogs[1].title);
     });
 });
