@@ -9,6 +9,7 @@ import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import { languageCodes } from "localization";
 import getBlogs from "utils/getBlogs";
 import { getTranslation } from "utils/getTranslation";
+import ContentLayout from "layouts/ContentLayout.astro";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
@@ -31,7 +32,7 @@ const languageAlternates = languageCodes.map((code) => ({
     description={getTranslation(language).siteDescription}
     {languageAlternates}
 >
-    <div flex="~ col" gap-10 p-3 lg="max-w-4xl p-lg">
+    <ContentLayout>
         <header>
             <SearchBox language={language} client:load />
         </header>
@@ -39,9 +40,5 @@ const languageAlternates = languageCodes.map((code) => ({
         <main>
             <BlogList {language} {blogs} />
         </main>
-
-        <div mb-30>
-            <SiteFooter {language} />
-        </div>
-    </div>
+    </ContentLayout>
 </NavigationBarLayout>
