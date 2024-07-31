@@ -8,7 +8,12 @@ interface ProjectListProps extends TranslatedElement {
 }
 
 const ProjectList = ({ projects, language }: ProjectListProps) => (
-    <ul aria-label={getTranslation(language).projects} flex="~ col" gap-10>
+    <ul
+        aria-label={getTranslation(language).projects}
+        grid="~ cols-1"
+        lg:grid-cols-2
+        gap-10
+    >
         {projects.map((blog) => (
             <li key={blog.title}>
                 <BlogCard {...blog} />
