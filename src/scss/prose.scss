@@ -28,6 +28,10 @@
 
         figure {
             @apply flex flex-col items-center;
+
+            figcaption {
+                @apply text-secondary;
+            }
         }
     }
 
