@@ -5,7 +5,7 @@ import BlogDetails from "components/molecules/BlogDetails";
 interface BlogCardProps {
     title: string;
     description?: string;
-    date: Date;
+    date?: Date;
     url: string;
     image?: ImageMetadata;
 }
