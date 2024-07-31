@@ -1,6 +1,6 @@
+import studyPlannerImage from "assets/images/projects/study-planner.webp";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import { languageCodes } from "localization";
-
 interface RawProject extends Omit<ImageCardProps, "description"> {
     description?: Record<string, string>;
 }
@@ -13,6 +13,7 @@ const rawProjects: RawProject[] = [
             en: "Tool for generating compact schedules based on dependencies between courses and timing.",
             "zh-cn": "基于课程之间依赖关系和教学时间的时间表生成工具。",
         },
+        image: studyPlannerImage,
     },
     {
         title: "kivi-sakset-paperi-tekoaly",
