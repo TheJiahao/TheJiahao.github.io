@@ -4,6 +4,7 @@ import { DEFAULT_LANGUAGE } from "config";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
+import { PROJECTS } from "config";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({
@@ -13,8 +14,9 @@ export function getStaticPaths() {
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const title = getTranslation(language).projects;
+const projects = PROJECTS[language];
 ---
 
 <NavigationBarLayout {title}>
-    <ProjectList {language} projects={[]} />
+    <ProjectList {language} {projects} />
 </NavigationBarLayout>
