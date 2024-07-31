@@ -24,6 +24,10 @@
         code {
             font-size: large;
         }
+
+        figure {
+            @apply flex flex-col items-center;
+        }
     }
 
     .data-footnote-backref {
