@@ -1,26 +1,21 @@
 import type { ImageMetadata } from "astro";
 import CoverImage from "components/atoms/CoverImage";
-import BlogDetails from "components/molecules/BlogDetails";
+import BlogDetails, {
+    type BlogDetailsProps,
+} from "components/molecules/BlogDetails";
 
-interface BlogCardProps {
-    title: string;
-    description?: string;
-    date?: Date;
+interface BlogCardProps extends BlogDetailsProps {
     url: string;
     image?: ImageMetadata;
 }
 
-const BlogCard = ({ title, description, date, url, image }: BlogCardProps) => {
+const BlogCard = ({ title, url, image, ...props }: BlogCardProps) => {
     return (
         <article title={title} card clickable>
             <a href={url} rel="bookmark">
                 <CoverImage image={image} title={title} />
                 <div p-4 lg:p-8>
-                    <BlogDetails
-                        title={title}
-                        description={description}
-                        date={date}
-                    />
+                    <BlogDetails title={title} {...props} />
                 </div>
             </a>
         </article>

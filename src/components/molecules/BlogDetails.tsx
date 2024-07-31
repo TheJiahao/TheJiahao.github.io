@@ -24,4 +24,5 @@ const BlogDetails = ({ title, description, date }: BlogDetailsProps) => (
     </div>
 );
 
+export type { BlogDetailsProps };
 export default BlogDetails;
