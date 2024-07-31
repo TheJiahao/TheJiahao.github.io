@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, test } from "vitest";
 import type { ImageCardProps } from "../../../components/molecules/ImageCard";
 
 describe("<CardList/>", () => {
-    const blogs: ImageCardProps[] = [
+    const cards: ImageCardProps[] = [
         {
             title: "How to write unit tests for Astro components?",
             description:
@@ -23,7 +23,7 @@ describe("<CardList/>", () => {
     let list: HTMLElement;
 
     beforeEach(() => {
-        render(<CardList blogs={blogs} />);
+        render(<CardList cards={cards} />);
 
         list = screen.getByRole("list");
     });
@@ -39,7 +39,7 @@ describe("<CardList/>", () => {
     test("blogs have correct titles", () => {
         const blogTitles = screen.getAllByRole("heading");
 
-        expect(blogTitles[0]).toHaveTextContent(blogs[0].title);
-        expect(blogTitles[1]).toHaveTextContent(blogs[1].title);
+        expect(blogTitles[0]).toHaveTextContent(cards[0].title);
+        expect(blogTitles[1]).toHaveTextContent(cards[1].title);
     });
 });

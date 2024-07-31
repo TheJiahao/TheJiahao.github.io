@@ -37,7 +37,10 @@ const languageAlternates = languageCodes.map((code) => ({
         </header>
 
         <main>
-            <CardList {blogs} aria-label={getTranslation(language).blogList} />
+            <CardList
+                cards={blogs}
+                aria-label={getTranslation(language).blogList}
+            />
         </main>
     </ContentLayout>
 </NavigationBarLayout>
