@@ -9,7 +9,7 @@ interface LinkListProps
 
 const LinkList = ({ links, ...props }: LinkListProps) => {
     return (
-        <ul w-full mx-auto divide-y {...props}>
+        <ul w-full divide-y {...props}>
             {links.map((link) => (
                 <li key={link.url}>
                     <LinkCard {...link} />
