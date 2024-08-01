@@ -49,6 +49,7 @@
         "sanitize-html": "^2.13.0",
         "sass": "^1.77.6",
         "sharp": "^0.33.4",
+        "shiki-transformer-copy-button": "^0.0.3",
         "typescript": "^5.4.5",
         "unocss": "^0.61.0",
         "unocss-preset-theme": "^0.13.0",

@@ -89,6 +89,9 @@ importers:
       sharp:
         specifier: ^0.33.4
         version: 0.33.4
+      shiki-transformer-copy-button:
+        specifier: ^0.0.3
+        version: 0.0.3
       typescript:
         specifier: ^5.4.5
         version: 5.5.4
@@ -4325,6 +4328,9 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+
+  shiki-transformer-copy-button@0.0.3:
+    resolution: {integrity: sha512-MPwtpYEWWhLFVBaEY/IeI34tBNuynu2n/khHEysTa1ijodLauS7fg38FTBthML3WxpE/Z5kRdZeitRQx7FJgdA==}
 
   shiki@1.12.1:
     resolution: {integrity: sha512-nwmjbHKnOYYAe1aaQyEBHvQymJgfm86ZSS7fT8OaPRr4sbAcBNz7PbfAikMEFSDQ6se2j2zobkXvVKcBOm0ysg==}
@@ -10439,6 +10445,10 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
+
+  shiki-transformer-copy-button@0.0.3:
+    dependencies:
+      hastscript: 9.0.0
 
   shiki@1.12.1:
     dependencies:
