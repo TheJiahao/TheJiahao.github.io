@@ -2,7 +2,6 @@
 
 ## [3.3.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.2.0...v3.3.0) (2024-08-01)
 
-
 ### Features
 
 * ✨ Spread words more evenly ([bc0419c](https://github.com/TheJiahao/TheJiahao.github.io/commit/bc0419c68b2e5b89d895b3cb1952440011a7e43b))
@@ -29,7 +28,6 @@
 * **projects:** ✨ Read projects from content collection ([9b80774](https://github.com/TheJiahao/TheJiahao.github.io/commit/9b80774d64a9a5b1f20bbaf95c31445665a1885a)), closes [#202](https://github.com/TheJiahao/TheJiahao.github.io/issues/202)
 * **sitemap:** ✨ Add multilanguage sitemap links ([4839730](https://github.com/TheJiahao/TheJiahao.github.io/commit/4839730fa463b51182cbcd1e85b1b53156405a12)), closes [#40](https://github.com/TheJiahao/TheJiahao.github.io/issues/40)
 * **sitemap:** ✨ Add sitemap link to header ([f9fab98](https://github.com/TheJiahao/TheJiahao.github.io/commit/f9fab980dcc954f0bdf7de5458dae09ebace6790)), closes [#40](https://github.com/TheJiahao/TheJiahao.github.io/issues/40)
-
 
 ### Bug Fixes
 
