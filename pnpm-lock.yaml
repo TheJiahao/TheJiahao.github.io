@@ -32,9 +32,6 @@ importers:
       '@microflash/rehype-figure':
         specifier: ^2.1.0
         version: 2.1.0
-      '@rehype-pretty/transformers':
-        specifier: ^0.13.2
-        version: 0.13.2
       '@testing-library/user-event':
         specifier: ^14.5.2
         version: 14.5.2(@testing-library/dom@10.1.0)
@@ -1146,10 +1143,6 @@ packages:
     resolution: {integrity: sha512-5d+3HbFDxGZjhbMBeFHRQhexMFt4pUce3okyRtUVKbbedQFUrtXSBg9VszgF2RTeQDKDkMCIQDtz5ccP/Lk1gw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
-
-  '@rehype-pretty/transformers@0.13.2':
-    resolution: {integrity: sha512-p2ciQSwqy5Ip8aNUa9q6rdS/hJZXrxHYYfDVOHvKOsBu3t9HDmQ65YX6r9Qbl19vi160OAxmGF7MIoCRDJrRhg==}
-    engines: {node: '>=18'}
 
   '@rollup/pluginutils@5.1.0':
     resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
@@ -6165,8 +6158,6 @@ snapshots:
   '@react-types/shared@3.23.1(react@18.3.1)':
     dependencies:
       react: 18.3.1
-
-  '@rehype-pretty/transformers@0.13.2': {}
 
   '@rollup/pluginutils@5.1.0(rollup@4.19.0)':
     dependencies:
