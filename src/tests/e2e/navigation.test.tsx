@@ -34,10 +34,6 @@ test.describe("Navigation", () => {
                         url: RegExp(`/${languageCode}/?$`),
                     },
                     {
-                        name: getTranslation(languageCode).archive,
-                        url: RegExp(`/${languageCode}/posts/?$`),
-                    },
-                    {
                         name: getTranslation(languageCode).about,
                         url: RegExp(`/${languageCode}/about/?$`),
                     },
