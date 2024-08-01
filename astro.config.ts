@@ -2,6 +2,7 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import rehypeFigure from "@microflash/rehype-figure";
+import { transformerCopyButton } from "@rehype-pretty/transformers";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
@@ -69,6 +70,12 @@ export default defineConfig({
     markdown: {
         shikiConfig: {
             theme: "one-dark-pro",
+            transformers: [
+                transformerCopyButton({
+                    visibility: "always",
+                    feedbackDuration: 1000,
+                }),
+            ],
         },
         remarkPlugins: [remarkSectionize, remarkMath],
         rehypePlugins: [rehypeKatex, rehypeFigure],
