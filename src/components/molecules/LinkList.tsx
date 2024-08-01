@@ -7,16 +7,14 @@ interface LinkListProps
     links: LinkProps[];
 }
 
-const LinkList = ({ links, ...props }: LinkListProps) => {
-    return (
-        <ul w-full divide-y {...props}>
-            {links.map((link) => (
-                <li key={link.url}>
-                    <LinkCard {...link} />
-                </li>
-            ))}
-        </ul>
-    );
-};
+const LinkList = ({ links, ...props }: LinkListProps) => (
+    <ul w-full divide-y {...props}>
+        {links.map((link) => (
+            <li key={link.url}>
+                <LinkCard {...link} />
+            </li>
+        ))}
+    </ul>
+);
 
 export default LinkList;
