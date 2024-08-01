@@ -1,0 +1,8 @@
+{
+    "title": "TheJiahao.github.io",
+    "url": "https://thejiahao.github.io/",
+    "description": {
+        "en": "Blog built with Astro and React.",
+        "zh-cn": "用 Astro 和 React 构建的博客。"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "title": "tira-ai-platform",
+    "url": "https://github.com/game-ai-platform-team/tira-ai-platform",
+    "description": {
+        "en": "Tool for testing game AIs. Can run AIs on HPC or locally.",
+        "zh-cn": "游戏 AI 测试工具。可在 HPC 或本地运行 AI。"
+    },
+    "image": "assets/images/projects/tira-ai-platform.webp"
+}

@@ -1,0 +1,8 @@
+{
+    "title": "kivi-sakset-paperi-tekoaly",
+    "url": "https://github.com/TheJiahao/kivi-sakset-paperi-tekoaly",
+    "description": {
+        "en": "Markov chain-based AI for rock-paper-scissors.",
+        "zh-cn": "基于马尔可夫链的石头-剪刀-布 AI。"
+    }
+}
