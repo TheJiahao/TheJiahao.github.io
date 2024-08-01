@@ -1,5 +1,47 @@
 # Changelog
 
+## [3.3.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.2.0...v3.3.0) (2024-08-01)
+
+
+### Features
+
+* ✨ Spread words more evenly ([bc0419c](https://github.com/TheJiahao/TheJiahao.github.io/commit/bc0419c68b2e5b89d895b3cb1952440011a7e43b))
+* **blog-card:** ✨ Make date optional ([2c45b62](https://github.com/TheJiahao/TheJiahao.github.io/commit/2c45b62e8c66317f4c31024612419be852403611))
+* **figure:** ✨ Center align figure and caption ([6f8b542](https://github.com/TheJiahao/TheJiahao.github.io/commit/6f8b542c878f880bcac34b6318d97b7952f2b2e6)), closes [#185](https://github.com/TheJiahao/TheJiahao.github.io/issues/185)
+* **figures:** ✨ Wrap image and alt into figure ([b673585](https://github.com/TheJiahao/TheJiahao.github.io/commit/b673585689a493ef67deb7f2e14f4f2eb0d5e08d)), closes [#185](https://github.com/TheJiahao/TheJiahao.github.io/issues/185)
+* **link-card:** ✨ Add rounded borders to link image ([8290395](https://github.com/TheJiahao/TheJiahao.github.io/commit/829039531f6ca0dbc6ddf7a4f6c0d419692a351c))
+* **math:** ✨ Add `math` to frontmatter schema ([8278b3f](https://github.com/TheJiahao/TheJiahao.github.io/commit/8278b3f44db925d7aeca65a8387beac89435ee3e)), closes [#183](https://github.com/TheJiahao/TheJiahao.github.io/issues/183)
+* **math:** ✨ Add KaTeX Copy-tex ([5dd7442](https://github.com/TheJiahao/TheJiahao.github.io/commit/5dd7442c729b9eb662fa72b9c977180a02dbfcb7)), closes [#183](https://github.com/TheJiahao/TheJiahao.github.io/issues/183)
+* **math:** ✨ Add KaTeX css file ([9c8ea3e](https://github.com/TheJiahao/TheJiahao.github.io/commit/9c8ea3e0a98513492c269accfccdcc42e917b1d4)), closes [#183](https://github.com/TheJiahao/TheJiahao.github.io/issues/183)
+* **math:** ✨ Add scrollbar if equation too long ([367e780](https://github.com/TheJiahao/TheJiahao.github.io/commit/367e7806f76c59e25bef57c05849d6466ac14dd1)), closes [#183](https://github.com/TheJiahao/TheJiahao.github.io/issues/183)
+* **math:** ✨ Load remark-math and rehype-katex plugins ([ac9b4f2](https://github.com/TheJiahao/TheJiahao.github.io/commit/ac9b4f2581c2fbd897a8bd4df58618b172c6b4d6)), closes [#183](https://github.com/TheJiahao/TheJiahao.github.io/issues/183)
+* **math:** ✨ Select whole equation on click ([f272c95](https://github.com/TheJiahao/TheJiahao.github.io/commit/f272c953917115b6b44488b9a7bd6026b6d480b6)), closes [#183](https://github.com/TheJiahao/TheJiahao.github.io/issues/183)
+* **portfolio:** ✨ Add image for study-planner ([6a3c088](https://github.com/TheJiahao/TheJiahao.github.io/commit/6a3c088021776111c143ff65b59a66062176ed52))
+* **portfolio:** ✨ Add image for tira-ai-platform ([2a1a801](https://github.com/TheJiahao/TheJiahao.github.io/commit/2a1a801e9111756434b9d0e6bfbaa233cfaef243))
+* **portfolio:** ✨ Add initial `ProjectList` ([a41b3a6](https://github.com/TheJiahao/TheJiahao.github.io/commit/a41b3a65920d92c414988367b083994ff8c7c8ea)), closes [#46](https://github.com/TheJiahao/TheJiahao.github.io/issues/46)
+* **portfolio:** ✨ Add initial portfolio page ([5c9e682](https://github.com/TheJiahao/TheJiahao.github.io/commit/5c9e6823d9cd3230f8faedfec7736cdb65d83a81)), closes [#46](https://github.com/TheJiahao/TheJiahao.github.io/issues/46)
+* **portfolio:** ✨ Add navigation link ([01e52d6](https://github.com/TheJiahao/TheJiahao.github.io/commit/01e52d6c997da9c30c95b7ffb92e74ca076aa4db))
+* **portfolio:** ✨ Add project objects ([2e15d4e](https://github.com/TheJiahao/TheJiahao.github.io/commit/2e15d4e76bfce622fa330c7dcdabab8323ab0e4b))
+* **portfolio:** ✨ Add translation ([a8dc31d](https://github.com/TheJiahao/TheJiahao.github.io/commit/a8dc31d418114687aa416eac13384146645a0ecf)), closes [#46](https://github.com/TheJiahao/TheJiahao.github.io/issues/46)
+* **portfolio:** ✨ Show configured projects ([b0c2643](https://github.com/TheJiahao/TheJiahao.github.io/commit/b0c2643806210932d8884f86ce5e08c0b70f1faa)), closes [#46](https://github.com/TheJiahao/TheJiahao.github.io/issues/46)
+* **portfolio:** ✨ Use 2-column layout on desktop ([880193d](https://github.com/TheJiahao/TheJiahao.github.io/commit/880193df7aca3c37f10ea024a2077c582e446778)), closes [#46](https://github.com/TheJiahao/TheJiahao.github.io/issues/46)
+* **projects:** ✨ Add content collection schema ([f0f15ab](https://github.com/TheJiahao/TheJiahao.github.io/commit/f0f15ab334fc961a0135f8091d9066c2b265490d)), closes [#202](https://github.com/TheJiahao/TheJiahao.github.io/issues/202)
+* **projects:** ✨ Read projects from content collection ([9b80774](https://github.com/TheJiahao/TheJiahao.github.io/commit/9b80774d64a9a5b1f20bbaf95c31445665a1885a)), closes [#202](https://github.com/TheJiahao/TheJiahao.github.io/issues/202)
+* **sitemap:** ✨ Add multilanguage sitemap links ([4839730](https://github.com/TheJiahao/TheJiahao.github.io/commit/4839730fa463b51182cbcd1e85b1b53156405a12)), closes [#40](https://github.com/TheJiahao/TheJiahao.github.io/issues/40)
+* **sitemap:** ✨ Add sitemap link to header ([f9fab98](https://github.com/TheJiahao/TheJiahao.github.io/commit/f9fab980dcc954f0bdf7de5458dae09ebace6790)), closes [#40](https://github.com/TheJiahao/TheJiahao.github.io/issues/40)
+
+
+### Bug Fixes
+
+* 🐛 Lint ([7784a9d](https://github.com/TheJiahao/TheJiahao.github.io/commit/7784a9d0da77eb47c83b6ac99144fb1e573607e0))
+* 🐛 Remove empty `math` from frontmatter ([b4a6015](https://github.com/TheJiahao/TheJiahao.github.io/commit/b4a601554a131b5e703cc6d5aedee568b6d583ba)), closes [#183](https://github.com/TheJiahao/TheJiahao.github.io/issues/183)
+* 🐛 Site footer blocked by navigation bar on mobile ([db559c6](https://github.com/TheJiahao/TheJiahao.github.io/commit/db559c663851b0eedfc825511db21193785cad18))
+* **figure:** 🐛 Duplicate figures ([f308c39](https://github.com/TheJiahao/TheJiahao.github.io/commit/f308c39fb20eadf02bb0310405764ba824ce6a22)), closes [#185](https://github.com/TheJiahao/TheJiahao.github.io/issues/185)
+* **nushell-setup:** 🐛 Do not play demo video on fullscreen ([42fa034](https://github.com/TheJiahao/TheJiahao.github.io/commit/42fa0345f5abe1648d5520f8f8847d4fbae838d4))
+* **search:** 🐛 Remove hover highlight to improve visibility ([ddc03f5](https://github.com/TheJiahao/TheJiahao.github.io/commit/ddc03f5358de9aae5570de03f58768f3149ba3b2))
+* **sitemap:** 🐛 Sitemap URL in robots.txt ([ab960e3](https://github.com/TheJiahao/TheJiahao.github.io/commit/ab960e3164bb4991a0992c710d8b85bbcf7fb067)), closes [#40](https://github.com/TheJiahao/TheJiahao.github.io/issues/40)
+* **tests:** 🐛 Remove archive page ([7e13002](https://github.com/TheJiahao/TheJiahao.github.io/commit/7e130022e69d4ec0c2d99956db27d322fc72601d))
+
 ## [3.2.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.1.0...v3.2.0) (2024-07-28)
 
 ### Features
