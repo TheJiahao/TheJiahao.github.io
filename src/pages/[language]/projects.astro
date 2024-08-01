@@ -1,6 +1,7 @@
 ---
+import { getCollection } from "astro:content";
 import CardList from "components/organisms/CardList";
-import { DEFAULT_LANGUAGE, PROJECTS } from "config";
+import { DEFAULT_LANGUAGE } from "config";
 import ContentLayout from "layouts/ContentLayout.astro";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import { languageCodes } from "localization";
@@ -14,7 +15,10 @@ export function getStaticPaths() {
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const title = getTranslation(language).projects;
-const projects = PROJECTS[language];
+const projects = (await getCollection("projects")).map(({ data }) => ({
+    ...data,
+    description: data.description[language],
+}));
 ---
 
 <NavigationBarLayout {title}>
