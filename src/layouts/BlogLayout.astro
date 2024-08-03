@@ -78,7 +78,7 @@ const {
         </main>
     </ContentLayout>
 
-    <aside un-hidden lg="block sticky top-0 p-lg h-screen">
+    <aside slot="right-sidebar" un-hidden lg="block sticky top-0 p-lg h-screen">
         {headings.length > 0 && <TableOfContents {headings} client:load />}
     </aside>
 </BaseLayout>
