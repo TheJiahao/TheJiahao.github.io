@@ -20,7 +20,7 @@ const SearchForm = ({
 }: SearchFormProps) => {
     const disabled = !useHydrationState();
 
-    let icon = <LuSearch aria-hidden />;
+    let icon = <LuSearch title={getTranslation(language).search} />;
     let placeholder = getTranslation(language).typeToSearch;
 
     if (disabled) {
@@ -40,9 +40,7 @@ const SearchForm = ({
             w-full
             onReset={onReset}
         >
-            <label htmlFor="search" title={getTranslation(language).search}>
-                {icon}
-            </label>
+            <label htmlFor="search">{icon}</label>
 
             <input
                 type="search"
