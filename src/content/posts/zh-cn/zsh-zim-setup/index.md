@@ -41,7 +41,7 @@ sitemap:
 
 创建 `init_zim.zsh` 用于存放 Zim 配置，并添加以下内容[^zim_installation]：
 
-```shell
+```shell title="init_zim.zsh"
 zstyle ':zim:zmodule' use 'degit'
 
 ZIM_HOME=~/.zim
@@ -66,7 +66,7 @@ degit 只下载 Git 仓库的最新版本，所以比直接使用 `git clone` �
 
 接着在 `.zshrc` 中添加导入配置文件，笔者将所有 Zsh 相关配置文件都放在 `~/.config/zsh` 目录下：
 
-```shell
+```shell title="~/.zshrc"
 source ~/.config/zsh/init_zim.zsh
 
 # ...
@@ -101,7 +101,7 @@ Zim 内置插件可以参考官网上的 [列表](https://zimfw.sh/docs/modules/
 
 `.zimrc` 内容如下：
 
-```shell
+```shell title="~/.zimrc"
 zmodule z-shell/F-Sy-H
 zmodule zsh-users/zsh-history-substring-search
 zmodule zsh-users/zsh-autosuggestions
@@ -123,7 +123,7 @@ zmodule completion
 
 在 `init_zim.zsh` 最后添加插件设置：
 
-```shell
+```shell title="init_zim.zsh"
 # ...
 source ${ZIM_HOME}/init.zsh
 
@@ -142,7 +142,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 由于 Zim 会运行 `compinit`，所以还需要 `~/.zshenv` 中禁用 Ubuntu 的 `compinit` 以加快启动速度[^zim_installation][^global_compinit]：
 
-```shell
+```shell title="~/.zshenv"
 skip_global_compinit=1
 ```
 
@@ -186,7 +186,7 @@ Benchmark 1: zsh --no-rcs -l -i -c exit
 
 在 `/etc/wsl.conf` 中添加以下内容以取消加载 Windows 的 `PATH` 环境变量[^github_wsl_syntax_highlight]。
 
-```toml
+```ini title="/etc/wsl.conf"
 [interop]
 appendWindowsPath = false
 ```
