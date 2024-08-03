@@ -3,7 +3,6 @@
     :not(pre) {
         overflow-wrap: break-word;
         hyphens: auto;
-        text-align: justify;
 
         & > code {
             @apply p-1 rounded-md;
