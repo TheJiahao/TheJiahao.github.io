@@ -3,7 +3,7 @@ import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import CardList from "components/organisms/CardList";
 import SearchBox from "components/organisms/SearchBox";
-import { DEFAULT_LANGUAGE, SITE_TITLE } from "config";
+import { DEFAULT_LANGUAGE, SITE_DESCRIPTION, SITE_TITLE } from "config";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
 import { languageCodes } from "localization";
@@ -28,7 +28,7 @@ const languageAlternates = languageCodes.map((code) => ({
 
 <NavigationBarLayout
     title={SITE_TITLE[language]}
-    description={getTranslation(language).siteDescription}
+    description={SITE_DESCRIPTION[language]}
     {languageAlternates}
 >
     <ContentLayout>

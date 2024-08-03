@@ -1,12 +1,11 @@
 import rss from "@astrojs/rss";
 import type { APIContext } from "astro";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
-import { SITE_TITLE } from "config";
+import { SITE_DESCRIPTION, SITE_TITLE } from "config";
 import { languageCodes } from "localization";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
 import getBlogs from "utils/getBlogs";
-import { getTranslation } from "utils/getTranslation";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({ params: { language } }));
@@ -27,7 +26,7 @@ export function GET({ params, site }: APIContext) {
 
     return rss({
         title: SITE_TITLE[language],
-        description: getTranslation(language).siteDescription,
+        description: SITE_DESCRIPTION[language],
         site: getAbsoluteLocaleUrl(language, "/"),
         items: blogs.map(({ data, slug, body }) => ({
             title: data.title,
