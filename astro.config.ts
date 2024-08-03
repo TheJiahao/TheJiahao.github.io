@@ -2,6 +2,7 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import rehypeFigure from "@microflash/rehype-figure";
+import expressiveCode from "astro-expressive-code";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
@@ -11,7 +12,6 @@ import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
 import { languageCodes } from "./src/localization";
-
 const { PUBLIC_PORT } = loadEnv(
     process.env.NODE_ENV || "dev",
     process.cwd(),
@@ -22,6 +22,9 @@ const { PUBLIC_PORT } = loadEnv(
 export default defineConfig({
     site: process.env.SITE_BASE_URL,
     integrations: [
+        expressiveCode({
+            themes: ["one-dark-pro"],
+        }),
         mdx(),
         sitemap({
             i18n: {
@@ -67,9 +70,6 @@ export default defineConfig({
         },
     },
     markdown: {
-        shikiConfig: {
-            theme: "one-dark-pro",
-        },
         remarkPlugins: [remarkSectionize, remarkMath],
         rehypePlugins: [rehypeKatex, rehypeFigure],
     },
