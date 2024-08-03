@@ -1,12 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { execSync } from "child_process";
+import type { BlogEntry } from "interfaces/BlogEntry";
 import type { BlogData } from "../interfaces/BlogData";
-
-type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
-    /** Blog slug without language */
-    slug: string;
-    data: BlogData;
-};
 
 const getLastModified = ({
     collection,
