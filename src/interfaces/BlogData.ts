@@ -1,5 +1,4 @@
 import type { CollectionEntry } from "astro:content";
-import type { AlternateLink } from "interfaces/AlternateLink";
 
 type RawBlogData = CollectionEntry<"posts">["data"] & {
     language: string;
@@ -7,7 +6,7 @@ type RawBlogData = CollectionEntry<"posts">["data"] & {
 };
 
 type BlogData = RawBlogData & {
-    alternates: AlternateLink[];
+    alternates: string[];
 };
 
 export type { BlogData, RawBlogData };
