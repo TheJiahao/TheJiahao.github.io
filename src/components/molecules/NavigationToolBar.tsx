@@ -1,4 +1,3 @@
-import { getRelativeLocaleUrl } from "astro:i18n";
 import Avatar from "components/atoms/Avatar";
 import MenuButton from "components/atoms/MenuButton";
 import { SITE_AVATAR } from "config";
@@ -28,7 +27,6 @@ const NavigationToolBar = ({
             image={avatar}
             size="15"
             alt={getTranslation(language).siteAvatar}
-            url={getRelativeLocaleUrl(language, "/about")}
         />
 
         <div />
