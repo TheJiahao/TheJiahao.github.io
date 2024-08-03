@@ -5,7 +5,7 @@ import CoverImage from "../../../components/atoms/CoverImage";
 
 describe("<CoverImage/>", () => {
     test("shows placeholder image by default", () => {
-        render(<CoverImage title="How to write tests" />);
+        render(<CoverImage alt="How to write tests" />);
 
         expect(screen.getByRole("img")).toHaveAttribute(
             "src",
@@ -21,13 +21,13 @@ describe("<CoverImage/>", () => {
             format: "jpg",
         });
 
-        render(<CoverImage title="A cool blog post" image={image} />);
+        render(<CoverImage alt="A cool blog post" image={image} />);
 
         expect(screen.getByRole("img")).toHaveAttribute("src", image.src);
     });
 
     test("has alt", () => {
-        render(<CoverImage title="A cool blog post" />);
+        render(<CoverImage alt="A cool blog post" />);
 
         expect(screen.getByRole("img")).toHaveAttribute(
             "alt",

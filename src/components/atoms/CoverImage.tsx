@@ -3,16 +3,16 @@ import { BLOG_IMAGE_PLACEHOLDER } from "config";
 
 interface CoverImageProps {
     image?: ImageMetadata;
-    title: string;
+    alt: string;
 }
 
 const CoverImage = ({
     image = BLOG_IMAGE_PLACEHOLDER,
-    title,
+    alt,
 }: CoverImageProps) => (
     <img
         src={image.src}
-        alt={title}
+        alt={alt}
         className="[&[src$='svg']]:object-fill"
         w-full
         max-h-xs
