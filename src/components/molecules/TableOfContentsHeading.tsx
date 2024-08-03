@@ -1,4 +1,4 @@
-import useSectionState from "hooks/useSectionState";
+import useSectionVisibility from "hooks/useSectionVisibility";
 import type { Heading } from "interfaces/Heading";
 
 interface HeadingListProps {
@@ -6,7 +6,7 @@ interface HeadingListProps {
 }
 
 const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
-    const visible = useSectionState(heading.slug);
+    const visible = useSectionVisibility(heading.slug);
 
     return (
         <li key={heading.slug} flex="~ col">

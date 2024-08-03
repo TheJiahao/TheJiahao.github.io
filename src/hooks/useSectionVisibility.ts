@@ -37,7 +37,7 @@ const getCurrentHeading = (
     return current?.id;
 };
 
-const useSectionState = (id: string): boolean => {
+const useSectionVisibility = (id: string): boolean => {
     const [visible, setVisible] = useState<Set<string>>(new Set());
     const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
 
@@ -86,4 +86,4 @@ const useSectionState = (id: string): boolean => {
     return id === getCurrentHeading(headings, visible);
 };
 
-export default useSectionState;
+export default useSectionVisibility;
