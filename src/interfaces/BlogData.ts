@@ -1,9 +1,12 @@
 import type { CollectionEntry } from "astro:content";
 
-type BlogData = CollectionEntry<"posts">["data"] & {
+type RawBlogData = CollectionEntry<"posts">["data"] & {
     language: string;
     lastModified: Date;
-    alternates?: { language: string; slug: string }[];
 };
 
-export { type BlogData };
+type BlogData = RawBlogData & {
+    alternates: { language: string; slug: string }[];
+};
+
+export type { BlogData, RawBlogData };
