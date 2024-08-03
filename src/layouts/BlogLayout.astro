@@ -33,7 +33,9 @@ const {
 ---
 
 <BaseLayout {title} {description} {image}>
-    {math && <MathHeader slot="head" />}
+    <Fragment slot="head">
+        {math && <MathHeader />}
+    </Fragment>
 
     <aside
         slot="left-sidebar"
