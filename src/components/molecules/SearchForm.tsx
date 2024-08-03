@@ -40,12 +40,13 @@ const SearchForm = ({
             w-full
             onReset={onReset}
         >
-            <label htmlFor="search">{icon}</label>
+            <label htmlFor="search" title={getTranslation(language).search}>
+                {icon}
+            </label>
 
             <input
                 type="search"
                 id="search"
-                title={getTranslation(language).search}
                 placeholder={placeholder}
                 value={value}
                 onChange={onChange}
