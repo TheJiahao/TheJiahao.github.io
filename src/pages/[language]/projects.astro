@@ -1,9 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import CardList from "components/organisms/CardList";
 import { DEFAULT_LANGUAGE } from "config";
-import ContentLayout from "layouts/partials/ContentLayout.astro";
-import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
+import ProjectsPageLayout from "layouts/PortfolioLayout.astro";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
 
@@ -21,11 +19,4 @@ const projects = (await getCollection("projects")).map(({ data }) => ({
 }));
 ---
 
-<NavigationBarLayout {title}>
-    <ContentLayout>
-        <CardList
-            cards={projects}
-            aria-label={getTranslation(language).projects}
-        />
-    </ContentLayout>
-</NavigationBarLayout>
+<ProjectsPageLayout {title} {projects} />

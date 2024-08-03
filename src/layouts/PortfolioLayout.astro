@@ -1,0 +1,25 @@
+---
+import CardList from "components/organisms/CardList";
+import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
+import ContentLayout from "layouts/partials/ContentLayout.astro";
+import { DEFAULT_LANGUAGE } from "config";
+import { getTranslation } from "utils/getTranslation";
+import type { ImageCardProps } from "components/molecules/ImageCard";
+
+interface Props {
+    title: string;
+    projects: ImageCardProps[];
+}
+
+const { projects, title } = Astro.props;
+const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
+---
+
+<NavigationBarLayout {title}>
+    <ContentLayout>
+        <CardList
+            cards={projects}
+            aria-label={getTranslation(language).projects}
+        />
+    </ContentLayout>
+</NavigationBarLayout>
