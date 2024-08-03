@@ -1,5 +1,5 @@
 import Avatar from "components/atoms/Avatar";
-import { SITE_AVATAR } from "config";
+import { SITE_AVATAR, SITE_TITLE } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
@@ -19,7 +19,7 @@ const NavigationHeader = ({
         />
 
         <h1 block text="primary center xl" font-bold>
-            {getTranslation(language).siteTitle}
+            {SITE_TITLE[language]}
         </h1>
     </>
 );

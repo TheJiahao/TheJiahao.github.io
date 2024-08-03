@@ -1,6 +1,13 @@
-const SITE_TITLE = "Jiahao 的博客";
-const SITE_DESCRIPTION =
-    "个人博客，内容可能涵盖工具配置、技术、数学等，不定时更新。";
+const SITE_TITLE: Record<string, string> = {
+    "zh-cn": "Jiahao 的博客",
+    en: "Jiahao's Blog",
+};
+
+const SITE_DESCRIPTION: Record<string, string> = {
+    "zh-cn": "个人博客，内容可能涵盖工具配置、技术、数学等，不定时更新。",
+    en: "Personal blog, might contain content about configuring tools, technology, math, etc. Updated irregularly.",
+};
+
 const SITE_OWNER = "Jiahao Li";
 const SITE_LICENSE = {
     name: "CC BY-NC-SA 4.0",

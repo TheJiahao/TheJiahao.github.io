@@ -1,6 +1,7 @@
 import rss from "@astrojs/rss";
 import type { APIContext } from "astro";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
+import { SITE_TITLE } from "config";
 import { languageCodes } from "localization";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
@@ -25,7 +26,7 @@ export function GET({ params, site }: APIContext) {
     }
 
     return rss({
-        title: getTranslation(language).siteTitle,
+        title: SITE_TITLE[language],
         description: getTranslation(language).siteDescription,
         site: getAbsoluteLocaleUrl(language, "/"),
         items: blogs.map(({ data, slug, body }) => ({

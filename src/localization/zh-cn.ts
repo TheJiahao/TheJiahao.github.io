@@ -5,7 +5,6 @@ const zh_cn: Language = {
     ...en,
     name: "简体中文",
     code: "zh-cn",
-    siteTitle: "Jiahao 的博客",
     siteDescription:
         "个人博客，内容可能涵盖工具配置、技术、数学等，不定时更新。",
     siteSource: "本站源代码",
