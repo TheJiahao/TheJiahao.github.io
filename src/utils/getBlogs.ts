@@ -1,10 +1,6 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { execSync } from "child_process";
-
-type BlogData = CollectionEntry<"posts">["data"] & {
-    language: string;
-    lastModified: Date;
-};
+import type { BlogData } from "../interfaces/BlogData";
 
 type BlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
     /** Blog slug without language */
