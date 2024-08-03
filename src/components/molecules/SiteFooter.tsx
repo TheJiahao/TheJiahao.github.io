@@ -24,6 +24,7 @@ const SiteFooter = ({
             flex="~ col"
             items-center
             line-height-loose
+            lg="mt-auto"
         >
             <p>
                 © {startYear} - {year} {owner}
