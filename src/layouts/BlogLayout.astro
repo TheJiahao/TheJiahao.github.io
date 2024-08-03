@@ -32,6 +32,12 @@ const {
 } = Astro.props;
 ---
 
+<script>
+    import { injectCopyButton } from "utils/injectCopyButton";
+
+    injectCopyButton();
+</script>
+
 <BaseLayout {title} {description} {image}>
     {math && <MathHeader slot="head" />}
 
