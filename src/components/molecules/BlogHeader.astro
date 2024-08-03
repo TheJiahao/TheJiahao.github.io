@@ -12,7 +12,7 @@ const { title, image, date, description } = Astro.props;
 ---
 
 <header flex="~ col" gap-lg>
-    <CoverImage image={image} alt={title} />
+    <CoverImage image={image} alt="" />
     <div px-4 lg:px-8>
         <BlogDetails title={title} {description} date={date} />
     </div>

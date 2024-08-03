@@ -13,7 +13,7 @@ const ImageCard = ({ title, url, image, ...props }: ImageCardProps) => {
     return (
         <article title={title} card clickable>
             <a href={url} rel="bookmark">
-                <CoverImage image={image} alt={title} />
+                <CoverImage image={image} alt="" />
                 <div p-4 lg:p-8>
                     <BlogDetails title={title} {...props} />
                 </div>
