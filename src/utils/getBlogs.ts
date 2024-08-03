@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { execSync } from "child_process";
+import type { BlogData } from "interfaces/BlogData";
 import type { BlogEntry } from "interfaces/BlogEntry";
-import type { BlogData } from "../interfaces/BlogData";
 
 const getLastModified = ({
     collection,
