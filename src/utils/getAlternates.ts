@@ -3,13 +3,13 @@ import type { RawBlogEntry } from "interfaces/BlogEntry";
 
 export const getAlternates = (
     blogs: RawBlogEntry[],
-): Map<string, Set<AlternateLink>> => {
-    const blogAlternates = new Map<string, Set<AlternateLink>>();
+): Map<string, AlternateLink[]> => {
+    const blogAlternates = new Map<string, AlternateLink[]>();
 
     for (const blog of blogs) {
-        const alternates = blogAlternates.get(blog.slug) || new Set();
+        const alternates = blogAlternates.get(blog.slug) || [];
 
-        alternates.add({
+        alternates.push({
             language: blog.data.language,
             slug: blog.slug,
         });
