@@ -23,7 +23,7 @@ export default defineConfig({
     site: process.env.SITE_BASE_URL,
     integrations: [
         expressiveCode({
-            themes: ["one-dark-pro"],
+            themes: ["one-light", "one-dark-pro"],
         }),
         mdx(),
         sitemap({
