@@ -1,7 +1,7 @@
-import type { BlogEntry } from "interfaces/BlogEntry";
+import type { RawBlogEntry } from "interfaces/BlogEntry";
 
 export const getAlternates = (
-    blogs: BlogEntry[],
+    blogs: RawBlogEntry[],
 ): Map<string, Set<{ language: string; slug: string }>> => {
     const blogAlternates = new Map<
         string,
