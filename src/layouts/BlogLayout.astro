@@ -32,10 +32,18 @@ const {
     lastModified,
     headings,
     math,
+    alternates,
 } = Astro.props;
+
+const slug = Astro.url.pathname.split("/").slice(2).join("/");
+
+const languageAlternates = alternates.map((language) => ({
+    hrefLang: language,
+    href: getAbsoluteLocaleUrl(language, slug),
+}));
 ---
 
-<BaseLayout {title} {description} {image}>
+<BaseLayout {title} {description} {image} {languageAlternates}>
     <Fragment slot="head">
         {math && <MathHeader />}
 
