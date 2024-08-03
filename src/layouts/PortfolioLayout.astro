@@ -5,6 +5,7 @@ import ContentLayout from "layouts/partials/ContentLayout.astro";
 import { DEFAULT_LANGUAGE } from "config";
 import { getTranslation } from "utils/getTranslation";
 import type { ImageCardProps } from "components/molecules/ImageCard";
+import { Schema } from "astro-seo-schema";
 
 interface Props {
     title: string;
@@ -16,6 +17,24 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
 <NavigationBarLayout {title}>
+    <Schema
+        item={{
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: title,
+            itemListElement: projects.map((project, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                    "@type": "ListItem",
+                    url: project.url,
+                    name: project.title,
+                    image: project.image?.src,
+                },
+            })),
+        }}
+    />
+
     <ContentLayout>
         <CardList
             cards={projects}
