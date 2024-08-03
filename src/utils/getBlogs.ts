@@ -1,7 +1,8 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import { execSync } from "child_process";
 import type { BlogData } from "interfaces/BlogData";
-import type { BlogEntry } from "interfaces/BlogEntry";
+import type { BlogEntry, RawBlogEntry } from "interfaces/BlogEntry";
+import { getAlternates } from "utils/getAlternates";
 
 const getLastModified = ({
     collection,
@@ -13,7 +14,7 @@ const getLastModified = ({
     return new Date(result.toString());
 };
 
-const blogs = (
+const rawBlogs: RawBlogEntry[] = (
     await getCollection(
         "posts",
         ({ data }) => import.meta.env.MODE === "development" || !data.draft,
@@ -31,6 +32,16 @@ const blogs = (
         },
     };
 });
+
+const blogAlternates = getAlternates(rawBlogs);
+
+const blogs: BlogEntry[] = rawBlogs.map((blog) => ({
+    ...blog,
+    data: {
+        ...blog.data,
+        alternates: blogAlternates.get(blog.slug) || [],
+    },
+}));
 
 const getBlogs = (): BlogEntry[] => blogs;
 
