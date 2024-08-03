@@ -2,7 +2,7 @@
     "extends": "astro/tsconfigs/strict",
     "include": ["src"],
     "compilerOptions": {
-        "lib": ["ESNext"],
+        "lib": ["ES2023"],
         "target": "ES2022",
         "strictNullChecks": true,
         "jsx": "react-jsx",
