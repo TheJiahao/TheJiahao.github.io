@@ -7,7 +7,6 @@ import { defineConfig } from "astro/config";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
-import { addCopyButton } from "shiki-transformer-copy-button";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
@@ -70,11 +69,6 @@ export default defineConfig({
     markdown: {
         shikiConfig: {
             theme: "one-dark-pro",
-            transformers: [
-                addCopyButton({
-                    toggle: 1000,
-                }),
-            ],
         },
         remarkPlugins: [remarkSectionize, remarkMath],
         rehypePlugins: [rehypeKatex, rehypeFigure],
