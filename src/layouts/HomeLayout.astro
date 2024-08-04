@@ -6,12 +6,12 @@ import type { ImageCardProps } from "components/molecules/ImageCard";
 import CardList from "components/organisms/CardList";
 import SearchBox from "components/organisms/SearchBox";
 import { BLOG_IMAGE_PLACEHOLDER, SITE_OWNER } from "config";
-import type { MultilingualPage } from "interfaces/MultilingualPage";
+import type { Multilingual } from "interfaces/Multilingual";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
 import { getTranslation } from "utils/getTranslation";
 
-interface Props extends Pick<SEOProps, "languageAlternates">, MultilingualPage {
+interface Props extends Pick<SEOProps, "languageAlternates">, Multilingual {
     title: string;
     description: string;
     language: string;

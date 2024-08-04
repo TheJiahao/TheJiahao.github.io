@@ -4,10 +4,10 @@ import { SEO } from "astro-seo";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { ViewTransitions } from "astro:transitions";
 import { BLOG_IMAGE_PLACEHOLDER, DEFAULT_LANGUAGE } from "config";
-import type { MultilingualPage } from "interfaces/MultilingualPage";
+import type { Multilingual } from "interfaces/Multilingual";
 import { getLanguageAlternates } from "utils/getLanguageAlternates";
 
-export interface Props extends Partial<MultilingualPage> {
+export interface Props extends Partial<Multilingual> {
     title: string;
     description?: string;
     image?: ImageMetadata;
