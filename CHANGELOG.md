@@ -1,5 +1,77 @@
 # Changelog
 
+## [3.4.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.3.0...v3.4.0) (2024-08-04)
+
+
+### Features
+
+* **about:** ✨ Add description ([0d7dc57](https://github.com/TheJiahao/TheJiahao.github.io/commit/0d7dc5796b79d7677633cadd5c6f327ddd54d83e)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
+* **blog-details:** ✨ Check languages and language are both given or not ([c466003](https://github.com/TheJiahao/TheJiahao.github.io/commit/c46600387bf2d5702fd06b95189bfe067a3070d7))
+* **blog-multilanguage:** ✨ Add `getAlternates` ([33c251e](https://github.com/TheJiahao/TheJiahao.github.io/commit/33c251ee62801215490711d2bf7ada469cf08470)), closes [#199](https://github.com/TheJiahao/TheJiahao.github.io/issues/199)
+* **blog-multilanguage:** ✨ Add alternate links ([d66cbf2](https://github.com/TheJiahao/TheJiahao.github.io/commit/d66cbf216a9ad45bdcdd8e35c73f62598e0b26e1)), closes [#199](https://github.com/TheJiahao/TheJiahao.github.io/issues/199)
+* **blog-multilanguage:** ✨ Add alternate links to blog ([5eb13f0](https://github.com/TheJiahao/TheJiahao.github.io/commit/5eb13f093befb1f212ccf0e794391062c5ce8048)), closes [#199](https://github.com/TheJiahao/TheJiahao.github.io/issues/199)
+* **blog-multilanguage:** ✨ Add language selector if multiple languages available ([ea47432](https://github.com/TheJiahao/TheJiahao.github.io/commit/ea47432a8e7239772982d2171aa6692865b20150)), closes [#199](https://github.com/TheJiahao/TheJiahao.github.io/issues/199)
+* **code-block:** ✨ Use Expressive Code ([0ae0ba2](https://github.com/TheJiahao/TheJiahao.github.io/commit/0ae0ba24db722b4f390acdfe56437dfd99ab442e)), closes [#197](https://github.com/TheJiahao/TheJiahao.github.io/issues/197)
+* **copy-button:** ✨ Add copy button for codeblock ([5d65a7c](https://github.com/TheJiahao/TheJiahao.github.io/commit/5d65a7c8df6d496cb289beb1d9c1ba6557c5002c)), closes [#197](https://github.com/TheJiahao/TheJiahao.github.io/issues/197)
+* **copy-button:** ✨ Add empty copy button ([ffb6501](https://github.com/TheJiahao/TheJiahao.github.io/commit/ffb650107877ebc74f8d7079199f9f09f4877796)), closes [#197](https://github.com/TheJiahao/TheJiahao.github.io/issues/197)
+* **copy-button:** ✨ Add initial copy button ([c0c3e74](https://github.com/TheJiahao/TheJiahao.github.io/commit/c0c3e741ce01b4184b22cb77d129a749c20d3bcb)), closes [#197](https://github.com/TheJiahao/TheJiahao.github.io/issues/197)
+* **copy-button:** ✨ Inject copy button to code blocks ([c83c9e3](https://github.com/TheJiahao/TheJiahao.github.io/commit/c83c9e3b87f99113650f483abf8f90ab67727cca)), closes [#197](https://github.com/TheJiahao/TheJiahao.github.io/issues/197)
+* **layouts:** ✨ Transfer `head` slot ([24f9f4f](https://github.com/TheJiahao/TheJiahao.github.io/commit/24f9f4fce1c799a05e4ee459b8eaa9d88bf142ef)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
+* **schema:** ✨ Add schema for blog pages ([ca96774](https://github.com/TheJiahao/TheJiahao.github.io/commit/ca967740c06eda416343abd1516ae7cafcd40090)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
+* **schema:** ✨ Add schema for home page ([487bb42](https://github.com/TheJiahao/TheJiahao.github.io/commit/487bb4261f521d0ef6bfb4fd4d861d6e0bba0f50)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
+* **schema:** ✨ Add schema to about page ([cbebc01](https://github.com/TheJiahao/TheJiahao.github.io/commit/cbebc01ddef7bb51ed29c23953eab3142a04f7bd)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
+* **schema:** ✨ Add schema to portfolio page ([01c8b6b](https://github.com/TheJiahao/TheJiahao.github.io/commit/01c8b6bb9df88973b25c97951d26ba3d1c3dc4b4)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
+* **search:** ✨ Make search box hover ([a793d2c](https://github.com/TheJiahao/TheJiahao.github.io/commit/a793d2c3703eed89b4a33a9f5dcbb6594c03011f))
+* **sitemap:** ✨ Use last commit date as lastmod ([03bc9b7](https://github.com/TheJiahao/TheJiahao.github.io/commit/03bc9b78b95ea5ce66bde173c53e3076bfdc2dde))
+
+
+### Bug Fixes
+
+* 🐛 Configure pages before build ([df78a19](https://github.com/TheJiahao/TheJiahao.github.io/commit/df78a192d81d5f7528557e8411c05540362be082))
+* 🐛 Disable quotePath ([9266024](https://github.com/TheJiahao/TheJiahao.github.io/commit/9266024fc58b8fb0c6816f8a471ab07aac07e905)), closes [#207](https://github.com/TheJiahao/TheJiahao.github.io/issues/207)
+* 🐛 Lint ([e54a64a](https://github.com/TheJiahao/TheJiahao.github.io/commit/e54a64a196cc7fe7a8fd9c0ad0b22ad2e24182fb))
+* 🐛 Prop types ([c4e638f](https://github.com/TheJiahao/TheJiahao.github.io/commit/c4e638f0fc2d28b488afa4f91d8e7dcf5083a2b6))
+* 🐛 Rename `MultiLingualPage` to `MultilingualPage` ([2f93679](https://github.com/TheJiahao/TheJiahao.github.io/commit/2f93679476e870e8a3021fe2b15a5312e875ee1b))
+* 🐛 Tests ([75b4e57](https://github.com/TheJiahao/TheJiahao.github.io/commit/75b4e57d47688112825c995a09d52d9e66847fbe))
+* 🐛 Use `spawnSync` ([f33ca90](https://github.com/TheJiahao/TheJiahao.github.io/commit/f33ca90cb5a75766f3b29387e42665a4a68b4a20)), closes [#207](https://github.com/TheJiahao/TheJiahao.github.io/issues/207)
+* **accessibility:** 🐛 Add empty alt for cover images ([8bae0de](https://github.com/TheJiahao/TheJiahao.github.io/commit/8bae0de0844b1210525c2401b27fe1f1a43cc6a5))
+* **accessibility:** 🐛 Do not justify text ([ae8fd16](https://github.com/TheJiahao/TheJiahao.github.io/commit/ae8fd16e4972505cebf9c026d60a425a553bc9dd))
+* **accessibility:** 🐛 Move `title` from search input to label ([b418e0f](https://github.com/TheJiahao/TheJiahao.github.io/commit/b418e0fa244daa3942584b9ab70435c8fd5f91b6))
+* **accessibility:** 🐛 Remove redundant link from avatar ([a622f4b](https://github.com/TheJiahao/TheJiahao.github.io/commit/a622f4b88a21859629a1c86081425583a5e624a8))
+* **blog-details:** 🐛 Render date and language selector in same row ([c112a16](https://github.com/TheJiahao/TheJiahao.github.io/commit/c112a1691ca7587f6662e54594bd89ffe1a65e32)), closes [#199](https://github.com/TheJiahao/TheJiahao.github.io/issues/199)
+* **blog-multilanguage:** 🐛 Language alternates not working ([355b32c](https://github.com/TheJiahao/TheJiahao.github.io/commit/355b32ce47a0a235faca4acb43bdaaedbe74e6e0)), closes [#199](https://github.com/TheJiahao/TheJiahao.github.io/issues/199)
+* **ci:** 🐛 👷 Deploy assets directly to GitHub Pages ([2f78bb4](https://github.com/TheJiahao/TheJiahao.github.io/commit/2f78bb41c90590e40dcbefba09d22b4a9d7adc0a)), closes [#15](https://github.com/TheJiahao/TheJiahao.github.io/issues/15)
+* **CI:** 🐛 Do not checkout in setup-action ([9aa2a0d](https://github.com/TheJiahao/TheJiahao.github.io/commit/9aa2a0d8936b3c8eb13027dc17bc16bd0a75a5fb)), closes [#207](https://github.com/TheJiahao/TheJiahao.github.io/issues/207)
+* **CI:** 🐛 Get `SITE_BASE_URL` from actions/configure-pages ([464b07a](https://github.com/TheJiahao/TheJiahao.github.io/commit/464b07a3c832b9a2b75b6676807954dd17bda1bd)), closes [#15](https://github.com/TheJiahao/TheJiahao.github.io/issues/15)
+* **CI:** 🐛 Get site base url from environment variable ([3b3f950](https://github.com/TheJiahao/TheJiahao.github.io/commit/3b3f9507435c4fa552ab9b6b889512c4bafad5b2)), closes [#207](https://github.com/TheJiahao/TheJiahao.github.io/issues/207)
+* **CI:** 🐛 IndexNow key missing ([b6ed114](https://github.com/TheJiahao/TheJiahao.github.io/commit/b6ed114aee197f2f71529a02f9eea08a808f333b))
+* **CI:** 🐛 IndexNow key not read from env ([47e19aa](https://github.com/TheJiahao/TheJiahao.github.io/commit/47e19aa61207a48fef9ef90887b3f2c6865cb201)), closes [#15](https://github.com/TheJiahao/TheJiahao.github.io/issues/15)
+* **CI:** 🐛 Invalid sitemap location ([d3914cd](https://github.com/TheJiahao/TheJiahao.github.io/commit/d3914cd37af1ba09e3539c483ccab6ec6c9595e8))
+* **CI:** 🐛 Last modified date not fetched ([43f9536](https://github.com/TheJiahao/TheJiahao.github.io/commit/43f9536df858d6000254ea5706694559f9683899))
+* **CI:** 🐛 Pass `INDEXNOW_KEY` ([6280347](https://github.com/TheJiahao/TheJiahao.github.io/commit/628034753efae9fe7449d63f628a4bf6fcfb9b3d)), closes [#15](https://github.com/TheJiahao/TheJiahao.github.io/issues/15)
+* **CI:** 🐛 Remove duplicate deploy ([3490618](https://github.com/TheJiahao/TheJiahao.github.io/commit/34906184c9e6f2bb4fa43605d77851336e50fb86)), closes [#15](https://github.com/TheJiahao/TheJiahao.github.io/issues/15)
+* **debug:** 🐛 Move `--no-pager` after git ([f8f477a](https://github.com/TheJiahao/TheJiahao.github.io/commit/f8f477acd032dd2945b2a6102d4cfb3e52ee1779)), closes [#207](https://github.com/TheJiahao/TheJiahao.github.io/issues/207)
+* **footer:** 🐛 Make site footer stay on bottom on desktop ([3643940](https://github.com/TheJiahao/TheJiahao.github.io/commit/364394042d5baccd1a445ab82ace8092adc6de37)), closes [#52](https://github.com/TheJiahao/TheJiahao.github.io/issues/52)
+* **header:** 🐛 `noindex` missing ([ae537cb](https://github.com/TheJiahao/TheJiahao.github.io/commit/ae537cb9dcce4ec9f6c3d66582a96bd4f2c34c55))
+* **search:** 🐛 Move title to search icon ([b3f6124](https://github.com/TheJiahao/TheJiahao.github.io/commit/b3f6124eb5ad2e8dd794d7f85572b3275965fe18))
+* **test:** 🐛 🚨 Remove deprecated test ([5081a9f](https://github.com/TheJiahao/TheJiahao.github.io/commit/5081a9f6ef06688607be366e362624e65fd2b0e5))
+
+
+### Reverts
+
+* "build: 📦️ Set Typescript lib to ES2023 to avoid using not implemented methods" ([3352969](https://github.com/TheJiahao/TheJiahao.github.io/commit/33529691ee6d77a0ab731a46dd19cece3c65d410))
+* "build(deps): 📦️ Add @rehype-pretty/transformers" ([8c05cbf](https://github.com/TheJiahao/TheJiahao.github.io/commit/8c05cbf67f639ce82d7a692f7f8fa285fa601939))
+* "build(deps): 📦️ Add rehype-wrap-element" ([c883799](https://github.com/TheJiahao/TheJiahao.github.io/commit/c883799571801af0da4f5860ce86f4cc13b65857))
+* "build(deps): 📦️ Add shiki-transformer-copy-button" ([a25e738](https://github.com/TheJiahao/TheJiahao.github.io/commit/a25e7386a3ae1692795c165d23168adad296c7f6))
+* "ci(debug): 👷 Print whole history of blog postings" ([96f8076](https://github.com/TheJiahao/TheJiahao.github.io/commit/96f807613b91da363e7ac870d3e34319ee6e599e))
+* "feat(blog-details): ✨ Check languages and language are both given or not" ([06ffa54](https://github.com/TheJiahao/TheJiahao.github.io/commit/06ffa5453ced480266c3a207f266f8f63d785a30))
+* "feat(copy-button): ✨ Add copy button for codeblock" ([d125176](https://github.com/TheJiahao/TheJiahao.github.io/commit/d12517697a00490fd0eee0e7fc2828efca05d9e4))
+* "feat(copy-button): ✨ Add empty copy button" ([acab9a7](https://github.com/TheJiahao/TheJiahao.github.io/commit/acab9a7a99c26b188d806d72a623b60362e06eb7))
+* "feat(copy-button): ✨ Add initial copy button" ([a3bcf36](https://github.com/TheJiahao/TheJiahao.github.io/commit/a3bcf369a1ed68105fa0dc9c7b862cc7e6769d63))
+* "feat(copy-button): ✨ Inject copy button to code blocks" ([0de7c46](https://github.com/TheJiahao/TheJiahao.github.io/commit/0de7c468cec3c02a53271446b94d953afbadf3e2))
+* "fix: 🐛 Use `spawnSync`" ([6e2b59c](https://github.com/TheJiahao/TheJiahao.github.io/commit/6e2b59cbe554ed4997903776fb30a96c93e0552e))
+* "fix(CI): 🐛 Get site base url from environment variable" ([bac5496](https://github.com/TheJiahao/TheJiahao.github.io/commit/bac5496f55a38765d7cc27a69aa6f556b85394ab))
+
 ## [3.3.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.2.0...v3.3.0) (2024-08-01)
 
 ### Features
