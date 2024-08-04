@@ -60,4 +60,53 @@ describe("<BlogDetails/>", () => {
             expect(screen.queryByRole("paragraph")).not.toBeInTheDocument();
         });
     });
+
+    describe("language selector is rendered", () => {
+        test("when language and more than one languages are given", () => {
+            render(
+                <BlogDetails
+                    title={"Something"}
+                    language="zh-cn"
+                    languages={["en", "zh-cn"]}
+                />,
+            );
+
+            expect(screen.getByRole("combobox")).toBeVisible();
+        });
+    });
+
+    describe("language selector is not rendered with", () => {
+        test("no languages", () => {
+            render(<BlogDetails title={"Something"} />);
+
+            expect(screen.queryByRole("combobox")).not.toBeInTheDocument();
+        });
+
+        test.each([
+            ["zh-cn", undefined],
+            [undefined, ["zh-cn", "en"]],
+        ])("only language or languages", (language, languages) => {
+            render(
+                <BlogDetails
+                    title={"Something"}
+                    language={language}
+                    languages={languages}
+                />,
+            );
+
+            expect(screen.queryByRole("combobox")).not.toBeInTheDocument();
+        });
+
+        test("only one language", () => {
+            render(
+                <BlogDetails
+                    title={"Something"}
+                    language="en"
+                    languages={["en"]}
+                />,
+            );
+
+            expect(screen.queryByRole("combobox")).not.toBeInTheDocument();
+        });
+    });
 });
