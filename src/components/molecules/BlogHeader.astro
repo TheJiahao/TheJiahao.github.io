@@ -15,6 +15,6 @@ const { image, ...props } = Astro.props;
 <header flex="~ col" gap-lg>
     <CoverImage image={image} alt="" />
     <div px-4 lg:px-8>
-        <BlogDetails {...props} />
+        <BlogDetails {...props} client:idle />
     </div>
 </header>

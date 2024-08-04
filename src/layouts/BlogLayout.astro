@@ -15,6 +15,7 @@ import type { BlogData } from "interfaces/BlogData";
 import BaseLayout from "layouts/BaseLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
 import formatDate from "utils/formatDate";
+import { getSlug } from "utils/getSlug";
 import { getTranslation } from "utils/getTranslation";
 
 type Props = BlogData & {
@@ -85,6 +86,9 @@ const {
                     {description}
                     {date}
                     {image}
+                    {language}
+                    languages={alternates}
+                    slug={getSlug(Astro.url.pathname)}
                 />
                 <slot />
                 <BlogFooter
