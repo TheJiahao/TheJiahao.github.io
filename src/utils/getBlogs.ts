@@ -18,7 +18,9 @@ const rawBlogs: RawBlogEntry[] = (
         data: {
             ...blog.data,
             language,
-            lastModified: getLastModified(blog),
+            lastModified: getLastModified(
+                `src/content/${blog.collection}/${blog.id}`,
+            ),
         },
     };
 });
