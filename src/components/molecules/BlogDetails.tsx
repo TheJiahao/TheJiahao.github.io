@@ -18,37 +18,45 @@ const BlogDetails = ({
     languages,
     language,
     slug,
-}: BlogDetailsProps) => (
-    <div flex="~ col" gap-sm>
-        <h1 text="primary 3xl" font-bold>
-            {title}
-        </h1>
+}: BlogDetailsProps) => {
+    if (!language != !languages) {
+        throw new Error(
+            "Language and languages must be both defined or undefined",
+        );
+    }
 
-        {description && <p text="secondary xl">{description}</p>}
+    return (
+        <div flex="~ col" gap-sm>
+            <h1 text="primary 3xl" font-bold>
+                {title}
+            </h1>
 
-        <div flex="~ row" gap-4>
-            {date && (
-                <time
-                    dateTime={formatDate(date)}
-                    text-secondary
-                    align-icon
-                    gap-2
-                >
-                    <LuCalendar role="presentation" focusable="false" />
-                    {formatDate(date)}
-                </time>
-            )}
+            {description && <p text="secondary xl">{description}</p>}
 
-            {languages && language && languages.length > 1 && (
-                <LanguageSelector
-                    defaultLanguage={language}
-                    languages={languages}
-                    slug={slug}
-                />
-            )}
+            <div flex="~ row" gap-4>
+                {date && (
+                    <time
+                        dateTime={formatDate(date)}
+                        text-secondary
+                        align-icon
+                        gap-2
+                    >
+                        <LuCalendar role="presentation" focusable="false" />
+                        {formatDate(date)}
+                    </time>
+                )}
+
+                {languages && language && languages.length > 1 && (
+                    <LanguageSelector
+                        defaultLanguage={language}
+                        languages={languages}
+                        slug={slug}
+                    />
+                )}
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 export type { BlogDetailsProps };
 export default BlogDetails;
