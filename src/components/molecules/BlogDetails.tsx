@@ -29,25 +29,27 @@ const BlogDetails = ({
 
             {description && <p text="secondary xl">{description}</p>}
 
-            {date && (
-                <time
-                    dateTime={formatDate(date)}
-                    text-secondary
-                    align-icon
-                    gap-2
-                >
-                    <LuCalendar role="presentation" focusable="false" />
-                    {formatDate(date)}
-                </time>
-            )}
+            <div flex="~ row" gap-4>
+                {date && (
+                    <time
+                        dateTime={formatDate(date)}
+                        text-secondary
+                        align-icon
+                        gap-2
+                    >
+                        <LuCalendar role="presentation" focusable="false" />
+                        {formatDate(date)}
+                    </time>
+                )}
 
-            {languages && language && languages.length > 1 && (
-                <LanguageSelector
-                    defaultLanguage={language}
-                    languages={languages}
-                    slug={slug}
-                />
-            )}
+                {languages && language && languages.length > 1 && (
+                    <LanguageSelector
+                        defaultLanguage={language}
+                        languages={languages}
+                        slug={slug}
+                    />
+                )}
+            </div>
         </div>
     );
 };
