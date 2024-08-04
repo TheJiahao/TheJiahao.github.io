@@ -46,7 +46,7 @@ const { title, description, language, languages, blogs } = Astro.props;
 
     <ContentLayout>
         <header>
-            <SearchBox language={language} client:load />
+            <SearchBox {language} client:load />
         </header>
 
         <main>
