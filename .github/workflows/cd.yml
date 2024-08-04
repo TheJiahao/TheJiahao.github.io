@@ -13,9 +13,6 @@ jobs:
     env:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
 
-    permissions:
-      contents: read
-
     steps:
       - uses: actions/checkout@v4
         with:
