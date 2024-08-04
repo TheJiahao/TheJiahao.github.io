@@ -15,7 +15,6 @@ import type { BlogData } from "interfaces/BlogData";
 import BaseLayout from "layouts/BaseLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
 import formatDate from "utils/formatDate";
-import { getLanguageAlternates } from "utils/getLanguageAlternates";
 import { getTranslation } from "utils/getTranslation";
 
 type Props = BlogData & {
@@ -37,12 +36,7 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout
-    {title}
-    {description}
-    {image}
-    languageAlternates={getLanguageAlternates(Astro.url.pathname, alternates)}
->
+<BaseLayout {title} {description} {image} languages={alternates}>
     <Fragment slot="head">
         {math && <MathHeader />}
 
