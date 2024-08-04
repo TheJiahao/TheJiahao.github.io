@@ -1,16 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { getTranslation } from "utils/getTranslation";
 import { beforeEach, describe, expect, test } from "vitest";
 import LanguageSelector from "../../../components/molecules/LanguageSelector";
 
 describe("<LanguageSelector/>", () => {
-    const languages = [
-        { name: "简体中文", code: "zh-cn" },
-        { name: "English", code: "en" },
-        { name: "Español", code: "es" },
-        { name: "Français", code: "fr" },
-        { name: "Suomi", code: "fi" },
-    ];
+    const languages = ["zh-cn", "en"];
 
     beforeEach(() => {
         render(<LanguageSelector defaultLanguage="en" languages={languages} />);
@@ -28,8 +23,12 @@ describe("<LanguageSelector/>", () => {
 
         await user.click(languageSelector);
 
-        for (const { name } of languages) {
-            expect(screen.getByRole("option", { name })).toBeInTheDocument();
+        for (const language of languages) {
+            expect(
+                screen.getByRole("option", {
+                    name: getTranslation(language).name,
+                }),
+            ).toBeInTheDocument();
         }
     });
 });
