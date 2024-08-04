@@ -1,3 +1,2 @@
-export const getSlug = (pathname: string): string => {
-    return pathname.split("/").slice(2).join("/");
-};
+export const getSlug = (pathname: string): string =>
+    pathname.split("/").slice(2).join("/");
