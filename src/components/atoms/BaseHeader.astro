@@ -1,15 +1,13 @@
 ---
 import type { ImageMetadata } from "astro";
-import { SEO, type SEOProps } from "astro-seo";
+import { SEO } from "astro-seo";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { ViewTransitions } from "astro:transitions";
 import { BLOG_IMAGE_PLACEHOLDER, DEFAULT_LANGUAGE } from "config";
 import type { MultilingualPage } from "interfaces/MultilingualPage";
 import { getLanguageAlternates } from "utils/getLanguageAlternates";
 
-export interface Props
-    extends Pick<SEOProps, "languageAlternates">,
-        MultilingualPage {
+export interface Props extends Partial<MultilingualPage> {
     title: string;
     description?: string;
     image?: ImageMetadata;
