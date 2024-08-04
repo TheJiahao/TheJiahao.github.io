@@ -1,11 +1,10 @@
 ---
 import BaseHeader, { type Props } from "components/atoms/BaseHeader.astro";
-import { DEFAULT_LANGUAGE } from "config";
 import "scss/scrollbar.scss";
 ---
 
 <!doctype html>
-<html lang={Astro.currentLocale ?? DEFAULT_LANGUAGE} scroll-smooth>
+<html lang={Astro.currentLocale} scroll-smooth>
     <head>
         <BaseHeader {...Astro.props} />
         <slot name="head" />
