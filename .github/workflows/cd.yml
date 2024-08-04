@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: production
+    env:
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
 
     permissions:
       contents: read
