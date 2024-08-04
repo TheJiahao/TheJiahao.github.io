@@ -21,14 +21,10 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
-      - name: Setup Pages
-        id: config
-        uses: actions/configure-pages@v5
-
       - name: Build
         run: pnpm run build
         env:
-          SITE_BASE_URL: ${{ steps.config.outputs.base_url }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
 
       - name: Setup IndexNow
         run: echo ${{ secrets.INDEXNOW_KEY }} > dist/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
