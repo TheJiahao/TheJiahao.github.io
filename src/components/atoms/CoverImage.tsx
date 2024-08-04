@@ -12,6 +12,8 @@ const CoverImage = ({
 }: CoverImageProps) => (
     <img
         src={image.src}
+        width={image.width}
+        height={image.height}
         alt={alt}
         className="[&[src$='svg']]:object-fill"
         w-full
