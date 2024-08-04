@@ -2,22 +2,17 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import { DEFAULT_LANGUAGE, SITE_DESCRIPTION, SITE_TITLE } from "config";
-import { languageCodes } from "localization";
+import { languageCodes as languages } from "localization";
 import getBlogs from "utils/getBlogs";
 import HomeLayout from "../../layouts/HomeLayout.astro";
-import { getLanguageAlternates } from "utils/getLanguageAlternates";
 
 export function getStaticPaths() {
-    return languageCodes.map((language) => ({
+    return languages.map((language) => ({
         params: { language },
     }));
 }
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
-const languageAlternates = getLanguageAlternates(
-    Astro.url.pathname,
-    languageCodes,
-);
 
 const blogs: ImageCardProps[] = getBlogs()
     .filter(({ data }) => data.language === language)
@@ -33,5 +28,5 @@ const blogs: ImageCardProps[] = getBlogs()
     description={SITE_DESCRIPTION[language]}
     {blogs}
     {language}
-    {languageAlternates}
+    {languages}
 />
