@@ -2,6 +2,14 @@ import type { MarkdownHeading } from "astro";
 import { TOC_END_DEPTH, TOC_START_DEPTH } from "config";
 import type { Heading } from "interfaces/Heading";
 
+/**
+ * Converts markdown headings to nested objects.
+ *
+ * @param headings Flat Markdown headings
+ * @param startDepth Starting depth of the table of contents, inclusive
+ * @param endDepth Ending depth of the table of contents, inclusive
+ * @returns Nested headings
+ */
 export const getTOC = (
     headings: MarkdownHeading[],
     startDepth: number = TOC_START_DEPTH,

@@ -43,6 +43,11 @@ const blogs: BlogEntry[] = rawBlogs.map((blog) => ({
     },
 }));
 
+/**
+ * Preprocesses blogs.
+ *
+ * @returns List of blog entries.
+ */
 const getBlogs = (): BlogEntry[] => blogs;
 
 export type { BlogData, BlogEntry };
