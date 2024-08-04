@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: git log --no-pager -n 200
+      - run: git --no-pager log -n 200
 
       - name: Set up
         uses: ./.github/workflows/setup-action
