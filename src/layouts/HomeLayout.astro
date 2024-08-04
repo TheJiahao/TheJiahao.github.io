@@ -15,6 +15,7 @@ import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
 import { languageCodes } from "localization";
 import getBlogs from "utils/getBlogs";
+import { getSlug } from "utils/getSlug";
 import { getTranslation } from "utils/getTranslation";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
@@ -29,7 +30,7 @@ const blogs: ImageCardProps[] = getBlogs()
 
 const languageAlternates = languageCodes.map((code) => ({
     hrefLang: code,
-    href: getAbsoluteLocaleUrl(code, "/"),
+    href: getAbsoluteLocaleUrl(code, getSlug(Astro.url.pathname)),
 }));
 ---
 
