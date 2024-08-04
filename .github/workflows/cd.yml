@@ -28,11 +28,6 @@ jobs:
         id: config
         uses: actions/configure-pages@v5
 
-      - name: Disable quotePath
-        run: git config --global core.quotePath false
-
-      - run: git --no-pager log -n 200
-
       - name: Build
         run: pnpm run build
         env:

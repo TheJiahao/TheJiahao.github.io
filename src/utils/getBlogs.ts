@@ -13,8 +13,6 @@ const getLastModified = ({
         execSync(`git log -1 --pretty="format:%cI" "${filePath}"`).toString(),
     );
 
-    console.log(filePath, "lastmodified:", result);
-
     return result;
 };
 
