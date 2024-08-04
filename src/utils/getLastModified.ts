@@ -1,9 +1,9 @@
 import { execSync } from "child_process";
 
 export const getLastModified = (file: string): Date => {
-    const result = new Date(
-        execSync(`git log -1 --pretty="format:%cI" "${file}"`).toString(),
-    );
+    const result = execSync(
+        `git log -1 --pretty="format:%cI" "${file}"`,
+    ).toString();
 
-    return result;
+    return new Date(result);
 };
