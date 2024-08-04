@@ -15,11 +15,14 @@ import { getTranslation } from "utils/getTranslation";
 interface LanguageSelectorProps extends ListboxButtonProps {
     defaultLanguage: string;
     languages?: Pick<Language, "name" | "code">[];
+    /** Slug of target page */
+    slug?: string;
 }
 
 const LanguageSelector = ({
     defaultLanguage,
     languages = DEFAULT_LANGUAGES,
+    slug = "/",
     ...props
 }: LanguageSelectorProps) => {
     const [disabled, setDisabled] = useState(true);
@@ -32,7 +35,7 @@ const LanguageSelector = ({
         const language = value;
 
         setDisabled(true);
-        window.location.href = getRelativeLocaleUrl(language, "/");
+        window.location.href = getRelativeLocaleUrl(language, slug);
     };
 
     return (
