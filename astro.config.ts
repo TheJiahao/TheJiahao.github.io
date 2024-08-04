@@ -28,6 +28,7 @@ export default defineConfig({
                 codeFontFamily:
                     "monospace, ui-monospace, 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New'",
                 codeFontSize: "large",
+                borderRadius: "0.5rem",
             },
         }),
         mdx(),
