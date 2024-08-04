@@ -1,77 +1,28 @@
 name: CD
 on:
   workflow_call:
-    secrets:
-      ACTIONS_DEPLOY_KEY:
-        required: true
 
 jobs:
-  Build:
+  build_deploy:
     runs-on: ubuntu-latest
-    environment: gh-pages
-    if: false
+    environment: production
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Disable quotePath
-        run: git config --global core.quotePath false
-
-      - name: Cache Hugo resources
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-hugo-resources
-        with:
-          path: resources
-          key: ${{ env.cache-name }}
-
-      - uses: actions/setup-go@v5
-        with:
-          go-version: stable
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3.0.0
-        with:
-          hugo-version: latest
-          extended: true
+      - name: Set up
+        uses: ./.github/workflows/setup-action
 
       - name: Build
-        run: hugo --environment production
-
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: site-artifact
-          path: public
-
-  Deploy:
-    runs-on: ubuntu-latest
-    environment: gh-pages
-
-    needs: Build
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download site artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: site-artifact
-          path: public
+        run: pnpm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          repository-name: TheJiahao/TheJiahao.github.io
-          branch: main
-          ssh-key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          folder: public
+          branch: gh-pages
+          single-commit: false
+          folder: dist
           git-config-name: github-actions[bot]
           git-config-email: github-actions[bot]@users.noreply.github.com
-
-          single-commit: false
-          clean: true
-          clean-exclude: |
-            .github

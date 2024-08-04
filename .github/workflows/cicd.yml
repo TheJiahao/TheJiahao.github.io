@@ -19,7 +19,5 @@ jobs:
     concurrency:
       group: cd
       cancel-in-progress: true
-    secrets:
-      ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
     uses: ./.github/workflows/cd.yml
