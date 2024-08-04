@@ -5,7 +5,6 @@ import type { TranslatedElement } from "interfaces/TranslatedElement";
 /**
  * Component for comments.
  *
- * @param {string} language RFC 5646 language code with language tag and country code like zh-cn or en-us
  * @see config.comments for configuration
  */
 const CommentList = ({ language }: TranslatedElement) => {
