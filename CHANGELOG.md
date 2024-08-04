@@ -2,7 +2,6 @@
 
 ## [3.4.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.3.0...v3.4.0) (2024-08-04)
 
-
 ### Features
 
 * **about:** ✨ Add description ([0d7dc57](https://github.com/TheJiahao/TheJiahao.github.io/commit/0d7dc5796b79d7677633cadd5c6f327ddd54d83e)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
@@ -23,7 +22,6 @@
 * **schema:** ✨ Add schema to portfolio page ([01c8b6b](https://github.com/TheJiahao/TheJiahao.github.io/commit/01c8b6bb9df88973b25c97951d26ba3d1c3dc4b4)), closes [#198](https://github.com/TheJiahao/TheJiahao.github.io/issues/198)
 * **search:** ✨ Make search box hover ([a793d2c](https://github.com/TheJiahao/TheJiahao.github.io/commit/a793d2c3703eed89b4a33a9f5dcbb6594c03011f))
 * **sitemap:** ✨ Use last commit date as lastmod ([03bc9b7](https://github.com/TheJiahao/TheJiahao.github.io/commit/03bc9b78b95ea5ce66bde173c53e3076bfdc2dde))
-
 
 ### Bug Fixes
 
@@ -55,7 +53,6 @@
 * **header:** 🐛 `noindex` missing ([ae537cb](https://github.com/TheJiahao/TheJiahao.github.io/commit/ae537cb9dcce4ec9f6c3d66582a96bd4f2c34c55))
 * **search:** 🐛 Move title to search icon ([b3f6124](https://github.com/TheJiahao/TheJiahao.github.io/commit/b3f6124eb5ad2e8dd794d7f85572b3275965fe18))
 * **test:** 🐛 🚨 Remove deprecated test ([5081a9f](https://github.com/TheJiahao/TheJiahao.github.io/commit/5081a9f6ef06688607be366e362624e65fd2b0e5))
-
 
 ### Reverts
 
