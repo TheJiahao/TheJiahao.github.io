@@ -21,7 +21,6 @@ sitemap:
 ---
 
 本文汇总了 Visual Studio Code 实验性设置 `extensions.experimental.affinity` 的兼容性问题。
-<!--more-->
 
 ## `vscode.markdown-language-features`
 

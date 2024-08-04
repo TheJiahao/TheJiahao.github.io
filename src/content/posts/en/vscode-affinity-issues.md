@@ -21,7 +21,6 @@ sitemap:
 ---
 
 A collection of compatibility issues of experimental setting `extensions.experimental.affinity` in Visual Studio Code.
-<!--more-->
 
 ## `vscode.markdown-language-features`
 
