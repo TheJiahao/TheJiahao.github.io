@@ -5,7 +5,7 @@ import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { ViewTransitions } from "astro:transitions";
 import { BLOG_IMAGE_PLACEHOLDER, DEFAULT_LANGUAGE } from "config";
 
-export interface Props extends SEOProps {
+export interface Props extends Pick<SEOProps, "languageAlternates"> {
     title: string;
     description?: string;
     image?: ImageMetadata;
@@ -15,8 +15,15 @@ const {
     title,
     description,
     image = BLOG_IMAGE_PLACEHOLDER,
-    charset = "utf-8",
-    openGraph = {
+    ...props
+} = Astro.props;
+---
+
+<SEO
+    {title}
+    {description}
+    charset="utf-8"
+    openGraph={{
         basic: {
             type: "website",
             title,
@@ -25,14 +32,14 @@ const {
         optional: {
             description,
         },
-    },
-    twitter = {
+    }}
+    twitter={{
         card: "summary_large_image",
         title,
         image: new URL(image.src, Astro.url).toString(),
         description,
-    },
-    extend = {
+    }}
+    extend={{
         meta: [
             { name: "viewport", content: "width=device-width,initial-scale=1" },
             { name: "twitter:url", content: Astro.url.toString() },
@@ -50,18 +57,7 @@ const {
             },
             { rel: "sitemap", href: "/sitemap-index.xml" },
         ],
-    },
-    ...props
-} = Astro.props;
----
-
-<SEO
-    {title}
-    {description}
-    {charset}
-    {openGraph}
-    {twitter}
-    {extend}
+    }}
     {...props}
 />
 
