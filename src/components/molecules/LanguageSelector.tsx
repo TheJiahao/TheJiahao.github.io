@@ -6,15 +6,13 @@ import {
     type ListboxButtonProps,
 } from "@headlessui/react";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import type { Language } from "interfaces/Language";
-import { languages as DEFAULT_LANGUAGES } from "localization";
+import { languageCodes as DEFAULT_LANGUAGES } from "localization";
 import { useEffect, useState } from "react";
 import { LuCheck, LuChevronDown, LuGlobe } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
-
 interface LanguageSelectorProps extends ListboxButtonProps {
     defaultLanguage: string;
-    languages?: Pick<Language, "name" | "code">[];
+    languages?: string[];
     /** Slug of target page */
     slug?: string;
 }
@@ -79,7 +77,7 @@ const LanguageSelector = ({
                 duration-100
                 ease-in
             >
-                {languages.map(({ name, code }) => (
+                {languages.map((code) => (
                     <ListboxOption
                         key={code}
                         value={code}
@@ -90,7 +88,7 @@ const LanguageSelector = ({
                         p-2
                     >
                         <LuCheck className="invisible group-data-[selected]:visible" />
-                        <span>{name}</span>
+                        <span>{getTranslation(code).name}</span>
                     </ListboxOption>
                 ))}
             </ListboxOptions>
