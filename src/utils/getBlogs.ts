@@ -1,20 +1,8 @@
-import { getCollection, type CollectionEntry } from "astro:content";
-import { execSync } from "child_process";
+import { getCollection } from "astro:content";
 import type { BlogData } from "interfaces/BlogData";
 import type { BlogEntry, RawBlogEntry } from "interfaces/BlogEntry";
 import { getAlternates } from "utils/getAlternates";
-
-const getLastModified = ({
-    collection,
-    id,
-}: CollectionEntry<"posts">): Date => {
-    const filePath = `src/content/${collection}/${id}`;
-    const result = new Date(
-        execSync(`git log -1 --pretty="format:%cI" "${filePath}"`).toString(),
-    );
-
-    return result;
-};
+import { getLastModified } from "./getLastModified";
 
 const rawBlogs: RawBlogEntry[] = (
     await getCollection(
