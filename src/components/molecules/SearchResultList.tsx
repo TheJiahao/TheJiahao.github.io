@@ -18,6 +18,8 @@ const SearchResultList = ({ results, language }: SearchResultProps) => {
             <LinkList
                 links={results}
                 aria-label={getTranslation(language).searchResults}
+                max-h-md
+                overflow-auto
             />
         );
     }
