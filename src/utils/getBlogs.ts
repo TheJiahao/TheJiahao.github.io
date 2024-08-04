@@ -1,7 +1,8 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import { execSync } from "child_process";
+import { spawnSync } from "child_process";
 import type { BlogData } from "interfaces/BlogData";
 import type { BlogEntry, RawBlogEntry } from "interfaces/BlogEntry";
+import { basename, dirname } from "path";
 import { getAlternates } from "utils/getAlternates";
 
 const getLastModified = ({
@@ -9,13 +10,18 @@ const getLastModified = ({
     id,
 }: CollectionEntry<"posts">): Date => {
     const filePath = `src/content/${collection}/${id}`;
-    const result = new Date(
-        execSync(`git log -1 --pretty="format:%cI" "${filePath}"`).toString(),
-    );
+    const result = spawnSync(
+        "git",
+        ["log", "-1", "--pretty=format:%cI", basename(filePath)],
+        {
+            cwd: dirname(filePath),
+            encoding: "utf-8",
+        },
+    ).stdout.trim();
 
     console.log(filePath, "lastmodified:", result);
 
-    return result;
+    return new Date(result);
 };
 
 const rawBlogs: RawBlogEntry[] = (
