@@ -1,5 +1,6 @@
 name: CD
 on:
+  workflow_dispatch:
   workflow_call:
     secrets:
       INDEXNOW_KEY:
