@@ -18,11 +18,11 @@ jobs:
       - name: Set up
         uses: ./.github/workflows/setup-action
 
-      - name: Build
-        run: pnpm run build
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Build
+        run: pnpm run build
 
       - name: Setup IndexNow
         run: echo ${{ secrets.INDEXNOW_KEY }} > IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
