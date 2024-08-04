@@ -5,9 +5,14 @@ on:
 jobs:
   build_deploy:
     runs-on: ubuntu-latest
-    environment: production
+    environment:
+      name: production
+      url: ${{ steps.deployment.outputs.page_url }}
+
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -18,11 +23,17 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Setup IndexNow
+        run: echo ${{ secrets.INDEXNOW_KEY }} > IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          single-commit: false
-          folder: dist
-          git-config-name: github-actions[bot]
-          git-config-email: github-actions[bot]@users.noreply.github.com
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
