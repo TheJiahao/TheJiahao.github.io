@@ -24,6 +24,11 @@ export default defineConfig({
     integrations: [
         expressiveCode({
             themes: ["one-light", "one-dark-pro"],
+            styleOverrides: {
+                codeFontFamily:
+                    "monospace, ui-monospace, 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New'",
+                codeFontSize: "large",
+            },
         }),
         mdx(),
         sitemap({
