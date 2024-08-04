@@ -1,12 +1,13 @@
 ---
+import { type ImageMetadata } from "astro";
 import CoverImage from "components/atoms/CoverImage";
-import BlogDetails from "components/molecules/BlogDetails";
-import type { BlogEntry } from "interfaces/BlogEntry";
+import BlogDetails, {
+    type BlogDetailsProps,
+} from "components/molecules/BlogDetails";
 
-type Props = Pick<
-    BlogEntry["data"],
-    "image" | "title" | "description" | "date"
->;
+interface Props extends BlogDetailsProps {
+    image?: ImageMetadata;
+}
 
 const { image, ...props } = Astro.props;
 ---
