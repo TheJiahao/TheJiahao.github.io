@@ -9,11 +9,9 @@ const getLastModified = ({
     id,
 }: CollectionEntry<"posts">): Date => {
     const filePath = `src/content/${collection}/${id}`;
-    const result = new Date(
-        execSync(`git log -1 --pretty="format:%cI" "${filePath}"`).toString(),
-    );
+    const result = execSync(`git --no-pager log "${filePath}"`).toString();
 
-    console.log(filePath, "lastmodified:", result);
+    console.log(result);
 
     return result;
 };
