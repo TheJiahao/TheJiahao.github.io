@@ -9,6 +9,13 @@ const fetchData = async (url: string): Promise<PreparedPage[]> => {
     return (await response.json()) as PreparedPage[];
 };
 
+/**
+ * Searches the keyword from search index in given language.
+ *
+ * @param keyword Keyword to search
+ * @param languageCode Language of pages to search
+ * @returns Pages matching the keyword
+ */
 const useSearch = (keyword: string, languageCode: string): Page[] => {
     const [pages, setPages] = useState<PreparedPage[]>([]);
 

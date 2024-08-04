@@ -37,6 +37,12 @@ const getCurrentHeading = (
     return current?.id;
 };
 
+/**
+ * Checks if the section is visible.
+ *
+ * @param id id of the section
+ * @returns {boolean} Whether the section is visible
+ */
 const useSectionVisibility = (id: string): boolean => {
     const [visible, setVisible] = useState<Set<string>>(new Set());
     const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
