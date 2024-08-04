@@ -1,3 +1,3 @@
-export interface MultiLingualPage {
+export interface MultilingualPage {
     languages: string[];
 }
