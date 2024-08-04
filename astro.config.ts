@@ -12,6 +12,8 @@ import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
 import { languageCodes } from "./src/localization";
+import { getLastModified } from "./src/utils/getLastModified";
+
 const { PUBLIC_PORT } = loadEnv(
     process.env.NODE_ENV || "dev",
     process.cwd(),
@@ -33,6 +35,7 @@ export default defineConfig({
         }),
         mdx(),
         sitemap({
+            lastmod: getLastModified("."),
             i18n: {
                 defaultLocale,
                 locales: Object.fromEntries(
