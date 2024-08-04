@@ -1,49 +1,34 @@
 ---
+import type { SEOProps } from "astro-seo";
 import { Schema } from "astro-seo-schema";
-import { getAbsoluteLocaleUrl, getRelativeLocaleUrl } from "astro:i18n";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import CardList from "components/organisms/CardList";
 import SearchBox from "components/organisms/SearchBox";
-import {
-    BLOG_IMAGE_PLACEHOLDER,
-    DEFAULT_LANGUAGE,
-    SITE_DESCRIPTION,
-    SITE_OWNER,
-    SITE_TITLE,
-} from "config";
+import { BLOG_IMAGE_PLACEHOLDER, SITE_OWNER } from "config";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
-import { languageCodes } from "localization";
-import getBlogs from "utils/getBlogs";
-import { getLanguageAlternates } from "utils/getLanguageAlternates";
+
 import { getTranslation } from "utils/getTranslation";
 
-const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
+interface Props extends Pick<SEOProps, "languageAlternates"> {
+    title: string;
+    description: string;
+    language: string;
+    blogs: ImageCardProps[];
+}
 
-const blogs: ImageCardProps[] = getBlogs()
-    .filter(({ data }) => data.language === language)
-    .map(({ data, slug }) => ({
-        ...data,
-        url: getRelativeLocaleUrl(language, `posts/${slug}`),
-    }))
-    .sort((a, b) => +b.date - +a.date);
+const { title, description, language, blogs, languageAlternates } = Astro.props;
 ---
 
-<NavigationBarLayout
-    title={SITE_TITLE[language]}
-    description={SITE_DESCRIPTION[language]}
-    languageAlternates={getLanguageAlternates(
-        Astro.url.pathname,
-        languageCodes,
-    )}
->
+<NavigationBarLayout {title} {description} {languageAlternates}>
     <Schema
         slot="head"
         item={{
             "@context": "https://schema.org",
             "@type": "WebSite",
-            name: SITE_TITLE[language],
-            description: SITE_DESCRIPTION[language],
+            name: title,
+            description,
             url: Astro.url.href,
             mainEntityOfPage: {
                 "@type": "WebPage",
