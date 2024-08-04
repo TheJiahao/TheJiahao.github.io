@@ -11,6 +11,7 @@ export interface Props extends Partial<Multilingual> {
     title: string;
     description?: string;
     image?: ImageMetadata;
+    noindex?: boolean;
 }
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
@@ -20,6 +21,7 @@ const {
     description,
     image = BLOG_IMAGE_PLACEHOLDER,
     languages = [language],
+    noindex,
 } = Astro.props;
 
 const languageAlternates = getLanguageAlternates(Astro.url.pathname, languages);
@@ -62,6 +64,7 @@ const languageAlternates = getLanguageAlternates(Astro.url.pathname, languages);
         ],
     }}
     {languageAlternates}
+    {noindex}
 />
 
 <ViewTransitions />
