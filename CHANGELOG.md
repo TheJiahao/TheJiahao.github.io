@@ -2,7 +2,6 @@
 
 ## [3.4.1](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.0...v3.4.1) (2024-08-05)
 
-
 ### Bug Fixes
 
 * 🐛 Named import ([9275fba](https://github.com/TheJiahao/TheJiahao.github.io/commit/9275fba33b98e14689ef01743184ea90f33b0402))
