@@ -30,19 +30,22 @@ export async function GET({ params, site }: APIContext) {
         items: await Promise.all(
             blogs.map(async ({ data, render, slug }) => {
                 const { title, description, date: pubDate } = data;
+
                 const { Content } = await render();
                 const postHTML = await renderHTML(Content);
+
+                const content = sanitizeHtml(postHTML, {
+                    allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+                        "img",
+                    ]),
+                });
 
                 return {
                     title,
                     description,
                     link: getAbsoluteLocaleUrl(language, `posts/${slug}`),
                     pubDate,
-                    content: sanitizeHtml(postHTML, {
-                        allowedTags: sanitizeHtml.defaults.allowedTags.concat([
-                            "img",
-                        ]),
-                    }),
+                    content,
                 };
             }),
         ),
