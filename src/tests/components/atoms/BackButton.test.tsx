@@ -8,7 +8,7 @@ describe("<BackButton/>", () => {
 
         expect(screen.getByRole("link")).toHaveAttribute(
             "href",
-            expect.stringMatching(/\/zh-cn?\/$/),
+            expect.stringMatching(/\/zh-cn\/?$/),
         );
     });
 
