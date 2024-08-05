@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.4.1](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.0...v3.4.1) (2024-08-05)
+
+
+### Bug Fixes
+
+* 🐛 Named import ([9275fba](https://github.com/TheJiahao/TheJiahao.github.io/commit/9275fba33b98e14689ef01743184ea90f33b0402))
+* **accessibility:** 🐛 Highlight `clickable` when tab selected ([a4d4395](https://github.com/TheJiahao/TheJiahao.github.io/commit/a4d4395194d67916592813388adc4916e36fe5d7))
+* **cover-image:** 🐛 Add explicit dimensions ([da76479](https://github.com/TheJiahao/TheJiahao.github.io/commit/da76479f27fca74a0a79ca9df8c2f9721c307a35))
+* **rss:** 🐛 Disable trailing slash ([533365b](https://github.com/TheJiahao/TheJiahao.github.io/commit/533365b3afcc0493c590dc51f979214a98a93a26)), closes [#209](https://github.com/TheJiahao/TheJiahao.github.io/issues/209)
+* **rss:** 🐛 MDX not rendered correctly ([2d7c375](https://github.com/TheJiahao/TheJiahao.github.io/commit/2d7c3754a40719cbea07baf723ace2a15360c2f9))
+* **search:** 🐛 Render search index with Astro container API ([de37861](https://github.com/TheJiahao/TheJiahao.github.io/commit/de37861d117f6115a7d48ec2e422abde8bf74c7b))
+* **test:** 🐛 🚨 Invalid regex ([bf9ca55](https://github.com/TheJiahao/TheJiahao.github.io/commit/bf9ca55042ce364e07d7366996d5ac64e508253c)), closes [#209](https://github.com/TheJiahao/TheJiahao.github.io/issues/209)
+
 ## [3.4.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.3.0...v3.4.0) (2024-08-04)
 
 ### Features
