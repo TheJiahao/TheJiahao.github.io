@@ -40,7 +40,6 @@ const blogs: BlogEntry[] = rawBlogs.map((blog) => ({
  *
  * @returns List of blog entries.
  */
-const getBlogs = (): BlogEntry[] => blogs;
+export const getBlogs = (): BlogEntry[] => blogs;
 
 export type { BlogData, BlogEntry };
-export default getBlogs;
