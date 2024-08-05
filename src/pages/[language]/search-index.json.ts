@@ -4,39 +4,46 @@ import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import fuzzysort from "fuzzysort";
 import type { PreparedPage } from "interfaces/PreparedPage";
 import { languageCodes } from "localization";
-import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
 import getBlogs from "utils/getBlogs";
+import { renderHTML } from "utils/renderHTML";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({ params: { language } }));
 }
 
-export function GET({ params }: APIContext) {
+export async function GET({ params }: APIContext) {
     const language = params.language;
-    const parser = new MarkdownIt();
 
     if (!language) {
         throw new TypeError("Invalid language");
     }
 
-    const blogs: PreparedPage[] = getBlogs()
-        .filter(({ data }) => data.language === language)
-        .map(({ data, slug, body }) => ({
-            title: data.title,
-            url: getRelativeLocaleUrl(data.language, `posts/${slug}`),
-            description: sanitizeHtml(parser.render(body), {
-                allowedTags: sanitizeHtml.defaults.allowedTags.filter(
-                    (tag) => tag !== "a",
-                ),
-            }),
-            image: data.image ?? BLOG_IMAGE_PLACEHOLDER,
-        }))
-        .map((page) => ({
-            ...page,
-            title: fuzzysort.prepare(page.title),
-            description: fuzzysort.prepare(page.description),
-        }));
+    const blogs: Promise<PreparedPage[]> = Promise.all(
+        getBlogs()
+            .filter(({ data }) => data.language === language)
+            .map(async ({ data, slug, render }) => {
+                const { title, image = BLOG_IMAGE_PLACEHOLDER } = data;
 
-    return new Response(JSON.stringify(blogs));
+                const { Content } = await render();
+                const postHTML = await renderHTML(Content);
+
+                const description = fuzzysort.prepare(
+                    sanitizeHtml(postHTML, {
+                        allowedTags: sanitizeHtml.defaults.allowedTags.filter(
+                            (tag) => tag !== "a",
+                        ),
+                    }),
+                );
+
+                return {
+                    title: fuzzysort.prepare(title),
+                    url: getRelativeLocaleUrl(data.language, `posts/${slug}`),
+                    description,
+                    image,
+                };
+            }),
+    );
+
+    return new Response(JSON.stringify(await blogs));
 }
