@@ -20,7 +20,7 @@ interface LanguageSelectorProps extends ListboxButtonProps {
 const LanguageSelector = ({
     defaultLanguage,
     languages = DEFAULT_LANGUAGES,
-    slug = "/",
+    slug,
     ...props
 }: LanguageSelectorProps) => {
     const [disabled, setDisabled] = useState(true);

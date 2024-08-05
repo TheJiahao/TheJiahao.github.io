@@ -59,6 +59,7 @@ export default defineConfig({
     server: {
         port: Number(PUBLIC_PORT) || 4321,
     },
+    trailingSlash: "never",
     i18n: {
         defaultLocale,
         locales: languageCodes,

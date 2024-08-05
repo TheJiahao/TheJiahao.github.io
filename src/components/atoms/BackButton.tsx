@@ -13,7 +13,7 @@ const BackButton = ({
 }: BackButtonProps) => {
     return (
         <a
-            href={getRelativeLocaleUrl(language, "/")}
+            href={getRelativeLocaleUrl(language)}
             text="secondary lg"
             clickable
             card

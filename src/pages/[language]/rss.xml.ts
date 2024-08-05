@@ -27,7 +27,7 @@ export function GET({ params, site }: APIContext) {
     return rss({
         title: SITE_TITLE[language],
         description: SITE_DESCRIPTION[language],
-        site: getAbsoluteLocaleUrl(language, "/"),
+        site: getAbsoluteLocaleUrl(language),
         items: blogs.map(({ data, slug, body }) => ({
             title: data.title,
             description: data.description,
