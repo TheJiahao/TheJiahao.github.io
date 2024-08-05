@@ -10,7 +10,7 @@
                 "action": "openExternally",
                 "pattern": "http://localhost:([0-9]+)",
                 "uriFormat": "http://localhost:%s"
-            },
+            }
         },
         {
             "type": "node",
