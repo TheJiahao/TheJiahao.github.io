@@ -1,3 +1,4 @@
+import { getRelativeLocaleUrl } from "astro:i18n";
 import type { Page } from "interfaces/Page";
 import type { PreparedPage } from "interfaces/PreparedPage";
 import { useEffect, useState } from "react";
@@ -20,7 +21,7 @@ const useSearch = (keyword: string, languageCode: string): Page[] => {
     const [pages, setPages] = useState<PreparedPage[]>([]);
 
     useEffect(() => {
-        fetchData(`/${languageCode}/search-index.json`)
+        fetchData(getRelativeLocaleUrl(languageCode, "/search-index.json"))
             .then((data) => {
                 setPages(data);
             })
