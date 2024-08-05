@@ -1,5 +1,4 @@
 import { getCollection } from "astro:content";
-import type { BlogData } from "interfaces/BlogData";
 import type { BlogEntry, RawBlogEntry } from "interfaces/BlogEntry";
 import { getAlternates } from "utils/getAlternates";
 import { getLastModified } from "./getLastModified";
@@ -41,5 +40,3 @@ const blogs: BlogEntry[] = rawBlogs.map((blog) => ({
  * @returns List of blog entries.
  */
 export const getBlogs = (): BlogEntry[] => blogs;
-
-export type { BlogData, BlogEntry };

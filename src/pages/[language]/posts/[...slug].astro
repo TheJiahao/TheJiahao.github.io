@@ -1,6 +1,7 @@
 ---
 import BlogLayout from "../../../layouts/BlogLayout.astro";
-import { getBlogs, type BlogEntry } from "../../../utils/getBlogs";
+import { getBlogs } from "../../../utils/getBlogs";
+import { type BlogEntry } from "interfaces/BlogEntry";
 
 export function getStaticPaths() {
     const posts = getBlogs();
