@@ -2,7 +2,7 @@ import LanguageSelector from "components/molecules/LanguageSelector";
 import type { Multilingual } from "interfaces/Multilingual";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { LuCalendar } from "react-icons/lu";
-import formatDate from "utils/formatDate";
+import { formatDate } from "utils/formatDate";
 
 interface BlogDetailsProps extends Partial<Multilingual & TranslatedElement> {
     title: string;

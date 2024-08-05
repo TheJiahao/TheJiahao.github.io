@@ -1,5 +1,5 @@
+import { formatDate } from "utils/formatDate";
 import { expect, test } from "vitest";
-import formatDate from "../../utils/formatDate";
 
 test("date is in YYYY-MM-DD format", () => {
     const date = new Date("2021-01-01T23:44:55.000Z");
