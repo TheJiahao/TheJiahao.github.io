@@ -5,7 +5,7 @@ import fuzzysort from "fuzzysort";
 import type { PreparedPage } from "interfaces/PreparedPage";
 import { languageCodes } from "localization";
 import sanitizeHtml from "sanitize-html";
-import getBlogs from "utils/getBlogs";
+import { getBlogs } from "utils/getBlogs";
 import { renderHTML } from "utils/renderHTML";
 
 export function getStaticPaths() {
