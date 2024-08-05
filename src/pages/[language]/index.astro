@@ -4,7 +4,7 @@ import type { ImageCardProps } from "components/molecules/ImageCard";
 import { DEFAULT_LANGUAGE, SITE_DESCRIPTION, SITE_TITLE } from "config";
 import { languageCodes as languages } from "localization";
 import { getBlogs } from "utils/getBlogs";
-import HomeLayout from "../../layouts/HomeLayout.astro";
+import HomeLayout from "layouts/HomeLayout.astro";
 
 export function getStaticPaths() {
     return languages.map((language) => ({

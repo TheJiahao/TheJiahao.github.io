@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
+import BackButton from "components/atoms/BackButton";
 import { describe, expect, test } from "vitest";
-import BackButton from "../../../components/atoms/BackButton";
 
 describe("<BackButton/>", () => {
     test("links to homepage", () => {

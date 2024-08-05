@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 import type { BlogEntry, RawBlogEntry } from "interfaces/BlogEntry";
 import { getAlternates } from "utils/getAlternates";
-import { getLastModified } from "./getLastModified";
+import { getLastModified } from "utils/getLastModified";
 
 const rawBlogs: RawBlogEntry[] = (
     await getCollection(

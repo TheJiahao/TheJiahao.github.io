@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
+import type { ImageCardProps } from "components/molecules/ImageCard";
 import CardList from "components/organisms/CardList";
 import { beforeEach, describe, expect, test } from "vitest";
-import type { ImageCardProps } from "../../../components/molecules/ImageCard";
 
 describe("<CardList/>", () => {
     const cards: ImageCardProps[] = [
