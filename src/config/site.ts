@@ -15,10 +15,8 @@ const SITE_LICENSE = {
 };
 const SITE_START_YEAR = 2020;
 const SITE_SOURCE = "https://github.com/TheJiahao/TheJiahao.github.io";
-const GOOGLE_ANALYTICS_ID = "G-6QM185HRTR";
 
 export {
-    GOOGLE_ANALYTICS_ID,
     SITE_DESCRIPTION,
     SITE_LICENSE,
     SITE_OWNER,
