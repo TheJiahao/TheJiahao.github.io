@@ -13,14 +13,6 @@ jobs:
 
     uses: ./.github/workflows/ci.yml
 
-  check:
-    name: Check branch for CD
-    needs: ci
-    runs-on: ubuntu-latest
-    if: ${{ github.ref_name }} == main
-    steps:
-      - run: echo "Continuing to CD"
-
   cd:
     name: CD
     needs: ci
