@@ -20,7 +20,7 @@
 
 ## Fullstack harjoitustyö
 
-- [Tuntikirjanpito](https://helsinkifi-my.sharepoint.com/:x:/g/personal/jiahao_ad_helsinki_fi/EfxlAGlsZ-1OqF8D3fEOavsBbZQ-u6v1JAbhDKakP0KQ9Q?e=kw9ZnQ)
+- [Tuntikirjanpito](https://helsinkifi-my.sharepoint.com/:x:/g/personal/jiahao_ad_helsinki_fi/EfxlAGlsZ-1OqF8D3fEOavsBr65ZqqzE_1g_co9KLDwQ8Q)
 
 Projektissa on hyödynnetty ChatGPT:tä ja GitHub Copilotia debuggaukseen, koodin generointiin ja teknisten ratkaisujen arviointiin.
 
