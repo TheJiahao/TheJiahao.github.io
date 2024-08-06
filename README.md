@@ -31,6 +31,7 @@ Projektissa on hyödynnetty ChatGPT:tä ja GitHub Copilotia debuggaukseen, koodi
 - [Architecture](/docs/architecture.md)
 - [Testing](/docs/testing.md)
 - [Conventions](/docs/conventions.md)
+- [Configuration](/docs/configuration.md)
 
 ## License
 
