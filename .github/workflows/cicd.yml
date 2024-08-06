@@ -18,6 +18,8 @@ jobs:
     needs: ci
     runs-on: ubuntu-latest
     if: ${{ github.ref_name }} == main
+    steps:
+      - run: echo "Continuing to CD"
 
   cd:
     name: CD
