@@ -4,7 +4,19 @@
 [![codecov](https://codecov.io/gh/TheJiahao/TheJiahao.github.io/graph/badge.svg?token=M48R27ULMT)](https://codecov.io/gh/TheJiahao/TheJiahao.github.io)
 [![Vercel](https://img.shields.io/badge/Preview-light--green?logo=vercel&logoColor=white&label=Vercel&labelColor=black)](https://thejiahao-staging.vercel.app/zh-cn)
 
-This repository contains the source code of my [blog](https://thejiahao.github.io).
+[Blog](https://thejiahao.github.io) site built wit Astro + React + UnoCSS.
+
+## Main features
+
+- Multilanguage
+- Responsive mobile and desktop layout
+- RSS
+- JSON-LD schema
+- Blog search
+- Dark/light themes
+- Table of contents with highlight
+- Comments
+- Search engine indexing workflows
 
 ## Fullstack harjoitustyö
 
