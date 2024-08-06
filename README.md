@@ -27,6 +27,7 @@ Projektissa on hyödynnetty ChatGPT:tä ja GitHub Copilotia debuggaukseen, koodi
 ## Documentation
 
 - [Backlog](https://github.com/users/TheJiahao/projects/2)
+- [Installation](/docs/installation.md)
 - [Architecture](/docs/architecture.md)
 - [Testing](/docs/testing.md)
 - [Conventions](/docs/conventions.md)
