@@ -23,7 +23,7 @@ jobs:
 
   cd:
     name: CD
-    needs: check
+    needs: ci
     secrets:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
     concurrency:

@@ -9,8 +9,8 @@ on:
 jobs:
   build:
     name: Build
+    if: ${{ github.ref_name }} == main
     runs-on: ubuntu-latest
-    environment: production
     env:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
 
