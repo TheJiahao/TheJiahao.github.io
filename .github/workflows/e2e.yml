@@ -12,7 +12,7 @@ jobs:
         shardIndex: [1, 2, 3, 4, 5, 6, 7, 8]
         shardTotal: [8]
 
-    container: mcr.microsoft.com/playwright:v1.45.3-jammy
+    container: mcr.microsoft.com/playwright:v1.46.0-jammy
     environment: test
 
     steps:
