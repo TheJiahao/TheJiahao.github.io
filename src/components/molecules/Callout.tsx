@@ -61,16 +61,7 @@ const Callout = ({
                     <LuChevronDown className="group-data-[open]:rotate-180 transition" />
                 )}
             </DisclosureButton>
-            <DisclosurePanel
-                static={!collapsible}
-                transition={true}
-                duration-200
-                ease-in-out
-                origin-top
-                className="transition-all data-[leave]:scale-y-0 data-[leave]:overflow-hidden"
-            >
-                {children}
-            </DisclosurePanel>
+            <DisclosurePanel static={!collapsible}>{children}</DisclosurePanel>
         </Disclosure>
     );
 };
