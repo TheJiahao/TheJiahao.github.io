@@ -33,6 +33,7 @@ const Callout = ({
             bg-opacity-10
             card
             p-lg
+            my-5
         >
             <DisclosureButton
                 className="group"
