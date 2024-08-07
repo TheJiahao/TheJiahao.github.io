@@ -7,6 +7,17 @@
         "ms-playwright.playwright",
         "antfu.unocss",
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "github.vscode-pull-request-github",
+        "github.vscode-github-actions",
+        "tamasfe.even-better-toml",
+        "redhat.vscode-yaml",
+        "christian-kohler.path-intellisense",
+        "bierner.markdown-mermaid",
+        "bierner.markdown-footnotes",
+        "yzhang.markdown-all-in-one",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples"
     ]
 }
