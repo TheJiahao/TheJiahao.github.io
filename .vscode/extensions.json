@@ -18,6 +18,8 @@
         "bierner.markdown-footnotes",
         "yzhang.markdown-all-in-one",
         "visualstudioexptteam.vscodeintellicode",
-        "visualstudioexptteam.intellicode-api-usage-examples"
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "davidanson.vscode-markdownlint",
+        "mhutchie.git-graph"
     ]
 }
