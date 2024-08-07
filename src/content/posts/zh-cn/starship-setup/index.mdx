@@ -52,6 +52,8 @@ cargo install starship --locked
 此外还需要将 Cargo 编译的二进制文件添加到 `PATH`，在 `~/.bashrc`（Bash）或 `~/.zshenv`（Zsh）中添加：
 
 ```sh
+# ~/.zshenv
+
 export PATH = "$HOME/.cargo/bin:$PATH"
 ```
 
@@ -86,8 +88,8 @@ scoop install jetbrainsmono-nf-mono
 
 <Callout type="info" title="字体后缀" open={false} collapsible={true} client:idle>
 
--   `nf`：Nerd Fonts 字体
--   `mono`：等宽字体
+- `nf`：Nerd Fonts 字体
+- `mono`：等宽字体
 
 具体含义可参考 Nerd Fonts 的 [README](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#features)。
 
@@ -107,6 +109,8 @@ scoop install jetbrainsmono-nf-mono
 Nushell 的情况下需要在 `$nu.env-path` 环境文件中添加以下内容来生成 Starship 初始化脚本：
 
 ```nu
+# env.nu
+
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
 ```
@@ -114,6 +118,8 @@ starship init nu | save -f ~/.cache/starship/init.nu
 之后还需要在 `$nu.config-path` 配置文件中加载脚本：
 
 ```nu
+# config.nu
+
 use ~/.cache/starship/init.nu
 ```
 
@@ -124,15 +130,38 @@ use ~/.cache/starship/init.nu
 在 `~/.zshrc` 中添加：
 
 ```sh
+# .zshrc
+
 eval "$(starship init zsh)"
 ```
 
 ### Starship 配置
 
-默认情况下，Starship 的配置文件位于 `~/.config/starship.toml`。
-Starship 提供了许多预设主题。
+默认情况下，Starship 的 [配置文件](http://localhost:4321/zh-cn) 位于 `~/.config/starship.toml`。
+如果不想从零开始配置，Starship 也提供了许多 [预设主题](https://starship.rs/zh-CN/presets/)。
+选好主题后运行以下命令即可使用：
 
-[Nerd Font](https://www.nerdfonts.com/cheat-sheet) 的网站里可以按关键词搜索符号。
+```sh
+starship preset 主题-名称 -o ~/.config/starship.toml
+```
+
+<Callout title="注意" type="warning">
+    此命令会覆盖当前配置文件！
+</Callout>
+
+因为组件太多会拖慢 Shell，所以笔者推荐使用简单的主题，例如 [Bracketed Segments](https://starship.rs/zh-CN/presets/bracketed-segments)。
+![Bracketed Segments 主题，图片来自 Starship 文档](https://starship.rs/presets/img/bracketed-segments.png)
+
+### 自定义组件
+
+本段将介绍几个笔者使用的组件。
+如果想用其他图标，可以在 [Nerd Font](https://www.nerdfonts.com/cheat-sheet) 的网站上查找并复制到配置文件中。
+
+#### 用户名
+
+#### 主机名
+
+#### 路径名
 
 ## 跨设备同步
 
