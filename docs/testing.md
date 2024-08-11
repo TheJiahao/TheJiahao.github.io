@@ -11,24 +11,24 @@ Layouts and pages are covered by E2E tests.
 
 Run unit tests:
 
-```console
+```sh
 pnpm run test
 ```
 
 Generate coverage report to `/coverage`:
 
-```console
+```sh
 pnpm run coverage
 ```
 
 Run e2e tests:
 
-```console
+```sh
 pnpm run test:e2e
 ```
 
 Run e2e test in Playwright UI:
 
-```console
+```sh
 pnpm run playwright:open
 ```
