@@ -10,12 +10,12 @@ tags:
     - Zsh
     - Nushell
 description: >-
-    Starship 是跨 shell 的主题管理器，其支持 Zsh、Nushell、PowerShell 等。
+    Starship 是一款开源的 shell 主题管理器，其支持 Zsh、Nushell、PowerShell 等。
     本文介绍了如何配置 Starship，并分享了笔者使用的主题。
 image: img/starship_logo.svg
 hidden: false
 comments: true
-draft: true
+draft: false
 sitemap:
     disable: false
 
@@ -28,12 +28,14 @@ links:
 
 import Callout from "components/molecules/Callout";
 
-## 安装 Starship
+## 安装
+
+### Starship
 
 Starship [官网](https://starship.rs/zh-CN/guide/) 上列出了不同安装方式。
 本文仅介绍其中两种。
 
-### Windows
+#### Windows
 
 用 Scoop 安装：
 
@@ -41,7 +43,7 @@ Starship [官网](https://starship.rs/zh-CN/guide/) 上列出了不同安装方�
 scoop install starship
 ```
 
-### Linux/macOS
+#### Linux/macOS
 
 用 Cargo 编译并安装：
 
@@ -57,9 +59,7 @@ cargo install starship --locked
 export PATH = "$HOME/.cargo/bin:$PATH"
 ```
 
-## 配置
-
-### 安装 Nerd Font
+### Nerd Font
 
 Starship 的许多主题都需要 [Nerd Font](https://www.nerdfonts.com/) 中的符号。
 所以需要安装带有 Nerd Font 补丁的[字体](https://www.nerdfonts.com/font-downloads)。
@@ -99,6 +99,8 @@ scoop install jetbrainsmono-nf-mono
 
 从 Nerd Fonts [官网](https://www.nerdfonts.com/font-downloads) 上下载心仪的字体，然后将其中字体文件解压到 `~/.local/share/fonts` 即可 [^ubuntu-font-install]。
 带 `Mono` 后缀的为等宽字体。
+
+## 配置
 
 ### Shell 配置
 
@@ -152,17 +154,103 @@ starship preset 主题-名称 -o ~/.config/starship.toml
 因为组件太多会拖慢 Shell，所以笔者推荐使用简单的主题，例如 [Bracketed Segments](https://starship.rs/zh-CN/presets/bracketed-segments)。
 ![Bracketed Segments 主题，图片来自 Starship 文档](https://starship.rs/presets/img/bracketed-segments.png)
 
-### 自定义组件
+## 自定义
 
-本段将介绍几个笔者使用的组件。
-如果想用其他图标，可以在 [Nerd Font](https://www.nerdfonts.com/cheat-sheet) 的网站上查找并复制到配置文件中。
+显然，读到这里的读者并不满足于预设主题，所以本段会更深入地介绍 Starship 的配置。
 
-#### 用户名
+### 提示符格式
 
-#### 主机名
+Starship 的提示符格式由 `starship.toml` 中的 `format` 字段决定，默认显示所有组件 [^starship-format]。
+例如以下配置对应的提示符为 `用户名 主机名 路径名`。
 
-#### 路径名
+```toml
+# starship.toml
 
-## 跨设备同步
+format = "$username $hostname $directory"
+```
+
+其中组件的格式为 `$组件名称`。
+此外，组件很多时可以使用多行字符串 `"""` 和 `\` 来忽略换行：
+
+```toml
+# starship.toml
+
+format = """
+$username \
+$hostname \
+$directory"""
+```
+
+<Callout type="warning" title="注意">
+`format` 必须在所有组件之前定义，否则其会被当作组件的 `format` 字段 [^toml-table]。
+
+```toml
+# starship.toml
+
+format = ...
+
+[组件1]
+...
+
+[组件2]
+...
+```
+
+</Callout>
+
+### 组件格式
+
+Starship 的组件通常遵循以下格式：
+
+```toml
+# starship.toml
+
+[组件名称]
+disable = false
+format = "[你好]($style) $symbol"
+symbol = "🌐"
+style = "bold green"
+```
+
+字段含义：
+
+- `disable`：是否禁用组件，`false` 为启用
+- `format`：组件格式，类似前面的 `format` 字段
+- `symbol`：组件对应的符号，可在 `format` 中作为 `$symbol` 使用。
+    如果想添加图标，可以使用 Emoji 或者在 [Nerd Font](https://www.nerdfonts.com/cheat-sheet) 网站里查找符号。
+- `style`：内容样式，可在 `format` 中作为 `[内容]($style)` 使用。
+    也可以直接使用 `[内容](bold green)`，具体可参考 [文档](https://starship.rs/zh-CN/config/#%E6%96%87%E6%9C%AC%E7%BB%84)。
+
+部分组件的配置可能会有所不同，例如 `username` 中 `style` 被 `style_user` 和 `style_root` 取代。
+
+<Callout type="info" title="组件之间的空格">
+
+默认情况下，组件之间的空格分散在各个组件的 `format` 字段中，但笔者推荐在全局 `format` 字段中添加空格，以便集中管理。
+
+</Callout>
+
+## Starship 组件推荐
+
+### 必要
+
+- [`directory`](https://starship.rs/config/#directory)：当前目录
+- [`character`](https://starship.rs/config/#character)：命令提示符，可以根据前一个命令的状态改变样式
+- [`git_branch`](https://starship.rs/config/#git-branch)：Git 分支
+- [`git_state`](https://starship.rs/config/#git-state)：Git 状态，例如本地落后提交数
+
+### 可选
+
+- [`username`](https://starship.rs/config/#username)：用户名
+- [`hostname`](https://starship.rs/config/#hostname)：主机名
+- [`cmd_duration`](https://starship.rs/config/#command-duration)：命令运行时间，可以在命令运行完后显示通知
+- 各种编程语言对应的组件，可显示版本、虚拟环境等。
+
+其他组件可以从 Starship 的 [文档](https://starship.rs/zh-CN/config/) 上找到。
+由于中文文档翻译不全，笔者建议参考 [英文版](https://starship.rs/config/)。
+当然，也可以直接参与 Starship 文档的 [翻译工作](https://starship.rs/zh-CN/guide/#%F0%9F%A4%9D-%E8%B4%A1%E7%8C%AE)。
 
 [^ubuntu-font-install]: How do I install fonts? https://askubuntu.com/a/3706
+
+[^starship-format]: 默认提示符格式，Starship，https://starship.rs/zh-CN/config/#%E9%BB%98%E8%AE%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E6%A0%BC%E5%BC%8F
+
+[^toml-table]: TOML v1.0.0，https://toml.io/en/v1.0.0#table
