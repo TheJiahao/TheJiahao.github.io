@@ -18,7 +18,6 @@ const NavigationMenu = ({
 }: NavigationMenuProps) => (
     <Menu
         aria-label={getTranslation(language).navigationLinks}
-        itemClassName="clickable p-2 rounded-md"
         text-secondary
         {...props}
     >
@@ -32,6 +31,9 @@ const NavigationMenu = ({
                 aria-current={currentURL === link.url}
                 align-icon
                 gap-lg
+                clickable
+                p-2
+                rounded-md
             >
                 {cloneElement(link.icon, {
                     "aria-hidden": true,
