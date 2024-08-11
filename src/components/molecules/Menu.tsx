@@ -11,14 +11,12 @@ interface MenuProps
         AriaAttributes {
     /** Child component direction, defaults to column. */
     direction?: "row" | "col";
-    itemClassName?: string;
 }
 
 const Menu = ({
     children,
     role = "menu",
     direction = "col",
-    itemClassName,
     ...props
 }: MenuProps) => (
     <ul
@@ -31,9 +29,7 @@ const Menu = ({
         text-xl
     >
         {Children.map(children, (child) => (
-            <li role="menuitem" className={itemClassName}>
-                {child}
-            </li>
+            <li role="menuitem">{child}</li>
         ))}
     </ul>
 );
