@@ -2,7 +2,6 @@
 
 ## [3.4.2](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.1...v3.4.2) (2024-08-11)
 
-
 ### Bug Fixes
 
 * **ci:** 🐛 👷 Add step ([a959810](https://github.com/TheJiahao/TheJiahao.github.io/commit/a9598101271576b5f8ca87ce405fee75fd156424))
@@ -12,7 +11,6 @@
 * **ci:** 🐛 👷 Quote string ([1e58ce3](https://github.com/TheJiahao/TheJiahao.github.io/commit/1e58ce360a8744cf52aa1bf82131026ff792aee7))
 * **ci:** 🐛 👷 Remove brackets ([fec7c5b](https://github.com/TheJiahao/TheJiahao.github.io/commit/fec7c5b96cac2099fbcf0aafeeb1a4cf856252eb))
 * **ci:** 🐛 👷 Run build only on main ([4e27d83](https://github.com/TheJiahao/TheJiahao.github.io/commit/4e27d83f75c53c4dabbea4b334ccd303687f98a5))
-
 
 ### Reverts
 
