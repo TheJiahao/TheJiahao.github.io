@@ -1,0 +1,96 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+$username\
+$hostname \
+$directory \
+$git_branch\
+$git_status\
+$java\
+$python\
+$conda\
+$cmd_duration\
+
+$line_break\
+$character\
+"""
+
+add_newline = false
+
+[cmd_duration]
+    min_time = 2000
+    style = "fg:white"
+    format = "[ ⏱️ $duration]($style)"
+    show_notifications = false
+    min_time_to_notify = 60_000
+
+[character]
+    disabled = false
+    format = "$symbol "
+    error_symbol = "[✗](fg:red)"
+    success_symbol = "[➜](fg:green)"
+
+[username]
+    show_always = true
+    style_user = "bold white"
+    style_root = "bold yellow"
+    format = "[$user]($style)"
+
+[hostname]
+    disabled = false
+    ssh_only = false
+    ssh_symbol = "🌏 "
+    style = "bold green"
+    format = "[@$hostname]($style)"
+    trim_at = ".companyname.com"
+
+[directory]
+    style = "cyan bold"
+    format = "[$path]($style)[$read_only]($read_only_style)"
+    truncation_length = 3
+
+    [directory.substitutions]
+        "Documents" = "󰈙"
+        "Downloads" = ""
+        "Music" = ""
+        "Pictures" = ""
+
+[git_branch]
+    symbol = ""
+    style = "bold purple"
+    format = '\[[$symbol $branch]($style)\]'
+
+[git_status]
+    style = "red bold"
+    format = '([\[$all_status$ahead_behind\]]($style))'
+    conflicted = ""
+    ahead = "⇡${count}"
+    diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+    behind = "⇣${count}"
+    up_to_date = "✓"
+    untracked = "?"
+    stashed = "󰏗"
+    modified = ""
+    staged = "+"
+    renamed = "󰘎"
+    deleted = "✘"
+
+[fill]
+    symbol = " "
+
+[java]
+    symbol = ""
+    style = "red"
+    version_format = "v$raw"
+    format = '\[[$symbol ($version)]($style)\]'
+
+[python]
+    symbol = ""
+    style = "yellow bold"
+    version_format = "v$raw"
+    format = '\[[$symbol $pyenv_prefix($version)( \($virtualenv\))]($style)\]'
+
+[conda]
+    style = "green bold"
+    symbol = "🅒"
+    format = '\[[$symbol $environment]($style)\]'
