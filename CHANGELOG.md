@@ -1,5 +1,25 @@
 # Changelog
 
+## [3.4.2](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.1...v3.4.2) (2024-08-11)
+
+
+### Bug Fixes
+
+* **ci:** 🐛 👷 Add step ([a959810](https://github.com/TheJiahao/TheJiahao.github.io/commit/a9598101271576b5f8ca87ce405fee75fd156424))
+* **ci:** 🐛 👷 Build on no environment ([117aa54](https://github.com/TheJiahao/TheJiahao.github.io/commit/117aa5455d283457dad88f362c68d67e36ff845c))
+* **ci:** 🐛 👷 Extract branch check to job ([1640b30](https://github.com/TheJiahao/TheJiahao.github.io/commit/1640b307d23401b7a98f179fed68e3db1e94e5aa))
+* **ci:** 🐛 👷 Move branch check to workflow call ([e8b97b4](https://github.com/TheJiahao/TheJiahao.github.io/commit/e8b97b44673a37341549ad4f8896ab8d500ed6bd))
+* **ci:** 🐛 👷 Quote string ([1e58ce3](https://github.com/TheJiahao/TheJiahao.github.io/commit/1e58ce360a8744cf52aa1bf82131026ff792aee7))
+* **ci:** 🐛 👷 Remove brackets ([fec7c5b](https://github.com/TheJiahao/TheJiahao.github.io/commit/fec7c5b96cac2099fbcf0aafeeb1a4cf856252eb))
+* **ci:** 🐛 👷 Run build only on main ([4e27d83](https://github.com/TheJiahao/TheJiahao.github.io/commit/4e27d83f75c53c4dabbea4b334ccd303687f98a5))
+
+
+### Reverts
+
+* "ci(debug): 👷 Print branch name" ([da3f99a](https://github.com/TheJiahao/TheJiahao.github.io/commit/da3f99a9fb1a38effe54c4debd14530ebd2778f7))
+* "feat(callout): ✨ Add simple animations" ([b79a27c](https://github.com/TheJiahao/TheJiahao.github.io/commit/b79a27c1ba21b00f9b4b9b2972beed1c2b3bf545))
+* "refactor: ♻️ Make mobile navigation bar sticky" ([dceb5e8](https://github.com/TheJiahao/TheJiahao.github.io/commit/dceb5e871bb5b6157061a5f60385d6b48b50bb87))
+
 ## [3.4.1](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.0...v3.4.1) (2024-08-05)
 
 ### Bug Fixes
