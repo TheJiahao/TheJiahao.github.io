@@ -17,6 +17,7 @@
 - Table of contents with highlight
 - Comments
 - Search engine indexing workflows
+- $\LaTeX$ equations support
 
 ## Fullstack harjoitustyö
 
