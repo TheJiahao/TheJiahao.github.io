@@ -1,8 +1,10 @@
 # Jiahao's blog
 
-[![CI/CD](https://github.com/TheJiahao/TheJiahao.github.io/actions/workflows/cicd.yml/badge.svg)](https://github.com/TheJiahao/TheJiahao.github.io/actions/workflows/cicd.yml)
-[![codecov](https://codecov.io/gh/TheJiahao/TheJiahao.github.io/graph/badge.svg?token=M48R27ULMT)](https://codecov.io/gh/TheJiahao/TheJiahao.github.io)
-[![Vercel](https://img.shields.io/badge/Preview-light--green?logo=vercel&logoColor=white&label=Vercel&labelColor=black)](https://thejiahao-staging.vercel.app/zh-cn)
+[![GitHub deployments](https://img.shields.io/github/deployments/TheJiahao/TheJiahao.github.io/production?style=for-the-badge&logo=github&label=Production)](https://thejiahao.github.io)
+[![Vercel](https://img.shields.io/badge/Preview-light--green?style=for-the-badge&logo=vercel&logoColor=white&label=Vercel&labelColor=black)](https://thejiahao-staging.vercel.app)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/TheJiahao/TheJiahao.github.io/cicd.yml?style=for-the-badge&label=CI%2FCD&logo=github-actions)](https://github.com/TheJiahao/TheJiahao.github.io/actions/workflows/cicd.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/TheJiahao/TheJiahao.github.io?style=for-the-badge&logo=codecov)
+](https://codecov.io/gh/TheJiahao/TheJiahao.github.io)
 
 [Blog](https://thejiahao.github.io) site built wit Astro + React + UnoCSS.
 
