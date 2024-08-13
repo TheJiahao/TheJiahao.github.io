@@ -46,6 +46,7 @@ const LanguageSelector = ({
                 aria-label={getTranslation(defaultLanguage).selectLanguage}
                 un-disabled="text-disabled"
                 role="combobox"
+                className="group"
                 {...props}
                 clickable
                 p-2
