@@ -67,4 +67,8 @@ const languageAlternates = getLanguageAlternates(Astro.url.pathname, languages);
     {noindex}
 />
 
-<ViewTransitions />
+<style>
+    @view-transition {
+        navigation: auto;
+    }
+</style>
