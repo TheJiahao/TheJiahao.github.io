@@ -1,3 +1,5 @@
+import { renderMarkdown } from "utils/renderHTML";
+
 interface DetailsProps {
     title: string;
     description?: string;
@@ -9,7 +11,14 @@ const Details = ({ title, description }: DetailsProps) => (
             {title}
         </h1>
 
-        {description && <p text="secondary xl">{description}</p>}
+        {description && (
+            <p
+                text="secondary xl"
+                dangerouslySetInnerHTML={{
+                    __html: renderMarkdown(description),
+                }}
+            />
+        )}
     </div>
 );
 
