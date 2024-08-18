@@ -1,5 +1,5 @@
 import parse from "html-react-parser";
-import { renderMarkdown } from "utils/renderHTML";
+import { renderMarkdown } from "utils/renderMarkdown";
 interface DetailsProps {
     title: string;
     description?: string;
