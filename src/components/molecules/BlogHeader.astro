@@ -24,7 +24,7 @@ const { image, date, language, languages, slug, ...props } = Astro.props;
             <DateComponent {date} />
 
             {
-                language && languages.length > 1 && (
+                languages.length > 1 && (
                     <LanguageSelector
                         defaultLanguage={language}
                         {languages}
