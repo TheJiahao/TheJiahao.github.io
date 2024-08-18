@@ -1,18 +1,38 @@
 ---
 import { type ImageMetadata } from "astro";
 import CoverImage from "components/atoms/CoverImage";
+import DateComponent from "components/atoms/DateComponent";
 import Details, { type DetailsProps } from "components/molecules/Details";
+import LanguageSelector from "components/molecules/LanguageSelector";
+import type { Multilingual } from "interfaces/Multilingual";
+import type { TranslatedElement } from "interfaces/TranslatedElement";
 
-interface Props extends DetailsProps {
+interface Props extends DetailsProps, Multilingual, TranslatedElement {
     image?: ImageMetadata;
+    date: Date;
+    slug: string;
 }
 
-const { image, ...props } = Astro.props;
+const { image, date, language, languages, slug, ...props } = Astro.props;
 ---
 
 <header flex="~ col" gap-lg>
     <CoverImage image={image} alt="" />
     <div px-4 lg:px-8>
         <Details {...props} client:idle />
+        <div flex="~ row" gap-4>
+            <DateComponent {date} />
+
+            {
+                language && languages.length > 1 && (
+                    <LanguageSelector
+                        defaultLanguage={language}
+                        {languages}
+                        {slug}
+                        client:idle
+                    />
+                )
+            }
+        </div>
     </div>
 </header>
