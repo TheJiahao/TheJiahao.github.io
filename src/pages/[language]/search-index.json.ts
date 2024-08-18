@@ -6,7 +6,7 @@ import type { PreparedPage } from "interfaces/PreparedPage";
 import { languageCodes } from "localization";
 import sanitizeHtml from "sanitize-html";
 import { getBlogs } from "utils/getBlogs";
-import { renderComponent } from "utils/renderHTML";
+import { renderComponent } from "utils/renderComponent";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({ params: { language } }));
