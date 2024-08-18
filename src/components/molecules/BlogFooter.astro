@@ -1,11 +1,10 @@
 ---
 import { DEFAULT_LANGUAGE, SITE_LICENSE } from "config";
 import type { License } from "interfaces/License";
-import MarkdownIt from "markdown-it";
 import { LuCopyright, LuFileEdit } from "react-icons/lu";
-import sanitizeHtml from "sanitize-html";
 import { formatDate } from "utils/formatDate";
 import { getTranslation } from "utils/getTranslation";
+import { renderMarkdown } from "utils/renderHTML";
 
 interface Props {
     license?: License;
@@ -15,8 +14,6 @@ interface Props {
 
 const { license = SITE_LICENSE, licenseText, lastModified } = Astro.props;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
-
-const parser = new MarkdownIt();
 ---
 
 <footer
@@ -35,9 +32,7 @@ const parser = new MarkdownIt();
     <p>
         {
             licenseText ? (
-                <Fragment
-                    set:html={sanitizeHtml(parser.renderInline(licenseText))}
-                />
+                <Fragment set:html={renderMarkdown(licenseText)} />
             ) : (
                 <>
                     {getTranslation(language).licensedUnder}{" "}
