@@ -2,10 +2,11 @@ import reactRenderer from "@astrojs/react/server.js";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import mdxRenderer from "astro/jsx/server.js";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
-import MarkdownIt from "markdown-it";
-import sanitizeHtml from "sanitize-html";
+import rehypeStringify from "rehype-stringify";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import { unified } from "unified";
 
-const markdownParset = new MarkdownIt();
 const container = await AstroContainer.create();
 
 container.addServerRenderer({ renderer: mdxRenderer, name: "mdx" });
@@ -31,5 +32,11 @@ export const renderComponent = async (component: AstroComponentFactory) =>
  * @returns HTML string
  */
 export const renderMarkdown = (content: string): string => {
-    return sanitizeHtml(markdownParset.renderInline(content));
+    const result = unified()
+        .use(remarkParse)
+        .use(remarkRehype)
+        .use(rehypeStringify)
+        .processSync(content);
+
+    return String(result);
 };
