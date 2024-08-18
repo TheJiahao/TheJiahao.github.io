@@ -1,8 +1,7 @@
+import DateComponent from "components/atoms/DateComponent";
 import LanguageSelector from "components/molecules/LanguageSelector";
 import type { Multilingual } from "interfaces/Multilingual";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
-import { LuCalendar } from "react-icons/lu";
-import { formatDate } from "utils/formatDate";
 
 interface BlogDetailsProps extends Partial<Multilingual & TranslatedElement> {
     title: string;
@@ -27,17 +26,7 @@ const BlogDetails = ({
         {description && <p text="secondary xl">{description}</p>}
 
         <div flex="~ row" gap-4>
-            {date && (
-                <time
-                    dateTime={formatDate(date)}
-                    text-secondary
-                    align-icon
-                    gap-2
-                >
-                    <LuCalendar role="presentation" focusable="false" />
-                    {formatDate(date)}
-                </time>
-            )}
+            {date && <DateComponent date={date} />}
 
             {languages && language && languages.length > 1 && (
                 <LanguageSelector
