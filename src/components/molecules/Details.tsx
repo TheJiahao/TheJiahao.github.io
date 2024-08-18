@@ -3,21 +3,21 @@ import LanguageSelector from "components/molecules/LanguageSelector";
 import type { Multilingual } from "interfaces/Multilingual";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 
-interface BlogDetailsProps extends Partial<Multilingual & TranslatedElement> {
+interface DetailsProps extends Partial<Multilingual & TranslatedElement> {
     title: string;
     description?: string;
     date?: Date;
     slug?: string;
 }
 
-const BlogDetails = ({
+const Details = ({
     title,
     description,
     date,
     languages,
     language,
     slug,
-}: BlogDetailsProps) => (
+}: DetailsProps) => (
     <div flex="~ col" gap-sm>
         <h1 text="primary 3xl" font-bold>
             {title}
@@ -39,5 +39,5 @@ const BlogDetails = ({
     </div>
 );
 
-export type { BlogDetailsProps };
-export default BlogDetails;
+export type { DetailsProps };
+export default Details;

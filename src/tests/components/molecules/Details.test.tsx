@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
-import BlogDetails from "components/molecules/BlogDetails";
+import Details from "components/molecules/Details";
 import { beforeEach, describe, expect, test } from "vitest";
 
-describe("<BlogDetails/>", () => {
+describe("<Details/>", () => {
     describe("with date", () => {
         const date = "2024-01-01";
         let time: HTMLElement;
         beforeEach(() => {
-            render(<BlogDetails title={"Something"} date={new Date(date)} />);
+            render(<Details title={"Something"} date={new Date(date)} />);
             time = screen.getByRole("time");
         });
 
@@ -23,7 +23,7 @@ describe("<BlogDetails/>", () => {
 
     describe("without date", () => {
         beforeEach(() => {
-            render(<BlogDetails title={"Something"} />);
+            render(<Details title={"Something"} />);
         });
 
         test("date is not rendered", () => {
@@ -36,9 +36,7 @@ describe("<BlogDetails/>", () => {
         let descriptionElement: HTMLElement;
 
         beforeEach(() => {
-            render(
-                <BlogDetails title={"Something"} description={description} />,
-            );
+            render(<Details title={"Something"} description={description} />);
             descriptionElement = screen.getByRole("paragraph");
         });
 
@@ -53,7 +51,7 @@ describe("<BlogDetails/>", () => {
 
     describe("without description", () => {
         beforeEach(() => {
-            render(<BlogDetails title={"Something"} />);
+            render(<Details title={"Something"} />);
         });
 
         test("description is not rendered", () => {
@@ -64,7 +62,7 @@ describe("<BlogDetails/>", () => {
     describe("language selector is rendered", () => {
         test("when language and more than one languages are given", () => {
             render(
-                <BlogDetails
+                <Details
                     title={"Something"}
                     language="zh-cn"
                     languages={["en", "zh-cn"]}
@@ -77,7 +75,7 @@ describe("<BlogDetails/>", () => {
 
     describe("language selector is not rendered with", () => {
         test("no languages", () => {
-            render(<BlogDetails title={"Something"} />);
+            render(<Details title={"Something"} />);
 
             expect(screen.queryByRole("combobox")).not.toBeInTheDocument();
         });
@@ -87,7 +85,7 @@ describe("<BlogDetails/>", () => {
             [undefined, ["zh-cn", "en"]],
         ])("only language or languages", (language, languages) => {
             render(
-                <BlogDetails
+                <Details
                     title={"Something"}
                     language={language}
                     languages={languages}
@@ -99,7 +97,7 @@ describe("<BlogDetails/>", () => {
 
         test("only one language", () => {
             render(
-                <BlogDetails
+                <Details
                     title={"Something"}
                     language="en"
                     languages={["en"]}

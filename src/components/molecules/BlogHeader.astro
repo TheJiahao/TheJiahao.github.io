@@ -1,11 +1,9 @@
 ---
 import { type ImageMetadata } from "astro";
 import CoverImage from "components/atoms/CoverImage";
-import BlogDetails, {
-    type BlogDetailsProps,
-} from "components/molecules/BlogDetails";
+import Details, { type DetailsProps } from "components/molecules/Details";
 
-interface Props extends BlogDetailsProps {
+interface Props extends DetailsProps {
     image?: ImageMetadata;
 }
 
@@ -15,6 +13,6 @@ const { image, ...props } = Astro.props;
 <header flex="~ col" gap-lg>
     <CoverImage image={image} alt="" />
     <div px-4 lg:px-8>
-        <BlogDetails {...props} client:idle />
+        <Details {...props} client:idle />
     </div>
 </header>
