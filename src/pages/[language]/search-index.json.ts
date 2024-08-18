@@ -6,7 +6,7 @@ import type { PreparedPage } from "interfaces/PreparedPage";
 import { languageCodes } from "localization";
 import sanitizeHtml from "sanitize-html";
 import { getBlogs } from "utils/getBlogs";
-import { renderHTML } from "utils/renderHTML";
+import { renderComponent } from "utils/renderHTML";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({ params: { language } }));
@@ -26,7 +26,7 @@ export async function GET({ params }: APIContext) {
                 const { title, image = BLOG_IMAGE_PLACEHOLDER } = data;
 
                 const { Content } = await render();
-                const postHTML = await renderHTML(Content);
+                const postHTML = await renderComponent(Content);
 
                 const description = fuzzysort.prepare(
                     sanitizeHtml(postHTML, {

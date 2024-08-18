@@ -5,7 +5,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "config";
 import { languageCodes } from "localization";
 import sanitizeHtml from "sanitize-html";
 import { getBlogs } from "utils/getBlogs";
-import { renderHTML } from "utils/renderHTML";
+import { renderComponent } from "utils/renderHTML";
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({ params: { language } }));
@@ -32,7 +32,7 @@ export async function GET({ params, site }: APIContext) {
                 const { title, description, date: pubDate } = data;
 
                 const { Content } = await render();
-                const postHTML = await renderHTML(Content);
+                const postHTML = await renderComponent(Content);
 
                 const content = sanitizeHtml(postHTML, {
                     allowedTags: sanitizeHtml.defaults.allowedTags.concat([

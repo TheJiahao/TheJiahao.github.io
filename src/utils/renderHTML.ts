@@ -19,9 +19,9 @@ container.addClientRenderer({
  * Renders Astro component to HTML.
  *
  * @param component Astro component to render
- * @returns Rendered component as HTML
+ * @returns HTML
  */
-export const renderHTML = async (component: AstroComponentFactory) =>
+export const renderComponent = async (component: AstroComponentFactory) =>
     await container.renderToString(component);
 
 /**
