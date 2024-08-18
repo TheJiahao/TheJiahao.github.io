@@ -5,6 +5,7 @@ aliases:
     - 54972536
 
 title: Visual Studio Code extensions.experimental.affinity 兼容性问题
+description: 本文汇总了 Visual Studio Code 实验性设置 `extensions.experimental.affinity` 的兼容性问题。
 categories:
 tags:
     - VS Code
@@ -19,8 +20,6 @@ draft: false
 sitemap:
     disable: false
 ---
-
-本文汇总了 Visual Studio Code 实验性设置 `extensions.experimental.affinity` 的兼容性问题。
 
 ## `vscode.markdown-language-features`
 

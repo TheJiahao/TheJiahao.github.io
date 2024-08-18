@@ -5,6 +5,7 @@ aliases:
     - 54972536
 
 title: Visual Studio Code extensions.experimental.affinity compatibility issues
+description: A collection of compatibility issues of experimental setting `extensions.experimental.affinity` in Visual Studio Code.
 categories:
 tags:
     - VS Code
