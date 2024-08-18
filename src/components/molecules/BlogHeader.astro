@@ -19,7 +19,7 @@ const { image, date, language, languages, slug, ...props } = Astro.props;
 <header flex="~ col" gap-lg>
     <CoverImage image={image} alt="" />
     <div px-4 lg:px-8>
-        <Details {...props} client:idle />
+        <Details {...props} />
         <div flex="~ row" gap-4>
             <DateComponent {date} />
 
