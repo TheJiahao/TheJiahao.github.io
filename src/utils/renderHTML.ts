@@ -5,6 +5,7 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import rehypeStringify from "rehype-stringify";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import sanitizeHtml from "sanitize-html";
 import { unified } from "unified";
 
 const container = await AstroContainer.create();
@@ -38,5 +39,5 @@ export const renderMarkdown = (content: string): string => {
         .use(rehypeStringify)
         .processSync(content);
 
-    return String(result);
+    return sanitizeHtml(String(result));
 };
