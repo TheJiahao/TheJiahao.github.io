@@ -33,7 +33,7 @@
         "@testing-library/user-event": "^14.5.2",
         "@unocss/reset": "^0.62.0",
         "astro": "^4.9.2",
-        "astro-expressive-code": "^0.35.6",
+        "astro-expressive-code": "^0.36.0",
         "astro-robots-txt": "^1.0.0",
         "astro-seo": "^0.8.4",
         "astro-seo-schema": "^4.0.2",
