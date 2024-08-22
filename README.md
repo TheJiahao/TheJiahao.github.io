@@ -6,7 +6,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/TheJiahao/TheJiahao.github.io?style=for-the-badge&logo=codecov)
 ](https://codecov.io/gh/TheJiahao/TheJiahao.github.io)
 
-[Blog](https://thejiahao.github.io) site built wit Astro + React + UnoCSS.
+[Blog](https://thejiahao.github.io) site built with Astro + React + UnoCSS.
 
 ## Main features
 
