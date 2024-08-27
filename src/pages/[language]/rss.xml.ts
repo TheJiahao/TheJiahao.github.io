@@ -28,26 +28,28 @@ export async function GET({ params, site }: APIContext) {
         description: SITE_DESCRIPTION[language],
         site: getAbsoluteLocaleUrl(language),
         items: await Promise.all(
-            blogs.map(async ({ data, render, slug }) => {
-                const { title, description, date: pubDate } = data;
+            blogs
+                .filter(({ data }) => data.language == language)
+                .map(async ({ data, render, slug }) => {
+                    const { title, description, date: pubDate } = data;
 
-                const { Content } = await render();
-                const postHTML = await renderComponent(Content);
+                    const { Content } = await render();
+                    const postHTML = await renderComponent(Content);
 
-                const content = sanitizeHtml(postHTML, {
-                    allowedTags: sanitizeHtml.defaults.allowedTags.concat([
-                        "img",
-                    ]),
-                });
+                    const content = sanitizeHtml(postHTML, {
+                        allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+                            "img",
+                        ]),
+                    });
 
-                return {
-                    title,
-                    description,
-                    link: getAbsoluteLocaleUrl(language, `posts/${slug}`),
-                    pubDate,
-                    content,
-                };
-            }),
+                    return {
+                        title,
+                        description,
+                        link: getAbsoluteLocaleUrl(language, `posts/${slug}`),
+                        pubDate,
+                        content,
+                    };
+                }),
         ),
         customData: `<language>${language}</language>`,
     });
