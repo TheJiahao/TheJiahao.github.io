@@ -27,6 +27,7 @@ export async function GET({ params, site }: APIContext) {
         title: SITE_TITLE[language],
         description: SITE_DESCRIPTION[language],
         site: getAbsoluteLocaleUrl(language),
+        stylesheet: "/rss/pretty-feed-v3.xsl",
         items: await Promise.all(
             blogs
                 .filter(({ data }) => data.language == language)
