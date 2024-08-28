@@ -67,7 +67,7 @@ importers:
         version: 1.5.0
       html-react-parser:
         specifier: ^5.1.12
-        version: 5.1.13(@types/react@18.3.4)(react@18.3.1)
+        version: 5.1.14(@types/react@18.3.4)(react@18.3.1)
       katex:
         specifier: ^0.16.11
         version: 0.16.11
@@ -2837,8 +2837,8 @@ packages:
   html-escaper@3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
 
-  html-react-parser@5.1.13:
-    resolution: {integrity: sha512-XTG2lbn9JDHc3DqGLpHkoArvptXMPl+Ckk5/cqRhdUmrhcPNZ5MPDrwd2PU3BePl2QmkLOb3WsWdjAotznMdUw==}
+  html-react-parser@5.1.14:
+    resolution: {integrity: sha512-/37mevKAK5TOXgeSC2y9Wn4RgtvHHheefxJGeJvdUk+sJ68CORoH+2z4Qbh6trSOhslcBYOWsJrqSS61Ikbrvw==}
     peerDependencies:
       '@types/react': 0.14 || 15 || 16 || 17 || 18
       react: 0.14 || 15 || 16 || 17 || 18
@@ -4582,8 +4582,8 @@ packages:
   strnum@1.0.5:
     resolution: {integrity: sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==}
 
-  style-to-js@1.1.12:
-    resolution: {integrity: sha512-tv+/FkgNYHI2fvCoBMsqPHh5xovwiw+C3X0Gfnss/Syau0Nr3IqGOJ9XiOYXoPnToHVbllKFf5qCNFJGwFg5mg==}
+  style-to-js@1.1.13:
+    resolution: {integrity: sha512-+43kvxwjrW9n5gFR40Rv98A0/Mcjew7Lt+p5Nnw1KGR9SZf/ZaKqmMwl9Enj9EnYNcJ5VzuCjejC5KZzvH2lOA==}
 
   style-to-object@0.4.4:
     resolution: {integrity: sha512-HYNoHZa2GorYNyqiCaBgsxvcJIn7OHq6inEga+E6Ke3m5JkoqpQbnFssk4jwe+K7AhGa2fcha4wSOf1Kn01dMg==}
@@ -8563,13 +8563,13 @@ snapshots:
 
   html-escaper@3.0.3: {}
 
-  html-react-parser@5.1.13(@types/react@18.3.4)(react@18.3.1):
+  html-react-parser@5.1.14(@types/react@18.3.4)(react@18.3.1):
     dependencies:
       domhandler: 5.0.3
       html-dom-parser: 5.0.9
       react: 18.3.1
       react-property: 2.0.2
-      style-to-js: 1.1.12
+      style-to-js: 1.1.13
     optionalDependencies:
       '@types/react': 18.3.4
 
@@ -10873,7 +10873,7 @@ snapshots:
 
   strnum@1.0.5: {}
 
-  style-to-js@1.1.12:
+  style-to-js@1.1.13:
     dependencies:
       style-to-object: 1.0.6
 
