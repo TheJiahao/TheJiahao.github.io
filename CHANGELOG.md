@@ -1,5 +1,39 @@
 # Changelog
 
+## [3.5.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.2...v3.5.0) (2024-08-30)
+
+
+### Features
+
+* ✨ Allow Markdown in blog details ([9c0ceb6](https://github.com/TheJiahao/TheJiahao.github.io/commit/9c0ceb6c1f7cdc78ba5ea813353b6b1782fef9cb)), closes [#241](https://github.com/TheJiahao/TheJiahao.github.io/issues/241)
+* **render-markdown:** ✨ Sanitize result ([cdfd990](https://github.com/TheJiahao/TheJiahao.github.io/commit/cdfd9903465ea605c08524ae3d7bb04b9899abcf)), closes [#241](https://github.com/TheJiahao/TheJiahao.github.io/issues/241)
+* **rss:** ✨ Add pretty-feed-v3 stylesheet ([be5205c](https://github.com/TheJiahao/TheJiahao.github.io/commit/be5205cc2bac85b6f80a2aa0bfa1f74a8e856422))
+* **starship-setup:** ✨ Complete ([f1d4b89](https://github.com/TheJiahao/TheJiahao.github.io/commit/f1d4b89e96e83a1dfe7288b68909a42312d8545b))
+
+
+### Bug Fixes
+
+* 🐛 Lint ([fb493e7](https://github.com/TheJiahao/TheJiahao.github.io/commit/fb493e7e3b12ad724c055865a782adbf5ab5bebe))
+* **docs:** 🐛 📚️ Typo ([d009570](https://github.com/TheJiahao/TheJiahao.github.io/commit/d0095702cab199905362682ef27165a9345d5b62))
+* **language-selector:** 🐛 Collapse mark not rotating ([a0691cf](https://github.com/TheJiahao/TheJiahao.github.io/commit/a0691cfab04b68ad8d619ceef11e8529dff9ccf4))
+* **link-card:** 🐛 Highlight when focused ([ed1f5f6](https://github.com/TheJiahao/TheJiahao.github.io/commit/ed1f5f6668ee1574c8ffd769d109248b5ed633f4))
+* **navigation-bar:** 🐛 Clicking link padding not working ([c978184](https://github.com/TheJiahao/TheJiahao.github.io/commit/c9781849b7464dd75bf5d6129d3f417eb459f4ba))
+* **posts:** 🐛 Description missing ([090fa21](https://github.com/TheJiahao/TheJiahao.github.io/commit/090fa2156df519b004b9e94f3d71c8ed1ac0b9de))
+* **rss:** 🐛 Convert image src to absolute ([82912d7](https://github.com/TheJiahao/TheJiahao.github.io/commit/82912d7a6a69d74277e2eb425ceacfda3beda2a1))
+* **rss:** 🐛 Remove items in other languages ([7b07920](https://github.com/TheJiahao/TheJiahao.github.io/commit/7b0792079bc276ce0564df4f7c792261861accf6))
+* **sitemap:** 🐛 Remove alternate links ([b1661ae](https://github.com/TheJiahao/TheJiahao.github.io/commit/b1661ae0617bcf280549ba4a4d31e245889521e0))
+* **starship-setup:** 🐛 Incorrect date ([cc17ccc](https://github.com/TheJiahao/TheJiahao.github.io/commit/cc17ccc7fb6be9c69f98a7f795c5d47550d710e2))
+* **starship-setup:** 🐛 Incorrect link ([4c6ace7](https://github.com/TheJiahao/TheJiahao.github.io/commit/4c6ace79c3d00452f7e973c5dfb9c7d16e4dfc69))
+* **test:** 🐛 🚨 Move `renderMarkdown` to own file ([ef81743](https://github.com/TheJiahao/TheJiahao.github.io/commit/ef81743d9409071f38a99e28c73998b37f642584)), closes [#241](https://github.com/TheJiahao/TheJiahao.github.io/issues/241)
+* **vscode-affinity-issues:** 🐛 Remove duplicate description ([deb38ae](https://github.com/TheJiahao/TheJiahao.github.io/commit/deb38ae54b44a50777642fbedb049553e63343a3))
+
+
+### Reverts
+
+* "feat: ✨ Allow passing classes to `Menu` items" ([6107783](https://github.com/TheJiahao/TheJiahao.github.io/commit/6107783842a1d4d503573b77f51d3a4d0781c18d))
+* "fix(accessibility): 🐛 Highlight `clickable` when tab selected" ([2655fd0](https://github.com/TheJiahao/TheJiahao.github.io/commit/2655fd06ddef61cd71466d2d768ef3cbff642ecd))
+* "fix(sitemap): 🐛 Remove alternate links" ([5eb6004](https://github.com/TheJiahao/TheJiahao.github.io/commit/5eb60047ee9845d36178f22baa2e11a70aa9f5f9))
+
 ## [3.4.2](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.1...v3.4.2) (2024-08-11)
 
 ### Bug Fixes
