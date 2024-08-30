@@ -36,6 +36,12 @@ export default defineConfig({
         mdx(),
         sitemap({
             lastmod: getLastModified("."),
+            i18n: {
+                defaultLocale,
+                locales: Object.fromEntries(
+                    languageCodes.map((language) => [language, language]),
+                ),
+            },
         }),
         robotsTxt({
             policy: [
