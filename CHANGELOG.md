@@ -2,14 +2,12 @@
 
 ## [3.5.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.2...v3.5.0) (2024-08-30)
 
-
 ### Features
 
 * ✨ Allow Markdown in blog details ([9c0ceb6](https://github.com/TheJiahao/TheJiahao.github.io/commit/9c0ceb6c1f7cdc78ba5ea813353b6b1782fef9cb)), closes [#241](https://github.com/TheJiahao/TheJiahao.github.io/issues/241)
 * **render-markdown:** ✨ Sanitize result ([cdfd990](https://github.com/TheJiahao/TheJiahao.github.io/commit/cdfd9903465ea605c08524ae3d7bb04b9899abcf)), closes [#241](https://github.com/TheJiahao/TheJiahao.github.io/issues/241)
 * **rss:** ✨ Add pretty-feed-v3 stylesheet ([be5205c](https://github.com/TheJiahao/TheJiahao.github.io/commit/be5205cc2bac85b6f80a2aa0bfa1f74a8e856422))
 * **starship-setup:** ✨ Complete ([f1d4b89](https://github.com/TheJiahao/TheJiahao.github.io/commit/f1d4b89e96e83a1dfe7288b68909a42312d8545b))
-
 
 ### Bug Fixes
 
@@ -26,7 +24,6 @@
 * **starship-setup:** 🐛 Incorrect link ([4c6ace7](https://github.com/TheJiahao/TheJiahao.github.io/commit/4c6ace79c3d00452f7e973c5dfb9c7d16e4dfc69))
 * **test:** 🐛 🚨 Move `renderMarkdown` to own file ([ef81743](https://github.com/TheJiahao/TheJiahao.github.io/commit/ef81743d9409071f38a99e28c73998b37f642584)), closes [#241](https://github.com/TheJiahao/TheJiahao.github.io/issues/241)
 * **vscode-affinity-issues:** 🐛 Remove duplicate description ([deb38ae](https://github.com/TheJiahao/TheJiahao.github.io/commit/deb38ae54b44a50777642fbedb049553e63343a3))
-
 
 ### Reverts
 
