@@ -1,11 +1,31 @@
 import rss from "@astrojs/rss";
+
 import type { APIContext } from "astro";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { SITE_DESCRIPTION, SITE_TITLE } from "config";
 import { languageCodes } from "localization";
+import rehypeAbsImage from "rehype-abs-image";
+import rehypeParse from "rehype-parse";
+import rehypeStringify from "rehype-stringify";
 import sanitizeHtml from "sanitize-html";
+import { unified } from "unified";
 import { getBlogs } from "utils/getBlogs";
 import { renderComponent } from "utils/renderComponent";
+
+const convertImageURL = (content: string): string => {
+    const baseURL = process.env.SITE_BASE_URL;
+
+    if (!baseURL) {
+        throw new Error("SITE_BASE_URL is not defined");
+    }
+
+    return unified()
+        .use(rehypeParse)
+        .use(rehypeAbsImage, { prefix: baseURL })
+        .use(rehypeStringify)
+        .processSync(content)
+        .toString();
+};
 
 export function getStaticPaths() {
     return languageCodes.map((language) => ({ params: { language } }));
@@ -35,7 +55,9 @@ export async function GET({ params, site }: APIContext) {
                     const { title, description, date: pubDate } = data;
 
                     const { Content } = await render();
-                    const postHTML = await renderComponent(Content);
+                    const postHTML = convertImageURL(
+                        await renderComponent(Content),
+                    );
 
                     const content = sanitizeHtml(postHTML, {
                         allowedTags: sanitizeHtml.defaults.allowedTags.concat([
