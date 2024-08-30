@@ -93,8 +93,8 @@ scoop install jetbrainsmono-nf-mono
 
 <Callout type="info" title="字体后缀" open={false} collapsible={true} client:idle>
 
-- `nf`：Nerd Fonts 字体
-- `mono`：等宽字体
+-   `nf`：Nerd Fonts 字体
+-   `mono`：等宽字体
 
 具体含义可参考 Nerd Fonts 的 [README](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#features)。
 
@@ -227,11 +227,11 @@ style = "bold green"
 
 字段含义：
 
-- `disable`：是否禁用组件，`false` 为启用
-- `format`：组件格式，类似前面的 `format` 字段
-- `symbol`：组件对应的符号，可在 `format` 中作为 `$symbol` 使用。
+-   `disable`：是否禁用组件，`false` 为启用
+-   `format`：组件格式，类似前面的 `format` 字段
+-   `symbol`：组件对应的符号，可在 `format` 中作为 `$symbol` 使用。
     如果想添加图标，可以使用 Emoji 或者在 [Nerd Font](https://www.nerdfonts.com/cheat-sheet) 网站里查找符号。
-- `style`：内容样式，可在 `format` 中作为 `[内容]($style)` 使用。
+-   `style`：内容样式，可在 `format` 中作为 `[内容]($style)` 使用。
     也可以直接使用 `[内容](bold green)`，具体可参考 [文档](https://starship.rs/zh-CN/config/#%E6%96%87%E6%9C%AC%E7%BB%84)。
 
 部分组件的配置可能会有所不同，例如 `username` 中 `style` 被 `style_user` 和 `style_root` 取代。
@@ -240,17 +240,17 @@ style = "bold green"
 
 ### 必要
 
-- [`directory`](https://starship.rs/config/#directory)：当前目录
-- [`character`](https://starship.rs/config/#character)：命令提示符，可以根据前一个命令的状态改变样式
-- [`git_branch`](https://starship.rs/config/#git-branch)：Git 分支
-- [`git_state`](https://starship.rs/config/#git-state)：Git 状态，例如本地落后提交数
+-   [`directory`](https://starship.rs/config/#directory)：当前目录
+-   [`character`](https://starship.rs/config/#character)：命令提示符，可以根据前一个命令的状态改变样式
+-   [`git_branch`](https://starship.rs/config/#git-branch)：Git 分支
+-   [`git_state`](https://starship.rs/config/#git-state)：Git 状态，例如本地落后提交数
 
 ### 可选
 
-- [`username`](https://starship.rs/config/#username)：用户名
-- [`hostname`](https://starship.rs/config/#hostname)：主机名
-- [`cmd_duration`](https://starship.rs/config/#command-duration)：命令运行时间，可以在命令运行完后显示通知
-- 各种编程语言对应的组件，可显示版本、虚拟环境等。
+-   [`username`](https://starship.rs/config/#username)：用户名
+-   [`hostname`](https://starship.rs/config/#hostname)：主机名
+-   [`cmd_duration`](https://starship.rs/config/#command-duration)：命令运行时间，可以在命令运行完后显示通知
+-   各种编程语言对应的组件，可显示版本、虚拟环境等。
 
 其他组件可以从 Starship 的 [文档](https://starship.rs/zh-CN/config/) 上找到。
 由于中文文档翻译不全，笔者建议参考 [英文版](https://starship.rs/config/)。
