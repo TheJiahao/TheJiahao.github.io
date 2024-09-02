@@ -143,7 +143,7 @@ importers:
         version: 9.9.1
       '@estruyf/github-actions-reporter':
         specifier: ^1.7.0
-        version: 1.9.0(@playwright/test@1.46.1)
+        version: 1.9.1(@playwright/test@1.46.1)
       '@playwright/test':
         specifier: ^1.44.1
         version: 1.46.1
@@ -234,8 +234,8 @@ packages:
   '@actions/core@1.10.1':
     resolution: {integrity: sha512-3lBR9EDAY+iYIpTnTIXmWcNbX3T2kCkAEQGIQx4NVQ0575nk2k3GRZDTPQG+vVtS2izSLmINlxXf0uLtnrTP+g==}
 
-  '@actions/http-client@2.2.1':
-    resolution: {integrity: sha512-KhC/cZsq7f8I4LfZSJKgCvEwfkE8o1538VoBeoGzokVLLnbFDEAdFD3UhoMklxo2un9NJVBdANOresx7vTHlHw==}
+  '@actions/http-client@2.2.3':
+    resolution: {integrity: sha512-mx8hyJi/hjFvbPokCg4uRd4ZX78t+YyRPtnKWwIl+RzNaVuFpQHfmlGVfsKEJN8LwTCvL+DfVgAM04XaHkm6bA==}
 
   '@adobe/css-tools@4.4.0':
     resolution: {integrity: sha512-Ff9+ksdQQB3rMncgqDK78uLznstjyfIf2Arnh22pW8kBpLs6rpKDwgnZT46hin5Hl1WzazzK64DOrhSwYpS7bQ==}
@@ -894,8 +894,8 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@estruyf/github-actions-reporter@1.9.0':
-    resolution: {integrity: sha512-970BX+9VixLxQ+ogiWM6WZPJYAWxv7ofkSh3XBQ9ryE7pU7KEyCk/32G03vTVaWVBTVD7fn4oQ+Jt7nAua4Nhg==}
+  '@estruyf/github-actions-reporter@1.9.1':
+    resolution: {integrity: sha512-oLdmlXcieEOWzswd3EypmScKs9b0R6aT5BlNyMzvoprOal7tlCFzH/fWi8gwi9aI4OTCpFpbHLBD+6w9BuHzcQ==}
     peerDependencies:
       '@playwright/test': ^1.42.1
 
@@ -5324,10 +5324,10 @@ snapshots:
 
   '@actions/core@1.10.1':
     dependencies:
-      '@actions/http-client': 2.2.1
+      '@actions/http-client': 2.2.3
       uuid: 8.3.2
 
-  '@actions/http-client@2.2.1':
+  '@actions/http-client@2.2.3':
     dependencies:
       tunnel: 0.0.6
       undici: 5.28.4
@@ -6042,7 +6042,7 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@estruyf/github-actions-reporter@1.9.0(@playwright/test@1.46.1)':
+  '@estruyf/github-actions-reporter@1.9.1(@playwright/test@1.46.1)':
     dependencies:
       '@actions/core': 1.10.1
       '@playwright/test': 1.46.1
