@@ -38,9 +38,10 @@ export default defineConfig({
             lastmod: getLastModified("."),
             i18n: {
                 defaultLocale,
-                locales: Object.fromEntries(
-                    languageCodes.map((language) => [language, language]),
-                ),
+                locales: {
+                    "zh-cn": "zh-CN",
+                    en: "en-US",
+                },
             },
         }),
         robotsTxt({
