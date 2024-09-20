@@ -19,6 +19,7 @@ const MobileNavigationBar = ({ language, currentURL }: NavigationBarProps) => {
                 className={
                     expanded ? "max-h-screen visible" : "max-h-0 invisible"
                 }
+                flex="~ col"
                 overflow-hidden
                 transition-all
                 duration-300
@@ -26,19 +27,14 @@ const MobileNavigationBar = ({ language, currentURL }: NavigationBarProps) => {
                 w-full
                 divide-y
             >
-                <div flex="~ col" items-center>
-                    <SettingsMenu role="group" language={language} />
-                </div>
-
+                <SettingsMenu role="group" language={language} items-center />
                 <SocialMenu role="group" language={language} />
-
-                <div flex="~ col" items-center>
-                    <NavigationMenu
-                        role="group"
-                        language={language}
-                        currentURL={currentURL}
-                    />
-                </div>
+                <NavigationMenu
+                    role="group"
+                    language={language}
+                    currentURL={currentURL}
+                    items-center
+                />
             </div>
 
             <NavigationToolBar
