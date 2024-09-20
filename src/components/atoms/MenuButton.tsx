@@ -19,7 +19,13 @@ const MenuButton = ({ expanded, ...props }: MenuButtonProps) => {
     const icon = disabled ? <LoadingIcon /> : expanded ? <LuX /> : <LuMenu />;
 
     return (
-        <button type="button" disabled={disabled} {...props}>
+        <button
+            type="button"
+            disabled={disabled}
+            hoverable
+            rounded-md
+            {...props}
+        >
             {cloneElement(icon, {
                 className: "size-15",
                 role: "presentation",
