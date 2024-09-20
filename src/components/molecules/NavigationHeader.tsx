@@ -11,7 +11,7 @@ const NavigationHeader = ({
     language,
     avatar = SITE_AVATAR,
 }: InfoCardProps) => (
-    <>
+    <header items-center p-2 w-full lg="flex flex-col">
         <Avatar
             image={avatar}
             size="30"
@@ -21,7 +21,7 @@ const NavigationHeader = ({
         <h1 block text="primary center xl" font-bold>
             {SITE_TITLE[language]}
         </h1>
-    </>
+    </header>
 );
 
 export default NavigationHeader;
