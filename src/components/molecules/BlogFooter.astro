@@ -17,19 +17,21 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
 <footer
+    class="not-prose"
     grid="~ cols-[auto_minmax(auto,2fr)]"
     items-center
     text-secondary
     gap-sm
+    text-lg
 >
     <LuFileEdit aria-hidden />
-    <p>
+    <div>
         {getTranslation(language).updated}
         <time>{formatDate(lastModified)}</time>
-    </p>
+    </div>
 
     <LuCopyright aria-hidden />
-    <p>
+    <div>
         {
             licenseText ? (
                 <Fragment set:html={renderMarkdown(licenseText)} />
@@ -42,5 +44,5 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
                 </>
             )
         }
-    </p>
+    </div>
 </footer>
