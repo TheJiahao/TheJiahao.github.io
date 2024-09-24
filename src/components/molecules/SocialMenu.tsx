@@ -25,7 +25,7 @@ const SocialMenu = ({
                 key={url}
                 url={
                     url.startsWith("/")
-                        ? getRelativeLocaleUrl(language, url)
+                        ? getRelativeLocaleUrl(language, url).replace(/\/$/, "")
                         : url
                 }
                 {...props}
