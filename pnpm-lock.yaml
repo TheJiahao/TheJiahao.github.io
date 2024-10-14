@@ -61,7 +61,7 @@ importers:
         version: 1.11.13
       fuzzysort:
         specifier: ^3.0.2
-        version: 3.0.2
+        version: 3.1.0
       giscus:
         specifier: ^1.5.0
         version: 1.5.0
@@ -2682,8 +2682,8 @@ packages:
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
 
-  fuzzysort@3.0.2:
-    resolution: {integrity: sha512-ZyahVgxvckB1Qosn7YGWLDJJp2XlyaQ2WmZeI+d0AzW0AMqVYnz5N89G6KAKa6m/LOtv+kzJn4lhDF/yVg11Cg==}
+  fuzzysort@3.1.0:
+    resolution: {integrity: sha512-sR9BNCjBg6LNgwvxlBd0sBABvQitkLzoVY9MYYROQVX/FvfJ4Mai9LsGhDgd8qYdds0bY77VzYd5iuB+v5rwQQ==}
 
   gaxios@6.5.0:
     resolution: {integrity: sha512-R9QGdv8j4/dlNoQbX3hSaK/S0rkMijqjVvW3YM06CoBdbU/VdKd159j4hePpng0KuE6Lh6JJ7UdmVGJZFcAG1w==}
@@ -8229,7 +8229,7 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  fuzzysort@3.0.2: {}
+  fuzzysort@3.1.0: {}
 
   gaxios@6.5.0:
     dependencies:
