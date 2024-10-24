@@ -1,5 +1,25 @@
 # Changelog
 
+## [3.6.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.5.0...v3.6.0) (2024-10-24)
+
+
+### Features
+
+* **menu-button:** ✨ Add click effect ([ad90e98](https://github.com/TheJiahao/TheJiahao.github.io/commit/ad90e98274c4d88e64eddf88398516bc0cdf2102))
+
+
+### Bug Fixes
+
+* 🐛 Lint ([0a7a7a2](https://github.com/TheJiahao/TheJiahao.github.io/commit/0a7a7a2c70e8f3c36fc55d01c9f2a5325e4eb1d8))
+* **blog-footer:** 🐛 Replace `&lt;p&gt;` with `<div>` ([2aced2b](https://github.com/TheJiahao/TheJiahao.github.io/commit/2aced2bc2db03966e5b8c9c72467800322d14842))
+* **nav-bar:** 🐛 Trailing slashes not working ([9adcbee](https://github.com/TheJiahao/TheJiahao.github.io/commit/9adcbeef814302d54e43851b076d0390fb3ef404))
+
+
+### Reverts
+
+* "feat(menu-button): ✨ Add click effect" ([572d274](https://github.com/TheJiahao/TheJiahao.github.io/commit/572d2749e6e3220f4fd784b503264ee23bd0979b))
+* "fix(rss): 🐛 Disable trailing slash" ([7e5d98f](https://github.com/TheJiahao/TheJiahao.github.io/commit/7e5d98ff0caf55b53f0577b0681851edda573982))
+
 ## [3.5.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.2...v3.5.0) (2024-08-30)
 
 ### Features
