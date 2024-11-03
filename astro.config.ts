@@ -78,6 +78,9 @@ export default defineConfig({
                 ],
             },
         },
+        optimizeDeps: {
+            exclude: ["@playwright/test"],
+        },
     },
     markdown: {
         remarkPlugins: [remarkSectionize, remarkMath],
