@@ -21,6 +21,8 @@ sitemap:
     disable: false
 ---
 
+A collection of compatibility issues of experimental setting `extensions.experimental.affinity` in Visual Studio Code.
+
 ## `vscode.markdown-language-features`
 
 - Markdown Footnotes not working

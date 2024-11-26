@@ -15,7 +15,7 @@ tags:
     - Shell
     - 终端
 description: >-
-    Zim 是 Zsh 的插件管理器，其主要特点为极快的速度。
+    Zim 是一个高性能的 Zsh 的插件管理器。
     本文介绍了如何配置 Zim 以及推荐了几款笔者使用的 Zsh 插件。
 image: img/zimfw_logo.svg
 license: >-
@@ -34,6 +34,9 @@ draft: false
 sitemap:
     disable: false
 ---
+
+Zim 是 Zsh 的插件管理器，其主要特点为极快的速度。
+本文介绍了如何配置 Zim 以及推荐了几款笔者使用的 Zsh 插件。
 
 ## 安装 Zim
 
