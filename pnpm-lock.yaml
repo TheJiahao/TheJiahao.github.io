@@ -13,7 +13,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.2)
       '@astrojs/mdx':
         specifier: ^3.1.0
-        version: 3.1.9(astro@4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))
+        version: 3.1.9(astro@4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))
       '@astrojs/react':
         specifier: ^3.5.0
         version: 3.6.3(@types/node@22.10.0)(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.81.0)
@@ -40,10 +40,10 @@ importers:
         version: 0.64.1
       astro:
         specifier: ^4.9.2
-        version: 4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
+        version: 4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
       astro-expressive-code:
         specifier: ^0.38.0
-        version: 0.38.3(astro@4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))
+        version: 0.38.3(astro@4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -52,7 +52,7 @@ importers:
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.2)
       astro-seo-schema:
         specifier: ^4.0.2
-        version: 4.0.3(astro@4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2))
+        version: 4.0.3(astro@4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2))
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -1928,8 +1928,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@4.16.15:
-    resolution: {integrity: sha512-usybZ7nEUiwYKT7r47l4VbkqjKfaE+BgWV/ed4PT3mE3vFRTBWFsXLnkzrN7awfN6+/ekZTAcE+MAkdA551Umw==}
+  astro@4.16.16:
+    resolution: {integrity: sha512-H1CttrV6+JFrDBQx0Mcbq5i5AeLhCbztB786+9wEu3svWL/QPNeCGqF0dgNORAYmP+rODGCPu/y9qKSh87iLuA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4352,8 +4352,8 @@ packages:
   regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
 
-  regex-recursion@4.2.1:
-    resolution: {integrity: sha512-QHNZyZAeKdndD1G3bKAbBEKOSSK4KOHQrAJ01N1LJeb0SoH4DJIeFhp0uUpETgONifS4+P3sOgoA1dhzgrQvhA==}
+  regex-recursion@4.3.0:
+    resolution: {integrity: sha512-5LcLnizwjcQ2ALfOj95MjcatxyqF5RPySx9yT+PaXu3Gox2vyAtLDjHB8NTJLtMGkvyau6nI3CfpwFCjPUIs/A==}
 
   regex-utilities@2.3.0:
     resolution: {integrity: sha512-8VhliFJAWRaUiVvREIiW2NXXTmHs4vMNnSzuJVhscgmGav3g9VDxLrQndI3dZZVVdp0ZO/5v0xmX516/7M9cng==}
@@ -4885,8 +4885,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-fest@4.28.1:
-    resolution: {integrity: sha512-LO/+yb3mf46YqfUC7QkkoAlpa7CTYh//V1Xy9+NQ+pKqDqXIq0NTfPfQRwFfCt+if4Qkwb9gzZfsl6E5TkXZGw==}
+  type-fest@4.29.0:
+    resolution: {integrity: sha512-RPYt6dKyemXJe7I6oNstcH24myUGSReicxcHTvCLgzm4e0n8y05dGvcGB15/SoPRBmhlMthWQ9pvKyL81ko8nQ==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.2:
@@ -5112,10 +5112,10 @@ packages:
       terser:
         optional: true
 
-  vitefu@1.0.3:
-    resolution: {integrity: sha512-iKKfOMBHob2WxEJbqbJjHAkmYgvFDPhuqrO82om83S8RLk+17FtyMBfcyeH8GqD0ihShtkMW/zzJgiA51hCNCQ==}
+  vitefu@1.0.4:
+    resolution: {integrity: sha512-y6zEE3PQf6uu/Mt6DTJ9ih+kyJLr4XcSgHR2zUkM8SWDhuixEJxfJ6CZGMHh1Ec3vPLoEA0IHU5oWzVqw8ulow==}
     peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0-beta.0
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
     peerDependenciesMeta:
       vite:
         optional: true
@@ -5558,12 +5558,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@3.1.9(astro@4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))':
+  '@astrojs/mdx@3.1.9(astro@4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))':
     dependencies:
       '@astrojs/markdown-remark': 5.3.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
+      astro: 4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       gray-matter: 4.0.3
@@ -7360,9 +7360,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-expressive-code@0.38.3(astro@4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)):
+  astro-expressive-code@0.38.3(astro@4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)):
     dependencies:
-      astro: 4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
+      astro: 4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
       rehype-expressive-code: 0.38.3
 
   astro-robots-txt@1.0.0:
@@ -7370,9 +7370,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro-seo-schema@4.0.3(astro@4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2)):
+  astro-seo-schema@4.0.3(astro@4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2))(schema-dts@1.1.2(typescript@5.7.2)):
     dependencies:
-      astro: 4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
+      astro: 4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2)
       schema-dts: 1.1.2(typescript@5.7.2)
 
   astro-seo@0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.2):
@@ -7383,7 +7383,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@4.16.15(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2):
+  astro@4.16.16(@types/node@22.10.0)(rollup@4.25.0)(sass@1.81.0)(typescript@5.7.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -7440,7 +7440,7 @@ snapshots:
       unist-util-visit: 5.0.0
       vfile: 6.0.3
       vite: 5.4.11(@types/node@22.10.0)(sass@1.81.0)
-      vitefu: 1.0.3(vite@5.4.11(@types/node@22.10.0)(sass@1.81.0))
+      vitefu: 1.0.4(vite@5.4.11(@types/node@22.10.0)(sass@1.81.0))
       which-pm: 3.0.0
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -7498,7 +7498,7 @@ snapshots:
       chalk: 5.3.0
       cli-boxes: 3.0.0
       string-width: 7.2.0
-      type-fest: 4.28.1
+      type-fest: 4.29.0
       widest-line: 5.0.0
       wrap-ansi: 9.0.0
 
@@ -10296,7 +10296,7 @@ snapshots:
     dependencies:
       emoji-regex-xs: 1.0.0
       regex: 5.0.2
-      regex-recursion: 4.2.1
+      regex-recursion: 4.3.0
 
   optionator@0.9.4:
     dependencies:
@@ -10634,7 +10634,7 @@ snapshots:
 
   regenerator-runtime@0.14.1: {}
 
-  regex-recursion@4.2.1:
+  regex-recursion@4.3.0:
     dependencies:
       regex-utilities: 2.3.0
 
@@ -11303,7 +11303,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-fest@4.28.1: {}
+  type-fest@4.29.0: {}
 
   typed-array-buffer@1.0.2:
     dependencies:
@@ -11605,7 +11605,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.81.0
 
-  vitefu@1.0.3(vite@5.4.11(@types/node@22.10.0)(sass@1.81.0)):
+  vitefu@1.0.4(vite@5.4.11(@types/node@22.10.0)(sass@1.81.0)):
     optionalDependencies:
       vite: 5.4.11(@types/node@22.10.0)(sass@1.81.0)
 
