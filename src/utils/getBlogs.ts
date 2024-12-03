@@ -11,15 +11,17 @@ const rawBlogs: RawBlogEntry[] = (
 ).map((blog) => {
     const [language, ...slug] = blog.id.split("/");
 
+    if (!blog.filePath) {
+        throw Error(`Blog ${blog.id} missing path`);
+    }
+
     return {
         ...blog,
         slug: slug.join("/"),
         data: {
             ...blog.data,
             language,
-            lastModified: getLastModified(
-                `src/content/${blog.collection}/${blog.id}`,
-            ),
+            lastModified: getLastModified(blog.filePath),
         },
     };
 });
