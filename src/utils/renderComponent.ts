@@ -1,16 +1,14 @@
-import reactRenderer from "@astrojs/react/server.js";
+import { getContainerRenderer as mdxContainerRenderer } from "@astrojs/mdx";
+import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
-import mdxRenderer from "astro/jsx/server.js";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import { loadRenderers } from "astro:container";
 
-const container = await AstroContainer.create();
-
-container.addServerRenderer({ renderer: mdxRenderer, name: "mdx" });
-container.addServerRenderer({ renderer: reactRenderer, name: "react" });
-container.addClientRenderer({
-    name: "@astrojs/react",
-    entrypoint: "@astrojs/react/client.js",
-});
+const renderers = await loadRenderers([
+    reactContainerRenderer(),
+    mdxContainerRenderer(),
+]);
+const container = await AstroContainer.create({ renderers });
 
 /**
  * Renders Astro component to HTML.
