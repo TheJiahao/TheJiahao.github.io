@@ -2,6 +2,7 @@
 import BlogLayout from "layouts/BlogLayout.astro";
 import { getBlogs } from "utils/getBlogs";
 import { type BlogEntry } from "interfaces/BlogEntry";
+import { render } from "astro:content";
 
 export function getStaticPaths() {
     const posts = getBlogs();
@@ -16,11 +17,10 @@ export function getStaticPaths() {
 
 type Props = BlogEntry;
 
-const { data, render } = Astro.props;
-
-const { Content, headings } = await render();
+const post = Astro.props;
+const { Content, headings } = await render(post);
 ---
 
-<BlogLayout {...data} {headings}>
+<BlogLayout {...post.data} {headings}>
     <Content />
 </BlogLayout>
