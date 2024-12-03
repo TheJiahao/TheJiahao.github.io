@@ -4,7 +4,7 @@ import {
     DisclosurePanel,
 } from "@headlessui/react";
 import { type PropsWithChildren } from "react";
-import { LuAlertTriangle, LuChevronDown, LuInfo } from "react-icons/lu";
+import { LuChevronDown, LuInfo, LuTriangleAlert } from "react-icons/lu";
 
 interface CalloutProps extends PropsWithChildren {
     type: "info" | "warning";
@@ -15,7 +15,7 @@ interface CalloutProps extends PropsWithChildren {
 
 const icons = {
     info: <LuInfo />,
-    warning: <LuAlertTriangle />,
+    warning: <LuTriangleAlert />,
 };
 
 const Callout = ({

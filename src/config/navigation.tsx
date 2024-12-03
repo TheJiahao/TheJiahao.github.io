@@ -1,7 +1,7 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import type { IconLink } from "interfaces/IconLink";
 import { languageCodes } from "localization";
-import { LuHome, LuLightbulb, LuUser2 } from "react-icons/lu";
+import { LuHouse, LuLightbulb, LuUserRound } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
@@ -11,7 +11,7 @@ const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
             {
                 url: getRelativeLocaleUrl(language),
                 text: getTranslation(language).homePage,
-                icon: <LuHome />,
+                icon: <LuHouse />,
             },
             {
                 url: getRelativeLocaleUrl(language, "/projects"),
@@ -21,7 +21,7 @@ const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
             {
                 url: getRelativeLocaleUrl(language, "/about"),
                 text: getTranslation(language).about,
-                icon: <LuUser2 />,
+                icon: <LuUserRound />,
             },
         ],
     ]),

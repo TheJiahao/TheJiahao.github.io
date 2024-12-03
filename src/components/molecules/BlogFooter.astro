@@ -1,7 +1,7 @@
 ---
 import { DEFAULT_LANGUAGE, SITE_LICENSE } from "config";
 import type { License } from "interfaces/License";
-import { LuCopyright, LuFileEdit } from "react-icons/lu";
+import { LuCopyright, LuFilePen } from "react-icons/lu";
 import { formatDate } from "utils/formatDate";
 import { getTranslation } from "utils/getTranslation";
 import { renderMarkdown } from "utils/renderMarkdown";
@@ -24,7 +24,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
     gap-sm
     text-lg
 >
-    <LuFileEdit aria-hidden />
+    <LuFilePen aria-hidden />
     <div>
         {getTranslation(language).updated}
         <time>{formatDate(lastModified)}</time>
