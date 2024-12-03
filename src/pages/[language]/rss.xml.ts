@@ -1,6 +1,7 @@
 import rss from "@astrojs/rss";
 
 import type { APIContext } from "astro";
+import { render } from "astro:content";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { SITE_DESCRIPTION, SITE_TITLE } from "config";
 import { languageCodes } from "localization";
@@ -51,10 +52,11 @@ export async function GET({ params, site }: APIContext) {
         items: await Promise.all(
             blogs
                 .filter(({ data }) => data.language == language)
-                .map(async ({ data, render, slug }) => {
+                .map(async (blog) => {
+                    const { data, slug } = blog;
                     const { title, description, date: pubDate } = data;
 
-                    const { Content } = await render();
+                    const { Content } = await render(blog);
                     const postHTML = convertImageURL(
                         await renderComponent(Content),
                     );

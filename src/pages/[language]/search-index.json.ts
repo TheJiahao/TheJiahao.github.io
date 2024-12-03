@@ -1,4 +1,5 @@
 import type { APIContext } from "astro";
+import { render } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import fuzzysort from "fuzzysort";
@@ -22,10 +23,11 @@ export async function GET({ params }: APIContext) {
     const blogs: Promise<PreparedPage[]> = Promise.all(
         getBlogs()
             .filter(({ data }) => data.language === language)
-            .map(async ({ data, slug, render }) => {
+            .map(async (blog) => {
+                const { data, slug } = blog;
                 const { title, image = BLOG_IMAGE_PLACEHOLDER } = data;
 
-                const { Content } = await render();
+                const { Content } = await render(blog);
                 const postHTML = await renderComponent(Content);
 
                 const description = fuzzysort.prepare(
