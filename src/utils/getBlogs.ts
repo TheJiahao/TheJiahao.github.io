@@ -9,7 +9,7 @@ const rawBlogs: RawBlogEntry[] = (
         ({ data }) => import.meta.env.MODE === "development" || !data.draft,
     )
 ).map((blog) => {
-    const [language, ...slug] = blog.slug.split("/");
+    const [language, ...slug] = blog.id.split("/");
 
     return {
         ...blog,
