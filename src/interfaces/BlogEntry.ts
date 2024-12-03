@@ -1,7 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 import type { BlogData, RawBlogData } from "interfaces/BlogData";
 
-type RawBlogEntry = Omit<CollectionEntry<"posts">, "slug"> & {
+type RawBlogEntry = CollectionEntry<"posts"> & {
     /** Blog slug without language */
     slug: string;
     data: RawBlogData;
