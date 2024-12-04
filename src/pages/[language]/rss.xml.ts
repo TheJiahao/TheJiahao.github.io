@@ -2,6 +2,7 @@ import rss from "@astrojs/rss";
 
 import type { APIContext } from "astro";
 import { render } from "astro:content";
+import { SITE_BASE_URL } from "astro:env/server";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 import { SITE_DESCRIPTION, SITE_TITLE } from "config";
 import { languageCodes } from "localization";
@@ -14,15 +15,13 @@ import { getBlogs } from "utils/getBlogs";
 import { renderComponent } from "utils/renderComponent";
 
 const convertImageURL = (content: string): string => {
-    const baseURL = process.env.SITE_BASE_URL;
-
-    if (!baseURL) {
+    if (!SITE_BASE_URL) {
         throw new Error("SITE_BASE_URL is not defined");
     }
 
     return unified()
         .use(rehypeParse)
-        .use(rehypeAbsImage, { prefix: baseURL })
+        .use(rehypeAbsImage, { prefix: SITE_BASE_URL })
         .use(rehypeStringify)
         .processSync(content)
         .toString();

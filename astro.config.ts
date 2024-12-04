@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import rehypeFigure from "@microflash/rehype-figure";
 import expressiveCode from "astro-expressive-code";
 import robotsTxt from "astro-robots-txt";
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
@@ -89,6 +89,15 @@ export default defineConfig({
     markdown: {
         remarkPlugins: [remarkSectionize, remarkMath],
         rehypePlugins: [rehypeKatex, rehypeFigure],
+    },
+    env: {
+        schema: {
+            SITE_BASE_URL: envField.string({
+                context: "server",
+                access: "public",
+                optional: true,
+            }),
+        },
     },
     redirects: {
         "/": {
