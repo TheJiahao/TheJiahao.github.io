@@ -61,6 +61,9 @@ export default defineConfig({
         port: Number(PUBLIC_PORT) || 4321,
     },
     trailingSlash: "never",
+    prefetch: {
+        prefetchAll: true,
+    },
     i18n: {
         defaultLocale,
         locales: languageCodes,
