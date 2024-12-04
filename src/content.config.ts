@@ -10,7 +10,7 @@ const baseSchema = ({ image }: SchemaContext) =>
 
 const postCollection = defineCollection({
     loader: glob({ pattern: "**/*.{md,mdx}", base: "content/posts" }),
-    schema: (context) => {
+    schema: (context) =>
         baseSchema(context).extend({
             date: z.date(),
             license: z.string().optional(),
@@ -27,8 +27,7 @@ const postCollection = defineCollection({
                 .optional(),
             draft: z.boolean().optional(),
             math: z.boolean().optional(),
-        });
-    },
+        }),
 });
 
 const projectCollection = defineCollection({
