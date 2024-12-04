@@ -54,8 +54,8 @@ importers:
         specifier: ^0.8.4
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       astro-seo-schema:
-        specifier: ^4.0.2
-        version: 4.0.3(astro@5.0.2(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(sass@1.81.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2))
+        specifier: ^5.0.0
+        version: 5.0.0(astro@5.0.2(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(sass@1.81.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2))
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -2044,10 +2044,10 @@ packages:
   astro-robots-txt@1.0.0:
     resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
 
-  astro-seo-schema@4.0.3:
-    resolution: {integrity: sha512-K7fhkAhAkgNfWpiQRCa7K1/VBI+OatmzQjxTlPSKIoGSrXLOziPRImdXkWgFJCGhOKRVfAKdroqt1a1CdEFBPQ==}
+  astro-seo-schema@5.0.0:
+    resolution: {integrity: sha512-rbP9BUxvqH4tdgG5VEYDcoAxUhVKv93TdHRQ5zbYUxee1TKAWsNcAG3nqavX83QTTGqU5anvikMcJZXWhGN9wg==}
     peerDependencies:
-      astro: ^4.0.0
+      astro: ^5.0.0
       schema-dts: ^1.1.0
 
   astro-seo@0.8.4:
@@ -7493,7 +7493,7 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro-seo-schema@4.0.3(astro@5.0.2(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(sass@1.81.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2)):
+  astro-seo-schema@5.0.0(astro@5.0.2(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(sass@1.81.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.2)):
     dependencies:
       astro: 5.0.2(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.0)(sass@1.81.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
       schema-dts: 1.1.2(typescript@5.7.2)
