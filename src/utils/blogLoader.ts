@@ -11,7 +11,7 @@ export const blogLoader = (): Loader => {
         ...loader,
         load: async (context: LoaderContext) => {
             await loader.load(context);
-            const store = context.store;
+            const { store } = context;
 
             for (const entry of store.values()) {
                 const path = entry.filePath;
