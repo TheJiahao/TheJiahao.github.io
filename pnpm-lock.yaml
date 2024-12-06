@@ -70,7 +70,7 @@ importers:
         version: 1.5.0
       html-react-parser:
         specifier: ^5.1.12
-        version: 5.1.19(@types/react@18.3.14)(react@18.3.1)
+        version: 5.2.0(@types/react@18.3.14)(react@18.3.1)
       katex:
         specifier: ^0.16.11
         version: 0.16.11
@@ -3059,11 +3059,11 @@ packages:
   html-escaper@3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
 
-  html-react-parser@5.1.19:
-    resolution: {integrity: sha512-ecjQg5KDhM+Yv3tRRfdp0fYSdSYHI1FQEDqou0g8NO7mXuoK8ksbYGRjeslqWO6QWX3PKREVWnC8VS1FSZaFHA==}
+  html-react-parser@5.2.0:
+    resolution: {integrity: sha512-t5IkGKTBYnjmYUzEV1RBT5twACepcf20u6Q0TylXQkb6NQKaBFSMebb/S/joxXrg8IHc+ROLirQIZc5DkD23hA==}
     peerDependencies:
-      '@types/react': 0.14 || 15 || 16 || 17 || 18
-      react: 0.14 || 15 || 16 || 17 || 18
+      '@types/react': 0.14 || 15 || 16 || 17 || 18 || 19
+      react: 0.14 || 15 || 16 || 17 || 18 || 19
     peerDependenciesMeta:
       '@types/react':
         optional: true
@@ -8898,7 +8898,7 @@ snapshots:
 
   html-escaper@3.0.3: {}
 
-  html-react-parser@5.1.19(@types/react@18.3.14)(react@18.3.1):
+  html-react-parser@5.2.0(@types/react@18.3.14)(react@18.3.1):
     dependencies:
       domhandler: 5.0.3
       html-dom-parser: 5.0.11
