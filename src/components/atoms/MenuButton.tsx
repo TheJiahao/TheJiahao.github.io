@@ -1,10 +1,6 @@
 import LoadingIcon from "components/atoms/LoadingIcon";
 import useHydrationState from "hooks/useHydrationState";
-import {
-    cloneElement,
-    type AriaAttributes,
-    type ButtonHTMLAttributes,
-} from "react";
+import { type AriaAttributes, type ButtonHTMLAttributes } from "react";
 import { LuMenu, LuX } from "react-icons/lu";
 
 interface MenuButtonProps
@@ -20,11 +16,7 @@ const MenuButton = ({ expanded, ...props }: MenuButtonProps) => {
 
     return (
         <button type="button" disabled={disabled} {...props}>
-            {cloneElement(icon, {
-                className: "size-15",
-                role: "presentation",
-                focusable: false,
-            })}
+            <icon.type size-15 role="presentation" focusable={false} />
         </button>
     );
 };
