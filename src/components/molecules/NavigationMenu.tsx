@@ -2,7 +2,6 @@ import Menu, { type MenuProps } from "components/molecules/Menu";
 import { NAVIGATION_LINKS } from "config";
 import type { IconLink } from "interfaces/IconLink";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
-import { cloneElement } from "react";
 import { getTranslation } from "utils/getTranslation";
 
 interface NavigationMenuProps extends MenuProps, TranslatedElement {
@@ -35,9 +34,8 @@ const NavigationMenu = ({
                 p-2
                 rounded-md
             >
-                {cloneElement(link.icon, {
-                    "aria-hidden": true,
-                })}
+                <link.icon.type aria-hidden />
+
                 {link.text}
             </a>
         ))}

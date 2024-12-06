@@ -1,4 +1,4 @@
-import { cloneElement, type ReactElement } from "react";
+import { type ReactElement } from "react";
 import type { IconBaseProps } from "react-icons/lib";
 
 interface SocialLinkProps {
@@ -18,11 +18,12 @@ const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
         rounded-md
         p-1
     >
-        {cloneElement(icon, {
-            className: "size-10 text-secondary",
-            role: "presentation",
-            focusable: false,
-        })}
+        <icon.type
+            size-10
+            text-secondary
+            role="presentation"
+            focusable={false}
+        />
     </a>
 );
 
