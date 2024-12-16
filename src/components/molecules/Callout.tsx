@@ -58,7 +58,7 @@ const Callout = ({
                 </span>
 
                 {collapsible && (
-                    <LuChevronDown className="group-data-[open]:rotate-180 transition" />
+                    <LuChevronDown className="transition group-data-[open]:rotate-180" />
                 )}
             </DisclosureButton>
             <DisclosurePanel static={!collapsible}>{children}</DisclosurePanel>

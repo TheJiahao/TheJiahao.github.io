@@ -60,14 +60,14 @@ const LanguageSelector = ({
                 <span align-icon gap-1>
                     {getTranslation(defaultLanguage).name}
                     <LuChevronDown
-                        className="group-data-[open]:rotate-180 transition"
+                        className="transition group-data-[open]:rotate-180"
                         aria-hidden
                     />
                 </span>
             </ListboxButton>
 
             <ListboxOptions
-                className="data-[closed]:opacity-0 data-[focus]:outline-none w-[var(--button-width)]"
+                className="w-[var(--button-width)] data-[closed]:opacity-0 data-[focus]:outline-none"
                 anchor={{ to: "bottom end", gap: "1rem" }}
                 card
                 flex="~ col"
