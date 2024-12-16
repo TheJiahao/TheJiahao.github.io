@@ -171,6 +171,9 @@ importers:
       '@types/sanitize-html':
         specifier: ^2.11.0
         version: 2.13.0
+      '@unocss/eslint-config':
+        specifier: ^0.65.1
+        version: 0.65.1(eslint@9.17.0(jiti@1.21.6))(typescript@5.7.2)
       '@vitest/coverage-v8':
         specifier: ^2.0.0
         version: 2.1.8(vitest@2.1.8(@types/node@22.10.2)(jiti@2.4.1)(jsdom@25.0.1)(sass@1.83.0)(tsx@4.19.2)(yaml@2.6.1))
@@ -1726,6 +1729,14 @@ packages:
 
   '@unocss/core@0.65.1':
     resolution: {integrity: sha512-Ke0WNZjfSCE6pniJb8PjiwhO6/McxVb1EQYrkkz8aJuR83xu+AEcTog9D4N9EUkRfHS5tZYXQtTj4Uh90T6CEg==}
+
+  '@unocss/eslint-config@0.65.1':
+    resolution: {integrity: sha512-LVSUc9sNZyG4/Ho3XnrFP6wszkEOb/s8ojoSbeIa0omdmIWwm6KIOUD5Vmk539Gh9KnpvzmyeeIJS+mbKHnJMw==}
+    engines: {node: '>=14'}
+
+  '@unocss/eslint-plugin@0.65.1':
+    resolution: {integrity: sha512-N39mNa+pBXMzHjLXO2dE93NvxOhO9hHUQWkyrH+8u8tbXMOy+bt9aVehr2/LZfd6nbwUyZx6DxEZqu3OaSyD7A==}
+    engines: {node: '>=14'}
 
   '@unocss/extractor-arbitrary-variants@0.65.1':
     resolution: {integrity: sha512-VpF7j29TlmVjNolkIjhQ/cwYkuPUoXLv+ko62YRMibE5632QepbNob69pNYGOZustrZt3LvgHD/GcriKwJO4BA==}
@@ -7025,6 +7036,26 @@ snapshots:
   '@unocss/core@0.63.6': {}
 
   '@unocss/core@0.65.1': {}
+
+  '@unocss/eslint-config@0.65.1(eslint@9.17.0(jiti@1.21.6))(typescript@5.7.2)':
+    dependencies:
+      '@unocss/eslint-plugin': 0.65.1(eslint@9.17.0(jiti@1.21.6))(typescript@5.7.2)
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+
+  '@unocss/eslint-plugin@0.65.1(eslint@9.17.0(jiti@1.21.6))(typescript@5.7.2)':
+    dependencies:
+      '@typescript-eslint/utils': 8.18.0(eslint@9.17.0(jiti@1.21.6))(typescript@5.7.2)
+      '@unocss/config': 0.65.1
+      '@unocss/core': 0.65.1
+      magic-string: 0.30.15
+      synckit: 0.9.2
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
 
   '@unocss/extractor-arbitrary-variants@0.65.1':
     dependencies:

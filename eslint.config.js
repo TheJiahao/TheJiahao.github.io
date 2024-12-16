@@ -1,4 +1,5 @@
 import eslint from "@eslint/js";
+import unocss from "@unocss/eslint-config/flat";
 import astroEslint from "eslint-plugin-astro";
 import reactJSXRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
@@ -11,6 +12,7 @@ export default tseslint.config(
     eslint.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...astroEslint.configs.recommended,
+    unocss,
     {
         ignores: [
             "dist",
