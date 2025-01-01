@@ -67,7 +67,7 @@ importers:
         version: 3.1.0
       giscus:
         specifier: ^1.5.0
-        version: 1.5.0
+        version: 1.6.0
       html-react-parser:
         specifier: ^5.1.12
         version: 5.2.2(@types/react@19.0.2)(react@19.0.0)
@@ -2970,9 +2970,6 @@ packages:
 
   get-tsconfig@4.8.1:
     resolution: {integrity: sha512-k9PN+cFBmaLWtVz29SkUoqU5O0slLuHJXt/2P+tMVFT+phsSGXGkp9t3rQIqdz0e+06EHNGs3oM6ZX1s2zHxRg==}
-
-  giscus@1.5.0:
-    resolution: {integrity: sha512-t3LL0qbSO3JXq3uyQeKpF5CegstGfKX/0gI6eDe1cmnI7D56R7j52yLdzw4pdKrg3VnufwCgCM3FDz7G1Qr6lg==}
 
   giscus@1.6.0:
     resolution: {integrity: sha512-Zrsi8r4t1LVW950keaWcsURuZUQwUaMKjvJgTCY125vkW6OiEBkatE7ScJDbpqKHdZwb///7FVC21SE3iFK3PQ==}
@@ -8924,10 +8921,6 @@ snapshots:
   get-tsconfig@4.8.1:
     dependencies:
       resolve-pkg-maps: 1.0.0
-
-  giscus@1.5.0:
-    dependencies:
-      lit: 3.2.1
 
   giscus@1.6.0:
     dependencies:
