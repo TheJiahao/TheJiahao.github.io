@@ -28,7 +28,7 @@ importers:
         version: 3.2.1
       '@giscus/react':
         specifier: ^3.0.0
-        version: 3.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        version: 3.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@headlessui/react':
         specifier: ^2.1.1
         version: 2.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1022,11 +1022,11 @@ packages:
   '@floating-ui/utils@0.2.8':
     resolution: {integrity: sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==}
 
-  '@giscus/react@3.0.0':
-    resolution: {integrity: sha512-hgCjLpg3Wgh8VbTF5p8ZLcIHI74wvDk1VIFv12+eKhenNVUDjgwNg2B1aq/3puyHOad47u/ZSyqiMtohjy/OOA==}
+  '@giscus/react@3.1.0':
+    resolution: {integrity: sha512-0TCO2TvL43+oOdyVVGHDItwxD1UMKP2ZYpT6gXmhFOqfAJtZxTzJ9hkn34iAF/b6YzyJ4Um89QIt9z/ajmAEeg==}
     peerDependencies:
-      react: ^16 || ^17 || ^18
-      react-dom: ^16 || ^17 || ^18
+      react: ^16 || ^17 || ^18 || ^19
+      react-dom: ^16 || ^17 || ^18 || ^19
 
   '@headlessui/react@2.2.0':
     resolution: {integrity: sha512-RzCEg+LXsuI7mHiSomsu/gBJSjpupm6A1qIZ5sWjd7JhARNlMiSA4kKfJpCKwU9tE+zMRterhhrP74PvfJrpXQ==}
@@ -2973,6 +2973,9 @@ packages:
 
   giscus@1.5.0:
     resolution: {integrity: sha512-t3LL0qbSO3JXq3uyQeKpF5CegstGfKX/0gI6eDe1cmnI7D56R7j52yLdzw4pdKrg3VnufwCgCM3FDz7G1Qr6lg==}
+
+  giscus@1.6.0:
+    resolution: {integrity: sha512-Zrsi8r4t1LVW950keaWcsURuZUQwUaMKjvJgTCY125vkW6OiEBkatE7ScJDbpqKHdZwb///7FVC21SE3iFK3PQ==}
 
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
@@ -6502,9 +6505,9 @@ snapshots:
 
   '@floating-ui/utils@0.2.8': {}
 
-  '@giscus/react@3.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@giscus/react@3.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
-      giscus: 1.5.0
+      giscus: 1.6.0
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
@@ -8923,6 +8926,10 @@ snapshots:
       resolve-pkg-maps: 1.0.0
 
   giscus@1.5.0:
+    dependencies:
+      lit: 3.2.1
+
+  giscus@1.6.0:
     dependencies:
       lit: 3.2.1
 
