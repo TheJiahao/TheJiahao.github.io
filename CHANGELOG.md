@@ -1,5 +1,46 @@
 # Changelog
 
+## [3.6.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.5.0...v3.6.0) (2025-01-03)
+
+
+### Features
+
+* ✨ Remove description from blog page ([7cded88](https://github.com/TheJiahao/TheJiahao.github.io/commit/7cded88113897c5e64fa50aa2e76c754f1e503b9))
+* **menu-button:** ✨ Add click effect ([ad90e98](https://github.com/TheJiahao/TheJiahao.github.io/commit/ad90e98274c4d88e64eddf88398516bc0cdf2102))
+
+
+### Bug Fixes
+
+* 🐛 Exclude playwright from build ([0ece8de](https://github.com/TheJiahao/TheJiahao.github.io/commit/0ece8de3e2b7ceba89b1e643f884e915507c12d4))
+* 🐛 Lint ([0a7a7a2](https://github.com/TheJiahao/TheJiahao.github.io/commit/0a7a7a2c70e8f3c36fc55d01c9f2a5325e4eb1d8))
+* 🐛 Schema not returned ([0ac1327](https://github.com/TheJiahao/TheJiahao.github.io/commit/0ac13275260841e5e4611f69c80db8be53a09621))
+* **blog-footer:** 🐛 Replace `&lt;p&gt;` with `<div>` ([2aced2b](https://github.com/TheJiahao/TheJiahao.github.io/commit/2aced2bc2db03966e5b8c9c72467800322d14842))
+* **container:** 🐛 Import Markdown renderer from @astrojs/mdx ([332c686](https://github.com/TheJiahao/TheJiahao.github.io/commit/332c68627129b8773e62f4abbf419db2ca0c7b1b))
+* **container:** 🐛 Use new renderer API ([652d2b1](https://github.com/TheJiahao/TheJiahao.github.io/commit/652d2b1dfb13956979ea501a168cda0c356e4aea))
+* **deps:** 🐛 Lockfile ([c49cc73](https://github.com/TheJiahao/TheJiahao.github.io/commit/c49cc73daa69495f14501f52dce678266bead74b))
+* **icon:** 🐛 Update icon names ([159844b](https://github.com/TheJiahao/TheJiahao.github.io/commit/159844b829982e5ed22a73e12880e407df0135b7))
+* **nav-bar:** 🐛 Trailing slashes not working ([9adcbee](https://github.com/TheJiahao/TheJiahao.github.io/commit/9adcbeef814302d54e43851b076d0390fb3ef404))
+* **post:** 🐛 Update Nushell default config url ([626f3a2](https://github.com/TheJiahao/TheJiahao.github.io/commit/626f3a2368146453baf341997a34b442fbcbb8e2))
+* **social-link:** 🐛 Tests ([bc75509](https://github.com/TheJiahao/TheJiahao.github.io/commit/bc75509a00533c1a3bacfc7fc91fff6daa4dff8c))
+* **test:** 🐛 🚨 Override Vite version ([dcc1294](https://github.com/TheJiahao/TheJiahao.github.io/commit/dcc129425440850e84dc1d7fe5d0041d42886f04))
+
+
+### Performance Improvements
+
+* ⚡️ Enable prefetch on hover ([178bdb3](https://github.com/TheJiahao/TheJiahao.github.io/commit/178bdb382723efcaf8dfcb48ec55ff6d778dcd67))
+
+
+### Reverts
+
+* "feat(menu-button): ✨ Add click effect" ([572d274](https://github.com/TheJiahao/TheJiahao.github.io/commit/572d2749e6e3220f4fd784b503264ee23bd0979b))
+* "fix(container): 🐛 Use new renderer API" ([7d76cda](https://github.com/TheJiahao/TheJiahao.github.io/commit/7d76cda0eaaaefe8e981c332c48fb14a85d5070c))
+* "fix(nav-bar): 🐛 Trailing slashes not working" ([6612546](https://github.com/TheJiahao/TheJiahao.github.io/commit/6612546ed3fd979ca8e06e5a811fd6d7f25d8db9))
+* "fix(rss): 🐛 Disable trailing slash" ([7e5d98f](https://github.com/TheJiahao/TheJiahao.github.io/commit/7e5d98ff0caf55b53f0577b0681851edda573982))
+* "refactor: ♻️ Move lastModification to Content loader" ([eb9660e](https://github.com/TheJiahao/TheJiahao.github.io/commit/eb9660e9ca4b267ede7b094789fc2b1229e4df3a))
+* "refactor: ♻️ Remove unused code" ([88cd34e](https://github.com/TheJiahao/TheJiahao.github.io/commit/88cd34e0004ca4150f54a3c79557fe93fcc36bd0))
+* "refactor: ♻️ Use destructuring" ([0c491e6](https://github.com/TheJiahao/TheJiahao.github.io/commit/0c491e62d612f9182d1bda238e6c3de38e61fc47))
+* "revert: "fix(rss): 🐛 Disable trailing slash"" ([87ddbc6](https://github.com/TheJiahao/TheJiahao.github.io/commit/87ddbc6027d97ba7e2a7a6706184d8f79d914806))
+
 ## [3.5.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.4.2...v3.5.0) (2024-08-30)
 
 ### Features
