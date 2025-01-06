@@ -99,7 +99,7 @@
         "vitest-mock-extended": "^2.0.0",
         "zhlint": "^0.8.1"
     },
-    "packageManager": "pnpm@9.15.2",
+    "packageManager": "pnpm@9.15.3",
     "pnpm": {
         "overrides": {
             "vitest>vite": "^6.0.0"
