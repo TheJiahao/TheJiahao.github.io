@@ -16,10 +16,10 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.0.4(astro@5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))
+        version: 4.0.5(astro@5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))
       '@astrojs/react':
         specifier: ^4.0.0
-        version: 4.1.2(@types/node@22.10.5)(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(jiti@2.4.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.1)(tsx@4.19.2)(yaml@2.6.1)
+        version: 4.1.3(@types/node@22.10.5)(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(jiti@2.4.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.1)(tsx@4.19.2)(yaml@2.6.1)
       '@astrojs/rss':
         specifier: ^4.0.6
         version: 4.0.11
@@ -43,10 +43,10 @@ importers:
         version: 0.65.4
       astro:
         specifier: ^5.0.0
-        version: 5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
+        version: 5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
       astro-expressive-code:
         specifier: ^0.38.0
-        version: 0.38.3(astro@5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))
+        version: 0.38.3(astro@5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -55,7 +55,7 @@ importers:
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3)
       astro-seo-schema:
         specifier: ^5.0.0
-        version: 5.0.0(astro@5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.3))
+        version: 5.0.0(astro@5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.3))
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -295,8 +295,8 @@ packages:
   '@astrojs/markdown-remark@6.0.1':
     resolution: {integrity: sha512-CTSYijj25NfxgZi15TU3CwPwgyD1/7yA3FcdcNmB9p94nydupiUbrIiq3IqeTp2m5kCVzxbPZeC7fTwEOaNyGw==}
 
-  '@astrojs/mdx@4.0.4':
-    resolution: {integrity: sha512-w68BeD6K3mjyZbLtg9+ahCs+uFxDXfwD2Lb8zBwBOyDvAFvkgG4VqqHP+hwAUvgxLuH3GbadQhV1fv7NEbrxPg==}
+  '@astrojs/mdx@4.0.5':
+    resolution: {integrity: sha512-JhMCm4wf94PNHQDWKyez2ZVLcG5R6Cyjk8TmpqYVRrOTuU3GIWeDAoum7Q1p05SFD+nYwvXOcv42/m8pE3Ylug==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0
@@ -305,8 +305,8 @@ packages:
     resolution: {integrity: sha512-GilTHKGCW6HMq7y3BUv9Ac7GMe/MO9gi9GW62GzKtth0SwukCu/qp2wLiGpEujhY+VVhaG9v7kv/5vFzvf4NYw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/react@4.1.2':
-    resolution: {integrity: sha512-Slw8Bho50w1+rYnSnDl5PDAUikSOEItx5DEJU5OgmarTirBr1audIb2DgC8faAGcGkq5WhuUVsSiq/TmSORlwA==}
+  '@astrojs/react@4.1.3':
+    resolution: {integrity: sha512-LPUS7MpiY9LiiPog3SD8AXRRc1jvGfWtG4RIexeD1lYKxhaCiW4gwa0kWbTrUPetaPz4Sik2c0uEEtYZJaH5+Q==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       '@types/react': ^17.0.50 || ^18.0.21 || ^19.0.0
@@ -2072,8 +2072,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.1.4:
-    resolution: {integrity: sha512-V0XD2GlwUweCROYv+QKs97p7I1cZ6mYycU3VKGbJv2l55suTTy766F/MtHgoM/VAFdPBn488MUvDAYx85gf/Zw==}
+  astro@5.1.5:
+    resolution: {integrity: sha512-Q9TE4aNlczxVoPDoXR3UcjLezL+70z0KbTRXovE4ybpx0mgNL1jsmSWtF3UFXB5+GTf9JK7om5fbIaaMReKcUg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2133,8 +2133,8 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  browserslist@4.24.3:
-    resolution: {integrity: sha512-1CPmv8iobE2fyRMV97dAcMVegvvWKxmq94hkLiAkUGwKVTyDLw33K+ZxiFrREKmmps4rIw6grcCFCnTMSZ/YiA==}
+  browserslist@4.24.4:
+    resolution: {integrity: sha512-KDi1Ny1gSePi1vm0q4oxSF8b4DR44GF4BbmS2YdhPLOEqd8pDviZOGH/GsmRwoWJ2+5Lr085X7naowMwKHDG1A==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -2179,8 +2179,8 @@ packages:
     resolution: {integrity: sha512-8WB3Jcas3swSvjIeA2yvCJ+Miyz5l1ZmB6HFb9R1317dt9LCQoswg/BGrmAmkWVEszSrrg4RwmO46qIm2OEnSA==}
     engines: {node: '>=16'}
 
-  caniuse-lite@1.0.30001690:
-    resolution: {integrity: sha512-5ExiE3qQN6oF8Clf8ifIDcMRCRE/dMGcETG/XGMD8/XiXm6HXQgQTh1yZYLXXpSOsEUlJm1Xr7kGULZTuGtP/w==}
+  caniuse-lite@1.0.30001692:
+    resolution: {integrity: sha512-A95VKan0kdtrsnMubMKxEKUKImOPSuCpYgxSQBo036P5YYgVIcOYJEgt/txJWqObiRQeISNCfef9nvlQ0vbV7A==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2571,8 +2571,8 @@ packages:
   ecdsa-sig-formatter@1.0.11:
     resolution: {integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==}
 
-  electron-to-chromium@1.5.75:
-    resolution: {integrity: sha512-Lf3++DumRE/QmweGjU+ZcKqQ+3bKkU/qjaKYhIJKEOhgIO9Xs6IiAQFkfFoj+RhgDk4LUeNsLo6plExHqSyu6Q==}
+  electron-to-chromium@1.5.80:
+    resolution: {integrity: sha512-LTrKpW0AqIuHwmlVNV+cjFYTnXtM9K37OGhpe0ZI10ScPSxqVSryZHIY3WnCS5NSYbBODRTZyhRMS2h5FAEqAw==}
 
   emmet@2.4.11:
     resolution: {integrity: sha512-23QPJB3moh/U9sT4rQzGgeyyGIrcM+GH5uVYg2C6wZIxAIJq7Ng3QLT79tl8FUwDXhyq9SusfknOrofAKqvgyQ==}
@@ -5221,8 +5221,8 @@ packages:
       uploadthing:
         optional: true
 
-  update-browserslist-db@1.1.1:
-    resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
+  update-browserslist-db@1.1.2:
+    resolution: {integrity: sha512-PPypAm5qvlD7XMZC3BujecnaOxwhrtoFR+Dqkk5Aa/6DssiH0ibKoketaj9w8LP7Bont1rYeoV5plxD7RTEPRg==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -5798,12 +5798,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.4(astro@5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))':
+  '@astrojs/mdx@4.0.5(astro@5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.0.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.4
@@ -5821,7 +5821,7 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/react@4.1.2(@types/node@22.10.5)(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(jiti@2.4.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.1)(tsx@4.19.2)(yaml@2.6.1)':
+  '@astrojs/react@4.1.3(@types/node@22.10.5)(@types/react-dom@19.0.2(@types/react@19.0.4))(@types/react@19.0.4)(jiti@2.4.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.83.1)(tsx@4.19.2)(yaml@2.6.1)':
     dependencies:
       '@types/react': 19.0.4
       '@types/react-dom': 19.0.2(@types/react@19.0.4)
@@ -5911,7 +5911,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.26.3
       '@babel/helper-validator-option': 7.25.9
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -7685,9 +7685,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-expressive-code@0.38.3(astro@5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)):
+  astro-expressive-code@0.38.3(astro@5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)):
     dependencies:
-      astro: 5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
       rehype-expressive-code: 0.38.3
 
   astro-robots-txt@1.0.0:
@@ -7695,9 +7695,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro-seo-schema@5.0.0(astro@5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.3)):
+  astro-seo-schema@5.0.0(astro@5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.7.3)):
     dependencies:
-      astro: 5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1)
       schema-dts: 1.1.2(typescript@5.7.3)
 
   astro-seo@0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.3):
@@ -7708,7 +7708,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.1.4(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1):
+  astro@5.1.5(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.29.1)(sass@1.83.1)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -7858,12 +7858,12 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  browserslist@4.24.3:
+  browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001690
-      electron-to-chromium: 1.5.75
+      caniuse-lite: 1.0.30001692
+      electron-to-chromium: 1.5.80
       node-releases: 2.0.19
-      update-browserslist-db: 1.1.1(browserslist@4.24.3)
+      update-browserslist-db: 1.1.2(browserslist@4.24.4)
 
   buffer-equal-constant-time@1.0.1: {}
 
@@ -7907,7 +7907,7 @@ snapshots:
 
   camelcase@8.0.0: {}
 
-  caniuse-lite@1.0.30001690: {}
+  caniuse-lite@1.0.30001692: {}
 
   ccount@2.0.1: {}
 
@@ -8261,7 +8261,7 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  electron-to-chromium@1.5.75: {}
+  electron-to-chromium@1.5.80: {}
 
   emmet@2.4.11:
     dependencies:
@@ -11911,9 +11911,9 @@ snapshots:
       ofetch: 1.4.1
       ufo: 1.5.4
 
-  update-browserslist-db@1.1.1(browserslist@4.24.3):
+  update-browserslist-db@1.1.2(browserslist@4.24.4):
     dependencies:
-      browserslist: 4.24.3
+      browserslist: 4.24.4
       escalade: 3.2.0
       picocolors: 1.1.1
 
