@@ -26,6 +26,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.1.5
         version: 3.2.1
+      '@expressive-code/plugin-collapsible-sections':
+        specifier: ^0.39.0
+        version: 0.39.0
       '@giscus/react':
         specifier: ^3.0.0
         version: 3.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1027,6 +1030,9 @@ packages:
 
   '@expressive-code/core@0.39.0':
     resolution: {integrity: sha512-DLaFPZstIE52SlrXT7CRrHBO0yt3pj8KyODTtZVwqPR6nZDiy9emLXn/NkD7dyD9VrXtuJBVTUSdF0xARdAQQA==}
+
+  '@expressive-code/plugin-collapsible-sections@0.39.0':
+    resolution: {integrity: sha512-zoUbuJX6Z91TPPmlHBsBIltSx5AwgKN2SPu91xwU+2nfjsobuwG2HvJePAoYr4IGPu/UOBLzW/4YPwBRSXt8Iw==}
 
   '@expressive-code/plugin-frames@0.39.0':
     resolution: {integrity: sha512-9EqDl7MDDXzNeHQIXM/5IN+/MhJ6FDkE7uKgXj0aesjcGTw5Uo9bWsFNZFMzXl8MT2hs0VLqrPSQT0M/4HXO0A==}
@@ -6492,6 +6498,10 @@ snapshots:
       postcss-nested: 6.2.0(postcss@8.4.49)
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
+
+  '@expressive-code/plugin-collapsible-sections@0.39.0':
+    dependencies:
+      '@expressive-code/core': 0.39.0
 
   '@expressive-code/plugin-frames@0.39.0':
     dependencies:

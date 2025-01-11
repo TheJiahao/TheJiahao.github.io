@@ -24,15 +24,7 @@ const { PUBLIC_PORT } = loadEnv(
 export default defineConfig({
     site: process.env.SITE_BASE_URL,
     integrations: [
-        expressiveCode({
-            themes: ["one-light", "one-dark-pro"],
-            styleOverrides: {
-                codeFontFamily:
-                    "monospace, ui-monospace, 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New'",
-                codeFontSize: "large",
-                borderRadius: "0.5rem",
-            },
-        }),
+        expressiveCode(),
         mdx(),
         sitemap({
             lastmod: getLastModified("."),
