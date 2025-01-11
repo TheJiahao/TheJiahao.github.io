@@ -14,7 +14,6 @@ const postCollection = defineCollection({
         baseSchema(context).extend({
             date: z.date(),
             license: z.string().optional(),
-            tags: z.array(z.string()).optional(),
             links: z
                 .array(
                     baseSchema(context).extend({
