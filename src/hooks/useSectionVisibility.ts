@@ -1,41 +1,12 @@
 import { TOC_END_DEPTH, TOC_START_DEPTH } from "config";
 import { useEffect, useState } from "react";
+import { getCurrentHeading } from "utils/getCurrentHeading";
 
 const targetHeadings = Array.from(
     Array(TOC_END_DEPTH - TOC_START_DEPTH + 1).keys(),
 )
     .map((i) => `h${(i + TOC_START_DEPTH).toString()}`)
     .join(",");
-
-const getHeadingDepth = (heading: HTMLHeadingElement): number => {
-    return Number(heading.tagName.replace(/h/i, ""));
-};
-
-const getCurrentHeading = (
-    headings: HTMLHeadingElement[],
-    visibleHeadings: Set<string>,
-): string | undefined => {
-    let current = null;
-
-    for (const heading of headings) {
-        if (!visibleHeadings.has(heading.id)) {
-            continue;
-        }
-
-        if (!current) {
-            current = heading;
-            continue;
-        }
-
-        if (getHeadingDepth(heading) <= getHeadingDepth(current)) {
-            break;
-        }
-
-        current = heading;
-    }
-
-    return current?.id;
-};
 
 /**
  * Checks if the section is visible.
