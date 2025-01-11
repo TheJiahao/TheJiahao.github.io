@@ -100,25 +100,5 @@ export default defineConfig({
             destination: "/zh-cn/about",
             status: 301,
         },
-        "/posts/nushell-setup": {
-            destination: "/zh-cn/posts/nushell-setup",
-            status: 301,
-        },
-        "/posts/vscode-affinity-issues": {
-            destination: "/zh-cn/posts/vscode-affinity-issues",
-            status: 301,
-        },
-        "/posts/zsh-zim-setup": {
-            destination: "/zh-cn/posts/zsh-zim-setup",
-            status: 301,
-        },
-        "/posts/edge-window-different-profile-issue": {
-            destination: "/zh-cn/posts/edge-window-different-profile-issue",
-            status: 301,
-        },
-        "/posts/windows-vscode-clangd-setup": {
-            destination: "/zh-cn/posts/windows-vscode-clangd-setup",
-            status: 301,
-        },
     },
 });
