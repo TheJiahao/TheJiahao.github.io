@@ -1,5 +1,5 @@
 import { TOC_END_DEPTH, TOC_START_DEPTH } from "config";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import { getCurrentHeading } from "utils/getCurrentHeading";
 
 const getHeading = (section: Element) => {
@@ -11,6 +11,29 @@ const getHeading = (section: Element) => {
 
     return section.querySelector<HTMLHeadingElement>(targetHeadings);
 };
+
+const updateVisibility =
+    (
+        setVisible: Dispatch<SetStateAction<Set<string>>>,
+    ): IntersectionObserverCallback =>
+    (entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+            const heading = getHeading(target);
+
+            if (!heading) {
+                return;
+            }
+
+            if (!isIntersecting) {
+                setVisible((current) =>
+                    current.difference(new Set([heading.id])),
+                );
+                return;
+            }
+
+            setVisible((current) => current.union(new Set([heading.id])));
+        });
+    };
 
 /**
  * Checks if the section is visible.
@@ -31,24 +54,7 @@ const useSectionVisibility = (id: string): boolean => {
             sections.map(getHeading).filter((heading) => heading !== null),
         );
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(({ target, isIntersecting }) => {
-                const heading = getHeading(target);
-
-                if (!heading) {
-                    return;
-                }
-
-                if (!isIntersecting) {
-                    setVisible((current) =>
-                        current.difference(new Set([heading.id])),
-                    );
-                    return;
-                }
-
-                setVisible((current) => current.union(new Set([heading.id])));
-            });
-        });
+        const observer = new IntersectionObserver(updateVisibility(setVisible));
 
         sections.forEach((section) => {
             observer.observe(section);
