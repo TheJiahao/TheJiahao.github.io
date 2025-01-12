@@ -22,9 +22,9 @@ draft: true
 
 ## 获取当前标题
 
-### 检测可见章节
+### 分隔章节
 
-为了检测可见章节，需要用 [remark-sectionize](https://www.npmjs.com/package/remark-sectionize) 插件分隔章节。
+为了区分可见章节，需要先用 [remark-sectionize](https://www.npmjs.com/package/remark-sectionize) 插件分隔章节。
 首先需要安装插件，笔者使用 `pnpm`，但也可以使用 `npm`、`yarn` 或者其他包管理器。
 
 ```shell
@@ -69,8 +69,78 @@ export default defineConfig({
 </section>
 ```
 
+### 检测可见章节
+
 分隔完章节后就可以用浏览器的 [Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API) 检测可见章节和对应的标题。
-因为 Intersection Observer 可能会同时更新多个标题的可见性，所以使用 [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）以高效地储存和更新可见标题。
+由于检测可见章节的逻辑比较复杂，笔者选择将其放到 [Hook](https://zh-hans.react.dev/learn/reusing-logic-with-custom-hooks) 里面：
+
+```ts title="useSectionVisibility.ts"
+const useSectionVisibility = (id: string): boolean => {
+    const [visible, setVisible] = useState<Set<string>>(new Set());
+    const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
+
+    useEffect(() => {
+        const sections = Array.from(
+            document.querySelectorAll("article section:not(.footnotes)"),
+        );
+        const observer = new IntersectionObserver(updateVisibility(setVisible));
+
+        setHeadings(
+            sections.map(getHeading).filter((heading) => heading !== null),
+        );
+
+        for (const section of sections) {
+            observer.observe(section);
+        }
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
+    return id === getCurrentHeading(headings, visible);
+};
+```
+
+因为 Intersection Observer 每次调用回调函数都需要遍历所有监视的对象，
+所以笔者选择分别记录可见标题和所有标题。
+这样只需要保证包含所有标题的列表顺序即可。
+由于之后判断当前标题时需要快速的检查标题是否可见，可见标题适合用 [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）存储。
+
+获取章节标题的逻辑可用很多种方式实现。
+本站采用的 [实现方式](https://github.com/TheJiahao/TheJiahao.github.io/blob/124cfcb8bd981c9acc91ae3c30700914a9af9708/src/hooks/useSectionVisibility.ts#L5C1-L13C3) 能限制标题层级，但相对复杂，所以本文仅介绍另一种更简单的实现方式：
+
+```ts title="getHeading.ts"
+const getHeading = (section: Element) =>
+    section.querySelector<HTMLHeadingElement>("h1,h2,h3");
+```
+
+更新可见标题只需要遍历所有章节并添加新的可见标题和删除不可见标题：
+
+```ts title="updateVisibility.ts"
+const updateVisibility =
+    (
+        setVisible: Dispatch<SetStateAction<Set<string>>>,
+    ): IntersectionObserverCallback =>
+    (entries) => {
+        for (const { target, isIntersecting } of entries) {
+            const heading = getHeading(target);
+
+            if (!heading) {
+                continue;
+            }
+
+            if (!isIntersecting) {
+                setVisible((current) =>
+                    current.difference(new Set([heading.id])),
+                );
+                continue;
+            }
+
+            setVisible((current) => current.union(new Set([heading.id])));
+        }
+    };
+```
 
 ### 当前标题
 
