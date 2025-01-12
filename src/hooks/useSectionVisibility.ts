@@ -8,6 +8,9 @@ const targetHeadings = Array.from(
     .map((i) => `h${(i + TOC_START_DEPTH).toString()}`)
     .join(",");
 
+const getHeading = (section: Element) =>
+    section.querySelector<HTMLHeadingElement>(targetHeadings);
+
 /**
  * Checks if the section is visible.
  *
@@ -24,17 +27,12 @@ const useSectionVisibility = (id: string): boolean => {
         );
 
         setHeadings(
-            sections
-                .map((section) =>
-                    section.querySelector<HTMLHeadingElement>(targetHeadings),
-                )
-                .filter((heading) => heading !== null),
+            sections.map(getHeading).filter((heading) => heading !== null),
         );
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(({ target, isIntersecting }) => {
-                const heading =
-                    target.querySelector<HTMLHeadingElement>(targetHeadings);
+                const heading = getHeading(target);
 
                 if (!heading) {
                     return;
