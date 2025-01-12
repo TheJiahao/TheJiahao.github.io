@@ -17,7 +17,7 @@ const updateVisibility =
         setVisible: Dispatch<SetStateAction<Set<string>>>,
     ): IntersectionObserverCallback =>
     (entries) => {
-        entries.forEach(({ target, isIntersecting }) => {
+        for (const { target, isIntersecting } of entries) {
             const heading = getHeading(target);
 
             if (!heading) {
@@ -32,7 +32,7 @@ const updateVisibility =
             }
 
             setVisible((current) => current.union(new Set([heading.id])));
-        });
+        }
     };
 
 /**
@@ -49,16 +49,15 @@ const useSectionVisibility = (id: string): boolean => {
         const sections = Array.from(
             document.querySelectorAll("article section:not(.footnotes)"),
         );
+        const observer = new IntersectionObserver(updateVisibility(setVisible));
 
         setHeadings(
             sections.map(getHeading).filter((heading) => heading !== null),
         );
 
-        const observer = new IntersectionObserver(updateVisibility(setVisible));
-
-        sections.forEach((section) => {
+        for (const section of sections) {
             observer.observe(section);
-        });
+        }
 
         return () => {
             observer.disconnect();
