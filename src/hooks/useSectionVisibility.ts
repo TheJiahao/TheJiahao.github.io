@@ -2,14 +2,15 @@ import { TOC_END_DEPTH, TOC_START_DEPTH } from "config";
 import { useEffect, useState } from "react";
 import { getCurrentHeading } from "utils/getCurrentHeading";
 
-const targetHeadings = Array.from(
-    Array(TOC_END_DEPTH - TOC_START_DEPTH + 1).keys(),
-)
-    .map((i) => `h${(i + TOC_START_DEPTH).toString()}`)
-    .join(",");
+const getHeading = (section: Element) => {
+    const headingDepths = TOC_END_DEPTH - TOC_START_DEPTH + 1;
+    const targetHeadings = [...Array(headingDepths).keys()]
+        .map((i) => i + TOC_START_DEPTH)
+        .map((i) => `h${i.toString()}`)
+        .join(",");
 
-const getHeading = (section: Element) =>
-    section.querySelector<HTMLHeadingElement>(targetHeadings);
+    return section.querySelector<HTMLHeadingElement>(targetHeadings);
+};
 
 /**
  * Checks if the section is visible.
