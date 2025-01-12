@@ -21,14 +21,14 @@ const updateVisibility =
             const heading = getHeading(target);
 
             if (!heading) {
-                return;
+                continue;
             }
 
             if (!isIntersecting) {
                 setVisible((current) =>
                     current.difference(new Set([heading.id])),
                 );
-                return;
+                continue;
             }
 
             setVisible((current) => current.union(new Set([heading.id])));
