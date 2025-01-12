@@ -1,5 +1,5 @@
 import { TOC_END_DEPTH, TOC_START_DEPTH } from "config";
-import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
+import { useEffect, useState } from "react";
 import { getCurrentHeading } from "utils/getCurrentHeading";
 
 const getHeading = (section: Element) => {
@@ -12,28 +12,28 @@ const getHeading = (section: Element) => {
     return section.querySelector<HTMLHeadingElement>(targetHeadings);
 };
 
-const updateVisibility =
-    (
-        setVisible: Dispatch<SetStateAction<Set<string>>>,
-    ): IntersectionObserverCallback =>
-    (entries) => {
-        for (const { target, isIntersecting } of entries) {
-            const heading = getHeading(target);
+const getVisible = (
+    entries: IntersectionObserverEntry[],
+    visible: Set<string>,
+): Set<string> => {
+    let newVisible = visible;
 
-            if (!heading) {
-                return;
-            }
+    for (const { target, isIntersecting } of entries) {
+        const heading = getHeading(target);
 
-            if (!isIntersecting) {
-                setVisible((current) =>
-                    current.difference(new Set([heading.id])),
-                );
-                return;
-            }
-
-            setVisible((current) => current.union(new Set([heading.id])));
+        if (!heading) {
+            continue;
         }
-    };
+
+        if (!isIntersecting) {
+            newVisible = newVisible.difference(new Set([heading.id]));
+        }
+
+        newVisible = newVisible.union(new Set([heading.id]));
+    }
+
+    return newVisible;
+};
 
 /**
  * Checks if the section is visible.
@@ -49,7 +49,9 @@ const useSectionVisibility = (id: string): boolean => {
         const sections = Array.from(
             document.querySelectorAll("article section:not(.footnotes)"),
         );
-        const observer = new IntersectionObserver(updateVisibility(setVisible));
+        const observer = new IntersectionObserver((entries) => {
+            setVisible(getVisible(entries, visible));
+        });
 
         setHeadings(
             sections.map(getHeading).filter((heading) => heading !== null),
