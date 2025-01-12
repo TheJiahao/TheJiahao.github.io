@@ -11,7 +11,7 @@ draft: true
 实现主要分为三步：
 
 1. 将 Astro 的标题对象嵌套
-1. 当前标题计算逻辑
+1. 根据可见章节计算当前标题
 1. 用 React 实现目录和标题组件
 
 ## Astro
@@ -20,16 +20,57 @@ draft: true
 
 ### 标题处理
 
-### 用 `<section/>` 分隔章节
-
-Remark 插件
-
 ## 获取当前标题
 
-### 可见标题
+### 检测可见章节
 
-使用浏览器的 [Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) 来决定那些标题可见。
-Intersection Observer 可能会同时更新多个标题的可见性，所以使用 [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）以高效地储存和更新可见标题。
+为了检测可见章节，需要用 [remark-sectionize](https://www.npmjs.com/package/remark-sectionize) 插件分隔章节。
+首先需要安装插件，笔者使用 `pnpm`，但也可以使用 `npm`、`yarn` 或者其他包管理器。
+
+```shell
+pnpm add remark-sectionize
+```
+
+接着将插件添加到 Astro 设置文件。
+
+```ts title="astro.config.ts"
+import remarkSectionize from "remark-sectionize";
+import { defineConfig } from "astro/config";
+
+export default defineConfig({
+    ...
+    remarkPlugins: [remarkSectionize],
+})
+```
+
+现在，Astro 生成的 HTML 文件中章节会按标题分隔到 `<section/>` 标签内，例如以下 Markdown 内容
+
+```markdown
+# 如何实现目录
+## 安装插件
+...
+## React 组件
+...
+```
+
+会变成：
+
+```html
+<section>
+  <h1>如何实现目录</h1>
+  <section>
+    <h2>安装插件</h2>
+    <p>...</p>
+  </section>
+  <section>
+    <h2>React 组件</h2>
+    <p>...</p>
+  </section>
+</section>
+```
+
+分隔完章节后就可以用浏览器的 [Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API) 检测可见章节和对应的标题。
+因为 Intersection Observer 可能会同时更新多个标题的可见性，所以使用 [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）以高效地储存和更新可见标题。
 
 ### 当前标题
 
