@@ -12,15 +12,9 @@ import Callout from "components/molecules/Callout";
 本文将介绍如何为 Astro 博客实现自动高亮当前段落的目录组件。
 实现主要分为三步：
 
-1. 将 Astro 的标题对象嵌套
 1. 根据可见章节计算当前标题
+1. 将 Astro 的标题对象嵌套
 1. 用 React 实现目录和标题组件
-
-## Astro
-
-### 渲染流程
-
-### 标题处理
 
 ## 获取当前标题
 
@@ -250,7 +244,67 @@ const getHeadingDepth = (heading: HTMLHeadingElement): number => {
 };
 ```
 
-当前标题也可以定义为所有可见标题，从而同时高亮多个标题或更复杂的效果 [^cool_toc]。
+当前标题也可以定义为所有可见标题，从而同时高亮多个标题或实现更复杂的效果 [^cool_toc]。
+
+## 处理 Astro 标题对象
+
+因为章节之间关系可以用树表示，所以将标题嵌套可以更方便地生成目录。
+默认情况下，Astro 的标题对象（`MarkdownHeading`）不包含子标题，所以需要先将标题对象嵌套。
+
+```ts
+interface MarkdownHeading {
+    depth: number;
+    slug: string;
+    text: string;
+}
+```
+
+在 Astro 文件中可以通过 [`Astro.props.headings`](https://docs.astro.build/en/basics/layouts/#markdown-layout-props) 获取包含所有标题对象的列表，其中的标题是从上往下按出现顺序排列的。
+例如以下标题结构
+
+```txt
+一级标题1
+    二级标题1
+一级标题2
+```
+
+对应的 `headings` 为：
+
+```ts
+[
+    { depth: 1, slug: "一级标题1-id", text: "一级标题1" },
+    { depth: 2, slug: "二级标题1-id", text: "二级标题1" },
+    { depth: 1, slug: "一级标题2-id", text: "一级标题2" },
+];
+```
+
+嵌套后标题列表应为
+
+```ts
+[
+    {
+        depth: 1,
+        slug: "一级标题1-id",
+        text: "一级标题1",
+        subheadings: [
+            {
+                depth: 2,
+                slug: "二级标题1-id",
+                text: "二级标题1",
+                subheadings: [],
+            },
+        ],
+    },
+    {
+        depth: 1,
+        slug: "一级标题2-id",
+        text: "一级标题2",
+        subheadings: [],
+    },
+];
+```
+
+以下代码可以将标题对象嵌套，基于 Kevin Drum 的这篇 [文章](https://kld.dev/building-table-of-contents/#building-a-nested-table-of-contents-array)。
 
 ## React 组件
 
