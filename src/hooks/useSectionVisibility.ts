@@ -18,11 +18,7 @@ const updateVisibility =
     ): IntersectionObserverCallback =>
     (entries) => {
         for (const { target, isIntersecting } of entries) {
-            const heading = getHeading(target);
-
-            if (!heading) {
-                continue;
-            }
+            const heading = getHeading(target) as HTMLHeadingElement;
 
             if (!isIntersecting) {
                 setVisible((current) =>
@@ -48,12 +44,10 @@ const useSectionVisibility = (id: string): boolean => {
     useEffect(() => {
         const sections = Array.from(
             document.querySelectorAll("article section:not(.footnotes)"),
-        );
+        ).filter((section) => getHeading(section) !== null);
         const observer = new IntersectionObserver(updateVisibility(setVisible));
 
-        setHeadings(
-            sections.map(getHeading).filter((heading) => heading !== null),
-        );
+        setHeadings(sections.map(getHeading) as HTMLHeadingElement[]);
 
         for (const section of sections) {
             observer.observe(section);
