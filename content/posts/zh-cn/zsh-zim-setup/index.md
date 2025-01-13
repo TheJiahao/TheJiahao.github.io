@@ -4,7 +4,7 @@ date: 2024-01-05T21:09:00+02:00
 aliases:
     - 1345558699
 
-title: 使用 Zim 配置称手且快速的 Zsh⸺语法高亮、自动补全、键位配置等
+title: 使用 Zim 配置称手且快速的 Zsh——语法高亮、自动补全、键位配置等
 categories: 工具
 tags:
     - Zim
