@@ -7,9 +7,10 @@ aliases:
     - 313e717.html
 
 title: 解决任务栏新建的 Edge 窗口使用不同配置文件的问题
-description: >-
-    Visual Studio Code 内置的 JavaScript Debugger 会导致任务栏新建的 Edge 窗口和已有窗口分开。
+description: "
+    Visual Studio Code 内置的 JavaScript Debugger 会导致任务栏新建的 Edge 窗口和已有窗口分开。\
     本文为此提供了一种解决方式。
+    "
 categories:
 tags:
     - VS Code
