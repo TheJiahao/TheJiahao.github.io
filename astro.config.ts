@@ -6,6 +6,7 @@ import expressiveCode from "astro-expressive-code";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig, envField } from "astro/config";
 import rehypeKatex from "rehype-katex";
+import rehypeRewrite, { type RehypeRewriteOptions } from "rehype-rewrite";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
 import UnoCSS from "unocss/astro";
@@ -19,6 +20,14 @@ const { PUBLIC_PORT } = loadEnv(
     process.cwd(),
     "",
 );
+
+const removeSpaceAfterSeparator: RehypeRewriteOptions["rewrite"] = (node) => {
+    if (node.type == "text") {
+        node.value = node.value
+            .replaceAll(/。\s/g, "。")
+            .replaceAll(/，\s/g, "，");
+    }
+};
 
 // https://astro.build/config
 export default defineConfig({
@@ -80,7 +89,16 @@ export default defineConfig({
     },
     markdown: {
         remarkPlugins: [remarkSectionize, remarkMath],
-        rehypePlugins: [rehypeKatex, rehypeFigure],
+        rehypePlugins: [
+            rehypeKatex,
+            rehypeFigure,
+            [
+                rehypeRewrite,
+                {
+                    rewrite: removeSpaceAfterSeparator,
+                },
+            ],
+        ],
     },
     env: {
         schema: {
