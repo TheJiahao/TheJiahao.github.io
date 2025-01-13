@@ -37,7 +37,6 @@
         "astro-robots-txt": "^1.0.0",
         "astro-seo": "^0.8.4",
         "astro-seo-schema": "^5.0.0",
-        "classnames": "^2.5.1",
         "dayjs": "^1.11.11",
         "fuzzysort": "^3.0.2",
         "giscus": "^1.5.0",
