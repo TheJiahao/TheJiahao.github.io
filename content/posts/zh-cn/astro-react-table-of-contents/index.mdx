@@ -78,50 +78,64 @@ export default defineConfig({
 ### 检测可见章节
 
 分隔完章节后就可以用浏览器的 [Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API) 检测可见章节和对应的标题。
-由于检测可见章节的逻辑比较复杂，笔者选择将其放到 [Hook](https://zh-hans.react.dev/learn/reusing-logic-with-custom-hooks) 里面：
+Intersection Observer 会在监视的元素可见性变化时调用事先设置的回调函数并传入所有监视的元素。
 
-```ts title="useSectionVisibility.ts"
+由于检测可见章节的逻辑比较复杂，笔者选择将其放到 [Hook](https://zh-hans.react.dev/learn/reusing-logic-with-custom-hooks) 里面。
+本文假设文章内容在 `<article/>` 标签内，且所有脚注都在 `<section class="footnotes"/>` 标签内（Astro 默认情况下会生成）。
+
+```ts title="useSectionVisibility.ts" {10,12,29}
 const useSectionVisibility = (id: string): boolean => {
     const [visible, setVisible] = useState<Set<string>>(new Set());
     const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
 
     useEffect(() => {
+        // 从上往下获取所有章节
         const sections = Array.from(
             document.querySelectorAll("article section:not(.footnotes)"),
-        );
+            // 过滤标题层级太深的章节
+        ).filter((section) => getHeading(section) !== null);
+        // 初始化 IntersectionObserver，回调函数运行后会更新可见标题
         const observer = new IntersectionObserver(updateVisibility(setVisible));
 
-        setHeadings(
-            sections.map(getHeading).filter((heading) => heading !== null),
-        );
+        // 初始化所有标题
+        setHeadings(sections.map(getHeading) as HTMLHeadingElement[]);
 
+        // 监视所有章节
         for (const section of sections) {
             observer.observe(section);
         }
 
+        // 清理函数
         return () => {
             observer.disconnect();
         };
     }, []);
 
+    // 判断当前标题
     return id === getCurrentHeading(headings, visible);
 };
 ```
 
-因为 Intersection Observer 每次调用回调函数都需要遍历所有监视的对象，
-所以笔者选择分别记录可见标题和所有标题。
-这样只需要保证包含所有标题的列表顺序即可。
-由于之后判断当前标题时需要快速的检查标题是否可见，可见标题适合用 [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）存储。
+为了方便，笔者选择分别记录可见标题和所有标题。
+用 [`querySelectorAll`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll) 可以按出现顺序获取所有章节。
+此外，因为判断当前标题时需要快速的检查标题是否可见，所以笔者选择用 [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）存储可见标题的 id。
 
-获取章节标题的逻辑可用很多种方式实现。
-本站采用的 [实现方式](https://github.com/TheJiahao/TheJiahao.github.io/blob/124cfcb8bd981c9acc91ae3c30700914a9af9708/src/hooks/useSectionVisibility.ts#L5C1-L13C3) 能限制标题层级，但相对复杂，所以本文仅介绍另一种更简单的实现方式：
+接下来笔者将逐一介绍 `getHeading`、`updateVisibility` 和 `getCurrentHeading` 函数。
+
+#### 获取章节标题
+
+获取章节标题的逻辑可用不同方式实现。
+本站采用的 [实现方式](https://github.com/TheJiahao/TheJiahao.github.io/blob/124cfcb8bd981c9acc91ae3c30700914a9af9708/src/hooks/useSectionVisibility.ts#L5C1-L13C3) 能限制标题层级，但相对复杂，所以本文仅介绍最简单的实现方式。
+[`querySelector`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector) 会返回章节包含的第一个标题。
 
 ```ts title="getHeading.ts"
 const getHeading = (section: Element) =>
-    section.querySelector<HTMLHeadingElement>("h1,h2,h3");
+    section.querySelector<HTMLHeadingElement>("h1,h2,h3,h4,h5,h6");
 ```
 
-更新可见标题只需要遍历所有章节并添加新的可见标题和删除不可见标题：
+#### 更新可见标题
+
+更新可见标题只需要遍历所有章节并添加新的可见标题和删除不可见标题。
 
 ```ts title="updateVisibility.ts"
 const updateVisibility =
@@ -130,12 +144,10 @@ const updateVisibility =
     ): IntersectionObserverCallback =>
     (entries) => {
         for (const { target, isIntersecting } of entries) {
-            const heading = getHeading(target);
+            // 不包含标题的章节已经被过滤
+            const heading = getHeading(target) as HTMLHeadingElement;
 
-            if (!heading) {
-                continue;
-            }
-
+            // 删除不可见标题
             if (!isIntersecting) {
                 setVisible((current) =>
                     current.difference(new Set([heading.id])),
@@ -143,21 +155,20 @@ const updateVisibility =
                 continue;
             }
 
+            // 添加可见标题
             setVisible((current) => current.union(new Set([heading.id])));
         }
     };
 ```
 
 <Callout type="warning" title="直接根据 visible 更新可见标题" collapsible={true} open={false} client:idle>
-    以下方式会导致可见标题出问题：
-    ```ts {16-18}
+    以下方式会导致可见标题出问题，传入 `getVisible` 的 `visible` 是刚初始化的空集。
+    ```ts {16-18} collapse={10-11}
     const getVisible = (
         entries: IntersectionObserverEntry[],
         visible: Set<string>,
         ): Set<string> => {
-            const newVisible = new Set(visible);
-            ...
-            return newVisible;
+            // 根据现有可见标题计算新的可见标题
         };
 
     const useSectionVisibility = (id: string): boolean => {
@@ -174,15 +185,13 @@ const updateVisibility =
         ...
     };
     ```
-    传入 `getVisible` 时 `visible` 还是空集。
+    如果读者偏好这种方式，可以参考这篇 Stack Overflow 上的 [回答](https://stackoverflow.com/a/67333323) 使用 `useRef` 获取 `visible` 的值。
 
 </Callout>
 
-### 当前标题
+### 判断当前标题
 
-本文中将要高亮的标题称为当前标题。
-当前标题可以用不同方式定义，比如可以把所有可见标题都定义为当前标题。
-笔者将当前标题定义为从文章开头数第一个层级最深的标题。
+本文中当前标题定义为从从上往下数第一个层级最深且可见的标题。
 例如以下可见标题中当前标题为 “二级标题1” 和 “三级标题1”。
 
 ```txt {3}
@@ -200,12 +209,11 @@ const updateVisibility =
         三级标题2
 ```
 
-```typescript title="getCurrentHeading.ts" collapse={1-4}
-const getHeadingDepth = (heading: HTMLHeadingElement): number => {
-    return Number(heading.tagName.replace(/h/i, ""));
-};
+从第二个例子中可以注意到，如果下一个标题层级更浅，则当前标题为第一个最深的标题。
+根据这个现象，笔者实现了 `getCurrentHeading` 函数。
 
-export const getCurrentHeading = (
+```typescript title="getCurrentHeading.ts" {17}
+const getCurrentHeading = (
     headings: HTMLHeadingElement[],
     visibleHeadings: Set<string>,
 ): string | undefined => {
@@ -228,10 +236,24 @@ export const getCurrentHeading = (
         current = heading;
     }
 
+    // Astro 生成的标题都包含 id
     return current?.id;
 };
 ```
 
+标题层级可以用从标题的 [`tagName`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/tagName) 属性获取，例如 `h2` 的层级是 2。
+为了避免大小写导致问题，笔者选择在正则表达式后添加 `i` 以忽略大小写。
+
+```ts title="getHeadingDepth.ts"
+const getHeadingDepth = (heading: HTMLHeadingElement): number => {
+    return Number(heading.tagName.replace(/h/i, ""));
+};
+```
+
+当前标题也可以定义为所有可见标题，从而同时高亮多个标题或更复杂的效果 [^cool_toc]。
+
 ## React 组件
 
 ## 效果
+
+[^cool_toc]: Kevin Drum, Table of contents progress animation, https://kld.dev/toc-animation/
