@@ -27,8 +27,8 @@ importers:
         specifier: ^3.1.5
         version: 3.2.1
       '@expressive-code/plugin-collapsible-sections':
-        specifier: ^0.39.0
-        version: 0.39.0
+        specifier: ^0.40.0
+        version: 0.40.0
       '@giscus/react':
         specifier: ^3.0.0
         version: 3.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -1031,8 +1031,11 @@ packages:
   '@expressive-code/core@0.39.0':
     resolution: {integrity: sha512-DLaFPZstIE52SlrXT7CRrHBO0yt3pj8KyODTtZVwqPR6nZDiy9emLXn/NkD7dyD9VrXtuJBVTUSdF0xARdAQQA==}
 
-  '@expressive-code/plugin-collapsible-sections@0.39.0':
-    resolution: {integrity: sha512-zoUbuJX6Z91TPPmlHBsBIltSx5AwgKN2SPu91xwU+2nfjsobuwG2HvJePAoYr4IGPu/UOBLzW/4YPwBRSXt8Iw==}
+  '@expressive-code/core@0.40.0':
+    resolution: {integrity: sha512-vKRxKaDVhSozGPETcPOB7NF8sn1ICZoO/UfUWs/4o+XmDIOSX7cBQX8BVukenvSksdv5Aaf/teuGzjxX0a7Ibw==}
+
+  '@expressive-code/plugin-collapsible-sections@0.40.0':
+    resolution: {integrity: sha512-OktWRqYOC4g92wCK1dClYX1UGvO4WAkAv0gUd+kAuZH/lAaesl+TC0NWoLRY+fEqMx3co4YfKmboCmjXWmBwBw==}
 
   '@expressive-code/plugin-frames@0.39.0':
     resolution: {integrity: sha512-9EqDl7MDDXzNeHQIXM/5IN+/MhJ6FDkE7uKgXj0aesjcGTw5Uo9bWsFNZFMzXl8MT2hs0VLqrPSQT0M/4HXO0A==}
@@ -6407,9 +6410,21 @@ snapshots:
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
 
-  '@expressive-code/plugin-collapsible-sections@0.39.0':
+  '@expressive-code/core@0.40.0':
     dependencies:
-      '@expressive-code/core': 0.39.0
+      '@ctrl/tinycolor': 4.1.0
+      hast-util-select: 6.0.3
+      hast-util-to-html: 9.0.4
+      hast-util-to-text: 4.0.2
+      hastscript: 9.0.0
+      postcss: 8.4.49
+      postcss-nested: 6.2.0(postcss@8.4.49)
+      unist-util-visit: 5.0.0
+      unist-util-visit-parents: 6.0.1
+
+  '@expressive-code/plugin-collapsible-sections@0.40.0':
+    dependencies:
+      '@expressive-code/core': 0.40.0
 
   '@expressive-code/plugin-frames@0.39.0':
     dependencies:
