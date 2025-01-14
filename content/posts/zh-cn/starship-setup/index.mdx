@@ -74,12 +74,9 @@ export PATH = "$HOME/.cargo/bin:$PATH"
 Starship 的许多主题都需要 [Nerd Font](https://www.nerdfonts.com/) 中的符号。
 所以需要安装带有 Nerd Font 补丁的[字体](https://www.nerdfonts.com/font-downloads)。
 
-<Callout type="warning" title="注意" client:idle>
-
-安装字体后还需要在终端中使用字体。
-如果使用 [Windows 终端](https://github.com/microsoft/terminal)，字体可于 `设置 > 配置文件 > 外观 > 字体` 中设置。
-
-</Callout>
+> [!WARNING/注意]
+> 安装字体后还需要在终端中使用字体。
+> 如果使用 [Windows 终端](https://github.com/microsoft/terminal)，字体可于 `设置 > 配置文件 > 外观 > 字体` 中设置。
 
 #### Windows
 
@@ -96,14 +93,12 @@ scoop bucket add nerd-fonts
 scoop install jetbrainsmono-nf-mono
 ```
 
-<Callout type="info" title="字体后缀" open={false} collapsible={true} client:idle>
-
-- `nf`：Nerd Fonts 字体
-- `mono`：等宽字体
-
-具体含义可参考 Nerd Fonts 的 [README](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#features)。
-
-</Callout>
+> [!NOTE/字体后缀]
+>
+> - `nf`：Nerd Fonts 字体
+> - `mono`：等宽字体
+>
+> 具体含义可参考 Nerd Fonts 的 [README](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#features)。
 
 #### Ubuntu (Linux)
 
@@ -157,20 +152,16 @@ eval "$(starship init zsh)"
 starship preset 主题-名称 -o ~/.config/starship.toml
 ```
 
-<Callout title="注意" type="warning">
-    此命令会覆盖当前配置文件！
-</Callout>
+> [!CAUTION/注意]
+> 此命令会覆盖当前配置文件！
 
 因为组件太多会拖慢 Shell，所以笔者推荐使用简单的主题，例如 [Bracketed Segments](https://starship.rs/zh-CN/presets/bracketed-segments)。
 ![Bracketed Segments 主题，图片来自 Starship 文档](https://starship.rs/presets/img/bracketed-segments.png)
 
-<Callout title="笔者的配置" type="info" collapsible={true} open={false} client:idle>
-
-部分符号为 Nerd Font 字体中的符号，所以可能在浏览器中显示不出来。
-
-<Code code={starshipConfig} lang="toml" title="starship.toml" />
-
-</Callout>
+> [!TIP/笔者的配置]
+> 部分符号为 Nerd Font 字体中的符号，所以可能在浏览器中显示不出来。
+>
+> <Code code={starshipConfig} lang="toml" title="starship.toml" />
 
 ## 自定义
 
@@ -199,22 +190,19 @@ $hostname \
 $directory"""
 ```
 
-<Callout type="warning" title="注意">
-`format` 必须在所有组件之前定义，否则其会被当作组件的 `format` 字段 [^toml-table]。
-
-```toml
-# starship.toml
-
-format = ...
-
-[组件1]
-...
-
-[组件2]
-...
-```
-
-</Callout>
+> [!WARNING/注意] > `format` 必须在所有组件之前定义，否则其会被当作组件的 `format` 字段 [^toml-table]。
+>
+> ```toml
+> # starship.toml
+> 
+> format = ...
+> 
+> [组件1]
+> ...
+> 
+> [组件2]
+> ...
+> ```
 
 ### 组件格式
 

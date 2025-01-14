@@ -155,33 +155,33 @@ const updateVisibility =
     };
 ```
 
-<Callout type="warning" title="直接根据 visible 更新可见标题" collapsible={true} open={false} client:idle>
-    以下方式会导致可见标题出问题，传入 `getVisible` 的 `visible` 是刚初始化的空集。
-    ```ts {16-18} collapse={10-11}
-    const getVisible = (
-        entries: IntersectionObserverEntry[],
-        visible: Set<string>,
-        ): Set<string> => {
-            // 根据现有可见标题计算新的可见标题
-        };
-
-    const useSectionVisibility = (id: string): boolean => {
-        const [visible, setVisible] = useState<Set<string>>(new Set());
-        const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
-
-        useEffect(() => {
-            ...
-            const observer = new IntersectionObserver((entries) => {
-                setVisible(getVisible(entries, visible));
-            });
-            ...
-        }, []);
-        ...
-    };
-    ```
-    如果读者偏好这种方式，可以参考这篇 Stack Overflow 上的 [回答](https://stackoverflow.com/a/67333323) 使用 `useRef` 获取 `visible` 的值。
-
-</Callout>
+> [!WARNING/直接根据 visible 更新可见标题]
+> 以下方式会导致可见标题出问题，传入 `getVisible` 的 `visible` 是刚初始化的空集。
+>
+> ```ts {16-18} collapse={10-11}
+> const getVisible = (
+>     entries: IntersectionObserverEntry[],
+>     visible: Set<string>,
+>     ): Set<string> => {
+>         // 根据现有可见标题计算新的可见标题
+>     };
+>
+> const useSectionVisibility = (id: string): boolean => {
+>     const [visible, setVisible] = useState<Set<string>>(new Set());
+>     const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
+>
+>     useEffect(() => {
+>         ...
+>         const observer = new IntersectionObserver((entries) => {
+>             setVisible(getVisible(entries, visible));
+>         });
+>         ...
+>     }, []);
+>     ...
+> };
+> ```
+>
+> 如果读者偏好这种方式，可以参考这篇 Stack Overflow 上的 [回答](https://stackoverflow.com/a/67333323) 使用 `useRef` 获取 `visible` 的值。
 
 ### 判断当前标题
 

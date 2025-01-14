@@ -106,17 +106,14 @@ Nushell 的配置保存在 `$env.config` 变量中。
 $env.config.show_banner = false
 ```
 
-<Callout type="warning" title="注意">
-
-为避免覆盖之前的配置，笔者推荐单独给 `$env.config` 中的每一项赋值，而不是重新给 `$env.config` 赋值：
-
-```nu title="config.nu"
-$env.config = {
-    show_banner: false
-}
-```
-
-</Callout>
+> [!WARNING/注意]
+> 为避免覆盖之前的配置，笔者推荐单独给 `$env.config` 中的每一项赋值，而不是重新给 `$env.config` 赋值：
+>
+> ```nu title="config.nu"
+> $env.config = {
+>    show_banner: false
+> }
+> ```
 
 Nushell 的默认配置文件可以从 [GitHub 仓库](https://github.com/nushell/nushell/blob/fb2610904997f54f50ad52095948bede81695f31/crates/nu-utils/src/default_files/doc_config.nu) 中找到，其更新的比 [官方文档](https://www.nushell.sh/book/configuration.html) 及时。
 
