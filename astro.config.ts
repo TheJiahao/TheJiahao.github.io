@@ -14,6 +14,7 @@ import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
 import { languageCodes } from "./src/localization";
 import { getLastModified } from "./src/utils/getLastModified";
+import { remarkAlert } from "remark-github-blockquote-alert";
 
 const { PUBLIC_PORT } = loadEnv(
     process.env.NODE_ENV || "dev",
@@ -88,7 +89,7 @@ export default defineConfig({
         },
     },
     markdown: {
-        remarkPlugins: [remarkSectionize, remarkMath],
+        remarkPlugins: [remarkSectionize, remarkMath, remarkAlert],
         rehypePlugins: [
             rehypeKatex,
             rehypeFigure,
