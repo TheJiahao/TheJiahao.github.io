@@ -13,7 +13,7 @@ $colors: (
 }
 
 .markdown-alert-title {
-    @apply text-lg font-bold flex items-center gap-4;
+    @apply text-lg font-bold flex items-center gap-4 m-0;
 }
 
 @each $name, $color in $colors {
