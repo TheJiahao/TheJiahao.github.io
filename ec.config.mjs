@@ -10,4 +10,7 @@ export default defineEcConfig({
         codeFontSize: "large",
         borderRadius: "0.5rem",
     },
+    defaultProps: {
+        collapseStyle: "collapsible-auto",
+    },
 });
