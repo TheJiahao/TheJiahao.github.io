@@ -7,6 +7,7 @@ import robotsTxt from "astro-robots-txt";
 import { defineConfig, envField } from "astro/config";
 import rehypeKatex from "rehype-katex";
 import rehypeRewrite, { type RehypeRewriteOptions } from "rehype-rewrite";
+import { remarkAlert } from "remark-github-blockquote-alert";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
 import UnoCSS from "unocss/astro";
@@ -14,7 +15,6 @@ import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
 import { languageCodes } from "./src/localization";
 import { getLastModified } from "./src/utils/getLastModified";
-import { remarkAlert } from "remark-github-blockquote-alert";
 
 const { PUBLIC_PORT } = loadEnv(
     process.env.NODE_ENV || "dev",
@@ -89,7 +89,11 @@ export default defineConfig({
         },
     },
     markdown: {
-        remarkPlugins: [remarkSectionize, remarkMath, remarkAlert],
+        remarkPlugins: [
+            remarkSectionize,
+            remarkMath,
+            [remarkAlert, { legacyTitle: true }],
+        ],
         rehypePlugins: [
             rehypeKatex,
             rehypeFigure,
