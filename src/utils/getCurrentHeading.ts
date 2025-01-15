@@ -12,7 +12,7 @@ const getHeadingDepth = (heading: HTMLHeadingElement): number => {
 export const getCurrentHeading = (
     headings: HTMLHeadingElement[],
     visibleHeadings: Set<string>,
-): string | undefined => {
+) => {
     let current = null;
 
     for (const heading of headings) {
