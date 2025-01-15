@@ -1,18 +1,22 @@
 ---
 date: 2025-01-11
 
-title: 使用 React 为 Astro 博客实现动态文章目录
-description: 本文介绍了如何为 Astro 博客实现自动高亮当前段落的目录。
+title: 使用 React 为 Astro 博客实现动态文章目录——自动高亮当前章节标题
+description: 本文介绍了如何为 Astro 博客实现自动高亮当前章节的目录。
 
 draft: true
 ---
 
-本文将介绍如何为 Astro 博客实现自动高亮当前段落的目录组件。
+本文将介绍如何为 Astro 博客实现类似本站的目录组件，可自动高亮当前章节。
 实现主要分为三步：
 
 1. 根据可见章节计算当前标题
 1. 将 Astro 的标题对象嵌套
 1. 用 React 实现目录和标题组件
+
+> [!NOTE/备注]
+> 因为本文中不假设目录结构，所以省略了大部分 `import` 语句。
+> 读者需根据目录结构自行添加 `import`。
 
 ## 获取当前标题
 
@@ -183,7 +187,8 @@ const updateVisibility =
 
 ### 判断当前标题
 
-本文中当前标题定义为从从上往下数第一个层级最深且可见的标题，这样滚动页面时可以避免漏掉子标题。
+本文中当前标题定义为从上往下数第一个层级最深且可见的标题，这样滚动页面时可以避免漏掉子标题。
+读者可以使用本站的目录组件（仅桌面端）测试效果。
 例如以下可见标题中当前标题为 “二级标题1” 和 “三级标题1”。
 
 ```txt {3}
@@ -361,6 +366,83 @@ const getTOC = (
 
 ## React 组件
 
-## 效果
+为了保证 HTML 语义正确，笔者选择将目录组件分为两部分：包含标题组件的列表和标题组件。
+
+标题组件中需要标题对象的递归结构。
+
+```tsx title="TableOfContentsHeading.tsx" collapse={1-4} {"标题":10-15} {"子标题":17-26}
+interface HeadingListProps {
+    heading: Heading;
+}
+
+const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
+    const visible = useSectionVisibility(heading.slug);
+
+    return (
+        <li key={heading.slug} className="toc-heading">
+            <a
+                href={`#${heading.slug}`}
+                className={visible ? "toc-heading-highlighted" : undefined}
+            >
+                {heading.text}
+            </a>
+
+            {heading.subHeadings.length > 0 ? (
+                <ul>
+                    {heading.subHeadings.map((heading) => (
+                        <TableOfContentsHeading
+                            key={heading.slug}
+                            heading={heading}
+                        />
+                    ))}
+                </ul>
+            ) : null}
+        </li>
+    );
+};
+
+export default TableOfContentsHeading;
+```
+
+目录组件如下：
+
+```tsx title="TableOfContents.tsx" collapse={1-4}
+interface TableOfContentsProps {
+    headings: MarkdownHeading[];
+}
+
+const TableOfContents = ({ headings }: TableOfContentsProps) => (
+    <nav className="toc">
+        <ul>
+            {getTOC(headings).map((heading) => (
+                <TableOfContentsHeading
+                    key={heading.slug}
+                    heading={heading}
+                />
+            ))}
+        </ul>
+    </nav>
+);
+
+export default TableOfContents;
+```
+
+读者可根据自身偏好，使用 [CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS)、[SCSS](https://sass-lang.com/)、[UnoCSS](https://unocss.dev/)、[Tailwind CSS](https://tailwindcss.com/) 等，实现目录组件和标题高亮样式。
+本站使用的 UnoCSS 样式可参考本站源代码中的 [`TableOfContents.tsx`](https://github.com/TheJiahao/TheJiahao.github.io/blob/d32751c4ba003ff612adc311052279f5b6563f03/src/components/organisms/TableOfContents.tsx) 和 [`unocss.config.ts`](https://github.com/TheJiahao/TheJiahao.github.io/blob/d32751c4ba003ff612adc311052279f5b6563f03/uno.config.ts)。
+
+使用组件时只需要传入 Astro 的标题列表即可，并添加 [客户端指令](https://docs.astro.build/zh-cn/reference/directives-reference/#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8C%87%E4%BB%A4) 从而在客户端（浏览器）运行组件中的代码。
+如果目录组件在页面开头，读者应在布局文件中使用 `client:load`。
+
+```astro title="src/layouts/BlogLayout.astro"
+---
+const { heading } = Astro.props;
+...
+---
+<article>
+    ...
+    {headings.length > 0 && <TableOfContents {headings} client:load />}
+    ...
+</article>
+```
 
 [^cool_toc]: Kevin Drum, Table of contents progress animation, https://kld.dev/toc-animation/
