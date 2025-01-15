@@ -3,6 +3,12 @@ date: 2025-01-11
 
 title: 使用 React 为 Astro 博客实现动态文章目录——自动高亮当前标题
 description: 本文介绍了如何为 Astro 博客实现能自动高亮当前章节标题的目录。
+image: img/react_logo.svg
+
+license: "
+    内容遵循 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)。\
+    封面源自 [React 文档](https://github.com/reactjs/react.dev)，以 [CC BY-SA 4.0 协议](https://github.com/reactjs/react.dev/blob/main/LICENSE-DOCS.md) 发布，修改了图标颜色和位置。
+    "
 
 draft: true
 ---
@@ -11,8 +17,8 @@ draft: true
 实现主要分为三步：
 
 1. 根据可见章节计算当前标题
-1. 将 Astro 的标题对象嵌套
-1. 用 React 实现目录和标题组件
+2. 将 Astro 的标题对象嵌套
+3. 用 React 实现目录和标题组件
 
 > [!NOTE/备注]
 > 因为本文中不假设目录结构，所以省略了大部分 `import` 语句。
