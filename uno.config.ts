@@ -77,13 +77,5 @@ export default defineConfig({
             ],
         },
     },
-    safelist: [
-        "size-15",
-        "size-30",
-        "size-40",
-        "text-code",
-        "text-link",
-        "bg-hover",
-        "bg-clicked",
-    ],
+    safelist: ["size-15", "size-30", "size-40", "text-code", "text-link"],
 });
