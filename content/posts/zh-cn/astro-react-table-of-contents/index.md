@@ -1,8 +1,8 @@
 ---
 date: 2025-01-11
 
-title: 使用 React 为 Astro 博客实现动态文章目录——自动高亮当前章节标题
-description: 本文介绍了如何为 Astro 博客实现自动高亮当前章节的目录。
+title: 使用 React 为 Astro 博客实现动态文章目录——自动高亮当前标题
+description: 本文介绍了如何为 Astro 博客实现能自动高亮当前章节标题的目录。
 
 draft: true
 ---
@@ -23,7 +23,7 @@ draft: true
 ### 分隔章节
 
 为了区分可见章节，需要先用 [remark-sectionize](https://www.npmjs.com/package/remark-sectionize) 插件分隔章节。
-首先需要安装插件，笔者使用 `pnpm`，但也可以使用 `npm`、`yarn` 或者其他包管理器。
+首先需要安装插件，笔者使用 `pnpm`，但也可以使用 `npm`、`yarn`，或者其他包管理器。
 
 ```shell
 pnpm add remark-sectionize
@@ -73,10 +73,10 @@ export default defineConfig({
 
 ### 检测可见章节
 
-分隔完章节后就可以用浏览器的 [Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API) 检测可见章节和对应的标题。
-Intersection Observer 会在监视的元素可见性变化时调用事先设置的回调函数并传入所有监视的元素。
+分隔完章节后就可以用浏览器的 [交叉观察器 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)（Intersection Observer API）检测可见章节和对应的标题。
+交叉观察器会在监视的元素可见性变化时调用事先设置的回调函数并传入所有监视的元素。
 
-由于检测可见章节的逻辑比较复杂，笔者选择将其放到 [Hook](https://zh-hans.react.dev/learn/reusing-logic-with-custom-hooks) 里面。
+检测可见章节的代码比较复杂，适合封装到 [Hook](https://zh-hans.react.dev/learn/reusing-logic-with-custom-hooks) 中。
 本文假设文章内容在 `<article/>` 标签内，且所有脚注都在 `<section class="footnotes"/>` 标签内（Astro 默认情况下会生成）。
 
 ```ts title="useSectionVisibility.ts" {10,12,29}
@@ -113,15 +113,15 @@ const useSectionVisibility = (id: string): boolean => {
 ```
 
 为了方便，笔者选择分别记录可见标题和所有标题。
-用 [`querySelectorAll`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll) 可以按出现顺序获取所有章节。
-此外，因为判断当前标题时需要快速的检查标题是否可见，所以笔者选择用 [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）存储可见标题的 id。
+为了正确判断当前标题，需要用 [`querySelectorAll`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelectorAll) 按出现顺序获取所有章节。
+此外，判断当前标题时还需要快速的检查标题可见性，所以适合用 [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)（散列表）存储可见标题的 id。
 
 接下来笔者将逐一介绍 `getHeading`、`updateVisibility` 和 `getCurrentHeading` 函数。
 
-#### 获取章节标题
+#### 获取章节的标题
 
-获取章节标题的逻辑可用不同方式实现。
-本站采用的 [实现方式](https://github.com/TheJiahao/TheJiahao.github.io/blob/124cfcb8bd981c9acc91ae3c30700914a9af9708/src/hooks/useSectionVisibility.ts#L5C1-L13C3) 能限制标题层级，但相对复杂，所以本文仅介绍最简单的实现方式。
+获取章节标题的逻辑有多种实现方式。
+本站采用的 [实现方式](https://github.com/TheJiahao/TheJiahao.github.io/blob/124cfcb8bd981c9acc91ae3c30700914a9af9708/src/hooks/useSectionVisibility.ts#L5C1-L13C3) 能限制标题层级，但相对复杂，所以本文仅介绍最简单的实现。
 [`querySelector`](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/querySelector) 会返回章节包含的第一个标题。
 
 ```ts title="getHeading.ts"
@@ -158,7 +158,8 @@ const updateVisibility =
 ```
 
 > [!WARNING/直接根据 visible 更新可见标题]
-> 以下方式会导致可见标题出问题，传入 `getVisible` 的 `visible` 是刚初始化的空集。
+> 以下方式会导致可见标题出问题。
+> 因为传入 `getVisible` 的 `visible` 是刚初始化的空集，所以某些情况下会漏掉标题。
 >
 > ```ts {16-18} collapse={10-11}
 > const getVisible = (
@@ -238,8 +239,8 @@ const getCurrentHeading = (
 };
 ```
 
-标题层级可以用从标题的 [`tagName`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/tagName) 属性获取，例如 `h2` 的层级是 2。
-为了避免大小写导致问题，笔者选择在正则表达式后添加 `i` 以忽略大小写。
+标题层级可从标题的 [`tagName`](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/tagName) 属性获取，例如 `h2` 的层级是 2。
+正则表达式后的 `i` 可忽略大小写。
 
 ```ts title="getHeadingDepth.ts"
 const getHeadingDepth = (heading: HTMLHeadingElement): number => {
@@ -323,7 +324,9 @@ const getTOC = (
     const parentHeadings = new Array<Heading | null>(7).fill(null);
 
     headings
+        // 限制标题深度
         .filter((h) => h.depth <= endDepth)
+        // 过滤 Astro 生成的脚注
         .filter((h) => h.text !== "Footnotes")
         .forEach((h) => {
             const heading = { ...h, subHeadings: [] };
@@ -348,7 +351,7 @@ const getTOC = (
 ```
 
 > [!IMPORTANT/标题结构]
-> 以上代码需要标题层级按顺序减少。
+> 以上代码需要标题逐级递减。
 >
 > ```markdown
 > ✅
@@ -370,7 +373,7 @@ const getTOC = (
 
 标题组件中需要标题对象的递归结构。
 
-```tsx title="TableOfContentsHeading.tsx" collapse={1-4} {"标题":10-15} {"子标题":17-26}
+```tsx title="TableOfContentsHeading.tsx" collapse={1-4}
 interface HeadingListProps {
     heading: Heading;
 }
