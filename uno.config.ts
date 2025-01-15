@@ -59,8 +59,6 @@ export default defineConfig({
             disabled: "hsl(0 0% 70%)",
             hover: "hsl(0 0% 96%)",
             clicked: "hsl(0 0% 92%)",
-            info: "rgba(8, 109, 221)",
-            warning: "rgba(236, 117, 0)",
         },
     },
     transformers: [transformerAttributifyJsx(), transformerDirectives()],
@@ -87,9 +85,5 @@ export default defineConfig({
         "text-link",
         "bg-hover",
         "bg-clicked",
-        "text-info",
-        "text-warning",
-        "bg-info",
-        "bg-warning",
     ],
 });
