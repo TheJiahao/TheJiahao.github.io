@@ -183,7 +183,7 @@ const updateVisibility =
 
 ### 判断当前标题
 
-本文中当前标题定义为从从上往下数第一个层级最深且可见的标题。
+本文中当前标题定义为从从上往下数第一个层级最深且可见的标题，这样滚动页面时可以避免漏掉子标题。
 例如以下可见标题中当前标题为 “二级标题1” 和 “三级标题1”。
 
 ```txt {3}
@@ -208,7 +208,7 @@ const updateVisibility =
 const getCurrentHeading = (
     headings: HTMLHeadingElement[],
     visibleHeadings: Set<string>,
-): string | undefined => {
+) => {
     let current = null;
 
     for (const heading of headings) {
@@ -276,7 +276,7 @@ interface MarkdownHeading {
 ];
 ```
 
-嵌套后标题列表应为
+嵌套后标题列表应为：
 
 ```ts
 [
@@ -303,6 +303,61 @@ interface MarkdownHeading {
 ```
 
 以下代码可以将标题对象嵌套，基于 Kevin Drum 的这篇 [文章](https://kld.dev/building-table-of-contents/#building-a-nested-table-of-contents-array)。
+
+```ts collapse={1-4}
+interface Heading extends MarkdownHeading {
+    subHeadings: Heading[];
+}
+
+const getTOC = (
+    headings: MarkdownHeading[],
+    startDepth: number,
+    endDepth: number,
+): Heading[] => {
+    const result: Heading[] = [];
+    const parentHeadings = new Array<Heading | null>(7).fill(null);
+
+    headings
+        .filter((h) => h.depth <= endDepth)
+        .filter((h) => h.text !== "Footnotes")
+        .forEach((h) => {
+            const heading = { ...h, subHeadings: [] };
+            parentHeadings[heading.depth] = heading;
+
+            if (heading.depth === startDepth) {
+                result.push(heading);
+                return;
+            }
+
+            const parent = parentHeadings[heading.depth - 1];
+
+            if (!parent) {
+                throw new Error("标题层级顺序错误");
+            }
+
+            parent.subHeadings.push(heading);
+        });
+
+    return result;
+};
+```
+
+> [!IMPORTANT/标题结构]
+> 以上代码需要标题层级按顺序减少。
+>
+> ```markdown
+> ✅
+> # A
+> ## B
+> ### C
+> #### D
+>
+> ❌
+> # A
+> ### B
+> ## C
+> #### D
+> ```
 
 ## React 组件
 
