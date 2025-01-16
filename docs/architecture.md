@@ -48,11 +48,8 @@ end
 graph TB
 NavigationBarLayout --> BaseLayout
 
-HomeLayout --> NavigationBarLayout
-HomeLayout --> ContentLayout
-
-PortfolioLayout --> NavigationBarLayout
-PortfolioLayout --> ContentLayout
+CollectionLayout --> NavigationBarLayout
+CollectionLayout --> ContentLayout
 
 AboutLayout --> NavigationBarLayout
 AboutLayout --> ContentLayout
