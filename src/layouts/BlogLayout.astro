@@ -3,6 +3,7 @@ import type { MarkdownHeading } from "astro";
 import { Schema } from "astro-seo-schema";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
 import BackButton from "components/atoms/BackButton";
+import BlogSchema from "components/atoms/BlogSchema.astro";
 import MathHeader from "components/atoms/MathHeader.astro";
 import BlogFooter from "components/molecules/BlogFooter.astro";
 import BlogHeader from "components/molecules/BlogHeader.astro";
@@ -41,28 +42,14 @@ const {
     <Fragment slot="head">
         {math && <MathHeader />}
 
-        <Schema
-            item={{
-                "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                mainEntityOfPage: {
-                    "@type": "WebPage",
-                    "@id": Astro.url.href,
-                },
-                headline: title,
-                description,
-                image: image.src,
-                datePublished: formatDate(date),
-                dateModified: formatDate(lastModified),
-                license: license || SITE_LICENSE.url,
-                url: Astro.url.href,
-                author: {
-                    "@type": "Person",
-                    name: SITE_OWNER,
-                    url: getAbsoluteLocaleUrl(language, "/about"),
-                },
-                inLanguage: language,
-            }}
+        <BlogSchema
+            {title}
+            {description}
+            {date}
+            {lastModified}
+            {image}
+            {language}
+            {license}
         />
     </Fragment>
 
