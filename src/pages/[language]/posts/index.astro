@@ -4,7 +4,7 @@ import type { ImageCardProps } from "components/molecules/ImageCard";
 import { DEFAULT_LANGUAGE, SITE_DESCRIPTION, SITE_TITLE } from "config";
 import { languageCodes as languages } from "localization";
 import { getBlogs } from "utils/getBlogs";
-import HomeLayout from "layouts/HomeLayout.astro";
+import BlogCollectionLayout from "layouts/BlogCollectionLayout.astro";
 
 export function getStaticPaths() {
     return languages.map((language) => ({
@@ -23,7 +23,7 @@ const blogs: ImageCardProps[] = getBlogs()
     .sort((a, b) => +b.date - +a.date);
 ---
 
-<HomeLayout
+<BlogCollectionLayout
     title={SITE_TITLE[language]}
     description={SITE_DESCRIPTION[language]}
     {blogs}
