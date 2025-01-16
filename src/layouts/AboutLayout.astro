@@ -1,6 +1,7 @@
 ---
 import { Schema } from "astro-seo-schema";
 import Avatar from "components/atoms/Avatar";
+import ProfileSchema from "components/atoms/ProfileSchema.astro";
 import Article from "components/organisms/Article.astro";
 import {
     DEFAULT_LANGUAGE,
@@ -25,21 +26,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
 <NavigationBarLayout {title}>
-    <Schema
-        item={{
-            "@context": "https://schema.org",
-            "@type": "ProfilePage",
-            description,
-            url: Astro.url.href,
-            mainEntity: {
-                "@type": "Person",
-                name: SITE_OWNER,
-                image: SITE_AVATAR.src,
-                sameAs: SOCIAL_LINKS.map(({ url }) => url),
-            },
-        }}
-        slot="head"
-    />
+    <ProfileSchema {description} slot="head" />
 
     <ContentLayout>
         <main>

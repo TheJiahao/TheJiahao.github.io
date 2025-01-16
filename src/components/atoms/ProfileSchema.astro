@@ -1,0 +1,36 @@
+---
+import { Schema } from "astro-seo-schema";
+import { SITE_AVATAR, SITE_OWNER, SOCIAL_LINKS } from "config";
+
+interface Props {
+    description?: string;
+    name?: string;
+    image?: string;
+    socialLinks?: string[];
+    url?: string;
+}
+
+const {
+    description,
+    name = SITE_OWNER,
+    image = SITE_AVATAR.src,
+    socialLinks = SOCIAL_LINKS.map(({ url }) => url),
+    url = Astro.url.href,
+} = Astro.props;
+---
+
+<Schema
+    item={{
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        description,
+        url,
+        mainEntity: {
+            "@type": "Person",
+            name,
+            image,
+            sameAs: socialLinks,
+        },
+    }}
+    slot="head"
+/>
