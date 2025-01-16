@@ -2,6 +2,7 @@
 import type { SEOProps } from "astro-seo";
 import { Schema } from "astro-seo-schema";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
+import HomeSchema from "components/atoms/HomeSchema.astro";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import CardList from "components/organisms/CardList";
 import SearchBox from "components/organisms/SearchBox";
@@ -22,27 +23,7 @@ const { title, description, language, languages, blogs } = Astro.props;
 ---
 
 <NavigationBarLayout {title} {description} {languages}>
-    <Schema
-        slot="head"
-        item={{
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: title,
-            description,
-            url: Astro.url.href,
-            mainEntityOfPage: {
-                "@type": "WebPage",
-                "@id": Astro.url.href,
-            },
-            author: {
-                "@type": "Person",
-                name: SITE_OWNER,
-                url: getAbsoluteLocaleUrl(language, "/about"),
-            },
-            image: BLOG_IMAGE_PLACEHOLDER.src,
-            inLanguage: language,
-        }}
-    />
+    <HomeSchema {title} {description} {language} slot="head" />
 
     <ContentLayout>
         <header h-15 overflow-visible z-1>

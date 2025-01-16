@@ -1,0 +1,44 @@
+---
+import { Schema } from "astro-seo-schema";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
+import { BLOG_IMAGE_PLACEHOLDER, SITE_OWNER } from "config";
+
+interface Props {
+    title: string;
+    description: string;
+    language: string;
+    author?: string;
+    image?: string;
+    url?: string;
+}
+
+const {
+    title,
+    description,
+    language,
+    author = SITE_OWNER,
+    image = BLOG_IMAGE_PLACEHOLDER.src,
+    url = Astro.url.href,
+} = Astro.props;
+---
+
+<Schema
+    item={{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: title,
+        description,
+        url,
+        mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": url,
+        },
+        author: {
+            "@type": "Person",
+            name: author,
+            url: getAbsoluteLocaleUrl(language, "/about"),
+        },
+        image,
+        inLanguage: language,
+    }}
+/>
