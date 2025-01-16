@@ -1,7 +1,5 @@
 ---
 import type { MarkdownHeading } from "astro";
-import { Schema } from "astro-seo-schema";
-import { getAbsoluteLocaleUrl } from "astro:i18n";
 import BackButton from "components/atoms/BackButton";
 import BlogSchema from "components/atoms/BlogSchema.astro";
 import MathHeader from "components/atoms/MathHeader.astro";
@@ -11,11 +9,10 @@ import LinkList from "components/molecules/LinkList";
 import Article from "components/organisms/Article.astro";
 import CommentList from "components/organisms/CommentList";
 import TableOfContents from "components/organisms/TableOfContents";
-import { BLOG_IMAGE_PLACEHOLDER, SITE_LICENSE, SITE_OWNER } from "config";
+import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import type { BlogData } from "interfaces/BlogData";
 import BaseLayout from "layouts/BaseLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
-import { formatDate } from "utils/formatDate";
 import { getSlug } from "utils/getSlug";
 import { getTranslation } from "utils/getTranslation";
 
