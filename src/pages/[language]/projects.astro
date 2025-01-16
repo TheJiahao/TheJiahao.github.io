@@ -13,10 +13,10 @@ export function getStaticPaths() {
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const title = getTranslation(language).projects;
-const projects = (await getCollection("projects")).map(({ data }) => ({
+const items = (await getCollection("projects")).map(({ data }) => ({
     ...data,
     description: data.description[language],
 }));
 ---
 
-<CollectionLayout {title} {projects} />
+<CollectionLayout {title} {items} />

@@ -10,17 +10,17 @@ import SearchBox from "components/organisms/SearchBox";
 
 interface Props {
     title: string;
-    projects: ImageCardProps[];
+    items: ImageCardProps[];
     searchBox?: boolean;
 }
 
-const { projects, title, searchBox = false } = Astro.props;
+const { items, title, searchBox = false } = Astro.props;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
 <NavigationBarLayout {title}>
     <Fragment slot="head">
-        <CollectionSchema {title} items={projects} />
+        <CollectionSchema {title} {items} />
     </Fragment>
 
     <ContentLayout>
@@ -34,7 +34,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
         <main>
             <CardList
-                cards={projects}
+                cards={items}
                 aria-label={getTranslation(language).projects}
             />
         </main>
