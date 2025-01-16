@@ -21,6 +21,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 <NavigationBarLayout {title}>
     <Fragment slot="head">
         <CollectionSchema {title} {items} />
+        <slot name="head" />
     </Fragment>
 
     <ContentLayout>
