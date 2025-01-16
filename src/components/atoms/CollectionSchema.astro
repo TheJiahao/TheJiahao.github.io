@@ -3,25 +3,25 @@ import { Schema } from "astro-seo-schema";
 import type { ImageCardProps } from "../molecules/ImageCard";
 
 interface Props {
-    title: string;
+    name: string;
     items: ImageCardProps[];
 }
 
-const { title, items } = Astro.props;
+const { name, items } = Astro.props;
 ---
 
 <Schema
     item={{
         "@context": "https://schema.org",
         "@type": "ItemList",
-        name: title,
-        itemListElement: items.map(({ url, title: name, image }, index) => ({
+        name,
+        itemListElement: items.map(({ url, title, image }, index) => ({
             "@type": "ListItem",
             position: index + 1,
             item: {
                 "@type": "ListItem",
                 url,
-                name,
+                name: title,
                 image: image?.src,
             },
         })),
