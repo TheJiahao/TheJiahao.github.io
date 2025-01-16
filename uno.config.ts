@@ -68,6 +68,7 @@ export default defineConfig({
         clickable: "cursor-pointer hoverable active:bg-clicked",
         "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
         "align-icon": "flex items-center",
+        highlighted: "text-accent-primary font-bold",
     },
     content: {
         pipeline: {

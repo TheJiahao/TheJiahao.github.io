@@ -12,7 +12,7 @@ const TableOfContentsHeading = ({ heading }: HeadingListProps) => {
         <li key={heading.slug} flex="~ col">
             <a
                 href={`#${heading.slug}`}
-                className={visible ? "text-accent-primary" : undefined}
+                className={visible ? "highlighted" : undefined}
                 text-lg
                 p-2
                 rounded-md

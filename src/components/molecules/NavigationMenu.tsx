@@ -25,7 +25,7 @@ const NavigationMenu = ({
                 key={link.text}
                 href={link.url}
                 className={
-                    currentURL === link.url ? "text-accent-primary" : undefined
+                    currentURL === link.url ? "highlighted" : undefined
                 }
                 aria-current={currentURL === link.url}
                 align-icon
