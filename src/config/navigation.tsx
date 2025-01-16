@@ -9,7 +9,7 @@ const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
         language,
         [
             {
-                url: getRelativeLocaleUrl(language),
+                url: getRelativeLocaleUrl(language, "/posts"),
                 text: getTranslation(language).homePage,
                 icon: <LuHouse />,
             },
