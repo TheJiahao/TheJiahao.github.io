@@ -11,7 +11,7 @@ import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
 import { getTranslation } from "utils/getTranslation";
 
-interface Props extends Pick<SEOProps, "languageAlternates">, Multilingual {
+interface Props extends Multilingual {
     title: string;
     description: string;
     language: string;
