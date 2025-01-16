@@ -19,4 +19,4 @@ const items = (await getCollection("projects")).map(({ data }) => ({
 }));
 ---
 
-<CollectionLayout {title} {items} {language} />
+<CollectionLayout {title} name={title} {items} {language} />

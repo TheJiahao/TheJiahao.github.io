@@ -9,7 +9,10 @@ import SearchBox from "components/organisms/SearchBox";
 import type { Multilingual } from "interfaces/Multilingual";
 
 interface Props extends Partial<Multilingual> {
+    /* Page title */
     title: string;
+    /* Collection name */
+    name: string;
     items: ImageCardProps[];
     language: string;
     description?: string;
@@ -19,6 +22,7 @@ interface Props extends Partial<Multilingual> {
 const {
     items,
     title,
+    name,
     language,
     languages,
     description,
@@ -28,7 +32,7 @@ const {
 
 <NavigationBarLayout {title} {description} {languages}>
     <Fragment slot="head">
-        <CollectionSchema name={title} {items} />
+        <CollectionSchema {name} {items} />
         <slot name="head" />
     </Fragment>
 
