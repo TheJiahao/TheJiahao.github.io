@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { DEFAULT_LANGUAGE } from "config";
-import ProjectCollectionLayout from "layouts/ProjectCollectionLayout.astro";
+import CollectionLayout from "layouts/CollectionLayout.astro";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
 
@@ -19,4 +19,4 @@ const projects = (await getCollection("projects")).map(({ data }) => ({
 }));
 ---
 
-<ProjectCollectionLayout {title} {projects} />
+<CollectionLayout {title} {projects} />
