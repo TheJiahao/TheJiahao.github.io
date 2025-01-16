@@ -7,18 +7,20 @@ import { getTranslation } from "utils/getTranslation";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import CollectionSchema from "components/atoms/CollectionSchema.astro";
 import SearchBox from "components/organisms/SearchBox";
+import type { Multilingual } from "interfaces/Multilingual";
 
-interface Props {
+interface Props extends Partial<Multilingual> {
     title: string;
     items: ImageCardProps[];
+    description?: string;
     searchBox?: boolean;
 }
 
-const { items, title, searchBox = false } = Astro.props;
+const { items, title, languages, description, searchBox = false } = Astro.props;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
-<NavigationBarLayout {title}>
+<NavigationBarLayout {title} {description} {languages}>
     <Fragment slot="head">
         <CollectionSchema {title} {items} />
         <slot name="head" />
