@@ -115,12 +115,8 @@ export default defineConfig({
         },
     },
     redirects: {
-        "/zh-cn": {
-            destination: "/zh-cn/posts",
-            status: 301,
-        },
-        "/en": {
-            destination: "/en/posts",
+        "/": {
+            destination: "/zh-cn",
             status: 301,
         },
         "/about": {
