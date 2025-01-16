@@ -36,9 +36,11 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
     />
 
     <ContentLayout>
-        <CardList
-            cards={projects}
-            aria-label={getTranslation(language).projects}
-        />
+        <main>
+            <CardList
+                cards={projects}
+                aria-label={getTranslation(language).projects}
+            />
+        </main>
     </ContentLayout>
 </NavigationBarLayout>
