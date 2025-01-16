@@ -2,7 +2,6 @@
 import CardList from "components/organisms/CardList";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
 import ContentLayout from "layouts/partials/ContentLayout.astro";
-import { getTranslation } from "utils/getTranslation";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import CollectionSchema from "components/atoms/CollectionSchema.astro";
 import SearchBox from "components/organisms/SearchBox";
@@ -46,10 +45,7 @@ const {
         }
 
         <main>
-            <CardList
-                cards={items}
-                aria-label={getTranslation(language).projects}
-            />
+            <CardList cards={items} aria-label={name} />
         </main>
     </ContentLayout>
 </NavigationBarLayout>
