@@ -27,6 +27,6 @@ const title = SITE_TITLE[language];
 const description = SITE_DESCRIPTION[language];
 ---
 
-<CollectionLayout {title} {description} items={blogs} {languages} searchBox>
+<CollectionLayout {title} {description} items={blogs} {language} {languages} searchBox>
     <HomeSchema {title} {description} {language} slot="head" />
 </CollectionLayout>
