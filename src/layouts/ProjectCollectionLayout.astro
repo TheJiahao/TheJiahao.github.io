@@ -6,13 +6,15 @@ import { DEFAULT_LANGUAGE } from "config";
 import { getTranslation } from "utils/getTranslation";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import CollectionSchema from "components/atoms/CollectionSchema.astro";
+import SearchBox from "components/organisms/SearchBox";
 
 interface Props {
     title: string;
     projects: ImageCardProps[];
+    searchBox?: boolean;
 }
 
-const { projects, title } = Astro.props;
+const { projects, title, searchBox = false } = Astro.props;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
@@ -22,6 +24,14 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
     </Fragment>
 
     <ContentLayout>
+        {
+            searchBox && (
+                <header h-15 overflow-visible z-1>
+                    <SearchBox {language} client:load />
+                </header>
+            )
+        }
+
         <main>
             <CardList
                 cards={projects}
