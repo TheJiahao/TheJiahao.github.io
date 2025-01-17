@@ -1,6 +1,4 @@
-const getHeadingDepth = (heading: HTMLHeadingElement): number => {
-    return Number(heading.tagName.replace(/h/i, ""));
-};
+import type { SectionHeading } from "interfaces/SectionHeading";
 
 /**
  * Determines the current heading.
@@ -10,7 +8,7 @@ const getHeadingDepth = (heading: HTMLHeadingElement): number => {
  * @returns Current heading
  */
 export const getCurrentHeading = (
-    headings: HTMLHeadingElement[],
+    headings: SectionHeading[],
     visibleHeadings: Set<string>,
 ) => {
     let current = null;
@@ -25,7 +23,7 @@ export const getCurrentHeading = (
             continue;
         }
 
-        if (getHeadingDepth(heading) <= getHeadingDepth(current)) {
+        if (heading.depth <= current.depth) {
             break;
         }
 
