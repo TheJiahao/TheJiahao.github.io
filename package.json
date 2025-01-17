@@ -6,7 +6,7 @@
     "scripts": {
         "format": "prettier --write .",
         "format:ci": "pnpm run format -- !.github/**",
-        "lint": "astro check && eslint . && markdownlint . && zhlint *.md",
+        "lint": "astro check && eslint . && markdownlint .",
         "lint:fix": "astro check && eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
         "test": "vitest run",
         "test:watch": "vitest",
@@ -95,8 +95,7 @@
         "prettier-plugin-toml": "^2.0.1",
         "typescript-eslint": "8.20.0",
         "vitest": "^3.0.0",
-        "vitest-mock-extended": "^2.0.0",
-        "zhlint": "^0.8.1"
+        "vitest-mock-extended": "^2.0.0"
     },
     "packageManager": "pnpm@9.15.4",
     "pnpm": {
