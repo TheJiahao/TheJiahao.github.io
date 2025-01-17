@@ -15,7 +15,7 @@
         "typescriptreact",
         "astro"
     ],
-    "typescript.updateImportsOnFileMove.enabled": "never",
+    "typescript.updateImportsOnFileMove.enabled": "prompt",
     "typescript.preferences.preferTypeOnlyAutoImports": true,
     "typescript.preferences.importModuleSpecifier": "non-relative"
 }
