@@ -7,7 +7,7 @@
         "format": "prettier --write .",
         "format:ci": "pnpm run format -- !.github/**",
         "lint": "astro check && eslint . && markdownlint .",
-        "lint:fix": "astro check && eslint . --fix && markdownlint . --fix && zhlint *.md --fix",
+        "lint:fix": "astro check && eslint . --fix && markdownlint . --fix",
         "test": "vitest run",
         "test:watch": "vitest",
         "test:e2e": "playwright test",
