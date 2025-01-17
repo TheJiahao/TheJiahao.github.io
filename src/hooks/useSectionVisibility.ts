@@ -72,5 +72,4 @@ const useSectionVisibility = (id: string): boolean => {
     return id === getCurrentHeading(headings, visible);
 };
 
-export type { SectionHeading };
 export default useSectionVisibility;
