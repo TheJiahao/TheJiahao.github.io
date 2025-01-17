@@ -9,12 +9,12 @@ import type { SectionHeading } from "interfaces/SectionHeading";
  */
 export const getCurrentHeading = (
     headings: SectionHeading[],
-    visibleHeadings: Set<string>,
+    visibleHeadings: Set<SectionHeading>,
 ) => {
     let current = null;
 
     for (const heading of headings) {
-        if (!visibleHeadings.has(heading.id)) {
+        if (!visibleHeadings.has(heading)) {
             continue;
         }
 

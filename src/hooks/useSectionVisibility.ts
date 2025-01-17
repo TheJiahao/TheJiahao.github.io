@@ -25,20 +25,18 @@ const getHeading = (section: Element): SectionHeading | null => {
 
 const updateVisibility =
     (
-        setVisible: Dispatch<SetStateAction<Set<string>>>,
+        setVisible: Dispatch<SetStateAction<Set<SectionHeading>>>,
     ): IntersectionObserverCallback =>
     (entries) => {
         for (const { target, isIntersecting } of entries) {
             const heading = getHeading(target) as SectionHeading;
 
             if (!isIntersecting) {
-                setVisible((current) =>
-                    current.difference(new Set([heading.id])),
-                );
+                setVisible((current) => current.difference(new Set([heading])));
                 continue;
             }
 
-            setVisible((current) => current.union(new Set([heading.id])));
+            setVisible((current) => current.union(new Set([heading])));
         }
     };
 
@@ -49,7 +47,7 @@ const updateVisibility =
  * @returns {boolean} Whether the section is visible
  */
 const useSectionVisibility = (id: string): boolean => {
-    const [visible, setVisible] = useState<Set<string>>(new Set());
+    const [visible, setVisible] = useState<Set<SectionHeading>>(new Set());
     const [headings, setHeadings] = useState<SectionHeading[]>([]);
 
     useEffect(() => {
