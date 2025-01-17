@@ -30,5 +30,5 @@ export const getCurrentHeading = (
         current = heading;
     }
 
-    return current?.id;
+    return current?.id ?? null;
 };
