@@ -1,7 +1,8 @@
-import type { AnchorHTMLAttributes, ReactElement } from "react";
+import type { AnchorHTMLAttributes, AriaAttributes, ReactElement } from "react";
 
 interface LabeledIconLinkProps
-    extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "icon"> {
+    extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "icon">,
+        AriaAttributes {
     url: string;
     icon: ReactElement;
     label: string;
