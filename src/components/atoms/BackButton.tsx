@@ -10,22 +10,20 @@ interface BackButtonProps extends TranslatedElement {
 const BackButton = ({
     language,
     label = getTranslation(language).back,
-}: BackButtonProps) => {
-    return (
-        <a
-            href={getRelativeLocaleUrl(language)}
-            text="secondary lg"
-            clickable
-            card
-            align-icon
-            inline-flex
-            p-2
-            gap-2
-        >
-            <LuChevronLeft />
-            {label}
-        </a>
-    );
-};
+}: BackButtonProps) => (
+    <a
+        href={getRelativeLocaleUrl(language)}
+        text="secondary lg"
+        clickable
+        card
+        align-icon
+        inline-flex
+        p-2
+        gap-2
+    >
+        <LuChevronLeft />
+        {label}
+    </a>
+);
 
 export default BackButton;
