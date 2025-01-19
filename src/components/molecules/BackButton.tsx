@@ -16,6 +16,7 @@ const BackButton = ({
         url={getRelativeLocaleUrl(language)}
         label={label}
         icon={<LuChevronLeft />}
+        card
     />
 );
 

@@ -1,6 +1,7 @@
-import type { ReactElement } from "react";
+import type { AnchorHTMLAttributes, ReactElement } from "react";
 
-interface LabeledIconLinkProps {
+interface LabeledIconLinkProps
+    extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "icon"> {
     url: string;
     icon: ReactElement;
     label: string;
@@ -14,6 +15,7 @@ const IconLink = ({
     icon,
     onlyIcon = false,
     rel,
+    ...props
 }: LabeledIconLinkProps) =>
     onlyIcon ? (
         <a
@@ -25,6 +27,7 @@ const IconLink = ({
             clickable
             rounded-md
             p-1
+            {...props}
         >
             {icon}
         </a>
@@ -34,10 +37,10 @@ const IconLink = ({
             rel={rel}
             text="secondary lg"
             clickable
-            card
             align-icon
             p-2
             gap-2
+            {...props}
         >
             {icon}
             {label}
