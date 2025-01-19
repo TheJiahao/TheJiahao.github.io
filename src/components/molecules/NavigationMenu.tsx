@@ -1,4 +1,5 @@
 import type { IconLinkProps } from "components/atoms/IconLink";
+import IconLink from "components/atoms/IconLink";
 import Menu, { type MenuProps } from "components/molecules/Menu";
 import { NAVIGATION_LINKS } from "config";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
@@ -21,21 +22,15 @@ const NavigationMenu = ({
         {...props}
     >
         {links.map((link) => (
-            <a
+            <IconLink
                 key={link.label}
-                href={link.url}
+                url={link.url}
+                label={link.label}
                 className={currentURL === link.url ? "highlighted" : undefined}
                 aria-current={currentURL === link.url}
-                align-icon
-                gap-lg
-                clickable
-                p-2
+                icon={<link.icon.type aria-hidden />}
                 rounded-md
-            >
-                <link.icon.type aria-hidden />
-
-                {link.label}
-            </a>
+            />
         ))}
     </Menu>
 );
