@@ -1,4 +1,5 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
+import LabeledIconLink from "components/atoms/LabeledIconLink";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { LuChevronLeft } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
@@ -11,19 +12,11 @@ const BackButton = ({
     language,
     label = getTranslation(language).back,
 }: BackButtonProps) => (
-    <a
-        href={getRelativeLocaleUrl(language)}
-        text="secondary lg"
-        clickable
-        card
-        align-icon
-        inline-flex
-        p-2
-        gap-2
-    >
-        <LuChevronLeft />
-        {label}
-    </a>
+    <LabeledIconLink
+        url={getRelativeLocaleUrl(language)}
+        label={label}
+        icon={<LuChevronLeft />}
+    />
 );
 
 export default BackButton;
