@@ -1,22 +1,21 @@
 import type { ReactElement } from "react";
-import type { XOR } from "ts-essentials";
 
-interface Labeled {
-    label: string;
-}
-
-interface NotLabeled {
-    title: string;
-}
-
-type LabeledIconLinkProps = XOR<Labeled, NotLabeled> & {
+interface LabeledIconLinkProps {
     url: string;
     icon: ReactElement;
+    label: string;
+    onlyIcon?: boolean;
     rel?: string;
-};
+}
 
-const IconLink = ({ label, title, url, icon, rel }: LabeledIconLinkProps) =>
-    label ? (
+const IconLink = ({
+    label,
+    url,
+    icon,
+    onlyIcon = false,
+    rel,
+}: LabeledIconLinkProps) =>
+    onlyIcon ? (
         <a
             href={url}
             rel={rel}
@@ -33,8 +32,8 @@ const IconLink = ({ label, title, url, icon, rel }: LabeledIconLinkProps) =>
     ) : (
         <a
             href={url}
-            aria-label={title}
-            title={title}
+            aria-label={label}
+            title={label}
             rel={rel}
             block
             clickable

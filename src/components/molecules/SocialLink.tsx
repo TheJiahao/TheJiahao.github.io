@@ -10,7 +10,7 @@ interface SocialLinkProps {
 
 const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
     <IconLink
-        title={title}
+        label={title}
         rel="me"
         url={url}
         icon={
