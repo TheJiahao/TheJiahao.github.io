@@ -10,12 +10,12 @@ describe("<SocialMenu/>", () => {
         {
             url: "/relative-url",
             icon: <LuSquare />,
-            title: "Relative",
+            label: "Relative",
         },
         {
             url: "https://absolute-url.com",
             icon: <LuCircle />,
-            title: "Absolute",
+            label: "Absolute",
         },
     ];
 

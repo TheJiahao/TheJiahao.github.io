@@ -13,7 +13,7 @@ describe("<SocialLink/>", () => {
             <SocialLink
                 url="https://example.com"
                 icon={icon}
-                title="Social link"
+                label="Social link"
             />,
         );
 
@@ -27,7 +27,7 @@ describe("<SocialLink/>", () => {
                 <SocialLink
                     url={url}
                     icon={<LuSquare />}
-                    title="Social link"
+                    label="Social link"
                 />,
             );
 
@@ -42,7 +42,7 @@ describe("<SocialLink/>", () => {
             <SocialLink
                 url="https://mylink.com"
                 icon={<LuSquare />}
-                title={title}
+                label={title}
             />,
         );
 

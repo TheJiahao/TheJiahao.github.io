@@ -5,12 +5,12 @@ import type { IconBaseProps } from "react-icons/lib";
 interface SocialLinkProps {
     url: string;
     icon: ReactElement<IconBaseProps>;
-    title: string;
+    label: string;
 }
 
-const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
+const SocialLink = ({ url, icon, label }: SocialLinkProps) => (
     <IconLink
-        label={title}
+        label={label}
         rel="me"
         url={url}
         icon={

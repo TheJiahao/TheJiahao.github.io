@@ -6,17 +6,17 @@ const SOCIAL_LINKS: SocialLinkProps[] = [
     {
         url: "https://github.com/TheJiahao",
         icon: <SiGithub />,
-        title: "GitHub",
+        label: "GitHub",
     },
     {
         url: "https://www.linkedin.com/in/jiahao-li-3380742a8",
         icon: <SiLinkedin />,
-        title: "LinkedIn",
+        label: "LinkedIn",
     },
     {
         url: "/rss.xml",
         icon: <LuRss />,
-        title: "RSS",
+        label: "RSS",
     },
 ];
 
