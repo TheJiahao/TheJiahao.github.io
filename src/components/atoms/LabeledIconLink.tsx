@@ -1,0 +1,16 @@
+import type { ReactElement } from "react";
+
+interface LabeledIconLinkProps {
+    url: string;
+    label: string;
+    icon: ReactElement;
+}
+
+const LabeledIconLink = ({ label, url, icon }: LabeledIconLinkProps) => (
+    <a href={url} text="secondary lg" clickable card align-icon p-2 gap-2>
+        <icon.type />
+        {label}
+    </a>
+);
+
+export default LabeledIconLink;
