@@ -1,6 +1,6 @@
 import type { AnchorHTMLAttributes, AriaAttributes, ReactElement } from "react";
 
-interface LabeledIconLinkProps
+interface IconLinkProps
     extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "icon">,
         AriaAttributes {
     url: string;
@@ -17,7 +17,7 @@ const IconLink = ({
     onlyIcon = false,
     rel,
     ...props
-}: LabeledIconLinkProps) =>
+}: IconLinkProps) =>
     onlyIcon ? (
         <a
             href={url}
