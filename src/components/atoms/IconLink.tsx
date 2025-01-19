@@ -6,11 +6,11 @@ interface LabeledIconLinkProps {
     icon: ReactElement;
 }
 
-const LabeledIconLink = ({ label, url, icon }: LabeledIconLinkProps) => (
+const IconLink = ({ label, url, icon }: LabeledIconLinkProps) => (
     <a href={url} text="secondary lg" clickable card align-icon p-2 gap-2>
         <icon.type />
         {label}
     </a>
 );
 
-export default LabeledIconLink;
+export default IconLink;
