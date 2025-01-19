@@ -10,17 +10,17 @@ const NAVIGATION_LINKS: Record<string, IconLinkProps[]> = Object.fromEntries(
         [
             {
                 url: getRelativeLocaleUrl(language),
-                text: getTranslation(language).homePage,
+                label: getTranslation(language).homePage,
                 icon: <LuHouse />,
             },
             {
                 url: getRelativeLocaleUrl(language, "/projects"),
-                text: getTranslation(language).projects,
+                label: getTranslation(language).projects,
                 icon: <LuLightbulb />,
             },
             {
                 url: getRelativeLocaleUrl(language, "/about"),
-                text: getTranslation(language).about,
+                label: getTranslation(language).about,
                 icon: <LuUserRound />,
             },
         ],
