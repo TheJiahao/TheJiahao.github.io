@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import SocialLink from "components/atoms/SocialLink";
+import SocialLink from "components/molecules/SocialLink";
 import { LuGithub, LuLinkedin, LuRss, LuSquare } from "react-icons/lu";
 import { describe, expect, test } from "vitest";
 

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { type SocialLinkProps } from "components/atoms/SocialLink";
+import { type SocialLinkProps } from "components/molecules/SocialLink";
 import SocialMenu from "components/molecules/SocialMenu";
 import { languageCodes } from "localization";
 import { LuCircle, LuSquare } from "react-icons/lu";

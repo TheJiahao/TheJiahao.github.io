@@ -1,4 +1,4 @@
-import type { SocialLinkProps } from "components/atoms/SocialLink";
+import type { SocialLinkProps } from "components/molecules/SocialLink";
 import { LuRss } from "react-icons/lu";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 
