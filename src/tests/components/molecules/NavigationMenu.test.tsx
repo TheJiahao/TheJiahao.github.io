@@ -1,12 +1,12 @@
 import { render, screen, within } from "@testing-library/react";
+import type { IconLinkProps } from "components/atoms/IconLink";
 import NavigationMenu from "components/molecules/NavigationMenu";
-import type { IconLink } from "interfaces/IconLink";
 import { beforeEach, describe, expect, test } from "vitest";
 
 describe("<NavigationMenu/>", () => {
     let navigationMenu: HTMLElement;
     let navigationLinks: HTMLElement[];
-    const links: IconLink[] = [
+    const links: IconLinkProps[] = [
         {
             url: "/",
             label: "Home",

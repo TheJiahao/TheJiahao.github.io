@@ -1,10 +1,10 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
-import type { IconLink } from "interfaces/IconLink";
+import type { IconLinkProps } from "components/atoms/IconLink";
 import { languageCodes } from "localization";
 import { LuHouse, LuLightbulb, LuUserRound } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
-const NAVIGATION_LINKS: Record<string, IconLink[]> = Object.fromEntries(
+const NAVIGATION_LINKS: Record<string, IconLinkProps[]> = Object.fromEntries(
     languageCodes.map((language) => [
         language,
         [

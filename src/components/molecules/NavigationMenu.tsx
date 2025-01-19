@@ -1,11 +1,11 @@
+import type { IconLinkProps } from "components/atoms/IconLink";
 import Menu, { type MenuProps } from "components/molecules/Menu";
 import { NAVIGATION_LINKS } from "config";
-import type { IconLink } from "interfaces/IconLink";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { getTranslation } from "utils/getTranslation";
 
 interface NavigationMenuProps extends MenuProps, TranslatedElement {
-    links?: IconLink[];
+    links?: IconLinkProps[];
     currentURL: string;
 }
 

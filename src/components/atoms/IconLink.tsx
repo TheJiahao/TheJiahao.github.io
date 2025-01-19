@@ -48,4 +48,5 @@ const IconLink = ({
         </a>
     );
 
+export type { IconLinkProps };
 export default IconLink;
