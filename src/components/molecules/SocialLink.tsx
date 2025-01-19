@@ -1,3 +1,4 @@
+import IconLink from "components/atoms/IconLink";
 import { type ReactElement } from "react";
 import type { IconBaseProps } from "react-icons/lib";
 
@@ -8,23 +9,18 @@ interface SocialLinkProps {
 }
 
 const SocialLink = ({ url, icon, title }: SocialLinkProps) => (
-    <a
-        href={url}
-        aria-label={title}
+    <IconLink
         title={title}
-        block
         rel="me"
-        clickable
-        rounded-md
-        p-1
-    >
-        <icon.type
-            size-10
-            text-secondary
-            role="presentation"
-            focusable={false}
-        />
-    </a>
+        url={url}
+        icon={
+            <icon.type
+                className="size-10 color-secondary"
+                role="presentation"
+                focusable={false}
+            />
+        }
+    />
 );
 
 export default SocialLink;
