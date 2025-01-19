@@ -11,7 +11,6 @@ interface NotLabeled {
 
 type LabeledIconLinkProps = XOR<Labeled, NotLabeled> & {
     url: string;
-    label: string;
     icon: ReactElement;
     rel?: string;
 };
