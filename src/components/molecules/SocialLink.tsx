@@ -20,6 +20,7 @@ const SocialLink = ({ url, icon, label }: SocialLinkProps) => (
                 focusable={false}
             />
         }
+        onlyIcon={true}
     />
 );
 

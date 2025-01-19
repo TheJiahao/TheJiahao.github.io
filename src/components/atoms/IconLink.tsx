@@ -18,6 +18,19 @@ const IconLink = ({
     onlyIcon ? (
         <a
             href={url}
+            aria-label={label}
+            title={label}
+            rel={rel}
+            block
+            clickable
+            rounded-md
+            p-1
+        >
+            {icon}
+        </a>
+    ) : (
+        <a
+            href={url}
             rel={rel}
             text="secondary lg"
             clickable
@@ -28,19 +41,6 @@ const IconLink = ({
         >
             {icon}
             {label}
-        </a>
-    ) : (
-        <a
-            href={url}
-            aria-label={label}
-            title={label}
-            rel={rel}
-            block
-            clickable
-            rounded-md
-            p-1
-        >
-            {icon}
         </a>
     );
 
