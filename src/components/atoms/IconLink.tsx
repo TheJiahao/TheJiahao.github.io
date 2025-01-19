@@ -33,16 +33,7 @@ const IconLink = ({
             {icon}
         </a>
     ) : (
-        <a
-            href={url}
-            rel={rel}
-            text="secondary lg"
-            clickable
-            align-icon
-            p-2
-            gap-2
-            {...props}
-        >
+        <a href={url} rel={rel} clickable align-icon p-2 gap-2 {...props}>
             {icon}
             {label}
         </a>

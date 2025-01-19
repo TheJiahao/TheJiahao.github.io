@@ -17,6 +17,7 @@ const BackButton = ({
         label={label}
         icon={<LuChevronLeft />}
         card
+        text="secondary lg"
     />
 );
 
