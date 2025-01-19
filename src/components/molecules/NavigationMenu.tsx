@@ -22,7 +22,7 @@ const NavigationMenu = ({
     >
         {links.map((link) => (
             <a
-                key={link.text}
+                key={link.label}
                 href={link.url}
                 className={currentURL === link.url ? "highlighted" : undefined}
                 aria-current={currentURL === link.url}
@@ -34,7 +34,7 @@ const NavigationMenu = ({
             >
                 <link.icon.type aria-hidden />
 
-                {link.text}
+                {link.label}
             </a>
         ))}
     </Menu>

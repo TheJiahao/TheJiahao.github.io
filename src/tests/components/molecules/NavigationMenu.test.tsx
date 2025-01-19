@@ -9,17 +9,17 @@ describe("<NavigationMenu/>", () => {
     const links: IconLink[] = [
         {
             url: "/",
-            text: "Home",
+            label: "Home",
             icon: <span />,
         },
         {
             url: "/about",
-            text: "About",
+            label: "About",
             icon: <span />,
         },
         {
             url: "/posts",
-            text: "Posts",
+            label: "Posts",
             icon: <span />,
         },
     ];
@@ -48,7 +48,7 @@ describe("<NavigationMenu/>", () => {
         const linkTexts = navigationLinks.map((link) => link.textContent);
 
         for (const [i, link] of links.entries()) {
-            expect(linkTexts[i]).toContain(link.text);
+            expect(linkTexts[i]).toContain(link.label);
         }
     });
 });

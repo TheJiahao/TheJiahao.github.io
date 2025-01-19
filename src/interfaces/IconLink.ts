@@ -2,6 +2,6 @@ import type { ReactElement } from "react";
 
 export interface IconLink {
     url: string;
-    text: string;
+    label: string;
     icon: ReactElement;
 }
