@@ -27,6 +27,7 @@ const Pagination = ({
             className={
                 !previousURL ? "pointer-events-none color-disabled" : undefined
             }
+            aria-disabled={!previousURL}
         />
         <div highlighted>{currentPage}</div>
         <IconLink
@@ -37,6 +38,7 @@ const Pagination = ({
             className={
                 !nextURL ? "pointer-events-none color-disabled" : undefined
             }
+            aria-disabled={!nextURL}
         />
     </nav>
 );
