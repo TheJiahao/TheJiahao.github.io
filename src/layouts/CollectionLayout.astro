@@ -6,6 +6,10 @@ import type { ImageCardProps } from "components/molecules/ImageCard";
 import CollectionSchema from "components/atoms/CollectionSchema.astro";
 import SearchBox from "components/organisms/SearchBox";
 import type { Multilingual } from "interfaces/Multilingual";
+import type { Page } from "astro";
+import Pagination, {
+    type PaginationProps,
+} from "components/molecules/Pagination";
 
 interface Props extends Partial<Multilingual> {
     /* Page title */
@@ -16,6 +20,7 @@ interface Props extends Partial<Multilingual> {
     language: string;
     description?: string;
     searchBox?: boolean;
+    pagination?: Omit<PaginationProps, "language"> | null;
 }
 
 const {
@@ -26,6 +31,7 @@ const {
     languages,
     description,
     searchBox = false,
+    pagination,
 } = Astro.props;
 ---
 
@@ -47,5 +53,15 @@ const {
         <main>
             <CardList cards={items} aria-label={name} />
         </main>
+        {
+            pagination ? (
+                <footer>
+                    <Pagination
+                        {...pagination}
+                        {language}
+                    />
+                </footer>
+            ) : null
+        }
     </ContentLayout>
 </NavigationBarLayout>
