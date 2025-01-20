@@ -7,7 +7,6 @@ interface IconLinkProps
     icon: ReactElement;
     label: string;
     onlyIcon?: boolean;
-    rel?: string;
 }
 
 const IconLink = ({
@@ -15,7 +14,6 @@ const IconLink = ({
     url,
     icon,
     onlyIcon = false,
-    rel,
     ...props
 }: IconLinkProps) =>
     onlyIcon ? (
@@ -23,7 +21,6 @@ const IconLink = ({
             href={url}
             aria-label={label}
             title={label}
-            rel={rel}
             block
             clickable
             rounded-md
@@ -33,7 +30,7 @@ const IconLink = ({
             {icon}
         </a>
     ) : (
-        <a href={url} rel={rel} clickable align-icon p-2 gap-2 {...props}>
+        <a href={url} clickable align-icon p-2 gap-2 {...props}>
             {icon}
             {label}
         </a>
