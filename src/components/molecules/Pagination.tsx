@@ -29,7 +29,9 @@ const Pagination = ({
             }
             aria-disabled={!previousURL}
         />
+
         <div highlighted>{currentPage}</div>
+
         <IconLink
             url={nextURL || defaultURL}
             label={getTranslation(language).nextPage}
