@@ -8,7 +8,8 @@ type customAttributes =
     | "card"
     | "grid-sidebars"
     | "clickable"
-    | "hoverable";
+    | "hoverable"
+    | "highlighted";
 type customAttributifyNames<Prefix extends string = ""> =
     | `${Prefix}${customAttributes}`
     | `${Prefix}${PseudoPrefix}:${customAttributes}`;
