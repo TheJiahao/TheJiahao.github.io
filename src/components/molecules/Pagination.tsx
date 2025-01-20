@@ -22,7 +22,7 @@ const Pagination = ({
         <IconLink
             url={previousURL || defaultURL}
             label={getTranslation(language).previousPage}
-            icon={<LuChevronLeft size-10 />}
+            icon={<LuChevronLeft role="presentation" size-10 />}
             onlyIcon
             className={
                 !previousURL ? "pointer-events-none color-disabled" : undefined
@@ -33,7 +33,7 @@ const Pagination = ({
         <IconLink
             url={nextURL || defaultURL}
             label={getTranslation(language).nextPage}
-            icon={<LuChevronRight size-10 />}
+            icon={<LuChevronRight role="presentation" size-10 />}
             onlyIcon
             className={
                 !nextURL ? "pointer-events-none color-disabled" : undefined
