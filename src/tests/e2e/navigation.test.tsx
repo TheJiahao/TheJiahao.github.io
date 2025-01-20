@@ -12,7 +12,9 @@ test.describe("Navigation", () => {
 
             test.beforeEach(async ({ homepage, page }) => {
                 await homepage.goto();
-                navigationBar = page.getByRole("navigation");
+                navigationBar = page
+                    .getByRole("complementary")
+                    .getByRole("navigation");
             });
 
             test("exists only one navigation bar", async () => {
