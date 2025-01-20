@@ -18,19 +18,19 @@ const Pagination = ({
     language,
     defaultUrl = getRelativeLocaleUrl(language),
 }: PaginationProps) => (
-    <nav>
+    <nav flex="~ row" items-center gap-lg text="secondary 2xl">
         <IconLink
             url={previousUrl || defaultUrl}
             label={getTranslation(language).previousPage}
-            icon={<LuChevronLeft />}
+            icon={<LuChevronLeft size-10 />}
             onlyIcon
             disabled={!previousUrl}
         />
-        {currentPage}
+        <div highlighted>{currentPage}</div>
         <IconLink
             url={nextUrl || defaultUrl}
             label={getTranslation(language).nextPage}
-            icon={<LuChevronRight />}
+            icon={<LuChevronRight size-10 />}
             onlyIcon
             disabled={!nextUrl}
         />
