@@ -22,6 +22,8 @@ const en = {
     clear: "Clear",
     loading: "Loading",
     projects: "Projects",
+    previousPage: "Previous page",
+    nextPage: "Next page",
 };
 
 export default en;

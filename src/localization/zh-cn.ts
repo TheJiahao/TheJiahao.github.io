@@ -25,6 +25,8 @@ const zh_cn: Language = {
     clear: "清空",
     loading: "加载中",
     projects: "项目",
+    previousPage: "上一页",
+    nextPage: "下一页",
 };
 
 export default zh_cn;
