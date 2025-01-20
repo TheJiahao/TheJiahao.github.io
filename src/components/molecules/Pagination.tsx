@@ -6,36 +6,36 @@ import { getTranslation } from "utils/getTranslation";
 
 interface PaginationProps extends TranslatedElement {
     currentPage: number;
-    previousUrl?: string;
-    nextUrl?: string;
-    defaultUrl?: string;
+    previousURL?: string;
+    nextURL?: string;
+    defaultURL?: string;
 }
 
 const Pagination = ({
     currentPage,
-    previousUrl,
-    nextUrl,
+    previousURL,
+    nextURL,
     language,
-    defaultUrl = getRelativeLocaleUrl(language),
+    defaultURL = getRelativeLocaleUrl(language),
 }: PaginationProps) => (
     <nav flex="~ row" items-center gap-lg text="secondary 2xl">
         <IconLink
-            url={previousUrl || defaultUrl}
+            url={previousURL || defaultURL}
             label={getTranslation(language).previousPage}
             icon={<LuChevronLeft size-10 />}
             onlyIcon
             className={
-                !previousUrl ? "pointer-events-none color-disabled" : undefined
+                !previousURL ? "pointer-events-none color-disabled" : undefined
             }
         />
         <div highlighted>{currentPage}</div>
         <IconLink
-            url={nextUrl || defaultUrl}
+            url={nextURL || defaultURL}
             label={getTranslation(language).nextPage}
             icon={<LuChevronRight size-10 />}
             onlyIcon
             className={
-                !nextUrl ? "pointer-events-none color-disabled" : undefined
+                !nextURL ? "pointer-events-none color-disabled" : undefined
             }
         />
     </nav>

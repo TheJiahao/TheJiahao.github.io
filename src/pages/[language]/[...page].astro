@@ -8,6 +8,7 @@ import CollectionLayout from "layouts/CollectionLayout.astro";
 import HomeSchema from "components/atoms/HomeSchema.astro";
 import { getTranslation } from "utils/getTranslation";
 import type { GetStaticPathsOptions, Page } from "astro";
+import type { PaginationProps } from "components/molecules/Pagination";
 
 export function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     return languages.flatMap((language) => {
@@ -32,10 +33,10 @@ const { page } = Astro.props;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const title = SITE_TITLE[language];
 const description = SITE_DESCRIPTION[language];
-const pagination = {
+const pagination: Omit<PaginationProps, "language"> = {
     currentPage: page.currentPage,
-    previousUrl: page.url.prev,
-    nextUrl: page.url.next,
+    previousURL: page.url.prev,
+    nextURL: page.url.next,
 };
 ---
 
