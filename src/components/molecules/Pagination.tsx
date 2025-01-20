@@ -24,7 +24,9 @@ const Pagination = ({
             label={getTranslation(language).previousPage}
             icon={<LuChevronLeft size-10 />}
             onlyIcon
-            disabled={!previousUrl}
+            className={
+                !previousUrl ? "pointer-events-none color-disabled" : undefined
+            }
         />
         <div highlighted>{currentPage}</div>
         <IconLink
@@ -32,7 +34,9 @@ const Pagination = ({
             label={getTranslation(language).nextPage}
             icon={<LuChevronRight size-10 />}
             onlyIcon
-            disabled={!nextUrl}
+            className={
+                !nextUrl ? "pointer-events-none color-disabled" : undefined
+            }
         />
     </nav>
 );
