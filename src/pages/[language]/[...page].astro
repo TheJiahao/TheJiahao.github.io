@@ -7,23 +7,29 @@ import { getBlogs } from "utils/getBlogs";
 import CollectionLayout from "layouts/CollectionLayout.astro";
 import HomeSchema from "components/atoms/HomeSchema.astro";
 import { getTranslation } from "utils/getTranslation";
+import type { GetStaticPathsOptions, Page } from "astro";
 
-export function getStaticPaths() {
-    return languages.map((language) => ({
-        params: { language },
-    }));
+export function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+    return languages.flatMap((language) => {
+        const blogs = getBlogs()
+            .filter(({ data }) => data.language === language)
+            .map(({ data, slug }) => ({
+                ...data,
+                url: getRelativeLocaleUrl(language, `posts/${slug}`),
+            }))
+            .sort((a, b) => +b.date - +a.date);
+
+        return paginate(blogs, { params: { language }, pageSize: 5 });
+    });
 }
 
+interface Props {
+    page: Page<ImageCardProps>;
+}
+
+const { page } = Astro.props;
+
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
-
-const blogs: ImageCardProps[] = getBlogs()
-    .filter(({ data }) => data.language === language)
-    .map(({ data, slug }) => ({
-        ...data,
-        url: getRelativeLocaleUrl(language, `posts/${slug}`),
-    }))
-    .sort((a, b) => +b.date - +a.date);
-
 const title = SITE_TITLE[language];
 const description = SITE_DESCRIPTION[language];
 ---
@@ -32,7 +38,7 @@ const description = SITE_DESCRIPTION[language];
     {title}
     {description}
     name={getTranslation(language).blogList}
-    items={blogs}
+    items={page.data}
     {language}
     {languages}
     searchBox
