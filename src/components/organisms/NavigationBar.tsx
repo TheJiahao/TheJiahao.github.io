@@ -8,7 +8,7 @@ interface NavigationBarProps extends TranslatedElement {
     currentURL: string;
 }
 
-const NavigationBar = ({ language, currentURL }: NavigationBarProps) => (
+const NavigationBar = ({ language }: NavigationBarProps) => (
     <nav card p-4 flex="~ col" gap-4 items-center h-full w-60 overflow-auto>
         <NavigationHeader language={language} />
 

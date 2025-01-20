@@ -5,7 +5,7 @@ import SocialMenu from "components/molecules/SocialMenu";
 import type { NavigationBarProps } from "components/organisms/NavigationBar";
 import { useState } from "react";
 
-const MobileNavigationBar = ({ language, currentURL }: NavigationBarProps) => {
+const MobileNavigationBar = ({ language }: NavigationBarProps) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpand = () => {
