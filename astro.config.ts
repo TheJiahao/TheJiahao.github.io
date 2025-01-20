@@ -45,6 +45,7 @@ export default defineConfig({
                     en: "en-US",
                 },
             },
+            filter: (url) => !url.match(/\/\d+$/),
         }),
         robotsTxt({
             policy: [
