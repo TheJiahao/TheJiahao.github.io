@@ -29,12 +29,7 @@ const MobileNavigationBar = ({ language, currentURL }: NavigationBarProps) => {
             >
                 <SettingsMenu role="group" language={language} items-center />
                 <SocialMenu role="group" language={language} />
-                <NavigationMenu
-                    role="group"
-                    language={language}
-                    currentURL={currentURL}
-                    items-center
-                />
+                <NavigationMenu role="group" language={language} items-center />
             </div>
 
             <NavigationToolBar

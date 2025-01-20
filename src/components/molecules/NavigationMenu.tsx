@@ -7,13 +7,11 @@ import { getTranslation } from "utils/getTranslation";
 
 interface NavigationMenuProps extends MenuProps, TranslatedElement {
     links?: IconLinkProps[];
-    currentURL: string;
 }
 
 const NavigationMenu = ({
     language,
     links = NAVIGATION_LINKS[language],
-    currentURL,
     ...props
 }: NavigationMenuProps) => (
     <Menu
@@ -26,8 +24,6 @@ const NavigationMenu = ({
                 key={link.label}
                 url={link.url}
                 label={link.label}
-                className={currentURL === link.url ? "highlighted" : undefined}
-                aria-current={currentURL === link.url}
                 icon={<link.icon.type aria-hidden />}
                 rounded-md
             />

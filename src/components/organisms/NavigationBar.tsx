@@ -13,7 +13,7 @@ const NavigationBar = ({ language, currentURL }: NavigationBarProps) => (
         <NavigationHeader language={language} />
 
         <SocialMenu language={language} />
-        <NavigationMenu language={language} currentURL={currentURL} />
+        <NavigationMenu language={language} />
         <SettingsMenu language={language} mt-auto />
     </nav>
 );
