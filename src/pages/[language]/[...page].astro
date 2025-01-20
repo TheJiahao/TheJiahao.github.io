@@ -32,6 +32,11 @@ const { page } = Astro.props;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const title = SITE_TITLE[language];
 const description = SITE_DESCRIPTION[language];
+const pagination = {
+    currentPage: page.currentPage,
+    previosUrl: page.url.prev,
+    nextUrl: page.url.next,
+};
 ---
 
 <CollectionLayout
@@ -42,6 +47,7 @@ const description = SITE_DESCRIPTION[language];
     {language}
     {languages}
     searchBox
+    {pagination}
 >
     <HomeSchema {title} {description} {language} slot="head" />
 </CollectionLayout>
