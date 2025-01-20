@@ -23,6 +23,7 @@ const Pagination = ({
             url={previousUrl || defaultUrl}
             label={getTranslation(language).previousPage}
             icon={<LuChevronLeft />}
+            onlyIcon
             disabled={!previousUrl}
         />
         {currentPage}
@@ -30,6 +31,7 @@ const Pagination = ({
             url={nextUrl || defaultUrl}
             label={getTranslation(language).nextPage}
             icon={<LuChevronRight />}
+            onlyIcon
             disabled={!nextUrl}
         />
     </nav>
