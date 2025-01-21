@@ -1,7 +1,6 @@
 ---
 import CardList from "components/organisms/CardList";
 import NavigationBarLayout from "layouts/NavigationBarLayout.astro";
-import ContentLayout from "layouts/partials/ContentLayout.astro";
 import type { ImageCardProps } from "components/molecules/ImageCard";
 import CollectionSchema from "components/atoms/CollectionSchema.astro";
 import SearchBox from "components/organisms/SearchBox";
@@ -34,13 +33,13 @@ const {
 } = Astro.props;
 ---
 
-<NavigationBarLayout {title} {description} {languages}>
+<NavigationBarLayout {title} {description} {language} {languages}>
     <Fragment slot="head">
         <CollectionSchema {name} {items} />
         <slot name="head" />
     </Fragment>
 
-    <ContentLayout>
+    <Fragment>
         {
             searchBox && (
                 <header h-15 overflow-visible z-1>
@@ -59,5 +58,5 @@ const {
                 </footer>
             ) : null
         }
-    </ContentLayout>
+    </Fragment>
 </NavigationBarLayout>

@@ -1,6 +1,14 @@
 ---
-import BaseHeader, { type Props } from "components/atoms/BaseHeader.astro";
+import BaseHeader, {
+    type Props as BaseHeaderProps,
+} from "components/atoms/BaseHeader.astro";
+import SiteFooter from "components/molecules/SiteFooter";
+import type { TranslatedElement } from "interfaces/TranslatedElement";
 import "scss/scrollbar.scss";
+
+export interface Props extends BaseHeaderProps, TranslatedElement {}
+
+const { language } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,7 +27,16 @@ import "scss/scrollbar.scss";
             <div></div>
         </slot>
 
-        <slot />
+        <div
+            flex="~ col"
+            p-3
+            gap-y-7
+            mb-30
+            lg="min-w-3xl max-w-4xl py-lg px-unset"
+        >
+            <slot />
+            <SiteFooter {language} />
+        </div>
 
         <slot name="right-sidebar" />
     </body>

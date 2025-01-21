@@ -1,9 +1,8 @@
 ---
-import { type Props } from "components/atoms/BaseHeader.astro";
 import MobileNavigationBar from "components/organisms/MobileNavigationBar";
 import NavigationBar from "components/organisms/NavigationBar";
 import { DEFAULT_LANGUAGE } from "config";
-import BaseLayout from "layouts/BaseLayout.astro";
+import BaseLayout, { type Props } from "layouts/BaseLayout.astro";
 
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const currentURL = Astro.url.pathname;

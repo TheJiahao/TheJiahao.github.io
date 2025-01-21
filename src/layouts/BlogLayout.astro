@@ -12,7 +12,6 @@ import TableOfContents from "components/organisms/TableOfContents";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
 import type { BlogData } from "interfaces/BlogData";
 import BaseLayout from "layouts/BaseLayout.astro";
-import ContentLayout from "layouts/partials/ContentLayout.astro";
 import { getSlug } from "utils/getSlug";
 import { getTranslation } from "utils/getTranslation";
 
@@ -35,7 +34,7 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout {title} {description} {image} languages={alternates}>
+<BaseLayout {title} {description} {image} {language} languages={alternates}>
     <Fragment slot="head">
         {math && <MathHeader />}
 
@@ -61,39 +60,33 @@ const {
         <BackButton {language} />
     </aside>
 
-    <ContentLayout>
-        <main flex="~ col" gap-y-7>
-            <Article>
-                <BlogHeader
-                    slot="header"
-                    {title}
-                    {date}
-                    {image}
-                    {language}
-                    languages={alternates}
-                    slug={getSlug(Astro.url.pathname)}
-                />
-                <slot />
-                <BlogFooter
-                    slot="footer"
-                    {lastModified}
-                    licenseText={license}
-                />
-            </Article>
+    <main flex="~ col" gap-y-7>
+        <Article>
+            <BlogHeader
+                slot="header"
+                {title}
+                {date}
+                {image}
+                {language}
+                languages={alternates}
+                slug={getSlug(Astro.url.pathname)}
+            />
+            <slot />
+            <BlogFooter slot="footer" {lastModified} licenseText={license} />
+        </Article>
 
-            {
-                links && (
-                    <LinkList
-                        {links}
-                        aria-label={getTranslation(language).externalLinks}
-                        className="card"
-                    />
-                )
-            }
+        {
+            links && (
+                <LinkList
+                    {links}
+                    aria-label={getTranslation(language).externalLinks}
+                    className="card"
+                />
+            )
+        }
 
-            <CommentList {language} client:idle />
-        </main>
-    </ContentLayout>
+        <CommentList {language} client:idle />
+    </main>
 
     <aside slot="right-sidebar" un-hidden lg="block sticky top-0 p-lg h-screen">
         {headings.length > 0 && <TableOfContents {headings} client:load />}
