@@ -51,14 +51,15 @@ const {
 
     <aside
         slot="left-sidebar"
-        fixed
-        top-0
-        z-1
-        p-lg
-        lg="sticky h-screen justify-self-end"
+        un-hidden
+        lg="block sticky top-0 h-screen p-lg justify-self-end"
     >
         <BackLink {language} />
     </aside>
+
+    <header fixed top-0 z-1 p-lg lg-hidden>
+        <BackLink {language} />
+    </header>
 
     <main flex="~ col" gap-y-7>
         <Article>
