@@ -11,12 +11,19 @@ export function getStaticPaths() {
     }));
 }
 
+const descriptions: Record<string, string> = {
+    en: "Projects that I have participated.",
+    "zh-cn": "我参与过的项目。",
+};
+
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 const title = getTranslation(language).projects;
+const description = descriptions[language];
+
 const items = (await getCollection("projects")).map(({ data }) => ({
     ...data,
     description: data.description[language],
 }));
 ---
 
-<CollectionLayout {title} name={title} {items} {language} />
+<CollectionLayout {title} {description} name={title} {items} {language} />
