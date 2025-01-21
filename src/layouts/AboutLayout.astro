@@ -18,7 +18,7 @@ const { title, description } = Astro.props.frontmatter;
 const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
-<NavigationBarLayout {title} {language}>
+<NavigationBarLayout {title} {description} {language}>
     <ProfileSchema {description} slot="head" />
 
     <main>
