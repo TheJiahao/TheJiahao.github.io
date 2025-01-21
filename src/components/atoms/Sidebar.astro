@@ -1,0 +1,11 @@
+---
+interface Props {
+    id?: string;
+}
+
+const { id } = Astro.props;
+---
+
+<aside {id} un-hidden lg="block sticky top-0 h-screen p-lg">
+    <slot />
+</aside>

@@ -2,6 +2,7 @@
 import BaseHeader, {
     type Props as BaseHeaderProps,
 } from "components/atoms/BaseHeader.astro";
+import Sidebar from "components/atoms/Sidebar.astro";
 import SiteFooter from "components/molecules/SiteFooter";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
 import "scss/scrollbar.scss";
@@ -23,9 +24,9 @@ const { language } = Astro.props;
         lg="grid grid-sidebars gap-4"
         bg-surface-secondary
     >
-        <aside un-hidden lg="block sticky top-0 h-screen p-lg">
+        <Sidebar>
             <slot name="left-sidebar" />
-        </aside>
+        </Sidebar>
 
         <div
             flex="~ col"
@@ -38,8 +39,8 @@ const { language } = Astro.props;
             <SiteFooter {language} />
         </div>
 
-        <aside un-hidden lg="block sticky top-0 h-screen p-lg">
+        <Sidebar>
             <slot name="right-sidebar" />
-        </aside>
+        </Sidebar>
     </body>
 </html>
