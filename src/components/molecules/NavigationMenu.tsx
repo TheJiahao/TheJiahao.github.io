@@ -26,6 +26,7 @@ const NavigationMenu = ({
                 label={link.label}
                 icon={<link.icon.type aria-hidden />}
                 rounded-md
+                font-bold
             />
         ))}
     </Menu>
