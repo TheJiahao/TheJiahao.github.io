@@ -1,6 +1,6 @@
 ---
 import BaseHeader from "components/atoms/BaseHeader.astro";
-import BackButton from "components/molecules/BackButton";
+import BackLink from "components/molecules/BackLink";
 
 const title = "404 - Page not found";
 ---
@@ -13,7 +13,7 @@ const title = "404 - Page not found";
     <body bg-surface-secondary>
         <main size-screen flex="~ col" justify-center items-center gap-lg>
             <h1 text="4xl primary" font-bold>{title}</h1>
-            <BackButton language="en" label="Return to homepage" />
+            <BackLink language="en" label="Return to homepage" />
         </main>
     </body>
 </html>

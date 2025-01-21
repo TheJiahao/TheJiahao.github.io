@@ -4,14 +4,14 @@ import type { TranslatedElement } from "interfaces/TranslatedElement";
 import { LuChevronLeft } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
-interface BackButtonProps extends TranslatedElement {
+interface BackLinkProps extends TranslatedElement {
     label?: string;
 }
 
-const BackButton = ({
+const BackLink = ({
     language,
     label = getTranslation(language).back,
-}: BackButtonProps) => (
+}: BackLinkProps) => (
     <IconLink
         url={getRelativeLocaleUrl(language)}
         label={label}
@@ -21,4 +21,4 @@ const BackButton = ({
     />
 );
 
-export default BackButton;
+export default BackLink;

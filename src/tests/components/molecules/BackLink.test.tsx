@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import BackButton from "components/molecules/BackButton";
+import BackLink from "components/molecules/BackLink";
 import { describe, expect, test } from "vitest";
 
-describe("<BackButton/>", () => {
+describe("<BackLink/>", () => {
     test("links to homepage", () => {
-        render(<BackButton language="zh-cn" />);
+        render(<BackLink language="zh-cn" />);
 
         expect(screen.getByRole("link")).toHaveAttribute(
             "href",
@@ -13,7 +13,7 @@ describe("<BackButton/>", () => {
     });
 
     test("shows custom label", () => {
-        render(<BackButton language="zh-cn" label="Labeled button" />);
+        render(<BackLink language="zh-cn" label="Labeled button" />);
 
         expect(screen.getByRole("link")).toHaveTextContent("Labeled button");
     });
