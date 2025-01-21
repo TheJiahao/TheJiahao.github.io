@@ -11,9 +11,7 @@ const currentURL = Astro.url.pathname;
 <BaseLayout {...Astro.props}>
     <slot name="head" slot="head" />
 
-    <aside slot="left-sidebar" un-hidden lg="block sticky top-0 h-screen p-lg">
-        <NavigationBar {language} {currentURL} client:idle />
-    </aside>
+    <NavigationBar {language} {currentURL} slot="left-sidebar" client:idle />
 
     <slot />
 

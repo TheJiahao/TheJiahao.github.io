@@ -23,9 +23,9 @@ const { language } = Astro.props;
         lg="grid grid-sidebars gap-4"
         bg-surface-secondary
     >
-        <slot name="left-sidebar">
-            <div></div>
-        </slot>
+        <aside un-hidden lg="block sticky top-0 h-screen p-lg">
+            <slot name="left-sidebar" />
+        </aside>
 
         <div
             flex="~ col"
@@ -38,6 +38,8 @@ const { language } = Astro.props;
             <SiteFooter {language} />
         </div>
 
-        <slot name="right-sidebar" />
+        <aside un-hidden lg="block sticky top-0 h-screen p-lg">
+            <slot name="right-sidebar" />
+        </aside>
     </body>
 </html>
