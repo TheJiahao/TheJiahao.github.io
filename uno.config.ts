@@ -65,7 +65,7 @@ export default defineConfig({
     shortcuts: {
         card: "rounded-lg bg-surface-primary shadow-md break-inside-avoid overflow-hidden transition ease-in-out hover:shadow-lg",
         hoverable: "transition ease-in-out hover:bg-hover",
-        clickable: "cursor-pointer hoverable active:bg-clicked",
+        clickable: "cursor-pointer hoverable active:bg-clicked active:scale-95",
         "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
         "align-icon": "flex items-center",
         highlighted: "text-accent-primary font-bold",
