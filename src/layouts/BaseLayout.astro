@@ -24,7 +24,7 @@ const { language } = Astro.props;
         lg="grid grid-sidebars gap-4"
         bg-surface-secondary
     >
-        <Sidebar>
+        <Sidebar id="left-sidebar">
             <slot name="left-sidebar" />
         </Sidebar>
 
@@ -39,7 +39,7 @@ const { language } = Astro.props;
             <SiteFooter {language} />
         </div>
 
-        <Sidebar>
+        <Sidebar id="right-sidebar">
             <slot name="right-sidebar" />
         </Sidebar>
     </body>
