@@ -49,11 +49,8 @@ graph TB
 NavigationBarLayout --> BaseLayout
 
 CollectionLayout --> NavigationBarLayout
-CollectionLayout --> ContentLayout
 
 AboutLayout --> NavigationBarLayout
-AboutLayout --> ContentLayout
 
 BlogLayout --> BaseLayout
-BlogLayout --> ContentLayout
 ```
