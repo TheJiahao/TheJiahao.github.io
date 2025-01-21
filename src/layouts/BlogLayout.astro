@@ -49,12 +49,8 @@ const {
         />
     </Fragment>
 
-    <aside
-        slot="left-sidebar"
-        un-hidden
-        lg="block sticky top-0 h-screen p-lg justify-self-end"
-    >
-        <BackLink {language} />
+    <aside slot="left-sidebar" un-hidden lg="block sticky top-0 h-screen p-lg">
+        <BackLink {language} className="justify-self-end" />
     </aside>
 
     <header fixed top-0 z-1 p-lg lg-hidden>

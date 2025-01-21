@@ -6,11 +6,13 @@ import { getTranslation } from "utils/getTranslation";
 
 interface BackLinkProps extends TranslatedElement {
     label?: string;
+    className?: string;
 }
 
 const BackLink = ({
     language,
     label = getTranslation(language).back,
+    ...props
 }: BackLinkProps) => (
     <IconLink
         url={getRelativeLocaleUrl(language)}
@@ -18,6 +20,7 @@ const BackLink = ({
         icon={<LuChevronLeft />}
         card
         text="secondary lg"
+        {...props}
     />
 );
 
