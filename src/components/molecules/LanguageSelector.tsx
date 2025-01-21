@@ -72,7 +72,6 @@ const LanguageSelector = ({
                 card
                 flex="~ col"
                 text-secondary
-                gap-1
                 transition={true}
                 duration-100
                 ease-in
@@ -83,6 +82,7 @@ const LanguageSelector = ({
                         value={code}
                         className="group data-[focus]:bg-hover data-[hover]:bg-hover"
                         clickable
+                        rounded-md
                         align-icon
                         gap-3
                         p-2
