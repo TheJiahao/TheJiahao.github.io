@@ -13,7 +13,7 @@ interface ImageCardProps extends DetailsProps {
 const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => (
     <article
         title={title}
-        style={{ viewTransitionName: getViewTransitionName(url) }}
+        style={{ viewTransitionName: getViewTransitionName(title) }}
         card
         clickable
     >
