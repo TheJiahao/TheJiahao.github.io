@@ -2,6 +2,7 @@ import type { ImageMetadata } from "astro";
 import CoverImage from "components/atoms/CoverImage";
 import DateComponent from "components/atoms/DateComponent";
 import Details, { type DetailsProps } from "components/molecules/Details";
+import { getViewTransitionName } from "utils/getViewTransitionName";
 
 interface ImageCardProps extends DetailsProps {
     url: string;
@@ -10,7 +11,12 @@ interface ImageCardProps extends DetailsProps {
 }
 
 const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => (
-    <article title={title} card clickable>
+    <article
+        title={title}
+        style={{ viewTransitionName: getViewTransitionName(url) }}
+        card
+        clickable
+    >
         <a href={url} rel="bookmark">
             <CoverImage image={image} alt="" />
             <div p-4 lg:p-8 flex="~ col" gap-4>
