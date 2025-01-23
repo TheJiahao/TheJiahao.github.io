@@ -14,6 +14,7 @@ import type { BlogData } from "interfaces/BlogData";
 import BaseLayout from "layouts/BaseLayout.astro";
 import { getSlug } from "utils/getSlug";
 import { getTranslation } from "utils/getTranslation";
+import { getViewTransitionName } from "utils/getViewTransitionName";
 
 type Props = BlogData & {
     headings: MarkdownHeading[];
@@ -56,7 +57,7 @@ const {
     </header>
 
     <main flex="~ col" gap-y-7>
-        <Article>
+        <Article transition:name={getViewTransitionName(title)}>
             <BlogHeader
                 slot="header"
                 {title}
