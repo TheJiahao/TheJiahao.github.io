@@ -15,6 +15,7 @@ import BaseLayout from "layouts/BaseLayout.astro";
 import { getSlug } from "utils/getSlug";
 import { getTranslation } from "utils/getTranslation";
 import { getViewTransitionName } from "utils/getViewTransitionName";
+import { slideUpTransition } from "utils/animations";
 
 type Props = BlogData & {
     headings: MarkdownHeading[];
@@ -57,7 +58,10 @@ const {
     </header>
 
     <main flex="~ col" gap-y-7>
-        <Article transition:name={getViewTransitionName(title)}>
+        <Article
+            transition:name={getViewTransitionName(title)}
+            transition:animate={slideUpTransition}
+        >
             <BlogHeader
                 slot="header"
                 {title}
