@@ -63,6 +63,7 @@
         "unified": "^11.0.5",
         "unocss": "^65.0.0",
         "unocss-preset-theme": "^0.14.0",
+        "uuid": "^11.0.5",
         "vite": "^6.0.0"
     },
     "devDependencies": {
