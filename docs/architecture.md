@@ -15,7 +15,7 @@ Logic is divided to:
 
 ```mermaid
 graph TB
-pages --> layouts
+pages -->|data| layouts
 pages --> utils
 
 layouts --> components
