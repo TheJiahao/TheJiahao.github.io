@@ -2,7 +2,7 @@
 import "styles/prose.scss";
 ---
 
-<article prose prose-primary max-w-full card>
+<article prose prose-primary max-w-full card {...Astro.props}>
     <slot name="header" />
 
     <div px-4 pb-3 lg="px-8 pb-8">
