@@ -6,13 +6,13 @@ import type {
 const slideUpAnimation: TransitionAnimationPair = {
     old: {
         name: "slide-in-up",
-        duration: 100,
+        duration: 150,
         easing: "ease-in",
         direction: "reverse",
     },
     new: {
         name: "slide-in-up",
-        duration: 100,
+        duration: 150,
         easing: "ease-in-out",
     },
 };
