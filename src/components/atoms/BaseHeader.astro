@@ -2,6 +2,7 @@
 import type { ImageMetadata } from "astro";
 import { SEO } from "astro-seo";
 import { getAbsoluteLocaleUrl } from "astro:i18n";
+import { ClientRouter } from "astro:transitions";
 import { BLOG_IMAGE_PLACEHOLDER, DEFAULT_LANGUAGE } from "config";
 import type { Multilingual } from "interfaces/Multilingual";
 import { getLanguageAlternates } from "utils/getLanguageAlternates";
@@ -66,8 +67,4 @@ const languageAlternates = getLanguageAlternates(Astro.url.pathname, languages);
     {noindex}
 />
 
-<style>
-    @view-transition {
-        navigation: auto;
-    }
-</style>
+<ClientRouter />
