@@ -2,7 +2,6 @@
 
 ## [3.6.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.5.0...v3.6.0) (2025-01-24)
 
-
 ### Features
 
 * ✨ Add `getViewTransitionName` ([c4a922f](https://github.com/TheJiahao/TheJiahao.github.io/commit/c4a922f855dc07d7419afe522617ea0e8214f2e1)), closes [#577](https://github.com/TheJiahao/TheJiahao.github.io/issues/577)
@@ -40,7 +39,6 @@
 * **sitemap:** ✨ Exclude pagination pages ([fdf01c3](https://github.com/TheJiahao/TheJiahao.github.io/commit/fdf01c354bac52981ad81e322f4b54b5ef434ba7)), closes [#560](https://github.com/TheJiahao/TheJiahao.github.io/issues/560)
 * **typography:** ✨ Remove space after fullwidth separators "。" and "，" ([4a13c74](https://github.com/TheJiahao/TheJiahao.github.io/commit/4a13c74cea6e5459be00066566fdef62c26ae01c))
 * **url:** ✨ Show 5 blogs in blog collection pages ([c06f7e6](https://github.com/TheJiahao/TheJiahao.github.io/commit/c06f7e6e701729f8b95fe9ff26a279e3f8e9c5f4)), closes [#560](https://github.com/TheJiahao/TheJiahao.github.io/issues/560)
-
 
 ### Bug Fixes
 
@@ -87,11 +85,9 @@
 * **test:** 🐛 🚨 Playwright webServer command outdated ([6fb8b2a](https://github.com/TheJiahao/TheJiahao.github.io/commit/6fb8b2ae1baadffd7b2d5e9d378802430a41be16))
 * **toc:** 🐛 Replace return with continue ([124cfcb](https://github.com/TheJiahao/TheJiahao.github.io/commit/124cfcb8bd981c9acc91ae3c30700914a9af9708))
 
-
 ### Performance Improvements
 
 * ⚡️ Enable prefetch on hover ([178bdb3](https://github.com/TheJiahao/TheJiahao.github.io/commit/178bdb382723efcaf8dfcb48ec55ff6d778dcd67))
-
 
 ### Reverts
 
