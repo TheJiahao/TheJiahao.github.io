@@ -15,13 +15,14 @@ interface Props extends DetailsProps, Multilingual, TranslatedElement {
 }
 
 const { title, image, date, language, languages, slug, ...props } = Astro.props;
+const id = getUUID(title);
 ---
 
 <header flex="~ col" gap-lg>
     <CoverImage
         image={image}
         alt=""
-        style={{ viewTransitionName: `cover-image-${getUUID(title)}` }}
+        style={{ viewTransitionName: `image-${id}` }}
     />
     <div px-4 lg:px-8>
         <Details {title} {...props} />
