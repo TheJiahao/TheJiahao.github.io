@@ -58,10 +58,7 @@ const {
     </header>
 
     <main flex="~ col" gap-y-7>
-        <Article
-            transition:name={getViewTransitionName(title)}
-            transition:animate={slideUpTransition}
-        >
+        <Article transition:name={getViewTransitionName(title)}>
             <BlogHeader
                 slot="header"
                 {title}
