@@ -10,22 +10,26 @@ interface ImageCardProps extends DetailsProps {
     date?: Date;
 }
 
-const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => (
-    <article title={title} card clickable>
-        <a href={url} rel="bookmark">
-            <CoverImage
-                image={image}
-                alt=""
-                style={{ viewTransitionName: `image-${getUUID(title)}` }}
-            />
-            <div p-4 lg:p-8 flex="~ col" gap-4>
-                <Details title={title} {...props} />
+const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => {
+    const id = getUUID(title);
 
-                {date && <DateComponent date={date} />}
-            </div>
-        </a>
-    </article>
-);
+    return (
+        <article title={title} card clickable>
+            <a href={url} rel="bookmark">
+                <CoverImage
+                    image={image}
+                    alt=""
+                    style={{ viewTransitionName: `image-${id}` }}
+                />
+                <div p-4 lg:p-8 flex="~ col" gap-4>
+                    <Details title={title} {...props} />
+
+                    {date && <DateComponent date={date} id={id} />}
+                </div>
+            </a>
+        </article>
+    );
+};
 
 export type { ImageCardProps };
 export default ImageCard;
