@@ -7,4 +7,5 @@ const NAME_SPACE = "731a464f-2cd4-4486-8722-e54357acbe1a";
  * @param value
  * @returns Identifier
  */
-export const getViewTransitionName = (value: string) => `VTN-${v5(value, NAME_SPACE)}`;
+export const getViewTransitionName = (value: string) =>
+    `VTN-${v5(value, NAME_SPACE)}`;
