@@ -65,6 +65,7 @@ export default defineConfig({
     },
     trailingSlash: "never",
     prefetch: {
+        defaultStrategy: "viewport",
         prefetchAll: true,
     },
     i18n: {
