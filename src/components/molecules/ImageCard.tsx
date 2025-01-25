@@ -19,7 +19,7 @@ const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => {
                 <CoverImage
                     image={image}
                     alt=""
-                    style={{ viewTransitionName: `image-${id}` }}
+                    viewTransitionName={`image-${id}`}
                 />
                 <div p-4 lg:p-8 flex="~ col" gap-4>
                     <Details title={title} {...props} />

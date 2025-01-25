@@ -1,8 +1,8 @@
 import { type ImageMetadata } from "astro";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
-import type { HTMLAttributes } from "react";
+import type { AnimatedElement } from "interfaces/AnimatedElement";
 
-interface CoverImageProps extends HTMLAttributes<HTMLImageElement> {
+interface CoverImageProps extends AnimatedElement {
     image?: ImageMetadata;
     alt: string;
 }
@@ -10,7 +10,7 @@ interface CoverImageProps extends HTMLAttributes<HTMLImageElement> {
 const CoverImage = ({
     image = BLOG_IMAGE_PLACEHOLDER,
     alt,
-    ...props
+    viewTransitionName,
 }: CoverImageProps) => (
     <img
         src={image.src}
@@ -22,7 +22,7 @@ const CoverImage = ({
         max-h-xs
         object-cover
         overflow-hidden
-        {...props}
+        style={{ viewTransitionName }}
     />
 );
 
