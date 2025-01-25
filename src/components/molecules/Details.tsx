@@ -1,19 +1,14 @@
 import parse from "html-react-parser";
-import type { HTMLAttributes } from "react";
-import { getUUID } from "utils/getUUID";
+import type { AnimatedElement } from "interfaces/AnimatedElement";
 import { renderMarkdown } from "utils/renderMarkdown";
-interface DetailsProps extends HTMLAttributes<HTMLDivElement> {
+interface DetailsProps extends AnimatedElement {
     title: string;
     description?: string;
 }
 
-const Details = ({ title, description }: DetailsProps) => (
+const Details = ({ title, description, viewTransitionName }: DetailsProps) => (
     <div text="secondary xl" flex="~ col" gap-sm>
-        <h1
-            text="primary 3xl"
-            font-bold
-            style={{ viewTransitionName: `title-${getUUID(title)}` }}
-        >
+        <h1 text="primary 3xl" font-bold style={{ viewTransitionName }}>
             {title}
         </h1>
 

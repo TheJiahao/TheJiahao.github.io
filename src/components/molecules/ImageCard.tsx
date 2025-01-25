@@ -22,7 +22,11 @@ const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => {
                     viewTransitionName={`image-${id}`}
                 />
                 <div p-4 lg:p-8 flex="~ col" gap-4>
-                    <Details title={title} {...props} />
+                    <Details
+                        title={title}
+                        viewTransitionName={`title-${id}`}
+                        {...props}
+                    />
 
                     {date && (
                         <DateComponent
