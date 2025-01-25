@@ -2,12 +2,12 @@ import type { HTMLAttributes } from "react";
 import { LuCalendar } from "react-icons/lu";
 import { formatDate } from "utils/formatDate";
 
-interface DateComponent extends HTMLAttributes<HTMLTimeElement> {
+interface DateComponentProps extends HTMLAttributes<HTMLTimeElement> {
     date: Date;
     id?: string;
 }
 
-const DateComponent = ({ date, id }: DateComponent) => (
+const DateComponent = ({ date, id }: DateComponentProps) => (
     <time
         dateTime={formatDate(date)}
         text-secondary
