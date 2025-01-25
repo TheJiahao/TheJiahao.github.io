@@ -24,9 +24,8 @@ const Pagination = ({
             label={getTranslation(language).previousPage}
             icon={<LuChevronLeft role="presentation" size-10 />}
             onlyIcon
-            className={
-                !previousURL ? "pointer-events-none color-disabled" : undefined
-            }
+            inert={!previousURL}
+            className={!previousURL ? "color-disabled" : undefined}
             aria-disabled={!previousURL}
         />
 
@@ -37,9 +36,8 @@ const Pagination = ({
             label={getTranslation(language).nextPage}
             icon={<LuChevronRight role="presentation" size-10 />}
             onlyIcon
-            className={
-                !nextURL ? "pointer-events-none color-disabled" : undefined
-            }
+            inert={!nextURL}
+            className={!nextURL ? "color-disabled" : undefined}
             aria-disabled={!nextURL}
         />
     </nav>
