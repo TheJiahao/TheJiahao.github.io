@@ -24,7 +24,12 @@ const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => {
                 <div p-4 lg:p-8 flex="~ col" gap-4>
                     <Details title={title} {...props} />
 
-                    {date && <DateComponent date={date} id={id} />}
+                    {date && (
+                        <DateComponent
+                            date={date}
+                            viewTransitionName={`date-${id}`}
+                        />
+                    )}
                 </div>
             </a>
         </article>

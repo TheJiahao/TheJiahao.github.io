@@ -27,7 +27,7 @@ const id = getUUID(title);
     <div px-4 lg:px-8>
         <Details {title} {...props} />
         <div flex="~ row" gap-4>
-            <DateComponent {date} {id} />
+            <DateComponent {date} viewTransitionName={`date-${id}`} />
 
             {
                 languages.length > 1 && (
