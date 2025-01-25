@@ -439,7 +439,8 @@ export default TableOfContents;
 读者可根据自身偏好，使用 [CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS)、[SCSS](https://sass-lang.com/)、[UnoCSS](https://unocss.dev/)、[Tailwind CSS](https://tailwindcss.com/) 等，实现目录组件和标题高亮样式。
 本站使用的 UnoCSS 样式可参考本站源代码中的 [`TableOfContents.tsx`](https://github.com/TheJiahao/TheJiahao.github.io/blob/d32751c4ba003ff612adc311052279f5b6563f03/src/components/organisms/TableOfContents.tsx) 和 [`unocss.config.ts`](https://github.com/TheJiahao/TheJiahao.github.io/blob/d32751c4ba003ff612adc311052279f5b6563f03/uno.config.ts)。
 
-使用组件时只需要传入 Astro 的标题列表即可，并添加 [客户端指令](https://docs.astro.build/zh-cn/reference/directives-reference/#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8C%87%E4%BB%A4) 从而在客户端（浏览器）运行组件中的代码。
+使用组件时只需要传入 Astro 的标题列表即可。
+此外，还需要添加 [客户端指令](https://docs.astro.build/zh-cn/reference/directives-reference/#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%8C%87%E4%BB%A4) 从而在客户端（浏览器）运行组件中的代码。
 如果目录组件在页面开头，读者应在布局文件中使用 `client:load`。
 
 ```astro title="src/layouts/BlogLayout.astro"
