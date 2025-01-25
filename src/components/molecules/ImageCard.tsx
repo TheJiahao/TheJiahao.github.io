@@ -28,12 +28,7 @@ const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => {
                         {...props}
                     />
 
-                    {date && (
-                        <DateComponent
-                            date={date}
-                            viewTransitionName={`date-${id}`}
-                        />
-                    )}
+                    {date && <DateComponent date={date} />}
                 </div>
             </a>
         </article>
