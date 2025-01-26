@@ -1,20 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="background-color:#92cb84" viewBox="0 0 496.86 266.67">
 
     <style>
-        #logo-full {
-            display: none;
-        }
-
-        @media screen and (min-width: 100px) {
-            #logo-small {
-                display: none;
-            }
-
-            #logo-full {
-                display: unset;
-            }
-        }
-
         .cls-1 {
             fill: #1d1013;
         }
@@ -37,12 +23,5 @@
         <path class="cls-1" d="M267.8,59.06h33.85V80H267.8v59.38H246.89V0h69V20.91H267.8Z" />
         <path class="cls-3" d="M414.05,139.35h-91V0H344V118.44h14.69V0h20.91V118.44h13.57V0h20.91Z" />
         <path class="cls-1" d="M104.34,74.92V140H83.43V74.92Z" />
-    </svg>
-
-    <svg id="logo-small" viewBox="0 0 1000 1000">
-        <path class="cls-1"
-            d="m 338 750 h 256.0714 v 107.0891 l -379.4979 0 v -107.0891 l 256.0714 -499.4929 h -229.9009 v -107.0891 h 353.3786 v 107.0891 z" />
-        <ellipse class="cls-2" cx="749.5" cy="352.5" rx="72.5" ry="117.5" />
-        <ellipse class="cls-2" cx="749.5" cy="652.5" rx="72.5" ry="117.5" />
     </svg>
 </svg>
