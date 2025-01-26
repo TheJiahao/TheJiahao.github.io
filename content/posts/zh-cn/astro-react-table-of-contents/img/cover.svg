@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-87.5 -87.5 525 525">
+    <style>
+        :root {
+            background: linear-gradient(-45deg, hsl(246, 70%, 70%), hsl(200, 70%, 70%));
+        }
+    </style>
+
+    <defs>
+        <linearGradient id="inactive" gradientTransform="rotate(45)">
+            <stop offset="0%" stop-color="hsl(0, 0%, 70%)" />
+            <stop offset="100%" stop-color="hsl(0, 0%, 50%)" />
+        </linearGradient>
+
+        <linearGradient id="active" gradientTransform="rotate(45)">
+            <stop offset="0%" stop-color="hsl(200, 70%, 70%)" />
+            <stop offset="100%" stop-color="hsl(240, 70%, 70%)" />
+        </linearGradient>
+
+        <filter id="shadow">
+            <feDropShadow dx="25" dy="25" stdDeviation="6" flood-color="black" flood-opacity="0.4" />
+        </filter>
+    </defs>
+
+    <svg filter="url(#shadow)">
+        <rect x="0" y="0" width="350" height="350" fill="hsl(0, 0%, 90%)" rx="30" ry="30" />
+
+        <rect x="50" y="50" width="250" height="50" fill="url(#inactive)" rx="15" ry="15" />
+        <rect x="100" y="150" width="200" height="50" fill="url(#active" rx="15" ry="15" />
+        <rect x="100" y="250" width="200" height="50" fill="url(#inactive)" rx="15" ry="15" />
+    </svg>
+</svg>
