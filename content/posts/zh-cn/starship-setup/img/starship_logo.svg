@@ -16,9 +16,15 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 -->
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 -713.5 2854 4281">
-  <mask id="a" width="2854" height="2854" x="0" y="0" maskUnits="userSpaceOnUse"
-    style="mask-type:alpha">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-713.5 -713.5 4281 4281">
+  <style>
+    :root {
+      background:
+        radial-gradient(circle at bottom, hsl(274, 100%, 35%), black);
+    }
+  </style>
+
+  <mask id="a" width="2854" height="2854" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
     <circle cx="1427" cy="1427" r="1427" fill="#C4C4C4" />
   </mask>
   <g mask="url(#a)">
@@ -30,8 +36,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
       d="M1606.37 2246.91S1509 2830 1095 2978l-650-414c572.5 0 777.71-442.31 777.71-442.31l383.66 125.22Z" />
   </g>
   <defs>
-    <linearGradient id="b" x1="112.463" x2="2365.33" y1="3485.86" y2="-827.778"
-      gradientUnits="userSpaceOnUse">
+    <linearGradient id="b" x1="112.463" x2="2365.33" y1="3485.86" y2="-827.778" gradientUnits="userSpaceOnUse">
       <stop stop-color="#ED0A62" />
       <stop offset="1" stop-color="#890CEA" />
     </linearGradient>
