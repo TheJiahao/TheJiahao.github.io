@@ -20,7 +20,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
   <style>
     :root {
       background:
-        radial-gradient(circle at bottom, hsl(274, 100%, 35%), black);
+        radial-gradient(circle at bottom, hsl(260, 100%, 30%), black);
     }
   </style>
 
