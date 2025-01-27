@@ -370,8 +370,13 @@ const getTOC = (
 
 ## React 组件
 
-为了保证 HTML 语义正确，笔者选择将目录组件分为两部分：包含标题组件的列表和标题组件。
+使用 React 组件之前需要先安装 Astro 的 [React 集成](https://docs.astro.build/zh-cn/guides/integrations-guide/react/)。
 
+```shell
+pnpm astro add react
+```
+
+为了保证 HTML 语义正确，笔者选择将目录组件分为两部分：包含标题组件的列表和标题组件。
 标题组件中需要标题对象的递归结构。
 
 ```tsx title="TableOfContentsHeading.tsx" collapse={1-4}
