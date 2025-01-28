@@ -4,5 +4,6 @@
     "description": {
         "en": "Blog built with Astro and React.",
         "zh-cn": "用 Astro 和 React 构建的博客。"
-    }
+    },
+    "image": "./images/screenshot.webp"
 }
