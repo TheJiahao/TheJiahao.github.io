@@ -3,9 +3,10 @@ description: Set up Node and pnpm
 runs:
   using: composite
   steps:
-    - name: Enable corepack
-      run: corepack enable
-      shell: bash
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        run_install: false
 
     - name: Install Node.js
       uses: actions/setup-node@v4
