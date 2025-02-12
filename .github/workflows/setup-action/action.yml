@@ -7,6 +7,9 @@ runs:
       run: corepack enable
       shell: bash
 
+    - shell: bash
+      run: corepack --version
+
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
