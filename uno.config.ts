@@ -2,17 +2,17 @@ import {
     defineConfig,
     presetAttributify,
     presetTypography,
-    presetUno,
+    presetWind3,
     transformerAttributifyJsx,
     transformerDirectives,
 } from "unocss";
 import presetTheme from "unocss-preset-theme";
-import type { Theme } from "unocss/preset-uno";
+import type { Theme } from "unocss/preset-wind3";
 
 export default defineConfig({
     presets: [
         presetAttributify(),
-        presetUno({
+        presetWind3({
             dark: "media",
         }),
         presetTypography(),
