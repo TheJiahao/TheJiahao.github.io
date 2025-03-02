@@ -18,20 +18,3 @@ jobs:
           key-location: ${{ vars.SITE_BASE_URL }}/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
           failure-strategy: error
           endpoint: api.indexnow.org
-
-  google-indexing:
-    name: Submit URLs to Google
-    runs-on: ubuntu-latest
-    env:
-      SITE_BASE_URL: ${{ VARS.SITE_BASE_URL }}
-      GIS_CLIENT_EMAIL: ${{ secrets.GIS_CLIENT_EMAIL }}
-      GIS_PRIVATE_KEY: ${{ secrets.GIS_PRIVATE_KEY }}
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up
-        uses: ./.github/workflows/setup-action
-
-      - name: Submit URLs to Google
-        run: pnpm run index
