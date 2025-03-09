@@ -30,6 +30,14 @@ links:
       url: https://zimfw.sh/
       image: https://zimfw.sh/images/favicons/apple-touch-icon.png
 
+    - title: Starship 配置——在终端上显示 Git 状态、Python 虚拟环境、命令运行时间等
+      description: "
+            Starship 是一款跨平台的 shell 主题管理器，其支持 Zsh、Nushell、PowerShell 等。\
+            本文介绍了如何配置 Starship，并分享了笔者使用的主题。
+            "
+      url: /zh-cn/posts/starship-setup
+      image: img/starship_logo.svg
+
 hidden: false
 comments: true
 draft: false
