@@ -98,7 +98,7 @@
         "vitest": "^3.0.0",
         "vitest-mock-extended": "^3.0.0"
     },
-    "packageManager": "pnpm@10.6.1",
+    "packageManager": "pnpm@10.6.2",
     "pnpm": {
         "overrides": {
             "vitest>vite": "^6.0.0"
