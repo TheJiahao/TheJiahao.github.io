@@ -28,7 +28,7 @@ importers:
         version: 3.3.0
       '@expressive-code/plugin-collapsible-sections':
         specifier: ^0.41.0
-        version: 0.41.0
+        version: 0.41.1
       '@giscus/react':
         specifier: ^3.0.0
         version: 3.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -889,11 +889,11 @@ packages:
     peerDependencies:
       '@playwright/test': ^1.42.1
 
-  '@expressive-code/core@0.41.0':
-    resolution: {integrity: sha512-J++N/YaVAPEHOgv8UvDBp95xYZPulx4k4tw06aCmpCt9ZC5+mzrbZASzh/2xd5caWXQSA7Oq6S55QbNwNjIbuQ==}
+  '@expressive-code/core@0.41.1':
+    resolution: {integrity: sha512-mG2IrN4t/NGPmEeeswmttsW7W7c96sz3ASjo1psQnOqU5QWAF61HpnBu3lPxHI8iQJyZI8wfAroo9FFpwlkvAQ==}
 
-  '@expressive-code/plugin-collapsible-sections@0.41.0':
-    resolution: {integrity: sha512-nSEm/WuXuQxqQj9zlDSVbZxAR+VauezWdWOFkM7udqShxJdOTJevkaKEjQicJCNh18dyw4mACfrUplqcKqisRg==}
+  '@expressive-code/plugin-collapsible-sections@0.41.1':
+    resolution: {integrity: sha512-/sF6maDwv71GoLPP3WcvGQuJ0ew47gG3vmpV7nzq3I2jxUtGl7NKcMfT87bMkT7Hrp0FvaHe8s7WHpQEu5vlAg==}
 
   '@expressive-code/plugin-frames@0.41.0':
     resolution: {integrity: sha512-mG8qrHcrR43d/XoRzialoea24qpJwUgDvftR6dtZuFo/AnPe2O6lAfUTE2OaRZmLhBp5LUf6ZcgId5xJ3J+vsQ==}
@@ -2342,6 +2342,9 @@ packages:
   css-selector-parser@3.0.5:
     resolution: {integrity: sha512-3itoDFbKUNx1eKmVpYMFyqKX04Ww9osZ+dLgrk6GEv6KMVeXUhUnp4I5X+evw+u3ZxVU6RFXSSRxlTeMh8bA+g==}
 
+  css-selector-parser@3.1.2:
+    resolution: {integrity: sha512-WfUcL99xWDs7b3eZPoRszWVfbNo8ErCF15PTvVROjkShGlAfjIkG6hlfj/sl6/rfo5Q9x9ryJ3VqVnAZDA+gcw==}
+
   css-tree@3.1.0:
     resolution: {integrity: sha512-0eW44TGN5SQXU1mWSkKwFstI/22X2bG1nYzZTYMAWjylYURhse752YgbE4Cx46AC+bAvI+/dYTPRk1LqSUnu6w==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
@@ -2951,6 +2954,9 @@ packages:
 
   hast-util-select@6.0.3:
     resolution: {integrity: sha512-OVRQlQ1XuuLP8aFVLYmC2atrfWHS5UD3shonxpnyrjcCkwtvmt/+N6kYJdcY4mkMJhxp4kj2EFIxQ9kvkkt/eQ==}
+
+  hast-util-select@6.0.4:
+    resolution: {integrity: sha512-RqGS1ZgI0MwxLaKLDxjprynNzINEkRHY2i8ln4DDjgv9ZhcYVIHN9rlpiYsqtFwrgpYU361SyWDQcGNIBVu3lw==}
 
   hast-util-to-estree@3.1.3:
     resolution: {integrity: sha512-48+B/rJWAp0jamNbAAf9M7Uf//UVqAoMmgXhBdxTDJLGKY+LRnZ99qcG+Qjl5HfMpYNzS5v4EAwVEF34LeAj7w==}
@@ -5825,10 +5831,10 @@ snapshots:
       ansi-to-html: 0.7.2
       marked: 12.0.2
 
-  '@expressive-code/core@0.41.0':
+  '@expressive-code/core@0.41.1':
     dependencies:
       '@ctrl/tinycolor': 4.1.0
-      hast-util-select: 6.0.3
+      hast-util-select: 6.0.4
       hast-util-to-html: 9.0.5
       hast-util-to-text: 4.0.2
       hastscript: 9.0.1
@@ -5837,22 +5843,22 @@ snapshots:
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
 
-  '@expressive-code/plugin-collapsible-sections@0.41.0':
+  '@expressive-code/plugin-collapsible-sections@0.41.1':
     dependencies:
-      '@expressive-code/core': 0.41.0
+      '@expressive-code/core': 0.41.1
 
   '@expressive-code/plugin-frames@0.41.0':
     dependencies:
-      '@expressive-code/core': 0.41.0
+      '@expressive-code/core': 0.41.1
 
   '@expressive-code/plugin-shiki@0.41.0':
     dependencies:
-      '@expressive-code/core': 0.41.0
+      '@expressive-code/core': 0.41.1
       shiki: 3.2.2
 
   '@expressive-code/plugin-text-markers@0.41.0':
     dependencies:
-      '@expressive-code/core': 0.41.0
+      '@expressive-code/core': 0.41.1
 
   '@fastify/busboy@2.1.1': {}
 
@@ -7562,6 +7568,8 @@ snapshots:
 
   css-selector-parser@3.0.5: {}
 
+  css-selector-parser@3.1.2: {}
+
   css-tree@3.1.0:
     dependencies:
       mdn-data: 2.12.2
@@ -8073,7 +8081,7 @@ snapshots:
 
   expressive-code@0.41.0:
     dependencies:
-      '@expressive-code/core': 0.41.0
+      '@expressive-code/core': 0.41.1
       '@expressive-code/plugin-frames': 0.41.0
       '@expressive-code/plugin-shiki': 0.41.0
       '@expressive-code/plugin-text-markers': 0.41.0
@@ -8386,6 +8394,24 @@ snapshots:
       hast-util-whitespace: 3.0.0
       nth-check: 2.1.1
       property-information: 6.5.0
+      space-separated-tokens: 2.0.2
+      unist-util-visit: 5.0.0
+      zwitch: 2.0.4
+
+  hast-util-select@6.0.4:
+    dependencies:
+      '@types/hast': 3.0.4
+      '@types/unist': 3.0.3
+      bcp-47-match: 2.0.3
+      comma-separated-tokens: 2.0.3
+      css-selector-parser: 3.1.2
+      devlop: 1.1.0
+      direction: 2.0.1
+      hast-util-has-property: 3.0.0
+      hast-util-to-string: 3.0.1
+      hast-util-whitespace: 3.0.0
+      nth-check: 2.1.1
+      property-information: 7.0.0
       space-separated-tokens: 2.0.2
       unist-util-visit: 5.0.0
       zwitch: 2.0.4
