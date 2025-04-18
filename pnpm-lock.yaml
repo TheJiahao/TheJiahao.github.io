@@ -16,7 +16,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.2.4(astro@5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
+        version: 4.2.4(astro@5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
       '@astrojs/react':
         specifier: ^4.0.0
         version: 4.2.4(@types/node@22.14.1)(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1)
@@ -46,10 +46,10 @@ importers:
         version: 66.0.0
       astro:
         specifier: ^5.0.0
-        version: 5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+        version: 5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       astro-expressive-code:
         specifier: ^0.41.0
-        version: 0.41.1(astro@5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
+        version: 0.41.1(astro@5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -58,7 +58,7 @@ importers:
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       astro-seo-schema:
         specifier: ^5.0.0
-        version: 5.0.0(astro@5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3))
+        version: 5.0.0(astro@5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3))
       dayjs:
         specifier: ^1.11.11
         version: 1.11.13
@@ -2072,8 +2072,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.7.2:
-    resolution: {integrity: sha512-h/+MjrirU2xT+khkxvwPxE7c1O4nxzVtuSnGIqx+3dtrmUoxJvnNeIBnO7ED0mWzo6ClZ4aVBQj63M7U47anLg==}
+  astro@5.7.3:
+    resolution: {integrity: sha512-2b/OOS/A6GO4QP94x6oRzwTfXabFqE2rlUbbi42o6wZm9+zzcOc6VRFAq4lTOEI/iCrEVl3wTdBAC5X3h3Es+Q==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3790,8 +3790,8 @@ packages:
   ohash@2.0.11:
     resolution: {integrity: sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==}
 
-  oniguruma-parser@0.11.1:
-    resolution: {integrity: sha512-fX6SirDOsTUNqSUOnL3fDtD3R7PCXNWGA3WWPvv9egEfTWkNXzRLO/9CC1WkDusP6HyWRZig06kHeYPcw3mlqQ==}
+  oniguruma-parser@0.11.2:
+    resolution: {integrity: sha512-F7Ld4oDZJCI5/wCZ8AOffQbqjSzIRpKH7I/iuSs1SkhZeCj0wS6PMZ4W6VA16TWHrAo0Y9bBKEJOe7tvwcTXnw==}
 
   oniguruma-to-es@4.2.0:
     resolution: {integrity: sha512-MDPs6KSOLS0tKQ7joqg44dRIRZUyotfTy0r+7oEEs6VwWWP0+E2PPDYWMFN0aqOjRyWHBYq7RfKw9GQk2S2z5g==}
@@ -4345,6 +4345,10 @@ packages:
 
   smol-toml@1.3.1:
     resolution: {integrity: sha512-tEYNll18pPKHroYSmLLrksq233j021G0giwW7P3D24jC54pQ5W5BXMsQ/Mvw1OJCmEYDgY+lrzT+3nNUtoNfXQ==}
+    engines: {node: '>= 18'}
+
+  smol-toml@1.3.3:
+    resolution: {integrity: sha512-KMVLNWu490KlNfD0lbfDBUktJIEaZRBj1eeK0SMfdpO/rfyARIzlnPVI1Ge4l0vtSJmQUAiGKxMyLGrCT38iyA==}
     engines: {node: '>= 18'}
 
   source-map-js@1.2.1:
@@ -5199,6 +5203,9 @@ packages:
   zod@3.24.2:
     resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
 
+  zod@3.24.3:
+    resolution: {integrity: sha512-HhY1oqzWCQWuUqvBFnsyrtZRhyPeR7SUGv+C4+MsisMuVfSPx8HpwWqH8tRahSlt6M3PiFAcoeFhZAqIXTxoSg==}
+
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
@@ -5314,7 +5321,7 @@ snapshots:
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
       shiki: 3.2.2
-      smol-toml: 1.3.1
+      smol-toml: 1.3.3
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -5323,12 +5330,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.2.4(astro@5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))':
+  '@astrojs/mdx@4.2.4(astro@5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -7240,9 +7247,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-expressive-code@0.41.1(astro@5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)):
+  astro-expressive-code@0.41.1(astro@5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)):
     dependencies:
-      astro: 5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       rehype-expressive-code: 0.41.1
 
   astro-robots-txt@1.0.0:
@@ -7250,9 +7257,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro-seo-schema@5.0.0(astro@5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3)):
+  astro-seo-schema@5.0.0(astro@5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3)):
     dependencies:
-      astro: 5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       schema-dts: 1.1.2(typescript@5.8.3)
 
   astro-seo@0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3):
@@ -7263,7 +7270,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.7.2(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1):
+  astro@5.7.3(@types/node@22.14.1)(jiti@2.4.2)(rollup@4.40.0)(sass@1.86.3)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.11.0
       '@astrojs/internal-helpers': 0.6.1
@@ -7321,9 +7328,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.1
-      zod: 3.24.2
-      zod-to-json-schema: 3.24.5(zod@3.24.2)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.24.2)
+      zod: 3.24.3
+      zod-to-json-schema: 3.24.5(zod@3.24.3)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.24.3)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -9696,12 +9703,12 @@ snapshots:
 
   ohash@2.0.11: {}
 
-  oniguruma-parser@0.11.1: {}
+  oniguruma-parser@0.11.2: {}
 
   oniguruma-to-es@4.2.0:
     dependencies:
       emoji-regex-xs: 1.0.0
-      oniguruma-parser: 0.11.1
+      oniguruma-parser: 0.11.2
       regex: 6.0.1
       regex-recursion: 6.0.2
 
@@ -10435,6 +10442,8 @@ snapshots:
   slash@3.0.0: {}
 
   smol-toml@1.3.1: {}
+
+  smol-toml@1.3.3: {}
 
   source-map-js@1.2.1: {}
 
@@ -11321,17 +11330,19 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zod-to-json-schema@3.24.5(zod@3.24.2):
+  zod-to-json-schema@3.24.5(zod@3.24.3):
     dependencies:
-      zod: 3.24.2
+      zod: 3.24.3
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.24.2):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.24.3):
     dependencies:
       typescript: 5.8.3
-      zod: 3.24.2
+      zod: 3.24.3
 
   zod@3.23.8: {}
 
   zod@3.24.2: {}
+
+  zod@3.24.3: {}
 
   zwitch@2.0.4: {}
