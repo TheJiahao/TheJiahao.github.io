@@ -16,7 +16,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.2.6(astro@5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
+        version: 4.2.6(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
       '@astrojs/react':
         specifier: ^4.0.0
         version: 4.2.7(@types/node@22.15.17)(@types/react-dom@19.1.3(@types/react@19.1.3))(@types/react@19.1.3)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(yaml@2.6.1)
@@ -46,10 +46,10 @@ importers:
         version: 66.1.1
       astro:
         specifier: ^5.0.0
-        version: 5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+        version: 5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       astro-expressive-code:
         specifier: ^0.41.0
-        version: 0.41.2(astro@5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
+        version: 0.41.2(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -58,7 +58,7 @@ importers:
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       astro-seo-schema:
         specifier: ^5.0.0
-        version: 5.0.0(astro@5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3))
+        version: 5.0.0(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3))
       dayjs:
         specifier: ^1.11.11
         version: 1.11.13
@@ -1746,6 +1746,9 @@ packages:
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
+  '@types/fontkit@2.0.8':
+    resolution: {integrity: sha512-wN+8bYxIpJf+5oZdrdtaX04qUuWHcKxcDEgRS9Qm9ZClSHjzEn13SxUC+5eRM+4yXIeTYk8mTzLAWGF64847ew==}
+
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
@@ -2216,8 +2219,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.7.11:
-    resolution: {integrity: sha512-9qRVwp8pue3isddLBnTexJsmKFpmms9Fo7Ss+3yrC0aINvbHKpD7q6qf52BtfQEk2xJgyx3SQy3dUsuD90sEqQ==}
+  astro@5.7.12:
+    resolution: {integrity: sha512-UQOItiZz2hcv9PlHTQ6dNqFDIVNPnmwk6eyAjJqPE9O8EDHZK2JKtTRD0CBFN2Uqr0RE0TWP2gqDpLfsa5dJEA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2515,8 +2518,8 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  crossws@0.3.4:
-    resolution: {integrity: sha512-uj0O1ETYX1Bh6uSgktfPvwDiPYGQ3aI4qVsaC/LWpkIzGj1nUYm5FK3K+t11oOlpN01lGbprFCH4wBlKdJjVgw==}
+  crossws@0.3.5:
+    resolution: {integrity: sha512-ojKiDvcmByhwa8YYqbQI/hg7MEU0NC03+pSdEq4ZUnZR9xXpwk7E43SMNGkn+JxJGPFtNvQ48+vV2p+P1ml5PA==}
 
   css-selector-parser@3.0.5:
     resolution: {integrity: sha512-3itoDFbKUNx1eKmVpYMFyqKX04Ww9osZ+dLgrk6GEv6KMVeXUhUnp4I5X+evw+u3ZxVU6RFXSSRxlTeMh8bA+g==}
@@ -3005,6 +3008,9 @@ packages:
   flattie@1.1.1:
     resolution: {integrity: sha512-9UbaD6XdAL97+k/n+N7JwX46K/M6Zc6KcFYskrYL8wbBV/Uyk0CTAMY0VT+qiK5PM7AIc9aTWYtq65U7T+aCNQ==}
     engines: {node: '>=8'}
+
+  fontace@0.3.0:
+    resolution: {integrity: sha512-czoqATrcnxgWb/nAkfyIrRp6Q8biYj7nGnL6zfhTcX+JKKpWHFBnb8uNMw/kZr7u++3Y3wYSYoZgHkCcsuBpBg==}
 
   fontkit@2.0.4:
     resolution: {integrity: sha512-syetQadaUEDNdxdugga9CpEYVaQIxOwk7GlwZWWZ19//qW4zE5bknOKeMBDYAASwnpaSHKJITRLMF9m1fp3s6g==}
@@ -5678,12 +5684,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.2.6(astro@5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))':
+  '@astrojs/mdx@4.2.6(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)
       acorn: 8.14.1
-      astro: 5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -7001,6 +7007,10 @@ snapshots:
 
   '@types/estree@1.0.7': {}
 
+  '@types/fontkit@2.0.8':
+    dependencies:
+      '@types/node': 22.15.17
+
   '@types/hast@3.0.4':
     dependencies:
       '@types/unist': 3.0.3
@@ -7668,9 +7678,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-expressive-code@0.41.2(astro@5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)):
+  astro-expressive-code@0.41.2(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)):
     dependencies:
-      astro: 5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       rehype-expressive-code: 0.41.2
 
   astro-robots-txt@1.0.0:
@@ -7678,9 +7688,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro-seo-schema@5.0.0(astro@5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3)):
+  astro-seo-schema@5.0.0(astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1))(schema-dts@1.1.2(typescript@5.8.3)):
     dependencies:
-      astro: 5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
+      astro: 5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1)
       schema-dts: 1.1.2(typescript@5.8.3)
 
   astro-seo@0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3):
@@ -7691,7 +7701,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.7.11(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1):
+  astro@5.7.12(@types/node@22.15.17)(jiti@2.4.2)(rollup@4.40.1)(sass@1.87.0)(terser@5.37.0)(tsx@4.19.2)(typescript@5.8.3)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.12.0
       '@astrojs/internal-helpers': 0.6.1
@@ -7719,6 +7729,7 @@ snapshots:
       esbuild: 0.25.4
       estree-walker: 3.0.3
       flattie: 1.1.1
+      fontace: 0.3.0
       github-slugger: 2.0.0
       html-escaper: 3.0.3
       http-cache-semantics: 4.1.1
@@ -8073,7 +8084,7 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  crossws@0.3.4:
+  crossws@0.3.5:
     dependencies:
       uncrypto: 0.1.3
 
@@ -8755,6 +8766,11 @@ snapshots:
 
   flattie@1.1.1: {}
 
+  fontace@0.3.0:
+    dependencies:
+      '@types/fontkit': 2.0.8
+      fontkit: 2.0.4
+
   fontkit@2.0.4:
     dependencies:
       '@swc/helpers': 0.5.17
@@ -8902,7 +8918,7 @@ snapshots:
   h3@1.15.3:
     dependencies:
       cookie-es: 1.2.2
-      crossws: 0.3.4
+      crossws: 0.3.5
       defu: 6.1.4
       destr: 2.0.5
       iron-webcrypto: 1.2.1
