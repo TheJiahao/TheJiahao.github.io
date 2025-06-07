@@ -1,5 +1,38 @@
 # Changelog
 
+## [3.7.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.6.0...v3.7.0) (2025-06-07)
+
+
+### Features
+
+* ✨ Add type for element with view transitions ([3b9e249](https://github.com/TheJiahao/TheJiahao.github.io/commit/3b9e249a1fcf02123d46aedb15291d6d041add5d))
+* **transition:** ✨ Add transition to blog title ([7eb6402](https://github.com/TheJiahao/TheJiahao.github.io/commit/7eb6402e466d27aeebd46f51ead96d77b61f0c42))
+* **transition:** ✨ Add transition to date component ([91ce2dd](https://github.com/TheJiahao/TheJiahao.github.io/commit/91ce2dd7b24a8e0dbe0e5fb1f30b4118c9229d0d))
+
+
+### Bug Fixes
+
+* 🐛 Grammar ([3ce744c](https://github.com/TheJiahao/TheJiahao.github.io/commit/3ce744c223f48be0693023acb1dfd4af8f8b65e3))
+* 🐛 Lint ([20dcf82](https://github.com/TheJiahao/TheJiahao.github.io/commit/20dcf829c0fa411e8641be140a4aff22f64672bd))
+* 🐛 Move `view-transition-name` to cover image ([ee41b7b](https://github.com/TheJiahao/TheJiahao.github.io/commit/ee41b7b7adccd87e85c0eb1876d8905723ea4bb8)), closes [#597](https://github.com/TheJiahao/TheJiahao.github.io/issues/597)
+* 🐛 Prevent TOC shrinking ([9b1d27c](https://github.com/TheJiahao/TheJiahao.github.io/commit/9b1d27c09bc99b19fce8388f4ca8d8eb07e5004f))
+* **ci:** 🐛 👷 Install pnpm with pnpm/action-setup ([2a676e7](https://github.com/TheJiahao/TheJiahao.github.io/commit/2a676e749e5f84660e814254c1d5fc06ba9296c8))
+* **ci:** 🐛 👷 Use latest Node ([057e2e9](https://github.com/TheJiahao/TheJiahao.github.io/commit/057e2e9195955ac015e5d94a606d51e4f2188d1c))
+* **date-component:** 🐛 Props type with same name as component ([b673dd6](https://github.com/TheJiahao/TheJiahao.github.io/commit/b673dd649300e6c9b177b790eec5e68fd3defef3))
+* **layout:** 🐛 Back button too wide in Firefox ([1afc282](https://github.com/TheJiahao/TheJiahao.github.io/commit/1afc282483c8697db6830649ff23bf8f3e95420f)), closes [#596](https://github.com/TheJiahao/TheJiahao.github.io/issues/596)
+* **style:** 🐛 🎨 Background on hover same as surface color ([44fc517](https://github.com/TheJiahao/TheJiahao.github.io/commit/44fc517ab7c38e6968174dac4a67250357ddf022))
+
+
+### Performance Improvements
+
+* **prefetch:** ⚡️ Set strategy to "viewport" ([a5aa6d6](https://github.com/TheJiahao/TheJiahao.github.io/commit/a5aa6d64a7cdfd3091acd9981a5b1743704fecc2))
+
+
+### Reverts
+
+* "chore(debug): 🔧 Print Corepack version" ([1bb3451](https://github.com/TheJiahao/TheJiahao.github.io/commit/1bb3451d305bda0454e4472da5484fb2c956f5a7))
+* **ci:** 👷 Remove google-indexing-script ([cd4d63d](https://github.com/TheJiahao/TheJiahao.github.io/commit/cd4d63d80ae7349c1bb6634f81776cf6adcbd809))
+
 ## [3.6.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.5.0...v3.6.0) (2025-01-24)
 
 ### Features
