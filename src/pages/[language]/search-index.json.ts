@@ -20,7 +20,7 @@ export async function GET({ params }: APIContext) {
         throw new TypeError("Invalid language");
     }
 
-    const blogs: Promise<PreparedPage[]> = Promise.all(
+    const blogs: PreparedPage[] = await Promise.all(
         getBlogs()
             .filter(({ data }) => data.language === language)
             .map(async (blog) => {
@@ -53,5 +53,5 @@ export async function GET({ params }: APIContext) {
             }),
     );
 
-    return new Response(JSON.stringify(await blogs));
+    return new Response(JSON.stringify(blogs));
 }
