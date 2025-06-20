@@ -45,9 +45,9 @@ build:
 
 import previewVideo from "img/nushell_completion.webm";
 
-Nushell 是一款跨平台的 shell，其支持 Linux、macOS、BSD 和 Windows，
+Nushell 是一款跨平台的 shell，其支持 Linux、macOS、Windows 等，
 内置许多数据处理相关命令，且速度较快。
-本文介绍了如何配置 Nushell 的语法高亮和自动补全。
+本文将介绍如何配置 Nushell 的语法高亮和自动补全。
 
 本文中使用 Scoop 的部分也可以用其他包管理器替代。
 配置部分除了 Windows 特有的 `%APPDATA%` 和 `%USERPROFILE%` 环境变量以外也适用于其他平台。
@@ -98,7 +98,7 @@ scoop install nu
 
 Nushell 的默认配置文件目录为 `%APPDATA%/nushell`，但可通过设置环境变量 `XDG_CONFIG_HOME` 来改变 [^nushell_config]。
 笔者偏好将配置文件集中到 `~/.config` 并通过 Git 管理，所以将 `XDG_CONFIG_HOME` 设置为 `%USERPROFILE%/.config`。
-Nushell 的配置文件路径可通过 `$nu.config-path` 确定：
+读者可以用 `$nu.config-path` 环境变量检查配置文件路径：
 
 ```console
 > $nu.config-path
@@ -114,7 +114,7 @@ $env.config.show_banner = false
 ```
 
 > [!WARNING/注意]
-> 为避免覆盖之前的配置，笔者推荐单独给 `$env.config` 中的每一项赋值，而不是重新给 `$env.config` 赋值：
+> 为避免覆盖之前的配置，读者应单独给 `$env.config` 中的每一项赋值，而不是重新给整个 `$env.config` 赋值 [^nushell_config]：
 >
 > ```nu title="config.nu"
 > $env.config = {
@@ -122,12 +122,12 @@ $env.config.show_banner = false
 > }
 > ```
 
-Nushell 的默认配置文件可以从 [GitHub 仓库](https://github.com/nushell/nushell/blob/fb2610904997f54f50ad52095948bede81695f31/crates/nu-utils/src/default_files/doc_config.nu) 中找到，其更新的比 [官方文档](https://www.nushell.sh/book/configuration.html) 及时。
+Nushell 的默认配置文件可以从 [GitHub 仓库](https://github.com/nushell/nushell/blob/4f7e9aac62653a5118dd783dd8fb6aba8c9d4212/crates/nu-utils/src/default_files/doc_config.nu) 中找到，其更新的比 [官方文档](https://www.nushell.sh/book/configuration.html) 及时。
 
 ### 语法高亮
 
-以下设置可以高亮外部命令，颜色仿照 Zsh 的语法高亮插件 [F-Sy-H](https://github.com/z-shell/F-Sy-H) 的默认配置。
-`$PATH` 环境变量中路径很多时，语法高亮可能有明显延迟 [^syntax_highlight_performance]。
+以下设置可以高亮外部命令，但是 `$PATH` 环境变量中路径很多时可能会有明显延迟 [^syntax_highlight_performance]。
+配色仿照 Zsh 语法高亮插件 [F-Sy-H](https://github.com/z-shell/F-Sy-H) 的默认配置。
 
 ```nu title="config.nu"
 $env.config.highlight_resolved_externals = true
@@ -198,7 +198,7 @@ $env.config.completions.external.max_results = 20
 #### 使用方法
 
 默认配置下按输入命令后 <kbd>Tab</kbd> 即可生成补全，然后用方向键选择，最后按 <kbd>Enter</kbd> 就可以完成补全。
-此外，如果已经当前命令和历史记录里的命令匹配，则可以按 <kbd>→</kbd> 从历史记录补全。
+此外，如果当前命令和历史记录里的命令匹配，则可以按 <kbd>→</kbd> 从历史记录补全。
 
 ### 其他配置
 
@@ -206,11 +206,8 @@ $env.config.completions.external.max_results = 20
 
 ```nu title="config.nu"
 $env.config.show_banner = false # 隐藏欢迎文本
-$env.config.shell_integration = true # VS Code 集成
-$env.config.filesize.metric = true # 使用公制单位 1 KB = 1000 B、1 MB = 1e6 B 等
-
-$env.config.history.max_size = 10000
 $env.config.history.file_format = "sqlite" # 将历史记录保存到数据库，而不是 txt 文件
+$env.config.history.max_size = 10000 # 历史记录最大数量
 ```
 
 ## 测速
