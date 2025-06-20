@@ -25,7 +25,13 @@ export async function GET({ params }: APIContext) {
             .filter(({ data }) => data.language === language)
             .map(async (blog) => {
                 const { data, slug } = blog;
-                const { title, image = BLOG_IMAGE_PLACEHOLDER } = data;
+                const { title } = data;
+                const image = (({ src, width, height, format }) => ({
+                    src,
+                    width,
+                    height,
+                    format,
+                }))(data.image || BLOG_IMAGE_PLACEHOLDER);
 
                 const { Content } = await render(blog);
                 const postHTML = await renderComponent(Content);
