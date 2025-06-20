@@ -136,6 +136,7 @@ Nushell 的情况下需要在 `$nu.config-path` 环境文件中添加以下内�
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 ```
+
 Nushell 会自动加载 `($nu.data-dir)/vendor/autoload` 目录中的 `*.nu` 文件 [^nushell-config]。
 
 #### Zsh
