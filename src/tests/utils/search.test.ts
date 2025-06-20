@@ -68,5 +68,14 @@ describe("search()", () => {
                 expect(results).toHaveLength(0);
             },
         );
+
+        test.each([["Astro"], ["pnpm"], ["读者"]])(
+            'shows title when keyword "%s" is not in titles',
+            (keyword) => {
+                const results = search(keyword, pagesChinese);
+
+                expect(results.every(({ title }) => title)).toBeTruthy();
+            },
+        );
     });
 });
