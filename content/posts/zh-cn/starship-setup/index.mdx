@@ -52,7 +52,7 @@ import starshipConfig from "./src/starship.toml?raw";
 
 Starship 是一款跨平台的 shell 主题管理器，其支持 Zsh、Nushell、PowerShell 等。
 使用 Starship 可以在终端上显示 Git 状态、Python 虚拟环境、命令运行时间等。
-本文介绍了如何配置 Starship。
+本文将介绍如何配置 Starship。
 
 ## 安装
 
@@ -87,8 +87,7 @@ export PATH = "$HOME/.cargo/bin:$PATH"
 
 ### Nerd Font
 
-Starship 的许多主题都需要 [Nerd Font](https://www.nerdfonts.com/) 中的符号。
-所以需要安装带有 Nerd Font 补丁的[字体](https://www.nerdfonts.com/font-downloads)。
+Starship 的许多主题都使用了 [Nerd Font](https://www.nerdfonts.com/) 中的符号，所以需要安装带有 Nerd Font 补丁的 [字体](https://www.nerdfonts.com/font-downloads)。
 
 > [!WARNING/注意]
 > 安装字体后还需要在终端中使用字体。
@@ -129,24 +128,15 @@ scoop install jetbrainsmono-nf-mono
 
 #### Nushell
 
-Nushell 的情况下需要在 `$nu.env-path` 环境文件中添加以下内容来生成 Starship 初始化脚本：
-
-```nu
-# env.nu
-
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
-```
-
-之后还需要在 `$nu.config-path` 配置文件中加载脚本：
+Nushell 的情况下需要在 `$nu.config-path` 环境文件中添加以下内容来生成和加载 Starship 初始化脚本：
 
 ```nu
 # config.nu
 
-use ~/.cache/starship/init.nu
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 ```
-
-`~/.cache/starship/init.nu` 可以更改为任意路径。
+Nushell 会自动加载 `($nu.data-dir)/vendor/autoload` 目录中的 `*.nu` 文件 [^nushell-config]。
 
 #### Zsh
 
@@ -170,6 +160,7 @@ starship preset 主题-名称 -o ~/.config/starship.toml
 
 > [!CAUTION/注意]
 > 此命令会覆盖当前配置文件！
+> 运行之前记得先备份配置文件。
 
 因为组件太多会拖慢 Shell，所以笔者推荐使用简单的主题，例如 [Bracketed Segments](https://starship.rs/zh-CN/presets/bracketed-segments)。
 ![Bracketed Segments 主题，图片来自 Starship 文档](https://starship.rs/presets/img/bracketed-segments.png)
@@ -275,3 +266,5 @@ style = "bold green"
 [^starship-format]: 默认提示符格式，Starship，https://starship.rs/zh-CN/config/#%E9%BB%98%E8%AE%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E6%A0%BC%E5%BC%8F
 
 [^toml-table]: TOML v1.0.0，https://toml.io/en/v1.0.0#table
+
+[^nushell-config]: Configuration，https://www.nushell.sh/book/configuration.html#configuration-overview
