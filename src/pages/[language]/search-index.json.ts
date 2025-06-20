@@ -45,7 +45,7 @@ export async function GET({ params }: APIContext) {
                 );
 
                 return {
-                    title: fuzzysort.prepare(title),
+                    title,
                     url: getRelativeLocaleUrl(data.language, `posts/${slug}`),
                     description,
                     image,
