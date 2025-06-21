@@ -6,7 +6,6 @@ import expressiveCode from "astro-expressive-code";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig, envField } from "astro/config";
 import rehypeKatex from "rehype-katex";
-import rehypeRewrite, { type RehypeRewriteOptions } from "rehype-rewrite";
 import { remarkAlert } from "remark-github-blockquote-alert";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
@@ -14,6 +13,7 @@ import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
 import { languageCodes } from "./src/localization";
+import rehypeRemoveSpaceAfterSeparator from "./src/plugins/rehypeRemoveSpaceAfterSeparator";
 import { getLastModified } from "./src/utils/getLastModified";
 
 const { PUBLIC_PORT } = loadEnv(
@@ -21,22 +21,6 @@ const { PUBLIC_PORT } = loadEnv(
     process.cwd(),
     "",
 );
-
-const removeSpaceAfterSeparator: RehypeRewriteOptions["rewrite"] = (
-    node,
-    _,
-    parent,
-) => {
-    if (
-        node.type == "text" &&
-        parent?.type == "element" &&
-        parent.tagName === "p"
-    ) {
-        node.value = node.value
-            .replaceAll(/。\s/g, "。")
-            .replaceAll(/，\s/g, "，");
-    }
-};
 
 // https://astro.build/config
 export default defineConfig({
@@ -107,12 +91,7 @@ export default defineConfig({
         rehypePlugins: [
             rehypeKatex,
             rehypeFigure,
-            [
-                rehypeRewrite,
-                {
-                    rewrite: removeSpaceAfterSeparator,
-                },
-            ],
+            rehypeRemoveSpaceAfterSeparator,
         ],
     },
     env: {
