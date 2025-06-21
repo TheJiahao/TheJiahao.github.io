@@ -22,8 +22,16 @@ const { PUBLIC_PORT } = loadEnv(
     "",
 );
 
-const removeSpaceAfterSeparator: RehypeRewriteOptions["rewrite"] = (node) => {
-    if (node.type == "text") {
+const removeSpaceAfterSeparator: RehypeRewriteOptions["rewrite"] = (
+    node,
+    _,
+    parent,
+) => {
+    if (
+        node.type == "text" &&
+        parent?.type == "element" &&
+        parent.tagName === "p"
+    ) {
         node.value = node.value
             .replaceAll(/。\s/g, "。")
             .replaceAll(/，\s/g, "，");
