@@ -16,13 +16,22 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 -->
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-713.5 -713.5 4281 4281">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-713.5 -713.5 4281 4281" filter="url(#shadow)">
   <style>
     :root {
-      background:
-        radial-gradient(circle at bottom, hsl(260, 100%, 30%), black);
+      background: hsl(157, 40%, 55%)
     }
   </style>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="black" flood-opacity="0.5"/>
+    </filter>
+
+    <linearGradient id="b" x1="112.463" x2="2365.33" y1="3485.86" y2="-827.778" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ED0A62" />
+      <stop offset="1" stop-color="#890CEA" />
+    </linearGradient>
+  </defs>
 
   <mask id="a" width="2854" height="2854" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
     <circle cx="1427" cy="1427" r="1427" fill="#C4C4C4" />
@@ -35,10 +44,4 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     <path fill="#fff"
       d="M1606.37 2246.91S1509 2830 1095 2978l-650-414c572.5 0 777.71-442.31 777.71-442.31l383.66 125.22Z" />
   </g>
-  <defs>
-    <linearGradient id="b" x1="112.463" x2="2365.33" y1="3485.86" y2="-827.778" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#ED0A62" />
-      <stop offset="1" stop-color="#890CEA" />
-    </linearGradient>
-  </defs>
 </svg>
