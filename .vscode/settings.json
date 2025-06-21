@@ -17,5 +17,6 @@
     ],
     "typescript.updateImportsOnFileMove.enabled": "prompt",
     "typescript.preferences.preferTypeOnlyAutoImports": true,
-    "typescript.preferences.importModuleSpecifier": "non-relative"
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "svg.preview.background": "dark-transparent"
 }
