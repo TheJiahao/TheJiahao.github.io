@@ -55,7 +55,7 @@ Typst 的基本语法类似 Markdown，更多语法可参考 Typst 的 [文档](
 ```
 
 设置完语言后，Typst 就会自动翻译图片名称和目录标题等，以及自动将双引号 `"` 和单引号 `'` 显示为正确的引号（左右引号或其他引号，取决于语言）。
-此外，以上几个 `set` 命令可以也合并成一个
+此外，以上几个 [`set`](https://typst.app/docs/tutorial/advanced-styling/#set-rules) 命令可以也合并成一个
 
 ```typst
 #set text(font: "Noto Sans", lang: "zh")
@@ -119,12 +119,141 @@ $
 Typst 的 [文档](https://typst.app/docs/reference/math/) 中更详细地介绍了公式的语法。
 此外，[官网](https://typst.app/docs/reference/symbols/sym/) 上还可以搜索各种符号对应的名称。
 
-## 图片和引用
+## 引用
+
+### 图片和表格
 
 Typst 中图片、表格和代码块等都可以传入 [`figure`](https://typst.app/docs/reference/model/figure/) 函数以添加题注和编号。
-具体内容需要使用对应函数、例如用 `image` 导入本地图片或者用 `table` 输出表格。
+具体内容需要使用对应函数、例如用 [`image`](https://typst.app/docs/reference/visualize/image/) 导入本地图片或者用 [`table`](https://typst.app/docs/reference/model/table/) 输出表格。
 以下代码展示了一张图片和一个表格。
 
+```typst
+@figure_test 中展示了 "TEST"。
+@table_f 中列出了函数 $f$ 的值。
+
+#figure(
+  image("../img/test.svg", width: 60%),
+  caption: [图片展示了 "TEST" 怎么写。],
+)<figure_test>
+
+#figure(
+  table(
+    columns: 2,
+    [$x$], [$f(x)$],
+    [$1$], [$3$],
+    [$2$], [$7$],
+  ),
+  caption: [函数 $f$ 的值。],
+)<table_f>
+```
+
+![一张图片和一个表格](img/figure.svg)
+
+`figure` 的参数 `caption` 的内容将显示为题注。
+`figure` 后面用 `<>` 包围的是用于引用的标签。
+例如，在 `figure` 后面添加 `<figure_test>` 就可以在文中使用 `@figure_test` 来引用图片。
+如果读者需要自定义引用前缀，则可以在引用后面用方括号 `[]` 添加前缀，例如 `@figure_text[图片]` 会显示为 “图片 1”。
+同样的语法也可以引用公式和文献。
+
+### 公式
+
+本段将通过实例讲解 Typst 的公式引用。
+
+```typst
+#set text(font: "Noto Sans", lang: "zh")
+
+#math.equation(
+  $norm((x_1,x_2))=sqrt(x_1^2+x_2^2)$,
+  block: true,
+  numbering: "(1)",
+)<norm>
+
+@norm 定义了二维向量的范数。
+注意到
+$
+  norm((0,0))=0。
+$
+
+也可以用 `set` 命令为所有公式添加编号。
+@commutativity 定义了交换律。
+
+#set math.equation(numbering: "(1)")
+$
+  a+b=b+a
+$<commutativity>
+```
+
+![引用公式和文献](img/cite_equation.svg)
+
+Typst 的公式的 `$$` 语法是 `math.equation(...)` 的 [语法糖](https://zh.wikipedia.org/zh-hans/%E8%AF%AD%E6%B3%95%E7%B3%96)，所以也可以直接调用 [`math.equation`](https://typst.app/docs/reference/math/equation/) 以显示公式。
+这种方式可以往函数里传入额外参数，例如示例中传入的 `block: true` 代表行间公式，`numbering: "(1)"` 代表公式编号格式为 “(1)”、“(2)” 等。
+编号规则的细节可以参考 Typst 的 [文档](https://typst.app/docs/reference/model/numbering/)。
+
+默认情况下，Typst 的公式没有编号，所以可以用 `set` 命令为所有（之后的）公式添加编号。
+笔者推荐单独为有编号的公式定义一个函数。
+变量和函数可以用 [`let`](https://typst.app/docs/reference/scripting/#bindings) 语法定义。
+
+```typst
+#let numbered_equation(content) = math.equation(
+  block: true,
+  numbering: "(1)",
+  content,
+)
+
+// 用法
+#numbered_equation($a+b=b+a$)<commutativity>
+```
+
+如果读者想在引用公式时在编号前后添加括号，例如 “式 (1)”，可以在文件开头添加以下代码：
+
+```typst
+#show ref: x => {
+  let element = x.element
+
+  if element != none and element.func() == math.equation {
+    link(element.location())[#element.supplement~#numbering(
+        element.numbering,
+        ..counter(math.equation).at(element.location()),
+      )]
+  } else {
+    x
+  }
+}
+```
+
+这段代码中会保留公式引用的前缀和链接并在编号前后添加括号。
+[`show`](https://typst.app/docs/tutorial/advanced-styling/) 语法类似于 `set` 语法，但不同之处在于其可以用函数修改选中的元素，这段代码中修改了 [`ref`](https://typst.app/docs/reference/model/ref/)，即 `@` 引用实际调用的函数。
+
+### 文献
+
+```typst
+#set text(font: "Noto Sans", lang: "zh")
+
+硕德在 @norm_zero 证明了
+$
+  norm((0,0))=0。
+$
+
+#bibliography("bibliography.bib")
+```
+
+前面示例中的 [`bibliography`](https://typst.app/docs/reference/model/bibliography/) 可以导入 [BibTeX](https://www.bibtex.org/) 或 [Hayagriva](https://github.com/typst/hayagriva/blob/main/docs/file-format.md) 格式的文献并生成参考文献列表。
+引用格式可以通过 `style` 参数调整，Typst 的文档中列出了许多常用的格式。
+以下是示例中用到的 BibTeX 文件。
+
+```bibtex title="bibliography.bib"
+@article{norm_zero,
+  author  = {沃兹基, 硕德},
+  journal = {志杂学数},
+  title   = {证明零向量的范数为零},
+  year    = {5202}
+}
+```
+
+## 将文档拆分为多个文件
+
 ## 导入第三方包
+
+## 编程
 
 ## 细节
