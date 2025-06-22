@@ -2,7 +2,6 @@
 
 ## [3.7.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.6.0...v3.7.0) (2025-06-22)
 
-
 ### Features
 
 * ✨ Add type for element with view transitions ([3b9e249](https://github.com/TheJiahao/TheJiahao.github.io/commit/3b9e249a1fcf02123d46aedb15291d6d041add5d))
@@ -14,7 +13,6 @@
 * **typst-tutorial:** ✨ Add logo ([90036fd](https://github.com/TheJiahao/TheJiahao.github.io/commit/90036fd50c2d3fdd25b2003590f4cf7d68ee84e9))
 * **typst-tutorial:** ✨ Complete ([8ab9d2a](https://github.com/TheJiahao/TheJiahao.github.io/commit/8ab9d2a3917fd3c07472ee774c54ca93cb678e36))
 * **typst-tutorial:** ✨ Initialize ([af5b8aa](https://github.com/TheJiahao/TheJiahao.github.io/commit/af5b8aac8b90ea9af05cae6dce1279e0e00027a8))
-
 
 ### Bug Fixes
 
@@ -33,11 +31,9 @@
 * **toc:** 🐛 Make table of contents scrollable ([4d19565](https://github.com/TheJiahao/TheJiahao.github.io/commit/4d19565e2476da35e0623d683facbc54d186dfb0))
 * **typography:** 🐛 Ignore code blocks when removing space after fullwidth character ([084dbb6](https://github.com/TheJiahao/TheJiahao.github.io/commit/084dbb69d5d0289f33703b0e35c479084b889d57))
 
-
 ### Performance Improvements
 
 * **prefetch:** ⚡️ Set strategy to "viewport" ([a5aa6d6](https://github.com/TheJiahao/TheJiahao.github.io/commit/a5aa6d64a7cdfd3091acd9981a5b1743704fecc2))
-
 
 ### Reverts
 
