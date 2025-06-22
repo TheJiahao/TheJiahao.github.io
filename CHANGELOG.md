@@ -1,5 +1,50 @@
 # Changelog
 
+## [3.7.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.6.0...v3.7.0) (2025-06-22)
+
+
+### Features
+
+* ✨ Add type for element with view transitions ([3b9e249](https://github.com/TheJiahao/TheJiahao.github.io/commit/3b9e249a1fcf02123d46aedb15291d6d041add5d))
+* **nushell-setup:** ✨ Update ([7a39a1f](https://github.com/TheJiahao/TheJiahao.github.io/commit/7a39a1f6c4283bad0a72ff00e7efa096f9e36233))
+* **style:** ✨ 🎨 Add vertical margin to code blocks ([e72e637](https://github.com/TheJiahao/TheJiahao.github.io/commit/e72e637475ae0273a13d30849bf6719d8ce1fa85))
+* **transition:** ✨ Add transition to blog title ([7eb6402](https://github.com/TheJiahao/TheJiahao.github.io/commit/7eb6402e466d27aeebd46f51ead96d77b61f0c42))
+* **transition:** ✨ Add transition to date component ([91ce2dd](https://github.com/TheJiahao/TheJiahao.github.io/commit/91ce2dd7b24a8e0dbe0e5fb1f30b4118c9229d0d))
+* **typst-tutorial:** ✨ Add intro and conclusion ([83006d2](https://github.com/TheJiahao/TheJiahao.github.io/commit/83006d2d801d58d897255b4dd14c95859b01fb3e))
+* **typst-tutorial:** ✨ Add logo ([90036fd](https://github.com/TheJiahao/TheJiahao.github.io/commit/90036fd50c2d3fdd25b2003590f4cf7d68ee84e9))
+* **typst-tutorial:** ✨ Complete ([8ab9d2a](https://github.com/TheJiahao/TheJiahao.github.io/commit/8ab9d2a3917fd3c07472ee774c54ca93cb678e36))
+* **typst-tutorial:** ✨ Initialize ([af5b8aa](https://github.com/TheJiahao/TheJiahao.github.io/commit/af5b8aac8b90ea9af05cae6dce1279e0e00027a8))
+
+
+### Bug Fixes
+
+* 🐛 Grammar ([3ce744c](https://github.com/TheJiahao/TheJiahao.github.io/commit/3ce744c223f48be0693023acb1dfd4af8f8b65e3))
+* 🐛 Lint ([20dcf82](https://github.com/TheJiahao/TheJiahao.github.io/commit/20dcf829c0fa411e8641be140a4aff22f64672bd))
+* 🐛 Move `view-transition-name` to cover image ([ee41b7b](https://github.com/TheJiahao/TheJiahao.github.io/commit/ee41b7b7adccd87e85c0eb1876d8905723ea4bb8)), closes [#597](https://github.com/TheJiahao/TheJiahao.github.io/issues/597)
+* 🐛 Prevent TOC shrinking ([9b1d27c](https://github.com/TheJiahao/TheJiahao.github.io/commit/9b1d27c09bc99b19fce8388f4ca8d8eb07e5004f))
+* 🐛 Remove fuzzysort prepared title ([6fe0ee1](https://github.com/TheJiahao/TheJiahao.github.io/commit/6fe0ee13ca92d5159654f7022b7c860a37a9855d))
+* 🐛 Search result missing title ([2f2ce2e](https://github.com/TheJiahao/TheJiahao.github.io/commit/2f2ce2efab00555a1beac922a7a28290210ba33a)), closes [#840](https://github.com/TheJiahao/TheJiahao.github.io/issues/840)
+* **ci:** 🐛 👷 Install pnpm with pnpm/action-setup ([2a676e7](https://github.com/TheJiahao/TheJiahao.github.io/commit/2a676e749e5f84660e814254c1d5fc06ba9296c8))
+* **ci:** 🐛 👷 Use latest Node ([057e2e9](https://github.com/TheJiahao/TheJiahao.github.io/commit/057e2e9195955ac015e5d94a606d51e4f2188d1c))
+* **date-component:** 🐛 Props type with same name as component ([b673dd6](https://github.com/TheJiahao/TheJiahao.github.io/commit/b673dd649300e6c9b177b790eec5e68fd3defef3))
+* **layout:** 🐛 Back button too wide in Firefox ([1afc282](https://github.com/TheJiahao/TheJiahao.github.io/commit/1afc282483c8697db6830649ff23bf8f3e95420f)), closes [#596](https://github.com/TheJiahao/TheJiahao.github.io/issues/596)
+* **search:** 🐛 Add workaround for [#838](https://github.com/TheJiahao/TheJiahao.github.io/issues/838) ([ec76a74](https://github.com/TheJiahao/TheJiahao.github.io/commit/ec76a74e33f55d1f0552602d2f5ceeab37d7399c))
+* **style:** 🐛 🎨 Background on hover same as surface color ([44fc517](https://github.com/TheJiahao/TheJiahao.github.io/commit/44fc517ab7c38e6968174dac4a67250357ddf022))
+* **toc:** 🐛 Make table of contents scrollable ([4d19565](https://github.com/TheJiahao/TheJiahao.github.io/commit/4d19565e2476da35e0623d683facbc54d186dfb0))
+* **typography:** 🐛 Ignore code blocks when removing space after fullwidth character ([084dbb6](https://github.com/TheJiahao/TheJiahao.github.io/commit/084dbb69d5d0289f33703b0e35c479084b889d57))
+
+
+### Performance Improvements
+
+* **prefetch:** ⚡️ Set strategy to "viewport" ([a5aa6d6](https://github.com/TheJiahao/TheJiahao.github.io/commit/a5aa6d64a7cdfd3091acd9981a5b1743704fecc2))
+
+
+### Reverts
+
+* "chore(code): 🔧 Configure launch.json to open browser automatically" ([cb40cc6](https://github.com/TheJiahao/TheJiahao.github.io/commit/cb40cc62b673d8437b1a8d3f2c669409d47d60c9))
+* "chore(debug): 🔧 Print Corepack version" ([1bb3451](https://github.com/TheJiahao/TheJiahao.github.io/commit/1bb3451d305bda0454e4472da5484fb2c956f5a7))
+* **ci:** 👷 Remove google-indexing-script ([cd4d63d](https://github.com/TheJiahao/TheJiahao.github.io/commit/cd4d63d80ae7349c1bb6634f81776cf6adcbd809))
+
 ## [3.6.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.5.0...v3.6.0) (2025-01-24)
 
 ### Features
