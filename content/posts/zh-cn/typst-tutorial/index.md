@@ -5,7 +5,7 @@ description: "\
     Typst 是一款现代化的排版软件，其语法比于理工科常用的 LaTeX 排版软件简单，而且其利用增量式编译实现了比 LaTeX 快的多的编译速度。\
     本文从 Typst 的环境配置开始，逐步介绍了文本格式化、列表、公式、图片和表格插入等基础语法，并深入了讲解引用系统、文献管理和文件组织等进阶技巧。
     "
-draft: true
+draft: false
 image: img/typst_logo.svg
 links:
     - title: The Raindrop-Blue Book (Typst中文教程)
