@@ -275,10 +275,68 @@ Typst 的其中一位创始人 #cite(<madje_typst>, form: "author") 于 #cite(<m
 }
 ```
 
-## 将文档拆分为多个文件
+文献引用的 `@` 语法实际调用的 [`cite`](https://typst.app/docs/reference/model/cite/) 函数也可以像 $\LaTeX$ 的 `\citeauthor` 和 `\citeyear` 一样输出文献作者和年份。
+`form` 参数决定了 `cite` 的输出，`"author"` 对应作者、`"year"` 对应年份，默认情况下输出和直接用 `@` 语法一致。
+引用风格则可以通过 `bibliography` 的 `style` 参数调整，例如 `"ieee"`、`"apa"` 等，其他常用格式可以参考 Typst 的 [文档](https://typst.app/docs/reference/model/bibliography/#parameters-style)。
 
-## 导入第三方包
+## 导入文件和包
+
+由于文档太长时修改会变得非常困难，笔者认为排版软件应该提供导入文件的功能。
+例如 $\LaTeX$ 中可以用 `\input` 或 `\include` 导入文件内容，而 Typst 中则可以用 [`include`](https://typst.app/docs/reference/scripting/#modules) 语法导入其他文件中的内容。
+以下代码中展示了 Typst 的文件导入语法。
+
+```typst
+= Typst 的用法
+== 引言
+...
+
+#include "路径/方法.typ"
+#include "路径/总结.typ"
+
+其他内容
+```
+
+`include` 的内容会按导入顺序出现在结果里，例如示例中导入的 `方法.typ` 中的内容会出现在 “引言” 和 “其他内容” 之间。
+
+Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定义的宏都是全局的，而 Typst 的导入文件时不会导入其中定义的函数和变量。
+但 Typst 并非不能导入函数和变量，Typst 导入这些需要用 `import` 语法。
+例如以下代码在 `main.typ` 文件中导入并使用了 `utils.typ` 文件中定义的 `numbered_equation` 函数。
+
+```typst title="utils.typ"
+#let numbered_equation(content) = math.equation(
+  block: true,
+  numbering: "(1)",
+  content,
+)
+```
+
+```typst title="main.typ"
+#import "./utils.typ": numbered_equation
+
+#numbered_equation($1+1=2$)<sum_of_ones>
+```
+
+为了避免重新造轮子，Typst 有大量的 [第三方包](https://typst.app/universe) 可导入。
+例如以下几个常用的 $\LaTeX$ 包都有对应的 Typst 包：
+
+- [cetz](https://typst.app/universe/package/cetz/)：类似 TikZ，可用于画图、制作图表等
+- [unify](https://typst.app/universe/package/unify/)：类似 siunitx 包，用于为数值添加 SI 单位
+- [touying](https://typst.app/universe/package/touying/)：类似 Beamer，用于制作幻灯片
+
+导入第三方包的语法和导入文件类似。
+以 cetz 为例，以下代码导入了 cetz 0.4.0 版本中的 `canvas` 函数。
+
+```typst
+#import "@preview/cetz:0.4.0": canvas
+```
+
+> [!NOTE/备注]
+> 由于 Typst 的包管理系统还不成熟，导入时需要添加 `@preview` 前缀 [^typst_preview_prefix]。
+> 以后可能会改变。
+
 
 ## 编程
 
 ## 细节
+
+[^typst_preview_prefix]: Typst Packages, https://github.com/typst/packages/?tab=readme-ov-file#published-packages
