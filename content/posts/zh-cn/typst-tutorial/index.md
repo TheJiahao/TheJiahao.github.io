@@ -1,19 +1,31 @@
 ---
 title: Typst 写作入门——配置、基本语法和技巧
-date: 2025-06-21
-
+date: 2025-06-22
+description: "\
+    Typst 是一款现代化的排版软件，其语法比于理工科常用的 LaTeX 排版软件简单，而且其利用增量式编译实现了比 LaTeX 快的多的编译速度。\
+    本文从 Typst 的环境配置开始，逐步介绍了文本格式化、列表、公式、图片和表格插入等基础语法，并深入了讲解引用系统、文献管理和文件组织等进阶技巧。
+    "
 draft: true
 links:
     - title: The Raindrop-Blue Book (Typst中文教程)
       description: 本书面向所有Typst用户，按三种方式讲解Typst语言。《教程》等章节循序渐进，讲述了Typst的排版方式和原理；《参考》等章节拓展广度；《专题》等则专注解决具体问题。本书希望缓解Typst相关资料严重缺失的问题，与官方文档相互补充，帮助大家入门和学习Typst。
       url: https://typst-doc-cn.github.io/tutorial/
+
+    - title: "Typst: Compose papers faster"
+      description: Focus on your text and let Typst take care of layout and formatting.
+      image: https://typst.app/assets/apple-touch-icon.png
+      url: https://typst.app/
 ---
 
-本文将介绍 Typst 的基础用法。
+$\LaTeX$ 是理工科常用的排版软件，但其语法复杂且编译非常慢。
+为解决这些问题，Haug 和 Mädje 创造了 Typst 排版软件 [^typst_about]。
+Typst 语法比 $\LaTeX$ 简单，而且其利用增量式编译实现了极快的编译速度。
+本文将从 Typst 的环境配置开始，逐步介绍文本格式化、列表、公式、图片和表格插入等基础语法，并深入讲解引用系统、文献管理和文件组织等进阶技巧。
 
-## VS Code 配置
+## 配置
 
-本文仅介绍 VS Code 的配置，但其中用到的 [Tinymist](https://github.com/Myriad-Dreamin/tinymist) 语言服务器也支持其他编辑器，例如 Neovim、Emacs、Sublime 等。
+Typst 有官方的 [Web 应用](https://typst.app/)，其支持从模板生成文档、云同步和多人协作等功能。
+但本段仅介绍 VS Code 的配置，其中用到的 [Tinymist](https://github.com/Myriad-Dreamin/tinymist) 语言服务器也支持其他编辑器，例如 Neovim、Emacs、Sublime 等。
 具体方法可参考 Tinymist 的 [文档](https://myriad-dreamin.github.io/tinymist/frontend/main.html)。
 
 笔者推荐使用 [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) 和 [Typst Companion](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion) 插件。
@@ -382,6 +394,9 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 - `document.typ`：文档本身
 
 `template.typ` 文件中可以定义 `config` 函数并将所有 `set` 和 `show` 配置都放到其中。
+
+### 示例
+
 接下来笔者将通过示例演示模板的制作。
 假设我们的需求是让文章开头居中显示标题和作者，并为部分公式编号。
 
@@ -518,18 +533,21 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 > 此外，多个同一元素 `show` 语句可能冲突，从而导致某些语句不生效。
 > 所以读者应将同一元素的多个 `show` 语句的函数合并成一个。
 
-## 代码片段
+除了自己制作模板外，读者也可以在 Typst 的 [官网](https://typst.app/universe/search/?kind=templates) 上搜索并使用其他人做的模板。
+其中能找到简历模板和部分大学的论文模板等。
 
-本章收集了用于调整 Typst 排版细节或者添加功能的代码片段。
+### 代码片段
+
+本段收集了用于调整 Typst 排版细节或者添加功能的代码片段。
 读者可以将这些代码片段自行添加到模板中
 
-### 将公式拆分到不同页
+#### 将公式拆分到不同页
 
 ```typst
 #show math.equation: set block(breakable: true)
 ```
 
-### 为引用的公式编号添加括号
+#### 为引用的公式编号添加括号
 
 ```typst
 #show ref: x => {
@@ -546,7 +564,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 }
 ```
 
-### 断字
+#### 断字
 
 ```typst
 #set par(justify: true)
@@ -555,7 +573,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 这段主要适用于西文排版，设置后 Typst 会像 $\LaTeX$ 一样将过长的单词添加 [连字号](https://zh.wikipedia.org/zh-cn/%E8%BF%9E%E5%AD%97%E5%8F%B7) `-` 后拆分到下一行。
 需要同时用 `set text(lang: ...)` 设置文本语言。
 
-### 数学函数定义中的冒号
+#### 数学函数定义中的冒号
 
 ```typst
 #show sym.colon: $class("fence", colon)$
@@ -563,7 +581,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 
 设置后函数 `f: A->B` 中的冒号就会保留前后空格，例如 $f\colon A\to B$ 而不是 $f : A\to B$。
 
-### 圆的空集符号
+#### 圆的空集符号
 
 ```typst
 #show sym.nothing: set text(font: "Fira Sans")
@@ -572,7 +590,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 设置后空集符号 `emptyset` 会显示为圆形加斜线 ∅ 而不是 $\LaTeX$ 的默认字体 [Computer Modern](https://en.wikipedia.org/wiki/Computer_Modern)中的零加斜线 $\emptyset$。
 GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
 
-### 禁用合字
+#### 禁用合字
 
 ```typst
 #set text(ligatures: false)
@@ -581,7 +599,7 @@ GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
 默认情况下，西文排版中会使用 [合字](https://zh.wikipedia.org/zh-hans/%E5%90%88%E5%AD%97)，即部分字母会连起来，例如 “ff” 会变成 “ﬀ”。
 禁用后就不会出现合字。
 
-### 附录
+#### 附录
 
 ```typst
 #let appendix(title, body) = {
@@ -605,6 +623,15 @@ GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
 ]
 ```
 
+## 总结
+
+本文系统地介绍了 Typst 排版工具的核心功能，例如代码块、公式、图片、引用等。
+此外，本文还介绍了 Typst 的导入功能，并用示例展示了如何将常用代码做成可复用的模板。
+
+虽然 Typst 相对 $\LaTeX$ 有语法简单和速度快的优势，但是 $\LaTeX$ 目前还是理工科主流的排版软件。
+Typst 很难在短期内取代 $\LaTeX$，现在基本没有出版社接受 Typst 格式的投稿，也没有几所大学提供 Typst 格式的论文模板。
+
 [^typst_syntax]: Syntax, https://typst.app/docs/reference/syntax
 [^typst_preview_prefix]: Typst Packages, https://github.com/typst/packages/?tab=readme-ov-file#published-packages
 [^github_varnothing]: varnothing used by LaTeX, https://github.com/johanvx/typst-undergradmath/issues/10
+[^typst_about]: A hobby project turned into a business, typst.app, https://typst.app/about/, 见于 2025-06-22
