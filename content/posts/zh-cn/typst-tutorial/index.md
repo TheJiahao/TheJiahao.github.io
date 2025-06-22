@@ -19,7 +19,7 @@ links:
 笔者推荐使用 [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) 和 [Typst Companion](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion) 插件。
 前者提供了 Typst 的语法支持和预览功能，后者改善了 Typst 列表的输入体验，例如在列表中换行时自动添加下一项。
 
-## 基本语法
+## 基础语法
 
 Typst 的基本语法类似 Markdown，更多语法可参考 Typst 的 [文档](https://typst.app/docs/reference/syntax/)。
 以下代码中展示了 Typst 的部分语法，读者可以用编辑器新建一个 `basic.typ` 文件并测试语法。
@@ -55,25 +55,50 @@ Typst 的基本语法类似 Markdown，更多语法可参考 Typst 的 [文档](
 ```
 
 设置完语言后，Typst 就会自动翻译图片名称和目录标题等，以及自动将双引号 `"` 和单引号 `'` 显示为正确的引号（左右引号或其他引号，取决于语言）。
-此外，以上几个 [`set`](https://typst.app/docs/tutorial/advanced-styling/#set-rules) 命令可以也合并成一个
+> [!TIP/合并 set 命令]
+> 以上两个 [`set`](https://typst.app/docs/tutorial/advanced-styling/#set-rules) 命令可以也合并成一个：
+>
+> ```typst
+> #set text(font: "Noto Sans", lang: "zh")
+> ```
 
-```typst
-#set text(font: "Noto Sans", lang: "zh")
-```
-
-## 代码块
+### 代码块
 
 Typst 中代码块语法和 Markdown 一致。
 单个反引号 `` `print("Hello world")` `` 表示行内代码。
 三个反引号表示代码块，引号后面需要添加语言名称以正确地高亮代码。
+示例中展示了一段简单的 “Hello world” 程序。
 
 ````typst
 ```python
-print("Hello world")
+if True:
+  print("Hello world")
 ```
 ````
 
-## 公式
+![会输出 “Hello world” 的 Python 程序](img/codeblock.svg)
+
+### 列表
+
+Typst 中列表分为有序列表（[`enum`](https://typst.app/docs/reference/model/enum/)）和无序列表（[`list`](https://typst.app/docs/reference/model/enum/)），前者列表项前面有编号，后者只有统一的标记。
+有序列表用加号 `+` 标记，无序列表用减号 `-`。
+以下示例中展示了两种不同的列表。
+
+```typst
+以下为太阳系中离太阳最近的三颗行星：
++ 水星
++ 金星
++ 地球
+
+地球上存在以下几种常见水果：
+- 苹果
+- 橘子
+- 西瓜
+```
+
+![有序和无序列表](img/lists.svg)
+
+### 公式
 
 文章中公式通常分为行内公式和行间公式。
 前者用于较短的公式和符号等，后者则用于需要强调或者比较复杂的公式。
@@ -115,6 +140,14 @@ $
 ```
 
 ![部分 Typst 内置的符号和函数](img/symbols_and_functions.svg)
+
+> [!TIP/拆分公式]
+> 默认情况下，Typst 不会将太长的公式拆分到不同页，所以太长的公式可能会被推到下一页并在上一页留下大片空白。
+> 在文件开头添加以下代码即可允许 Typst 拆分公式：
+>
+> ```typst
+> #show math.equation: set block(breakable: true)
+> ```
 
 Typst 的 [文档](https://typst.app/docs/reference/math/) 中更详细地介绍了公式的语法。
 此外，[官网](https://typst.app/docs/reference/symbols/sym/) 上还可以搜索各种符号对应的名称。
@@ -334,9 +367,12 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 > 由于 Typst 的包管理系统还不成熟，导入时需要添加 `@preview` 前缀 [^typst_preview_prefix]。
 > 以后可能会改变。
 
+## 模板
 
 ## 编程
 
 ## 细节
+
+a
 
 [^typst_preview_prefix]: Typst Packages, https://github.com/typst/packages/?tab=readme-ov-file#published-packages
