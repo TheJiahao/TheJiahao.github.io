@@ -1,5 +1,5 @@
 ---
-title: Typst 写作入门——基本语法和进阶技巧
+title: Typst 写作入门——基础语法和进阶技巧
 date: 2025-06-22
 description: "\
     Typst 是一款现代化的排版软件，其语法比于理工科常用的 LaTeX 排版软件简单，而且其利用增量式编译实现了比 LaTeX 快的多的编译速度。\
@@ -23,19 +23,21 @@ $\LaTeX$ 是理工科常用的排版软件，但其语法复杂且编译非常�
 Typst 语法比 $\LaTeX$ 简单，而且其利用增量式编译实现了极快的编译速度。
 本文将从 Typst 的环境配置开始，逐步介绍文本格式化、列表、公式、图片和表格插入等基础语法，并深入讲解引用系统、文献管理和文件组织等进阶技巧。
 
-## 配置
+## 编辑器配置
 
 Typst 有官方的 [Web 应用](https://typst.app/)，其支持从模板生成文档、云同步和多人协作等功能。
 但本段仅介绍 VS Code 的配置，其中用到的 [Tinymist](https://github.com/Myriad-Dreamin/tinymist) 语言服务器也支持其他编辑器，例如 Neovim、Emacs、Sublime 等。
 具体方法可参考 Tinymist 的 [文档](https://myriad-dreamin.github.io/tinymist/frontend/main.html)。
 
 笔者推荐使用 [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) 和 [Typst Companion](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion) 插件。
-前者提供了 Typst 的语法支持和实时预览功能，后者改善了 Typst 列表的输入体验，例如在列表中换行时自动添加下一项。
+前者提供了 Typst 的语法支持、实时预览和 PDF 导出等功能。
+后者改善了 Typst 列表的输入体验，例如在列表中换行时自动添加下一项。
 
 ## 基础语法
 
-Typst 的基本语法类似 Markdown，更多语法可参考 Typst 的 [文档](https://typst.app/docs/reference/syntax/)。
-以下代码中展示了 Typst 的部分语法，读者可以用编辑器新建一个 `basic.typ` 文件并测试语法。
+Typst 的基础语法类似 Markdown。
+以下代码中展示了 Typst 的部分语法，更多语法可参考 Typst 的 [文档](https://typst.app/docs/reference/syntax/)。
+读者可以用编辑器新建一个 `basic.typ` 文件并测试这些语法。
 
 ```typst title="basic.typ"
 = 标题
@@ -53,7 +55,7 @@ Typst 的基本语法类似 Markdown，更多语法可参考 Typst 的 [文档](
 标题前的等于号数量表示标题层级。
 ```
 
-![Typst 基本语法，字体为 Noto Sans。](img/basic.svg)
+![Typst 基础语法，字体为 Noto Sans。](img/basic.svg)
 
 如果字体显示不正常，则需要在文件开头设置字体，例如以下代码会将字体设置为 Noto Sans。
 
@@ -363,7 +365,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 ```
 
 为了避免重新造轮子，Typst 有大量的 [第三方包](https://typst.app/universe) 可导入。
-例如以下几个常用的 $\LaTeX$ 包都有对应的 Typst 包：
+例如以下几个 Typst 包对应了常用的 $\LaTeX$ 包：
 
 - [cetz](https://typst.app/universe/package/cetz/)：类似 TikZ，可用于画图、制作图表等
 - [unify](https://typst.app/universe/package/unify/)：类似 siunitx 包，用于为数值添加 SI 单位
@@ -479,7 +481,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 ![基于模板的文档](img/template.svg)
 
 文件中用到了 `show` 语法的语法糖和 [`with`](https://typst.app/docs/reference/foundations/function/#definitions-with) 函数。
-`config.with` 函数把参数传入 `config` 函数并返回一个只有参数 `body` 的函数。
+`config.with` 函数会把参数传入 `config` 函数并返回一个只有参数 `body` 的函数。
 之后 `show` 的语法糖就能自动将文档剩余内容作为 `body` 传入前面的单个参数的函数。
 
 > [!TIP/show 的用法]
@@ -630,7 +632,7 @@ GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
 此外，本文还介绍了 Typst 的导入功能，并用示例展示了如何将常用代码做成可复用的模板。
 
 虽然 Typst 相对 $\LaTeX$ 有语法简单和速度快的优势，但是 $\LaTeX$ 目前还是理工科主流的排版软件。
-Typst 很难在短期内取代 $\LaTeX$，现在基本没有出版社接受 Typst 格式的投稿，也没有几所大学提供 Typst 格式的论文模板。
+Typst 很难在短期内取代 $\LaTeX$，现在几乎没有出版社接受 Typst 格式的投稿，也没有几所大学提供 Typst 格式的论文模板。
 
 [^typst_syntax]: Syntax, https://typst.app/docs/reference/syntax
 [^typst_preview_prefix]: Typst Packages, https://github.com/typst/packages/?tab=readme-ov-file#published-packages
