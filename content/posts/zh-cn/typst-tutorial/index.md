@@ -30,7 +30,7 @@ Typst 有官方的 [Web 应用](https://typst.app/)，其支持从模板生成�
 具体方法可参考 Tinymist 的 [文档](https://myriad-dreamin.github.io/tinymist/frontend/main.html)。
 
 笔者推荐使用 [Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) 和 [Typst Companion](https://marketplace.visualstudio.com/items?itemName=CalebFiggers.typst-companion) 插件。
-前者提供了 Typst 的语法支持和预览功能，后者改善了 Typst 列表的输入体验，例如在列表中换行时自动添加下一项。
+前者提供了 Typst 的语法支持和实时预览功能，后者改善了 Typst 列表的输入体验，例如在列表中换行时自动添加下一项。
 
 ## 基础语法
 
