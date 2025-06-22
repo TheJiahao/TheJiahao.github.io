@@ -6,6 +6,7 @@ description: "\
     本文从 Typst 的环境配置开始，逐步介绍了文本格式化、列表、公式、图片和表格插入等基础语法，并深入了讲解引用系统、文献管理和文件组织等进阶技巧。
     "
 draft: true
+image: img/typst_logo.svg
 links:
     - title: The Raindrop-Blue Book (Typst中文教程)
       description: 本书面向所有Typst用户，按三种方式讲解Typst语言。《教程》等章节循序渐进，讲述了Typst的排版方式和原理；《参考》等章节拓展广度；《专题》等则专注解决具体问题。本书希望缓解Typst相关资料严重缺失的问题，与官方文档相互补充，帮助大家入门和学习Typst。
