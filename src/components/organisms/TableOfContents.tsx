@@ -7,7 +7,7 @@ interface TableOfContentsProps {
 }
 
 const TableOfContents = ({ headings }: TableOfContentsProps) => (
-    <nav card w-30ch p-lg text-secondary>
+    <nav card w-30ch p-lg text-secondary overflow-auto>
         <ul>
             {getTOC(headings).map((heading) => (
                 <TableOfContentsHeading key={heading.slug} heading={heading} />
