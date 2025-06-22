@@ -365,14 +365,246 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 
 > [!NOTE/备注]
 > 由于 Typst 的包管理系统还不成熟，导入时需要添加 `@preview` 前缀 [^typst_preview_prefix]。
-> 以后可能会改变。
+> 前缀以后可能会改变。
 
 ## 模板
 
-## 编程
+> [!NOTE/备注]
+> 本章假设读者有一定的编程基础。
+> 不过就算不会编程也可以直接复制粘贴和测试。
 
-## 细节
+读者在用 Typst 写了几篇文章后，可能会发现文件开头的各种配置都是一样的。
+这时就可以利用导入功能将重复代码拆分到不同文件中，并制作可复用的 [模板](https://typst.app/docs/tutorial/making-a-template/)。
+笔者推荐将模板拆分为三部分：
 
-a
+- `utils.typ`：常量和函数，例如光速 $c$、带编号公式 `numbered_equation`、缩写等
+- `template.typ`：各种 `set` 和 `show` 配置
+- `document.typ`：文档本身
 
+`template.typ` 文件中可以定义 `config` 函数并将所有 `set` 和 `show` 配置都放到其中。
+接下来笔者将通过示例演示模板的制作。
+假设我们的需求是让文章开头居中显示标题和作者，并为部分公式编号。
+
+首先从最简单的 `utils.typ` 开始。
+以下代码块定义了光速 `c` 和 函数 `numbered_equation`，前者使用了 unify 包中的 `qty` 函数。
+
+```typst title="utils.typ"
+#import "@preview/unify:0.7.1": qty
+
+#let c = qty("299792458","m/s")
+
+#let numbered_equation(content) = math.equation(
+  block: true,
+  numbering: "(1)",
+  content,
+)
+```
+
+然后是最复杂的 `template.typ` 文件，其中定义了 `config` 函数并用到了许多 Typst 的进阶语法。
+
+```typst title="template.typ"
+#let config(title: none, author: none, lang: "zh", body) = {
+  set text(font: "Noto Sans", lang: lang, size: 1em)
+
+  align(center)[
+    #text(size: 2em)[*#title*]
+
+    #author
+  ]
+
+  body
+}
+```
+
+首先可以注意到，`config` 函数中有很多参数，而且部分参数后面跟着 `none` 或字符串 `"zh"`，这些是参数的默认值。
+最后一个参数 `body` 代表文档内容。
+
+`config` 函数的返回值为 [`align`](https://typst.app/docs/reference/layout/align/) 函数和 `body` 连起来产生的内容。
+`align` 函数的返回值是传入值居中后产生的内容。
+此外，`align` 函数利用了 Typst 的语法糖，其后面的方括号里的内容将作为参数 `body` 传入 `align`。
+
+> [!NOTE/Typst 的三种模式]
+> 好奇的读者可能已经注意到了某些情况下 `set` 语句前面有井号 `#`，某些情况下没有，以及 “字符串” 有时候用引号 `"`，有时候用方括号 `[]` 包围。
+> `#`、`[]` 和 `$$` 分别对应了 Typst 的标记、脚本和公式模式 [^typst_syntax]。
+> 其中标记模式是默认模式。
+>
+> 用了井号 `#` 后就进入了脚本模式，在其中可以直接调用 Typst 的函数、`set`和 `show` 语句。
+> 例如在语句 `#set text(lang: "zh")` 中井号之后就进入了脚本模式。
+> 默认情况下脚本模式仅限同一行，但是如果井号后面有括号（普通括号 `()` 或花括号 `{}`），则整个括号包围的范围都是脚本模式。
+> 例如以下整段函数定义都处于脚本模式中。
+>
+> ```typst
+> #let calculate(a,b) = {
+>   a = a + 1
+>   a + b
+> }
+> ```
+>
+> 在脚本模式中用方括号 `[]` 即可进入标记模式，但标记模式只在方括号范围内生效。
+> 标记模式中就可以正常使用 Typst 的基础语法，例如强调、列表、公式等。
+> 标记模式里的内容（[`content`](https://typst.app/docs/reference/foundations/content/)）和字符串（[`str`](https://typst.app/docs/reference/foundations/str/)）不同，后者需要用双引号 `"` 包围且不支持 Typst 语法。
+>
+> 公式模式就是用美元符号 `$` 包围的内容，用法可参考前面的段落。
+
+最后是文档本身，代码如下：
+
+```typst title="document.typ"
+#import "./template.typ": config
+#import "./utils.typ": numbered_equation, c
+
+#show: config.with(lang: "zh", title: [论光速], author: [沃兹基硕德])
+
+= 光速的定义
+
+光速 $c$ 被定义为
+#numbered_equation($c=#c$)<sum>
+```
+
+![基于模板的文档](img/template.svg)
+
+文件中用到了 `show` 语法的语法糖和 [`with`](https://typst.app/docs/reference/foundations/function/#definitions-with) 函数。
+`config.with` 函数把参数传入 `config` 函数并返回一个只有参数 `body` 的函数。
+之后 `show` 的语法糖就能自动将文档剩余内容作为 `body` 传入前面的单个参数的函数。
+
+> [!TIP/show 的用法]
+> `show` 语法类似 CSS 的选择器，但其支持函数。
+> 例如以下代码会将所有标题（[`heading`](https://typst.app/docs/reference/model/heading/)）的内容替换成字符 “A”。
+>
+> ```typst
+> #show heading: h => { "A" }
+> ```
+>
+> 所以可以注意到，Typst 会将 `show` 选中的元素传入冒号 `:` 后面的函数并将其替换为函数返回值。
+>
+> 如果函数只有一行且返回了传入的参数，则可以省略函数语法。
+> 例如以下两种写法是等效的。
+>
+> ```typst
+> #show math.equation: set block(breakable: true)
+> ```
+>
+> ```typst
+> #show math.equation: eq => {
+>   set block(breakable: true)
+>   eq
+> }
+> ```
+>
+> 代码中选中了公式，并将其中 [`block`](https://typst.app/docs/reference/layout/block/) 元素的 `breakable` 参数设置为 `true`。
+>
+> 如果函数只有单个参数且没有选中任何元素，则 `show` 语法会将文档剩余内容当作参数传入函数。
+> 例如以下两种写法是等效的。
+>
+> ```typst
+> #show: red_text
+> 所有内容
+> ```
+>
+> ```typst
+> #red_text[所有内容]
+> ```
+>
+> `red_text` 函数定义如下：
+>
+> ```typst
+> #let red_text(body) = {
+>   set text(red)
+>
+>   body
+> }
+>
+> ```
+>
+> 此外，多个同一元素 `show` 语句可能冲突，从而导致某些语句不生效。
+> 所以读者应将同一元素的多个 `show` 语句的函数合并成一个。
+
+## 代码片段
+
+本章收集了用于调整 Typst 排版细节或者添加功能的代码片段。
+读者可以将这些代码片段自行添加到模板中
+
+### 将公式拆分到不同页
+
+```typst
+#show math.equation: set block(breakable: true)
+```
+
+### 为引用的公式编号添加括号
+
+```typst
+#show ref: x => {
+  let element = x.element
+
+  if element != none and element.func() == math.equation {
+    link(element.location())[#element.supplement~#numbering(
+        element.numbering,
+        ..counter(math.equation).at(element.location()),
+      )]
+  } else {
+    x
+  }
+}
+```
+
+### 断字
+
+```typst
+#set par(justify: true)
+```
+
+这段主要适用于西文排版，设置后 Typst 会像 $\LaTeX$ 一样将过长的单词添加 [连字号](https://zh.wikipedia.org/zh-cn/%E8%BF%9E%E5%AD%97%E5%8F%B7) `-` 后拆分到下一行。
+需要同时用 `set text(lang: ...)` 设置文本语言。
+
+### 数学函数定义中的冒号
+
+```typst
+#show sym.colon: $class("fence", colon)$
+```
+
+设置后函数 `f: A->B` 中的冒号就会保留前后空格，例如 $f\colon A\to B$ 而不是 $f : A\to B$。
+
+### 圆的空集符号
+
+```typst
+#show sym.nothing: set text(font: "Fira Sans")
+```
+
+设置后空集符号 `emptyset` 会显示为圆形加斜线 ∅ 而不是 $\LaTeX$ 的默认字体 [Computer Modern](https://en.wikipedia.org/wiki/Computer_Modern)中的零加斜线 $\emptyset$。
+GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
+
+### 禁用合字
+
+```typst
+#set text(ligatures: false)
+```
+
+默认情况下，西文排版中会使用 [合字](https://zh.wikipedia.org/zh-hans/%E5%90%88%E5%AD%97)，即部分字母会连起来，例如 “ff” 会变成 “ﬀ”。
+禁用后就不会出现合字。
+
+### 附录
+
+```typst
+#let appendix(title, body) = {
+  set heading(numbering: "A.1", supplement: title)
+  counter(heading).update(0)
+
+  heading(title)
+
+  body
+}
+```
+
+这段代码会将其中的标题格式改为 “A.1”、“A.2”、“B.1” 等。
+用法为
+
+```typst
+#appendix("附录")[
+  == 某个章节的补充内容
+  ...
+  == 某个公式的证明
+]
+```
+
+[^typst_syntax]: Syntax, https://typst.app/docs/reference/syntax
 [^typst_preview_prefix]: Typst Packages, https://github.com/typst/packages/?tab=readme-ov-file#published-packages
+[^github_varnothing]: varnothing used by LaTeX, https://github.com/johanvx/typst-undergradmath/issues/10
