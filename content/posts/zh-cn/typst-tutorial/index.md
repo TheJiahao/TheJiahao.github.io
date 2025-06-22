@@ -121,6 +121,9 @@ Typst 的 [文档](https://typst.app/docs/reference/math/) 中更详细地介绍
 
 ## 引用
 
+Typst 也可以像 $\LaTeX$ 一样交叉引用图片、公式、文献等。
+本章介绍了 Typst 的引用语法，以及如何调整引用风格。
+
 ### 图片和表格
 
 Typst 中图片、表格和代码块等都可以传入 [`figure`](https://typst.app/docs/reference/model/figure/) 函数以添加题注和编号。
@@ -150,14 +153,23 @@ Typst 中图片、表格和代码块等都可以传入 [`figure`](https://typst.
 ![一张图片和一个表格](img/figure.svg)
 
 `figure` 的参数 `caption` 的内容将显示为题注。
-`figure` 后面用 `<>` 包围的是用于引用的标签。
+`figure` 后面用 `<>` 包围的是用于引用的标签（[`label`](https://typst.app/docs/reference/foundations/label/)）。
 例如，在 `figure` 后面添加 `<figure_test>` 就可以在文中使用 `@figure_test` 来引用图片。
 如果读者需要自定义引用前缀，则可以在引用后面用方括号 `[]` 添加前缀，例如 `@figure_text[图片]` 会显示为 “图片 1”。
 同样的语法也可以引用公式和文献。
 
+> [!TIP/图片位置]
+> 默认情况下，图片（`figure`）显示位置和 Typst 文件位置中一致，但这样可能会出现大片空白。
+> 如果想要让 Typst 自动决定图片显示位置，可以将参数 `placement` 设置为 `auto`，例如 `figure(..., placement: auto)`。
+> 读者也可以用 `set` 命令将所有图片位置都设置为 `auto`：
+>
+> ```typst
+> #set figure(placement: auto)
+> ```
+
 ### 公式
 
-本段将通过实例讲解 Typst 的公式引用。
+本段将通过示例讲解 Typst 的公式引用。
 
 ```typst
 #set text(font: "Noto Sans", lang: "zh")
@@ -190,8 +202,7 @@ Typst 的公式的 `$$` 语法是 `math.equation(...)` 的 [语法糖](https://z
 编号规则的细节可以参考 Typst 的 [文档](https://typst.app/docs/reference/model/numbering/)。
 
 默认情况下，Typst 的公式没有编号，所以可以用 `set` 命令为所有（之后的）公式添加编号。
-笔者推荐单独为有编号的公式定义一个函数。
-变量和函数可以用 [`let`](https://typst.app/docs/reference/scripting/#bindings) 语法定义。
+但是这样不方便添加无编号的公式，所以笔者推荐单独为有编号的公式定义一个函数。
 
 ```typst
 #let numbered_equation(content) = math.equation(
@@ -203,6 +214,9 @@ Typst 的公式的 `$$` 语法是 `math.equation(...)` 的 [语法糖](https://z
 // 用法
 #numbered_equation($a+b=b+a$)<commutativity>
 ```
+
+> [!TIP/提示]
+> 除了函数以外，[`let`](https://typst.app/docs/reference/scripting/#bindings) 语法也可以定义变量。
 
 如果读者想在引用公式时在编号前后添加括号，例如 “式 (1)”，可以在文件开头添加以下代码：
 
@@ -221,32 +235,43 @@ Typst 的公式的 `$$` 语法是 `math.equation(...)` 的 [语法糖](https://z
 }
 ```
 
-这段代码中会保留公式引用的前缀和链接并在编号前后添加括号。
-[`show`](https://typst.app/docs/tutorial/advanced-styling/) 语法类似于 `set` 语法，但不同之处在于其可以用函数修改选中的元素，这段代码中修改了 [`ref`](https://typst.app/docs/reference/model/ref/)，即 `@` 引用实际调用的函数。
+代码修改自官网上的示例，但其除了在编号前后添加括号外，还额外保留了公式引用的前缀，例如 “式”。
+[`show`](https://typst.app/docs/tutorial/advanced-styling/) 语法类似于 `set` 语法，但不同之处在于其可以用函数修改选中的元素。
+这段代码中修改了 [`ref`](https://typst.app/docs/reference/model/ref/)，即 `@` 语法实际调用的函数。
 
 ### 文献
 
-```typst
+Typst 的文献引用和图片一样使用 `@` 语法。
+以下示例展示了文献引用的用法。
+
+```typst wrap
 #set text(font: "Noto Sans", lang: "zh")
 
-硕德在 @norm_zero 证明了
-$
-  norm((0,0))=0。
-$
+Typst 的其中一位创始人 #cite(<madje_typst>, form: "author") 于 #cite(<madje_typst>, form: "year") 年在其硕士论文中介绍了 Typst 的语法 @madje_typst。
+另一位创始人 #cite(<haug_fast_typesetting>, form: "author") 则在其硕士论文中介绍了 Typst 增量式编译的原理 @haug_fast_typesetting。
 
-#bibliography("bibliography.bib")
+#bibliography("bibliography.bib", style: "ieee")
 ```
 
-前面示例中的 [`bibliography`](https://typst.app/docs/reference/model/bibliography/) 可以导入 [BibTeX](https://www.bibtex.org/) 或 [Hayagriva](https://github.com/typst/hayagriva/blob/main/docs/file-format.md) 格式的文献并生成参考文献列表。
-引用格式可以通过 `style` 参数调整，Typst 的文档中列出了许多常用的格式。
+![文献引用的不同用法](img/cite_bibliography.svg)
+
+示例中的 [`bibliography`](https://typst.app/docs/reference/model/bibliography/) 函数可以导入 [BibTeX](https://www.bibtex.org/) 或 [Hayagriva](https://github.com/typst/hayagriva/blob/main/docs/file-format.md) 格式的文件并生成参考文献列表。
 以下是示例中用到的 BibTeX 文件。
 
 ```bibtex title="bibliography.bib"
-@article{norm_zero,
-  author  = {沃兹基, 硕德},
-  journal = {志杂学数},
-  title   = {证明零向量的范数为零},
-  year    = {5202}
+@phdthesis{haug_fast_typesetting,
+    author = {Martin E. Haug},
+    doi    = {10.13140/RG.2.2.15606.88642},
+    school = {Technical University of Berlin},
+    title  = {Fast Typesetting with Incremental Compilation},
+    year   = {2022}
+}
+
+@phdthesis{madje_typst,
+    author = {Laurenz Mädje},
+    school = {Technical University of Berlin},
+    title  = {Typst -- A Programmable Markup Language for Typesetting},
+    year   = {2022}
 }
 ```
 
