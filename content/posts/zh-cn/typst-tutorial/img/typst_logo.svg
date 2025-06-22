@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -14 91 63" color="white">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.375 -20.5 113.75 70" color="white">
     <g id="logo">
         <style>
             :root {
-                background: #239dad;
+                background: #239dad radial-gradient(farthest-side circle at top left, #5bd9a7, #239dad);
             }
         </style>
         <path
