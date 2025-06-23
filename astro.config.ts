@@ -2,10 +2,10 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import rehypeFigure from "@microflash/rehype-figure";
+import rehypeTypst from "@myriaddreamin/rehype-typst";
 import expressiveCode from "astro-expressive-code";
 import robotsTxt from "astro-robots-txt";
 import { defineConfig, envField } from "astro/config";
-import rehypeKatex from "rehype-katex";
 import { remarkAlert } from "remark-github-blockquote-alert";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
@@ -84,12 +84,12 @@ export default defineConfig({
     },
     markdown: {
         remarkPlugins: [
-            remarkSectionize,
             remarkMath,
+            remarkSectionize,
             [remarkAlert, { legacyTitle: true }],
         ],
         rehypePlugins: [
-            rehypeKatex,
+            rehypeTypst,
             rehypeFigure,
             rehypeRemoveSpaceAfterSeparator,
         ],
