@@ -137,7 +137,9 @@ Typst 公式中加减乘除的语法类似于计算器中常用的语法，比 L
 (a+b)/c-d e
 ```
 
-![加减乘除](img/algebraic_operations.svg)
+$$
+(a+b)/c-d e
+$$
 
 除法只需要用斜杠 `/` 和括号 `()`，而不是像 LaTeX 一样使用复杂的 `\frac{a}{b}` 语法。
 由于 Typst 不用反斜杠区分命令，省略乘法符号时需要用空格区分变量。
@@ -154,7 +156,12 @@ $
 $
 ```
 
-![部分 Typst 内置的符号和函数](img/symbols_and_functions.svg)
+$$
+  sum_(n=1)^10 n&=1+2+ dots.c +10\
+  integral_0^pi cos x dif x&=sin pi-sin 0\
+  lim_(x->infinity) x^2&=infinity\
+  NN&={z in ZZ | z>=0 }
+$$
 
 > [!TIP/拆分公式]
 > 默认情况下，Typst 不会将太长的公式拆分到不同页，所以太长的公式可能会被推到下一页并在上一页留下大片空白。
