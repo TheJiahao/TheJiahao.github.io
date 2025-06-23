@@ -479,17 +479,28 @@ Typst 的导入与 LaTeX 最大的不同在于 `\input` 或 `\include` 中定义
 #import "./template.typ": config
 #import "./utils.typ": numbered_equation, c
 
-#show: config.with(lang: "zh", title: [论光速], author: [沃兹基硕德])
+#show: config.with(lang: "zh", title: [论光速], author: [沃兹基])
+
+= 引言
+
+#lorem(100)
 
 = 光速的定义
 
 光速 $c$ 被定义为
 #numbered_equation($c=#c$)<sum>
+
+#lorem(200)
+
+= 总结
+
+#lorem(40)
 ```
 
 ![基于模板的文档](img/template.svg)
 
-文件中用到了 `show` 语法的语法糖和 [`with`](https://typst.app/docs/reference/foundations/function/#definitions-with) 函数。
+文件中用 [`lorem`](https://typst.app/docs/reference/text/lorem/) 函数生成了占位用的文本。
+此外，文件中还用到了 `show` 语法的语法糖和 [`with`](https://typst.app/docs/reference/foundations/function/#definitions-with) 函数。
 `config.with` 函数会把参数传入 `config` 函数并返回一个只有参数 `body` 的函数。
 之后 `show` 的语法糖就能自动将文档剩余内容作为 `body` 传入前面的单个参数的函数。
 

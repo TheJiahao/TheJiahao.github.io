@@ -1,5 +1,5 @@
 #set page(height: auto, width: auto, margin: 2em)
-#set text(font: "Noto Sans", lang: "zh")
+#set text(font: "Noto Sans", lang: "zh", size: 24pt)
 
 以下为太阳系中离太阳最近的三颗行星：
 + 水星
