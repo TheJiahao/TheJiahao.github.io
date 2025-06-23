@@ -2,6 +2,7 @@ svg.typst-doc {
     @apply dark:invert-100 dark:contrast-105;
     display: inline;
     font-size: larger;
+    overflow: auto;
 }
 
 p {
