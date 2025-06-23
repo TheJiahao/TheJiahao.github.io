@@ -2,7 +2,6 @@
 import type { MarkdownHeading } from "astro";
 import BackLink from "components/molecules/BackLink";
 import BlogSchema from "components/atoms/BlogSchema.astro";
-import MathHeader from "components/atoms/MathHeader.astro";
 import BlogFooter from "components/molecules/BlogFooter.astro";
 import BlogHeader from "components/molecules/BlogHeader.astro";
 import LinkList from "components/molecules/LinkList";
@@ -14,7 +13,6 @@ import type { BlogData } from "interfaces/BlogData";
 import BaseLayout from "layouts/BaseLayout.astro";
 import { getSlug } from "utils/getSlug";
 import { getTranslation } from "utils/getTranslation";
-
 type Props = BlogData & {
     headings: MarkdownHeading[];
 };
@@ -29,15 +27,12 @@ const {
     language,
     lastModified,
     headings,
-    math,
     alternates,
 } = Astro.props;
 ---
 
 <BaseLayout {title} {description} {image} {language} languages={alternates}>
     <Fragment slot="head">
-        {math && <MathHeader />}
-
         <BlogSchema
             {title}
             {description}
