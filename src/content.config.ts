@@ -25,7 +25,6 @@ const postCollection = defineCollection({
                 )
                 .optional(),
             draft: z.boolean().optional(),
-            math: z.boolean().optional(),
         }),
 });
 
