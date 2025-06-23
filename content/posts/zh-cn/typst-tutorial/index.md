@@ -590,7 +590,7 @@ Typst 的导入与 LaTeX 最大的不同在于 `\input` 或 `\include` 中定义
 #show sym.nothing: set text(font: "Fira Sans")
 ```
 
-设置后空集符号 `emptyset` 会显示为圆形加斜线 ∅ 而不是 LaTeX 的默认字体 [Computer Modern](https://en.wikipedia.org/wiki/Computer_Modern)中的零加斜线 $emptyset$。
+设置后空集符号 `emptyset` 会显示为圆形加斜线 ∅ 而不是 LaTeX 的默认字体 [Computer Modern](https://en.wikipedia.org/wiki/Computer_Modern) 中的零加斜线 $emptyset$。
 GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
 
 #### 禁用合字
