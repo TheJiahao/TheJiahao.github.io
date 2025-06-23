@@ -18,9 +18,9 @@ links:
       url: https://typst.app/
 ---
 
-$\LaTeX$ 是理工科常用的排版软件，但其语法复杂且编译非常慢。
+LaTeX 是理工科常用的排版软件，但其语法复杂且编译非常慢。
 为解决这些问题，Haug 和 Mädje 创造了 Typst 排版软件 [^typst_about]。
-Typst 语法比 $\LaTeX$ 简单，而且其利用增量式编译实现了极快的编译速度。
+Typst 语法比 LaTeX 简单，而且其利用增量式编译实现了极快的编译速度。
 本文将从 Typst 的环境配置开始，逐步介绍文本格式化、列表、公式、图片和表格插入等基础语法，并深入讲解引用系统、文献管理和文件组织等进阶技巧。
 
 ## 编辑器配置
@@ -131,7 +131,7 @@ a^2=b^2+c^2
 $
 ```
 
-Typst 公式中加减乘除的语法类似于计算器中常用的语法，比 $\LaTeX$ 简单而且不需要在函数名前添加反斜杠 `\`。
+Typst 公式中加减乘除的语法类似于计算器中常用的语法，比 LaTeX 简单而且不需要在函数名前添加反斜杠 `\`。
 
 ```typst
 (a+b)/c-d e
@@ -139,11 +139,11 @@ Typst 公式中加减乘除的语法类似于计算器中常用的语法，比 $
 
 ![加减乘除](img/algebraic_operations.svg)
 
-除法只需要用斜杠 `/` 和括号 `()`，而不是像 $\LaTeX$ 一样使用复杂的 `\frac{a}{b}` 语法。
+除法只需要用斜杠 `/` 和括号 `()`，而不是像 LaTeX 一样使用复杂的 `\frac{a}{b}` 语法。
 由于 Typst 不用反斜杠区分命令，省略乘法符号时需要用空格区分变量。
 
 此外，Typst 中内置了许多符号和函数，例如常见的 `sum`、`integral`、`lim`、`sin` 等。
-以下代码展示了部分符号和函数，`&` 用于对齐各行的等于号、`^` 和 `_`  与 $\LaTeX$ 一样表示上下标。
+以下代码展示了部分符号和函数，`&` 用于对齐各行的等于号、`^` 和 `_`  与 LaTeX 一样表示上下标。
 
 ```typst
 $
@@ -169,7 +169,7 @@ Typst 的 [文档](https://typst.app/docs/reference/math/) 中更详细地介绍
 
 ## 引用
 
-Typst 也可以像 $\LaTeX$ 一样交叉引用图片、公式、文献等。
+Typst 也可以像 LaTeX 一样交叉引用图片、公式、文献等。
 本章介绍了 Typst 的引用语法，以及如何调整引用风格。
 
 ### 图片和表格
@@ -323,14 +323,14 @@ Typst 的其中一位创始人 #cite(<madje_typst>, form: "author") 于 #cite(<m
 }
 ```
 
-文献引用的 `@` 语法实际调用的 [`cite`](https://typst.app/docs/reference/model/cite/) 函数也可以像 $\LaTeX$ 的 `\citeauthor` 和 `\citeyear` 一样输出文献作者和年份。
+文献引用的 `@` 语法实际调用的 [`cite`](https://typst.app/docs/reference/model/cite/) 函数也可以像 LaTeX 的 `\citeauthor` 和 `\citeyear` 一样输出文献作者和年份。
 `form` 参数决定了 `cite` 的输出，`"author"` 对应作者、`"year"` 对应年份，默认情况下输出和直接用 `@` 语法一致。
 引用风格则可以通过 `bibliography` 的 `style` 参数调整，例如 `"ieee"`、`"apa"` 等，其他常用格式可以参考 Typst 的 [文档](https://typst.app/docs/reference/model/bibliography/#parameters-style)。
 
 ## 导入文件和包
 
 由于文档太长时修改会变得非常困难，笔者认为排版软件应该提供导入文件的功能。
-例如 $\LaTeX$ 中可以用 `\input` 或 `\include` 导入文件内容，而 Typst 中则可以用 [`include`](https://typst.app/docs/reference/scripting/#modules) 语法导入其他文件中的内容。
+例如 LaTeX 中可以用 `\input` 或 `\include` 导入文件内容，而 Typst 中则可以用 [`include`](https://typst.app/docs/reference/scripting/#modules) 语法导入其他文件中的内容。
 以下代码中展示了 Typst 的文件导入语法。
 
 ```typst
@@ -346,7 +346,7 @@ Typst 的其中一位创始人 #cite(<madje_typst>, form: "author") 于 #cite(<m
 
 `include` 的内容会按导入顺序出现在结果里，例如示例中导入的 `方法.typ` 中的内容会出现在 “引言” 和 “其他内容” 之间。
 
-Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定义的宏都是全局的，而 Typst 的导入文件时不会导入其中定义的函数和变量。
+Typst 的导入与 LaTeX 最大的不同在于 `\input` 或 `\include` 中定义的宏都是全局的，而 Typst 的导入文件时不会导入其中定义的函数和变量。
 但 Typst 并非不能导入函数和变量，Typst 导入这些需要用 `import` 语法。
 例如以下代码在 `main.typ` 文件中导入并使用了 `utils.typ` 文件中定义的 `numbered_equation` 函数。
 
@@ -365,7 +365,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 ```
 
 为了避免重新造轮子，Typst 有大量的 [第三方包](https://typst.app/universe) 可导入。
-例如以下几个 Typst 包对应了常用的 $\LaTeX$ 包：
+例如以下几个 Typst 包对应了常用的 LaTeX 包：
 
 - [cetz](https://typst.app/universe/package/cetz/)：类似 TikZ，可用于画图、制作图表等
 - [unify](https://typst.app/universe/package/unify/)：类似 siunitx 包，用于为数值添加 SI 单位
@@ -573,7 +573,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 #set par(justify: true)
 ```
 
-这段主要适用于西文排版，设置后 Typst 会像 $\LaTeX$ 一样将过长的单词添加 [连字号](https://zh.wikipedia.org/zh-cn/%E8%BF%9E%E5%AD%97%E5%8F%B7) `-` 后拆分到下一行。
+这段主要适用于西文排版，设置后 Typst 会像 LaTeX 一样将过长的单词添加 [连字号](https://zh.wikipedia.org/zh-cn/%E8%BF%9E%E5%AD%97%E5%8F%B7) `-` 后拆分到下一行。
 需要同时用 `set text(lang: ...)` 设置文本语言。
 
 #### 数学函数定义中的冒号
@@ -590,7 +590,7 @@ Typst 的导入与 $\LaTeX$ 最大的不同在于 `\input` 或 `\include` 中定
 #show sym.nothing: set text(font: "Fira Sans")
 ```
 
-设置后空集符号 `emptyset` 会显示为圆形加斜线 ∅ 而不是 $\LaTeX$ 的默认字体 [Computer Modern](https://en.wikipedia.org/wiki/Computer_Modern)中的零加斜线 $\emptyset$。
+设置后空集符号 `emptyset` 会显示为圆形加斜线 ∅ 而不是 LaTeX 的默认字体 [Computer Modern](https://en.wikipedia.org/wiki/Computer_Modern)中的零加斜线 $\emptyset$。
 GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
 
 #### 禁用合字
@@ -631,8 +631,8 @@ GitHub 上也有人提出了其他解决方法 [^github_varnothing]。
 本文系统地介绍了 Typst 排版工具的核心功能，例如代码块、公式、图片、引用等。
 此外，本文还介绍了 Typst 的导入功能，并用示例展示了如何将常用代码做成可复用的模板。
 
-虽然 Typst 相对 $\LaTeX$ 有语法简单和速度快的优势，但是 $\LaTeX$ 目前还是理工科主流的排版软件。
-Typst 很难在短期内取代 $\LaTeX$，现在几乎没有出版社接受 Typst 格式的投稿，也没有几所大学提供 Typst 格式的论文模板。
+虽然 Typst 相对 LaTeX 有语法简单和速度快的优势，但是 LaTeX 目前还是理工科主流的排版软件。
+Typst 很难在短期内取代 LaTeX，现在几乎没有出版社接受 Typst 格式的投稿，也没有几所大学提供 Typst 格式的论文模板。
 
 [^typst_syntax]: Syntax, https://typst.app/docs/reference/syntax
 [^typst_preview_prefix]: Typst Packages, https://github.com/typst/packages/?tab=readme-ov-file#published-packages
