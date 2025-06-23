@@ -1,3 +1,5 @@
+#set page(height: auto, width: auto, margin: 2em)
+
 #let red_text(body) = {
   set text(red)
 

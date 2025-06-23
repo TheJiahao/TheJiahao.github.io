@@ -1,3 +1,4 @@
+#set page(height: auto, width: auto, margin: 2em)
 #set text(font: "Noto Sans", lang: "zh")
 
 #math.equation(

@@ -1,3 +1,4 @@
+#set page(height: auto, margin: 2em)
 #set text(font: "Noto Sans", lang: "zh")
 
 @figure_test 中展示了 "TEST"。

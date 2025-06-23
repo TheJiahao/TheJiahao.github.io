@@ -1,3 +1,4 @@
+#set page(height: auto)
 #import "./template.typ": config
 #import "./utils.typ": numbered_equation, c
 
