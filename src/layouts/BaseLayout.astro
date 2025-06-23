@@ -1,13 +1,13 @@
 ---
 import BaseHeader, {
-    type Props as BaseHeaderProps,
+type Props as BaseHeaderProps,
 } from "components/atoms/BaseHeader.astro";
 import Sidebar from "components/atoms/Sidebar.astro";
 import SiteFooter from "components/molecules/SiteFooter";
 import type { TranslatedElement } from "interfaces/TranslatedElement";
-import "styles/scrollbar.scss";
 import "styles/callout.scss";
 import "styles/math.scss";
+import "styles/scrollbar.scss";
 
 export interface Props extends BaseHeaderProps, TranslatedElement {}
 
