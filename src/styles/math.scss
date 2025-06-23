@@ -1,7 +1,11 @@
-.katex-display {
-    overflow: auto;
+svg.typst-doc {
+    @apply dark:invert-100 dark:contrast-105;
+    display: inline;
+    font-size: larger;
 }
 
-.katex {
-    @apply select-all;
+p {
+    svg.typst-doc {
+        font-size: unset;
+    }
 }
