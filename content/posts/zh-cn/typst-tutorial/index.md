@@ -469,8 +469,6 @@ Typst 的导入与 LaTeX 最大的不同在于 `\input` 或 `\include` 中定义
 > }
 > ```
 >
-
->
 > 在脚本模式中用方括号 `[]` 即可进入标记模式，但标记模式只在方括号范围内生效。
 > 标记模式中就可以正常使用 Typst 的基础语法，例如强调、列表、公式等。
 > 标记模式里的内容（[`content`](https://typst.app/docs/reference/foundations/content/)）和字符串（[`str`](https://typst.app/docs/reference/foundations/str/)）不同，后者需要用双引号 `"` 包围且不支持 Typst 语法。
