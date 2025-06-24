@@ -13,7 +13,6 @@
         "test:e2e": "playwright test",
         "playwright:open": "playwright test --ui",
         "coverage": "vitest run --coverage",
-        "index": "gis $SITE_BASE_URL",
         "build": "astro build",
         "preview": "pnpm run build && astro preview",
         "preview:host": "pnpm run build && astro preview --host",
