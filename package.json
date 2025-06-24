@@ -101,7 +101,7 @@
     "packageManager": "pnpm@10.12.1",
     "pnpm": {
         "overrides": {
-            "vitest>vite": "^6.0.0"
+            "vitest>vite": "^7.0.0"
         }
     }
 }
