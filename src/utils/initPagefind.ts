@@ -5,7 +5,11 @@ export const initPagefind = async () => {
         import.meta.env.MODE === "development"
             ? "../../dist/pagefind/pagefind.js"
             : "/pagefind/pagefind.js";
-    const pagefind = (await import(`${pagefindPath}?url`)) as Pagefind;
+    const pagefind = (await import(
+        /* @vite-ignore */
+        `${pagefindPath}?url`
+    )) as Pagefind;
+
     await pagefind.init();
 
     return pagefind;
