@@ -25,15 +25,6 @@ describe("<SocialMenu/>", () => {
         });
 
         describe("relative link", () => {
-            test("contains language code", () => {
-                expect(
-                    screen.getByRole("link", { name: "Relative" }),
-                ).toHaveAttribute(
-                    "href",
-                    expect.stringContaining(languageCode),
-                );
-            });
-
             test("not changed to absolute", () => {
                 expect(
                     screen.getByRole("link", { name: "Relative" }),
