@@ -13,7 +13,7 @@
         "test:e2e": "playwright test",
         "playwright:open": "playwright test --ui",
         "coverage": "vitest run --coverage",
-        "build": "astro build",
+        "build": "astro build && pagefind",
         "preview": "pnpm run build && astro preview",
         "preview:host": "pnpm run build && astro preview --host",
         "dev": "astro dev",
