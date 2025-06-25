@@ -24,20 +24,20 @@ describe("<SocialMenu/>", () => {
             render(<SocialMenu links={links} language={languageCode} />);
         });
 
-        describe("relative link", () => {
-            test("not changed to absolute", () => {
-                expect(
-                    screen.getByRole("link", { name: "Relative" }),
-                ).toHaveAttribute("href", expect.stringMatching(RegExp(`^/`)));
-            });
+        test("has links", () => {
+            expect(screen.getAllByRole("link")).toHaveLength(links.length);
         });
 
-        describe("absolute link", () => {
-            test("is not changed", () => {
-                expect(
-                    screen.getByRole("link", { name: "Absolute" }),
-                ).toHaveAttribute("href", links[1].url);
-            });
+        test("relative link is rendered", () => {
+            expect(
+                screen.getByRole("link", { name: "Relative" }),
+            ).toHaveAttribute("href", links[0].url);
+        });
+
+        test("absolute link is rendered", () => {
+            expect(
+                screen.getByRole("link", { name: "Absolute" }),
+            ).toHaveAttribute("href", links[1].url);
         });
     });
 });
