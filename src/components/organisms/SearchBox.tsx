@@ -6,7 +6,7 @@ import { useState, type ChangeEventHandler } from "react";
 
 const SearchBox = ({ language }: TranslatedElement) => {
     const [keyword, setKeyword] = useState("");
-    const results = useSearch(keyword, language);
+    const results = useSearch(keyword);
 
     const handleSearch: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
         setKeyword(target.value);

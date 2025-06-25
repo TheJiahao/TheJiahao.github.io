@@ -1,36 +1,45 @@
-import { getRelativeLocaleUrl } from "astro:i18n";
 import type { Page } from "interfaces/Page";
-import type { PreparedPage } from "interfaces/PreparedPage";
+import type { Pagefind } from "interfaces/Pagefind";
 import { useEffect, useState } from "react";
+import { initPagefind } from "utils/initPagefind";
 import { search } from "utils/search";
-
-const fetchData = async (url: string): Promise<PreparedPage[]> => {
-    const response = await fetch(url);
-
-    return (await response.json()) as PreparedPage[];
-};
 
 /**
  * Searches the keyword from search index in given language.
  *
  * @param keyword Keyword to search
- * @param languageCode Language of pages to search
+ *  @param limit Maximum number of results
  * @returns Pages matching the keyword
  */
-const useSearch = (keyword: string, languageCode: string): Page[] => {
-    const [pages, setPages] = useState<PreparedPage[]>([]);
+const useSearch = (keyword: string, limit: number = 5): Page[] => {
+    const [pagefind, setPagefind] = useState<Pagefind | null>(null);
+    const [results, setResults] = useState<Page[]>([]);
 
     useEffect(() => {
-        fetchData(getRelativeLocaleUrl(languageCode, "/search-index.json"))
-            .then((data) => {
-                setPages(data);
+        initPagefind()
+            .then((pf) => {
+                setPagefind(pf);
             })
             .catch((error: unknown) => {
                 console.error(error);
             });
     }, []);
 
-    return search(keyword, pages);
+    useEffect(() => {
+        if (!pagefind) {
+            return;
+        }
+
+        search(pagefind, limit, keyword)
+            .then((pages: Page[]) => {
+                setResults(pages);
+            })
+            .catch((error: unknown) => {
+                console.error(error);
+            });
+    }, [keyword]);
+
+    return results;
 };
 
 export default useSearch;
