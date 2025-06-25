@@ -2,7 +2,7 @@ interface Page {
     title: string;
     description: string;
     url: string;
-    image: ImageMetadata;
+    image: ImageMetadata | string;
 }
 
 export { type Page };

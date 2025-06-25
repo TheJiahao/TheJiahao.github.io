@@ -1,8 +1,7 @@
 import type { Page } from "interfaces/Page";
 
-interface LinkProps extends Omit<Page, "description" | "image"> {
+interface LinkProps extends Omit<Page, "description"> {
     description?: string;
-    image?: ImageMetadata | string;
 }
 
 const LinkCard = ({ title, description, url, image }: LinkProps) => (
