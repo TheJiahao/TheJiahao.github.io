@@ -1,4 +1,3 @@
-import { getRelativeLocaleUrl } from "astro:i18n";
 import Menu, { type MenuProps } from "components/molecules/Menu";
 import type { SocialLinkProps } from "components/molecules/SocialLink";
 import SocialLink from "components/molecules/SocialLink";
@@ -11,8 +10,8 @@ interface SocialMenuProps extends MenuProps, TranslatedElement {
 }
 
 const SocialMenu = ({
-    links = SOCIAL_LINKS,
     language,
+    links = SOCIAL_LINKS[language],
     ...props
 }: SocialMenuProps) => (
     <Menu
@@ -21,15 +20,7 @@ const SocialMenu = ({
         {...props}
     >
         {links.map(({ url, ...props }) => (
-            <SocialLink
-                key={url}
-                url={
-                    url.startsWith("/")
-                        ? getRelativeLocaleUrl(language, url)
-                        : url
-                }
-                {...props}
-            />
+            <SocialLink key={url} url={url} {...props} />
         ))}
     </Menu>
 );

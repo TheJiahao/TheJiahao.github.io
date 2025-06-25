@@ -19,7 +19,7 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 ---
 
 <NavigationBarLayout {title} {description} {language}>
-    <ProfileSchema {description} slot="head" />
+    <ProfileSchema {description} {language} slot="head" />
 
     <main>
         <Article>

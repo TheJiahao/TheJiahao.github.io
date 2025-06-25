@@ -1,12 +1,14 @@
 ---
 import { Schema } from "astro-seo-schema";
+import type { IconLinkProps } from "components/atoms/IconLink";
 import { SITE_AVATAR, SITE_OWNER, SOCIAL_LINKS } from "config";
+import type { TranslatedElement } from "interfaces/TranslatedElement";
 
-interface Props {
+interface Props extends TranslatedElement {
     description?: string;
     name?: string;
     image?: string;
-    socialLinks?: string[];
+    socialLinks?: IconLinkProps[];
     url?: string;
 }
 
@@ -14,7 +16,8 @@ const {
     description,
     name = SITE_OWNER,
     image = SITE_AVATAR.src,
-    socialLinks = SOCIAL_LINKS.map(({ url }) => url),
+    language,
+    socialLinks = SOCIAL_LINKS[language],
     url = Astro.url.href,
 } = Astro.props;
 ---
@@ -29,7 +32,7 @@ const {
             "@type": "Person",
             name,
             image,
-            sameAs: socialLinks,
+            sameAs: socialLinks.map(({ url }) => url),
         },
     }}
     slot="head"
