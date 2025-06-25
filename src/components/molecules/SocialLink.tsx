@@ -1,12 +1,6 @@
-import IconLink from "components/atoms/IconLink";
-import { type ReactElement } from "react";
-import type { IconBaseProps } from "react-icons/lib";
+import IconLink, { type IconLinkProps } from "components/atoms/IconLink";
 
-interface SocialLinkProps {
-    url: string;
-    icon: ReactElement<IconBaseProps>;
-    label: string;
-}
+type SocialLinkProps = Pick<IconLinkProps, "url" | "icon" | "label">;
 
 const SocialLink = ({ url, icon, label }: SocialLinkProps) => (
     <IconLink
