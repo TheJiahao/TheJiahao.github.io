@@ -4,6 +4,8 @@ import type { AnimatedElement } from "interfaces/AnimatedElement";
 
 interface CoverImageProps extends AnimatedElement {
     image?: ImageMetadata;
+    /* If true, data-pagefind-meta="image" will be added*/
+    metadata?: boolean;
     alt: string;
 }
 
@@ -11,6 +13,7 @@ const CoverImage = ({
     image = BLOG_IMAGE_PLACEHOLDER,
     alt,
     viewTransitionName,
+    metadata = false,
 }: CoverImageProps) => (
     <img
         src={image.src}
@@ -23,6 +26,7 @@ const CoverImage = ({
         object-cover
         overflow-hidden
         style={{ viewTransitionName }}
+        data-pagefind-meta={metadata ? "image[src]" : undefined}
     />
 );
 

@@ -19,7 +19,12 @@ const id = getUUID(title);
 ---
 
 <header flex="~ col" gap-lg>
-    <CoverImage image={image} alt="" viewTransitionName=`image-${id}` />
+    <CoverImage
+        image={image}
+        alt=""
+        viewTransitionName=`image-${id}`
+        metadata
+    />
     <div px-4 lg:px-8>
         <Details {title} viewTransitionName={`title-${id}`} {...props} />
         <div flex="~ row" gap-4>
