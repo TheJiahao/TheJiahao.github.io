@@ -1,12 +1,17 @@
 svg.typst-doc {
     @apply dark:invert-100 dark:contrast-105;
-    display: inline;
-    font-size: larger;
-    overflow: auto;
+}
+
+:not(p) {
+    svg.typst-doc {
+        font-size: larger;
+        overflow: auto;
+    }
 }
 
 p {
     svg.typst-doc {
+        display: inline;
         font-size: unset;
     }
 }
