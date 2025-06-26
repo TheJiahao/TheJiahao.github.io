@@ -8,7 +8,7 @@ interface LinkListProps
 }
 
 const LinkList = ({ links, ...props }: LinkListProps) => (
-    <ul w-full divide-y {...props}>
+    <ul w-full divide="y gray-200" {...props}>
         {links.map((link) => (
             <li key={link.url}>
                 <LinkCard {...link} />

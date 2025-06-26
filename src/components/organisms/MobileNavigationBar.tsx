@@ -25,7 +25,7 @@ const MobileNavigationBar = ({ language }: NavigationBarProps) => {
                 duration-300
                 ease-in-out
                 w-full
-                divide-y
+                divide="y gray-200"
             >
                 <SettingsMenu role="group" language={language} items-center />
                 <SocialMenu role="group" language={language} />
