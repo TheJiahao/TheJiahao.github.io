@@ -8,11 +8,9 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
     <article title={title} clickable focus-within:bg-hover focus:bg-hover p-8>
         <a href={url} grid="~ cols-[minmax(0,1fr)_auto] flow-col" gap-8>
             <div tabIndex={-1}>
-                <h1
-                    dangerouslySetInnerHTML={{ __html: title }}
-                    text="primary xl"
-                    font-bold
-                />
+                <h1 text="primary xl" font-bold>
+                    {title}
+                </h1>
                 <p
                     text-secondary
                     line-clamp-3
