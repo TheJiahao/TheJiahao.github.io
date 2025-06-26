@@ -8,7 +8,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
     <article title={title} clickable focus-within:bg-hover focus:bg-hover p-8>
         <a href={url} grid="~ cols-[minmax(0,1fr)_auto] flow-col" gap-8>
             <div
-                className="[&_mark]:text-primary [&_mark]:bg-accent-primary/35"
+                className="[&_mark]:text-primary [&_mark]:bg-accent/35"
                 tabIndex={-1}
             >
                 <h1 text="primary xl" font-bold>

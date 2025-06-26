@@ -22,10 +22,7 @@ export default defineConfig({
                     colors: {
                         primary: "white",
                         secondary: "hsl(0 0% 70%)",
-                        accent: {
-                            primary: "hsl(215 60% 70%)",
-                            secondary: "hsl(195 50% 20%)",
-                        },
+                        accent: "hsl(215 60% 50%)",
                         surface: {
                             primary: "hsl(0 0% 15%)",
                             secondary: "hsl(0 0% 9%)",
@@ -45,10 +42,7 @@ export default defineConfig({
         colors: {
             primary: "black",
             secondary: "hsl(0 0% 25%)",
-            accent: {
-                primary: "hsl(215 60% 50%)",
-                secondary: "hsl(195 100% 95%)",
-            },
+            accent: "hsl(215 60% 50%)",
             surface: {
                 primary: "hsl(0 0% 100%)",
                 secondary: "hsl(0 0% 96%)",
@@ -68,7 +62,7 @@ export default defineConfig({
         clickable: "cursor-pointer hoverable active:brightness-90",
         "grid-sidebars": "grid-cols-[minmax(auto,1fr)_auto_minmax(auto,1fr)]",
         "align-icon": "flex items-center",
-        highlighted: "text-accent-primary font-bold",
+        highlighted: "text-accent font-bold",
     },
     content: {
         pipeline: {

@@ -61,8 +61,8 @@ const SearchForm = ({
                     title={getTranslation(language).clear}
                     transition
                     ease-in-out
-                    hover:text-accent-primary
-                    active="text-accent-primary brightness-70 dark:brightness-125"
+                    hover:text-accent
+                    active="text-accent brightness-70 dark:brightness-125"
                 >
                     <LuX />
                 </button>
