@@ -9,7 +9,7 @@ const SocialLink = ({ url, icon, label }: SocialLinkProps) => (
         url={url}
         icon={
             <icon.type
-                className="size-10 color-secondary"
+                className="color-secondary size-10"
                 role="presentation"
                 focusable={false}
             />

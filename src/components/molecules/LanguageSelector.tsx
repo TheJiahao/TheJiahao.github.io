@@ -67,7 +67,7 @@ const LanguageSelector = ({
             </ListboxButton>
 
             <ListboxOptions
-                className="w-[var(--button-width)] data-[closed]:opacity-0 data-[focus]:outline-none"
+                className="w-[var(--button-width)] data-[focus]:outline-none data-[closed]:opacity-0"
                 anchor={{ to: "bottom end", gap: "1rem" }}
                 card
                 flex="~ col"
