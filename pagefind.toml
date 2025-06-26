@@ -1,3 +1,2 @@
 site = "dist"
 glob = "{zh-cn,en}/posts/**/*.html"
-root_selector = "main"
