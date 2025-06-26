@@ -52,7 +52,7 @@ const LanguageSelector = ({
                 p-2
                 rounded-md
                 align-icon
-                gap-sm
+                gap-3
                 text-secondary
             >
                 <LuGlobe aria-hidden />

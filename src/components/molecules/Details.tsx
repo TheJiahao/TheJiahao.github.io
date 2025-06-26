@@ -7,7 +7,7 @@ interface DetailsProps extends AnimatedElement {
 }
 
 const Details = ({ title, description, viewTransitionName }: DetailsProps) => (
-    <div text="secondary xl" flex="~ col" gap-sm>
+    <div text="secondary xl" flex="~ col" gap-3>
         <h1 text="primary 3xl" font-bold style={{ viewTransitionName }}>
             {title}
         </h1>

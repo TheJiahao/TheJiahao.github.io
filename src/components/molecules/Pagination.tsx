@@ -18,7 +18,7 @@ const Pagination = ({
     language,
     defaultURL = getRelativeLocaleUrl(language),
 }: PaginationProps) => (
-    <nav flex="~ row" items-center gap-lg text="secondary 2xl">
+    <nav flex="~ row" items-center gap-4 text="secondary 2xl">
         <IconLink
             url={previousURL || defaultURL}
             label={getTranslation(language).previousPage}

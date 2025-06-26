@@ -18,7 +18,7 @@ const { title, image, date, language, languages, slug, ...props } = Astro.props;
 const id = getUUID(title);
 ---
 
-<header flex="~ col" gap-lg>
+<header flex="~ col" gap-4>
     <CoverImage
         image={image}
         alt=""
