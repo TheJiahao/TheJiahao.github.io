@@ -16,7 +16,7 @@ const search = async (
 ): Promise<Page[]> => {
     const rawResults = await Promise.all(
         (await pagefind.search(keyword)).results
-            .slice(limit - 1)
+            .slice(0, limit - 1)
             .map(async ({ data }) => await data()),
     );
 
