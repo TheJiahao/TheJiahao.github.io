@@ -5,9 +5,8 @@
         hyphens: auto;
 
         & > code {
-            @apply p-1 rounded-md font-mono;
-            color: theme("colors.code");
-            background-color: theme("colors.surface.code");
+            @apply p-1 rounded-md font-mono text-code bg-surface-code;
+
             &::before,
             &::after {
                 content: unset;
