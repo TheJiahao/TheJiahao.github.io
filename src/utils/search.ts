@@ -14,19 +14,19 @@ const search = async (
     limit: number,
     keyword: string,
 ): Promise<Page[]> => {
-    const rawResults = await Promise.all(
+    const results = await Promise.all(
         (await pagefind.search(keyword)).results
             .slice(0, limit - 1)
-            .map(async ({ data }) => await data()),
-    );
+            .map(async ({ data }) => {
+                const result = await data();
 
-    const results = await Promise.all(
-        rawResults.map((result) => ({
-            title: result.meta.title,
-            description: result.excerpt,
-            url: result.url,
-            image: result.meta.image,
-        })),
+                return {
+                    title: result.meta.title,
+                    description: result.excerpt,
+                    url: result.url,
+                    image: result.meta.image,
+                };
+            }),
     );
 
     return results;
