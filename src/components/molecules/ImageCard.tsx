@@ -14,8 +14,8 @@ const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => {
     const id = getUUID(title);
 
     return (
-        <article title={title} card clickable>
-            <a href={url} rel="bookmark">
+        <a href={url} rel="bookmark" card clickable block>
+            <article title={title}>
                 <CoverImage
                     image={image}
                     alt=""
@@ -30,8 +30,8 @@ const ImageCard = ({ title, url, image, date, ...props }: ImageCardProps) => {
 
                     {date && <DateComponent date={date} />}
                 </div>
-            </a>
-        </article>
+            </article>
+        </a>
     );
 };
 

@@ -5,8 +5,12 @@ interface LinkProps extends Omit<Page, "description"> {
 }
 
 const LinkCard = ({ title, description, url, image }: LinkProps) => (
-    <article title={title} clickable focus-within:bg-hover focus:bg-hover p-8>
-        <a href={url} grid="~ cols-[minmax(0,1fr)_auto] flow-col" gap-8>
+    <a href={url} clickable focus-within:bg-hover focus:bg-hover p-8 block>
+        <article
+            title={title}
+            grid="~ cols-[minmax(0,1fr)_auto] flow-col"
+            gap-8
+        >
             <div
                 className="[&_mark]:text-primary [&_mark]:bg-accent/35"
                 tabIndex={-1}
@@ -30,8 +34,8 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
                     rounded-md
                 />
             )}
-        </a>
-    </article>
+        </article>
+    </a>
 );
 
 export type { LinkProps };
