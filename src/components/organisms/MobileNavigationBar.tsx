@@ -13,7 +13,7 @@ const MobileNavigationBar = ({ language }: NavigationBarProps) => {
     };
 
     return (
-        <nav card p-sm flex="~ col" items-center>
+        <nav card p-sm flex="~ col" items-center border="1 accent/15">
             <div
                 role="menu"
                 className={[
