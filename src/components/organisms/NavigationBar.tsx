@@ -9,7 +9,7 @@ interface NavigationBarProps extends TranslatedElement {
 }
 
 const NavigationBar = ({ language }: NavigationBarProps) => (
-    <nav card p-4 flex="~ col" gap-4 items-center h-full w-60 overflow-auto>
+    <nav card p-5 flex="~ col" gap-5 items-center h-full w-60 overflow-auto>
         <NavigationHeader language={language} />
 
         <SocialMenu language={language} />
