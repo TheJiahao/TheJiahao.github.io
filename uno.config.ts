@@ -54,6 +54,10 @@ export default defineConfig({
             hover: "hsl(0 0% 92%)",
             clicked: "hsl(0 0% 90%)",
         },
+        font: {
+            mono: "JetBrains Mono, monospace",
+            sans: "Noto Sans SC, sans-serif",
+        },
     },
     transformers: [transformerAttributifyJsx(), transformerDirectives()],
     shortcuts: {
