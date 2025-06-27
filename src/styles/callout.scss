@@ -19,7 +19,7 @@ $colors: (
 @each $name, $color in $colors {
     .markdown-alert-#{$name} {
         svg.octicon {
-            fill: currentColor;
+            @apply fill-current;
         }
 
         .markdown-alert-title {

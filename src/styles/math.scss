@@ -4,14 +4,12 @@ svg.typst-doc {
 
 :not(p) {
     svg.typst-doc {
-        font-size: larger;
-        overflow: auto;
+        @apply text-xl overflow-auto;
     }
 }
 
 p {
     svg.typst-doc {
-        display: inline;
-        font-size: unset;
+        @apply inline font-size-unset;
     }
 }

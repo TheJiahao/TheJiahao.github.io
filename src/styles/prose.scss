@@ -1,27 +1,24 @@
 .prose,
 [prose=""] {
     :not(pre) {
-        overflow-wrap: break-word;
-        hyphens: auto;
+        @apply break-words hyphens-auto;
 
         & > code {
             @apply p-1 rounded-md font-mono text-code bg-surface-code;
 
             &::before,
             &::after {
-                content: unset;
+                @apply content-none;
             }
         }
 
         a {
-            text-decoration: underline 2px;
-            text-underline-offset: 0.25em;
-            color: theme("colors.link");
+            @apply text-link underline underline-offset-0.25em decoration-2;
         }
 
         p,
         code {
-            font-size: large;
+            @apply text-lg;
         }
 
         figure {
@@ -38,6 +35,6 @@
     }
 
     .data-footnote-backref {
-        text-decoration: none;
+        @apply decoration-none;
     }
 }
