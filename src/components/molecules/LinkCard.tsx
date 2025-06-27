@@ -5,7 +5,7 @@ interface LinkProps extends Omit<Page, "description"> {
 }
 
 const LinkCard = ({ title, description, url, image }: LinkProps) => (
-    <a href={url} clickable focus-within:bg-hover focus:bg-hover p-8 block>
+    <a href={url} clickable p-8 block>
         <article
             title={title}
             grid="~ cols-[minmax(0,1fr)_auto] flow-col"
