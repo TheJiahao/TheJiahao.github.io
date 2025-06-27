@@ -16,9 +16,10 @@ const MobileNavigationBar = ({ language }: NavigationBarProps) => {
         <nav card p-sm flex="~ col" items-center>
             <div
                 role="menu"
-                className={
-                    expanded ? "max-h-screen visible" : "max-h-0 invisible"
-                }
+                className={[
+                    "*:not-first:py-4 *:first:pb-4",
+                    expanded ? "max-h-screen visible" : "max-h-0 invisible",
+                ].join(" ")}
                 flex="~ col"
                 overflow-hidden
                 transition-all
@@ -27,19 +28,9 @@ const MobileNavigationBar = ({ language }: NavigationBarProps) => {
                 w-full
                 divide="y gray-200"
             >
-                <SettingsMenu
-                    role="group"
-                    language={language}
-                    items-center
-                    p-4
-                />
-                <SocialMenu role="group" language={language} p-4 />
-                <NavigationMenu
-                    role="group"
-                    language={language}
-                    items-center
-                    p-4
-                />
+                <SettingsMenu role="group" language={language} items-center />
+                <SocialMenu role="group" language={language} />
+                <NavigationMenu role="group" language={language} items-center />
             </div>
 
             <NavigationToolBar
