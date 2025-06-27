@@ -24,7 +24,6 @@ const Menu = ({
         {...props}
         flex={`~ ${direction}`}
         gap-3
-        p-4
         justify-center
         text-xl
     >

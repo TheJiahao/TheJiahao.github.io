@@ -27,9 +27,19 @@ const MobileNavigationBar = ({ language }: NavigationBarProps) => {
                 w-full
                 divide="y gray-200"
             >
-                <SettingsMenu role="group" language={language} items-center />
-                <SocialMenu role="group" language={language} />
-                <NavigationMenu role="group" language={language} items-center />
+                <SettingsMenu
+                    role="group"
+                    language={language}
+                    items-center
+                    p-4
+                />
+                <SocialMenu role="group" language={language} p-4 />
+                <NavigationMenu
+                    role="group"
+                    language={language}
+                    items-center
+                    p-4
+                />
             </div>
 
             <NavigationToolBar
