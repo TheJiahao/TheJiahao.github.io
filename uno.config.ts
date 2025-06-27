@@ -7,7 +7,7 @@ import {
     transformerDirectives,
 } from "unocss";
 import presetTheme from "unocss-preset-theme";
-import type { Theme } from "unocss/preset-wind3";
+import type { Theme } from "unocss/preset-wind4";
 
 export default defineConfig({
     presets: [
