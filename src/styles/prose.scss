@@ -12,21 +12,21 @@
             }
         }
 
-        a {
-            @apply text-link underline underline-offset-0.25em decoration-2;
-        }
-
         p,
         code {
             @apply text-lg;
         }
+    }
 
-        figure {
-            @apply flex flex-col gap-2 items-center;
+    a {
+        @apply text-link underline underline-offset-0.25em decoration-2;
+    }
 
-            figcaption {
-                @apply text-secondary;
-            }
+    figure {
+        @apply flex flex-col gap-2 items-center;
+
+        figcaption {
+            @apply text-secondary;
         }
     }
 
