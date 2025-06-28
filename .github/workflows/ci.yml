@@ -22,10 +22,10 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Format
-        run: bun run format:ci
+        run: pnpm run format:ci
 
       - name: Lint
-        run: bun run lint:fix
+        run: pnpm run lint:fix
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
@@ -46,7 +46,7 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Test code
-        run: bun run coverage
+        run: pnpm run coverage
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5

@@ -20,7 +20,7 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Build
-        run: bun run build
+        run: pnpm run build
         env:
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
 
