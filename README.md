@@ -17,8 +17,8 @@
 - Dark/light themes
 - Table of contents with highlight
 - Comments
-- Search engine indexing workflows
-- $\LaTeX$ equations support
+- Search engine indexing workflow
+- Typst equations support
 
 ## Fullstack harjoitustyö
 
