@@ -60,7 +60,7 @@ jobs:
           merge-multiple: true
 
       - name: Merge into HTML Report
-        run: pnpm exec playwright merge-reports --config=playwright-merge.config.ts ./all-blob-reports
+        run: bun playwright merge-reports --config=playwright-merge.config.ts ./all-blob-reports
 
       - name: Upload HTML report
         uses: actions/upload-artifact@v4

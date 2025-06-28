@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "format": "prettier --write .",
-        "format:ci": "pnpm run format -- !.github/**",
+        "format:ci": "bun run format -- !.github/**",
         "lint": "astro check && eslint . && markdownlint .",
         "lint:fix": "astro check && eslint . --fix && markdownlint . --fix",
         "test": "vitest run",
@@ -14,8 +14,8 @@
         "playwright:open": "playwright test --ui",
         "coverage": "vitest run --coverage",
         "build": "astro build && pagefind",
-        "preview": "pnpm run build && astro preview",
-        "preview:host": "pnpm run build && astro preview --host",
+        "preview": "bun run build && astro preview",
+        "preview:host": "bun run build && astro preview --host",
         "dev": "astro dev",
         "dev:host": "astro dev --host",
         "prepare": "husky"
@@ -97,10 +97,5 @@
         "vitest": "^3.2.4",
         "vitest-mock-extended": "^3.1.0"
     },
-    "packageManager": "pnpm@10.12.4",
-    "pnpm": {
-        "overrides": {
-            "vitest>vite": "^7.0.0"
-        }
-    }
+    "packageManager": "bun@1.2.17"
 }
