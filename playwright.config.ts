@@ -20,7 +20,7 @@ export default defineConfig({
         screenshot: "only-on-failure",
     },
     webServer: {
-        command: process.env.CI ? "bun run preview" : "bun run dev",
+        command: process.env.CI ? "pnpm run preview" : "pnpm run dev",
         port: PORT,
         timeout: 120 * 1000,
         reuseExistingServer: !process.env.CI,
