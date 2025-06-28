@@ -12,7 +12,10 @@ jobs:
         shardIndex: [1, 2, 3, 4, 5, 6, 7, 8]
         shardTotal: [8]
 
-    container: thejiahao/playwright-bun:latest
+    env:
+      SHARD_INDEX: ${{ matrix.shardIndex }}
+      SHARD_TOTAL: ${{ matrix.shardTotal }}
+
     environment: test
 
     steps:
@@ -20,16 +23,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up
-        uses: ./.github/workflows/setup-action
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-      - name: Change ownership
-        run: chown -R $(id -u):$(id -g) $PWD
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: false
+          tags: e2e:latest
 
       - name: Run tests
-        run: bun run test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
-        env:
-          HOME: /root
+        uses: addnab/docker-run-action@v3
+        with:
+          image: e2e:latest
 
       - name: Upload blob report
         if: ${{ !cancelled() }}
