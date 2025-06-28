@@ -1,21 +1,12 @@
 name: Setup
-description: Set up Node and pnpm
+description: Set up runtime
 
 runs:
   using: composite
   steps:
-    - name: Install pnpm
-      uses: pnpm/action-setup@v4
-      with:
-        run_install: false
-
-    - name: Install Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-        check-latest: true
-        cache: pnpm
+    - name: Install Bun
+      uses: oven-sh/setup-bun@v2
 
     - name: Install dependencies
-      run: pnpm install
+      run: bun install
       shell: bash

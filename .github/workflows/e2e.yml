@@ -27,7 +27,7 @@ jobs:
         run: chown -R $(id -u):$(id -g) $PWD
 
       - name: Run tests
-        run: pnpm run test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+        run: bun run test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
         env:
           HOME: /root
 
