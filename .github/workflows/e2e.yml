@@ -20,8 +20,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up
-        uses: ./.github/workflows/setup-action
+      - name: Install dependencies
+        run: bun install
 
       - name: Change ownership
         run: chown -R $(id -u):$(id -g) $PWD
