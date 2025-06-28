@@ -14,8 +14,8 @@
         "playwright:open": "playwright test --ui",
         "coverage": "vitest run --coverage",
         "build": "astro build && pagefind",
-        "preview": "bun run build && astro preview",
-        "preview:host": "bun run build && astro preview --host",
+        "preview": "astro preview",
+        "preview:host": "astro preview --host",
         "dev": "astro dev",
         "dev:host": "astro dev --host",
         "prepare": "husky"
