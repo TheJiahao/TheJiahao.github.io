@@ -1,6 +1,6 @@
 # Installation
 
-1. Install Node 20 LTS
+1. Install Node 22 LTS
 1. Enable corepack
 
     ```sh
@@ -15,7 +15,7 @@
 
 ## Environment
 
-Development is done in Ubuntu 22.04 LTS (WSL2) to be consistent with CI environment.
+Development is done in Ubuntu 24.04 LTS (WSL2) to be consistent with CI environment.
 
 ## Commands
 
@@ -34,5 +34,5 @@ Development is done in Ubuntu 22.04 LTS (WSL2) to be consistent with CI environm
 - Build and start preview server
 
     ```sh
-    pnpm run start
+    pnpm run preview
     ```
