@@ -16,7 +16,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.3.0(astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))
+        version: 4.3.0(astro@5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))
       '@astrojs/react':
         specifier: ^4.0.0
         version: 4.3.0(@types/node@22.15.34)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(jiti@2.4.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.2)(yaml@2.8.0)
@@ -52,10 +52,10 @@ importers:
         version: 66.3.2
       astro:
         specifier: ^5.0.0
-        version: 5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
+        version: 5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
       astro-expressive-code:
         specifier: ^0.41.0
-        version: 0.41.2(astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))
+        version: 0.41.2(astro@5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -64,7 +64,7 @@ importers:
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.8.3)
       astro-seo-schema:
         specifier: ^5.0.0
-        version: 5.0.0(astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))(schema-dts@1.1.5)
+        version: 5.0.0(astro@5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))(schema-dts@1.1.5)
       dayjs:
         specifier: ^1.11.11
         version: 1.11.13
@@ -1064,6 +1064,9 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
+  '@jridgewell/sourcemap-codec@1.5.3':
+    resolution: {integrity: sha512-AiR5uKpFxP3PjO4R19kQGIMwxyRyPuXmKEEy301V1C0+1rVjS94EZQXf1QKZYN8Q0YM+estSPhmx5JwNftv6nw==}
+
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
@@ -2031,8 +2034,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.10.1:
-    resolution: {integrity: sha512-DJVmt+51jU1xmgmAHCDwuUgcG/5aVFSU+tcX694acAZqPVt8EMUAmUZcJDX36Z7/EztnPph9HR3pm72jS2EgHQ==}
+  astro@5.10.2:
+    resolution: {integrity: sha512-CCBU+e/Apk6NWEMnc/R9dVZD/+FaCnNqWJicX1Oe6T18vLKop+LPs/m/88ekJk4zxP1g1N/GfUq4wEedUSk1Wg==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4256,6 +4259,10 @@ packages:
     resolution: {integrity: sha512-UOPtVuYkzYGee0Bd2Szz8d2G3RfMfJ2t3qVdZUAozZyAk+a0Sxa+QKix0YCwjL/A1RR0ar44nCxaoN9FxdJGwA==}
     engines: {node: '>= 18'}
 
+  smol-toml@1.4.1:
+    resolution: {integrity: sha512-CxdwHXyYTONGHThDbq5XdwbFsuY4wlClRGejfE2NtwUtiHYsP1QtNsHb/hnj31jKYSchztJsaA8pSQoVzkfCFg==}
+    engines: {node: '>= 18'}
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -5251,7 +5258,7 @@ snapshots:
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
       shiki: 3.7.0
-      smol-toml: 1.3.4
+      smol-toml: 1.4.1
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -5260,12 +5267,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.0(astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))':
+  '@astrojs/mdx@4.3.0(astro@5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@mdx-js/mdx': 3.1.0(acorn@8.15.0)
       acorn: 8.15.0
-      astro: 5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -6029,6 +6036,8 @@ snapshots:
   '@jridgewell/set-array@1.2.1': {}
 
   '@jridgewell/sourcemap-codec@1.5.0': {}
+
+  '@jridgewell/sourcemap-codec@1.5.3': {}
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
@@ -7196,9 +7205,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-expressive-code@0.41.2(astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)):
+  astro-expressive-code@0.41.2(astro@5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)):
     dependencies:
-      astro: 5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
       rehype-expressive-code: 0.41.2
 
   astro-robots-txt@1.0.0:
@@ -7206,9 +7215,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.25.67
 
-  astro-seo-schema@5.0.0(astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))(schema-dts@1.1.5):
+  astro-seo-schema@5.0.0(astro@5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0))(schema-dts@1.1.5):
     dependencies:
-      astro: 5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
+      astro: 5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0)
       schema-dts: 1.1.5
 
   astro-seo@0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.8.3):
@@ -7219,7 +7228,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.10.1(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0):
+  astro@5.10.2(@types/node@22.15.34)(jiti@2.4.2)(rollup@4.44.1)(sass@1.89.2)(typescript@5.8.3)(yaml@2.8.0):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -8900,7 +8909,7 @@ snapshots:
 
   magic-string@0.30.17:
     dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.0
+      '@jridgewell/sourcemap-codec': 1.5.3
 
   magicast@0.3.5:
     dependencies:
@@ -10267,6 +10276,8 @@ snapshots:
       sax: 1.4.1
 
   smol-toml@1.3.4: {}
+
+  smol-toml@1.4.1: {}
 
   source-map-js@1.2.1: {}
 
