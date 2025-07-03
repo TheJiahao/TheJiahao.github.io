@@ -356,7 +356,7 @@ Typst 的其中一位创始人 #cite(<madje_typst>, form: "author") 于 #cite(<m
 `include` 的内容会按导入顺序出现在结果里，例如示例中导入的 `方法.typ` 中的内容会出现在 “引言” 和 “其他内容” 之间。
 
 Typst 的导入与 LaTeX 最大的不同在于 `\input` 或 `\include` 中定义的宏都是全局的，而 Typst 的导入文件时不会导入其中定义的函数和变量。
-但 Typst 并非不能导入函数和变量，Typst 导入这些需要用 `import` 语法。
+Typst 与其他编程语言类似，使用 `import` 语法导入文件中的函数和变量。
 例如以下代码在 `main.typ` 文件中导入并使用了 `utils.typ` 文件中定义的 `numbered_equation` 函数。
 
 ```typst title="utils.typ"
