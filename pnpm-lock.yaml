@@ -28,7 +28,7 @@ importers:
         version: 3.4.1
       '@expressive-code/plugin-collapsible-sections':
         specifier: ^0.41.0
-        version: 0.41.2
+        version: 0.41.3
       '@giscus/react':
         specifier: ^3.0.0
         version: 3.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -733,11 +733,11 @@ packages:
     peerDependencies:
       '@playwright/test': ^1.42.1
 
-  '@expressive-code/core@0.41.2':
-    resolution: {integrity: sha512-AJW5Tp9czbLqKMzwudL9Rv4js9afXBxkSGLmCNPq1iRgAYcx9NkTPJiSNCesjKRWoVC328AdSu6fqrD22zDgDg==}
+  '@expressive-code/core@0.41.3':
+    resolution: {integrity: sha512-9qzohqU7O0+JwMEEgQhnBPOw5DtsQRBXhW++5fvEywsuX44vCGGof1SL5OvPElvNgaWZ4pFZAFSlkNOkGyLwSQ==}
 
-  '@expressive-code/plugin-collapsible-sections@0.41.2':
-    resolution: {integrity: sha512-gyg864xlkLFYLDlOoO5wyZVmuFOc2vi6b/tJjEfXDj/xc8//ttuRLZ0EjuLIkch1hEhEQc9XF6agmiNYUCzeww==}
+  '@expressive-code/plugin-collapsible-sections@0.41.3':
+    resolution: {integrity: sha512-cuHIN7Ipl7gUcaWFfsgy6G3wn0Svk8dQ6WKXNQha63BURbm7CSBhD6y9qFGeIOrxaJtvH4Pj3Xb4C2Ni0OVwYA==}
 
   '@expressive-code/plugin-frames@0.41.2':
     resolution: {integrity: sha512-pfy0hkJI4nbaONjmksFDcuHmIuyPTFmi1JpABe4q2ajskiJtfBf+WDAL2pg595R9JNoPrrH5+aT9lbkx2noicw==}
@@ -5755,7 +5755,7 @@ snapshots:
       ansi-to-html: 0.7.2
       marked: 12.0.2
 
-  '@expressive-code/core@0.41.2':
+  '@expressive-code/core@0.41.3':
     dependencies:
       '@ctrl/tinycolor': 4.1.0
       hast-util-select: 6.0.4
@@ -5767,22 +5767,22 @@ snapshots:
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
 
-  '@expressive-code/plugin-collapsible-sections@0.41.2':
+  '@expressive-code/plugin-collapsible-sections@0.41.3':
     dependencies:
-      '@expressive-code/core': 0.41.2
+      '@expressive-code/core': 0.41.3
 
   '@expressive-code/plugin-frames@0.41.2':
     dependencies:
-      '@expressive-code/core': 0.41.2
+      '@expressive-code/core': 0.41.3
 
   '@expressive-code/plugin-shiki@0.41.2':
     dependencies:
-      '@expressive-code/core': 0.41.2
+      '@expressive-code/core': 0.41.3
       shiki: 3.7.0
 
   '@expressive-code/plugin-text-markers@0.41.2':
     dependencies:
-      '@expressive-code/core': 0.41.2
+      '@expressive-code/core': 0.41.3
 
   '@fastify/busboy@2.1.1': {}
 
@@ -8057,7 +8057,7 @@ snapshots:
 
   expressive-code@0.41.2:
     dependencies:
-      '@expressive-code/core': 0.41.2
+      '@expressive-code/core': 0.41.3
       '@expressive-code/plugin-frames': 0.41.2
       '@expressive-code/plugin-shiki': 0.41.2
       '@expressive-code/plugin-text-markers': 0.41.2
