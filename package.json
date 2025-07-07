@@ -91,7 +91,7 @@
         "prettier-plugin-astro": "^0.14.0",
         "prettier-plugin-organize-imports": "^4.0.0",
         "prettier-plugin-toml": "^2.0.1",
-        "typescript-eslint": "8.35.1",
+        "typescript-eslint": "8.36.0",
         "vitest": "^3.0.0",
         "vitest-mock-extended": "^3.0.0"
     },
