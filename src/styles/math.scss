@@ -1,15 +1,10 @@
 svg.typst-doc {
-    @apply dark:invert-100 dark:contrast-105;
+    @apply dark:invert-100 dark:contrast-105 text-xl overflow-auto;
 }
 
-:not(p) {
+p,
+ul {
     svg.typst-doc {
-        @apply text-xl overflow-auto;
-    }
-}
-
-p {
-    svg.typst-doc {
-        @apply inline font-size-unset;
+        @apply inline font-size-unset overflow-unset;
     }
 }
