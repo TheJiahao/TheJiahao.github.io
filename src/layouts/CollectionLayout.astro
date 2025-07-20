@@ -52,10 +52,10 @@ const {
     </main>
 
     {
-        pagination ? (
+        pagination && (
             <footer flex="~ col" items-center>
                 <Pagination {...pagination} {language} />
             </footer>
-        ) : null
+        )
     }
 </NavigationBarLayout>
