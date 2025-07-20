@@ -18,7 +18,7 @@ interface Props extends Partial<Multilingual> {
     language: string;
     description?: string;
     searchBox?: boolean;
-    pagination?: Omit<PaginationProps, "language"> | null;
+    pagination?: Omit<PaginationProps, "language">;
 }
 
 const {
