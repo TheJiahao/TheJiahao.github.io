@@ -32,17 +32,16 @@ const {
 ---
 
 <BaseLayout {title} {description} {image} {language} languages={alternates}>
-    <Fragment slot="head">
-        <BlogSchema
-            {title}
-            {description}
-            {date}
-            {lastModified}
-            {image}
-            {language}
-            {license}
-        />
-    </Fragment>
+    <BlogSchema
+        slot="head"
+        {title}
+        {description}
+        {date}
+        {lastModified}
+        {image}
+        {language}
+        {license}
+    />
 
     <BackLink {language} slot="left-sidebar" className="self-end" />
 
