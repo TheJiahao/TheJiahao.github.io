@@ -1,0 +1,9 @@
+{
+    "title": "Laskutys",
+    "url": "https://github.com/TheJiahao/laskutys",
+    "description": {  
+        "en": "A Typst template for making invoices satisfying Finnish standards.",
+        "zh-cn": "符合芬兰标准的 Typst 账单模板。"
+    },
+    "image": "./images/laskutys.svg"
+}
