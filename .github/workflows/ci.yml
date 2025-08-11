@@ -16,7 +16,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up
         uses: ./.github/workflows/setup-action
@@ -40,7 +40,7 @@ jobs:
     environment: test
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up
         uses: ./.github/workflows/setup-action
