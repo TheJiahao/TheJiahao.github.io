@@ -16,7 +16,7 @@ jobs:
     environment: test
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -47,7 +47,7 @@ jobs:
     name: Merge Playwright reports
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up
         uses: ./.github/workflows/setup-action
