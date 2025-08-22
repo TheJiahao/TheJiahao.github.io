@@ -28,7 +28,7 @@ jobs:
         run: echo ${{ secrets.INDEXNOW_KEY }} > dist/IndexNow-${{ secrets.INDEXNOW_KEY }}.txt
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
