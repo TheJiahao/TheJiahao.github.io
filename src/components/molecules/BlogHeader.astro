@@ -18,14 +18,14 @@ const { title, image, date, language, languages, slug, ...props } = Astro.props;
 const id = getUUID(title);
 ---
 
-<header flex="~ col" gap-4>
+<header flex="~ col" gap-4 class="not-prose">
     <CoverImage
         image={image}
         alt=""
         viewTransitionName=`image-${id}`
         metadata
     />
-    <div px-4 lg:px-8>
+    <div px-4 lg:px-8 flex="~ col" gap-4>
         <Details {title} viewTransitionName={`title-${id}`} {...props} />
         <div flex="~ row" gap-4>
             <DateComponent {date} />
