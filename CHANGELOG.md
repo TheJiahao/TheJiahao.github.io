@@ -1,5 +1,67 @@
 # Changelog
 
+## [3.8.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.7.0...v3.8.0) (2025-09-26)
+
+
+### Features
+
+* ✨ Render math with Typst ([096d342](https://github.com/TheJiahao/TheJiahao.github.io/commit/096d342a5fa78cb9de1d7c1dfc15755fd898d8fd)), closes [#845](https://github.com/TheJiahao/TheJiahao.github.io/issues/845)
+* **font:** ✨ Set custom fonts ([4ba0d10](https://github.com/TheJiahao/TheJiahao.github.io/commit/4ba0d108ec9cbab25c341bbff9a48bae90082ede))
+* **math:** ✨ Adjust equation style ([35ddb51](https://github.com/TheJiahao/TheJiahao.github.io/commit/35ddb51dcf2cdbf014f3e9c59d1cbba906896d59)), closes [#845](https://github.com/TheJiahao/TheJiahao.github.io/issues/845)
+* **math:** Make long equation scrollable ([41a9286](https://github.com/TheJiahao/TheJiahao.github.io/commit/41a9286b5d6335fcd536e0485ed5aca1914bf62b)), closes [#845](https://github.com/TheJiahao/TheJiahao.github.io/issues/845)
+* **navbar:** ✨ Add borders to mobile navbar ([3feb9ad](https://github.com/TheJiahao/TheJiahao.github.io/commit/3feb9ad2f1d1f55f447d20c0e989386fa4291106))
+* **projects:** ✨ Add laskutys ([bdb512a](https://github.com/TheJiahao/TheJiahao.github.io/commit/bdb512acfda2e9a627142a4f0732f23ea74f8ea2))
+* **search:** ✨ Add data-pagefind-meta to cover images ([a5efc71](https://github.com/TheJiahao/TheJiahao.github.io/commit/a5efc719670214a0c7f891a3788f4f8b9a973c75)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** ✨ Add initPagefind ([c96e456](https://github.com/TheJiahao/TheJiahao.github.io/commit/c96e4561d011d319299e7a01126425eea9abbb72)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** ✨ Add pagefind based search ([726cc76](https://github.com/TheJiahao/TheJiahao.github.io/commit/726cc7633f96dbce3eb472c536900d8e5cdddc7c)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** ✨ Add pagefind types ([ba8bff7](https://github.com/TheJiahao/TheJiahao.github.io/commit/ba8bff7f761136145f0568f3e0c5edd91e36015a)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** ✨ Configure pagefind ([4a8719f](https://github.com/TheJiahao/TheJiahao.github.io/commit/4a8719fc1d272e8887225d13e0072a9f964fdef4)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** ✨ Only index main content ([8fa739f](https://github.com/TheJiahao/TheJiahao.github.io/commit/8fa739f0139a90412b4177e52848c13a6fdea234)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** ✨ Run pagefind after build ([8b993bc](https://github.com/TheJiahao/TheJiahao.github.io/commit/8b993bca2441efdacd609fc3e64c86fcb0326e39)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** ✨ Use accent color in result marking ([5357e47](https://github.com/TheJiahao/TheJiahao.github.io/commit/5357e47d4728f2b3334679c0f8e07e14ca4b5b15))
+
+
+### Bug Fixes
+
+* 🐛 Code font ([4103984](https://github.com/TheJiahao/TheJiahao.github.io/commit/41039842655ff15ee6a5047e4bddfff2460d16e2))
+* 🐛 Equation not enclosed with $ ([cc3d9d2](https://github.com/TheJiahao/TheJiahao.github.io/commit/cc3d9d21290188a359941ca5abe281825a970628))
+* 🐛 Extra space above blog cover ([a795f55](https://github.com/TheJiahao/TheJiahao.github.io/commit/a795f5575467b605a9fa4221b924377b40b81bb4))
+* 🐛 Outdated lockfile ([b861db7](https://github.com/TheJiahao/TheJiahao.github.io/commit/b861db73d759c0fb742ce17481f5b51e160b4741))
+* 🐛 Outline not shown when focused ([d5cdc55](https://github.com/TheJiahao/TheJiahao.github.io/commit/d5cdc554bca6795f55467c47b8ce99033f39c704))
+* 🐛 Replace pnpm with bun ([b34fd69](https://github.com/TheJiahao/TheJiahao.github.io/commit/b34fd69c72802c11e35765932dbcba9c2966a916))
+* 🐛 Suppress type error of preset-theme ([776ede9](https://github.com/TheJiahao/TheJiahao.github.io/commit/776ede9e05c6a2256c4d48ed864ba1503961945f))
+* 🐛 Typo ([11cfb8b](https://github.com/TheJiahao/TheJiahao.github.io/commit/11cfb8b448087e108e8dcc411fb044691ef738e6))
+* 🐛 Typo ([174251c](https://github.com/TheJiahao/TheJiahao.github.io/commit/174251c0def54612d22acf03e940a85167438aa3))
+* 🐛 Typo ([3a85b3b](https://github.com/TheJiahao/TheJiahao.github.io/commit/3a85b3b0890740aeab384154247ce19dbcca2117))
+* 🐛 Typo ([9881a2f](https://github.com/TheJiahao/TheJiahao.github.io/commit/9881a2f97ad95e15d6cf3fb29f791205127315ae))
+* 🐛 Typo ([cc7f4bd](https://github.com/TheJiahao/TheJiahao.github.io/commit/cc7f4bd421fdd71cfc09c5dc50261ba364cab122))
+* **back-button:** 🐛 Different x and y padding ([52cc8b2](https://github.com/TheJiahao/TheJiahao.github.io/commit/52cc8b2be4a5f6f30aa8dac8beb9717f9788d783))
+* **build:** 🐛 📦️ Update lockfile ([aa08899](https://github.com/TheJiahao/TheJiahao.github.io/commit/aa08899d6f50019de364d970f327e1f97cb74738))
+* **ci:** 🐛 👷 Adjust fields needed in schema ([f07fe91](https://github.com/TheJiahao/TheJiahao.github.io/commit/f07fe91602c97a06d91c5edc866beb3d37522c29))
+* **ci:** 🐛 👷 Only install bun dependencies ([cbedacd](https://github.com/TheJiahao/TheJiahao.github.io/commit/cbedacde49e46bbf418b6ec227a192105165160c))
+* **ci:** 🐛 👷 Remove pnpm ([d02e30c](https://github.com/TheJiahao/TheJiahao.github.io/commit/d02e30c0d10594ad2142a896f79248d65decedfb))
+* **math:** 🐛 Inline equations displayed as blocks in list ([dff0ea6](https://github.com/TheJiahao/TheJiahao.github.io/commit/dff0ea6cbb709d776d8c95296a42b2e873548fb9))
+* **navbar:** 🐛 Remove menu padding in desktop ([203561c](https://github.com/TheJiahao/TheJiahao.github.io/commit/203561cf7a10a0c9ba5d7977f20a4ddc8c1db5c5))
+* **search:** 🐛 Limit not working ([b16c85d](https://github.com/TheJiahao/TheJiahao.github.io/commit/b16c85d6fb6c3b8ff800103824db233dff75d6e9)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **search:** 🐛 Suppress Vite import warning ([236472b](https://github.com/TheJiahao/TheJiahao.github.io/commit/236472b93da68d5d6d43bdadbb3340593e672560)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **test:** 🐛 🚨 Remove deprecated test ([9e5b78a](https://github.com/TheJiahao/TheJiahao.github.io/commit/9e5b78a8158345aed2919bb257e1f4736f5e4dbf))
+* **type:** 🐛 Make Page.image optional ([fba777c](https://github.com/TheJiahao/TheJiahao.github.io/commit/fba777ce6f86836fa29dbcc7c27096620a6f65e2)), closes [#848](https://github.com/TheJiahao/TheJiahao.github.io/issues/848)
+* **typst-tutorial:** 🐛 Update snippet ([cf25ad3](https://github.com/TheJiahao/TheJiahao.github.io/commit/cf25ad3cf8e1f347d8828271645b0e9315cb02bd))
+
+
+### Performance Improvements
+
+* **typst-tutorial:** ⚡️ Remove unnecessary math equations ([368bd75](https://github.com/TheJiahao/TheJiahao.github.io/commit/368bd75386d206790270cf9ca75b0ddfd6705245))
+
+
+### Reverts
+
+* "build: 📦️ Replace pnpm with Bun" ([e355ad9](https://github.com/TheJiahao/TheJiahao.github.io/commit/e355ad92c82e80a9ae701302cfb942a117cd9c93))
+* "ci: 👷 Remove container" ([c8ee4d7](https://github.com/TheJiahao/TheJiahao.github.io/commit/c8ee4d7e34c7be5df56d03e7d11c8535f6a78f75))
+* "fix(ci): 🐛 👷 Only install bun dependencies" ([1832c23](https://github.com/TheJiahao/TheJiahao.github.io/commit/1832c2327bd8e21ffaf09847d778ef4aeb118495))
+* "refactor: ♻️ Replace box-shadow with drop-shadow" ([09fa17d](https://github.com/TheJiahao/TheJiahao.github.io/commit/09fa17d7e9653e8406c54442712e8dbbcb8a0224))
+* Change Bun back to pnpm ([ae99ce8](https://github.com/TheJiahao/TheJiahao.github.io/commit/ae99ce812be2f41c19dfa96bfb14350b48755f0a))
+
 ## [3.7.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.6.0...v3.7.0) (2025-06-22)
 
 ### Features
