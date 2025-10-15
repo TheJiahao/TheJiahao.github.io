@@ -91,7 +91,7 @@ importers:
         version: 9.0.1
       rehype-rewrite:
         specifier: ^4.0.2
-        version: 4.0.2
+        version: 4.0.3
       rehype-stringify:
         specifier: ^10.0.0
         version: 10.0.1
@@ -3982,8 +3982,8 @@ packages:
   rehype-recma@1.0.0:
     resolution: {integrity: sha512-lqA4rGUf1JmacCNWWZx0Wv1dHqMwxzsDWYMTowuplHF3xH0N/MmrZ/G3BDZnzAkRmxDadujCjaKM2hqYdCBOGw==}
 
-  rehype-rewrite@4.0.2:
-    resolution: {integrity: sha512-rjLJ3z6fIV11phwCqHp/KRo8xuUCO8o9bFJCNw5o6O2wlLk6g8r323aRswdGBQwfXPFYeSuZdAjp4tzo6RGqEg==}
+  rehype-rewrite@4.0.3:
+    resolution: {integrity: sha512-y6zPHL2tBqm1TF+lFV8SKH65+DYqkm1CUXipNebTo4l4R/rL4bOLOS+klp9VlcKhytiyYVZB72AA/1F4+lOk9g==}
     engines: {node: '>=16.0.0'}
 
   rehype-stringify@10.0.1:
@@ -9778,7 +9778,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  rehype-rewrite@4.0.2:
+  rehype-rewrite@4.0.3:
     dependencies:
       hast-util-select: 6.0.4
       unified: 11.0.5
