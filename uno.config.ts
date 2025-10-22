@@ -16,7 +16,6 @@ export default defineConfig({
             dark: "media",
         }),
         presetTypography(),
-        // @ts-expect-error: Preset Theme has type error
         presetTheme<Theme>({
             theme: {
                 dark: {
