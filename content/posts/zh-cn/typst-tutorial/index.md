@@ -95,7 +95,7 @@ if True:
 
 ### 列表
 
-Typst 中列表分为有序列表（[`enum`](https://typst.app/docs/reference/model/enum/)）和无序列表（[`list`](https://typst.app/docs/reference/model/enum/)），前者列表项前面有编号，后者只有统一的标记。
+Typst 中列表分为有序列表（[`enum`](https://typst.app/docs/reference/model/enum/)）和无序列表（[`list`](https://typst.app/docs/reference/model/list/)），前者列表项前面有编号，后者只有统一的标记。
 有序列表用加号 `+` 标记，无序列表用减号 `-`。
 以下示例中展示了两种不同的列表。
 
