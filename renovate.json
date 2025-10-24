@@ -13,12 +13,12 @@
     "dependencyDashboard": true,
     "packageRules": [
         {
-            "matchDepPatterns": ["playwright"],
+            "matchDepNames": ["playwright"],
             "groupName": "playwright and Docker image",
             "matchUpdateTypes": ["digest", "patch", "minor", "major"]
         },
         {
-            "matchDepPatterns": ["unocss**"],
+            "matchPackageNames": ["unocss", "@unocss/**"],
             "groupName": "Unocss",
             "automerge": false
         }
