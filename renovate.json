@@ -16,6 +16,11 @@
             "matchDepPatterns": ["playwright"],
             "groupName": "playwright and Docker image",
             "matchUpdateTypes": ["digest", "patch", "minor", "major"]
+        },
+        {
+            "matchDepPatterns": ["unocss**"],
+            "groupName": "Unocss",
+            "automerge": false
         }
     ]
 }
