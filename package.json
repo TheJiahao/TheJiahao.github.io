@@ -18,7 +18,8 @@
         "preview:host": "pnpm run build && astro preview --host",
         "dev": "astro dev",
         "dev:host": "astro dev --host",
-        "prepare": "husky"
+        "prepare": "husky",
+        "test:browser": "vitest --config=vitest.browser.config.ts"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.0",
@@ -78,6 +79,8 @@
         "@types/react-dom": "^19.0.0",
         "@types/sanitize-html": "^2.11.0",
         "@unocss/eslint-config": "~66.4.0",
+        "@vitejs/plugin-react": "^5.1.0",
+        "@vitest/browser-playwright": "^4.0.8",
         "@vitest/coverage-v8": "^4.0.0",
         "devmoji": "^2.3.0",
         "eslint": "^9.0.0",
@@ -93,6 +96,7 @@
         "prettier-plugin-toml": "^2.0.1",
         "typescript-eslint": "8.46.3",
         "vitest": "^4.0.0",
+        "vitest-browser-react": "^2.0.2",
         "vitest-mock-extended": "^3.0.0"
     },
     "packageManager": "pnpm@10.20.0",
