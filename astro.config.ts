@@ -38,6 +38,11 @@ export default defineConfig({
                 },
             },
             filter: (url) => !url.match(/\/\d+$/),
+            namespaces: {
+                news: false,
+                image: false,
+                video: false,
+            },
         }),
         robotsTxt({
             policy: [
