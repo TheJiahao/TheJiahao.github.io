@@ -16,7 +16,7 @@ importers:
         version: 0.9.5(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.3.10(astro@5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))
+        version: 4.3.10(astro@5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))
       '@astrojs/react':
         specifier: ^4.0.0
         version: 4.4.2(@types/node@24.10.1)(@types/react-dom@19.2.3(@types/react@19.2.4))(@types/react@19.2.4)(jiti@2.6.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.94.0)(yaml@2.8.1)
@@ -52,10 +52,10 @@ importers:
         version: 66.4.2
       astro:
         specifier: ^5.0.0
-        version: 5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
+        version: 5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
       astro-expressive-code:
         specifier: ^0.41.0
-        version: 0.41.3(astro@5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))
+        version: 0.41.3(astro@5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -64,7 +64,7 @@ importers:
         version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3)
       astro-seo-schema:
         specifier: ^5.0.0
-        version: 5.1.0(astro@5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5)
+        version: 5.1.0(astro@5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5)
       dayjs:
         specifier: ^1.11.11
         version: 1.11.19
@@ -2104,8 +2104,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@5.15.6:
-    resolution: {integrity: sha512-luLcw+FGkeUHYTfbmYjIWHB4T0D+3VSjCy8DKTXglJ2O3lU40AbwmPVBcnqhRnA1SneKzP5V5pzqjsHzUZ1+Rg==}
+  astro@5.15.7:
+    resolution: {integrity: sha512-Zmw6otInhxcjoGcEyEN+wxgdiQERQOS3VzOmAKsDdKK8Fb4x1656r+9NtaTXCRZ0/fGtHjkSvkGUhZUJLXKfxQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4332,8 +4332,8 @@ packages:
     resolution: {integrity: sha512-UOPtVuYkzYGee0Bd2Szz8d2G3RfMfJ2t3qVdZUAozZyAk+a0Sxa+QKix0YCwjL/A1RR0ar44nCxaoN9FxdJGwA==}
     engines: {node: '>= 18'}
 
-  smol-toml@1.5.0:
-    resolution: {integrity: sha512-Jjsa8LZ+DyLbZ7gVi9d18bS8oxq0PQrTlVDfvYXgh7gxLwbW9QWgvakHD+hBLUtr5NahfStd8LQLGSPchaEJ8Q==}
+  smol-toml@1.5.2:
+    resolution: {integrity: sha512-QlaZEqcAH3/RtNyet1IPIYPsEWAaYyXXv1Krsi+1L/QHppjX4Ifm8MQsBISz9vE8cHicIq3clogsheili5vhaQ==}
     engines: {node: '>= 18'}
 
   source-map-js@1.2.1:
@@ -5343,7 +5343,7 @@ snapshots:
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
       shiki: 3.15.0
-      smol-toml: 1.5.0
+      smol-toml: 1.5.2
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -5352,12 +5352,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.10(astro@5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))':
+  '@astrojs/mdx@4.3.10(astro@5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.8
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -7301,9 +7301,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-expressive-code@0.41.3(astro@5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)):
+  astro-expressive-code@0.41.3(astro@5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)):
     dependencies:
-      astro: 5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
       rehype-expressive-code: 0.41.3
 
   astro-robots-txt@1.0.0:
@@ -7311,9 +7311,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.25.67
 
-  astro-seo-schema@5.1.0(astro@5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5):
+  astro-seo-schema@5.1.0(astro@5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5):
     dependencies:
-      astro: 5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1)
       schema-dts: 1.1.5
 
   astro-seo@0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.6.2)(typescript@5.9.3):
@@ -7324,7 +7324,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.15.6(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1):
+  astro@5.15.7(@types/node@24.10.1)(jiti@2.6.1)(rollup@4.53.2)(sass@1.94.0)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.4
@@ -7371,7 +7371,7 @@ snapshots:
       rehype: 13.0.2
       semver: 7.7.3
       shiki: 3.15.0
-      smol-toml: 1.5.0
+      smol-toml: 1.5.2
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tsconfck: 3.1.6(typescript@5.9.3)
@@ -10385,7 +10385,7 @@ snapshots:
 
   smol-toml@1.3.4: {}
 
-  smol-toml@1.5.0: {}
+  smol-toml@1.5.2: {}
 
   source-map-js@1.2.1: {}
 
