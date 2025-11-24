@@ -153,7 +153,17 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 ```
 
-由于 Zim 会运行 `compinit`，所以还需要 `~/.zshenv` 中禁用 Ubuntu 的 `compinit` 以加快启动速度[^zim_installation][^global_compinit]：
+## 优化启动速度
+
+设置 `no_global_rcs` 可能会让启动时间快几十毫秒（取决于发行版）。设置后，Zsh 在启动时不会加载 `/etc/zsh/zshrc`。
+其中部分配置和 Zim 插件重复，但也可能包含有用的配置。
+读者可查看该文件并决定是否禁用。
+
+```shell title="~/.zshenv"
+setopt no_global_rcs
+```
+
+此外，Ubuntu 用户可以单独禁用 `/etc/zsh/zshrc` 中 `compinit` 以加快启动速度，Zim 会运行 `compinit` [^zim_installation][^global_compinit]：
 
 ```shell title="~/.zshenv"
 skip_global_compinit=1
@@ -162,28 +172,30 @@ skip_global_compinit=1
 ## 测速
 
 配置好后使用 [hyperfine](https://github.com/sharkdp/hyperfine) 测试 Zsh 启动速度。
-测试环境为 WSL Ubuntu 22.04 LTS。
+测试环境为 Fedora 43。
 
 ### 启用 Zim
 
 ```console
-> hyperfine --warmup 3 "zsh -l -i -c exit"
+> hyperfine --warmup=3 --shell=none "zsh -l -i -c exit" 
 Benchmark 1: zsh -l -i -c exit
-  Time (mean ± σ):      30.3 ms ±   1.0 ms    [User: 14.5 ms, System: 5.9 ms]
-  Range (min … max):    28.1 ms …  32.9 ms    85 runs
+  Time (mean ± σ):      18.9 ms ±   0.7 ms    [User: 11.2 ms, System: 7.6 ms]
+  Range (min … max):    17.7 ms …  21.3 ms    153 runs
 ```
 
 - `hyperfine` 的参数 `--warmup 3` 用于在测速前运行几遍命令以避免冷启动影响结果。
 - Zsh 的参数 `-l` 和 `-i` 用于模拟用户启动 Zsh，具体可参考 [文档](https://zsh.sourceforge.io/Guide/zshguide02.html)。
 - `-c` 用于执行 `exit` 命令以结束 Zsh。
+- `--shell=none` 用于不通过 shell 直接运行命令。
 
 ### 禁用 Zim（不读取 `.zshrc`）
 
 ```console
-> hyperfine --warmup 3 "zsh --no-rcs -l -i -c exit"
+> hyperfine --warmup=3 --shell=none "zsh --no-rcs -l -i -c exit"
 Benchmark 1: zsh --no-rcs -l -i -c exit
-  Time (mean ± σ):       6.8 ms ±   0.9 ms    [User: 1.1 ms, System: 0.1 ms]
-  Range (min … max):     5.1 ms …  12.0 ms    244 runs
+  Time (mean ± σ):       1.1 ms ±   0.1 ms    [User: 0.4 ms, System: 0.7 ms]
+  Range (min … max):     0.9 ms …   1.5 ms    2258 runs
+
 ```
 
 注意到，Zim 还是比较快的，仅增加了约 20 毫秒的启动时间。
