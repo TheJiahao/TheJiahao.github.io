@@ -4,7 +4,7 @@ Configuration for project
 
 ## Environment variables
 
-| Name | Default | Required | Notes |
+|Name|Default|Required|Notes|
 |-|-|-|-|
 |`PUBLIC_PORT`|`4321`|❌|Port for development and preview server|
 |`SITE_BASE_URL`||✅[^base_url]|Required for RSS and sitemap in production.|
