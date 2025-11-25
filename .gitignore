@@ -5,6 +5,7 @@ db.json
 _multiconfig.yml
 resources
 .cache
+.pnpm-store
 
 # build output
 dist/
