@@ -6,7 +6,8 @@ import { LuSearch, LuX } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 
 interface SearchFormProps
-    extends TranslatedElement,
+    extends
+        TranslatedElement,
         Required<
             Pick<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> &
                 Pick<DOMAttributes<HTMLFormElement>, "onReset">

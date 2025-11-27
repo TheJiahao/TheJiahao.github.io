@@ -4,8 +4,7 @@ import { type AriaAttributes, type ButtonHTMLAttributes } from "react";
 import { LuMenu, LuX } from "react-icons/lu";
 
 interface MenuButtonProps
-    extends AriaAttributes,
-        ButtonHTMLAttributes<HTMLButtonElement> {
+    extends AriaAttributes, ButtonHTMLAttributes<HTMLButtonElement> {
     expanded?: boolean;
 }
 

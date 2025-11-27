@@ -2,8 +2,7 @@ import LinkCard, { type LinkProps } from "components/molecules/LinkCard";
 import type { AriaAttributes, HTMLAttributes } from "react";
 
 interface LinkListProps
-    extends HTMLAttributes<HTMLUListElement>,
-        AriaAttributes {
+    extends HTMLAttributes<HTMLUListElement>, AriaAttributes {
     links: LinkProps[];
 }
 
