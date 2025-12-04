@@ -6,7 +6,8 @@ import {
 } from "react";
 
 interface MenuProps
-    extends PropsWithChildren,
+    extends
+        PropsWithChildren,
         HTMLAttributes<HTMLUListElement>,
         AriaAttributes {
     /** Child component direction, defaults to column. */

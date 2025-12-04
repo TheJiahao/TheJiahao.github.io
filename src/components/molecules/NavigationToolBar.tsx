@@ -6,9 +6,7 @@ import type { AriaAttributes, HTMLAttributes, MouseEventHandler } from "react";
 import { getTranslation } from "utils/getTranslation";
 
 interface NavigationToolBarProps
-    extends HTMLAttributes<HTMLDivElement>,
-        AriaAttributes,
-        TranslatedElement {
+    extends HTMLAttributes<HTMLDivElement>, AriaAttributes, TranslatedElement {
     handleExpand: MouseEventHandler<HTMLButtonElement>;
     avatar?: ImageMetadata;
     expanded?: boolean;
