@@ -1,24 +1,9 @@
 ---
 date: 2024-02-22T19:43:26+02:00
 
-aliases:
-    - 54972536
-
 title: Visual Studio Code extensions.experimental.affinity 兼容性问题
 description: 本文汇总了 Visual Studio Code 实验性设置 `extensions.experimental.affinity` 的兼容性问题。
-categories:
-tags:
-    - VS Code
-    - Markdown
-    - Git
 image: /src/assets/images/vscode_logo.svg
-
-hidden: false
-comments: true
-draft: false
-
-sitemap:
-    disable: false
 ---
 
 本文汇总了 Visual Studio Code 实验性设置 `extensions.experimental.affinity` 的兼容性问题。
