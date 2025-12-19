@@ -34,6 +34,10 @@ A collection of compatibility issues of experimental setting `extensions.experim
 - GitHub Pull Requests issue/PR completion not working
 - Convetional Commits: `Extension vscode.git not found!`
 
+## `vscode.github-authentication`
+
+- GitHub Pull Requests issue/PR completion not working
+
 ## `bierner.markdown-mermaid`
 
 - Mermaid Charts sometimes not rendering

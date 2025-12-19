@@ -34,6 +34,10 @@ sitemap:
 - GitHub Pull Requests issue/PR 补全失效
 - Convetional Commits 找不到 Git：`Extension vscode.git not found!`
 
+## `vscode.github-authentication`
+
+- GitHub Pull Requests issue/PR 补全失效
+
 ## `bierner.markdown-mermaid`
 
 - Mermaid 图表有时不显示
