@@ -16,7 +16,7 @@ importers:
         version: 0.9.6(prettier-plugin-astro@0.14.1)(prettier@3.8.0)(typescript@5.9.3)
       '@astrojs/mdx':
         specifier: ^4.0.0
-        version: 4.3.13(astro@5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))
+        version: 4.3.13(astro@5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))
       '@astrojs/react':
         specifier: ^4.0.0
         version: 4.4.2(@types/node@24.10.9)(@types/react-dom@19.2.3(@types/react@19.2.8))(@types/react@19.2.8)(jiti@2.6.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)(yaml@2.8.1)
@@ -52,10 +52,10 @@ importers:
         version: 66.4.2
       astro:
         specifier: ^5.0.0
-        version: 5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
+        version: 5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
       astro-expressive-code:
         specifier: ^0.41.0
-        version: 0.41.6(astro@5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))
+        version: 0.41.6(astro@5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -64,7 +64,7 @@ importers:
         version: 1.1.0(prettier-plugin-astro@0.14.1)(prettier@3.8.0)(typescript@5.9.3)
       astro-seo-schema:
         specifier: ^5.0.0
-        version: 5.1.0(astro@5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5)
+        version: 5.1.0(astro@5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5)
       dayjs:
         specifier: ^1.11.11
         version: 1.11.19
@@ -2196,8 +2196,8 @@ packages:
   astro-seo@1.1.0:
     resolution: {integrity: sha512-G6LDNDyga30o+52v58jU7C35n3cORUzk7RSuY+xf/ZRbW6JiNplyaOO1VoYVKO+xzYNaBcxqNln2RFRR/wgJNQ==}
 
-  astro@5.16.10:
-    resolution: {integrity: sha512-mBaRwFrqwCHiKDvvfNW2rRRkLAqnkj3lbkte6Vg4OzeUiDyEsdU4oOqTZxHJf/mxzZvBiU37BxG1oeh+tq1IUA==}
+  astro@5.16.11:
+    resolution: {integrity: sha512-Z7kvkTTT5n6Hn5lCm6T3WU6pkxx84Hn25dtQ6dR7ATrBGq9eVa8EuB/h1S8xvaoVyCMZnIESu99Z9RJfdLRLDA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2902,9 +2902,9 @@ packages:
   fontace@0.4.0:
     resolution: {integrity: sha512-moThBCItUe2bjZip5PF/iZClpKHGLwMvR79Kp8XpGRBrvoRSnySN4VcILdv3/MJzbhvUA5WeiUXF5o538m5fvg==}
 
-  fontkitten@1.0.1:
-    resolution: {integrity: sha512-m+/cO+/kAU9farlejecXLgQH20+UXyH0K6oosGtogAz7BWco+KTYE60epKwMt8eVxqlOE2Fs+GoHVlGDUbKOoA==}
-    engines: {node: '>=24.12.0'}
+  fontkitten@1.0.2:
+    resolution: {integrity: sha512-piJxbLnkD9Xcyi7dWJRnqszEURixe7CrF/efBfbffe2DPyabmuIuqraruY8cXTs19QoM8VJzx47BDRVNXETM7Q==}
+    engines: {node: '>=20'}
 
   for-each@0.3.5:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
@@ -5395,12 +5395,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.3.13(astro@5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))':
+  '@astrojs/mdx@4.3.13(astro@5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.10
       '@mdx-js/mdx': 3.1.1
       acorn: 8.15.0
-      astro: 5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
       es-module-lexer: 1.7.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -5582,7 +5582,7 @@ snapshots:
   '@babel/template@7.27.2':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/parser': 7.28.5
+      '@babel/parser': 7.28.6
       '@babel/types': 7.28.6
 
   '@babel/traverse@7.28.4':
@@ -5623,7 +5623,7 @@ snapshots:
 
   '@capsizecss/unpack@4.0.0':
     dependencies:
-      fontkitten: 1.0.1
+      fontkitten: 1.0.2
 
   '@commitlint/cli@20.3.1(@types/node@24.10.9)(typescript@5.9.3)':
     dependencies:
@@ -7387,9 +7387,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro-expressive-code@0.41.6(astro@5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)):
+  astro-expressive-code@0.41.6(astro@5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)):
     dependencies:
-      astro: 5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
       rehype-expressive-code: 0.41.6
 
   astro-robots-txt@1.0.0:
@@ -7397,9 +7397,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.25.67
 
-  astro-seo-schema@5.1.0(astro@5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5):
+  astro-seo-schema@5.1.0(astro@5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1))(schema-dts@1.1.5):
     dependencies:
-      astro: 5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
+      astro: 5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1)
       schema-dts: 1.1.5
 
   astro-seo@1.1.0(prettier-plugin-astro@0.14.1)(prettier@3.8.0)(typescript@5.9.3):
@@ -7410,7 +7410,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@5.16.10(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1):
+  astro@5.16.11(@types/node@24.10.9)(jiti@2.6.1)(rollup@4.55.1)(sass@1.97.2)(typescript@5.9.3)(yaml@2.8.1):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -8344,9 +8344,9 @@ snapshots:
 
   fontace@0.4.0:
     dependencies:
-      fontkitten: 1.0.1
+      fontkitten: 1.0.2
 
-  fontkitten@1.0.1:
+  fontkitten@1.0.2:
     dependencies:
       tiny-inflate: 1.0.3
 
