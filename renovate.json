@@ -13,7 +13,7 @@
     "dependencyDashboard": true,
     "packageRules": [
         {
-            "matchPackageNames": ["**playwright**"],
+            "matchPackageNames": ["**/playwright", "@playwright/**"],
             "groupName": "playwright and Docker image",
             "matchUpdateTypes": ["digest", "patch", "minor", "major"]
         },
