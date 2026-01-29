@@ -5,6 +5,12 @@ on:
       - .github/workflows/image.yml
       - .github/workflows/release.yml
       - .github/workflows/indexing.yml
+      - Dockerfile
+      - renovate.json
+      - vercel.json
+      - .release-please-manifest.json
+      - .vscode/**
+      - LICENSE
 
   workflow_dispatch:
 
