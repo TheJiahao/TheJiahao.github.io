@@ -19,7 +19,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-713.5 -713.5 4281 4281" filter="url(#shadow)">
   <style>
     :root {
-      background: hsl(157, 40%, 55%)
+      background: hsl(157, 40%, 35%)
     }
   </style>
   <defs>
