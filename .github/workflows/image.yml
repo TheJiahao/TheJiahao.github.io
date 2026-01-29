@@ -53,4 +53,4 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha
-          outputs: type=image,compression=estargz,force-compression=true
+          outputs: type=image,compression=zstd,compression-level=3,force-compression=true
