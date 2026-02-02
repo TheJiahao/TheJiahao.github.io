@@ -30,13 +30,6 @@ export default defineConfig({
         mdx(),
         sitemap({
             lastmod: getLastModified("."),
-            i18n: {
-                defaultLocale,
-                locales: {
-                    "zh-cn": "zh-CN",
-                    en: "en-US",
-                },
-            },
             filter: (url) => !url.match(/\/\d+$/),
             namespaces: {
                 news: false,
