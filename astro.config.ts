@@ -35,6 +35,7 @@ export default defineConfig({
                 news: false,
                 image: false,
                 video: false,
+                xhtml: false,
             },
         }),
         robotsTxt({
