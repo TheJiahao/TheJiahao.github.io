@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.58.1-noble
+FROM mcr.microsoft.com/playwright:v1.58.2-noble
 
 RUN wget -qO- https://get.pnpm.io/install.sh | bash -
 
