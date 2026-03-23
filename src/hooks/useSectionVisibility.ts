@@ -49,7 +49,7 @@ const updateVisibility =
  * @returns {boolean} Whether the section is visible
  */
 const useSectionVisibility = (id: string): boolean => {
-    const [visible, setVisible] = useState<Set<string>>(new Set());
+    const [visible, setVisible] = useState(new Set());
     const [headings, setHeadings] = useState<SectionHeading[]>([]);
 
     useEffect(() => {
