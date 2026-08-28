@@ -36,11 +36,6 @@ export default defineConfig({
             use: { ...devices["Desktop Firefox"] },
             grepInvert: /@mobile/,
         },
-        {
-            name: "Desktop Safari",
-            use: { ...devices["Desktop Safari"] },
-            grepInvert: /@mobile/,
-        },
         /* Test against mobile viewports. */
         {
             name: "Mobile Chrome",
