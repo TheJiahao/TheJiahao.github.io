@@ -180,9 +180,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: ^3.0.0
         version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.12.3)(jiti@2.6.1)(jsdom@27.4.0)(sass@1.97.3)(yaml@2.8.1))
-      devmoji:
-        specifier: ^2.3.0
-        version: 2.3.0
       eslint:
         specifier: ^10.0.0
         version: 10.4.0(jiti@2.6.1)
@@ -2552,10 +2549,6 @@ packages:
     resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
     engines: {node: '>=20'}
 
-  commander@7.2.0:
-    resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
-    engines: {node: '>= 10'}
-
   commander@8.3.0:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
@@ -2756,10 +2749,6 @@ packages:
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
-
-  devmoji@2.3.0:
-    resolution: {integrity: sha512-ErQdYUsE7tKxqDzQzRos6fKWaRIFUOJvMkQODq9iYDI3o5X6nxD78XEdGNYaW5AaJW4uxj+XQTkCuJkV86Qg6g==}
-    hasBin: true
 
   diff@8.0.3:
     resolution: {integrity: sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==}
@@ -4774,9 +4763,6 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
-
-  ts-interface-checker@1.0.0:
-    resolution: {integrity: sha512-yUeWbFBDiwPodNqrqpvQpGWheL6PvNu2/pVAb9yy2vzdkkflCgwVA4U2akByPCXzYTum3/5/nB92yKuiLpSo/Q==}
 
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
@@ -7894,8 +7880,6 @@ snapshots:
 
   commander@14.0.2: {}
 
-  commander@7.2.0: {}
-
   commander@8.3.0: {}
 
   common-ancestor-path@1.0.1: {}
@@ -8073,12 +8057,6 @@ snapshots:
   devlop@1.1.0:
     dependencies:
       dequal: 2.0.3
-
-  devmoji@2.3.0:
-    dependencies:
-      chalk: 4.1.2
-      commander: 7.2.0
-      ts-interface-checker: 1.0.0
 
   diff@8.0.3: {}
 
@@ -10901,8 +10879,6 @@ snapshots:
   ts-essentials@10.1.1(typescript@5.9.3):
     optionalDependencies:
       typescript: 5.9.3
-
-  ts-interface-checker@1.0.0: {}
 
   tsconfck@3.1.6(typescript@5.9.3):
     optionalDependencies:
