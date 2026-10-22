@@ -18,7 +18,7 @@
         "preview:host": "pnpm run build && astro preview --host",
         "dev": "astro dev",
         "dev:host": "astro dev --host",
-        "prepare": "husky"
+        "prepare": "git config --local include.path ../.gitconfig"
     },
     "dependencies": {
         "@astrojs/check": "^0.9.0",

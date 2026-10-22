@@ -1,0 +1,3 @@
+[hook "commitlint"]
+    event = commit-msg
+    command = "pnpm exec commitlint --edit"
