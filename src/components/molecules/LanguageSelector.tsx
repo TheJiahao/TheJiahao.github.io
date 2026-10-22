@@ -7,7 +7,7 @@ import {
 } from "@headlessui/react";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { languageCodes as DEFAULT_LANGUAGES } from "localization";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { LuCheck, LuChevronDown, LuGlobe } from "react-icons/lu";
 import { getTranslation } from "utils/getTranslation";
 interface LanguageSelectorProps extends ListboxButtonProps {
@@ -23,11 +23,7 @@ const LanguageSelector = ({
     slug,
     ...props
 }: LanguageSelectorProps) => {
-    const [disabled, setDisabled] = useState(true);
-
-    useEffect(() => {
-        setDisabled(false);
-    }, []);
+    const [disabled, setDisabled] = useState(false);
 
     const handleNavigation = (value: string) => {
         const language = value;
