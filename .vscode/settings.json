@@ -7,7 +7,7 @@
         "editor.tabSize": 2
     },
     "eslint.useFlatConfig": true,
-    "typescript.preferences.autoImportFileExcludePatterns": ["node/test.d.ts"],
+    "js/ts.preferences.autoImportFileExcludePatterns": ["node/test.d.ts"],
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -15,9 +15,9 @@
         "typescriptreact",
         "astro"
     ],
-    "typescript.updateImportsOnFileMove.enabled": "prompt",
-    "typescript.preferences.preferTypeOnlyAutoImports": true,
-    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "js/ts.updateImportsOnFileMove.enabled": "prompt",
+    "js/ts.preferences.preferTypeOnlyAutoImports": true,
+    "js/ts.preferences.importModuleSpecifier": "non-relative",
     "svg.preview.background": "dark-transparent",
     "json5.schemaDownload.trustedDomains": {
         "https://docs.renovatebot.com/": true
