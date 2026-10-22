@@ -12,8 +12,8 @@ type MyOptions = {
 
 const pageTestUtils = test.extend<MyOptions & MyFixtures>({
     languageCode: [DEFAULT_LANGUAGE, { option: true }],
-    homepage: async ({ page, isMobile, languageCode }, use) => {
-        await use(new HomePage(page, isMobile, languageCode));
+    homepage: async ({ page, isMobile, languageCode }, callback) => {
+        await callback(new HomePage(page, isMobile, languageCode));
     },
 });
 
