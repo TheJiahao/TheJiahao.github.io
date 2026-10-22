@@ -13,7 +13,6 @@ export default defineConfig(
     },
     {
         extends: [
-            eslintReact.configs["jsx"],
             eslint.configs.recommended,
             tseslint.configs.strictTypeChecked,
             astroEslint.configs.recommended,
@@ -27,7 +26,7 @@ export default defineConfig(
             "*.config.{js,ts,mjs}",
             "playwright-report",
             "coverage",
-            ".pnpm-store"
+            ".pnpm-store",
         ],
     },
     {
