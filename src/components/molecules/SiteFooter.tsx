@@ -7,6 +7,7 @@ interface SiteFooterProps extends TranslatedElement {
     owner?: string;
     startYear?: number;
     source?: string;
+    currentYear?: number;
 }
 
 const SiteFooter = ({
@@ -14,9 +15,9 @@ const SiteFooter = ({
     owner = SITE_OWNER,
     startYear = SITE_START_YEAR,
     source = SITE_SOURCE,
+    // eslint-disable-next-line @eslint-react/purity
+    currentYear = new Date().getFullYear(),
 }: SiteFooterProps) => {
-    const year = new Date().getFullYear();
-
     return (
         <footer
             text-secondary
@@ -27,7 +28,7 @@ const SiteFooter = ({
             lg="mt-auto"
         >
             <p>
-                © {startYear} - {year} {owner}
+                © {startYear} - {currentYear} {owner}
             </p>
             <a href={source} align-icon gap-2>
                 {<SiGithub aria-hidden />}
