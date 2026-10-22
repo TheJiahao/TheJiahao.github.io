@@ -17,5 +17,5 @@ runs:
         cache: pnpm
 
     - name: Install dependencies
-      run: pnpm install
+      run: pnpm install --ignore-scripts
       shell: bash
