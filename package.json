@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "format": "prettier --write .",
-        "format:ci": "pnpm run format -- !.github/**",
+        "format:check": "prettier . --check",
         "lint": "markdownlint . && astro check && eslint .",
         "lint:fix": "markdownlint . --fix && astro check && eslint . --fix",
         "test": "vitest run",
