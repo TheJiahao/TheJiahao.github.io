@@ -11,11 +11,15 @@ export default defineConfig(
         ...eslintReact.configs["recommended-type-checked"],
         ignores: ["**/*.astro"],
     },
-    eslintReact.configs["jsx"],
-    eslint.configs.recommended,
-    ...tseslint.configs.strictTypeChecked,
-    ...astroEslint.configs.recommended,
-    unocss,
+    {
+        extends: [
+            eslintReact.configs["jsx"],
+            eslint.configs.recommended,
+            tseslint.configs.strictTypeChecked,
+            astroEslint.configs.recommended,
+            unocss,
+        ],
+    },
     {
         ignores: [
             "dist",
