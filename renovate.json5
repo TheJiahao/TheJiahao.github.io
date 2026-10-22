@@ -10,6 +10,9 @@
         "group:linters",
         "group:test",
     ],
+    commitMessageLowerCase: "never",
+    prConcurrentLimit: 2,
+    minimumReleaseAge: "14 days",
     dependencyDashboard: true,
     packageRules: [
         {
