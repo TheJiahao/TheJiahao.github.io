@@ -39,23 +39,19 @@ const {
         <slot name="head" />
     </Fragment>
 
-    {
-        searchBox && (
-            <header h-15 overflow-visible z-1>
-                <SearchBox {language} client:load />
-            </header>
-        )
-    }
+    {searchBox && (
+        <header h-15 overflow-visible z-1>
+            <SearchBox {language} client:load />
+        </header>
+    )}
 
     <main>
         <CardList cards={items} aria-label={name} />
     </main>
 
-    {
-        pagination && (
-            <footer flex="~ col" items-center>
-                <Pagination {...pagination} {language} />
-            </footer>
-        )
-    }
+    {pagination && (
+        <footer flex="~ col" items-center>
+            <Pagination {...pagination} {language} />
+        </footer>
+    )}
 </NavigationBarLayout>

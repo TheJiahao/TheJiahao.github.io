@@ -30,16 +30,14 @@ const id = getUUID(title);
         <div flex="~ row" gap-4>
             <DateComponent {date} />
 
-            {
-                languages.length > 1 && (
-                    <LanguageSelector
-                        defaultLanguage={language}
-                        {languages}
-                        {slug}
-                        client:idle
-                    />
-                )
-            }
+            {languages.length > 1 && (
+                <LanguageSelector
+                    defaultLanguage={language}
+                    {languages}
+                    {slug}
+                    client:idle
+                />
+            )}
         </div>
     </div>
 </header>

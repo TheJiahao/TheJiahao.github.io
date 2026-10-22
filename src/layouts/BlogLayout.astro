@@ -64,22 +64,18 @@ const {
             <BlogFooter slot="footer" {lastModified} licenseText={license} />
         </Article>
 
-        {
-            links && (
-                <LinkList
-                    {links}
-                    aria-label={getTranslation(language).externalLinks}
-                    className="card"
-                />
-            )
-        }
+        {links && (
+            <LinkList
+                {links}
+                aria-label={getTranslation(language).externalLinks}
+                className="card"
+            />
+        )}
 
         <CommentList {language} client:idle />
     </main>
 
-    {
-        headings.length > 0 && (
-            <TableOfContents {headings} slot="right-sidebar" client:load />
-        )
-    }
+    {headings.length > 0 && (
+        <TableOfContents {headings} slot="right-sidebar" client:load />
+    )}
 </BaseLayout>

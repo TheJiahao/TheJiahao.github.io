@@ -32,17 +32,15 @@ const language = Astro.currentLocale ?? DEFAULT_LANGUAGE;
 
     <LuCopyright aria-hidden />
     <div>
-        {
-            licenseText ? (
-                <Fragment set:html={renderMarkdown(licenseText)} />
-            ) : (
-                <>
-                    {getTranslation(language).licensedUnder}{" "}
-                    <a rel="license" href={license.url}>
-                        {license.name}
-                    </a>
-                </>
-            )
-        }
+        {licenseText ? (
+            <Fragment set:html={renderMarkdown(licenseText)} />
+        ) : (
+            <>
+                {getTranslation(language).licensedUnder}{" "}
+                <a rel="license" href={license.url}>
+                    {license.name}
+                </a>
+            </>
+        )}
     </div>
 </footer>
