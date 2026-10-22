@@ -27,6 +27,7 @@ export default defineConfig(
             "*.config.{js,ts,mjs}",
             "playwright-report",
             "coverage",
+            ".pnpm-store"
         ],
     },
     {
