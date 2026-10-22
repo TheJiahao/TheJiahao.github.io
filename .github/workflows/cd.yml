@@ -36,6 +36,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-slim
+    if: github.ref_name == 'main'
     environment:
       name: production
       url: ${{ steps.deployment.outputs.page_url }}

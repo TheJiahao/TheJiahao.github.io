@@ -26,7 +26,6 @@ jobs:
   cd:
     name: CD
     needs: ci
-    if: github.ref_name == 'main'
     secrets:
       INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
     concurrency:
