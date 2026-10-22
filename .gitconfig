@@ -1,3 +1,7 @@
 [hook "commitlint"]
     event = commit-msg
     command = "pnpm exec commitlint --edit"
+
+[hook "format"]
+    event = pre-commit
+    command = pnpm format:check
