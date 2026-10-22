@@ -10,6 +10,7 @@ const useHydrationState = (): boolean => {
     const [hydrated, setHydrated] = useState(false);
 
     useEffect(() => {
+        // eslint-disable-next-line @eslint-react/set-state-in-effect
         setHydrated(true);
     }, []);
 

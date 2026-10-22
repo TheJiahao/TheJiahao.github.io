@@ -21,6 +21,7 @@ const LinkCard = ({ title, description, url, image }: LinkProps) => (
                 <p
                     text-secondary
                     line-clamp-3
+                    // eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml
                     dangerouslySetInnerHTML={{ __html: description ?? "" }}
                 />
             </div>

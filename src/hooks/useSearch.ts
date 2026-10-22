@@ -37,7 +37,7 @@ const useSearch = (keyword: string, limit: number = 5): Page[] => {
             .catch((error: unknown) => {
                 console.error(error);
             });
-    }, [keyword]);
+    }, [keyword, limit, pagefind]);
 
     return results;
 };

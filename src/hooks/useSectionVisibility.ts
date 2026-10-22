@@ -49,6 +49,7 @@ const updateVisibility =
  * @returns {boolean} Whether the section is visible
  */
 const useSectionVisibility = (id: string): boolean => {
+    // eslint-disable-next-line @eslint-react/use-state
     const [visible, setVisible] = useState<Set<string>>(new Set());
     const [headings, setHeadings] = useState<SectionHeading[]>([]);
 
@@ -58,6 +59,7 @@ const useSectionVisibility = (id: string): boolean => {
         ).filter((section) => getHeading(section));
         const observer = new IntersectionObserver(updateVisibility(setVisible));
 
+        // eslint-disable-next-line @eslint-react/set-state-in-effect
         setHeadings(sections.map(getHeading) as SectionHeading[]);
 
         for (const section of sections) {

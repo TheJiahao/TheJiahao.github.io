@@ -14,6 +14,7 @@ interface MenuProps
     direction?: "row" | "col";
 }
 
+/* eslint-disable @eslint-react/no-children-map */
 const Menu = ({
     children,
     role = "menu",
