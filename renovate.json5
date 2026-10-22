@@ -9,6 +9,7 @@
         ":automergeTesters",
         "group:linters",
         "group:test",
+        "helpers:pinGitHubActionDigestsToSemver",
     ],
     commitMessageLowerCase: "never",
     prConcurrentLimit: 5,
