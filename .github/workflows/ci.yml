@@ -23,14 +23,7 @@ jobs:
         run: pnpm run format:check
 
       - name: Lint
-        run: pnpm run lint:fix
-
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions[bot]
-          author_email: github-ations[bot]@users.noreply.github.com
-          message: "style: Format code"
+        run: pnpm run lint
 
   unit_test:
     name: Unit test
