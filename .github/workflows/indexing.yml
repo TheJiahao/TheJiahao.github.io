@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Submit URLs to IndexNow
-        uses: bojieyang/indexnow-action@v2
+        uses: bojieyang/indexnow-action@38ddfbd93579a8a44c0dee662121bf9d51098f71 # v3.0.0
         with:
           sitemap-location: ${{ vars.SITE_BASE_URL }}/sitemap-0.xml
           key: ${{ secrets.INDEXNOW_KEY }}
