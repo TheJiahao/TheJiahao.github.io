@@ -3,7 +3,7 @@ import SocialLink from "components/molecules/SocialLink";
 import { LuGithub, LuLinkedin, LuRss, LuSquare } from "react-icons/lu";
 import { describe, expect, test } from "vitest";
 
-/* eslint-disable react/jsx-key */
+/* eslint-disable @eslint-react/no-missing-key */
 
 describe("<SocialLink/>", () => {
     test.each([<LuRss />, <LuGithub />, <LuLinkedin />])(
