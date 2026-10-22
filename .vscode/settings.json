@@ -18,5 +18,8 @@
     "typescript.updateImportsOnFileMove.enabled": "prompt",
     "typescript.preferences.preferTypeOnlyAutoImports": true,
     "typescript.preferences.importModuleSpecifier": "non-relative",
-    "svg.preview.background": "dark-transparent"
+    "svg.preview.background": "dark-transparent",
+    "json5.schemaDownload.trustedDomains": {
+        "https://docs.renovatebot.com/": true
+    }
 }
