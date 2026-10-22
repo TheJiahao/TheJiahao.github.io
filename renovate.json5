@@ -11,7 +11,7 @@
         "group:test",
     ],
     commitMessageLowerCase: "never",
-    prConcurrentLimit: 2,
+    prConcurrentLimit: 5,
     minimumReleaseAge: "14 days",
     dependencyDashboard: true,
     packageRules: [
