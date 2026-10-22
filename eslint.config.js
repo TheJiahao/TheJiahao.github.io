@@ -3,10 +3,11 @@ import unocss from "@unocss/eslint-config/flat";
 import astroEslint from "eslint-plugin-astro";
 import reactJSXRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(
+export default defineConfig(
     { ...reactRecommended, ignores: ["**/*.astro"] },
     reactJSXRuntime,
     eslint.configs.recommended,
