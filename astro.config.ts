@@ -80,6 +80,9 @@ export default defineConfig({
         optimizeDeps: {
             exclude: ["@playwright/test"],
         },
+        build: {
+            cssMinify: "esbuild",
+        },
     },
     markdown: {
         remarkPlugins: [
