@@ -2,6 +2,10 @@ import "@testing-library/jest-dom/vitest";
 import { cleanup } from "@testing-library/react";
 import { afterEach, beforeAll, vi } from "vitest";
 
+vi.mock("utils/initPagefind", () => ({
+    initPagefind: vi.fn().mockResolvedValue(undefined),
+}));
+
 beforeAll(() => {
     const ResizeObserverMock = vi.fn(
         class {
