@@ -1,5 +1,67 @@
 # Changelog
 
+## [3.8.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.7.0...v3.8.0) (2026-10-24)
+
+
+### Features
+
+* ✨ Add Dockerfile ([673dfff](https://github.com/TheJiahao/TheJiahao.github.io/commit/673dfff584fb69f6deaa5ea4d5d41b0f33ac818e))
+* **font:** ✨ Set custom fonts ([4ba0d10](https://github.com/TheJiahao/TheJiahao.github.io/commit/4ba0d108ec9cbab25c341bbff9a48bae90082ede))
+* **navbar:** ✨ Add borders to mobile navbar ([3feb9ad](https://github.com/TheJiahao/TheJiahao.github.io/commit/3feb9ad2f1d1f55f447d20c0e989386fa4291106))
+* **post:** ✨ Add vscode.github-authentication to vscode-affinity-issues ([fcdf1de](https://github.com/TheJiahao/TheJiahao.github.io/commit/fcdf1dec5132a2d7dfa04a3834736f2254ef4410))
+* **post:** ✨ Update zim benchmarks ([fb760ff](https://github.com/TheJiahao/TheJiahao.github.io/commit/fb760ff66a01f86cc803b1c3da80a2d916bf526c))
+* **projects:** ✨ Add laskutys ([bdb512a](https://github.com/TheJiahao/TheJiahao.github.io/commit/bdb512acfda2e9a627142a4f0732f23ea74f8ea2))
+* **search:** ✨ Use accent color in result marking ([5357e47](https://github.com/TheJiahao/TheJiahao.github.io/commit/5357e47d4728f2b3334679c0f8e07e14ca4b5b15))
+* **typography:** ✨ Add text-autospace ([3e97c3a](https://github.com/TheJiahao/TheJiahao.github.io/commit/3e97c3a836665308e417dae1d06a8e2551b16587))
+
+
+### Bug Fixes
+
+* 🐛 Code font ([4103984](https://github.com/TheJiahao/TheJiahao.github.io/commit/41039842655ff15ee6a5047e4bddfff2460d16e2))
+* 🐛 Extra space above blog cover ([a795f55](https://github.com/TheJiahao/TheJiahao.github.io/commit/a795f5575467b605a9fa4221b924377b40b81bb4))
+* 🐛 Lint ([1489b22](https://github.com/TheJiahao/TheJiahao.github.io/commit/1489b22f30fa66e8e6c9ba32c3819e037f45a035))
+* 🐛 Outdated lockfile ([b861db7](https://github.com/TheJiahao/TheJiahao.github.io/commit/b861db73d759c0fb742ce17481f5b51e160b4741))
+* 🐛 Outline not shown when focused ([d5cdc55](https://github.com/TheJiahao/TheJiahao.github.io/commit/d5cdc554bca6795f55467c47b8ce99033f39c704))
+* 🐛 Renovate config ([9ee57ef](https://github.com/TheJiahao/TheJiahao.github.io/commit/9ee57ef13047a11dab4b74a6a9a18924895e5fcc))
+* 🐛 Replace pnpm with bun ([b34fd69](https://github.com/TheJiahao/TheJiahao.github.io/commit/b34fd69c72802c11e35765932dbcba9c2966a916))
+* 🐛 Suppress type error of preset-theme ([776ede9](https://github.com/TheJiahao/TheJiahao.github.io/commit/776ede9e05c6a2256c4d48ed864ba1503961945f))
+* 🐛 Typo ([ba9003d](https://github.com/TheJiahao/TheJiahao.github.io/commit/ba9003d274ecc428de0c332485e23c594bb98f7d))
+* 🐛 Typo ([d4a11ba](https://github.com/TheJiahao/TheJiahao.github.io/commit/d4a11ba6674030edf2f0d8b62b462cf6c5cb1c67))
+* **astro:** Use esbuild for cssMinify ([8bcef09](https://github.com/TheJiahao/TheJiahao.github.io/commit/8bcef094867852c2b0bd7a44790fb79c7643065d))
+* **back-button:** 🐛 Different x and y padding ([52cc8b2](https://github.com/TheJiahao/TheJiahao.github.io/commit/52cc8b2be4a5f6f30aa8dac8beb9717f9788d783))
+* **build:** 🐛 📦️ Update lockfile ([aa08899](https://github.com/TheJiahao/TheJiahao.github.io/commit/aa08899d6f50019de364d970f327e1f97cb74738))
+* **ci:** 🐛 👷 Adjust fields needed in schema ([f07fe91](https://github.com/TheJiahao/TheJiahao.github.io/commit/f07fe91602c97a06d91c5edc866beb3d37522c29))
+* **ci:** 🐛 👷 Only install bun dependencies ([cbedacd](https://github.com/TheJiahao/TheJiahao.github.io/commit/cbedacde49e46bbf418b6ec227a192105165160c))
+* **ci:** 🐛 👷 Remove pnpm ([d02e30c](https://github.com/TheJiahao/TheJiahao.github.io/commit/d02e30c0d10594ad2142a896f79248d65decedfb))
+* **deps:** 🐛 Downgrade Unocss to ~66.4.0 ([7c5874f](https://github.com/TheJiahao/TheJiahao.github.io/commit/7c5874fb09afd4290769b988b88d9e08d6669d5d)), closes [#1036](https://github.com/TheJiahao/TheJiahao.github.io/issues/1036)
+* **deps:** 🐛 Use glob in matchPackageNames ([94e640f](https://github.com/TheJiahao/TheJiahao.github.io/commit/94e640fad20550d99b0da2759c8c033c7d2cef0a))
+* **deps:** 🐛 Use matchPackageNames ([7fef55b](https://github.com/TheJiahao/TheJiahao.github.io/commit/7fef55bbb5d4cf776374ce594eaf377fcdbe5bbb))
+* Invalid lint rule ([c71926d](https://github.com/TheJiahao/TheJiahao.github.io/commit/c71926da462cca3f52131776145892017665121b))
+* Lint errors ([57257df](https://github.com/TheJiahao/TheJiahao.github.io/commit/57257df3eae3e7d51a280fe8be322dcb84189847))
+* **lint:** Import z from astro/zod ([2ce9e28](https://github.com/TheJiahao/TheJiahao.github.io/commit/2ce9e2860ca48dcfe3c2a3b02707c19601a77504))
+* **lint:** Remove eslintReact.configs["jsx"] ([fe981b5](https://github.com/TheJiahao/TheJiahao.github.io/commit/fe981b5c6a19630622a2ffe42024ddf935c3d776))
+* **math:** 🐛 Inline equations displayed as blocks in list ([dff0ea6](https://github.com/TheJiahao/TheJiahao.github.io/commit/dff0ea6cbb709d776d8c95296a42b2e873548fb9))
+* **navbar:** 🐛 Remove menu padding in desktop ([203561c](https://github.com/TheJiahao/TheJiahao.github.io/commit/203561cf7a10a0c9ba5d7977f20a4ddc8c1db5c5))
+* **post:** 🐛 Typo ([9aef9f1](https://github.com/TheJiahao/TheJiahao.github.io/commit/9aef9f1e5546c712d80a486e339f881ed90433db))
+* **test:** Mock initPagefind() ([fae4c35](https://github.com/TheJiahao/TheJiahao.github.io/commit/fae4c350121ad601fe5d72a21f2df99019347e2a))
+* **test:** Use anonymous classes in global mocks ([9bad9d1](https://github.com/TheJiahao/TheJiahao.github.io/commit/9bad9d1f98dd6e0b1d272a0fc7f5a7573b3f8d3a))
+* **typst-tutorial:** 🐛 Update snippet ([cf25ad3](https://github.com/TheJiahao/TheJiahao.github.io/commit/cf25ad3cf8e1f347d8828271645b0e9315cb02bd))
+
+
+### Reverts
+
+* "build: 📦️ Replace pnpm with Bun" ([e355ad9](https://github.com/TheJiahao/TheJiahao.github.io/commit/e355ad92c82e80a9ae701302cfb942a117cd9c93))
+* "build(deps): update playwright and docker image to v1.58.0" ([4b79468](https://github.com/TheJiahao/TheJiahao.github.io/commit/4b794689ef132a66dc36b42c87b16c7ba18c6cee))
+* "ci: 👷 Remove container" ([c8ee4d7](https://github.com/TheJiahao/TheJiahao.github.io/commit/c8ee4d7e34c7be5df56d03e7d11c8535f6a78f75))
+* "fix: 🐛 Suppress type error of preset-theme" ([514f95c](https://github.com/TheJiahao/TheJiahao.github.io/commit/514f95c6ca5c2ab16d8049371833e9c0ddaad0bc))
+* "fix(ci): 🐛 👷 Only install bun dependencies" ([1832c23](https://github.com/TheJiahao/TheJiahao.github.io/commit/1832c2327bd8e21ffaf09847d778ef4aeb118495))
+* "refactor: ♻️ Replace box-shadow with drop-shadow" ([09fa17d](https://github.com/TheJiahao/TheJiahao.github.io/commit/09fa17d7e9653e8406c54442712e8dbbcb8a0224))
+* Change Bun back to pnpm ([ae99ce8](https://github.com/TheJiahao/TheJiahao.github.io/commit/ae99ce812be2f41c19dfa96bfb14350b48755f0a))
+* **e2e:** Remove custom image ([4280dbd](https://github.com/TheJiahao/TheJiahao.github.io/commit/4280dbda0e983817f2dcda64fe89e4fddd2d622a))
+* Set Playwright image version to 1.57.0 ([f4f8156](https://github.com/TheJiahao/TheJiahao.github.io/commit/f4f8156390a255c65b224e672c7d970c75e62c82))
+* **sitemap:** Remove alternate links ([1744246](https://github.com/TheJiahao/TheJiahao.github.io/commit/17442464709b08a020b8a2209ed2bab949c41bd0))
+* Use ubuntu-latest for Release workflow ([17a17eb](https://github.com/TheJiahao/TheJiahao.github.io/commit/17a17ebc4d9a0ea973dd66294cdb31c010d0a74f))
+
 ## [3.7.0](https://github.com/TheJiahao/TheJiahao.github.io/compare/v3.6.0...v3.7.0) (2025-06-22)
 
 ### Features
