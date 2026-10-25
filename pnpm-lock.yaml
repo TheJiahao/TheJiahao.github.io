@@ -64,7 +64,7 @@ importers:
         version: 1.0.0
       astro-seo:
         specifier: ^1.0.0
-        version: 1.1.0(@emnapi/runtime@1.11.3)(prettier-plugin-astro@1.1.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(prettier@3.9.10))(prettier@3.9.10)(typescript@5.9.3)
+        version: 1.2.0
       astro-seo-schema:
         specifier: ^5.0.0
         version: 5.1.0(astro@7.4.2(@astrojs/markdown-remark@7.3.4)(@types/node@24.19.2)(esbuild@0.27.7)(jiti@2.7.0)(sass@1.97.3)(yaml@2.9.1))(schema-dts@1.1.5)
@@ -2454,8 +2454,8 @@ packages:
       astro: ^5.0.0
       schema-dts: ^1.1.0
 
-  astro-seo@1.1.0:
-    resolution: {integrity: sha512-G6LDNDyga30o+52v58jU7C35n3cORUzk7RSuY+xf/ZRbW6JiNplyaOO1VoYVKO+xzYNaBcxqNln2RFRR/wgJNQ==}
+  astro-seo@1.2.0:
+    resolution: {integrity: sha512-ZqS2ZLKJ9GZwcONho9W95xkGBWuPpikTsMBzjuq/6CKtKUEgMDbSZkoLwoZsmLVq/p52T4z7JwgjC3AtMg7Trg==}
 
   astro@7.4.2:
     resolution: {integrity: sha512-FAH4cdDlFaVnQGjazLTEIC5vJqGlo5XANc1wIbzQHIqAjJTll/RWTUs+SPNW1JdezG4YGxMZllaE5A41T2kzhA==}
@@ -7315,14 +7315,7 @@ snapshots:
       astro: 7.4.2(@astrojs/markdown-remark@7.3.4)(@types/node@24.19.2)(esbuild@0.27.7)(jiti@2.7.0)(sass@1.97.3)(yaml@2.9.1)
       schema-dts: 1.1.5
 
-  astro-seo@1.1.0(@emnapi/runtime@1.11.3)(prettier-plugin-astro@1.1.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(prettier@3.9.10))(prettier@3.9.10)(typescript@5.9.3):
-    dependencies:
-      '@astrojs/check': 0.9.10(@emnapi/runtime@1.11.3)(prettier-plugin-astro@1.1.1(@emnapi/core@1.11.3)(@emnapi/runtime@1.11.3)(prettier@3.9.10))(prettier@3.9.10)(typescript@5.9.3)
-    transitivePeerDependencies:
-      - '@emnapi/runtime'
-      - prettier
-      - prettier-plugin-astro
-      - typescript
+  astro-seo@1.2.0: {}
 
   astro@7.4.2(@astrojs/markdown-remark@7.3.4)(@types/node@24.19.2)(esbuild@0.27.7)(jiti@2.7.0)(sass@1.97.3)(yaml@2.9.1):
     dependencies:
