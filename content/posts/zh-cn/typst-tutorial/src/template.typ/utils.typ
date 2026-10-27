@@ -1,4 +1,4 @@
-#import "@preview/unify:0.7.1": qty
+#import "@preview/unify:0.8.1": qty
 
 #let c = qty("299792458","m/s")
 
