@@ -4,7 +4,8 @@
         "*.yml": "github-actions-workflow"
     },
     "[github-actions-workflow]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "oxc.oxc-vscode"
     },
     "eslint.useFlatConfig": true,
     "js/ts.preferences.autoImportFileExcludePatterns": ["node/test.d.ts"],
@@ -41,5 +42,8 @@
     "editor.formatOnSaveMode": "file",
     "editor.codeActionsOnSave": {
         "source.fixAll.oxc": "explicit"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
     }
 }
