@@ -1,8 +1,8 @@
 ---
+import { render } from "astro:content";
+import { type BlogEntry } from "interfaces/BlogEntry";
 import BlogLayout from "layouts/BlogLayout.astro";
 import { getBlogs } from "utils/getBlogs";
-import { type BlogEntry } from "interfaces/BlogEntry";
-import { render } from "astro:content";
 
 export function getStaticPaths() {
     const posts = getBlogs();

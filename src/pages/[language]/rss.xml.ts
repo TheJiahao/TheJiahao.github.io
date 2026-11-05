@@ -1,5 +1,4 @@
 import rss from "@astrojs/rss";
-
 import type { APIContext } from "astro";
 import { render } from "astro:content";
 import { SITE_BASE_URL } from "astro:env/server";

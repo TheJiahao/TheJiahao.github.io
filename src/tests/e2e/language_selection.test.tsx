@@ -1,6 +1,7 @@
 import { expect } from "@playwright/test";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
+
 import test from "./utils/fixtures";
 
 test.describe("Language selection", () => {

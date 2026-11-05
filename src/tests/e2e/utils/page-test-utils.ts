@@ -1,5 +1,6 @@
 import { test } from "@playwright/test";
 import { DEFAULT_LANGUAGE } from "config/languages";
+
 import { HomePage } from "./homepage";
 
 type MyFixtures = {

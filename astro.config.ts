@@ -12,6 +12,7 @@ import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
 import UnoCSS from "unocss/astro";
 import { loadEnv } from "vite";
+
 import { DEFAULT_LANGUAGE as defaultLocale } from "./src/config/languages";
 import { languageCodes } from "./src/localization";
 import rehypeRemoveSpaceAfterSeparator from "./src/plugins/rehypeRemoveSpaceAfterSeparator";

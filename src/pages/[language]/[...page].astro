@@ -1,14 +1,14 @@
 ---
+import type { GetStaticPathsOptions, Page } from "astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import HomeSchema from "components/atoms/HomeSchema.astro";
 import type { ImageCardProps } from "components/molecules/ImageCard";
+import type { PaginationProps } from "components/molecules/Pagination";
 import { DEFAULT_LANGUAGE, SITE_DESCRIPTION, SITE_TITLE } from "config";
+import CollectionLayout from "layouts/CollectionLayout.astro";
 import { languageCodes as languages } from "localization";
 import { getBlogs } from "utils/getBlogs";
-import CollectionLayout from "layouts/CollectionLayout.astro";
-import HomeSchema from "components/atoms/HomeSchema.astro";
 import { getTranslation } from "utils/getTranslation";
-import type { GetStaticPathsOptions, Page } from "astro";
-import type { PaginationProps } from "components/molecules/Pagination";
 
 export function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     return languages.flatMap((language) => {
