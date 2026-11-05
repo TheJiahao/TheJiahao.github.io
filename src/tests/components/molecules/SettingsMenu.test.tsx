@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import SettingsMenu from "components/molecules/SettingsMenu";
 import { getTranslation } from "utils/getTranslation";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 
 describe("<SettingsMenu/>", () => {
     beforeEach(() => {

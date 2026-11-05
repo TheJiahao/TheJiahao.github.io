@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Pagination from "components/molecules/Pagination";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 describe("<Pagination/>", () => {
     describe.each(languageCodes)("%s", (language) => {

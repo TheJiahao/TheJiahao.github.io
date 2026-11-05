@@ -1,5 +1,5 @@
 import { getSlug } from "utils/getSlug";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 describe("getSlug()", () => {
     test.each([

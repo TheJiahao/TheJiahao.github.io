@@ -1,6 +1,6 @@
 import type { MarkdownHeading } from "astro";
 import { getTOC } from "utils/getTOC";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 describe("getTOC()", () => {
     test("nests two level headings", () => {

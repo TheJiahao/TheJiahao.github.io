@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import LanguageSelector from "components/molecules/LanguageSelector";
 import { getTranslation } from "utils/getTranslation";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 
 describe("<LanguageSelector/>", () => {
     const languages = ["zh-cn", "en"];

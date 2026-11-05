@@ -21,5 +21,25 @@
     "svg.preview.background": "dark-transparent",
     "json5.schemaDownload.trustedDomains": {
         "https://docs.renovatebot.com/": true
+    },
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "oxc.oxc-vscode"
+    },
+    "oxc.disableNestedConfig": true,
+    "oxc.fmt.disableNestedConfig": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.oxc": "explicit"
     }
 }

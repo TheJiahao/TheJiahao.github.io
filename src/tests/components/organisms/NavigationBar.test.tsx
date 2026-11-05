@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import NavigationBar from "components/organisms/NavigationBar";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 
 describe("<NavigationBar/>", () => {
     beforeEach(() => {

@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import SearchForm from "components/molecules/SearchForm";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
-import { beforeEach, describe, expect, test, vi } from "vitest";
+import { beforeEach, describe, expect, test, vi } from "vite-plus/test";
 
 describe("<SearchForm/>", () => {
     describe.each(languageCodes)("%s", (language) => {

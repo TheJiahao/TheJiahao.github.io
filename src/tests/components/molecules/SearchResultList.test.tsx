@@ -3,7 +3,7 @@ import SearchResultList from "components/molecules/SearchResultList";
 import type { Page } from "interfaces/Page";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 import { mock } from "vitest-mock-extended";
 
 describe("<SearchResultList/>", () => {

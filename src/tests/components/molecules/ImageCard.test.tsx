@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import ImageCard from "components/molecules/ImageCard";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 
 describe("<ImageCard/>", () => {
     const title = "How to write unit tests for Astro components?";

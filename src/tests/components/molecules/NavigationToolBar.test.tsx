@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import NavigationToolBar from "components/molecules/NavigationToolBar";
 import { getTranslation } from "utils/getTranslation";
-import { beforeEach, describe, expect, test, vi } from "vitest";
+import { beforeEach, describe, expect, test, vi } from "vite-plus/test";
 
 describe("<NavigationToolBar/>", () => {
     beforeEach(() => {

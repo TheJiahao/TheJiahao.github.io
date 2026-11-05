@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import BackLink from "components/molecules/BackLink";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 describe("<BackLink/>", () => {
     test("links to homepage", () => {

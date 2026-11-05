@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import type { IconLinkProps } from "components/atoms/IconLink";
 import NavigationMenu from "components/molecules/NavigationMenu";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 
 describe("<NavigationMenu/>", () => {
     let navigationMenu: HTMLElement;

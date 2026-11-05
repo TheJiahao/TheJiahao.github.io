@@ -1,4 +1,4 @@
-/// <reference types="vitest" />
+/// <reference types="vite-plus/test" />
 import { getViteConfig } from "astro/config";
 
 export default getViteConfig({

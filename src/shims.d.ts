@@ -17,7 +17,7 @@ type customAttributifyNames<Prefix extends string = ""> =
 type CustomAttribifyAttributes = AttributifyAttributes &
     Partial<Record<customAttributifyNames, string | boolean>>;
 
-/* eslint-disable @typescript-eslint/no-empty-object-type */
+/* oxlint-disable @typescript-eslint/no-empty-object-type */
 declare module "react" {
     interface HTMLAttributes extends CustomAttribifyAttributes {}
 }

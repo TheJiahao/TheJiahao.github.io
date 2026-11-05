@@ -54,3 +54,4 @@ hugo.linux
 /blob-report/
 /playwright/.cache/
 coverage
+.vitest/

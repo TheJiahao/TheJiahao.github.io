@@ -16,6 +16,7 @@
         "bierner.markdown-footnotes",
         "yzhang.markdown-all-in-one",
         "davidanson.vscode-markdownlint",
-        "mhutchie.git-graph"
+        "mhutchie.git-graph",
+        "VoidZero.vite-plus-extension-pack"
     ]
 }

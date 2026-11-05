@@ -1,6 +1,6 @@
 import type { SectionHeading } from "interfaces/SectionHeading";
 import { getCurrentHeading } from "utils/getCurrentHeading";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 const getHeadingIDs = (headings: SectionHeading[]) => headings.map((h) => h.id);
 

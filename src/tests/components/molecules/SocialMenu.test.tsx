@@ -3,7 +3,7 @@ import { type SocialLinkProps } from "components/molecules/SocialLink";
 import SocialMenu from "components/molecules/SocialMenu";
 import { languageCodes } from "localization";
 import { LuCircle, LuSquare } from "react-icons/lu";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 
 describe("<SocialMenu/>", () => {
     const links: SocialLinkProps[] = [

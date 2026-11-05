@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import IconLink from "components/atoms/IconLink";
 import { LuRss, LuSquare } from "react-icons/lu";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 describe("<IconLink/>", () => {
     describe.each([true, false])("when onlyIcon is %s", (onlyIcon) => {

@@ -3,7 +3,14 @@ import { userEvent } from "@testing-library/user-event";
 import SearchBox from "components/organisms/SearchBox";
 import { languageCodes } from "localization";
 import { getTranslation } from "utils/getTranslation";
-import { beforeAll, beforeEach, describe, expect, test, vi } from "vitest";
+import {
+    beforeAll,
+    beforeEach,
+    describe,
+    expect,
+    test,
+    vi,
+} from "vite-plus/test";
 import { mock } from "vitest-mock-extended";
 
 describe("<SearchBox/>", () => {
@@ -16,7 +23,7 @@ describe("<SearchBox/>", () => {
             const image = mock<ImageMetadata>({ src: "imagelink.com" });
             const mockResponse: Response = mock<Response>({
                 ok: true,
-                // eslint-disable-next-line @typescript-eslint/require-await
+                // oxlint-disable-next-line @typescript-eslint/require-await
                 json: async () => [
                     {
                         title: "Hello world!",

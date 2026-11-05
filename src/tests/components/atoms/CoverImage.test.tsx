@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import CoverImage from "components/atoms/CoverImage";
 import { BLOG_IMAGE_PLACEHOLDER } from "config";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 describe("<CoverImage/>", () => {
     test("shows placeholder image by default", () => {

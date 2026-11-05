@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Avatar from "components/atoms/Avatar";
 import { SITE_AVATAR } from "config";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 describe("<Avatar/>", () => {
     describe("can display", () => {

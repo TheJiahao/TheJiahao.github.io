@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import SocialLink from "components/molecules/SocialLink";
 import { LuGithub, LuLinkedin, LuRss, LuSquare } from "react-icons/lu";
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vite-plus/test";
 
 /* eslint-disable @eslint-react/no-missing-key */
 

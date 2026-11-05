@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import type { MarkdownHeading } from "astro";
 import TableOfContents from "components/organisms/TableOfContents";
-import { beforeEach, describe, expect, test } from "vitest";
+import { beforeEach, describe, expect, test } from "vite-plus/test";
 
 describe("<TableOfContents/>", () => {
     const headings: MarkdownHeading[] = [
