@@ -4,8 +4,8 @@
 
 [hook "lint"]
     event = pre-push
-    command = vp run lint
+    command = "vp run lint #"
 
 [hook "test"]
     event = pre-push
-    command = vp run test
+    command = "vp run test #"
