@@ -69,7 +69,6 @@
         "@commitlint/cli": "^21.0.0",
         "@commitlint/config-conventional": "^21.0.0",
         "@commitlint/types": "^21.0.0",
-        "@eslint-react/eslint-plugin": "^5.28.6",
         "@estruyf/github-actions-reporter": "^1.7.0",
         "@playwright/test": "^1.57.0",
         "@testing-library/jest-dom": "^7.0.0",
