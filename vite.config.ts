@@ -1501,6 +1501,7 @@ export default defineConfig({
         tabWidth: 4,
         printWidth: 80,
         sortPackageJson: false,
+        sortImports: true,
         astro: {},
         overrides: [
             {
