@@ -16,7 +16,10 @@ export const getTOC = (
     endDepth: number = TOC_END_DEPTH,
 ): Heading[] => {
     const result: Heading[] = [];
-    const parentHeadings = new Array<Heading | null>(7).fill(null);
+    const parentHeadings: (Heading | null)[] = Array.from(
+        { length: 7 },
+        () => null,
+    );
 
     headings
         .filter((h) => h.depth <= endDepth)
