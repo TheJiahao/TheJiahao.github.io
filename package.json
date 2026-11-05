@@ -75,7 +75,7 @@
         "@types/react-dom": "^19.0.0",
         "@types/sanitize-html": "^2.11.0",
         "@vitest/coverage-v8": "catalog:",
-        "eslint-plugin-astro": "^1.7.0",
+        "eslint-plugin-astro": "^3.0.0",
         "globals": "^17.0.0",
         "jsdom": "^27.0.0",
         "markdownlint-cli": "^0.49.0",
