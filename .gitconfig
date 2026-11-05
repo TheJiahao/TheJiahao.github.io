@@ -1,6 +1,6 @@
 [hook "format"]
     event = pre-commit
-    command = pnpm format:check
+    command = vp run format:check
 
 [hook "lint"]
     event = pre-push
