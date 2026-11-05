@@ -5,3 +5,7 @@
 [hook "lint"]
     event = pre-push
     command = vp run lint
+
+[hook "test"]
+    event = pre-push
+    command = vp run test
