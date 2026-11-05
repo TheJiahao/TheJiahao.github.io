@@ -1,38 +1,29 @@
 # Installation
 
-1. Install Node 22 LTS
-1. Enable corepack
-
-    ```sh
-    sudo corepack enable
-    ```
+1. Install [Vite+](https://viteplus.dev/guide/)
 
 1. Install dependencies
 
     ```sh
-    pnpm install
+    vp install
     ```
-
-## Environment
-
-Development is done in Ubuntu 24.04 LTS (WSL2) to be consistent with CI environment.
 
 ## Commands
 
 - Start development server
 
     ```sh
-    pnpm run dev
+    vpr dev
     ```
 
 - Build to `/dist`
 
     ```sh
-    pnpm run build
+    vpr build
     ```
 
 - Build and start preview server
 
     ```sh
-    pnpm run preview
+    vpr preview
     ```
