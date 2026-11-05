@@ -14,8 +14,8 @@
         "playwright:open": "playwright test --ui",
         "coverage": "vp test run --coverage",
         "build": "astro build && pagefind",
-        "preview": "pnpm run build && astro preview",
-        "preview:host": "pnpm run build && astro preview --host",
+        "preview": "vpr build && astro preview",
+        "preview:host": "vpr build && astro preview --host",
         "dev": "astro dev",
         "dev:host": "astro dev --host",
         "prepare": "git config --local include.path ../.gitconfig"
