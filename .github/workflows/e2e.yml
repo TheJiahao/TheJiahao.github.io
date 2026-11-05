@@ -27,7 +27,7 @@ jobs:
         run: chown -R $(id -u):$(id -g) $PWD
 
       - name: Run tests
-        run: pnpm run test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
+        run: vp run test:e2e --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }}
         env:
           HOME: /root
 
@@ -60,7 +60,7 @@ jobs:
           merge-multiple: true
 
       - name: Merge into HTML Report
-        run: pnpm exec playwright merge-reports --config=playwright-merge.config.ts ./all-blob-reports
+        run: vp exec playwright merge-reports --config=playwright-merge.config.ts ./all-blob-reports
 
       - name: Upload HTML report
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

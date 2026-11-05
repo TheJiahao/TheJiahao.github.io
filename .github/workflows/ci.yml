@@ -20,10 +20,10 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Format
-        run: pnpm run format:check
+        run: vp run format:check
 
       - name: Lint
-        run: pnpm run lint
+        run: vp run lint
 
   unit_test:
     name: Unit test
@@ -37,7 +37,7 @@ jobs:
         uses: ./.github/workflows/setup-action
 
       - name: Test code
-        run: pnpm run coverage
+        run: vp run coverage
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
