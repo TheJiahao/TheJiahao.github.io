@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Set up
-        uses: ./.github/workflows/setup-action
+        uses: $/.github/workflows/setup-action
 
       - name: Format
         run: vp run format:check
@@ -34,13 +34,13 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Set up
-        uses: ./.github/workflows/setup-action
+        uses: $/.github/workflows/setup-action
 
       - name: Test code
         run: vp run coverage
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@303a32d7a59b442fa8d48b6a1cc6825c09c847a5 # v7.1.1
+        uses: codecov/codecov-action@v7.1.1
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
