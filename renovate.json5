@@ -13,7 +13,9 @@
     commitMessageLowerCase: "never",
     prConcurrentLimit: 5,
     minimumReleaseAge: "14 days",
-    dependencyDashboard: true,
+    dependencyDashboard: {
+        enabled: true,
+    },
     packageRules: [
         {
             matchPackageNames: ["**/playwright", "@playwright/**"],
